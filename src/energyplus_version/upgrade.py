@@ -20,7 +20,8 @@ class ChangeFieldName:
         object_path = '/' + self.object + '/'
         from_path = object_path + self.old_name
         to_path = object_path + self.new_name
-        return [jsonpatch.MoveOperation({'op': 'move', 'from': from_path, 'path': to_path})]
+        #return [jsonpatch.MoveOperation({'op': 'move', 'from': from_path, 'path': to_path})]
+        return [{'op': 'move', 'from': from_path, 'path': to_path}]
     def valid(self, object) -> bool:
         return self.old_name in object
     def describe(self) -> str:
@@ -32,7 +33,8 @@ class RemoveField:
         self.field = field
     def apply(self) -> list:
         path = '/' + self.object + '/' + self.field
-        return [jsonpatch.MoveOperation({'op': 'remove', 'path': path})]
+        #return [jsonpatch.MoveOperation({'op': 'remove', 'path': path})]
+        return [{'op': 'remove', 'path': path}]
     def valid(self, object) -> bool:
         return self.field in object
     def describe(self) -> str:

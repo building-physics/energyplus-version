@@ -8,6 +8,8 @@ class Change:
         raise NotImplementedError('Change object must implement the "apply" method')
     def valid(self, object) -> bool:
         return False
+    def describe(self) -> str:
+        raise NotImplementedError('Change object must implement the "describe" method')
 
 class ChangeFieldName:
     def __init__(self, object: str, old_name: str, new_name: str):
@@ -21,6 +23,8 @@ class ChangeFieldName:
         return [jsonpatch.MoveOperation({'op': 'move', 'from': from_path, 'path': to_path})]
     def valid(self, object) -> bool:
         return self.old_name in object
+    def describe(self) -> str:
+        return 'Change the field named "%s" to "%s".' % (self.old_name, self.new_name)
     
 class RemoveField:
     def __init__(self, object: str, field: str):
@@ -30,7 +34,9 @@ class RemoveField:
         path = '/' + self.object + '/' + self.field
         return [jsonpatch.MoveOperation({'op': 'remove', 'path': path})]
     def valid(self, object) -> bool:
-        return self.old_name in object
+        return self.field in object
+    def describe(self) -> str:
+        return 'Remove the field "%s".' % self.field
 
 class Upgrade:
     def __init__(self):
@@ -45,13 +51,13 @@ class Upgrade:
         return patch
     def describe(self):
         change_by_object = {}
-        for change in self.changes():
+        for change in self.changes:
             if change.object in change_by_object:
-                change_by_object[change.object].append(change.description)
+                change_by_object[change.object].append(change.describe())
             else:
-                change_by_object[change.object] = [change.description]
+                change_by_object[change.object] = [change.describe()]
         string =''
         for obj, changes in change_by_object.items():
-            string += '# ' + object + '\n'
-            string += '\n\n'.join(changes)
+            string += '# ' + obj + '\n'
+            string += '\n\n'.join(changes) + '\n\n'
         return string

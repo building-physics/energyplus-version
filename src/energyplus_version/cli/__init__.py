@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 import click
 import json
+from ..version_22_1 import Upgrade
 
 from ..__about__ import __version__
 
@@ -15,7 +16,16 @@ def upgrade(epjson, downgradable):
     # Need to catch any issues with reading the json
     epjson = json.load(fp)
     fp.close()
-    print(epjson['Version'])
+    try:
+        version_string = list(epjson['Version'].values())[0]['version_identifier']
+    except:
+        click.echo('Failed to find version string, cannot proceed', err=True)
+    print(version_string)
+    # Need to do a proper lookup and do a plugin thing here
+    upgrade = Upgrade()
+    print(upgrade.describe())
+    patch = upgrade.generate_patch(epjson)
+    print(str(patch))
 
 @click.command()
 def downgrade():

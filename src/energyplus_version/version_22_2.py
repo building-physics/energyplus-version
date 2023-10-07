@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 from .upgrade import ChangeFieldName, RemoveField, Upgrade
 
-class Version_22_2(Upgrade):
+class Version_22_1(Upgrade):
     def __init__(self):
         self.changes = [
             ChangeFieldName('Coil:Cooling:DX:SingleSpeed',

@@ -16,6 +16,7 @@ def test_change_field_name():
     new_obj = jp.apply(obj)
     expected = {'Test': {'field_uno': 1.0, 'field_two': 2.0}}
     assert all((new_obj['Test'].get(k) == v for k, v in expected['Test'].items()))
+    assert change.describe() == 'Change the field named "field_one" to "field_uno".'
 
 def test_remove_field():
     obj = {'Test': {'field_one': 1.0, 'field_two': 2.0}}
@@ -29,4 +30,5 @@ def test_remove_field():
     new_obj = jp.apply(obj)
     expected = {'Test': {'field_one': 1.0}}
     assert all((new_obj['Test'].get(k) == v for k, v in expected['Test'].items()))
+    assert change.describe() == 'Remove the field named "field_two".'
 

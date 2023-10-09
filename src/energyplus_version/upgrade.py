@@ -1,14 +1,13 @@
 # SPDX-FileCopyrightText: 2023-present Oak Ridge National Laboratory, managed by UT-Battelle
 #
 # SPDX-License-Identifier: BSD-3-Clause
-import jsonpatch
 
 class Change:
-    def apply(self) -> list:
+    def apply(self) -> list: # pragma: no cover
         raise NotImplementedError('Change object must implement the "apply" method')
-    def valid(self, object) -> bool:
-        return False
-    def describe(self) -> str:
+    def valid(self, object) -> bool: # pragma: no cover
+        raise NotImplementedError('Change object must implement the "apply" method') 
+    def describe(self) -> str: # pragma: no cover
         raise NotImplementedError('Change object must implement the "describe" method')
 
 class ChangeFieldName:
@@ -20,7 +19,6 @@ class ChangeFieldName:
         object_path = '/' + self.object + '/'
         from_path = object_path + self.old_name
         to_path = object_path + self.new_name
-        #return [jsonpatch.MoveOperation({'op': 'move', 'from': from_path, 'path': to_path})]
         return [{'op': 'move', 'from': from_path, 'path': to_path}]
     def valid(self, object) -> bool:
         return self.old_name in object
@@ -33,12 +31,11 @@ class RemoveField:
         self.field = field
     def apply(self) -> list:
         path = '/' + self.object + '/' + self.field
-        #return [jsonpatch.MoveOperation({'op': 'remove', 'path': path})]
         return [{'op': 'remove', 'path': path}]
     def valid(self, object) -> bool:
         return self.field in object
     def describe(self) -> str:
-        return 'Remove the field "%s".' % self.field
+        return 'Remove the field named "%s".' % self.field
 
 class Upgrade:
     def __init__(self):
@@ -49,7 +46,7 @@ class Upgrade:
             if change.object in prev:
                 for obj in prev[change.object]:
                     if change.valid(obj):
-                        patch.append(change.apply('/' + change.object))
+                        patch.append(change.apply())
         return patch
     def describe(self):
         change_by_object = {}
@@ -60,6 +57,6 @@ class Upgrade:
                 change_by_object[change.object] = [change.describe()]
         string =''
         for obj, changes in change_by_object.items():
-            string += '# ' + obj + '\n'
+            string += '# Object: ' + obj + '\n'
             string += '\n\n'.join(changes) + '\n\n'
         return string

@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 import energyplus_version as ev
 
-class Upgrade(ev.Upgrade):
+class Upgrade(ev.EnergyPlusUpgrade):
     def __init__(self):
         self.changes = [
             ev.ChangeFieldName('Coil:Cooling:DX:SingleSpeed',
@@ -41,4 +41,10 @@ class Upgrade(ev.Upgrade):
             ev.ChangeFieldName('ZoneVentilation:WindandStackOpenArea', 'zone_name', 'zone_or_space_name')
 
         ]
+
+    def from_version(self):
+        return '22.1'
+    
+    def to_version(self):
+        return '22.2'
 

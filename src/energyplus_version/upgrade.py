@@ -60,3 +60,16 @@ class Upgrade:
             string += '# Object Change: ' + obj + '\n'
             string += '\n\n'.join(changes) + '\n\n'
         return string
+
+class EnergyPlusUpgrade(Upgrade):
+    def from_version(self) -> str: # pragma: no cover
+        raise NotImplementedError('EnergyPlusUpgrade object must implement the "from_version" method')
+    def to_version(self) -> str: # pragma: no cover
+        raise NotImplementedError('EnergyPlusUpgrade object must implement the "to_version" method')
+    def generate_patch(self, prev):
+        patch = super().generate_patch(prev)
+        if patch != []:
+            path = '/Version/%s/version_identifier' % list(prev['Version'].keys())[0]
+            patch.append({'op': 'replace', 'path': path, 'value': self.to_version()})
+        return patch
+        

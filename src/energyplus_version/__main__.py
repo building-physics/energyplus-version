@@ -4,6 +4,6 @@
 import sys
 
 if __name__ == '__main__':
-    #from .cli import energyplus_version
-    from cli import energyplus_version
+    from .cli import energyplus_version
+    #from cli import energyplus_version
     sys.exit(energyplus_version())

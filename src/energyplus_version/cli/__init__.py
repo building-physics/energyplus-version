@@ -3,16 +3,18 @@
 # SPDX-License-Identifier: BSD-3-Clause
 import click
 import json
-#from ..version_22_1 import Upgrade
-from version_22_1 import Upgrade
+import jsonpatch
+from ..version_22_1 import Upgrade
+#from version_22_1 import Upgrade
 
-#from ..__about__ import __version__
-from __about__ import __version__
+from ..__about__ import __version__
+#from __about__ import __version__
 
 @click.command()
 @click.argument('epjson', type=click.Path(exists=True)) #, help='epJSON file to upgrade')
 @click.option('-d', '--downgradable', is_flag=True, show_default=True, default=False, help='Make the file downgradable.')
-def upgrade(epjson, downgradable):
+@click.option('-o', '--output', show_default=True, default='upgrade.epJSON', help='File name to write.')
+def upgrade(epjson, downgradable, output):
     click.echo('Upgrade!')
     fp = open(epjson, 'r')
     # Need to catch any issues with reading the json
@@ -28,6 +30,12 @@ def upgrade(epjson, downgradable):
     print(upgrade.describe())
     patch = upgrade.generate_patch(epjson)
     print(str(patch))
+    jp = jsonpatch.JsonPatch(patch)
+    new_epjson= jp.apply(epjson)
+    # Need to set up the naming to mimic the current setup, just forge ahead for now
+    fp = open(output, 'w')
+    json.dump(new_epjson, fp, indent=4)
+    fp.close()
 
 @click.command()
 def downgrade():

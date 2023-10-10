@@ -4,32 +4,31 @@
 import energyplus_version
 import jsonpatch
 
-def test_generic_upgrade():
+def test_generic_upgrades():
     obj = {'Test': {'field_one': 1.0, 'field_two': 2.0}}
     upgrade = energyplus_version.Upgrade()
     # Single change
     upgrade.changes = [energyplus_version.ChangeFieldName('Test', 'field_one', 'field_uno')]
     patch = upgrade.generate_patch(obj)
-    #assert change.valid(obj['Test'])
-    #patch = change.apply()
     assert len(patch) == 1
-    #jp =jsonpatch.JsonPatch(patch)
-    #new_obj = jp.apply(obj)
-    #expected = {'Test': {'field_uno': 1.0, 'field_two': 2.0}}
-    #assert all((new_obj.get(k) == v for k, v in expected.items()))
-    #jp =jsonpatch.JsonPatch(patch)
-    #new_obj = jp.apply(obj)
-    #
-    #
-    assert upgrade.describe() == '# Object: Test\nChange the field named "field_one" to "field_uno".\n\n'
+    assert 'op' in patch[0]
+    jp = jsonpatch.JsonPatch(patch)
+    new_obj = jp.apply(obj)
+    expected = {'Test': {'field_uno': 1.0, 'field_two': 2.0}}
+    assert all((new_obj['Test'].get(k) == v for k, v in expected['Test'].items()))
+    assert upgrade.describe() == '# Object Change: Test\nChange the field named "field_one" to "field_uno".\n\n'
     # Two changes
     upgrade.changes.append(energyplus_version.ChangeFieldName('Test', 'field_two', 'field_dos'))
     patch = upgrade.generate_patch(obj)
-    #assert change.valid(obj['Test'])
-    #patch = change.apply()
     assert len(patch) == 2
-    assert upgrade.describe() == '# Object: Test\nChange the field named "field_one" to "field_uno".\n\nChange the field named "field_two" to "field_dos".\n\n'
-
+    assert 'op' in patch[0]
+    assert 'op' in patch[1]
+    jp = jsonpatch.JsonPatch(patch)
+    new_obj = jp.apply(obj)
+    expected = {'Test': {'field_uno': 1.0, 'field_dos': 2.0}}
+    assert all((new_obj['Test'].get(k) == v for k, v in expected['Test'].items()))
+    assert upgrade.describe() == '# Object Change: Test\nChange the field named "field_one" to "field_uno".\n\nChange the field named "field_two" to "field_dos".\n\n'
+    # No changes
     unaff = {'Test': {'field_uno': 1.0, 'field_dos': 2.0}}
     patch = upgrade.generate_patch(unaff)
     assert patch == []

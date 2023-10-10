@@ -46,7 +46,7 @@ class Upgrade:
             if change.object in prev:
                 for obj in prev[change.object]:
                     if change.valid(obj):
-                        patch.append(change.apply())
+                        patch.extend(change.apply())
         return patch
     def describe(self):
         change_by_object = {}
@@ -57,6 +57,6 @@ class Upgrade:
                 change_by_object[change.object] = [change.describe()]
         string =''
         for obj, changes in change_by_object.items():
-            string += '# Object: ' + obj + '\n'
+            string += '# Object Change: ' + obj + '\n'
             string += '\n\n'.join(changes) + '\n\n'
         return string

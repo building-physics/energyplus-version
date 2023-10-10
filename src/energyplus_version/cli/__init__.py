@@ -3,9 +3,11 @@
 # SPDX-License-Identifier: BSD-3-Clause
 import click
 import json
-from ..version_22_1 import Upgrade
+#from ..version_22_1 import Upgrade
+from version_22_1 import Upgrade
 
-from ..__about__ import __version__
+#from ..__about__ import __version__
+from __about__ import __version__
 
 @click.command()
 @click.argument('epjson', type=click.Path(exists=True)) #, help='epJSON file to upgrade')

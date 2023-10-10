@@ -5,7 +5,7 @@ import energyplus_version
 import jsonpatch
 
 def test_generic_upgrades():
-    obj = {'Test': {'field_one': 1.0, 'field_two': 2.0}}
+    obj = {'Test': {'test_one': {'field_one': 1.0, 'field_two': 2.0}}}
     upgrade = energyplus_version.Upgrade()
     # Single change
     upgrade.changes = [energyplus_version.ChangeFieldName('Test', 'field_one', 'field_uno')]
@@ -14,8 +14,8 @@ def test_generic_upgrades():
     assert 'op' in patch[0]
     jp = jsonpatch.JsonPatch(patch)
     new_obj = jp.apply(obj)
-    expected = {'Test': {'field_uno': 1.0, 'field_two': 2.0}}
-    assert all((new_obj['Test'].get(k) == v for k, v in expected['Test'].items()))
+    expected = {'Test': {'test_one': {'field_uno': 1.0, 'field_two': 2.0}}}
+    assert all((new_obj['Test']['test_one'].get(k) == v for k, v in expected['Test']['test_one'].items()))
     assert upgrade.describe() == '# Object Change: Test\nChange the field named "field_one" to "field_uno".\n\n'
     # Two changes
     upgrade.changes.append(energyplus_version.ChangeFieldName('Test', 'field_two', 'field_dos'))
@@ -25,13 +25,13 @@ def test_generic_upgrades():
     assert 'op' in patch[1]
     jp = jsonpatch.JsonPatch(patch)
     new_obj = jp.apply(obj)
-    expected = {'Test': {'field_uno': 1.0, 'field_dos': 2.0}}
-    assert all((new_obj['Test'].get(k) == v for k, v in expected['Test'].items()))
+    expected = {'Test': {'test_one': {'field_uno': 1.0, 'field_dos': 2.0}}}
+    assert all((new_obj['Test']['test_one'].get(k) == v for k, v in expected['Test']['test_one'].items()))
     assert upgrade.describe() == '# Object Change: Test\nChange the field named "field_one" to "field_uno".\n\nChange the field named "field_two" to "field_dos".\n\n'
     # No changes
-    unaff = {'Test': {'field_uno': 1.0, 'field_dos': 2.0}}
+    unaff = {'Test': {'test_one': {'field_uno': 1.0, 'field_dos': 2.0}}}
     patch = upgrade.generate_patch(unaff)
     assert patch == []
-    nope = {'Nope': {'field_one': 1.0, 'field_two': 2.0}}
+    nope = {'Nope': {'test_one': {'field_one': 1.0, 'field_two': 2.0}}}
     patch = upgrade.generate_patch(nope)
     assert patch == []

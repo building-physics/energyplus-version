@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 class Change:
-    def apply(self) -> list: # pragma: no cover
+    def apply(self, object_name) -> list: # pragma: no cover
         raise NotImplementedError('Change object must implement the "apply" method')
     def valid(self, object) -> bool: # pragma: no cover
         raise NotImplementedError('Change object must implement the "apply" method') 
@@ -15,8 +15,8 @@ class ChangeFieldName:
         self.object = object
         self.old_name = old_name
         self.new_name = new_name
-    def apply(self) -> list:
-        object_path = '/' + self.object + '/'
+    def apply(self, object_name) -> list:
+        object_path = '/%s/%s/' % (self.object, object_name)
         from_path = object_path + self.old_name
         to_path = object_path + self.new_name
         return [{'op': 'move', 'from': from_path, 'path': to_path}]
@@ -29,8 +29,8 @@ class RemoveField:
     def __init__(self, object: str, field: str):
         self.object = object
         self.field = field
-    def apply(self) -> list:
-        path = '/' + self.object + '/' + self.field
+    def apply(self, object_name) -> list:
+        path = '/%s/%s/%s' % (self.object, object_name, self.field)
         return [{'op': 'remove', 'path': path}]
     def valid(self, object) -> bool:
         return self.field in object
@@ -44,9 +44,9 @@ class Upgrade:
         patch = []
         for change in self.changes:
             if change.object in prev:
-                for obj in prev[change.object]:
+                for name, obj in prev[change.object].items():
                     if change.valid(obj):
-                        patch.extend(change.apply())
+                        patch.extend(change.apply(name))
         return patch
     def describe(self):
         change_by_object = {}

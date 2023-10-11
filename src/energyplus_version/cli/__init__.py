@@ -4,6 +4,7 @@
 import click
 import json
 import jsonpatch
+import energyplus_version as ev
 from ..version_22_1 import Upgrade
 #from version_22_1 import Upgrade
 
@@ -47,7 +48,7 @@ def upgrade(epjson, downgradable, output):
 @click.argument('epjson', type=click.Path(exists=True)) #, help='epJSON file to downgrade')
 @click.option('-o', '--output', show_default=True, default='downgrade.epJSON', help='File name to write.')
 @click.option('-t', '--to', help='Version to downgrade to, defaults to one version back.')
-def downgrade(output, to=None):
+def downgrade(epjson, output, to=None):
     fp = open(epjson, 'r')
     # Need to catch any issues with reading the json
     epjson = json.load(fp)
@@ -58,7 +59,7 @@ def downgrade(output, to=None):
             version_string = list(epjson['Version'].values())[0]['version_identifier']
         except:
             click.echo('Failed to find version string, cannot proceed', err=True)
-        version = energyplus_version.EnergyPlusVersion.from_string(version_string)
+        version = ev.EnergyPlusVersion.from_string(version_string)
         if version is None:
             click.echo('Failed to process version string "%s", cannot proceed' % version_string, err=True)
         else:

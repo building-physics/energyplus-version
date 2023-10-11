@@ -12,6 +12,10 @@ def test_version():
     assert str(version.next().next()) == '23.2'
     assert str(version.next().previous()) == '22.2'
 
+def test_errors():
+    version = energyplus_version.EnergyPlusVersion.from_string('22.one')
+    assert version is None
+
 def test_version_string():
     version = energyplus_version.EnergyPlusVersion.from_string('22.2')
     assert str(version) == '22.2'

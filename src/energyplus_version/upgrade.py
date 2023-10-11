@@ -68,8 +68,10 @@ class EnergyPlusUpgrade(Upgrade):
         raise NotImplementedError('EnergyPlusUpgrade object must implement the "to_version" method')
     def generate_patch(self, prev):
         patch = super().generate_patch(prev)
-        if patch != []:
+        try:
             path = '/Version/%s/version_identifier' % list(prev['Version'].keys())[0]
             patch.append({'op': 'replace', 'path': path, 'value': self.to_version()})
+        except KeyError:
+            pass
         return patch
         

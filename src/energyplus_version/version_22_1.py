@@ -4,8 +4,8 @@
 import energyplus_version as ev
 
 class Upgrade(ev.EnergyPlusUpgrade):
-    def __init__(self):
-        self.changes = [
+    def changes(self):
+        return [
             ev.ChangeFieldName('Coil:Cooling:DX:SingleSpeed',
                                'rated_evaporator_fan_power_per_volume_flow_rate',
                                '2017_rated_evaporator_fan_power_per_volume_flow_rate'),

@@ -38,11 +38,11 @@ class RemoveField:
         return 'Remove the field named "%s".' % self.field
 
 class Upgrade:
-    def __init__(self):
-        self.changes = []
+    def changes(self): # pragma: no cover
+        raise NotImplementedError('Upgrade object must implement the "changes" method')
     def generate_patch(self, prev):
         patch = []
-        for change in self.changes:
+        for change in self.changes():
             if change.object in prev:
                 for name, obj in prev[change.object].items():
                     if change.valid(obj):
@@ -50,7 +50,7 @@ class Upgrade:
         return patch
     def describe(self):
         change_by_object = {}
-        for change in self.changes:
+        for change in self.changes():
             if change.object in change_by_object:
                 change_by_object[change.object].append(change.describe())
             else:

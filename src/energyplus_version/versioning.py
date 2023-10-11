@@ -25,12 +25,12 @@ class EnergyPlusVersion:
         return '%d.%d' % (self.year, self.release)
     @classmethod
     def from_string(cls, string):
-        split = string.split('.')
         try:
-            if len == 2:
-                return cls(int(split[0]), int(split[1]))
-            elif len == 3:
-                return cls(int(split[0]), int(split[1]), patch=int(split[2]))
+            split = [int(el) for el in string.split('.')]
         except ValueError:
-            pass
+            return None
+        if len(split) == 2:
+            return cls(split[0], split[1])
+        elif len(split) == 3:
+            return cls(split[0], split[1], patch=split[2])
         return None

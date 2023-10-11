@@ -25,6 +25,7 @@ def upgrade(epjson, downgradable, output):
     except:
         click.echo('Failed to find version string, cannot proceed', err=True)
     print(version_string)
+    old_downgrade = epjson.pop('energyplus_version_downgrade', {})
     # Need to do a proper lookup and do a plugin thing here
     upgrade = Upgrade()
     print(upgrade.describe())
@@ -32,14 +33,43 @@ def upgrade(epjson, downgradable, output):
     print(str(patch))
     jp = jsonpatch.JsonPatch(patch)
     new_epjson= jp.apply(epjson)
+    # Add in downgrade information if requested
+    if downgradable:
+        downpatch = jsonpatch.JsonPatch.from_diff(new_epjson, epjson)
+        new_epjson['energyplus_version_downgrade'] = old_downgrade
+        new_epjson['energyplus_version_downgrade'][version_string] = json.loads(downpatch.to_string())
     # Need to set up the naming to mimic the current setup, just forge ahead for now
     fp = open(output, 'w')
     json.dump(new_epjson, fp, indent=4)
     fp.close()
 
 @click.command()
-def downgrade():
+@click.argument('epjson', type=click.Path(exists=True)) #, help='epJSON file to downgrade')
+@click.option('-o', '--output', show_default=True, default='downgrade.epJSON', help='File name to write.')
+@click.option('-t', '--to', help='Version to downgrade to, defaults to one version back.')
+def downgrade(output, to=None):
+    fp = open(epjson, 'r')
+    # Need to catch any issues with reading the json
+    epjson = json.load(fp)
+    fp.close()
     click.echo('Downgrade')
+    if 'energyplus_version_downgrade' in epjson:
+        try:
+            version_string = list(epjson['Version'].values())[0]['version_identifier']
+        except:
+            click.echo('Failed to find version string, cannot proceed', err=True)
+        version = energyplus_version.EnergyPlusVersion.from_string(version_string)
+        if version is None:
+            click.echo('Failed to process version string "%s", cannot proceed' % version_string, err=True)
+        else:
+            previous_version = str(version.previous())
+            if previous_version in epjson['energyplus_version_downgrade']:
+                jp = jsonpatch.JsonPatch(epjson['energyplus_version_downgrade'].pop(previous_version))
+                new_epjson= jp.apply(epjson)
+                # Need to set up the naming to mimic the current setup, just forge ahead for now
+                fp = open(output, 'w')
+                json.dump(new_epjson, fp, indent=4)
+                fp.close()
 
 @click.group(context_settings={'help_option_names': ['-h', '--help']}, invoke_without_command=True)
 @click.version_option(version=__version__, prog_name='energyplus_version')

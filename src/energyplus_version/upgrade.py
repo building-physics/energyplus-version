@@ -2,6 +2,9 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
+class UpgradeError(Exception):
+    pass
+
 class Change:
     def apply(self, object_name) -> list: # pragma: no cover
         raise NotImplementedError('Change object must implement the "apply" method')
@@ -10,11 +13,19 @@ class Change:
     def describe(self) -> str: # pragma: no cover
         raise NotImplementedError('Change object must implement the "describe" method')
 
+def noop(input):
+    return input
+
 class ChangeFieldName:
-    def __init__(self, object: str, old_name: str, new_name: str):
+    def __init__(self, object: str, old_name: str, new_name: str, modify_value=None):
         self.object = object
         self.old_name = old_name
         self.new_name = new_name
+        self.modify_value = noop
+        if modify_value is not None:
+            if not callable(modify_value):
+                raise UpgradeError('ChangeFieldName expected a callable for "modify_value", instead got "%s"' % repr(modify_value))
+            self.modify_value = modify_value
     def apply(self, object_name) -> list:
         object_path = '/%s/%s/' % (self.object, object_name)
         from_path = object_path + self.old_name
@@ -26,9 +37,14 @@ class ChangeFieldName:
         return 'Change the field named "%s" to "%s".' % (self.old_name, self.new_name)
     
 class RemoveField:
-    def __init__(self, object: str, field: str):
+    def __init__(self, object: str, field: str, check_value=None):
         self.object = object
         self.field = field
+        self.check_value = noop
+        if check_value is not None:
+            if not callable(check_value):
+                raise UpgradeError('RemoveField expected a callable for "check_value", instead got "%s"' % repr(check_value))
+            self.check_value = check_value
     def apply(self, object_name) -> list:
         path = '/%s/%s/%s' % (self.object, object_name, self.field)
         return [{'op': 'remove', 'path': path}]

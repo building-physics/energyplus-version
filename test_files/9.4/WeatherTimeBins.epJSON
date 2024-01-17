@@ -1,0 +1,241 @@
+{
+    "Building": {
+        "None": {
+            "loads_convergence_tolerance_value": 0.04,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.4,
+            "terrain": "Suburbs"
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "World",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Table:TimeBins": {
+        "Output:Table:TimeBins 1": {
+            "interval_count": 15,
+            "interval_size": 5,
+            "interval_start": -30,
+            "key_value": "*",
+            "schedule_name": "constant",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Table:TimeBins 2": {
+            "interval_count": 15,
+            "interval_size": 5,
+            "interval_start": -30,
+            "key_value": "*",
+            "variable_name": "Site Outdoor Air Dewpoint Temperature"
+        },
+        "Output:Table:TimeBins 3": {
+            "interval_count": 20,
+            "interval_size": 5,
+            "interval_start": 0,
+            "key_value": "*",
+            "variable_name": "Site Outdoor Air Relative Humidity"
+        },
+        "Output:Table:TimeBins 4": {
+            "interval_count": 20,
+            "interval_size": 0.001,
+            "interval_start": 0,
+            "key_value": "*",
+            "variable_name": "Site Outdoor Air Humidity Ratio"
+        },
+        "Output:Table:TimeBins 5": {
+            "interval_count": 15,
+            "interval_size": 5000,
+            "interval_start": 0,
+            "key_value": "*",
+            "variable_name": "Site Outdoor Air Enthalpy"
+        },
+        "Output:Table:TimeBins 6": {
+            "interval_count": 20,
+            "interval_size": 1,
+            "interval_start": 0,
+            "key_value": "*",
+            "variable_name": "Site Wind Speed"
+        },
+        "Output:Table:TimeBins 7": {
+            "interval_count": 18,
+            "interval_size": 20,
+            "interval_start": 0,
+            "key_value": "*",
+            "variable_name": "Site Wind Direction"
+        },
+        "Output:Table:TimeBins 8": {
+            "interval_count": 10,
+            "interval_size": 100,
+            "interval_start": 0,
+            "key_value": "*",
+            "variable_name": "Site Direct Solar Radiation Rate per Area"
+        },
+        "Output:Table:TimeBins 9": {
+            "interval_count": 10,
+            "interval_size": 100,
+            "interval_start": 0,
+            "key_value": "*",
+            "variable_name": "Site Diffuse Solar Radiation Rate per Area"
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "RunPeriod",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "RunPeriod",
+            "variable_name": "Site Outdoor Air Wetbulb Temperature"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "RunPeriod",
+            "variable_name": "Site Outdoor Air Dewpoint Temperature"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "RunPeriod",
+            "variable_name": "Site Outdoor Air Relative Humidity"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "RunPeriod",
+            "variable_name": "Site Outdoor Air Enthalpy"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "RunPeriod",
+            "variable_name": "Site Outdoor Air Humidity Ratio"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "RunPeriod",
+            "variable_name": "Site Wind Direction"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "RunPeriod",
+            "variable_name": "Site Wind Speed"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "RunPeriod",
+            "variable_name": "Site Solar Azimuth Angle"
+        },
+        "Output:Variable 10": {
+            "key_value": "*",
+            "reporting_frequency": "RunPeriod",
+            "variable_name": "Site Solar Altitude Angle"
+        },
+        "Output:Variable 11": {
+            "key_value": "*",
+            "reporting_frequency": "RunPeriod",
+            "variable_name": "Site Direct Solar Radiation Rate per Area"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "RunPeriod",
+            "variable_name": "Site Diffuse Solar Radiation Rate per Area"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "end_day_of_month": 31,
+            "end_month": 12
+        }
+    },
+    "Schedule:Compact": {
+        "Constant": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "On/Off"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "On/Off": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 1
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "No",
+            "run_simulation_for_weather_file_run_periods": "Yes"
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "CHICAGO_IL_USA Annual Heating 99% Design Conditions DB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -17.3,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -17.3,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 4
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "9.4"
+        }
+    }
+}

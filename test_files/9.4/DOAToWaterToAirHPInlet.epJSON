@@ -1,0 +1,4780 @@
+{
+    "AirLoopHVAC": {
+        "DOAS": {
+            "availability_manager_list_name": "DOAS Availability Managers",
+            "branch_list_name": "DOAS Branches",
+            "demand_side_inlet_node_names": "DOAS Supply Path Inlet",
+            "demand_side_outlet_node_name": "DOAS Return Air Outlet",
+            "design_supply_air_flow_rate": "Autosize",
+            "supply_side_inlet_node_name": "DOAS Air Loop Inlet",
+            "supply_side_outlet_node_names": "DOAS Supply Fan Outlet"
+        }
+    },
+    "AirLoopHVAC:ControllerList": {
+        "DOAS OA System Controllers": {
+            "controller_1_name": "DOAS OA Controller",
+            "controller_1_object_type": "Controller:OutdoorAir"
+        }
+    },
+    "AirLoopHVAC:OutdoorAirSystem": {
+        "DOAS OA System": {
+            "availability_manager_list_name": "DOAS Availability Managers",
+            "controller_list_name": "DOAS OA System Controllers",
+            "outdoor_air_equipment_list_name": "DOAS OA System Equipment"
+        }
+    },
+    "AirLoopHVAC:OutdoorAirSystem:EquipmentList": {
+        "DOAS OA System Equipment": {
+            "component_1_name": "DOAS Heat Recovery",
+            "component_1_object_type": "HeatExchanger:AirToAir:SensibleAndLatent",
+            "component_2_name": "DOAS OA Mixing Box",
+            "component_2_object_type": "OutdoorAir:Mixer"
+        }
+    },
+    "AirLoopHVAC:ReturnPath": {
+        "DOAS Return Path": {
+            "components": [
+                {
+                    "component_name": "DOAS Zone Mixer",
+                    "component_object_type": "AirLoopHVAC:ZoneMixer"
+                }
+            ],
+            "return_air_path_outlet_node_name": "DOAS Return Air Outlet"
+        }
+    },
+    "AirLoopHVAC:SupplyPath": {
+        "DOAS Supply Path": {
+            "components": [
+                {
+                    "component_name": "DOAS Zone Splitter",
+                    "component_object_type": "AirLoopHVAC:ZoneSplitter"
+                }
+            ],
+            "supply_air_path_inlet_node_name": "DOAS Supply Path Inlet"
+        }
+    },
+    "AirLoopHVAC:ZoneMixer": {
+        "DOAS Zone Mixer": {
+            "nodes": [
+                {
+                    "inlet_node_name": "SPACE1-1 Return Outlet"
+                },
+                {
+                    "inlet_node_name": "SPACE2-1 Return Outlet"
+                },
+                {
+                    "inlet_node_name": "SPACE3-1 Return Outlet"
+                },
+                {
+                    "inlet_node_name": "SPACE4-1 Return Outlet"
+                },
+                {
+                    "inlet_node_name": "SPACE5-1 Return Outlet"
+                }
+            ],
+            "outlet_node_name": "DOAS Return Air Outlet"
+        }
+    },
+    "AirLoopHVAC:ZoneSplitter": {
+        "DOAS Zone Splitter": {
+            "inlet_node_name": "DOAS Supply Path Inlet",
+            "nodes": [
+                {
+                    "outlet_node_name": "SPACE1-1 Air Terminal Mixer Primary Inlet"
+                },
+                {
+                    "outlet_node_name": "SPACE2-1 Air Terminal Mixer Primary Inlet"
+                },
+                {
+                    "outlet_node_name": "SPACE3-1 Air Terminal Mixer Primary Inlet"
+                },
+                {
+                    "outlet_node_name": "SPACE4-1 Air Terminal Mixer Primary Inlet"
+                },
+                {
+                    "outlet_node_name": "SPACE5-1 Air Terminal Mixer Primary Inlet"
+                }
+            ]
+        }
+    },
+    "AirTerminal:SingleDuct:Mixer": {
+        "SPACE1-1 DOAS Air Terminal": {
+            "mixer_connection_type": "InletSide",
+            "mixer_outlet_node_name": "SPACE1-1 Heat Pump Inlet",
+            "mixer_primary_air_inlet_node_name": "SPACE1-1 Air Terminal Mixer Primary Inlet",
+            "mixer_secondary_air_inlet_node_name": "SPACE1-1 Air Terminal Mixer Secondary Inlet",
+            "zonehvac_unit_object_name": "SPACE1-1 Heat Pump",
+            "zonehvac_unit_object_type": "ZoneHVAC:WaterToAirHeatPump"
+        },
+        "SPACE2-1 DOAS Air Terminal": {
+            "mixer_connection_type": "InletSide",
+            "mixer_outlet_node_name": "SPACE2-1 Heat Pump Inlet",
+            "mixer_primary_air_inlet_node_name": "SPACE2-1 Air Terminal Mixer Primary Inlet",
+            "mixer_secondary_air_inlet_node_name": "SPACE2-1 Air Terminal Mixer Secondary Inlet",
+            "zonehvac_unit_object_name": "SPACE2-1 Heat Pump",
+            "zonehvac_unit_object_type": "ZoneHVAC:WaterToAirHeatPump"
+        },
+        "SPACE3-1 DOAS Air Terminal": {
+            "mixer_connection_type": "InletSide",
+            "mixer_outlet_node_name": "SPACE3-1 Heat Pump Inlet",
+            "mixer_primary_air_inlet_node_name": "SPACE3-1 Air Terminal Mixer Primary Inlet",
+            "mixer_secondary_air_inlet_node_name": "SPACE3-1 Air Terminal Mixer Secondary Inlet",
+            "zonehvac_unit_object_name": "SPACE3-1 Heat Pump",
+            "zonehvac_unit_object_type": "ZoneHVAC:WaterToAirHeatPump"
+        },
+        "SPACE4-1 DOAS Air Terminal": {
+            "mixer_connection_type": "InletSide",
+            "mixer_outlet_node_name": "SPACE4-1 Heat Pump Inlet",
+            "mixer_primary_air_inlet_node_name": "SPACE4-1 Air Terminal Mixer Primary Inlet",
+            "mixer_secondary_air_inlet_node_name": "SPACE4-1 Air Terminal Mixer Secondary Inlet",
+            "zonehvac_unit_object_name": "SPACE4-1 Heat Pump",
+            "zonehvac_unit_object_type": "ZoneHVAC:WaterToAirHeatPump"
+        },
+        "SPACE5-1 DOAS Air Terminal": {
+            "mixer_connection_type": "InletSide",
+            "mixer_outlet_node_name": "SPACE5-1 Heat Pump Inlet",
+            "mixer_primary_air_inlet_node_name": "SPACE5-1 Air Terminal Mixer Primary Inlet",
+            "mixer_secondary_air_inlet_node_name": "SPACE5-1 Air Terminal Mixer Secondary Inlet",
+            "zonehvac_unit_object_name": "SPACE5-1 Heat Pump",
+            "zonehvac_unit_object_type": "ZoneHVAC:WaterToAirHeatPump"
+        }
+    },
+    "AvailabilityManager:Scheduled": {
+        "DOAS Availability": {
+            "schedule_name": "FanAvailSched"
+        }
+    },
+    "AvailabilityManagerAssignmentList": {
+        "DOAS Availability Managers": {
+            "managers": [
+                {
+                    "availability_manager_name": "DOAS Availability",
+                    "availability_manager_object_type": "AvailabilityManager:Scheduled"
+                }
+            ]
+        }
+    },
+    "Branch": {
+        "Condenser Demand Bypass Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Cond Demand Bypass Inlet Node",
+                    "component_name": "Condenser Demand Side Bypass",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Cond Demand Bypass Outlet Node"
+                }
+            ]
+        },
+        "Condenser Demand Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Condenser Demand Inlet Node",
+                    "component_name": "Condenser Demand Inlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Condenser Demand Entrance Pipe Outlet Node"
+                }
+            ]
+        },
+        "Condenser Demand Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Condenser Demand Exit Pipe Inlet Node",
+                    "component_name": "Condenser Demand Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Condenser Demand Outlet Node"
+                }
+            ]
+        },
+        "Condenser Supply Bypass Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Cond Supply Bypass Inlet Node",
+                    "component_name": "Condenser Supply Side Bypass",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Cond Supply Bypass Outlet Node"
+                }
+            ]
+        },
+        "Condenser Supply GHE Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "GHE Inlet Node",
+                    "component_name": "Vertical Ground Heat Exchanger",
+                    "component_object_type": "GroundHeatExchanger:System",
+                    "component_outlet_node_name": "GHE Outlet Node"
+                }
+            ]
+        },
+        "Condenser Supply Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Condenser Supply Inlet Node",
+                    "component_name": "Cond Circ Pump",
+                    "component_object_type": "Pump:VariableSpeed",
+                    "component_outlet_node_name": "Condenser Pump Outlet Node"
+                }
+            ]
+        },
+        "Condenser Supply Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Condenser Supply Exit Pipe Inlet Node",
+                    "component_name": "Condenser Supply Outlet",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Condenser Supply Outlet Node"
+                }
+            ]
+        },
+        "DOAS Main Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "DOAS Air Loop Inlet",
+                    "component_name": "DOAS OA System",
+                    "component_object_type": "AirLoopHVAC:OutdoorAirSystem",
+                    "component_outlet_node_name": "DOAS Mixed Air Outlet"
+                },
+                {
+                    "component_inlet_node_name": "DOAS Mixed Air Outlet",
+                    "component_name": "DOAS Supply Fan",
+                    "component_object_type": "Fan:VariableVolume",
+                    "component_outlet_node_name": "DOAS Supply Fan Outlet"
+                }
+            ]
+        },
+        "SPACE1-1 HP Cooling Mode Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "SPACE1-1 HP Cooling Water Inlet",
+                    "component_name": "SPACE1-1 HP Cooling Mode",
+                    "component_object_type": "Coil:Cooling:WaterToAirHeatPump:EquationFit",
+                    "component_outlet_node_name": "SPACE1-1 HP Cooling Water Outlet"
+                }
+            ]
+        },
+        "SPACE1-1 HP Heating Mode Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "SPACE1-1 HP Heating Water Inlet",
+                    "component_name": "SPACE1-1 HP Heating Mode",
+                    "component_object_type": "Coil:Heating:WaterToAirHeatPump:EquationFit",
+                    "component_outlet_node_name": "SPACE1-1 HP Heating Water Outlet"
+                }
+            ]
+        },
+        "SPACE2-1 HP Cooling Mode Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "SPACE2-1 HP Cooling Water Inlet",
+                    "component_name": "SPACE2-1 HP Cooling Mode",
+                    "component_object_type": "Coil:Cooling:WaterToAirHeatPump:EquationFit",
+                    "component_outlet_node_name": "SPACE2-1 HP Cooling Water Outlet"
+                }
+            ]
+        },
+        "SPACE2-1 HP Heating Mode Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "SPACE2-1 HP Heating Water Inlet",
+                    "component_name": "SPACE2-1 HP Heating Mode",
+                    "component_object_type": "Coil:Heating:WaterToAirHeatPump:EquationFit",
+                    "component_outlet_node_name": "SPACE2-1 HP Heating Water Outlet"
+                }
+            ]
+        },
+        "SPACE3-1 HP Cooling Mode Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "SPACE3-1 HP Cooling Water Inlet",
+                    "component_name": "SPACE3-1 HP Cooling Mode",
+                    "component_object_type": "Coil:Cooling:WaterToAirHeatPump:EquationFit",
+                    "component_outlet_node_name": "SPACE3-1 HP Cooling Water Outlet"
+                }
+            ]
+        },
+        "SPACE3-1 HP Heating Mode Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "SPACE3-1 HP Heating Water Inlet",
+                    "component_name": "SPACE3-1 HP Heating Mode",
+                    "component_object_type": "Coil:Heating:WaterToAirHeatPump:EquationFit",
+                    "component_outlet_node_name": "SPACE3-1 HP Heating Water Outlet"
+                }
+            ]
+        },
+        "SPACE4-1 HP Cooling Mode Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "SPACE4-1 HP Cooling Water Inlet",
+                    "component_name": "SPACE4-1 HP Cooling Mode",
+                    "component_object_type": "Coil:Cooling:WaterToAirHeatPump:EquationFit",
+                    "component_outlet_node_name": "SPACE4-1 HP Cooling Water Outlet"
+                }
+            ]
+        },
+        "SPACE4-1 HP Heating Mode Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "SPACE4-1 HP Heating Water Inlet",
+                    "component_name": "SPACE4-1 HP Heating Mode",
+                    "component_object_type": "Coil:Heating:WaterToAirHeatPump:EquationFit",
+                    "component_outlet_node_name": "SPACE4-1 HP Heating Water Outlet"
+                }
+            ]
+        },
+        "SPACE5-1 HP Cooling Mode Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "SPACE5-1 HP Cooling Water Inlet",
+                    "component_name": "SPACE5-1 HP Cooling Mode",
+                    "component_object_type": "Coil:Cooling:WaterToAirHeatPump:EquationFit",
+                    "component_outlet_node_name": "SPACE5-1 HP Cooling Water Outlet"
+                }
+            ]
+        },
+        "SPACE5-1 HP Heating Mode Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "SPACE5-1 HP Heating Water Inlet",
+                    "component_name": "SPACE5-1 HP Heating Mode",
+                    "component_object_type": "Coil:Heating:WaterToAirHeatPump:EquationFit",
+                    "component_outlet_node_name": "SPACE5-1 HP Heating Water Outlet"
+                }
+            ]
+        }
+    },
+    "BranchList": {
+        "Condenser Demand Side Branches": {
+            "branches": [
+                {
+                    "branch_name": "Condenser Demand Inlet Branch"
+                },
+                {
+                    "branch_name": "SPACE1-1 HP Cooling Mode Branch"
+                },
+                {
+                    "branch_name": "SPACE1-1 HP Heating Mode Branch"
+                },
+                {
+                    "branch_name": "SPACE2-1 HP Cooling Mode Branch"
+                },
+                {
+                    "branch_name": "SPACE2-1 HP Heating Mode Branch"
+                },
+                {
+                    "branch_name": "SPACE3-1 HP Cooling Mode Branch"
+                },
+                {
+                    "branch_name": "SPACE3-1 HP Heating Mode Branch"
+                },
+                {
+                    "branch_name": "SPACE4-1 HP Cooling Mode Branch"
+                },
+                {
+                    "branch_name": "SPACE4-1 HP Heating Mode Branch"
+                },
+                {
+                    "branch_name": "SPACE5-1 HP Cooling Mode Branch"
+                },
+                {
+                    "branch_name": "SPACE5-1 HP Heating Mode Branch"
+                },
+                {
+                    "branch_name": "Condenser Demand Bypass Branch"
+                },
+                {
+                    "branch_name": "Condenser Demand Outlet Branch"
+                }
+            ]
+        },
+        "Condenser Supply Side Branches": {
+            "branches": [
+                {
+                    "branch_name": "Condenser Supply Inlet Branch"
+                },
+                {
+                    "branch_name": "Condenser Supply GHE Branch"
+                },
+                {
+                    "branch_name": "Condenser Supply Bypass Branch"
+                },
+                {
+                    "branch_name": "Condenser Supply Outlet Branch"
+                }
+            ]
+        },
+        "DOAS Branches": {
+            "branches": [
+                {
+                    "branch_name": "DOAS Main Branch"
+                }
+            ]
+        }
+    },
+    "Building": {
+        "FPFC with DOAS to Supply Side": {
+            "loads_convergence_tolerance_value": 0.04,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 30.0,
+            "solar_distribution": "FullExterior",
+            "temperature_convergence_tolerance_value": 0.4,
+            "terrain": "City"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "BACK-1": {
+            "construction_name": "WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "SPACE3-1"
+        },
+        "C1-1": {
+            "construction_name": "CLNG-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "C1-1P",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE1-1"
+        },
+        "C1-1P": {
+            "construction_name": "CLNG-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "C1-1",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "PLENUM-1"
+        },
+        "C2-1": {
+            "construction_name": "CLNG-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "C2-1P",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE2-1"
+        },
+        "C2-1P": {
+            "construction_name": "CLNG-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "C2-1",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "PLENUM-1"
+        },
+        "C3-1": {
+            "construction_name": "CLNG-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "C3-1P",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE3-1"
+        },
+        "C3-1P": {
+            "construction_name": "CLNG-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "C3-1",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "PLENUM-1"
+        },
+        "C4-1": {
+            "construction_name": "CLNG-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "C4-1P",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE4-1"
+        },
+        "C4-1P": {
+            "construction_name": "CLNG-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "C4-1",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "PLENUM-1"
+        },
+        "C5-1": {
+            "construction_name": "CLNG-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "C5-1P",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE5-1"
+        },
+        "C5-1P": {
+            "construction_name": "CLNG-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "C5-1",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "PLENUM-1"
+        },
+        "F1-1": {
+            "construction_name": "FLOOR-SLAB-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Ground",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE1-1"
+        },
+        "F2-1": {
+            "construction_name": "FLOOR-SLAB-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Ground",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE2-1"
+        },
+        "F3-1": {
+            "construction_name": "FLOOR-SLAB-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Ground",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE3-1"
+        },
+        "F4-1": {
+            "construction_name": "FLOOR-SLAB-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Ground",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE4-1"
+        },
+        "F5-1": {
+            "construction_name": "FLOOR-SLAB-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Ground",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE5-1"
+        },
+        "FRONT-1": {
+            "construction_name": "WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "SPACE1-1"
+        },
+        "LEFT-1": {
+            "construction_name": "WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "SPACE4-1"
+        },
+        "RIGHT-1": {
+            "construction_name": "WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "SPACE2-1"
+        },
+        "SB12": {
+            "construction_name": "INT-WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "SB21",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE1-1"
+        },
+        "SB14": {
+            "construction_name": "INT-WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "SB41",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE1-1"
+        },
+        "SB15": {
+            "construction_name": "INT-WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "SB51",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE1-1"
+        },
+        "SB21": {
+            "construction_name": "INT-WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "SB12",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE2-1"
+        },
+        "SB23": {
+            "construction_name": "INT-WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "SB32",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE2-1"
+        },
+        "SB25": {
+            "construction_name": "INT-WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "SB52",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE2-1"
+        },
+        "SB32": {
+            "construction_name": "INT-WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "SB23",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE3-1"
+        },
+        "SB34": {
+            "construction_name": "INT-WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "SB43",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE3-1"
+        },
+        "SB35": {
+            "construction_name": "INT-WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "SB53",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE3-1"
+        },
+        "SB41": {
+            "construction_name": "INT-WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "SB14",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE4-1"
+        },
+        "SB43": {
+            "construction_name": "INT-WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "SB34",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE4-1"
+        },
+        "SB45": {
+            "construction_name": "INT-WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "SB54",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE4-1"
+        },
+        "SB51": {
+            "construction_name": "INT-WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "SB15",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE5-1"
+        },
+        "SB52": {
+            "construction_name": "INT-WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "SB25",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE5-1"
+        },
+        "SB53": {
+            "construction_name": "INT-WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "SB35",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 26.8,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE5-1"
+        },
+        "SB54": {
+            "construction_name": "INT-WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "SB45",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 11.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.7,
+                    "vertex_y_coordinate": 3.7,
+                    "vertex_z_coordinate": 2.4
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SPACE5-1"
+        },
+        "TOP-1": {
+            "construction_name": "ROOF-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "PLENUM-1"
+        },
+        "WALL-1PB": {
+            "construction_name": "WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "PLENUM-1"
+        },
+        "WALL-1PF": {
+            "construction_name": "WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "PLENUM-1"
+        },
+        "WALL-1PL": {
+            "construction_name": "WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "PLENUM-1"
+        },
+        "WALL-1PR": {
+            "construction_name": "WALL-1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 2.4
+                },
+                {
+                    "vertex_x_coordinate": 30.5,
+                    "vertex_y_coordinate": 15.2,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "PLENUM-1"
+        }
+    },
+    "Coil:Cooling:WaterToAirHeatPump:EquationFit": {
+        "SPACE1-1 HP Cooling Mode": {
+            "air_inlet_node_name": "SPACE1-1 Zone Unit Fan Outlet",
+            "air_outlet_node_name": "SPACE1-1 Cooling Coil Outlet",
+            "cooling_power_consumption_coefficient_1": -3.205409884,
+            "cooling_power_consumption_coefficient_2": -0.976409399,
+            "cooling_power_consumption_coefficient_3": 3.97892546,
+            "cooling_power_consumption_coefficient_4": 0.938181818,
+            "cooling_power_consumption_coefficient_5": 0.0,
+            "gross_rated_cooling_cop": 5.12,
+            "gross_rated_sensible_cooling_capacity": "Autosize",
+            "gross_rated_total_cooling_capacity": "Autosize",
+            "nominal_time_for_condensate_removal_to_begin": 0,
+            "rated_air_flow_rate": "Autosize",
+            "rated_water_flow_rate": "Autosize",
+            "ratio_of_initial_moisture_evaporation_rate_and_steady_state_latent_capacity": 0,
+            "sensible_cooling_capacity_coefficient_1": -5.462690012,
+            "sensible_cooling_capacity_coefficient_2": 17.95968138,
+            "sensible_cooling_capacity_coefficient_3": -11.87818402,
+            "sensible_cooling_capacity_coefficient_4": -0.980163419,
+            "sensible_cooling_capacity_coefficient_5": 0.767285761,
+            "sensible_cooling_capacity_coefficient_6": 0.0,
+            "total_cooling_capacity_coefficient_1": -9.149069561,
+            "total_cooling_capacity_coefficient_2": 10.87814026,
+            "total_cooling_capacity_coefficient_3": -1.718780157,
+            "total_cooling_capacity_coefficient_4": 0.746414818,
+            "total_cooling_capacity_coefficient_5": 0.0,
+            "water_inlet_node_name": "SPACE1-1 HP Cooling Water Inlet",
+            "water_outlet_node_name": "SPACE1-1 HP Cooling Water Outlet"
+        },
+        "SPACE2-1 HP Cooling Mode": {
+            "air_inlet_node_name": "SPACE2-1 Zone Unit Fan Outlet",
+            "air_outlet_node_name": "SPACE2-1 Cooling Coil Outlet",
+            "cooling_power_consumption_coefficient_1": -3.205409884,
+            "cooling_power_consumption_coefficient_2": -0.976409399,
+            "cooling_power_consumption_coefficient_3": 3.97892546,
+            "cooling_power_consumption_coefficient_4": 0.938181818,
+            "cooling_power_consumption_coefficient_5": 0.0,
+            "gross_rated_cooling_cop": 5.12,
+            "gross_rated_sensible_cooling_capacity": "Autosize",
+            "gross_rated_total_cooling_capacity": "Autosize",
+            "nominal_time_for_condensate_removal_to_begin": 0,
+            "rated_air_flow_rate": "Autosize",
+            "rated_water_flow_rate": "Autosize",
+            "ratio_of_initial_moisture_evaporation_rate_and_steady_state_latent_capacity": 0,
+            "sensible_cooling_capacity_coefficient_1": -5.462690012,
+            "sensible_cooling_capacity_coefficient_2": 17.95968138,
+            "sensible_cooling_capacity_coefficient_3": -11.87818402,
+            "sensible_cooling_capacity_coefficient_4": -0.980163419,
+            "sensible_cooling_capacity_coefficient_5": 0.767285761,
+            "sensible_cooling_capacity_coefficient_6": 0.0,
+            "total_cooling_capacity_coefficient_1": -9.149069561,
+            "total_cooling_capacity_coefficient_2": 10.87814026,
+            "total_cooling_capacity_coefficient_3": -1.718780157,
+            "total_cooling_capacity_coefficient_4": 0.746414818,
+            "total_cooling_capacity_coefficient_5": 0.0,
+            "water_inlet_node_name": "SPACE2-1 HP Cooling Water Inlet",
+            "water_outlet_node_name": "SPACE2-1 HP Cooling Water Outlet"
+        },
+        "SPACE3-1 HP Cooling Mode": {
+            "air_inlet_node_name": "SPACE3-1 Zone Unit Fan Outlet",
+            "air_outlet_node_name": "SPACE3-1 Cooling Coil Outlet",
+            "cooling_power_consumption_coefficient_1": -3.205409884,
+            "cooling_power_consumption_coefficient_2": -0.976409399,
+            "cooling_power_consumption_coefficient_3": 3.97892546,
+            "cooling_power_consumption_coefficient_4": 0.938181818,
+            "cooling_power_consumption_coefficient_5": 0.0,
+            "gross_rated_cooling_cop": 5.12,
+            "gross_rated_sensible_cooling_capacity": "Autosize",
+            "gross_rated_total_cooling_capacity": "Autosize",
+            "nominal_time_for_condensate_removal_to_begin": 0,
+            "rated_air_flow_rate": "Autosize",
+            "rated_water_flow_rate": "Autosize",
+            "ratio_of_initial_moisture_evaporation_rate_and_steady_state_latent_capacity": 0,
+            "sensible_cooling_capacity_coefficient_1": -5.462690012,
+            "sensible_cooling_capacity_coefficient_2": 17.95968138,
+            "sensible_cooling_capacity_coefficient_3": -11.87818402,
+            "sensible_cooling_capacity_coefficient_4": -0.980163419,
+            "sensible_cooling_capacity_coefficient_5": 0.767285761,
+            "sensible_cooling_capacity_coefficient_6": 0.0,
+            "total_cooling_capacity_coefficient_1": -9.149069561,
+            "total_cooling_capacity_coefficient_2": 10.87814026,
+            "total_cooling_capacity_coefficient_3": -1.718780157,
+            "total_cooling_capacity_coefficient_4": 0.746414818,
+            "total_cooling_capacity_coefficient_5": 0.0,
+            "water_inlet_node_name": "SPACE3-1 HP Cooling Water Inlet",
+            "water_outlet_node_name": "SPACE3-1 HP Cooling Water Outlet"
+        },
+        "SPACE4-1 HP Cooling Mode": {
+            "air_inlet_node_name": "SPACE4-1 Zone Unit Fan Outlet",
+            "air_outlet_node_name": "SPACE4-1 Cooling Coil Outlet",
+            "cooling_power_consumption_coefficient_1": -3.205409884,
+            "cooling_power_consumption_coefficient_2": -0.976409399,
+            "cooling_power_consumption_coefficient_3": 3.97892546,
+            "cooling_power_consumption_coefficient_4": 0.938181818,
+            "cooling_power_consumption_coefficient_5": 0.0,
+            "gross_rated_cooling_cop": 5.12,
+            "gross_rated_sensible_cooling_capacity": "Autosize",
+            "gross_rated_total_cooling_capacity": "Autosize",
+            "nominal_time_for_condensate_removal_to_begin": 0,
+            "rated_air_flow_rate": "Autosize",
+            "rated_water_flow_rate": "Autosize",
+            "ratio_of_initial_moisture_evaporation_rate_and_steady_state_latent_capacity": 0,
+            "sensible_cooling_capacity_coefficient_1": -5.462690012,
+            "sensible_cooling_capacity_coefficient_2": 17.95968138,
+            "sensible_cooling_capacity_coefficient_3": -11.87818402,
+            "sensible_cooling_capacity_coefficient_4": -0.980163419,
+            "sensible_cooling_capacity_coefficient_5": 0.767285761,
+            "sensible_cooling_capacity_coefficient_6": 0.0,
+            "total_cooling_capacity_coefficient_1": -9.149069561,
+            "total_cooling_capacity_coefficient_2": 10.87814026,
+            "total_cooling_capacity_coefficient_3": -1.718780157,
+            "total_cooling_capacity_coefficient_4": 0.746414818,
+            "total_cooling_capacity_coefficient_5": 0.0,
+            "water_inlet_node_name": "SPACE4-1 HP Cooling Water Inlet",
+            "water_outlet_node_name": "SPACE4-1 HP Cooling Water Outlet"
+        },
+        "SPACE5-1 HP Cooling Mode": {
+            "air_inlet_node_name": "SPACE5-1 Zone Unit Fan Outlet",
+            "air_outlet_node_name": "SPACE5-1 Cooling Coil Outlet",
+            "cooling_power_consumption_coefficient_1": -3.205409884,
+            "cooling_power_consumption_coefficient_2": -0.976409399,
+            "cooling_power_consumption_coefficient_3": 3.97892546,
+            "cooling_power_consumption_coefficient_4": 0.938181818,
+            "cooling_power_consumption_coefficient_5": 0.0,
+            "gross_rated_cooling_cop": 5.12,
+            "gross_rated_sensible_cooling_capacity": "Autosize",
+            "gross_rated_total_cooling_capacity": "Autosize",
+            "nominal_time_for_condensate_removal_to_begin": 0,
+            "rated_air_flow_rate": "Autosize",
+            "rated_water_flow_rate": "Autosize",
+            "ratio_of_initial_moisture_evaporation_rate_and_steady_state_latent_capacity": 0,
+            "sensible_cooling_capacity_coefficient_1": -5.462690012,
+            "sensible_cooling_capacity_coefficient_2": 17.95968138,
+            "sensible_cooling_capacity_coefficient_3": -11.87818402,
+            "sensible_cooling_capacity_coefficient_4": -0.980163419,
+            "sensible_cooling_capacity_coefficient_5": 0.767285761,
+            "sensible_cooling_capacity_coefficient_6": 0.0,
+            "total_cooling_capacity_coefficient_1": -9.149069561,
+            "total_cooling_capacity_coefficient_2": 10.87814026,
+            "total_cooling_capacity_coefficient_3": -1.718780157,
+            "total_cooling_capacity_coefficient_4": 0.746414818,
+            "total_cooling_capacity_coefficient_5": 0.0,
+            "water_inlet_node_name": "SPACE5-1 HP Cooling Water Inlet",
+            "water_outlet_node_name": "SPACE5-1 HP Cooling Water Outlet"
+        }
+    },
+    "Coil:Heating:Fuel": {
+        "SPACE1-1 HP Supp Coil": {
+            "air_inlet_node_name": "SPACE1-1 Heating Coil Outlet",
+            "air_outlet_node_name": "SPACE1-1 Supply Inlet",
+            "availability_schedule_name": "FanAvailSched",
+            "burner_efficiency": 0.8,
+            "fuel_type": "NaturalGas",
+            "nominal_capacity": "Autosize"
+        },
+        "SPACE2-1 HP Supp Coil": {
+            "air_inlet_node_name": "SPACE2-1 Heating Coil Outlet",
+            "air_outlet_node_name": "SPACE2-1 Supply Inlet",
+            "availability_schedule_name": "FanAvailSched",
+            "burner_efficiency": 0.8,
+            "fuel_type": "NaturalGas",
+            "nominal_capacity": "Autosize"
+        },
+        "SPACE3-1 HP Supp Coil": {
+            "air_inlet_node_name": "SPACE3-1 Heating Coil Outlet",
+            "air_outlet_node_name": "SPACE3-1 Supply Inlet",
+            "availability_schedule_name": "FanAvailSched",
+            "burner_efficiency": 0.8,
+            "fuel_type": "NaturalGas",
+            "nominal_capacity": "Autosize"
+        },
+        "SPACE4-1 HP Supp Coil": {
+            "air_inlet_node_name": "SPACE4-1 Heating Coil Outlet",
+            "air_outlet_node_name": "SPACE4-1 Supply Inlet",
+            "availability_schedule_name": "FanAvailSched",
+            "burner_efficiency": 0.8,
+            "fuel_type": "NaturalGas",
+            "nominal_capacity": "Autosize"
+        },
+        "SPACE5-1 HP Supp Coil": {
+            "air_inlet_node_name": "SPACE5-1 Heating Coil Outlet",
+            "air_outlet_node_name": "SPACE5-1 Supply Inlet",
+            "availability_schedule_name": "FanAvailSched",
+            "burner_efficiency": 0.8,
+            "fuel_type": "NaturalGas",
+            "nominal_capacity": "Autosize"
+        }
+    },
+    "Coil:Heating:WaterToAirHeatPump:EquationFit": {
+        "SPACE1-1 HP Heating Mode": {
+            "air_inlet_node_name": "SPACE1-1 Cooling Coil Outlet",
+            "air_outlet_node_name": "SPACE1-1 Heating Coil Outlet",
+            "gross_rated_heating_capacity": "Autosize",
+            "gross_rated_heating_cop": 4.75,
+            "heating_capacity_coefficient_1": -1.361311959,
+            "heating_capacity_coefficient_2": -2.471798046,
+            "heating_capacity_coefficient_3": 4.173164514,
+            "heating_capacity_coefficient_4": 0.640757401,
+            "heating_capacity_coefficient_5": 0.0,
+            "heating_power_consumption_coefficient_1": -2.176941116,
+            "heating_power_consumption_coefficient_2": 0.832114286,
+            "heating_power_consumption_coefficient_3": 1.570743399,
+            "heating_power_consumption_coefficient_4": 0.690793651,
+            "heating_power_consumption_coefficient_5": 0.0,
+            "rated_air_flow_rate": "Autosize",
+            "rated_water_flow_rate": "Autosize",
+            "water_inlet_node_name": "SPACE1-1 HP Heating Water Inlet",
+            "water_outlet_node_name": "SPACE1-1 HP Heating Water Outlet"
+        },
+        "SPACE2-1 HP Heating Mode": {
+            "air_inlet_node_name": "SPACE2-1 Cooling Coil Outlet",
+            "air_outlet_node_name": "SPACE2-1 Heating Coil Outlet",
+            "gross_rated_heating_capacity": "Autosize",
+            "gross_rated_heating_cop": 4.75,
+            "heating_capacity_coefficient_1": -1.361311959,
+            "heating_capacity_coefficient_2": -2.471798046,
+            "heating_capacity_coefficient_3": 4.173164514,
+            "heating_capacity_coefficient_4": 0.640757401,
+            "heating_capacity_coefficient_5": 0.0,
+            "heating_power_consumption_coefficient_1": -2.176941116,
+            "heating_power_consumption_coefficient_2": 0.832114286,
+            "heating_power_consumption_coefficient_3": 1.570743399,
+            "heating_power_consumption_coefficient_4": 0.690793651,
+            "heating_power_consumption_coefficient_5": 0.0,
+            "rated_air_flow_rate": "Autosize",
+            "rated_water_flow_rate": "Autosize",
+            "water_inlet_node_name": "SPACE2-1 HP Heating Water Inlet",
+            "water_outlet_node_name": "SPACE2-1 HP Heating Water Outlet"
+        },
+        "SPACE3-1 HP Heating Mode": {
+            "air_inlet_node_name": "SPACE3-1 Cooling Coil Outlet",
+            "air_outlet_node_name": "SPACE3-1 Heating Coil Outlet",
+            "gross_rated_heating_capacity": "Autosize",
+            "gross_rated_heating_cop": 4.75,
+            "heating_capacity_coefficient_1": -1.361311959,
+            "heating_capacity_coefficient_2": -2.471798046,
+            "heating_capacity_coefficient_3": 4.173164514,
+            "heating_capacity_coefficient_4": 0.640757401,
+            "heating_capacity_coefficient_5": 0.0,
+            "heating_power_consumption_coefficient_1": -2.176941116,
+            "heating_power_consumption_coefficient_2": 0.832114286,
+            "heating_power_consumption_coefficient_3": 1.570743399,
+            "heating_power_consumption_coefficient_4": 0.690793651,
+            "heating_power_consumption_coefficient_5": 0.0,
+            "rated_air_flow_rate": "Autosize",
+            "rated_water_flow_rate": "Autosize",
+            "water_inlet_node_name": "SPACE3-1 HP Heating Water Inlet",
+            "water_outlet_node_name": "SPACE3-1 HP Heating Water Outlet"
+        },
+        "SPACE4-1 HP Heating Mode": {
+            "air_inlet_node_name": "SPACE4-1 Cooling Coil Outlet",
+            "air_outlet_node_name": "SPACE4-1 Heating Coil Outlet",
+            "gross_rated_heating_capacity": "Autosize",
+            "gross_rated_heating_cop": 4.75,
+            "heating_capacity_coefficient_1": -1.361311959,
+            "heating_capacity_coefficient_2": -2.471798046,
+            "heating_capacity_coefficient_3": 4.173164514,
+            "heating_capacity_coefficient_4": 0.640757401,
+            "heating_capacity_coefficient_5": 0.0,
+            "heating_power_consumption_coefficient_1": -2.176941116,
+            "heating_power_consumption_coefficient_2": 0.832114286,
+            "heating_power_consumption_coefficient_3": 1.570743399,
+            "heating_power_consumption_coefficient_4": 0.690793651,
+            "heating_power_consumption_coefficient_5": 0.0,
+            "rated_air_flow_rate": "Autosize",
+            "rated_water_flow_rate": "Autosize",
+            "water_inlet_node_name": "SPACE4-1 HP Heating Water Inlet",
+            "water_outlet_node_name": "SPACE4-1 HP Heating Water Outlet"
+        },
+        "SPACE5-1 HP Heating Mode": {
+            "air_inlet_node_name": "SPACE5-1 Cooling Coil Outlet",
+            "air_outlet_node_name": "SPACE5-1 Heating Coil Outlet",
+            "gross_rated_heating_capacity": "Autosize",
+            "gross_rated_heating_cop": 4.75,
+            "heating_capacity_coefficient_1": -1.361311959,
+            "heating_capacity_coefficient_2": -2.471798046,
+            "heating_capacity_coefficient_3": 4.173164514,
+            "heating_capacity_coefficient_4": 0.640757401,
+            "heating_capacity_coefficient_5": 0.0,
+            "heating_power_consumption_coefficient_1": -2.176941116,
+            "heating_power_consumption_coefficient_2": 0.832114286,
+            "heating_power_consumption_coefficient_3": 1.570743399,
+            "heating_power_consumption_coefficient_4": 0.690793651,
+            "heating_power_consumption_coefficient_5": 0.0,
+            "rated_air_flow_rate": "Autosize",
+            "rated_water_flow_rate": "Autosize",
+            "water_inlet_node_name": "SPACE5-1 HP Heating Water Inlet",
+            "water_outlet_node_name": "SPACE5-1 HP Heating Water Outlet"
+        }
+    },
+    "CondenserEquipmentList": {
+        "All Towers": {
+            "equipment": [
+                {
+                    "equipment_name": "Vertical Ground Heat Exchanger",
+                    "equipment_object_type": "GroundHeatExchanger:System"
+                }
+            ]
+        }
+    },
+    "CondenserEquipmentOperationSchemes": {
+        "Tower Loop Operation": {
+            "control_scheme_1_name": "Year Round Tower Operation",
+            "control_scheme_1_object_type": "PlantEquipmentOperation:Uncontrolled",
+            "control_scheme_1_schedule_name": "HVACTemplate-Always 1"
+        }
+    },
+    "CondenserLoop": {
+        "Chilled Water Condenser Loop": {
+            "condenser_demand_side_branch_list_name": "Condenser Demand Side Branches",
+            "condenser_demand_side_connector_list_name": "Condenser Demand Side Connectors",
+            "condenser_equipment_operation_scheme_name": "Tower Loop Operation",
+            "condenser_loop_temperature_setpoint_node_name": "Condenser Supply Outlet Node",
+            "condenser_loop_volume": "Autocalculate",
+            "condenser_side_branch_list_name": "Condenser Supply Side Branches",
+            "condenser_side_connector_list_name": "Condenser Supply Side Connectors",
+            "condenser_side_inlet_node_name": "Condenser Supply Inlet Node",
+            "condenser_side_outlet_node_name": "Condenser Supply Outlet Node",
+            "demand_side_inlet_node_name": "Condenser Demand Inlet Node",
+            "demand_side_outlet_node_name": "Condenser Demand Outlet Node",
+            "fluid_type": "Water",
+            "load_distribution_scheme": "SequentialLoad",
+            "maximum_loop_flow_rate": 0.004,
+            "maximum_loop_temperature": 80,
+            "minimum_loop_flow_rate": 0,
+            "minimum_loop_temperature": 1
+        }
+    },
+    "Connector:Mixer": {
+        "Condenser Demand Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "SPACE1-1 HP Cooling Mode Branch"
+                },
+                {
+                    "inlet_branch_name": "SPACE1-1 HP Heating Mode Branch"
+                },
+                {
+                    "inlet_branch_name": "SPACE2-1 HP Cooling Mode Branch"
+                },
+                {
+                    "inlet_branch_name": "SPACE2-1 HP Heating Mode Branch"
+                },
+                {
+                    "inlet_branch_name": "SPACE3-1 HP Cooling Mode Branch"
+                },
+                {
+                    "inlet_branch_name": "SPACE3-1 HP Heating Mode Branch"
+                },
+                {
+                    "inlet_branch_name": "SPACE4-1 HP Cooling Mode Branch"
+                },
+                {
+                    "inlet_branch_name": "SPACE4-1 HP Heating Mode Branch"
+                },
+                {
+                    "inlet_branch_name": "SPACE5-1 HP Cooling Mode Branch"
+                },
+                {
+                    "inlet_branch_name": "SPACE5-1 HP Heating Mode Branch"
+                },
+                {
+                    "inlet_branch_name": "Condenser Demand Bypass Branch"
+                }
+            ],
+            "outlet_branch_name": "Condenser Demand Outlet Branch"
+        },
+        "Condenser Supply Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "Condenser Supply GHE Branch"
+                },
+                {
+                    "inlet_branch_name": "Condenser Supply Bypass Branch"
+                }
+            ],
+            "outlet_branch_name": "Condenser Supply Outlet Branch"
+        }
+    },
+    "Connector:Splitter": {
+        "Condenser Demand Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "SPACE1-1 HP Cooling Mode Branch"
+                },
+                {
+                    "outlet_branch_name": "SPACE1-1 HP Heating Mode Branch"
+                },
+                {
+                    "outlet_branch_name": "SPACE2-1 HP Cooling Mode Branch"
+                },
+                {
+                    "outlet_branch_name": "SPACE2-1 HP Heating Mode Branch"
+                },
+                {
+                    "outlet_branch_name": "SPACE3-1 HP Cooling Mode Branch"
+                },
+                {
+                    "outlet_branch_name": "SPACE3-1 HP Heating Mode Branch"
+                },
+                {
+                    "outlet_branch_name": "SPACE4-1 HP Cooling Mode Branch"
+                },
+                {
+                    "outlet_branch_name": "SPACE4-1 HP Heating Mode Branch"
+                },
+                {
+                    "outlet_branch_name": "SPACE5-1 HP Cooling Mode Branch"
+                },
+                {
+                    "outlet_branch_name": "SPACE5-1 HP Heating Mode Branch"
+                },
+                {
+                    "outlet_branch_name": "Condenser Demand Bypass Branch"
+                }
+            ],
+            "inlet_branch_name": "Condenser Demand Inlet Branch"
+        },
+        "Condenser Supply Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "Condenser Supply GHE Branch"
+                },
+                {
+                    "outlet_branch_name": "Condenser Supply Bypass Branch"
+                }
+            ],
+            "inlet_branch_name": "Condenser Supply Inlet Branch"
+        }
+    },
+    "ConnectorList": {
+        "Condenser Demand Side Connectors": {
+            "connector_1_name": "Condenser Demand Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "Condenser Demand Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        },
+        "Condenser Supply Side Connectors": {
+            "connector_1_name": "Condenser Supply Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "Condenser Supply Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        }
+    },
+    "Construction": {
+        "CLNG-1": {
+            "outside_layer": "MAT-CLNG-1"
+        },
+        "Dbl Clr 3mm/13mm Air": {
+            "layer_2": "AIR 13MM",
+            "layer_3": "CLEAR 3MM",
+            "outside_layer": "CLEAR 3MM"
+        },
+        "FLOOR-SLAB-1": {
+            "outside_layer": "CC03"
+        },
+        "INT-WALL-1": {
+            "layer_2": "AL21",
+            "layer_3": "GP02",
+            "outside_layer": "GP02"
+        },
+        "ROOF-1": {
+            "layer_2": "BR01",
+            "layer_3": "IN46",
+            "layer_4": "WD01",
+            "outside_layer": "RG01"
+        },
+        "Sgl Grey 3mm": {
+            "outside_layer": "GREY 3MM"
+        },
+        "WALL-1": {
+            "layer_2": "PW03",
+            "layer_3": "IN02",
+            "layer_4": "GP01",
+            "outside_layer": "WD01"
+        }
+    },
+    "Controller:OutdoorAir": {
+        "DOAS OA Controller": {
+            "actuator_node_name": "DOAS Outdoor Air Inlet",
+            "economizer_control_action_type": "ModulateFlow",
+            "economizer_control_type": "NoEconomizer",
+            "economizer_minimum_limit_dry_bulb_temperature": 12.2,
+            "lockout_type": "NoLockout",
+            "maximum_outdoor_air_flow_rate": "Autosize",
+            "minimum_limit_type": "ProportionalMinimum",
+            "minimum_outdoor_air_flow_rate": "Autosize",
+            "mixed_air_node_name": "DOAS Mixed Air Outlet",
+            "relief_air_outlet_node_name": "DOAS Relief Air Outlet",
+            "return_air_node_name": "DOAS Air Loop Inlet"
+        }
+    },
+    "DesignSpecification:OutdoorAir": {
+        "SZ DSOA SPACE1-1": {
+            "outdoor_air_flow_per_person": 0.00944,
+            "outdoor_air_flow_per_zone": 0.0,
+            "outdoor_air_flow_per_zone_floor_area": 0.0,
+            "outdoor_air_method": "Flow/Person"
+        },
+        "SZ DSOA SPACE2-1": {
+            "outdoor_air_flow_per_person": 0.00944,
+            "outdoor_air_flow_per_zone": 0.0,
+            "outdoor_air_flow_per_zone_floor_area": 0.0,
+            "outdoor_air_method": "Flow/Person"
+        },
+        "SZ DSOA SPACE3-1": {
+            "outdoor_air_flow_per_person": 0.00944,
+            "outdoor_air_flow_per_zone": 0.0,
+            "outdoor_air_flow_per_zone_floor_area": 0.0,
+            "outdoor_air_method": "Flow/Person"
+        },
+        "SZ DSOA SPACE4-1": {
+            "outdoor_air_flow_per_person": 0.00944,
+            "outdoor_air_flow_per_zone": 0.0,
+            "outdoor_air_flow_per_zone_floor_area": 0.0,
+            "outdoor_air_method": "Flow/Person"
+        },
+        "SZ DSOA SPACE5-1": {
+            "outdoor_air_flow_per_person": 0.00944,
+            "outdoor_air_flow_per_zone": 0.0,
+            "outdoor_air_flow_per_zone_floor_area": 0.0,
+            "outdoor_air_method": "Flow/Person"
+        }
+    },
+    "DesignSpecification:ZoneAirDistribution": {
+        "ZoneAirDistribution": {
+            "zone_air_distribution_effectiveness_in_cooling_mode": 1,
+            "zone_air_distribution_effectiveness_in_heating_mode": 1,
+            "zone_secondary_recirculation_fraction": 0
+        }
+    },
+    "ElectricEquipment": {
+        "SPACE1-1 ElecEq 1": {
+            "design_level": 1056,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0,
+            "fraction_lost": 0,
+            "fraction_radiant": 0.3,
+            "schedule_name": "EQUIP-1",
+            "zone_or_zonelist_name": "SPACE1-1"
+        },
+        "SPACE2-1 ElecEq 1": {
+            "design_level": 456,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0,
+            "fraction_lost": 0,
+            "fraction_radiant": 0.3,
+            "schedule_name": "EQUIP-1",
+            "zone_or_zonelist_name": "SPACE2-1"
+        },
+        "SPACE3-1 ElecEq 1": {
+            "design_level": 1056,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0,
+            "fraction_lost": 0,
+            "fraction_radiant": 0.3,
+            "schedule_name": "EQUIP-1",
+            "zone_or_zonelist_name": "SPACE3-1"
+        },
+        "SPACE4-1 ElecEq 1": {
+            "design_level": 456,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0,
+            "fraction_lost": 0,
+            "fraction_radiant": 0.3,
+            "schedule_name": "EQUIP-1",
+            "zone_or_zonelist_name": "SPACE4-1"
+        },
+        "SPACE5-1 ElecEq 1": {
+            "design_level": 1976,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0,
+            "fraction_lost": 0,
+            "fraction_radiant": 0.3,
+            "schedule_name": "EQUIP-1",
+            "zone_or_zonelist_name": "SPACE5-1"
+        }
+    },
+    "Fan:OnOff": {
+        "SPACE1-1 Supply Fan": {
+            "air_inlet_node_name": "SPACE1-1 Heat Pump Inlet",
+            "air_outlet_node_name": "SPACE1-1 Zone Unit Fan Outlet",
+            "availability_schedule_name": "FanAvailSched",
+            "fan_total_efficiency": 0.7,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1,
+            "pressure_rise": 75
+        },
+        "SPACE2-1 Supply Fan": {
+            "air_inlet_node_name": "SPACE2-1 Heat Pump Inlet",
+            "air_outlet_node_name": "SPACE2-1 Zone Unit Fan Outlet",
+            "availability_schedule_name": "FanAvailSched",
+            "fan_total_efficiency": 0.7,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1,
+            "pressure_rise": 75
+        },
+        "SPACE3-1 Supply Fan": {
+            "air_inlet_node_name": "SPACE3-1 Heat Pump Inlet",
+            "air_outlet_node_name": "SPACE3-1 Zone Unit Fan Outlet",
+            "availability_schedule_name": "FanAvailSched",
+            "fan_total_efficiency": 0.7,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1,
+            "pressure_rise": 75
+        },
+        "SPACE4-1 Supply Fan": {
+            "air_inlet_node_name": "SPACE4-1 Heat Pump Inlet",
+            "air_outlet_node_name": "SPACE4-1 Zone Unit Fan Outlet",
+            "availability_schedule_name": "FanAvailSched",
+            "fan_total_efficiency": 0.7,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1,
+            "pressure_rise": 75
+        },
+        "SPACE5-1 Supply Fan": {
+            "air_inlet_node_name": "SPACE5-1 Heat Pump Inlet",
+            "air_outlet_node_name": "SPACE5-1 Zone Unit Fan Outlet",
+            "availability_schedule_name": "FanAvailSched",
+            "fan_total_efficiency": 0.7,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1,
+            "pressure_rise": 75
+        }
+    },
+    "Fan:VariableVolume": {
+        "DOAS Supply Fan": {
+            "air_inlet_node_name": "DOAS Mixed Air Outlet",
+            "air_outlet_node_name": "DOAS Supply Fan Outlet",
+            "availability_schedule_name": "FanAvailSched",
+            "fan_power_coefficient_1": 0.0015302446,
+            "fan_power_coefficient_2": 0.0052080574,
+            "fan_power_coefficient_3": 1.1086242,
+            "fan_power_coefficient_4": -0.11635563,
+            "fan_power_coefficient_5": 0,
+            "fan_power_minimum_flow_fraction": 0.0,
+            "fan_power_minimum_flow_rate_input_method": "Fraction",
+            "fan_total_efficiency": 0.7,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1,
+            "pressure_rise": 1000
+        }
+    },
+    "FenestrationSurface:Detailed": {
+        "DB-1": {
+            "building_surface_name": "BACK-1",
+            "construction_name": "Sgl Grey 3mm",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "GlassDoor",
+            "vertex_1_x_coordinate": 9.1,
+            "vertex_1_y_coordinate": 15.2,
+            "vertex_1_z_coordinate": 2.1,
+            "vertex_2_x_coordinate": 9.1,
+            "vertex_2_y_coordinate": 15.2,
+            "vertex_2_z_coordinate": 0.0,
+            "vertex_3_x_coordinate": 7.0,
+            "vertex_3_y_coordinate": 15.2,
+            "vertex_3_z_coordinate": 0.0,
+            "vertex_4_x_coordinate": 7.0,
+            "vertex_4_y_coordinate": 15.2,
+            "vertex_4_z_coordinate": 2.1,
+            "view_factor_to_ground": 0.5
+        },
+        "DF-1": {
+            "building_surface_name": "FRONT-1",
+            "construction_name": "Sgl Grey 3mm",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "GlassDoor",
+            "vertex_1_x_coordinate": 21.3,
+            "vertex_1_y_coordinate": 0.0,
+            "vertex_1_z_coordinate": 2.1,
+            "vertex_2_x_coordinate": 21.3,
+            "vertex_2_y_coordinate": 0.0,
+            "vertex_2_z_coordinate": 0.0,
+            "vertex_3_x_coordinate": 23.8,
+            "vertex_3_y_coordinate": 0.0,
+            "vertex_3_z_coordinate": 0.0,
+            "vertex_4_x_coordinate": 23.8,
+            "vertex_4_y_coordinate": 0.0,
+            "vertex_4_z_coordinate": 2.1,
+            "view_factor_to_ground": 0.5
+        },
+        "WB-1": {
+            "building_surface_name": "BACK-1",
+            "construction_name": "Dbl Clr 3mm/13mm Air",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 27.4,
+            "vertex_1_y_coordinate": 15.2,
+            "vertex_1_z_coordinate": 2.1,
+            "vertex_2_x_coordinate": 27.4,
+            "vertex_2_y_coordinate": 15.2,
+            "vertex_2_z_coordinate": 0.9,
+            "vertex_3_x_coordinate": 13.7,
+            "vertex_3_y_coordinate": 15.2,
+            "vertex_3_z_coordinate": 0.9,
+            "vertex_4_x_coordinate": 13.7,
+            "vertex_4_y_coordinate": 15.2,
+            "vertex_4_z_coordinate": 2.1,
+            "view_factor_to_ground": 0.5
+        },
+        "WF-1": {
+            "building_surface_name": "FRONT-1",
+            "construction_name": "Dbl Clr 3mm/13mm Air",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 3.0,
+            "vertex_1_y_coordinate": 0.0,
+            "vertex_1_z_coordinate": 2.1,
+            "vertex_2_x_coordinate": 3.0,
+            "vertex_2_y_coordinate": 0.0,
+            "vertex_2_z_coordinate": 0.9,
+            "vertex_3_x_coordinate": 16.8,
+            "vertex_3_y_coordinate": 0.0,
+            "vertex_3_z_coordinate": 0.9,
+            "vertex_4_x_coordinate": 16.8,
+            "vertex_4_y_coordinate": 0.0,
+            "vertex_4_z_coordinate": 2.1,
+            "view_factor_to_ground": 0.5
+        },
+        "WL-1": {
+            "building_surface_name": "LEFT-1",
+            "construction_name": "Dbl Clr 3mm/13mm Air",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 0.0,
+            "vertex_1_y_coordinate": 11.4,
+            "vertex_1_z_coordinate": 2.1,
+            "vertex_2_x_coordinate": 0.0,
+            "vertex_2_y_coordinate": 11.4,
+            "vertex_2_z_coordinate": 0.9,
+            "vertex_3_x_coordinate": 0.0,
+            "vertex_3_y_coordinate": 3.8,
+            "vertex_3_z_coordinate": 0.9,
+            "vertex_4_x_coordinate": 0.0,
+            "vertex_4_y_coordinate": 3.8,
+            "vertex_4_z_coordinate": 2.1,
+            "view_factor_to_ground": 0.5
+        },
+        "WR-1": {
+            "building_surface_name": "RIGHT-1",
+            "construction_name": "Dbl Clr 3mm/13mm Air",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 30.5,
+            "vertex_1_y_coordinate": 3.8,
+            "vertex_1_z_coordinate": 2.1,
+            "vertex_2_x_coordinate": 30.5,
+            "vertex_2_y_coordinate": 3.8,
+            "vertex_2_z_coordinate": 0.9,
+            "vertex_3_x_coordinate": 30.5,
+            "vertex_3_y_coordinate": 11.4,
+            "vertex_3_z_coordinate": 0.9,
+            "vertex_4_x_coordinate": 30.5,
+            "vertex_4_y_coordinate": 11.4,
+            "vertex_4_z_coordinate": 2.1,
+            "view_factor_to_ground": 0.5
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "GroundHeatExchanger:ResponseFactors": {
+        "Vertical Ground Heat Exchanger g-functions": {
+            "g_function_reference_ratio": 0.0005,
+            "g_functions": [
+                {
+                    "g_function_g_value": -0.348322,
+                    "g_function_ln_t_ts_value": -15.2996
+                },
+                {
+                    "g_function_g_value": 0.022208,
+                    "g_function_ln_t_ts_value": -14.201
+                },
+                {
+                    "g_function_g_value": 0.412345,
+                    "g_function_ln_t_ts_value": -13.2202
+                },
+                {
+                    "g_function_g_value": 0.867498,
+                    "g_function_ln_t_ts_value": -12.2086
+                },
+                {
+                    "g_function_g_value": 1.357839,
+                    "g_function_ln_t_ts_value": -11.1888
+                },
+                {
+                    "g_function_g_value": 1.852024,
+                    "g_function_ln_t_ts_value": -10.1816
+                },
+                {
+                    "g_function_g_value": 2.345656,
+                    "g_function_ln_t_ts_value": -9.1815
+                },
+                {
+                    "g_function_g_value": 2.593958,
+                    "g_function_ln_t_ts_value": -8.6809
+                },
+                {
+                    "g_function_g_value": 2.679,
+                    "g_function_ln_t_ts_value": -8.5
+                },
+                {
+                    "g_function_g_value": 3.023,
+                    "g_function_ln_t_ts_value": -7.8
+                },
+                {
+                    "g_function_g_value": 3.32,
+                    "g_function_ln_t_ts_value": -7.2
+                },
+                {
+                    "g_function_g_value": 3.681,
+                    "g_function_ln_t_ts_value": -6.5
+                },
+                {
+                    "g_function_g_value": 4.071,
+                    "g_function_ln_t_ts_value": -5.9
+                },
+                {
+                    "g_function_g_value": 4.828,
+                    "g_function_ln_t_ts_value": -5.2
+                },
+                {
+                    "g_function_g_value": 6.253,
+                    "g_function_ln_t_ts_value": -4.5
+                },
+                {
+                    "g_function_g_value": 7.894,
+                    "g_function_ln_t_ts_value": -3.963
+                },
+                {
+                    "g_function_g_value": 11.82,
+                    "g_function_ln_t_ts_value": -3.27
+                },
+                {
+                    "g_function_g_value": 15.117,
+                    "g_function_ln_t_ts_value": -2.864
+                },
+                {
+                    "g_function_g_value": 18.006,
+                    "g_function_ln_t_ts_value": -2.577
+                },
+                {
+                    "g_function_g_value": 22.887,
+                    "g_function_ln_t_ts_value": -2.171
+                },
+                {
+                    "g_function_g_value": 26.924,
+                    "g_function_ln_t_ts_value": -1.884
+                },
+                {
+                    "g_function_g_value": 38.004,
+                    "g_function_ln_t_ts_value": -1.191
+                },
+                {
+                    "g_function_g_value": 49.919,
+                    "g_function_ln_t_ts_value": -0.497
+                },
+                {
+                    "g_function_g_value": 53.407,
+                    "g_function_ln_t_ts_value": -0.274
+                },
+                {
+                    "g_function_g_value": 56.632,
+                    "g_function_ln_t_ts_value": -0.051
+                },
+                {
+                    "g_function_g_value": 59.825,
+                    "g_function_ln_t_ts_value": 0.196
+                },
+                {
+                    "g_function_g_value": 62.349,
+                    "g_function_ln_t_ts_value": 0.419
+                },
+                {
+                    "g_function_g_value": 64.524,
+                    "g_function_ln_t_ts_value": 0.642
+                },
+                {
+                    "g_function_g_value": 66.412,
+                    "g_function_ln_t_ts_value": 0.873
+                },
+                {
+                    "g_function_g_value": 67.993,
+                    "g_function_ln_t_ts_value": 1.112
+                },
+                {
+                    "g_function_g_value": 69.162,
+                    "g_function_ln_t_ts_value": 1.335
+                },
+                {
+                    "g_function_g_value": 70.476,
+                    "g_function_ln_t_ts_value": 1.679
+                },
+                {
+                    "g_function_g_value": 71.361,
+                    "g_function_ln_t_ts_value": 2.028
+                },
+                {
+                    "g_function_g_value": 71.79,
+                    "g_function_ln_t_ts_value": 2.275
+                },
+                {
+                    "g_function_g_value": 72.511,
+                    "g_function_ln_t_ts_value": 3.003
+                }
+            ],
+            "ghe_vertical_properties_object_name": "Vertical Ground Heat Exchanger Props",
+            "number_of_boreholes": 24
+        }
+    },
+    "GroundHeatExchanger:System": {
+        "Vertical Ground Heat Exchanger": {
+            "design_flow_rate": 0.00033,
+            "ghe_vertical_responsefactors_object_name": "Vertical Ground Heat Exchanger g-functions",
+            "ground_thermal_conductivity": 0.692626,
+            "ground_thermal_heat_capacity": 2347000.0,
+            "inlet_node_name": "GHE Inlet Node",
+            "outlet_node_name": "GHE Outlet Node",
+            "undisturbed_ground_temperature_model_name": "Vertical Ground Heat Exchanger Ground Temps",
+            "undisturbed_ground_temperature_model_type": "Site:GroundTemperature:Undisturbed:KusudaAchenbach"
+        }
+    },
+    "GroundHeatExchanger:Vertical:Properties": {
+        "Vertical Ground Heat Exchanger Props": {
+            "borehole_diameter": 0.127016,
+            "borehole_length": 76.2,
+            "depth_of_top_of_borehole": 1,
+            "grout_thermal_conductivity": 0.692626,
+            "grout_thermal_heat_capacity": 3900000.0,
+            "pipe_outer_diameter": 0.0266667,
+            "pipe_thermal_conductivity": 0.391312,
+            "pipe_thermal_heat_capacity": 1542000.0,
+            "pipe_thickness": 0.00241285,
+            "u_tube_distance": 0.051225
+        }
+    },
+    "HeatBalanceAlgorithm": {
+        "HeatBalanceAlgorithm 1": {
+            "algorithm": "ConductionTransferFunction"
+        }
+    },
+    "HeatExchanger:AirToAir:SensibleAndLatent": {
+        "DOAS Heat Recovery": {
+            "availability_schedule_name": "HVACTemplate-Always 1",
+            "economizer_lockout": "Yes",
+            "exhaust_air_inlet_node_name": "DOAS Relief Air Outlet",
+            "exhaust_air_outlet_node_name": "DOAS Heat Recovery Relief Outlet",
+            "frost_control_type": "MinimumExhaustTemperature",
+            "heat_exchanger_type": "Plate",
+            "initial_defrost_time_fraction": 0.083,
+            "latent_effectiveness_at_75_cooling_air_flow": 0.7,
+            "latent_effectiveness_at_75_heating_air_flow": 0.7,
+            "latent_effectiveness_at_100_cooling_air_flow": 0.65,
+            "latent_effectiveness_at_100_heating_air_flow": 0.65,
+            "nominal_electric_power": 0,
+            "nominal_supply_air_flow_rate": "Autosize",
+            "rate_of_defrost_time_fraction_increase": 0.012,
+            "sensible_effectiveness_at_75_cooling_air_flow": 0.75,
+            "sensible_effectiveness_at_75_heating_air_flow": 0.75,
+            "sensible_effectiveness_at_100_cooling_air_flow": 0.7,
+            "sensible_effectiveness_at_100_heating_air_flow": 0.7,
+            "supply_air_inlet_node_name": "DOAS Outdoor Air Inlet",
+            "supply_air_outlet_node_name": "DOAS Heat Recovery Supply Outlet",
+            "supply_air_outlet_temperature_control": "No",
+            "threshold_temperature": 1.7
+        }
+    },
+    "Lights": {
+        "SPACE1-1 Lights 1": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.59,
+            "fraction_replaceable": 0,
+            "fraction_visible": 0.2,
+            "lighting_level": 1584,
+            "return_air_fraction": 0,
+            "schedule_name": "LIGHTS-1",
+            "zone_or_zonelist_name": "SPACE1-1"
+        },
+        "SPACE2-1 Lights 1": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.59,
+            "fraction_replaceable": 0,
+            "fraction_visible": 0.2,
+            "lighting_level": 684,
+            "return_air_fraction": 0,
+            "schedule_name": "LIGHTS-1",
+            "zone_or_zonelist_name": "SPACE2-1"
+        },
+        "SPACE3-1 Lights 1": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.59,
+            "fraction_replaceable": 0,
+            "fraction_visible": 0.2,
+            "lighting_level": 1584,
+            "return_air_fraction": 0,
+            "schedule_name": "LIGHTS-1",
+            "zone_or_zonelist_name": "SPACE3-1"
+        },
+        "SPACE4-1 Lights 1": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.59,
+            "fraction_replaceable": 0,
+            "fraction_visible": 0.2,
+            "lighting_level": 684,
+            "return_air_fraction": 0,
+            "schedule_name": "LIGHTS-1",
+            "zone_or_zonelist_name": "SPACE4-1"
+        },
+        "SPACE5-1 Lights 1": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.59,
+            "fraction_replaceable": 0,
+            "fraction_visible": 0.2,
+            "lighting_level": 2964,
+            "return_air_fraction": 0,
+            "schedule_name": "LIGHTS-1",
+            "zone_or_zonelist_name": "SPACE5-1"
+        }
+    },
+    "Material": {
+        "BR01": {
+            "conductivity": 0.162,
+            "density": 1121.0,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1464.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0094999997,
+            "visible_absorptance": 0.7
+        },
+        "CC03": {
+            "conductivity": 1.31,
+            "density": 2243.0,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 837.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1016,
+            "visible_absorptance": 0.65
+        },
+        "GP01": {
+            "conductivity": 0.16,
+            "density": 801.0,
+            "roughness": "MediumSmooth",
+            "solar_absorptance": 0.75,
+            "specific_heat": 837.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0127,
+            "visible_absorptance": 0.75
+        },
+        "GP02": {
+            "conductivity": 0.16,
+            "density": 801.0,
+            "roughness": "MediumSmooth",
+            "solar_absorptance": 0.75,
+            "specific_heat": 837.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.015900001,
+            "visible_absorptance": 0.75
+        },
+        "IN02": {
+            "conductivity": 0.043000001,
+            "density": 10.0,
+            "roughness": "Rough",
+            "solar_absorptance": 0.75,
+            "specific_heat": 837.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.090099998,
+            "visible_absorptance": 0.75
+        },
+        "IN46": {
+            "conductivity": 0.023,
+            "density": 24.0,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 1590.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.076200001,
+            "visible_absorptance": 0.5
+        },
+        "PW03": {
+            "conductivity": 0.115,
+            "density": 545.0,
+            "roughness": "MediumSmooth",
+            "solar_absorptance": 0.78,
+            "specific_heat": 1213.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0127,
+            "visible_absorptance": 0.78
+        },
+        "RG01": {
+            "conductivity": 1.442,
+            "density": 881.0,
+            "roughness": "Rough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 1674.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0127,
+            "visible_absorptance": 0.65
+        },
+        "WD01": {
+            "conductivity": 0.115,
+            "density": 513.0,
+            "roughness": "MediumSmooth",
+            "solar_absorptance": 0.78,
+            "specific_heat": 1381.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.019099999,
+            "visible_absorptance": 0.78
+        },
+        "WD10": {
+            "conductivity": 0.115,
+            "density": 513,
+            "roughness": "MediumSmooth",
+            "solar_absorptance": 0.78,
+            "specific_heat": 1381,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.667,
+            "visible_absorptance": 0.78
+        }
+    },
+    "Material:AirGap": {
+        "AL21": {
+            "thermal_resistance": 0.157
+        },
+        "AL23": {
+            "thermal_resistance": 0.153
+        }
+    },
+    "Material:NoMass": {
+        "CP01": {
+            "roughness": "Rough",
+            "solar_absorptance": 0.75,
+            "thermal_absorptance": 0.9,
+            "thermal_resistance": 0.367,
+            "visible_absorptance": 0.75
+        },
+        "MAT-CLNG-1": {
+            "roughness": "Rough",
+            "solar_absorptance": 0.65,
+            "thermal_absorptance": 0.65,
+            "thermal_resistance": 0.65225929,
+            "visible_absorptance": 0.65
+        },
+        "MAT-FLOOR-1": {
+            "roughness": "Rough",
+            "solar_absorptance": 0.65,
+            "thermal_absorptance": 0.65,
+            "thermal_resistance": 3.522199631,
+            "visible_absorptance": 0.65
+        },
+        "MAT-SB-U": {
+            "roughness": "Rough",
+            "solar_absorptance": 0.65,
+            "thermal_absorptance": 0.65,
+            "thermal_resistance": 0.117406666,
+            "visible_absorptance": 0.65
+        }
+    },
+    "NodeList": {
+        "SPACE1-1 Inlets": {
+            "nodes": [
+                {
+                    "node_name": "SPACE1-1 Supply Inlet"
+                }
+            ]
+        },
+        "SPACE2-1 Inlets": {
+            "nodes": [
+                {
+                    "node_name": "SPACE2-1 Supply Inlet"
+                }
+            ]
+        },
+        "SPACE3-1 Inlets": {
+            "nodes": [
+                {
+                    "node_name": "SPACE3-1 Supply Inlet"
+                }
+            ]
+        },
+        "SPACE4-1 Inlets": {
+            "nodes": [
+                {
+                    "node_name": "SPACE4-1 Supply Inlet"
+                }
+            ]
+        },
+        "SPACE5-1 Inlets": {
+            "nodes": [
+                {
+                    "node_name": "SPACE5-1 Supply Inlet"
+                }
+            ]
+        }
+    },
+    "OutdoorAir:Mixer": {
+        "DOAS OA Mixing Box": {
+            "mixed_air_node_name": "DOAS Mixed Air Outlet",
+            "outdoor_air_stream_node_name": "DOAS Heat Recovery Supply Outlet",
+            "relief_air_stream_node_name": "DOAS Relief Air Outlet",
+            "return_air_stream_node_name": "DOAS Air Loop Inlet"
+        }
+    },
+    "OutdoorAir:NodeList": {
+        "OutdoorAir:NodeList 1": {
+            "nodes": [
+                {
+                    "node_or_nodelist_name": "DOAS Outdoor Air Inlet"
+                }
+            ]
+        }
+    },
+    "Output:Diagnostics": {
+        "Output:Diagnostics 1": {
+            "diagnostics": [
+                {
+                    "key": "DisplayAllWarnings"
+                }
+            ]
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "SPACE1-1 Supply Inlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 3": {
+            "key_value": "SPACE1-1 Supply Inlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 4": {
+            "key_value": "SPACE1-1 Air Terminal Mixer Primary Inlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 5": {
+            "key_value": "SPACE1-1 Air Terminal Mixer Primary Inlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 6": {
+            "key_value": "SPACE1-1 Air Terminal Mixer Secondary Inlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 7": {
+            "key_value": "SPACE1-1 Air Terminal Mixer Secondary Inlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 8": {
+            "key_value": "SPACE1-1 Heat Pump Inlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 9": {
+            "key_value": "SPACE1-1 Heat Pump Inlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 10": {
+            "key_value": "SPACE1-1 Heating Coil Outlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 11": {
+            "key_value": "SPACE1-1 Heating Coil Outlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 12": {
+            "key_value": "SPACE1-1 Cooling Coil Outlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 13": {
+            "key_value": "SPACE1-1 Cooling Coil Outlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 14": {
+            "key_value": "SPACE1-1 Zone Unit Fan Outlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 15": {
+            "key_value": "SPACE1-1 Zone Unit Fan Outlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 16": {
+            "key_value": "SPACE1-1 Zone Air Node",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 17": {
+            "key_value": "SPACE1-1 Zone Air Node",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 18": {
+            "key_value": "SPACE1-1 Return Outlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 19": {
+            "key_value": "SPACE1-1",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air Temperature"
+        },
+        "Output:Variable 20": {
+            "key_value": "SPACE1-1",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air System Sensible Cooling Rate"
+        },
+        "Output:Variable 21": {
+            "key_value": "SPACE1-1",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air System Sensible Heating Rate"
+        },
+        "Output:Variable 22": {
+            "key_value": "SPACE1-1",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Predicted Sensible Load to Heating Setpoint Heat Transfer Rate"
+        },
+        "Output:Variable 23": {
+            "key_value": "SPACE1-1",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Predicted Sensible Load to Cooling Setpoint Heat Transfer Rate"
+        },
+        "Output:Variable 24": {
+            "key_value": "SPACE1-1 HP Heating Mode",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Heating Coil Heating Rate"
+        },
+        "Output:Variable 25": {
+            "key_value": "SPACE1-1 HP Cooling Mode",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Cooling Coil Total Cooling Rate"
+        },
+        "Output:Variable 26": {
+            "key_value": "SPACE1-1 HP Cooling Mode",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Cooling Coil Sensible Cooling Rate"
+        },
+        "Output:Variable 27": {
+            "key_value": "SPACE1-1 Heat Pump",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Water to Air Heat Pump Total Heating Rate"
+        },
+        "Output:Variable 28": {
+            "key_value": "SPACE1-1 Heat Pump",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Water to Air Heat Pump Total Cooling Rate"
+        },
+        "Output:Variable 29": {
+            "key_value": "SPACE1-1 Heat Pump",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Water to Air Heat Pump Sensible Heating Rate"
+        },
+        "Output:Variable 30": {
+            "key_value": "SPACE1-1 Heat Pump",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Water to Air Heat Pump Sensible Cooling Rate"
+        },
+        "Output:Variable 31": {
+            "key_value": "SPACE1-1 HP Supp Coil",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Heating Coil Heating Rate"
+        },
+        "Output:Variable 32": {
+            "key_value": "Condenser Supply Inlet Node",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 33": {
+            "key_value": "Condenser Supply Inlet Node",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 34": {
+            "key_value": "Condenser Supply Outlet Node",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 35": {
+            "key_value": "Condenser Supply Outlet Node",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 36": {
+            "key_value": "DOAS Mixed Air Outlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 37": {
+            "key_value": "DOAS Mixed Air Outlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 38": {
+            "key_value": "DOAS Heat Recovery Supply Outlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 39": {
+            "key_value": "DOAS Heat Recovery Supply Outlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 40": {
+            "key_value": "DOAS Outdoor Air Inlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 41": {
+            "key_value": "DOAS Outdoor Air Inlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 42": {
+            "key_value": "DOAS Air Loop Inlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 43": {
+            "key_value": "DOAS Air Loop Inlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 44": {
+            "key_value": "DOAS Relief Air Outlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 45": {
+            "key_value": "DOAS Relief Air Outlet",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "People": {
+        "SPACE1-1 People 1": {
+            "activity_level_schedule_name": "ActSchd",
+            "fraction_radiant": 0.3,
+            "number_of_people": 11,
+            "number_of_people_calculation_method": "People",
+            "number_of_people_schedule_name": "OCCUPY-1",
+            "zone_or_zonelist_name": "SPACE1-1"
+        },
+        "SPACE2-1 People 1": {
+            "activity_level_schedule_name": "ActSchd",
+            "fraction_radiant": 0.3,
+            "number_of_people": 5,
+            "number_of_people_calculation_method": "People",
+            "number_of_people_schedule_name": "OCCUPY-1",
+            "zone_or_zonelist_name": "SPACE2-1"
+        },
+        "SPACE3-1 People 1": {
+            "activity_level_schedule_name": "ActSchd",
+            "fraction_radiant": 0.3,
+            "number_of_people": 11,
+            "number_of_people_calculation_method": "People",
+            "number_of_people_schedule_name": "OCCUPY-1",
+            "zone_or_zonelist_name": "SPACE3-1"
+        },
+        "SPACE4-1 People 1": {
+            "activity_level_schedule_name": "ActSchd",
+            "fraction_radiant": 0.3,
+            "number_of_people": 5,
+            "number_of_people_calculation_method": "People",
+            "number_of_people_schedule_name": "OCCUPY-1",
+            "zone_or_zonelist_name": "SPACE4-1"
+        },
+        "SPACE5-1 People 1": {
+            "activity_level_schedule_name": "ActSchd",
+            "fraction_radiant": 0.3,
+            "number_of_people": 20,
+            "number_of_people_calculation_method": "People",
+            "number_of_people_schedule_name": "OCCUPY-1",
+            "zone_or_zonelist_name": "SPACE5-1"
+        }
+    },
+    "Pipe:Adiabatic": {
+        "Condenser Demand Inlet Pipe": {
+            "inlet_node_name": "Condenser Demand Inlet Node",
+            "outlet_node_name": "Condenser Demand Entrance Pipe Outlet Node"
+        },
+        "Condenser Demand Outlet Pipe": {
+            "inlet_node_name": "Condenser Demand Exit Pipe Inlet Node",
+            "outlet_node_name": "Condenser Demand Outlet Node"
+        },
+        "Condenser Demand Side Bypass": {
+            "inlet_node_name": "Cond Demand Bypass Inlet Node",
+            "outlet_node_name": "Cond Demand Bypass Outlet Node"
+        },
+        "Condenser Supply Outlet": {
+            "inlet_node_name": "Condenser Supply Exit Pipe Inlet Node",
+            "outlet_node_name": "Condenser Supply Outlet Node"
+        },
+        "Condenser Supply Side Bypass": {
+            "inlet_node_name": "Cond Supply Bypass Inlet Node",
+            "outlet_node_name": "Cond Supply Bypass Outlet Node"
+        }
+    },
+    "PlantEquipmentOperation:Uncontrolled": {
+        "Year Round Tower Operation": {
+            "equipment_list_name": "All Towers"
+        }
+    },
+    "Pump:VariableSpeed": {
+        "Cond Circ Pump": {
+            "coefficient_1_of_the_part_load_performance_curve": 0,
+            "coefficient_2_of_the_part_load_performance_curve": 1,
+            "coefficient_3_of_the_part_load_performance_curve": 0,
+            "coefficient_4_of_the_part_load_performance_curve": 0,
+            "design_maximum_flow_rate": 0.004,
+            "design_minimum_flow_rate": 0,
+            "design_power_consumption": 25,
+            "design_pump_head": 5000,
+            "fraction_of_motor_inefficiencies_to_fluid_stream": 0.0,
+            "inlet_node_name": "Condenser Supply Inlet Node",
+            "motor_efficiency": 0.87,
+            "outlet_node_name": "Condenser Pump Outlet Node",
+            "pump_control_type": "Intermittent"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 14,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 14,
+            "end_month": 1,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        },
+        "Run Period 2": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 7,
+            "begin_month": 7,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 7,
+            "end_month": 7,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "ActSchd": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 117.239997864
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Always 21.1": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 21.1
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "Clg-SetP-Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: WeekDays CustomDay1 CustomDay2"
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 32.0
+                },
+                {
+                    "field": "Until: 21:00"
+                },
+                {
+                    "field": 24.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 32.0
+                },
+                {
+                    "field": "For: WeekEnds Holiday"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 32.0
+                },
+                {
+                    "field": "For: SummerDesignDay"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 24.0
+                },
+                {
+                    "field": "For: WinterDesignDay"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 32.0
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "CyclingFanSch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "EQUIP-1": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: WeekDays SummerDesignDay CustomDay1 CustomDay2"
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.02
+                },
+                {
+                    "field": "Until: 9:00"
+                },
+                {
+                    "field": 0.4
+                },
+                {
+                    "field": "Until: 14:00"
+                },
+                {
+                    "field": 0.9
+                },
+                {
+                    "field": "Until: 15:00"
+                },
+                {
+                    "field": 0.8
+                },
+                {
+                    "field": "Until: 16:00"
+                },
+                {
+                    "field": 0.7
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 21:00"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.02
+                },
+                {
+                    "field": "For: Weekends WinterDesignDay Holiday"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.02
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "FanAvailSched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: WeekDays CustomDay1 CustomDay2"
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 21:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "For: Weekends Holiday"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "For: SummerDesignDay"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "For: WinterDesignDay"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "HVACTemplate-Always 1": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1
+                }
+            ],
+            "schedule_type_limits_name": "HVACTemplate Any Number"
+        },
+        "HVACTemplate-Always 4": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 4
+                }
+            ],
+            "schedule_type_limits_name": "HVACTemplate Any Number"
+        },
+        "Htg-SetP-Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: WeekDays CustomDay1 CustomDay2"
+                },
+                {
+                    "field": "Until: 6:00"
+                },
+                {
+                    "field": 13.0
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 18.0
+                },
+                {
+                    "field": "Until: 21:00"
+                },
+                {
+                    "field": 23.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 13.0
+                },
+                {
+                    "field": "For: WeekEnds Holiday"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 13.0
+                },
+                {
+                    "field": "For: SummerDesignDay"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 13.0
+                },
+                {
+                    "field": "For: WinterDesignDay"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 23.0
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "INFIL-SCH": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: WeekDays CustomDay1 CustomDay2"
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 21:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "For: Weekends Holiday"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "For: SummerDesignDay"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "For: WinterDesignDay"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "LIGHTS-1": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: WeekDays SummerDesignDay CustomDay1 CustomDay2"
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.05
+                },
+                {
+                    "field": "Until: 9:00"
+                },
+                {
+                    "field": 0.9
+                },
+                {
+                    "field": "Until: 10:00"
+                },
+                {
+                    "field": 0.95
+                },
+                {
+                    "field": "Until: 11:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 12:00"
+                },
+                {
+                    "field": 0.95
+                },
+                {
+                    "field": "Until: 13:00"
+                },
+                {
+                    "field": 0.8
+                },
+                {
+                    "field": "Until: 14:00"
+                },
+                {
+                    "field": 0.9
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 19:00"
+                },
+                {
+                    "field": 0.6
+                },
+                {
+                    "field": "Until: 21:00"
+                },
+                {
+                    "field": 0.4
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.05
+                },
+                {
+                    "field": "For: Weekends WinterDesignDay Holiday"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.05
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "OCCUPY-1": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: WeekDays SummerDesignDay CustomDay1 CustomDay2"
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 11:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 12:00"
+                },
+                {
+                    "field": 0.8
+                },
+                {
+                    "field": "Until: 13:00"
+                },
+                {
+                    "field": 0.4
+                },
+                {
+                    "field": "Until: 14:00"
+                },
+                {
+                    "field": 0.8
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 19:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 21:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "For: Weekends WinterDesignDay Holiday"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "ShadeTransSch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "Control Type": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 4
+        },
+        "FlowRate": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 10
+        },
+        "Fraction": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1.0
+        },
+        "HVACTemplate Any Number": {},
+        "On/Off": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 1
+        },
+        "Temperature": {
+            "lower_limit_value": -60,
+            "numeric_type": "Continuous",
+            "unit_type": "Temperature",
+            "upper_limit_value": 200
+        }
+    },
+    "SetpointManager:FollowGroundTemperature": {
+        "MyCondenserControl": {
+            "control_variable": "Temperature",
+            "maximum_setpoint_temperature": 80.0,
+            "minimum_setpoint_temperature": 10.0,
+            "offset_temperature_difference": 0,
+            "reference_ground_temperature_object_type": "Site:GroundTemperature:Deep",
+            "setpoint_node_or_nodelist_name": "Condenser Supply Outlet Node"
+        }
+    },
+    "SetpointManager:Scheduled": {
+        "DOAS Cooling Supply Air Temp Manager": {
+            "control_variable": "Temperature",
+            "schedule_name": "Always 21.1",
+            "setpoint_node_or_nodelist_name": "DOAS Mixed Air Outlet"
+        }
+    },
+    "Shading:Zone:Detailed": {
+        "Main South Overhang": {
+            "base_surface_name": "FRONT-1",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadeTransSch",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": -1.3,
+                    "vertex_z_coordinate": 2.2
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.2
+                },
+                {
+                    "vertex_x_coordinate": 19.8,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.2
+                },
+                {
+                    "vertex_x_coordinate": 19.8,
+                    "vertex_y_coordinate": -1.3,
+                    "vertex_z_coordinate": 2.2
+                }
+            ]
+        },
+        "South Door Overhang": {
+            "base_surface_name": "FRONT-1",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadeTransSch",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 21.0,
+                    "vertex_y_coordinate": -2.0,
+                    "vertex_z_coordinate": 2.6
+                },
+                {
+                    "vertex_x_coordinate": 21.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.6
+                },
+                {
+                    "vertex_x_coordinate": 24.1,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.6
+                },
+                {
+                    "vertex_x_coordinate": 24.1,
+                    "vertex_y_coordinate": -2.0,
+                    "vertex_z_coordinate": 2.6
+                }
+            ]
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "Yes",
+            "do_system_sizing_calculation": "Yes",
+            "do_zone_sizing_calculation": "Yes",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "No",
+            "run_simulation_for_weather_file_run_periods": "Yes"
+        }
+    },
+    "Site:GroundTemperature:BuildingSurface": {
+        "Site:GroundTemperature:BuildingSurface 1": {
+            "april_ground_temperature": 21.5,
+            "august_ground_temperature": 23.1,
+            "december_ground_temperature": 21.6,
+            "february_ground_temperature": 21.4,
+            "january_ground_temperature": 21.5,
+            "july_ground_temperature": 23.0,
+            "june_ground_temperature": 22.9,
+            "march_ground_temperature": 21.5,
+            "may_ground_temperature": 22.0,
+            "november_ground_temperature": 21.7,
+            "october_ground_temperature": 22.2,
+            "september_ground_temperature": 23.1
+        }
+    },
+    "Site:GroundTemperature:Deep": {
+        "Site:GroundTemperature:Deep 1": {
+            "april_deep_ground_temperature": 16.5,
+            "august_deep_ground_temperature": 16.5,
+            "december_deep_ground_temperature": 16.5,
+            "february_deep_ground_temperature": 16.5,
+            "january_deep_ground_temperature": 16.5,
+            "july_deep_ground_temperature": 16.5,
+            "june_deep_ground_temperature": 16.5,
+            "march_deep_ground_temperature": 16.5,
+            "may_deep_ground_temperature": 16.5,
+            "november_deep_ground_temperature": 16.5,
+            "october_deep_ground_temperature": 16.5,
+            "september_deep_ground_temperature": 16.5
+        }
+    },
+    "Site:GroundTemperature:Undisturbed:KusudaAchenbach": {
+        "Vertical Ground Heat Exchanger Ground Temps": {
+            "average_amplitude_of_surface_temperature": 3.2,
+            "average_soil_surface_temperature": 13.375,
+            "phase_shift_of_minimum_surface_temperature": 8,
+            "soil_density": 920,
+            "soil_specific_heat": 2551.09,
+            "soil_thermal_conductivity": 0.692626
+        }
+    },
+    "Site:Location": {
+        "CHICAGO_IL_USA TMY2-94846": {
+            "elevation": 190.0,
+            "latitude": 41.78,
+            "longitude": -87.75,
+            "time_zone": -6.0
+        }
+    },
+    "Sizing:Parameters": {
+        "Sizing:Parameters 1": {
+            "cooling_sizing_factor": 1.2,
+            "heating_sizing_factor": 1.2
+        }
+    },
+    "Sizing:Plant": {
+        "Sizing:Plant 1": {
+            "design_loop_exit_temperature": 29.4,
+            "loop_design_temperature_difference": 5.6,
+            "loop_type": "Condenser",
+            "plant_or_condenser_loop_name": "Chilled Water Condenser Loop"
+        }
+    },
+    "Sizing:System": {
+        "Sizing:System 1": {
+            "100_outdoor_air_in_cooling": "Yes",
+            "100_outdoor_air_in_heating": "Yes",
+            "airloop_name": "DOAS",
+            "central_cooling_capacity_control_method": "OnOff",
+            "central_cooling_design_supply_air_humidity_ratio": 0.00924,
+            "central_cooling_design_supply_air_temperature": 12.8,
+            "central_heating_design_supply_air_humidity_ratio": 0.003,
+            "central_heating_design_supply_air_temperature": 12.2,
+            "central_heating_maximum_system_air_flow_ratio": 1.0,
+            "cooling_design_capacity": "Autosize",
+            "cooling_design_capacity_method": "CoolingDesignCapacity",
+            "cooling_supply_air_flow_rate": 0,
+            "cooling_supply_air_flow_rate_method": "DesignDay",
+            "design_outdoor_air_flow_rate": "Autosize",
+            "heating_design_capacity": "Autosize",
+            "heating_design_capacity_method": "HeatingDesignCapacity",
+            "heating_supply_air_flow_rate": 0,
+            "heating_supply_air_flow_rate_method": "DesignDay",
+            "precool_design_humidity_ratio": 0.008,
+            "precool_design_temperature": 11,
+            "preheat_design_humidity_ratio": 0.008,
+            "preheat_design_temperature": 2,
+            "system_outdoor_air_method": "ZoneSum",
+            "type_of_load_to_size_on": "VentilationRequirement",
+            "type_of_zone_sum_to_use": "NonCoincident",
+            "zone_maximum_outdoor_air_fraction": 1.0
+        }
+    },
+    "Sizing:Zone": {
+        "Sizing:Zone 1": {
+            "account_for_dedicated_outdoor_air_system": "No",
+            "cooling_design_air_flow_method": "DesignDay",
+            "cooling_design_air_flow_rate": 0,
+            "cooling_minimum_air_flow_fraction": 0,
+            "dedicated_outdoor_air_high_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_low_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_system_control_strategy": "NeutralSupplyAir",
+            "design_specification_outdoor_air_object_name": "SZ DSOA SPACE1-1",
+            "design_specification_zone_air_distribution_object_name": "ZoneAirDistribution",
+            "heating_design_air_flow_method": "DesignDay",
+            "heating_design_air_flow_rate": 0,
+            "heating_maximum_air_flow_fraction": 0,
+            "zone_cooling_design_supply_air_humidity_ratio": 0.008,
+            "zone_cooling_design_supply_air_temperature": 12.5,
+            "zone_cooling_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_heating_design_supply_air_humidity_ratio": 0.008,
+            "zone_heating_design_supply_air_temperature": 50,
+            "zone_heating_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_or_zonelist_name": "SPACE1-1"
+        },
+        "Sizing:Zone 2": {
+            "account_for_dedicated_outdoor_air_system": "No",
+            "cooling_design_air_flow_method": "DesignDay",
+            "cooling_design_air_flow_rate": 0,
+            "cooling_minimum_air_flow_fraction": 0,
+            "dedicated_outdoor_air_high_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_low_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_system_control_strategy": "NeutralSupplyAir",
+            "design_specification_outdoor_air_object_name": "SZ DSOA SPACE2-1",
+            "design_specification_zone_air_distribution_object_name": "ZoneAirDistribution",
+            "heating_design_air_flow_method": "DesignDay",
+            "heating_design_air_flow_rate": 0,
+            "heating_maximum_air_flow_fraction": 0,
+            "zone_cooling_design_supply_air_humidity_ratio": 0.008,
+            "zone_cooling_design_supply_air_temperature": 12.5,
+            "zone_cooling_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_heating_design_supply_air_humidity_ratio": 0.008,
+            "zone_heating_design_supply_air_temperature": 50,
+            "zone_heating_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_or_zonelist_name": "SPACE2-1"
+        },
+        "Sizing:Zone 3": {
+            "account_for_dedicated_outdoor_air_system": "No",
+            "cooling_design_air_flow_method": "DesignDay",
+            "cooling_design_air_flow_rate": 0,
+            "cooling_minimum_air_flow_fraction": 0,
+            "dedicated_outdoor_air_high_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_low_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_system_control_strategy": "NeutralSupplyAir",
+            "design_specification_outdoor_air_object_name": "SZ DSOA SPACE3-1",
+            "design_specification_zone_air_distribution_object_name": "ZoneAirDistribution",
+            "heating_design_air_flow_method": "DesignDay",
+            "heating_design_air_flow_rate": 0,
+            "heating_maximum_air_flow_fraction": 0,
+            "zone_cooling_design_supply_air_humidity_ratio": 0.008,
+            "zone_cooling_design_supply_air_temperature": 12.5,
+            "zone_cooling_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_heating_design_supply_air_humidity_ratio": 0.008,
+            "zone_heating_design_supply_air_temperature": 50,
+            "zone_heating_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_or_zonelist_name": "SPACE3-1"
+        },
+        "Sizing:Zone 4": {
+            "account_for_dedicated_outdoor_air_system": "No",
+            "cooling_design_air_flow_method": "DesignDay",
+            "cooling_design_air_flow_rate": 0,
+            "cooling_minimum_air_flow_fraction": 0,
+            "dedicated_outdoor_air_high_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_low_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_system_control_strategy": "NeutralSupplyAir",
+            "design_specification_outdoor_air_object_name": "SZ DSOA SPACE4-1",
+            "design_specification_zone_air_distribution_object_name": "ZoneAirDistribution",
+            "heating_design_air_flow_method": "DesignDay",
+            "heating_design_air_flow_rate": 0,
+            "heating_maximum_air_flow_fraction": 0,
+            "zone_cooling_design_supply_air_humidity_ratio": 0.008,
+            "zone_cooling_design_supply_air_temperature": 12.5,
+            "zone_cooling_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_heating_design_supply_air_humidity_ratio": 0.008,
+            "zone_heating_design_supply_air_temperature": 50,
+            "zone_heating_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_or_zonelist_name": "SPACE4-1"
+        },
+        "Sizing:Zone 5": {
+            "account_for_dedicated_outdoor_air_system": "No",
+            "cooling_design_air_flow_method": "DesignDay",
+            "cooling_design_air_flow_rate": 0,
+            "cooling_minimum_air_flow_fraction": 0,
+            "dedicated_outdoor_air_high_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_low_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_system_control_strategy": "NeutralSupplyAir",
+            "design_specification_outdoor_air_object_name": "SZ DSOA SPACE5-1",
+            "design_specification_zone_air_distribution_object_name": "ZoneAirDistribution",
+            "heating_design_air_flow_method": "DesignDay",
+            "heating_design_air_flow_rate": 0,
+            "heating_maximum_air_flow_fraction": 0,
+            "zone_cooling_design_supply_air_humidity_ratio": 0.008,
+            "zone_cooling_design_supply_air_temperature": 12.5,
+            "zone_cooling_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_heating_design_supply_air_humidity_ratio": 0.008,
+            "zone_heating_design_supply_air_temperature": 50,
+            "zone_heating_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_or_zonelist_name": "SPACE5-1"
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "CHICAGO_IL_USA Annual Cooling 1% Design Conditions DB/MCWB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 10.7,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 31.5,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23.0,
+            "wind_direction": 230,
+            "wind_speed": 5.3
+        },
+        "CHICAGO_IL_USA Annual Heating 99% Design Conditions DB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -17.3,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -17.3,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        }
+    },
+    "SurfaceConvectionAlgorithm:Inside": {
+        "SurfaceConvectionAlgorithm:Inside 1": {
+            "algorithm": "TARP"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Outside": {
+        "SurfaceConvectionAlgorithm:Outside 1": {
+            "algorithm": "DOE-2"
+        }
+    },
+    "ThermostatSetpoint:DualSetpoint": {
+        "All Zones Dual SP Control": {
+            "cooling_setpoint_temperature_schedule_name": "Clg-SetP-Sch",
+            "heating_setpoint_temperature_schedule_name": "Htg-SetP-Sch"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 4
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "9.4"
+        }
+    },
+    "WindowMaterial:Gas": {
+        "AIR 6MM": {
+            "gas_type": "Air",
+            "thickness": 0.0063
+        },
+        "AIR 13MM": {
+            "gas_type": "Air",
+            "thickness": 0.0127
+        },
+        "ARGON 13MM": {
+            "gas_type": "Argon",
+            "thickness": 0.0127
+        }
+    },
+    "WindowMaterial:Glazing": {
+        "CLEAR 3MM": {
+            "back_side_infrared_hemispherical_emissivity": 0.84,
+            "back_side_solar_reflectance_at_normal_incidence": 0.075,
+            "back_side_visible_reflectance_at_normal_incidence": 0.081,
+            "conductivity": 0.9,
+            "front_side_infrared_hemispherical_emissivity": 0.84,
+            "front_side_solar_reflectance_at_normal_incidence": 0.075,
+            "front_side_visible_reflectance_at_normal_incidence": 0.081,
+            "infrared_transmittance_at_normal_incidence": 0.0,
+            "optical_data_type": "SpectralAverage",
+            "solar_transmittance_at_normal_incidence": 0.837,
+            "thickness": 0.003,
+            "visible_transmittance_at_normal_incidence": 0.898
+        },
+        "CLEAR 6MM": {
+            "back_side_infrared_hemispherical_emissivity": 0.84,
+            "back_side_solar_reflectance_at_normal_incidence": 0.071,
+            "back_side_visible_reflectance_at_normal_incidence": 0.08,
+            "conductivity": 0.9,
+            "front_side_infrared_hemispherical_emissivity": 0.84,
+            "front_side_solar_reflectance_at_normal_incidence": 0.071,
+            "front_side_visible_reflectance_at_normal_incidence": 0.08,
+            "infrared_transmittance_at_normal_incidence": 0.0,
+            "optical_data_type": "SpectralAverage",
+            "solar_transmittance_at_normal_incidence": 0.775,
+            "thickness": 0.006,
+            "visible_transmittance_at_normal_incidence": 0.881
+        },
+        "GREY 3MM": {
+            "back_side_infrared_hemispherical_emissivity": 0.84,
+            "back_side_solar_reflectance_at_normal_incidence": 0.061,
+            "back_side_visible_reflectance_at_normal_incidence": 0.061,
+            "conductivity": 0.9,
+            "front_side_infrared_hemispherical_emissivity": 0.84,
+            "front_side_solar_reflectance_at_normal_incidence": 0.061,
+            "front_side_visible_reflectance_at_normal_incidence": 0.061,
+            "infrared_transmittance_at_normal_incidence": 0.0,
+            "optical_data_type": "SpectralAverage",
+            "solar_transmittance_at_normal_incidence": 0.626,
+            "thickness": 0.003,
+            "visible_transmittance_at_normal_incidence": 0.611
+        },
+        "LoE CLEAR 6MM": {
+            "back_side_infrared_hemispherical_emissivity": 0.1,
+            "back_side_solar_reflectance_at_normal_incidence": 0.22,
+            "back_side_visible_reflectance_at_normal_incidence": 0.078,
+            "conductivity": 0.9,
+            "front_side_infrared_hemispherical_emissivity": 0.84,
+            "front_side_solar_reflectance_at_normal_incidence": 0.17,
+            "front_side_visible_reflectance_at_normal_incidence": 0.055,
+            "infrared_transmittance_at_normal_incidence": 0.0,
+            "optical_data_type": "SpectralAverage",
+            "solar_transmittance_at_normal_incidence": 0.6,
+            "thickness": 0.006,
+            "visible_transmittance_at_normal_incidence": 0.84
+        }
+    },
+    "Zone": {
+        "PLENUM-1": {
+            "ceiling_height": 0.609600067,
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": 283.2,
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        },
+        "SPACE1-1": {
+            "ceiling_height": 2.438400269,
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": 239.247360229,
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        },
+        "SPACE2-1": {
+            "ceiling_height": 2.438400269,
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": 103.311355591,
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        },
+        "SPACE3-1": {
+            "ceiling_height": 2.438400269,
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": 239.247360229,
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        },
+        "SPACE4-1": {
+            "ceiling_height": 2.438400269,
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": 103.311355591,
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        },
+        "SPACE5-1": {
+            "ceiling_height": 2.438400269,
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": 447.682556152,
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        }
+    },
+    "ZoneControl:Thermostat": {
+        "SPACE1-1 Thermostat": {
+            "control_1_name": "All Zones Dual SP Control",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "HVACTemplate-Always 4",
+            "zone_or_zonelist_name": "SPACE1-1"
+        },
+        "SPACE2-1 Thermostat": {
+            "control_1_name": "All Zones Dual SP Control",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "HVACTemplate-Always 4",
+            "zone_or_zonelist_name": "SPACE2-1"
+        },
+        "SPACE3-1 Thermostat": {
+            "control_1_name": "All Zones Dual SP Control",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "HVACTemplate-Always 4",
+            "zone_or_zonelist_name": "SPACE3-1"
+        },
+        "SPACE4-1 Thermostat": {
+            "control_1_name": "All Zones Dual SP Control",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "HVACTemplate-Always 4",
+            "zone_or_zonelist_name": "SPACE4-1"
+        },
+        "SPACE5-1 Thermostat": {
+            "control_1_name": "All Zones Dual SP Control",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "HVACTemplate-Always 4",
+            "zone_or_zonelist_name": "SPACE5-1"
+        }
+    },
+    "ZoneHVAC:AirDistributionUnit": {
+        "SPACE1-1 DOAS ATU": {
+            "air_distribution_unit_outlet_node_name": "SPACE1-1 Heat Pump Inlet",
+            "air_terminal_name": "SPACE1-1 DOAS Air Terminal",
+            "air_terminal_object_type": "AirTerminal:SingleDuct:Mixer"
+        },
+        "SPACE2-1 DOAS ATU": {
+            "air_distribution_unit_outlet_node_name": "SPACE2-1 Heat Pump Inlet",
+            "air_terminal_name": "SPACE2-1 DOAS Air Terminal",
+            "air_terminal_object_type": "AirTerminal:SingleDuct:Mixer"
+        },
+        "SPACE3-1 DOAS ATU": {
+            "air_distribution_unit_outlet_node_name": "SPACE3-1 Heat Pump Inlet",
+            "air_terminal_name": "SPACE3-1 DOAS Air Terminal",
+            "air_terminal_object_type": "AirTerminal:SingleDuct:Mixer"
+        },
+        "SPACE4-1 DOAS ATU": {
+            "air_distribution_unit_outlet_node_name": "SPACE4-1 Heat Pump Inlet",
+            "air_terminal_name": "SPACE4-1 DOAS Air Terminal",
+            "air_terminal_object_type": "AirTerminal:SingleDuct:Mixer"
+        },
+        "SPACE5-1 DOAS ATU": {
+            "air_distribution_unit_outlet_node_name": "SPACE5-1 Heat Pump Inlet",
+            "air_terminal_name": "SPACE5-1 DOAS Air Terminal",
+            "air_terminal_object_type": "AirTerminal:SingleDuct:Mixer"
+        }
+    },
+    "ZoneHVAC:EquipmentConnections": {
+        "ZoneHVAC:EquipmentConnections 1": {
+            "zone_air_exhaust_node_or_nodelist_name": "SPACE1-1 Air Terminal Mixer Secondary Inlet",
+            "zone_air_inlet_node_or_nodelist_name": "SPACE1-1 Inlets",
+            "zone_air_node_name": "SPACE1-1 Zone Air Node",
+            "zone_conditioning_equipment_list_name": "SPACE1-1 Equipment",
+            "zone_name": "SPACE1-1",
+            "zone_return_air_node_or_nodelist_name": "SPACE1-1 Return Outlet"
+        },
+        "ZoneHVAC:EquipmentConnections 2": {
+            "zone_air_exhaust_node_or_nodelist_name": "SPACE2-1 Air Terminal Mixer Secondary Inlet",
+            "zone_air_inlet_node_or_nodelist_name": "SPACE2-1 Inlets",
+            "zone_air_node_name": "SPACE2-1 Zone Air Node",
+            "zone_conditioning_equipment_list_name": "SPACE2-1 Equipment",
+            "zone_name": "SPACE2-1",
+            "zone_return_air_node_or_nodelist_name": "SPACE2-1 Return Outlet"
+        },
+        "ZoneHVAC:EquipmentConnections 3": {
+            "zone_air_exhaust_node_or_nodelist_name": "SPACE3-1 Air Terminal Mixer Secondary Inlet",
+            "zone_air_inlet_node_or_nodelist_name": "SPACE3-1 Inlets",
+            "zone_air_node_name": "SPACE3-1 Zone Air Node",
+            "zone_conditioning_equipment_list_name": "SPACE3-1 Equipment",
+            "zone_name": "SPACE3-1",
+            "zone_return_air_node_or_nodelist_name": "SPACE3-1 Return Outlet"
+        },
+        "ZoneHVAC:EquipmentConnections 4": {
+            "zone_air_exhaust_node_or_nodelist_name": "SPACE4-1 Air Terminal Mixer Secondary Inlet",
+            "zone_air_inlet_node_or_nodelist_name": "SPACE4-1 Inlets",
+            "zone_air_node_name": "SPACE4-1 Zone Air Node",
+            "zone_conditioning_equipment_list_name": "SPACE4-1 Equipment",
+            "zone_name": "SPACE4-1",
+            "zone_return_air_node_or_nodelist_name": "SPACE4-1 Return Outlet"
+        },
+        "ZoneHVAC:EquipmentConnections 5": {
+            "zone_air_exhaust_node_or_nodelist_name": "SPACE5-1 Air Terminal Mixer Secondary Inlet",
+            "zone_air_inlet_node_or_nodelist_name": "SPACE5-1 Inlets",
+            "zone_air_node_name": "SPACE5-1 Zone Air Node",
+            "zone_conditioning_equipment_list_name": "SPACE5-1 Equipment",
+            "zone_name": "SPACE5-1",
+            "zone_return_air_node_or_nodelist_name": "SPACE5-1 Return Outlet"
+        }
+    },
+    "ZoneHVAC:EquipmentList": {
+        "SPACE1-1 Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "SPACE1-1 DOAS ATU",
+                    "zone_equipment_object_type": "ZoneHVAC:AirDistributionUnit"
+                },
+                {
+                    "zone_equipment_cooling_sequence": 2,
+                    "zone_equipment_heating_or_no_load_sequence": 2,
+                    "zone_equipment_name": "SPACE1-1 Heat Pump",
+                    "zone_equipment_object_type": "ZoneHVAC:WaterToAirHeatPump"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "SPACE2-1 Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "SPACE2-1 DOAS ATU",
+                    "zone_equipment_object_type": "ZoneHVAC:AirDistributionUnit"
+                },
+                {
+                    "zone_equipment_cooling_sequence": 2,
+                    "zone_equipment_heating_or_no_load_sequence": 2,
+                    "zone_equipment_name": "SPACE2-1 Heat Pump",
+                    "zone_equipment_object_type": "ZoneHVAC:WaterToAirHeatPump"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "SPACE3-1 Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "SPACE3-1 DOAS ATU",
+                    "zone_equipment_object_type": "ZoneHVAC:AirDistributionUnit"
+                },
+                {
+                    "zone_equipment_cooling_sequence": 2,
+                    "zone_equipment_heating_or_no_load_sequence": 2,
+                    "zone_equipment_name": "SPACE3-1 Heat Pump",
+                    "zone_equipment_object_type": "ZoneHVAC:WaterToAirHeatPump"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "SPACE4-1 Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "SPACE4-1 DOAS ATU",
+                    "zone_equipment_object_type": "ZoneHVAC:AirDistributionUnit"
+                },
+                {
+                    "zone_equipment_cooling_sequence": 2,
+                    "zone_equipment_heating_or_no_load_sequence": 2,
+                    "zone_equipment_name": "SPACE4-1 Heat Pump",
+                    "zone_equipment_object_type": "ZoneHVAC:WaterToAirHeatPump"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "SPACE5-1 Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "SPACE5-1 DOAS ATU",
+                    "zone_equipment_object_type": "ZoneHVAC:AirDistributionUnit"
+                },
+                {
+                    "zone_equipment_cooling_sequence": 2,
+                    "zone_equipment_heating_or_no_load_sequence": 2,
+                    "zone_equipment_name": "SPACE5-1 Heat Pump",
+                    "zone_equipment_object_type": "ZoneHVAC:WaterToAirHeatPump"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        }
+    },
+    "ZoneHVAC:WaterToAirHeatPump": {
+        "SPACE1-1 Heat Pump": {
+            "air_inlet_node_name": "SPACE1-1 Heat Pump Inlet",
+            "air_outlet_node_name": "SPACE1-1 Supply Inlet",
+            "availability_schedule_name": "FanAvailSched",
+            "cooling_coil_name": "SPACE1-1 HP Cooling Mode",
+            "cooling_coil_object_type": "Coil:Cooling:WaterToAirHeatPump:EquationFit",
+            "cooling_outdoor_air_flow_rate": 0,
+            "cooling_supply_air_flow_rate": "Autosize",
+            "fan_placement": "BlowThrough",
+            "fraction_of_on_cycle_power_use": 0.01,
+            "heat_pump_fan_delay_time": 60,
+            "heat_pump_time_constant": 60.0,
+            "heating_coil_name": "SPACE1-1 HP Heating Mode",
+            "heating_coil_object_type": "Coil:Heating:WaterToAirHeatPump:EquationFit",
+            "heating_outdoor_air_flow_rate": 0,
+            "heating_supply_air_flow_rate": "Autosize",
+            "maximum_cycling_rate": 2.5,
+            "maximum_outdoor_dry_bulb_temperature_for_supplemental_heater_operation": 20.0,
+            "maximum_supply_air_temperature_from_supplemental_heater": 50.0,
+            "no_load_outdoor_air_flow_rate": 0,
+            "supplemental_heating_coil_name": "SPACE1-1 HP Supp Coil",
+            "supplemental_heating_coil_object_type": "Coil:Heating:Fuel",
+            "supply_air_fan_name": "SPACE1-1 Supply Fan",
+            "supply_air_fan_object_type": "Fan:OnOff",
+            "supply_air_fan_operating_mode_schedule_name": "CyclingFanSch"
+        },
+        "SPACE2-1 Heat Pump": {
+            "air_inlet_node_name": "SPACE2-1 Heat Pump Inlet",
+            "air_outlet_node_name": "SPACE2-1 Supply Inlet",
+            "availability_schedule_name": "FanAvailSched",
+            "cooling_coil_name": "SPACE2-1 HP Cooling Mode",
+            "cooling_coil_object_type": "Coil:Cooling:WaterToAirHeatPump:EquationFit",
+            "cooling_outdoor_air_flow_rate": 0,
+            "cooling_supply_air_flow_rate": "Autosize",
+            "fan_placement": "BlowThrough",
+            "fraction_of_on_cycle_power_use": 0.01,
+            "heat_pump_fan_delay_time": 60,
+            "heat_pump_time_constant": 60.0,
+            "heating_coil_name": "SPACE2-1 HP Heating Mode",
+            "heating_coil_object_type": "Coil:Heating:WaterToAirHeatPump:EquationFit",
+            "heating_outdoor_air_flow_rate": 0,
+            "heating_supply_air_flow_rate": "Autosize",
+            "maximum_cycling_rate": 2.5,
+            "maximum_outdoor_dry_bulb_temperature_for_supplemental_heater_operation": 20.0,
+            "maximum_supply_air_temperature_from_supplemental_heater": 50.0,
+            "no_load_outdoor_air_flow_rate": 0,
+            "supplemental_heating_coil_name": "SPACE2-1 HP Supp Coil",
+            "supplemental_heating_coil_object_type": "Coil:Heating:Fuel",
+            "supply_air_fan_name": "SPACE2-1 Supply Fan",
+            "supply_air_fan_object_type": "Fan:OnOff",
+            "supply_air_fan_operating_mode_schedule_name": "CyclingFanSch"
+        },
+        "SPACE3-1 Heat Pump": {
+            "air_inlet_node_name": "SPACE3-1 Heat Pump Inlet",
+            "air_outlet_node_name": "SPACE3-1 Supply Inlet",
+            "availability_schedule_name": "FanAvailSched",
+            "cooling_coil_name": "SPACE3-1 HP Cooling Mode",
+            "cooling_coil_object_type": "Coil:Cooling:WaterToAirHeatPump:EquationFit",
+            "cooling_outdoor_air_flow_rate": 0,
+            "cooling_supply_air_flow_rate": "Autosize",
+            "fan_placement": "BlowThrough",
+            "fraction_of_on_cycle_power_use": 0.01,
+            "heat_pump_fan_delay_time": 60,
+            "heat_pump_time_constant": 60.0,
+            "heating_coil_name": "SPACE3-1 HP Heating Mode",
+            "heating_coil_object_type": "Coil:Heating:WaterToAirHeatPump:EquationFit",
+            "heating_outdoor_air_flow_rate": 0,
+            "heating_supply_air_flow_rate": "Autosize",
+            "maximum_cycling_rate": 2.5,
+            "maximum_outdoor_dry_bulb_temperature_for_supplemental_heater_operation": 20.0,
+            "maximum_supply_air_temperature_from_supplemental_heater": 50.0,
+            "no_load_outdoor_air_flow_rate": 0,
+            "supplemental_heating_coil_name": "SPACE3-1 HP Supp Coil",
+            "supplemental_heating_coil_object_type": "Coil:Heating:Fuel",
+            "supply_air_fan_name": "SPACE3-1 Supply Fan",
+            "supply_air_fan_object_type": "Fan:OnOff",
+            "supply_air_fan_operating_mode_schedule_name": "CyclingFanSch"
+        },
+        "SPACE4-1 Heat Pump": {
+            "air_inlet_node_name": "SPACE4-1 Heat Pump Inlet",
+            "air_outlet_node_name": "SPACE4-1 Supply Inlet",
+            "availability_schedule_name": "FanAvailSched",
+            "cooling_coil_name": "SPACE4-1 HP Cooling Mode",
+            "cooling_coil_object_type": "Coil:Cooling:WaterToAirHeatPump:EquationFit",
+            "cooling_outdoor_air_flow_rate": 0,
+            "cooling_supply_air_flow_rate": "Autosize",
+            "fan_placement": "BlowThrough",
+            "fraction_of_on_cycle_power_use": 0.01,
+            "heat_pump_fan_delay_time": 60,
+            "heat_pump_time_constant": 60.0,
+            "heating_coil_name": "SPACE4-1 HP Heating Mode",
+            "heating_coil_object_type": "Coil:Heating:WaterToAirHeatPump:EquationFit",
+            "heating_outdoor_air_flow_rate": 0,
+            "heating_supply_air_flow_rate": "Autosize",
+            "maximum_cycling_rate": 2.5,
+            "maximum_outdoor_dry_bulb_temperature_for_supplemental_heater_operation": 20.0,
+            "maximum_supply_air_temperature_from_supplemental_heater": 50.0,
+            "no_load_outdoor_air_flow_rate": 0,
+            "supplemental_heating_coil_name": "SPACE4-1 HP Supp Coil",
+            "supplemental_heating_coil_object_type": "Coil:Heating:Fuel",
+            "supply_air_fan_name": "SPACE4-1 Supply Fan",
+            "supply_air_fan_object_type": "Fan:OnOff",
+            "supply_air_fan_operating_mode_schedule_name": "CyclingFanSch"
+        },
+        "SPACE5-1 Heat Pump": {
+            "air_inlet_node_name": "SPACE5-1 Heat Pump Inlet",
+            "air_outlet_node_name": "SPACE5-1 Supply Inlet",
+            "availability_schedule_name": "FanAvailSched",
+            "cooling_coil_name": "SPACE5-1 HP Cooling Mode",
+            "cooling_coil_object_type": "Coil:Cooling:WaterToAirHeatPump:EquationFit",
+            "cooling_outdoor_air_flow_rate": 0,
+            "cooling_supply_air_flow_rate": "Autosize",
+            "fan_placement": "BlowThrough",
+            "fraction_of_on_cycle_power_use": 0.01,
+            "heat_pump_fan_delay_time": 60,
+            "heat_pump_time_constant": 60.0,
+            "heating_coil_name": "SPACE5-1 HP Heating Mode",
+            "heating_coil_object_type": "Coil:Heating:WaterToAirHeatPump:EquationFit",
+            "heating_outdoor_air_flow_rate": 0,
+            "heating_supply_air_flow_rate": "Autosize",
+            "maximum_cycling_rate": 2.5,
+            "maximum_outdoor_dry_bulb_temperature_for_supplemental_heater_operation": 20.0,
+            "maximum_supply_air_temperature_from_supplemental_heater": 50.0,
+            "no_load_outdoor_air_flow_rate": 0,
+            "supplemental_heating_coil_name": "SPACE5-1 HP Supp Coil",
+            "supplemental_heating_coil_object_type": "Coil:Heating:Fuel",
+            "supply_air_fan_name": "SPACE5-1 Supply Fan",
+            "supply_air_fan_object_type": "Fan:OnOff",
+            "supply_air_fan_operating_mode_schedule_name": "CyclingFanSch"
+        }
+    },
+    "ZoneInfiltration:DesignFlowRate": {
+        "SPACE1-1 Infil 1": {
+            "constant_term_coefficient": 0,
+            "design_flow_rate": 0.0167,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "schedule_name": "INFIL-SCH",
+            "temperature_term_coefficient": 0,
+            "velocity_squared_term_coefficient": 0,
+            "velocity_term_coefficient": 0.2237,
+            "zone_or_zonelist_name": "SPACE1-1"
+        },
+        "SPACE2-1 Infil 1": {
+            "constant_term_coefficient": 0,
+            "design_flow_rate": 0.00717,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "schedule_name": "INFIL-SCH",
+            "temperature_term_coefficient": 0,
+            "velocity_squared_term_coefficient": 0,
+            "velocity_term_coefficient": 0.2237,
+            "zone_or_zonelist_name": "SPACE2-1"
+        },
+        "SPACE3-1 Infil 1": {
+            "constant_term_coefficient": 0,
+            "design_flow_rate": 0.0167,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "schedule_name": "INFIL-SCH",
+            "temperature_term_coefficient": 0,
+            "velocity_squared_term_coefficient": 0,
+            "velocity_term_coefficient": 0.2237,
+            "zone_or_zonelist_name": "SPACE3-1"
+        },
+        "SPACE4-1 Infil 1": {
+            "constant_term_coefficient": 0,
+            "design_flow_rate": 0.00717,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "schedule_name": "INFIL-SCH",
+            "temperature_term_coefficient": 0,
+            "velocity_squared_term_coefficient": 0,
+            "velocity_term_coefficient": 0.2237,
+            "zone_or_zonelist_name": "SPACE4-1"
+        },
+        "SPACE5-1 Infil 1": {
+            "constant_term_coefficient": 0,
+            "design_flow_rate": 0.031089,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "schedule_name": "INFIL-SCH",
+            "temperature_term_coefficient": 0,
+            "velocity_squared_term_coefficient": 0,
+            "velocity_term_coefficient": 0.2237,
+            "zone_or_zonelist_name": "SPACE5-1"
+        }
+    }
+}

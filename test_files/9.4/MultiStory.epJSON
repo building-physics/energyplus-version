@@ -1,0 +1,4825 @@
+{
+    "Building": {
+        "Multistory Example": {
+            "loads_convergence_tolerance_value": 0.04,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "FullExterior",
+            "temperature_convergence_tolerance_value": 0.04,
+            "terrain": "Suburbs"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "Gnd Center Ceiling": {
+            "construction_name": "Ceiling",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Gnd Center Ceiling",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Gnd Center Zone"
+        },
+        "Gnd Center E Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Gnd Center E Wall",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "Gnd Center Zone"
+        },
+        "Gnd Center Floor": {
+            "construction_name": "Floor Slab",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Gnd Center Floor",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Gnd Center Zone"
+        },
+        "Gnd Center N Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Gnd Center Zone"
+        },
+        "Gnd Center S Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Gnd Center Zone"
+        },
+        "Gnd Center W Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Gnd Center W Wall",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "Gnd Center Zone"
+        },
+        "Gnd East Ceiling": {
+            "construction_name": "Ceiling",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Gnd East Ceiling",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Gnd East Zone"
+        },
+        "Gnd East E Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Gnd East Zone"
+        },
+        "Gnd East Floor": {
+            "construction_name": "Floor Slab",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Gnd East Floor",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Gnd East Zone"
+        },
+        "Gnd East N Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Gnd East Zone"
+        },
+        "Gnd East S Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Gnd East Zone"
+        },
+        "Gnd East W Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Gnd East W Wall",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "Gnd East Zone"
+        },
+        "Gnd West Ceiling": {
+            "construction_name": "Ceiling",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Gnd West Ceiling",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Gnd West Zone"
+        },
+        "Gnd West E Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Gnd West E Wall",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "Gnd West Zone"
+        },
+        "Gnd West Floor": {
+            "construction_name": "Floor Slab",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Gnd West Floor",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Gnd West Zone"
+        },
+        "Gnd West N Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Gnd West Zone"
+        },
+        "Gnd West S Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Gnd West Zone"
+        },
+        "Gnd West W Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Gnd West Zone"
+        },
+        "Mid Center Ceiling": {
+            "construction_name": "Ceiling",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Mid Center Ceiling",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Mid Center Zone"
+        },
+        "Mid Center E Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Mid Center E Wall",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "Mid Center Zone"
+        },
+        "Mid Center Floor": {
+            "construction_name": "Floor",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Mid Center Floor",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Mid Center Zone"
+        },
+        "Mid Center N Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Mid Center Zone"
+        },
+        "Mid Center S Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Mid Center Zone"
+        },
+        "Mid Center W Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Mid Center W Wall",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "Mid Center Zone"
+        },
+        "Mid East Ceiling": {
+            "construction_name": "Ceiling",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Mid East Ceiling",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Mid East Zone"
+        },
+        "Mid East E Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Mid East Zone"
+        },
+        "Mid East Floor": {
+            "construction_name": "Floor",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Mid East Floor",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Mid East Zone"
+        },
+        "Mid East N Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Mid East Zone"
+        },
+        "Mid East S Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Mid East Zone"
+        },
+        "Mid East W Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Mid East W Wall",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "Mid East Zone"
+        },
+        "Mid West Ceiling": {
+            "construction_name": "Ceiling",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Mid West Ceiling",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Mid West Zone"
+        },
+        "Mid West E Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Mid West E Wall",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "Mid West Zone"
+        },
+        "Mid West Floor": {
+            "construction_name": "Floor",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Mid West Floor",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Mid West Zone"
+        },
+        "Mid West N Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Mid West Zone"
+        },
+        "Mid West S Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Mid West Zone"
+        },
+        "Mid West W Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Mid West Zone"
+        },
+        "Top Center E Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Top Center E Wall",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "Top Center Zone"
+        },
+        "Top Center Floor": {
+            "construction_name": "Floor",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Top Center Floor",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Top Center Zone"
+        },
+        "Top Center N Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Top Center Zone"
+        },
+        "Top Center Roof": {
+            "construction_name": "Roof",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Top Center Zone"
+        },
+        "Top Center S Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Top Center Zone"
+        },
+        "Top Center W Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Top Center W Wall",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "Top Center Zone"
+        },
+        "Top East E Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Top East Zone"
+        },
+        "Top East Floor": {
+            "construction_name": "Floor",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Top East Floor",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Top East Zone"
+        },
+        "Top East N Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Top East Zone"
+        },
+        "Top East Roof": {
+            "construction_name": "Roof",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Top East Zone"
+        },
+        "Top East S Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Top East Zone"
+        },
+        "Top East W Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Top East W Wall",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "Top East Zone"
+        },
+        "Top West E Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Top West E Wall",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "Top West Zone"
+        },
+        "Top West Floor": {
+            "construction_name": "Floor",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Top West Floor",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Top West Zone"
+        },
+        "Top West N Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Top West Zone"
+        },
+        "Top West Roof": {
+            "construction_name": "Roof",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Top West Zone"
+        },
+        "Top West S Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 4.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Top West Zone"
+        },
+        "Top West W Wall": {
+            "construction_name": "Ext Wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 6.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Top West Zone"
+        }
+    },
+    "Coil:Cooling:DX:SingleSpeed": {
+        "Gnd Center OA DX Coil": {
+            "air_inlet_node_name": "Gnd Center OA Fan Outlet Node",
+            "air_outlet_node_name": "Gnd Center AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "energy_input_ratio_function_of_flow_fraction_curve_name": "WindACEIRFFF",
+            "energy_input_ratio_function_of_temperature_curve_name": "WindACEIRFT",
+            "gross_rated_cooling_cop": 3.0,
+            "gross_rated_sensible_heat_ratio": "Autosize",
+            "gross_rated_total_cooling_capacity": "Autosize",
+            "part_load_fraction_correlation_curve_name": "WindACPLFFPLR",
+            "rated_air_flow_rate": "Autosize",
+            "total_cooling_capacity_function_of_flow_fraction_curve_name": "WindACCoolCapFFF",
+            "total_cooling_capacity_function_of_temperature_curve_name": "WindACCoolCapFT"
+        },
+        "Gnd East OA DX Coil": {
+            "air_inlet_node_name": "Gnd East OA Fan Outlet Node",
+            "air_outlet_node_name": "Gnd East AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "energy_input_ratio_function_of_flow_fraction_curve_name": "WindACEIRFFF",
+            "energy_input_ratio_function_of_temperature_curve_name": "WindACEIRFT",
+            "gross_rated_cooling_cop": 3.0,
+            "gross_rated_sensible_heat_ratio": "Autosize",
+            "gross_rated_total_cooling_capacity": "Autosize",
+            "part_load_fraction_correlation_curve_name": "WindACPLFFPLR",
+            "rated_air_flow_rate": "Autosize",
+            "total_cooling_capacity_function_of_flow_fraction_curve_name": "WindACCoolCapFFF",
+            "total_cooling_capacity_function_of_temperature_curve_name": "WindACCoolCapFT"
+        },
+        "Gnd West OA DX Coil": {
+            "air_inlet_node_name": "Gnd West OA Fan Outlet Node",
+            "air_outlet_node_name": "Gnd West AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "energy_input_ratio_function_of_flow_fraction_curve_name": "WindACEIRFFF",
+            "energy_input_ratio_function_of_temperature_curve_name": "WindACEIRFT",
+            "gross_rated_cooling_cop": 3.0,
+            "gross_rated_sensible_heat_ratio": "Autosize",
+            "gross_rated_total_cooling_capacity": "Autosize",
+            "part_load_fraction_correlation_curve_name": "WindACPLFFPLR",
+            "rated_air_flow_rate": "Autosize",
+            "total_cooling_capacity_function_of_flow_fraction_curve_name": "WindACCoolCapFFF",
+            "total_cooling_capacity_function_of_temperature_curve_name": "WindACCoolCapFT"
+        },
+        "Mid Center OA DX Coil": {
+            "air_inlet_node_name": "Mid Center OA Fan Outlet Node",
+            "air_outlet_node_name": "Mid Center AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "energy_input_ratio_function_of_flow_fraction_curve_name": "WindACEIRFFF",
+            "energy_input_ratio_function_of_temperature_curve_name": "WindACEIRFT",
+            "gross_rated_cooling_cop": 3.0,
+            "gross_rated_sensible_heat_ratio": "Autosize",
+            "gross_rated_total_cooling_capacity": "Autosize",
+            "part_load_fraction_correlation_curve_name": "WindACPLFFPLR",
+            "rated_air_flow_rate": "Autosize",
+            "total_cooling_capacity_function_of_flow_fraction_curve_name": "WindACCoolCapFFF",
+            "total_cooling_capacity_function_of_temperature_curve_name": "WindACCoolCapFT"
+        },
+        "Mid East OA DX Coil": {
+            "air_inlet_node_name": "Mid East OA Fan Outlet Node",
+            "air_outlet_node_name": "Mid East AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "energy_input_ratio_function_of_flow_fraction_curve_name": "WindACEIRFFF",
+            "energy_input_ratio_function_of_temperature_curve_name": "WindACEIRFT",
+            "gross_rated_cooling_cop": 3.0,
+            "gross_rated_sensible_heat_ratio": "Autosize",
+            "gross_rated_total_cooling_capacity": "Autosize",
+            "part_load_fraction_correlation_curve_name": "WindACPLFFPLR",
+            "rated_air_flow_rate": "Autosize",
+            "total_cooling_capacity_function_of_flow_fraction_curve_name": "WindACCoolCapFFF",
+            "total_cooling_capacity_function_of_temperature_curve_name": "WindACCoolCapFT"
+        },
+        "Mid West OA DX Coil": {
+            "air_inlet_node_name": "Mid West OA Fan Outlet Node",
+            "air_outlet_node_name": "Mid West AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "energy_input_ratio_function_of_flow_fraction_curve_name": "WindACEIRFFF",
+            "energy_input_ratio_function_of_temperature_curve_name": "WindACEIRFT",
+            "gross_rated_cooling_cop": 3.0,
+            "gross_rated_sensible_heat_ratio": "Autosize",
+            "gross_rated_total_cooling_capacity": "Autosize",
+            "part_load_fraction_correlation_curve_name": "WindACPLFFPLR",
+            "rated_air_flow_rate": "Autosize",
+            "total_cooling_capacity_function_of_flow_fraction_curve_name": "WindACCoolCapFFF",
+            "total_cooling_capacity_function_of_temperature_curve_name": "WindACCoolCapFT"
+        },
+        "Top Center OA DX Coil": {
+            "air_inlet_node_name": "Top Center OA Fan Outlet Node",
+            "air_outlet_node_name": "Top Center AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "energy_input_ratio_function_of_flow_fraction_curve_name": "WindACEIRFFF",
+            "energy_input_ratio_function_of_temperature_curve_name": "WindACEIRFT",
+            "gross_rated_cooling_cop": 3.0,
+            "gross_rated_sensible_heat_ratio": "Autosize",
+            "gross_rated_total_cooling_capacity": "Autosize",
+            "part_load_fraction_correlation_curve_name": "WindACPLFFPLR",
+            "rated_air_flow_rate": "Autosize",
+            "total_cooling_capacity_function_of_flow_fraction_curve_name": "WindACCoolCapFFF",
+            "total_cooling_capacity_function_of_temperature_curve_name": "WindACCoolCapFT"
+        },
+        "Top East OA DX Coil": {
+            "air_inlet_node_name": "Top East OA Fan Outlet Node",
+            "air_outlet_node_name": "Top East AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "energy_input_ratio_function_of_flow_fraction_curve_name": "WindACEIRFFF",
+            "energy_input_ratio_function_of_temperature_curve_name": "WindACEIRFT",
+            "gross_rated_cooling_cop": 3.0,
+            "gross_rated_sensible_heat_ratio": "Autosize",
+            "gross_rated_total_cooling_capacity": "Autosize",
+            "part_load_fraction_correlation_curve_name": "WindACPLFFPLR",
+            "rated_air_flow_rate": "Autosize",
+            "total_cooling_capacity_function_of_flow_fraction_curve_name": "WindACCoolCapFFF",
+            "total_cooling_capacity_function_of_temperature_curve_name": "WindACCoolCapFT"
+        },
+        "Top West OA DX Coil": {
+            "air_inlet_node_name": "Top West OA Fan Outlet Node",
+            "air_outlet_node_name": "Top West AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "energy_input_ratio_function_of_flow_fraction_curve_name": "WindACEIRFFF",
+            "energy_input_ratio_function_of_temperature_curve_name": "WindACEIRFT",
+            "gross_rated_cooling_cop": 3.0,
+            "gross_rated_sensible_heat_ratio": "Autosize",
+            "gross_rated_total_cooling_capacity": "Autosize",
+            "part_load_fraction_correlation_curve_name": "WindACPLFFPLR",
+            "rated_air_flow_rate": "Autosize",
+            "total_cooling_capacity_function_of_flow_fraction_curve_name": "WindACCoolCapFFF",
+            "total_cooling_capacity_function_of_temperature_curve_name": "WindACCoolCapFT"
+        }
+    },
+    "Construction": {
+        "Ceiling": {
+            "layer_2": "E4 - CEILING AIRSPACE",
+            "layer_3": "E5 - ACOUSTIC TILE",
+            "outside_layer": "C12 - 2 IN HW CONCRETE"
+        },
+        "Ext Wall": {
+            "layer_2": "C4 - 4 IN COMMON BRICK",
+            "layer_3": "E1 - 3 / 4 IN PLASTER OR GYP BOARD",
+            "outside_layer": "A1 - 1 IN STUCCO"
+        },
+        "Floor": {
+            "layer_2": "E4 - CEILING AIRSPACE",
+            "layer_3": "C12 - 2 IN HW CONCRETE",
+            "outside_layer": "E5 - ACOUSTIC TILE"
+        },
+        "Floor Slab": {
+            "outside_layer": "C10 - 8 IN HW CONCRETE"
+        },
+        "Roof": {
+            "layer_2": "E3 - 3 / 8 IN FELT AND MEMBRANE",
+            "layer_3": "BB46 - 5 / 8 IN PLYWOOD",
+            "outside_layer": "ROOFING - ASPHALT SHINGLES"
+        },
+        "Single Pane Window": {
+            "outside_layer": "CLEAR GLASS"
+        }
+    },
+    "Curve:Biquadratic": {
+        "WindACCoolCapFT": {
+            "coefficient1_constant": 0.942587793,
+            "coefficient2_x": 0.009543347,
+            "coefficient3_x_2": 0.00068377,
+            "coefficient4_y": -0.011042676,
+            "coefficient5_y_2": 5.249e-06,
+            "coefficient6_x_y": -9.72e-06,
+            "input_unit_type_for_x": "Temperature",
+            "input_unit_type_for_y": "Temperature",
+            "maximum_value_of_x": 23.88889,
+            "maximum_value_of_y": 46.11111,
+            "minimum_value_of_x": 12.77778,
+            "minimum_value_of_y": 18.0,
+            "output_unit_type": "Dimensionless"
+        },
+        "WindACEIRFT": {
+            "coefficient1_constant": 0.342414409,
+            "coefficient2_x": 0.034885008,
+            "coefficient3_x_2": -0.0006237,
+            "coefficient4_y": 0.004977216,
+            "coefficient5_y_2": 0.000437951,
+            "coefficient6_x_y": -0.000728028,
+            "input_unit_type_for_x": "Temperature",
+            "input_unit_type_for_y": "Temperature",
+            "maximum_value_of_x": 23.88889,
+            "maximum_value_of_y": 46.11111,
+            "minimum_value_of_x": 12.77778,
+            "minimum_value_of_y": 18.0,
+            "output_unit_type": "Dimensionless"
+        }
+    },
+    "Curve:Quadratic": {
+        "WindACCoolCapFFF": {
+            "coefficient1_constant": 0.8,
+            "coefficient2_x": 0.2,
+            "coefficient3_x_2": 0.0,
+            "maximum_value_of_x": 1.5,
+            "minimum_value_of_x": 0.5
+        },
+        "WindACEIRFFF": {
+            "coefficient1_constant": 1.1552,
+            "coefficient2_x": -0.1808,
+            "coefficient3_x_2": 0.0256,
+            "maximum_value_of_x": 1.5,
+            "minimum_value_of_x": 0.5
+        },
+        "WindACPLFFPLR": {
+            "coefficient1_constant": 0.85,
+            "coefficient2_x": 0.15,
+            "coefficient3_x_2": 0.0,
+            "maximum_value_of_x": 1.0,
+            "minimum_value_of_x": 0.0
+        }
+    },
+    "DesignSpecification:OutdoorAir": {
+        "SZ DSOA Gnd Center Zone": {
+            "outdoor_air_flow_per_zone": 0.01888,
+            "outdoor_air_flow_per_zone_floor_area": 0.0,
+            "outdoor_air_method": "Flow/Zone"
+        },
+        "SZ DSOA Gnd East Zone": {
+            "outdoor_air_flow_per_zone": 0.01888,
+            "outdoor_air_flow_per_zone_floor_area": 0.0,
+            "outdoor_air_method": "Flow/Zone"
+        },
+        "SZ DSOA Gnd West Zone": {
+            "outdoor_air_flow_per_zone": 0.01888,
+            "outdoor_air_flow_per_zone_floor_area": 0.0,
+            "outdoor_air_method": "Flow/Zone"
+        },
+        "SZ DSOA Mid Center Zone": {
+            "outdoor_air_flow_per_zone": 0.01888,
+            "outdoor_air_flow_per_zone_floor_area": 0.0,
+            "outdoor_air_method": "Flow/Zone"
+        },
+        "SZ DSOA Mid East Zone": {
+            "outdoor_air_flow_per_zone": 0.01888,
+            "outdoor_air_flow_per_zone_floor_area": 0.0,
+            "outdoor_air_method": "Flow/Zone"
+        },
+        "SZ DSOA Mid West Zone": {
+            "outdoor_air_flow_per_zone": 0.01888,
+            "outdoor_air_flow_per_zone_floor_area": 0.0,
+            "outdoor_air_method": "Flow/Zone"
+        },
+        "SZ DSOA Top Center Zone": {
+            "outdoor_air_flow_per_zone": 0.01888,
+            "outdoor_air_flow_per_zone_floor_area": 0.0,
+            "outdoor_air_method": "Flow/Zone"
+        },
+        "SZ DSOA Top East Zone": {
+            "outdoor_air_flow_per_zone": 0.01888,
+            "outdoor_air_flow_per_zone_floor_area": 0.0,
+            "outdoor_air_method": "Flow/Zone"
+        },
+        "SZ DSOA Top West Zone": {
+            "outdoor_air_flow_per_zone": 0.01888,
+            "outdoor_air_flow_per_zone_floor_area": 0.0,
+            "outdoor_air_method": "Flow/Zone"
+        }
+    },
+    "ElectricEquipment": {
+        "Office Buildings": {
+            "design_level_calculation_method": "Watts/Area",
+            "fraction_latent": 0,
+            "fraction_lost": 0,
+            "fraction_radiant": 0.3,
+            "schedule_name": "EQP-SCHED-BldgAvg",
+            "watts_per_zone_floor_area": 14.43,
+            "zone_or_zonelist_name": "AllZones"
+        }
+    },
+    "Fan:OnOff": {
+        "Gnd Center OA Fan": {
+            "air_inlet_node_name": "Gnd Center Mixed Node",
+            "air_outlet_node_name": "Gnd Center OA Fan Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "fan_total_efficiency": 0.5,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1.0,
+            "pressure_rise": 75.0
+        },
+        "Gnd East OA Fan": {
+            "air_inlet_node_name": "Gnd East Mixed Node",
+            "air_outlet_node_name": "Gnd East OA Fan Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "fan_total_efficiency": 0.5,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1.0,
+            "pressure_rise": 75.0
+        },
+        "Gnd West OA Fan": {
+            "air_inlet_node_name": "Gnd West Mixed Node",
+            "air_outlet_node_name": "Gnd West OA Fan Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "fan_total_efficiency": 0.5,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1.0,
+            "pressure_rise": 75.0
+        },
+        "Mid Center OA Fan": {
+            "air_inlet_node_name": "Mid Center Mixed Node",
+            "air_outlet_node_name": "Mid Center OA Fan Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "fan_total_efficiency": 0.5,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1.0,
+            "pressure_rise": 75.0
+        },
+        "Mid East OA Fan": {
+            "air_inlet_node_name": "Mid East Mixed Node",
+            "air_outlet_node_name": "Mid East OA Fan Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "fan_total_efficiency": 0.5,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1.0,
+            "pressure_rise": 75.0
+        },
+        "Mid West OA Fan": {
+            "air_inlet_node_name": "Mid West Mixed Node",
+            "air_outlet_node_name": "Mid West OA Fan Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "fan_total_efficiency": 0.5,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1.0,
+            "pressure_rise": 75.0
+        },
+        "Top Center OA Fan": {
+            "air_inlet_node_name": "Top Center Mixed Node",
+            "air_outlet_node_name": "Top Center OA Fan Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "fan_total_efficiency": 0.5,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1.0,
+            "pressure_rise": 75.0
+        },
+        "Top East OA Fan": {
+            "air_inlet_node_name": "Top East Mixed Node",
+            "air_outlet_node_name": "Top East OA Fan Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "fan_total_efficiency": 0.5,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1.0,
+            "pressure_rise": 75.0
+        },
+        "Top West OA Fan": {
+            "air_inlet_node_name": "Top West Mixed Node",
+            "air_outlet_node_name": "Top West OA Fan Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "fan_total_efficiency": 0.5,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1.0,
+            "pressure_rise": 75.0
+        }
+    },
+    "FenestrationSurface:Detailed": {
+        "Gnd Center N Wall Window": {
+            "building_surface_name": "Gnd Center N Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 3.0,
+            "vertex_1_y_coordinate": 6.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 3.0,
+            "vertex_2_y_coordinate": 6.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 1.0,
+            "vertex_3_y_coordinate": 6.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 1.0,
+            "vertex_4_y_coordinate": 6.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Gnd Center S Wall Window": {
+            "building_surface_name": "Gnd Center S Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 1.0,
+            "vertex_1_y_coordinate": 0.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 1.0,
+            "vertex_2_y_coordinate": 0.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 3.0,
+            "vertex_3_y_coordinate": 0.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 3.0,
+            "vertex_4_y_coordinate": 0.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Gnd East E Wall Windows": {
+            "building_surface_name": "Gnd East E Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 3,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 4.0,
+            "vertex_1_y_coordinate": 0.5,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 4.0,
+            "vertex_2_y_coordinate": 0.5,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 4.0,
+            "vertex_3_y_coordinate": 1.5,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 4.0,
+            "vertex_4_y_coordinate": 1.5,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Gnd East N Wall Window": {
+            "building_surface_name": "Gnd East N Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 3.0,
+            "vertex_1_y_coordinate": 6.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 3.0,
+            "vertex_2_y_coordinate": 6.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 1.0,
+            "vertex_3_y_coordinate": 6.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 1.0,
+            "vertex_4_y_coordinate": 6.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Gnd East S Wall Window": {
+            "building_surface_name": "Gnd East S Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 1.0,
+            "vertex_1_y_coordinate": 0.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 1.0,
+            "vertex_2_y_coordinate": 0.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 3.0,
+            "vertex_3_y_coordinate": 0.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 3.0,
+            "vertex_4_y_coordinate": 0.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Gnd West N Wall Window": {
+            "building_surface_name": "Gnd West N Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 3.0,
+            "vertex_1_y_coordinate": 6.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 3.0,
+            "vertex_2_y_coordinate": 6.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 1.0,
+            "vertex_3_y_coordinate": 6.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 1.0,
+            "vertex_4_y_coordinate": 6.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Gnd West S Wall Window": {
+            "building_surface_name": "Gnd West S Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 1.0,
+            "vertex_1_y_coordinate": 0.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 1.0,
+            "vertex_2_y_coordinate": 0.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 3.0,
+            "vertex_3_y_coordinate": 0.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 3.0,
+            "vertex_4_y_coordinate": 0.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Gnd West W Wall Windows": {
+            "building_surface_name": "Gnd West W Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 3,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 0.0,
+            "vertex_1_y_coordinate": 1.5,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 0.0,
+            "vertex_2_y_coordinate": 1.5,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 0.0,
+            "vertex_3_y_coordinate": 0.5,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 0.0,
+            "vertex_4_y_coordinate": 0.5,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Mid Center N Wall Window": {
+            "building_surface_name": "Mid Center N Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 3.0,
+            "vertex_1_y_coordinate": 6.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 3.0,
+            "vertex_2_y_coordinate": 6.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 1.0,
+            "vertex_3_y_coordinate": 6.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 1.0,
+            "vertex_4_y_coordinate": 6.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Mid Center S Wall Window": {
+            "building_surface_name": "Mid Center S Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 1.0,
+            "vertex_1_y_coordinate": 0.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 1.0,
+            "vertex_2_y_coordinate": 0.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 3.0,
+            "vertex_3_y_coordinate": 0.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 3.0,
+            "vertex_4_y_coordinate": 0.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Mid East E Wall Windows": {
+            "building_surface_name": "Mid East E Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 3,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 4.0,
+            "vertex_1_y_coordinate": 0.5,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 4.0,
+            "vertex_2_y_coordinate": 0.5,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 4.0,
+            "vertex_3_y_coordinate": 1.5,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 4.0,
+            "vertex_4_y_coordinate": 1.5,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Mid East N Wall Window": {
+            "building_surface_name": "Mid East N Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 3.0,
+            "vertex_1_y_coordinate": 6.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 3.0,
+            "vertex_2_y_coordinate": 6.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 1.0,
+            "vertex_3_y_coordinate": 6.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 1.0,
+            "vertex_4_y_coordinate": 6.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Mid East S Wall Window": {
+            "building_surface_name": "Mid East S Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 1.0,
+            "vertex_1_y_coordinate": 0.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 1.0,
+            "vertex_2_y_coordinate": 0.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 3.0,
+            "vertex_3_y_coordinate": 0.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 3.0,
+            "vertex_4_y_coordinate": 0.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Mid West N Wall Window": {
+            "building_surface_name": "Mid West N Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 3.0,
+            "vertex_1_y_coordinate": 6.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 3.0,
+            "vertex_2_y_coordinate": 6.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 1.0,
+            "vertex_3_y_coordinate": 6.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 1.0,
+            "vertex_4_y_coordinate": 6.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Mid West S Wall Window": {
+            "building_surface_name": "Mid West S Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 1.0,
+            "vertex_1_y_coordinate": 0.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 1.0,
+            "vertex_2_y_coordinate": 0.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 3.0,
+            "vertex_3_y_coordinate": 0.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 3.0,
+            "vertex_4_y_coordinate": 0.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Mid West W Wall Windows": {
+            "building_surface_name": "Mid West W Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 3,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 0.0,
+            "vertex_1_y_coordinate": 1.5,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 0.0,
+            "vertex_2_y_coordinate": 1.5,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 0.0,
+            "vertex_3_y_coordinate": 0.5,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 0.0,
+            "vertex_4_y_coordinate": 0.5,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Top Center N Wall Window": {
+            "building_surface_name": "Top Center N Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 3.0,
+            "vertex_1_y_coordinate": 6.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 3.0,
+            "vertex_2_y_coordinate": 6.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 1.0,
+            "vertex_3_y_coordinate": 6.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 1.0,
+            "vertex_4_y_coordinate": 6.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Top Center S Wall Window": {
+            "building_surface_name": "Top Center S Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 1.0,
+            "vertex_1_y_coordinate": 0.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 1.0,
+            "vertex_2_y_coordinate": 0.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 3.0,
+            "vertex_3_y_coordinate": 0.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 3.0,
+            "vertex_4_y_coordinate": 0.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Top East E Wall Windows": {
+            "building_surface_name": "Top East E Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 3,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 4.0,
+            "vertex_1_y_coordinate": 0.5,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 4.0,
+            "vertex_2_y_coordinate": 0.5,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 4.0,
+            "vertex_3_y_coordinate": 1.5,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 4.0,
+            "vertex_4_y_coordinate": 1.5,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Top East N Wall Window": {
+            "building_surface_name": "Top East N Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 3.0,
+            "vertex_1_y_coordinate": 6.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 3.0,
+            "vertex_2_y_coordinate": 6.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 1.0,
+            "vertex_3_y_coordinate": 6.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 1.0,
+            "vertex_4_y_coordinate": 6.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Top East S Wall Window": {
+            "building_surface_name": "Top East S Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 1.0,
+            "vertex_1_y_coordinate": 0.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 1.0,
+            "vertex_2_y_coordinate": 0.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 3.0,
+            "vertex_3_y_coordinate": 0.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 3.0,
+            "vertex_4_y_coordinate": 0.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Top West N Wall Window": {
+            "building_surface_name": "Top West N Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 3.0,
+            "vertex_1_y_coordinate": 6.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 3.0,
+            "vertex_2_y_coordinate": 6.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 1.0,
+            "vertex_3_y_coordinate": 6.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 1.0,
+            "vertex_4_y_coordinate": 6.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Top West S Wall Window": {
+            "building_surface_name": "Top West S Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 1.0,
+            "vertex_1_y_coordinate": 0.0,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 1.0,
+            "vertex_2_y_coordinate": 0.0,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 3.0,
+            "vertex_3_y_coordinate": 0.0,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 3.0,
+            "vertex_4_y_coordinate": 0.0,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        },
+        "Top West W Wall Windows": {
+            "building_surface_name": "Top West W Wall",
+            "construction_name": "Single Pane Window",
+            "multiplier": 3,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 0.0,
+            "vertex_1_y_coordinate": 1.5,
+            "vertex_1_z_coordinate": 2.0,
+            "vertex_2_x_coordinate": 0.0,
+            "vertex_2_y_coordinate": 1.5,
+            "vertex_2_z_coordinate": 1.0,
+            "vertex_3_x_coordinate": 0.0,
+            "vertex_3_y_coordinate": 0.5,
+            "vertex_3_z_coordinate": 1.0,
+            "vertex_4_x_coordinate": 0.0,
+            "vertex_4_y_coordinate": 0.5,
+            "vertex_4_z_coordinate": 2.0,
+            "view_factor_to_ground": 0.5
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "HeatBalanceAlgorithm": {
+        "HeatBalanceAlgorithm 1": {
+            "algorithm": "ConductionTransferFunction"
+        }
+    },
+    "HotWaterEquipment": {
+        "Office Buildings": {
+            "design_level_calculation_method": "Watts/Person",
+            "end_use_subcategory": "General",
+            "fraction_latent": 0.2,
+            "fraction_lost": 0.5,
+            "fraction_radiant": 0.1,
+            "power_per_person": 31.1,
+            "schedule_name": "DHW-SCHED-BldgAvg",
+            "zone_or_zonelist_name": "AllZones"
+        }
+    },
+    "Lights": {
+        "Office Buildings": {
+            "design_level_calculation_method": "Watts/Area",
+            "end_use_subcategory": "General",
+            "fraction_radiant": 0.42,
+            "fraction_visible": 0.18,
+            "return_air_fraction": 0,
+            "schedule_name": "LIT-SCHED-BldgAvg",
+            "watts_per_zone_floor_area": 9.15,
+            "zone_or_zonelist_name": "AllZones"
+        }
+    },
+    "Material": {
+        "A1 - 1 IN STUCCO": {
+            "conductivity": 0.6918309,
+            "density": 1858.142,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.025389841,
+            "visible_absorptance": 0.92
+        },
+        "B5 - 1 IN DENSE INSULATION": {
+            "conductivity": 0.04323943,
+            "density": 91.30524,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.025389841,
+            "visible_absorptance": 0.5
+        },
+        "BB46 - 5 / 8 IN PLYWOOD": {
+            "conductivity": 0.11,
+            "density": 544.62,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1210.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0099999998,
+            "visible_absorptance": 0.7
+        },
+        "C2 - 4 IN LW CONCRETE BLOCK": {
+            "conductivity": 0.38,
+            "density": 608.7,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 830.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1,
+            "visible_absorptance": 0.65
+        },
+        "C4 - 4 IN COMMON BRICK": {
+            "conductivity": 0.7264224,
+            "density": 1922.216,
+            "roughness": "Rough",
+            "solar_absorptance": 0.76,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1014984,
+            "visible_absorptance": 0.76
+        },
+        "C6 - 8 IN CLAY TILE": {
+            "conductivity": 0.5707605,
+            "density": 1121.292,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.82,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.2033016,
+            "visible_absorptance": 0.82
+        },
+        "C10 - 8 IN HW CONCRETE": {
+            "conductivity": 1.729577,
+            "density": 2242.585,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.2033016,
+            "visible_absorptance": 0.65
+        },
+        "C12 - 2 IN HW CONCRETE": {
+            "conductivity": 1.729577,
+            "density": 2242.585,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.050901599,
+            "visible_absorptance": 0.65
+        },
+        "E1 - 3 / 4 IN PLASTER OR GYP BOARD": {
+            "conductivity": 0.7264224,
+            "density": 1601.846,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.01905,
+            "visible_absorptance": 0.92
+        },
+        "E2 - 1 / 2 IN SLAG OR STONE": {
+            "conductivity": 1.435549,
+            "density": 881.0155,
+            "roughness": "Rough",
+            "solar_absorptance": 0.55,
+            "specific_heat": 1673.6,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.012710161,
+            "visible_absorptance": 0.55
+        },
+        "E3 - 3 / 8 IN FELT AND MEMBRANE": {
+            "conductivity": 0.1902535,
+            "density": 1121.292,
+            "roughness": "Rough",
+            "solar_absorptance": 0.75,
+            "specific_heat": 1673.6,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0095402403,
+            "visible_absorptance": 0.75
+        },
+        "E5 - ACOUSTIC TILE": {
+            "conductivity": 0.059999999,
+            "density": 480.55,
+            "roughness": "MediumSmooth",
+            "solar_absorptance": 0.32,
+            "specific_heat": 830.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0099999998,
+            "visible_absorptance": 0.32
+        },
+        "INS - GLASS FIBER BONDED 3 IN": {
+            "conductivity": 0.029999999,
+            "density": 96.11,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 790.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.07,
+            "visible_absorptance": 0.5
+        },
+        "ROOFING - ASPHALT SHINGLES": {
+            "conductivity": 0.029999999,
+            "density": 1121.29,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.7,
+            "specific_heat": 830.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0031999999,
+            "visible_absorptance": 0.7
+        }
+    },
+    "Material:AirGap": {
+        "E4 - CEILING AIRSPACE": {
+            "thermal_resistance": 0.17
+        }
+    },
+    "OutdoorAir:Mixer": {
+        "Gnd Center OA Mixer": {
+            "mixed_air_node_name": "Gnd Center Mixed Node",
+            "outdoor_air_stream_node_name": "Gnd Center OA Node",
+            "relief_air_stream_node_name": "Gnd Center Relief Node",
+            "return_air_stream_node_name": "Gnd Center AC Inlet Node"
+        },
+        "Gnd East OA Mixer": {
+            "mixed_air_node_name": "Gnd East Mixed Node",
+            "outdoor_air_stream_node_name": "Gnd East OA Node",
+            "relief_air_stream_node_name": "Gnd East Relief Node",
+            "return_air_stream_node_name": "Gnd East AC Inlet Node"
+        },
+        "Gnd West OA Mixer": {
+            "mixed_air_node_name": "Gnd West Mixed Node",
+            "outdoor_air_stream_node_name": "Gnd West OA Node",
+            "relief_air_stream_node_name": "Gnd West Relief Node",
+            "return_air_stream_node_name": "Gnd West AC Inlet Node"
+        },
+        "Mid Center OA Mixer": {
+            "mixed_air_node_name": "Mid Center Mixed Node",
+            "outdoor_air_stream_node_name": "Mid Center OA Node",
+            "relief_air_stream_node_name": "Mid Center Relief Node",
+            "return_air_stream_node_name": "Mid Center AC Inlet Node"
+        },
+        "Mid East OA Mixer": {
+            "mixed_air_node_name": "Mid East Mixed Node",
+            "outdoor_air_stream_node_name": "Mid East OA Node",
+            "relief_air_stream_node_name": "Mid East Relief Node",
+            "return_air_stream_node_name": "Mid East AC Inlet Node"
+        },
+        "Mid West OA Mixer": {
+            "mixed_air_node_name": "Mid West Mixed Node",
+            "outdoor_air_stream_node_name": "Mid West OA Node",
+            "relief_air_stream_node_name": "Mid West Relief Node",
+            "return_air_stream_node_name": "Mid West AC Inlet Node"
+        },
+        "Top Center OA Mixer": {
+            "mixed_air_node_name": "Top Center Mixed Node",
+            "outdoor_air_stream_node_name": "Top Center OA Node",
+            "relief_air_stream_node_name": "Top Center Relief Node",
+            "return_air_stream_node_name": "Top Center AC Inlet Node"
+        },
+        "Top East OA Mixer": {
+            "mixed_air_node_name": "Top East Mixed Node",
+            "outdoor_air_stream_node_name": "Top East OA Node",
+            "relief_air_stream_node_name": "Top East Relief Node",
+            "return_air_stream_node_name": "Top East AC Inlet Node"
+        },
+        "Top West OA Mixer": {
+            "mixed_air_node_name": "Top West Mixed Node",
+            "outdoor_air_stream_node_name": "Top West OA Node",
+            "relief_air_stream_node_name": "Top West Relief Node",
+            "return_air_stream_node_name": "Top West AC Inlet Node"
+        }
+    },
+    "OutdoorAir:Node": {
+        "Gnd Center OA Node": {
+            "height_above_ground": 0.5
+        },
+        "Gnd East OA Node": {
+            "height_above_ground": 0.5
+        },
+        "Gnd West OA Node": {
+            "height_above_ground": 0.5
+        },
+        "Mid Center OA Node": {
+            "height_above_ground": 13
+        },
+        "Mid East OA Node": {
+            "height_above_ground": 13
+        },
+        "Mid West OA Node": {
+            "height_above_ground": 13
+        },
+        "Top Center OA Node": {
+            "height_above_ground": 23
+        },
+        "Top East OA Node": {
+            "height_above_ground": 23
+        },
+        "Top West OA Node": {
+            "height_above_ground": 23
+        }
+    },
+    "Output:Constructions": {
+        "Output:Constructions 1": {
+            "details_type_1": "Constructions"
+        }
+    },
+    "Output:Meter:MeterFileOnly": {
+        "Output:Meter:MeterFileOnly 1": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 2": {
+            "key_name": "Electricity:HVAC",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 3": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 4": {
+            "key_name": "Electricity:HVAC",
+            "reporting_frequency": "RunPeriod"
+        }
+    },
+    "Output:SQLite": {
+        "Output:SQLite 1": {
+            "option_type": "Simple"
+        }
+    },
+    "Output:Surfaces:Drawing": {
+        "Output:Surfaces:Drawing 1": {
+            "report_type": "DXF"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "Gnd Center Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 3": {
+            "key_value": "Mid Center Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 4": {
+            "key_value": "Top Center Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 5": {
+            "key_value": "Gnd Center OA Node",
+            "reporting_frequency": "Monthly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 6": {
+            "key_value": "Mid Center OA Node",
+            "reporting_frequency": "Monthly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 7": {
+            "key_value": "Top Center OA Node",
+            "reporting_frequency": "Monthly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Site Outdoor Air Wetbulb Temperature"
+        },
+        "Output:Variable 9": {
+            "key_value": "Gnd Center Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Outdoor Air Wetbulb Temperature"
+        },
+        "Output:Variable 10": {
+            "key_value": "Mid Center Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Outdoor Air Wetbulb Temperature"
+        },
+        "Output:Variable 11": {
+            "key_value": "Top Center Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Outdoor Air Wetbulb Temperature"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Site Wind Speed"
+        },
+        "Output:Variable 13": {
+            "key_value": "Gnd Center Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Outdoor Air Wind Speed"
+        },
+        "Output:Variable 14": {
+            "key_value": "Mid Center Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Outdoor Air Wind Speed"
+        },
+        "Output:Variable 15": {
+            "key_value": "Top Center Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Outdoor Air Wind Speed"
+        },
+        "Output:Variable 16": {
+            "key_value": "*",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air Temperature"
+        },
+        "Output:Variable 17": {
+            "key_value": "Gnd West Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Heating Energy"
+        },
+        "Output:Variable 18": {
+            "key_value": "Gnd Center Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Heating Energy"
+        },
+        "Output:Variable 19": {
+            "key_value": "Gnd East Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Heating Energy"
+        },
+        "Output:Variable 20": {
+            "key_value": "Gnd Floor List",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone List Sensible Heating Energy"
+        },
+        "Output:Variable 21": {
+            "key_value": "Gnd Floor",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Group Sensible Heating Energy"
+        },
+        "Output:Variable 22": {
+            "key_value": "Mid West Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Heating Energy"
+        },
+        "Output:Variable 23": {
+            "key_value": "Mid Center Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Heating Energy"
+        },
+        "Output:Variable 24": {
+            "key_value": "Mid East Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Heating Energy"
+        },
+        "Output:Variable 25": {
+            "key_value": "Mid Floor List",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone List Sensible Heating Energy"
+        },
+        "Output:Variable 26": {
+            "key_value": "Mid Floor",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Group Sensible Heating Energy"
+        },
+        "Output:Variable 27": {
+            "key_value": "Top West Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Heating Energy"
+        },
+        "Output:Variable 28": {
+            "key_value": "Top Center Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Heating Energy"
+        },
+        "Output:Variable 29": {
+            "key_value": "Top East Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Heating Energy"
+        },
+        "Output:Variable 30": {
+            "key_value": "Top Floor List",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone List Sensible Heating Energy"
+        },
+        "Output:Variable 31": {
+            "key_value": "Top Floor",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Group Sensible Heating Energy"
+        },
+        "Output:Variable 32": {
+            "key_value": "Gnd West Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Cooling Energy"
+        },
+        "Output:Variable 33": {
+            "key_value": "Gnd Center Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Cooling Energy"
+        },
+        "Output:Variable 34": {
+            "key_value": "Gnd East Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Cooling Energy"
+        },
+        "Output:Variable 35": {
+            "key_value": "Gnd Floor List",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone List Sensible Cooling Energy"
+        },
+        "Output:Variable 36": {
+            "key_value": "Gnd Floor",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Group Sensible Cooling Energy"
+        },
+        "Output:Variable 37": {
+            "key_value": "Mid West Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Cooling Energy"
+        },
+        "Output:Variable 38": {
+            "key_value": "Mid Center Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Cooling Energy"
+        },
+        "Output:Variable 39": {
+            "key_value": "Mid East Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Cooling Energy"
+        },
+        "Output:Variable 40": {
+            "key_value": "Mid Floor List",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone List Sensible Cooling Energy"
+        },
+        "Output:Variable 41": {
+            "key_value": "Mid Floor",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Group Sensible Cooling Energy"
+        },
+        "Output:Variable 42": {
+            "key_value": "Top West Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Cooling Energy"
+        },
+        "Output:Variable 43": {
+            "key_value": "Top Center Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Cooling Energy"
+        },
+        "Output:Variable 44": {
+            "key_value": "Top East Zone",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Air System Sensible Cooling Energy"
+        },
+        "Output:Variable 45": {
+            "key_value": "Top Floor List",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone List Sensible Cooling Energy"
+        },
+        "Output:Variable 46": {
+            "key_value": "Top Floor",
+            "reporting_frequency": "Monthly",
+            "variable_name": "Zone Group Sensible Cooling Energy"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "People": {
+        "Office Buildings": {
+            "activity_level_schedule_name": "ActSchd134",
+            "fraction_radiant": 0.3,
+            "number_of_people_calculation_method": "Area/Person",
+            "number_of_people_schedule_name": "OCC-SCHED-BldgAvg",
+            "sensible_heat_fraction": 0.55,
+            "zone_floor_area_per_person": 9.29,
+            "zone_or_zonelist_name": "AllZones"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 31,
+            "end_month": 12,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "ActSchd134": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 134
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "AlwaysOnSchedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 1
+                }
+            ],
+            "schedule_type_limits_name": "On/Off"
+        },
+        "Cooling Temp Sch": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 24
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "CyclingFanSch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "DHW-SCHED-BldgAvg": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Weekdays SummerDesignDay"
+                },
+                {
+                    "field": "Until:  4:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until:  6:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until: 10:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 11:00"
+                },
+                {
+                    "field": 0.7
+                },
+                {
+                    "field": "Until: 13:00"
+                },
+                {
+                    "field": 0.9
+                },
+                {
+                    "field": "Until: 15:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 16:00"
+                },
+                {
+                    "field": 0.7
+                },
+                {
+                    "field": "Until: 19:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 23:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "For: Saturday"
+                },
+                {
+                    "field": "Until:  6:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until:  7:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until: 17:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 20:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "For: Sunday Holidays WinterDesignDay AllOtherDays"
+                },
+                {
+                    "field": "Until:  7:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 20:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "EQP-SCHED-BldgAvg": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Weekdays SummerDesignDay"
+                },
+                {
+                    "field": "Until:  5:00"
+                },
+                {
+                    "field": 0.15
+                },
+                {
+                    "field": "Until:  6:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until:  7:00"
+                },
+                {
+                    "field": 0.35
+                },
+                {
+                    "field": "Until:  8:00"
+                },
+                {
+                    "field": 0.6
+                },
+                {
+                    "field": "Until: 16:00"
+                },
+                {
+                    "field": 0.7
+                },
+                {
+                    "field": "Until: 17:00"
+                },
+                {
+                    "field": 0.65
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 0.45
+                },
+                {
+                    "field": "Until: 19:00"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "Until: 21:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.15
+                },
+                {
+                    "field": "For: Saturday"
+                },
+                {
+                    "field": "Until:  7:00"
+                },
+                {
+                    "field": 0.15
+                },
+                {
+                    "field": "Until:  8:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 14:00"
+                },
+                {
+                    "field": 0.25
+                },
+                {
+                    "field": "Until: 17:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.15
+                },
+                {
+                    "field": "For: Sunday Holidays WinterDesignDay AllOtherDays"
+                },
+                {
+                    "field": "Until:  7:00"
+                },
+                {
+                    "field": 0.15
+                },
+                {
+                    "field": "Until: 17:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.15
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Heating Temp Sch": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 20
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "LIT-SCHED-BldgAvg": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Weekdays SummerDesignDay"
+                },
+                {
+                    "field": "Until:  4:00"
+                },
+                {
+                    "field": 0.05
+                },
+                {
+                    "field": "Until:  5:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until:  6:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until:  7:00"
+                },
+                {
+                    "field": 0.4
+                },
+                {
+                    "field": "Until:  8:00"
+                },
+                {
+                    "field": 0.7
+                },
+                {
+                    "field": "Until:  9:00"
+                },
+                {
+                    "field": 0.8
+                },
+                {
+                    "field": "Until:  17:00"
+                },
+                {
+                    "field": 0.85
+                },
+                {
+                    "field": "Until:  18:00"
+                },
+                {
+                    "field": 0.8
+                },
+                {
+                    "field": "Until:  19:00"
+                },
+                {
+                    "field": 0.35
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "For: Saturday"
+                },
+                {
+                    "field": "Until:  5:00"
+                },
+                {
+                    "field": 0.05
+                },
+                {
+                    "field": "Until:  6:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until:  7:00"
+                },
+                {
+                    "field": 0.15
+                },
+                {
+                    "field": "Until:  9:00"
+                },
+                {
+                    "field": 0.21
+                },
+                {
+                    "field": "Until: 14:00"
+                },
+                {
+                    "field": 0.25
+                },
+                {
+                    "field": "Until: 17:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 0.15
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "For: Sunday Holidays WinterDesignDay AllOtherDays"
+                },
+                {
+                    "field": "Until:  5:00"
+                },
+                {
+                    "field": 0.05
+                },
+                {
+                    "field": "Until:  7:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until:  17:00"
+                },
+                {
+                    "field": 0.15
+                },
+                {
+                    "field": "Until:  20:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until:  24:00"
+                },
+                {
+                    "field": 0.05
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "OCC-SCHED-BldgAvg": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Weekdays SummerDesignDay"
+                },
+                {
+                    "field": "Until:  4:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until:  5:00"
+                },
+                {
+                    "field": 0.05
+                },
+                {
+                    "field": "Until:  6:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until:  7:00"
+                },
+                {
+                    "field": 0.25
+                },
+                {
+                    "field": "Until: 11:00"
+                },
+                {
+                    "field": 0.65
+                },
+                {
+                    "field": "Until: 13:00"
+                },
+                {
+                    "field": 0.6
+                },
+                {
+                    "field": "Until: 17:00"
+                },
+                {
+                    "field": 0.65
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 0.4
+                },
+                {
+                    "field": "Until: 19:00"
+                },
+                {
+                    "field": 0.25
+                },
+                {
+                    "field": "Until: 20:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until: 23:00"
+                },
+                {
+                    "field": 0.05
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "For: Saturday"
+                },
+                {
+                    "field": "Until:  6:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until:  7:00"
+                },
+                {
+                    "field": 0.05
+                },
+                {
+                    "field": "Until: 17:00"
+                },
+                {
+                    "field": 0.15
+                },
+                {
+                    "field": "Until: 20:00"
+                },
+                {
+                    "field": 0.05
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "For: Sunday Holidays WinterDesignDay AllOtherDays"
+                },
+                {
+                    "field": "Until:  7:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 20:00"
+                },
+                {
+                    "field": 0.05
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Zone Control Type Sch": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 4
+                }
+            ],
+            "schedule_type_limits_name": "Control Type"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "Control Type": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 4
+        },
+        "Fraction": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1.0
+        },
+        "On/Off": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 1
+        },
+        "Temperature": {
+            "lower_limit_value": -60,
+            "numeric_type": "Continuous",
+            "unit_type": "Temperature",
+            "upper_limit_value": 200
+        }
+    },
+    "ShadowCalculation": {
+        "ShadowCalculation 1": {
+            "shading_calculation_method": "PolygonClipping",
+            "shading_calculation_update_frequency": 20,
+            "shading_calculation_update_frequency_method": "Periodic"
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "Yes",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "No",
+            "run_simulation_for_weather_file_run_periods": "Yes"
+        }
+    },
+    "Site:HeightVariation": {
+        "Site:HeightVariation 1": {
+            "air_temperature_gradient_coefficient": 0.0065,
+            "wind_speed_profile_boundary_layer_thickness": 460,
+            "wind_speed_profile_exponent": 0.33
+        }
+    },
+    "Site:Location": {
+        "Chicago Ohare Intl Ap IL USA WMO=725300": {
+            "elevation": 205.0,
+            "latitude": 41.99,
+            "longitude": -87.91,
+            "time_zone": -6.0
+        }
+    },
+    "Site:WeatherStation": {
+        "Site:WeatherStation 1": {
+            "air_temperature_sensor_height_above_ground": 30,
+            "wind_sensor_height_above_ground": 30,
+            "wind_speed_profile_boundary_layer_thickness": 460,
+            "wind_speed_profile_exponent": 0.33
+        }
+    },
+    "Sizing:Parameters": {
+        "Sizing:Parameters 1": {
+            "cooling_sizing_factor": 1.2,
+            "heating_sizing_factor": 1.2
+        }
+    },
+    "Sizing:Zone": {
+        "Sizing:Zone 1": {
+            "account_for_dedicated_outdoor_air_system": "No",
+            "cooling_design_air_flow_method": "DesignDay",
+            "dedicated_outdoor_air_high_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_low_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_system_control_strategy": "NeutralSupplyAir",
+            "design_specification_outdoor_air_object_name": "SZ DSOA Gnd West Zone",
+            "heating_design_air_flow_method": "DesignDay",
+            "zone_cooling_design_supply_air_humidity_ratio": 0.009,
+            "zone_cooling_design_supply_air_temperature": 14,
+            "zone_cooling_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_cooling_sizing_factor": 1.2,
+            "zone_heating_design_supply_air_humidity_ratio": 0.009,
+            "zone_heating_design_supply_air_temperature": 50,
+            "zone_heating_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_heating_sizing_factor": 1.2,
+            "zone_or_zonelist_name": "Gnd West Zone"
+        },
+        "Sizing:Zone 2": {
+            "account_for_dedicated_outdoor_air_system": "No",
+            "cooling_design_air_flow_method": "DesignDay",
+            "dedicated_outdoor_air_high_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_low_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_system_control_strategy": "NeutralSupplyAir",
+            "design_specification_outdoor_air_object_name": "SZ DSOA Gnd Center Zone",
+            "heating_design_air_flow_method": "DesignDay",
+            "zone_cooling_design_supply_air_humidity_ratio": 0.009,
+            "zone_cooling_design_supply_air_temperature": 14,
+            "zone_cooling_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_cooling_sizing_factor": 1.2,
+            "zone_heating_design_supply_air_humidity_ratio": 0.009,
+            "zone_heating_design_supply_air_temperature": 50,
+            "zone_heating_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_heating_sizing_factor": 1.2,
+            "zone_or_zonelist_name": "Gnd Center Zone"
+        },
+        "Sizing:Zone 3": {
+            "account_for_dedicated_outdoor_air_system": "No",
+            "cooling_design_air_flow_method": "DesignDay",
+            "dedicated_outdoor_air_high_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_low_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_system_control_strategy": "NeutralSupplyAir",
+            "design_specification_outdoor_air_object_name": "SZ DSOA Gnd East Zone",
+            "heating_design_air_flow_method": "DesignDay",
+            "zone_cooling_design_supply_air_humidity_ratio": 0.009,
+            "zone_cooling_design_supply_air_temperature": 14,
+            "zone_cooling_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_cooling_sizing_factor": 1.2,
+            "zone_heating_design_supply_air_humidity_ratio": 0.009,
+            "zone_heating_design_supply_air_temperature": 50,
+            "zone_heating_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_heating_sizing_factor": 1.2,
+            "zone_or_zonelist_name": "Gnd East Zone"
+        },
+        "Sizing:Zone 4": {
+            "account_for_dedicated_outdoor_air_system": "No",
+            "cooling_design_air_flow_method": "DesignDay",
+            "dedicated_outdoor_air_high_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_low_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_system_control_strategy": "NeutralSupplyAir",
+            "design_specification_outdoor_air_object_name": "SZ DSOA Mid West Zone",
+            "heating_design_air_flow_method": "DesignDay",
+            "zone_cooling_design_supply_air_humidity_ratio": 0.009,
+            "zone_cooling_design_supply_air_temperature": 14,
+            "zone_cooling_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_cooling_sizing_factor": 1.2,
+            "zone_heating_design_supply_air_humidity_ratio": 0.009,
+            "zone_heating_design_supply_air_temperature": 50,
+            "zone_heating_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_heating_sizing_factor": 1.2,
+            "zone_or_zonelist_name": "Mid West Zone"
+        },
+        "Sizing:Zone 5": {
+            "account_for_dedicated_outdoor_air_system": "No",
+            "cooling_design_air_flow_method": "DesignDay",
+            "dedicated_outdoor_air_high_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_low_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_system_control_strategy": "NeutralSupplyAir",
+            "design_specification_outdoor_air_object_name": "SZ DSOA Mid Center Zone",
+            "heating_design_air_flow_method": "DesignDay",
+            "zone_cooling_design_supply_air_humidity_ratio": 0.009,
+            "zone_cooling_design_supply_air_temperature": 14,
+            "zone_cooling_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_cooling_sizing_factor": 1.2,
+            "zone_heating_design_supply_air_humidity_ratio": 0.009,
+            "zone_heating_design_supply_air_temperature": 50,
+            "zone_heating_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_heating_sizing_factor": 1.2,
+            "zone_or_zonelist_name": "Mid Center Zone"
+        },
+        "Sizing:Zone 6": {
+            "account_for_dedicated_outdoor_air_system": "No",
+            "cooling_design_air_flow_method": "DesignDay",
+            "dedicated_outdoor_air_high_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_low_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_system_control_strategy": "NeutralSupplyAir",
+            "design_specification_outdoor_air_object_name": "SZ DSOA Mid East Zone",
+            "heating_design_air_flow_method": "DesignDay",
+            "zone_cooling_design_supply_air_humidity_ratio": 0.009,
+            "zone_cooling_design_supply_air_temperature": 14,
+            "zone_cooling_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_cooling_sizing_factor": 1.2,
+            "zone_heating_design_supply_air_humidity_ratio": 0.009,
+            "zone_heating_design_supply_air_temperature": 50,
+            "zone_heating_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_heating_sizing_factor": 1.2,
+            "zone_or_zonelist_name": "Mid East Zone"
+        },
+        "Sizing:Zone 7": {
+            "account_for_dedicated_outdoor_air_system": "No",
+            "cooling_design_air_flow_method": "DesignDay",
+            "dedicated_outdoor_air_high_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_low_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_system_control_strategy": "NeutralSupplyAir",
+            "design_specification_outdoor_air_object_name": "SZ DSOA Top West Zone",
+            "heating_design_air_flow_method": "DesignDay",
+            "zone_cooling_design_supply_air_humidity_ratio": 0.009,
+            "zone_cooling_design_supply_air_temperature": 14,
+            "zone_cooling_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_cooling_sizing_factor": 1.2,
+            "zone_heating_design_supply_air_humidity_ratio": 0.009,
+            "zone_heating_design_supply_air_temperature": 50,
+            "zone_heating_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_heating_sizing_factor": 1.2,
+            "zone_or_zonelist_name": "Top West Zone"
+        },
+        "Sizing:Zone 8": {
+            "account_for_dedicated_outdoor_air_system": "No",
+            "cooling_design_air_flow_method": "DesignDay",
+            "dedicated_outdoor_air_high_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_low_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_system_control_strategy": "NeutralSupplyAir",
+            "design_specification_outdoor_air_object_name": "SZ DSOA Top Center Zone",
+            "heating_design_air_flow_method": "DesignDay",
+            "zone_cooling_design_supply_air_humidity_ratio": 0.009,
+            "zone_cooling_design_supply_air_temperature": 14,
+            "zone_cooling_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_cooling_sizing_factor": 1.2,
+            "zone_heating_design_supply_air_humidity_ratio": 0.009,
+            "zone_heating_design_supply_air_temperature": 50,
+            "zone_heating_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_heating_sizing_factor": 1.2,
+            "zone_or_zonelist_name": "Top Center Zone"
+        },
+        "Sizing:Zone 9": {
+            "account_for_dedicated_outdoor_air_system": "No",
+            "cooling_design_air_flow_method": "DesignDay",
+            "dedicated_outdoor_air_high_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_low_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_system_control_strategy": "NeutralSupplyAir",
+            "design_specification_outdoor_air_object_name": "SZ DSOA Top East Zone",
+            "heating_design_air_flow_method": "DesignDay",
+            "zone_cooling_design_supply_air_humidity_ratio": 0.009,
+            "zone_cooling_design_supply_air_temperature": 14,
+            "zone_cooling_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_cooling_sizing_factor": 1.2,
+            "zone_heating_design_supply_air_humidity_ratio": 0.009,
+            "zone_heating_design_supply_air_temperature": 50,
+            "zone_heating_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_heating_sizing_factor": 1.2,
+            "zone_or_zonelist_name": "Top East Zone"
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "Chicago Ohare Intl Ap Ann Clg 1% Condns DB=>MWB": {
+            "barometric_pressure": 98886.0,
+            "daily_dry_bulb_temperature_range": 10.5,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 31.6,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23,
+            "wind_direction": 230,
+            "wind_speed": 5.2
+        },
+        "Chicago Ohare Intl Ap Ann Htg 99% Condns DB": {
+            "barometric_pressure": 98886.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -16.6,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -16.6,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        }
+    },
+    "SizingPeriod:WeatherFileDays": {
+        "Weather File Sizing Period": {
+            "begin_day_of_month": 18,
+            "begin_month": 7,
+            "day_of_week_for_start_day": "SummerDesignDay",
+            "end_day_of_month": 25,
+            "end_month": 7,
+            "use_weather_file_daylight_saving_period": "No",
+            "use_weather_file_rain_and_snow_indicators": "No"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Inside": {
+        "SurfaceConvectionAlgorithm:Inside 1": {
+            "algorithm": "TARP"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Outside": {
+        "SurfaceConvectionAlgorithm:Outside 1": {
+            "algorithm": "DOE-2"
+        }
+    },
+    "ThermostatSetpoint:DualSetpoint": {
+        "Heating Cooling Setpoint": {
+            "cooling_setpoint_temperature_schedule_name": "Cooling Temp Sch",
+            "heating_setpoint_temperature_schedule_name": "Heating Temp Sch"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 6
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "9.4"
+        }
+    },
+    "WindowMaterial:Glazing": {
+        "CLEAR GLASS": {
+            "back_side_infrared_hemispherical_emissivity": 0.84,
+            "back_side_solar_reflectance_at_normal_incidence": 0.075,
+            "back_side_visible_reflectance_at_normal_incidence": 0.081,
+            "conductivity": 0.9,
+            "front_side_infrared_hemispherical_emissivity": 0.84,
+            "front_side_solar_reflectance_at_normal_incidence": 0.075,
+            "front_side_visible_reflectance_at_normal_incidence": 0.081,
+            "infrared_transmittance_at_normal_incidence": 0.0,
+            "optical_data_type": "SpectralAverage",
+            "solar_transmittance_at_normal_incidence": 0.837,
+            "thickness": 0.003,
+            "visible_transmittance_at_normal_incidence": 0.898
+        }
+    },
+    "Zone": {
+        "Gnd Center Zone": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "multiplier": 4,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 8.0,
+            "y_origin": 0.0,
+            "z_origin": 0.0
+        },
+        "Gnd East Zone": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 20.0,
+            "y_origin": 0.0,
+            "z_origin": 0.0
+        },
+        "Gnd West Zone": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 0.0,
+            "y_origin": 0.0,
+            "z_origin": 0.0
+        },
+        "Mid Center Zone": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "multiplier": 4,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 8.0,
+            "y_origin": 0.0,
+            "z_origin": 12.5
+        },
+        "Mid East Zone": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 20.0,
+            "y_origin": 0.0,
+            "z_origin": 12.5
+        },
+        "Mid West Zone": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 0.0,
+            "y_origin": 0.0,
+            "z_origin": 12.5
+        },
+        "Top Center Zone": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "multiplier": 4,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 8.0,
+            "y_origin": 0.0,
+            "z_origin": 22.5
+        },
+        "Top East Zone": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 20.0,
+            "y_origin": 0.0,
+            "z_origin": 22.5
+        },
+        "Top West Zone": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 0.0,
+            "y_origin": 0.0,
+            "z_origin": 22.5
+        }
+    },
+    "ZoneControl:Thermostat": {
+        "Gnd Center Thermostat": {
+            "control_1_name": "Heating Cooling Setpoint",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "Zone Control Type Sch",
+            "zone_or_zonelist_name": "Gnd Center Zone"
+        },
+        "Gnd East Thermostat": {
+            "control_1_name": "Heating Cooling Setpoint",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "Zone Control Type Sch",
+            "zone_or_zonelist_name": "Gnd East Zone"
+        },
+        "Gnd West Thermostat": {
+            "control_1_name": "Heating Cooling Setpoint",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "Zone Control Type Sch",
+            "zone_or_zonelist_name": "Gnd West Zone"
+        },
+        "Mid Center Thermostat": {
+            "control_1_name": "Heating Cooling Setpoint",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "Zone Control Type Sch",
+            "zone_or_zonelist_name": "Mid Center Zone"
+        },
+        "Mid East Thermostat": {
+            "control_1_name": "Heating Cooling Setpoint",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "Zone Control Type Sch",
+            "zone_or_zonelist_name": "Mid East Zone"
+        },
+        "Mid West Thermostat": {
+            "control_1_name": "Heating Cooling Setpoint",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "Zone Control Type Sch",
+            "zone_or_zonelist_name": "Mid West Zone"
+        },
+        "Top Center Thermostat": {
+            "control_1_name": "Heating Cooling Setpoint",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "Zone Control Type Sch",
+            "zone_or_zonelist_name": "Top Center Zone"
+        },
+        "Top East Thermostat": {
+            "control_1_name": "Heating Cooling Setpoint",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "Zone Control Type Sch",
+            "zone_or_zonelist_name": "Top East Zone"
+        },
+        "Top West Thermostat": {
+            "control_1_name": "Heating Cooling Setpoint",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "Zone Control Type Sch",
+            "zone_or_zonelist_name": "Top West Zone"
+        }
+    },
+    "ZoneGroup": {
+        "Gnd Floor": {
+            "zone_list_multiplier": 1,
+            "zone_list_name": "Gnd Floor List"
+        },
+        "Mid Floor": {
+            "zone_list_multiplier": 8,
+            "zone_list_name": "Mid Floor List"
+        },
+        "Top Floor": {
+            "zone_list_multiplier": 1,
+            "zone_list_name": "Top Floor List"
+        }
+    },
+    "ZoneHVAC:Baseboard:Convective:Electric": {
+        "Gnd Center Baseboard": {
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "efficiency": 0.95,
+            "heating_design_capacity": "Autosize",
+            "heating_design_capacity_method": "HeatingDesignCapacity"
+        },
+        "Gnd East Baseboard": {
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "efficiency": 0.95,
+            "heating_design_capacity": "Autosize",
+            "heating_design_capacity_method": "HeatingDesignCapacity"
+        },
+        "Gnd West Baseboard": {
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "efficiency": 0.95,
+            "heating_design_capacity": "Autosize",
+            "heating_design_capacity_method": "HeatingDesignCapacity"
+        },
+        "Mid Center Baseboard": {
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "efficiency": 0.95,
+            "heating_design_capacity": "Autosize",
+            "heating_design_capacity_method": "HeatingDesignCapacity"
+        },
+        "Mid East Baseboard": {
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "efficiency": 0.95,
+            "heating_design_capacity": "Autosize",
+            "heating_design_capacity_method": "HeatingDesignCapacity"
+        },
+        "Mid West Baseboard": {
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "efficiency": 0.95,
+            "heating_design_capacity": "Autosize",
+            "heating_design_capacity_method": "HeatingDesignCapacity"
+        },
+        "Top Center Baseboard": {
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "efficiency": 0.95,
+            "heating_design_capacity": "Autosize",
+            "heating_design_capacity_method": "HeatingDesignCapacity"
+        },
+        "Top East Baseboard": {
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "efficiency": 0.95,
+            "heating_design_capacity": "Autosize",
+            "heating_design_capacity_method": "HeatingDesignCapacity"
+        },
+        "Top West Baseboard": {
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "efficiency": 0.95,
+            "heating_design_capacity": "Autosize",
+            "heating_design_capacity_method": "HeatingDesignCapacity"
+        }
+    },
+    "ZoneHVAC:EquipmentConnections": {
+        "ZoneHVAC:EquipmentConnections 1": {
+            "zone_air_exhaust_node_or_nodelist_name": "Gnd West AC Inlet Node",
+            "zone_air_inlet_node_or_nodelist_name": "Gnd West AC Outlet Node",
+            "zone_air_node_name": "Gnd West Air Node",
+            "zone_conditioning_equipment_list_name": "Gnd West Equipment",
+            "zone_name": "Gnd West Zone",
+            "zone_return_air_node_or_nodelist_name": "Gnd West Return Node"
+        },
+        "ZoneHVAC:EquipmentConnections 2": {
+            "zone_air_exhaust_node_or_nodelist_name": "Gnd Center AC Inlet Node",
+            "zone_air_inlet_node_or_nodelist_name": "Gnd Center AC Outlet Node",
+            "zone_air_node_name": "Gnd Center Air Node",
+            "zone_conditioning_equipment_list_name": "Gnd Center Equipment",
+            "zone_name": "Gnd Center Zone",
+            "zone_return_air_node_or_nodelist_name": "Gnd Center Return Node"
+        },
+        "ZoneHVAC:EquipmentConnections 3": {
+            "zone_air_exhaust_node_or_nodelist_name": "Gnd East AC Inlet Node",
+            "zone_air_inlet_node_or_nodelist_name": "Gnd East AC Outlet Node",
+            "zone_air_node_name": "Gnd East Air Node",
+            "zone_conditioning_equipment_list_name": "Gnd East Equipment",
+            "zone_name": "Gnd East Zone",
+            "zone_return_air_node_or_nodelist_name": "Gnd East Return Node"
+        },
+        "ZoneHVAC:EquipmentConnections 4": {
+            "zone_air_exhaust_node_or_nodelist_name": "Mid West AC Inlet Node",
+            "zone_air_inlet_node_or_nodelist_name": "Mid West AC Outlet Node",
+            "zone_air_node_name": "Mid West Air Node",
+            "zone_conditioning_equipment_list_name": "Mid West Equipment",
+            "zone_name": "Mid West Zone",
+            "zone_return_air_node_or_nodelist_name": "Mid West Return Node"
+        },
+        "ZoneHVAC:EquipmentConnections 5": {
+            "zone_air_exhaust_node_or_nodelist_name": "Mid Center AC Inlet Node",
+            "zone_air_inlet_node_or_nodelist_name": "Mid Center AC Outlet Node",
+            "zone_air_node_name": "Mid Center Air Node",
+            "zone_conditioning_equipment_list_name": "Mid Center Equipment",
+            "zone_name": "Mid Center Zone",
+            "zone_return_air_node_or_nodelist_name": "Mid Center Return Node"
+        },
+        "ZoneHVAC:EquipmentConnections 6": {
+            "zone_air_exhaust_node_or_nodelist_name": "Mid East AC Inlet Node",
+            "zone_air_inlet_node_or_nodelist_name": "Mid East AC Outlet Node",
+            "zone_air_node_name": "Mid East Air Node",
+            "zone_conditioning_equipment_list_name": "Mid East Equipment",
+            "zone_name": "Mid East Zone",
+            "zone_return_air_node_or_nodelist_name": "Mid East Return Node"
+        },
+        "ZoneHVAC:EquipmentConnections 7": {
+            "zone_air_exhaust_node_or_nodelist_name": "Top West AC Inlet Node",
+            "zone_air_inlet_node_or_nodelist_name": "Top West AC Outlet Node",
+            "zone_air_node_name": "Top West Air Node",
+            "zone_conditioning_equipment_list_name": "Top West Equipment",
+            "zone_name": "Top West Zone",
+            "zone_return_air_node_or_nodelist_name": "Top West Return Node"
+        },
+        "ZoneHVAC:EquipmentConnections 8": {
+            "zone_air_exhaust_node_or_nodelist_name": "Top Center AC Inlet Node",
+            "zone_air_inlet_node_or_nodelist_name": "Top Center AC Outlet Node",
+            "zone_air_node_name": "Top Center Air Node",
+            "zone_conditioning_equipment_list_name": "Top Center Equipment",
+            "zone_name": "Top Center Zone",
+            "zone_return_air_node_or_nodelist_name": "Top Center Return Node"
+        },
+        "ZoneHVAC:EquipmentConnections 9": {
+            "zone_air_exhaust_node_or_nodelist_name": "Top East AC Inlet Node",
+            "zone_air_inlet_node_or_nodelist_name": "Top East AC Outlet Node",
+            "zone_air_node_name": "Top East Air Node",
+            "zone_conditioning_equipment_list_name": "Top East Equipment",
+            "zone_name": "Top East Zone",
+            "zone_return_air_node_or_nodelist_name": "Top East Return Node"
+        }
+    },
+    "ZoneHVAC:EquipmentList": {
+        "Gnd Center Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 2,
+                    "zone_equipment_name": "Gnd Center Window AC",
+                    "zone_equipment_object_type": "ZoneHVAC:WindowAirConditioner"
+                },
+                {
+                    "zone_equipment_cooling_sequence": 2,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Gnd Center Baseboard",
+                    "zone_equipment_object_type": "ZoneHVAC:Baseboard:Convective:Electric"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "Gnd East Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 2,
+                    "zone_equipment_name": "Gnd East Window AC",
+                    "zone_equipment_object_type": "ZoneHVAC:WindowAirConditioner"
+                },
+                {
+                    "zone_equipment_cooling_sequence": 2,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Gnd East Baseboard",
+                    "zone_equipment_object_type": "ZoneHVAC:Baseboard:Convective:Electric"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "Gnd West Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 2,
+                    "zone_equipment_name": "Gnd West Window AC",
+                    "zone_equipment_object_type": "ZoneHVAC:WindowAirConditioner"
+                },
+                {
+                    "zone_equipment_cooling_sequence": 2,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Gnd West Baseboard",
+                    "zone_equipment_object_type": "ZoneHVAC:Baseboard:Convective:Electric"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "Mid Center Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 2,
+                    "zone_equipment_name": "Mid Center Window AC",
+                    "zone_equipment_object_type": "ZoneHVAC:WindowAirConditioner"
+                },
+                {
+                    "zone_equipment_cooling_sequence": 2,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Mid Center Baseboard",
+                    "zone_equipment_object_type": "ZoneHVAC:Baseboard:Convective:Electric"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "Mid East Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 2,
+                    "zone_equipment_name": "Mid East Window AC",
+                    "zone_equipment_object_type": "ZoneHVAC:WindowAirConditioner"
+                },
+                {
+                    "zone_equipment_cooling_sequence": 2,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Mid East Baseboard",
+                    "zone_equipment_object_type": "ZoneHVAC:Baseboard:Convective:Electric"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "Mid West Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 2,
+                    "zone_equipment_name": "Mid West Window AC",
+                    "zone_equipment_object_type": "ZoneHVAC:WindowAirConditioner"
+                },
+                {
+                    "zone_equipment_cooling_sequence": 2,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Mid West Baseboard",
+                    "zone_equipment_object_type": "ZoneHVAC:Baseboard:Convective:Electric"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "Top Center Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 2,
+                    "zone_equipment_name": "Top Center Window AC",
+                    "zone_equipment_object_type": "ZoneHVAC:WindowAirConditioner"
+                },
+                {
+                    "zone_equipment_cooling_sequence": 2,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Top Center Baseboard",
+                    "zone_equipment_object_type": "ZoneHVAC:Baseboard:Convective:Electric"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "Top East Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 2,
+                    "zone_equipment_name": "Top East Window AC",
+                    "zone_equipment_object_type": "ZoneHVAC:WindowAirConditioner"
+                },
+                {
+                    "zone_equipment_cooling_sequence": 2,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Top East Baseboard",
+                    "zone_equipment_object_type": "ZoneHVAC:Baseboard:Convective:Electric"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "Top West Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 2,
+                    "zone_equipment_name": "Top West Window AC",
+                    "zone_equipment_object_type": "ZoneHVAC:WindowAirConditioner"
+                },
+                {
+                    "zone_equipment_cooling_sequence": 2,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Top West Baseboard",
+                    "zone_equipment_object_type": "ZoneHVAC:Baseboard:Convective:Electric"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        }
+    },
+    "ZoneHVAC:WindowAirConditioner": {
+        "Gnd Center Window AC": {
+            "air_inlet_node_name": "Gnd Center AC Inlet Node",
+            "air_outlet_node_name": "Gnd Center AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "cooling_coil_object_type": "Coil:Cooling:DX:SingleSpeed",
+            "cooling_convergence_tolerance": 0.001,
+            "dx_cooling_coil_name": "Gnd Center OA DX Coil",
+            "fan_placement": "BlowThrough",
+            "maximum_outdoor_air_flow_rate": "Autosize",
+            "maximum_supply_air_flow_rate": "Autosize",
+            "outdoor_air_mixer_name": "Gnd Center OA Mixer",
+            "outdoor_air_mixer_object_type": "OutdoorAir:Mixer",
+            "supply_air_fan_name": "Gnd Center OA Fan",
+            "supply_air_fan_object_type": "Fan:OnOff",
+            "supply_air_fan_operating_mode_schedule_name": "CyclingFanSch"
+        },
+        "Gnd East Window AC": {
+            "air_inlet_node_name": "Gnd East AC Inlet Node",
+            "air_outlet_node_name": "Gnd East AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "cooling_coil_object_type": "Coil:Cooling:DX:SingleSpeed",
+            "cooling_convergence_tolerance": 0.001,
+            "dx_cooling_coil_name": "Gnd East OA DX Coil",
+            "fan_placement": "BlowThrough",
+            "maximum_outdoor_air_flow_rate": "Autosize",
+            "maximum_supply_air_flow_rate": "Autosize",
+            "outdoor_air_mixer_name": "Gnd East OA Mixer",
+            "outdoor_air_mixer_object_type": "OutdoorAir:Mixer",
+            "supply_air_fan_name": "Gnd East OA Fan",
+            "supply_air_fan_object_type": "Fan:OnOff",
+            "supply_air_fan_operating_mode_schedule_name": "CyclingFanSch"
+        },
+        "Gnd West Window AC": {
+            "air_inlet_node_name": "Gnd West AC Inlet Node",
+            "air_outlet_node_name": "Gnd West AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "cooling_coil_object_type": "Coil:Cooling:DX:SingleSpeed",
+            "cooling_convergence_tolerance": 0.001,
+            "dx_cooling_coil_name": "Gnd West OA DX Coil",
+            "fan_placement": "BlowThrough",
+            "maximum_outdoor_air_flow_rate": "Autosize",
+            "maximum_supply_air_flow_rate": "Autosize",
+            "outdoor_air_mixer_name": "Gnd West OA Mixer",
+            "outdoor_air_mixer_object_type": "OutdoorAir:Mixer",
+            "supply_air_fan_name": "Gnd West OA Fan",
+            "supply_air_fan_object_type": "Fan:OnOff",
+            "supply_air_fan_operating_mode_schedule_name": "CyclingFanSch"
+        },
+        "Mid Center Window AC": {
+            "air_inlet_node_name": "Mid Center AC Inlet Node",
+            "air_outlet_node_name": "Mid Center AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "cooling_coil_object_type": "Coil:Cooling:DX:SingleSpeed",
+            "cooling_convergence_tolerance": 0.001,
+            "dx_cooling_coil_name": "Mid Center OA DX Coil",
+            "fan_placement": "BlowThrough",
+            "maximum_outdoor_air_flow_rate": "Autosize",
+            "maximum_supply_air_flow_rate": "Autosize",
+            "outdoor_air_mixer_name": "Mid Center OA Mixer",
+            "outdoor_air_mixer_object_type": "OutdoorAir:Mixer",
+            "supply_air_fan_name": "Mid Center OA Fan",
+            "supply_air_fan_object_type": "Fan:OnOff",
+            "supply_air_fan_operating_mode_schedule_name": "CyclingFanSch"
+        },
+        "Mid East Window AC": {
+            "air_inlet_node_name": "Mid East AC Inlet Node",
+            "air_outlet_node_name": "Mid East AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "cooling_coil_object_type": "Coil:Cooling:DX:SingleSpeed",
+            "cooling_convergence_tolerance": 0.001,
+            "dx_cooling_coil_name": "Mid East OA DX Coil",
+            "fan_placement": "BlowThrough",
+            "maximum_outdoor_air_flow_rate": "Autosize",
+            "maximum_supply_air_flow_rate": "Autosize",
+            "outdoor_air_mixer_name": "Mid East OA Mixer",
+            "outdoor_air_mixer_object_type": "OutdoorAir:Mixer",
+            "supply_air_fan_name": "Mid East OA Fan",
+            "supply_air_fan_object_type": "Fan:OnOff",
+            "supply_air_fan_operating_mode_schedule_name": "CyclingFanSch"
+        },
+        "Mid West Window AC": {
+            "air_inlet_node_name": "Mid West AC Inlet Node",
+            "air_outlet_node_name": "Mid West AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "cooling_coil_object_type": "Coil:Cooling:DX:SingleSpeed",
+            "cooling_convergence_tolerance": 0.001,
+            "dx_cooling_coil_name": "Mid West OA DX Coil",
+            "fan_placement": "BlowThrough",
+            "maximum_outdoor_air_flow_rate": "Autosize",
+            "maximum_supply_air_flow_rate": "Autosize",
+            "outdoor_air_mixer_name": "Mid West OA Mixer",
+            "outdoor_air_mixer_object_type": "OutdoorAir:Mixer",
+            "supply_air_fan_name": "Mid West OA Fan",
+            "supply_air_fan_object_type": "Fan:OnOff",
+            "supply_air_fan_operating_mode_schedule_name": "CyclingFanSch"
+        },
+        "Top Center Window AC": {
+            "air_inlet_node_name": "Top Center AC Inlet Node",
+            "air_outlet_node_name": "Top Center AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "cooling_coil_object_type": "Coil:Cooling:DX:SingleSpeed",
+            "cooling_convergence_tolerance": 0.001,
+            "dx_cooling_coil_name": "Top Center OA DX Coil",
+            "fan_placement": "BlowThrough",
+            "maximum_outdoor_air_flow_rate": "Autosize",
+            "maximum_supply_air_flow_rate": "Autosize",
+            "outdoor_air_mixer_name": "Top Center OA Mixer",
+            "outdoor_air_mixer_object_type": "OutdoorAir:Mixer",
+            "supply_air_fan_name": "Top Center OA Fan",
+            "supply_air_fan_object_type": "Fan:OnOff",
+            "supply_air_fan_operating_mode_schedule_name": "CyclingFanSch"
+        },
+        "Top East Window AC": {
+            "air_inlet_node_name": "Top East AC Inlet Node",
+            "air_outlet_node_name": "Top East AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "cooling_coil_object_type": "Coil:Cooling:DX:SingleSpeed",
+            "cooling_convergence_tolerance": 0.001,
+            "dx_cooling_coil_name": "Top East OA DX Coil",
+            "fan_placement": "BlowThrough",
+            "maximum_outdoor_air_flow_rate": "Autosize",
+            "maximum_supply_air_flow_rate": "Autosize",
+            "outdoor_air_mixer_name": "Top East OA Mixer",
+            "outdoor_air_mixer_object_type": "OutdoorAir:Mixer",
+            "supply_air_fan_name": "Top East OA Fan",
+            "supply_air_fan_object_type": "Fan:OnOff",
+            "supply_air_fan_operating_mode_schedule_name": "CyclingFanSch"
+        },
+        "Top West Window AC": {
+            "air_inlet_node_name": "Top West AC Inlet Node",
+            "air_outlet_node_name": "Top West AC Outlet Node",
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "cooling_coil_object_type": "Coil:Cooling:DX:SingleSpeed",
+            "cooling_convergence_tolerance": 0.001,
+            "dx_cooling_coil_name": "Top West OA DX Coil",
+            "fan_placement": "BlowThrough",
+            "maximum_outdoor_air_flow_rate": "Autosize",
+            "maximum_supply_air_flow_rate": "Autosize",
+            "outdoor_air_mixer_name": "Top West OA Mixer",
+            "outdoor_air_mixer_object_type": "OutdoorAir:Mixer",
+            "supply_air_fan_name": "Top West OA Fan",
+            "supply_air_fan_object_type": "Fan:OnOff",
+            "supply_air_fan_operating_mode_schedule_name": "CyclingFanSch"
+        }
+    },
+    "ZoneList": {
+        "AllZones": {
+            "zones": [
+                {
+                    "zone_name": "Gnd West Zone"
+                },
+                {
+                    "zone_name": "Gnd Center Zone"
+                },
+                {
+                    "zone_name": "Gnd East Zone"
+                },
+                {
+                    "zone_name": "Mid West Zone"
+                },
+                {
+                    "zone_name": "Mid Center Zone"
+                },
+                {
+                    "zone_name": "Mid East Zone"
+                },
+                {
+                    "zone_name": "Top West Zone"
+                },
+                {
+                    "zone_name": "Top Center Zone"
+                },
+                {
+                    "zone_name": "Top East Zone"
+                }
+            ]
+        },
+        "Gnd Floor List": {
+            "zones": [
+                {
+                    "zone_name": "Gnd West Zone"
+                },
+                {
+                    "zone_name": "Gnd Center Zone"
+                },
+                {
+                    "zone_name": "Gnd East Zone"
+                }
+            ]
+        },
+        "Mid Floor List": {
+            "zones": [
+                {
+                    "zone_name": "Mid West Zone"
+                },
+                {
+                    "zone_name": "Mid Center Zone"
+                },
+                {
+                    "zone_name": "Mid East Zone"
+                }
+            ]
+        },
+        "Top Floor List": {
+            "zones": [
+                {
+                    "zone_name": "Top West Zone"
+                },
+                {
+                    "zone_name": "Top Center Zone"
+                },
+                {
+                    "zone_name": "Top East Zone"
+                }
+            ]
+        }
+    }
+}

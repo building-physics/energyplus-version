@@ -1,0 +1,3877 @@
+{
+    "Building": {
+        "NONE": {
+            "loads_convergence_tolerance_value": 0.039999999,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.4,
+            "terrain": "Suburbs"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "Zn001:Flr001": {
+            "construction_name": "FLOOR SLAB 8 IN",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn001:Flr001",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "West Zone"
+        },
+        "Zn001:Roof001": {
+            "construction_name": "ROOF34",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "West Zone"
+        },
+        "Zn001:Wall001": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "West Zone"
+        },
+        "Zn001:Wall002": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "West Zone"
+        },
+        "Zn001:Wall003": {
+            "construction_name": "PARTITION06",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn003:Wall004",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "West Zone"
+        },
+        "Zn001:Wall004": {
+            "construction_name": "PARTITION06",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn002:Wall004",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "West Zone"
+        },
+        "Zn002:Flr001": {
+            "construction_name": "FLOOR SLAB 8 IN",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn002:Flr001",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "EAST ZONE"
+        },
+        "Zn002:Roof001": {
+            "construction_name": "ROOF34",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "EAST ZONE"
+        },
+        "Zn002:Wall001": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 9.144,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 9.144,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "EAST ZONE"
+        },
+        "Zn002:Wall002": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "EAST ZONE"
+        },
+        "Zn002:Wall003": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "EAST ZONE"
+        },
+        "Zn002:Wall004": {
+            "construction_name": "PARTITION06",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn001:Wall004",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "EAST ZONE"
+        },
+        "Zn002:Wall005": {
+            "construction_name": "PARTITION06",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn003:Wall005",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 9.144,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 9.144,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "EAST ZONE"
+        },
+        "Zn003:Flr001": {
+            "construction_name": "FLOOR SLAB 8 IN",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn003:Flr001",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 9.144,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 9.144,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "NORTH ZONE"
+        },
+        "Zn003:Roof001": {
+            "construction_name": "ROOF34",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 9.144,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 9.144,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "NORTH ZONE"
+        },
+        "Zn003:Wall001": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "NORTH ZONE"
+        },
+        "Zn003:Wall002": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 9.144,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 9.144,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "NORTH ZONE"
+        },
+        "Zn003:Wall003": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 9.144,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 9.144,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 9.144,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 9.144,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "NORTH ZONE"
+        },
+        "Zn003:Wall004": {
+            "construction_name": "PARTITION06",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn001:Wall003",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "NORTH ZONE"
+        },
+        "Zn003:Wall005": {
+            "construction_name": "PARTITION06",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn002:Wall005",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 9.144,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 9.144,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "NORTH ZONE"
+        }
+    },
+    "Construction": {
+        "EXTWALL80": {
+            "layer_2": "C4 - 4 IN COMMON BRICK",
+            "layer_3": "E1 - 3 / 4 IN PLASTER OR GYP BOARD",
+            "outside_layer": "A1 - 1 IN STUCCO"
+        },
+        "FLOOR SLAB 8 IN": {
+            "outside_layer": "C10 - 8 IN HW CONCRETE"
+        },
+        "PARTITION06": {
+            "layer_2": "C6 - 8 IN CLAY TILE",
+            "layer_3": "E1 - 3 / 4 IN PLASTER OR GYP BOARD",
+            "outside_layer": "E1 - 3 / 4 IN PLASTER OR GYP BOARD"
+        },
+        "ROOF34": {
+            "layer_2": "E3 - 3 / 8 IN FELT AND MEMBRANE",
+            "layer_3": "B5 - 1 IN DENSE INSULATION",
+            "layer_4": "C12 - 2 IN HW CONCRETE",
+            "outside_layer": "E2 - 1 / 2 IN SLAG OR STONE"
+        },
+        "WIN-CON-SINGLEPANE": {
+            "outside_layer": "SINGLEPANE"
+        }
+    },
+    "ElectricEquipment": {
+        "EAST ZONE ElecEq 1": {
+            "design_level": 1464.375,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0,
+            "fraction_lost": 0,
+            "fraction_radiant": 0.3,
+            "schedule_name": "INTERMITTENT",
+            "zone_or_zonelist_name": "EAST ZONE"
+        },
+        "NORTH ZONE ElecEq 1": {
+            "design_level": 2928.751,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0,
+            "fraction_lost": 0,
+            "fraction_radiant": 0.3,
+            "schedule_name": "INTERMITTENT",
+            "zone_or_zonelist_name": "NORTH ZONE"
+        },
+        "West Zone ElecEq 1": {
+            "design_level": 2928.751,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0,
+            "fraction_lost": 0,
+            "fraction_radiant": 0.3,
+            "schedule_name": "INTERMITTENT",
+            "zone_or_zonelist_name": "West Zone"
+        }
+    },
+    "EnvironmentalImpactFactors": {
+        "EnvironmentalImpactFactors 1": {
+            "district_cooling_cop": 3.0,
+            "district_heating_efficiency": 0.3,
+            "steam_conversion_efficiency": 0.25,
+            "total_carbon_equivalent_emission_factor_from_ch4": 6.2727,
+            "total_carbon_equivalent_emission_factor_from_co2": 0.2727,
+            "total_carbon_equivalent_emission_factor_from_n2o": 80.7272
+        }
+    },
+    "FenestrationSurface:Detailed": {
+        "Zn001:Wall001:Win001": {
+            "building_surface_name": "Zn001:Wall001",
+            "construction_name": "WIN-CON-SINGLEPANE",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 0.548,
+            "vertex_1_y_coordinate": 0,
+            "vertex_1_z_coordinate": 2.5,
+            "vertex_2_x_coordinate": 0.548,
+            "vertex_2_y_coordinate": 0,
+            "vertex_2_z_coordinate": 0.5,
+            "vertex_3_x_coordinate": 5.548,
+            "vertex_3_y_coordinate": 0,
+            "vertex_3_z_coordinate": 0.5,
+            "vertex_4_x_coordinate": 5.548,
+            "vertex_4_y_coordinate": 0,
+            "vertex_4_z_coordinate": 2.5,
+            "view_factor_to_ground": 0.5
+        }
+    },
+    "FuelFactors": {
+        "FuelFactors 1": {
+            "ch4_emission_factor": 0.000962826,
+            "co2_emission_factor": 50.23439,
+            "co_emission_factor": 0.0351641,
+            "existing_fuel_resource_name": "NaturalGas",
+            "hg_emission_factor": 1.08841e-07,
+            "n2o_emission_factor": 0.000920964,
+            "nh3_emission_factor": 0,
+            "nmvoc_emission_factor": 0.00230241,
+            "nox_emission_factor": 0.041862,
+            "nuclear_high_level_emission_factor": 0,
+            "nuclear_low_level_emission_factor": 0,
+            "pb_emission_factor": 2.0931e-07,
+            "pm2_5_emission_factor": 0.000795378,
+            "pm10_emission_factor": 0.00238613,
+            "pm_emission_factor": 0.00318151,
+            "so2_emission_factor": 0.000251172,
+            "source_energy_factor": 1.0,
+            "units_of_measure": "m3",
+            "water_emission_factor": 0
+        },
+        "FuelFactors 2": {
+            "ch4_emission_factor": 0.001398578,
+            "co2_emission_factor": 168.33317,
+            "co_emission_factor": 0.0420616,
+            "existing_fuel_resource_name": "Electricity",
+            "hg_emission_factor": 3.36414e-06,
+            "n2o_emission_factor": 0.00241916,
+            "nh3_emission_factor": 0.00110837,
+            "nmvoc_emission_factor": 0.00372332,
+            "nox_emission_factor": 0.410753,
+            "nuclear_high_level_emission_factor": 0,
+            "nuclear_low_level_emission_factor": 0,
+            "pb_emission_factor": 0,
+            "pm2_5_emission_factor": 0.0115377,
+            "pm10_emission_factor": 0.018045,
+            "pm_emission_factor": 0.0295827,
+            "so2_emission_factor": 0.865731,
+            "source_energy_factor": 2.253,
+            "units_of_measure": "kg",
+            "water_emission_factor": 2.10074
+        }
+    },
+    "GasEquipment": {
+        "West Zone GasEq 1": {
+            "design_level": 1000,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0.0,
+            "fraction_lost": 0.0,
+            "fraction_radiant": 0.0,
+            "schedule_name": "INTERMITTENT",
+            "zone_or_zonelist_name": "West Zone"
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "World",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "HeatBalanceAlgorithm": {
+        "HeatBalanceAlgorithm 1": {
+            "algorithm": "ConductionTransferFunction"
+        }
+    },
+    "Lights": {
+        "EAST ZONE Lights 1": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.2,
+            "fraction_replaceable": 0,
+            "fraction_visible": 0.2,
+            "lighting_level": 1464.375,
+            "return_air_fraction": 0,
+            "schedule_name": "OFFICE LIGHTING",
+            "zone_or_zonelist_name": "EAST ZONE"
+        },
+        "NORTH ZONE Lights 1": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.2,
+            "fraction_replaceable": 0,
+            "fraction_visible": 0.2,
+            "lighting_level": 878.6252,
+            "return_air_fraction": 0,
+            "schedule_name": "OFFICE LIGHTING",
+            "zone_or_zonelist_name": "NORTH ZONE"
+        }
+    },
+    "Material": {
+        "A1 - 1 IN STUCCO": {
+            "conductivity": 0.6918309,
+            "density": 1858.142,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.025389841,
+            "visible_absorptance": 0.92
+        },
+        "B5 - 1 IN DENSE INSULATION": {
+            "conductivity": 0.04323943,
+            "density": 91.30524,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.025389841,
+            "visible_absorptance": 0.5
+        },
+        "C4 - 4 IN COMMON BRICK": {
+            "conductivity": 0.7264224,
+            "density": 1922.216,
+            "roughness": "Rough",
+            "solar_absorptance": 0.76,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1014984,
+            "visible_absorptance": 0.76
+        },
+        "C6 - 8 IN CLAY TILE": {
+            "conductivity": 0.5707605,
+            "density": 1121.292,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.82,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.2033016,
+            "visible_absorptance": 0.82
+        },
+        "C10 - 8 IN HW CONCRETE": {
+            "conductivity": 1.729577,
+            "density": 2242.585,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.2033016,
+            "visible_absorptance": 0.65
+        },
+        "C12 - 2 IN HW CONCRETE": {
+            "conductivity": 1.729577,
+            "density": 2242.585,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.050901599,
+            "visible_absorptance": 0.65
+        },
+        "E1 - 3 / 4 IN PLASTER OR GYP BOARD": {
+            "conductivity": 0.7264224,
+            "density": 1601.846,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.01905,
+            "visible_absorptance": 0.92
+        },
+        "E2 - 1 / 2 IN SLAG OR STONE": {
+            "conductivity": 1.435549,
+            "density": 881.0155,
+            "roughness": "Rough",
+            "solar_absorptance": 0.55,
+            "specific_heat": 1673.6,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.012710161,
+            "visible_absorptance": 0.55
+        },
+        "E3 - 3 / 8 IN FELT AND MEMBRANE": {
+            "conductivity": 0.1902535,
+            "density": 1121.292,
+            "roughness": "Rough",
+            "solar_absorptance": 0.75,
+            "specific_heat": 1673.6,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0095402403,
+            "visible_absorptance": 0.75
+        }
+    },
+    "NodeList": {
+        "Zone1Inlets": {
+            "nodes": [
+                {
+                    "node_name": "NODE_1"
+                }
+            ]
+        },
+        "Zone2Inlets": {
+            "nodes": [
+                {
+                    "node_name": "NODE_2"
+                }
+            ]
+        },
+        "Zone3Inlets": {
+            "nodes": [
+                {
+                    "node_name": "NODE_3"
+                }
+            ]
+        }
+    },
+    "Output:Constructions": {
+        "Output:Constructions 1": {
+            "details_type_1": "Constructions"
+        }
+    },
+    "Output:EnvironmentalImpactFactors": {
+        "Output:EnvironmentalImpactFactors 1": {
+            "reporting_frequency": "Monthly"
+        }
+    },
+    "Output:Meter": {
+        "Output:Meter 1": {
+            "key_name": "DistrictCooling:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter 2": {
+            "key_name": "DistrictCooling:Facility",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter 3": {
+            "key_name": "DistrictHeating:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter 4": {
+            "key_name": "DistrictHeating:Facility",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter 5": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter 6": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter 7": {
+            "key_name": "InteriorLights:Electricity",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter 8": {
+            "key_name": "InteriorLights:Electricity:Zone:North Zone",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter 9": {
+            "key_name": "InteriorLights:Electricity:Zone:East Zone",
+            "reporting_frequency": "Monthly"
+        }
+    },
+    "Output:Meter:MeterFileOnly": {
+        "Output:Meter:MeterFileOnly 1": {
+            "key_name": "Electricity:Building",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 2": {
+            "key_name": "NaturalGas:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 3": {
+            "key_name": "NaturalGas:Building",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 4": {
+            "key_name": "Electricity:Building",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 5": {
+            "key_name": "InteriorLights:Electricity",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 6": {
+            "key_name": "NaturalGas:Facility",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 7": {
+            "key_name": "NaturalGas:Building",
+            "reporting_frequency": "RunPeriod"
+        }
+    },
+    "Output:Surfaces:Drawing": {
+        "Output:Surfaces:Drawing 1": {
+            "report_type": "DXF"
+        }
+    },
+    "Output:Table:Annual": {
+        "Cooling Space Gain Max Min Bin Annual Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Air System Sensible Cooling Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Air System Sensible Cooling Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Minimum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Air System Sensible Cooling Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HourInTenBinsMinToMax",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Air System Sensible Cooling Rate"
+                }
+            ]
+        },
+        "Daytime Energy Consumption - Electricity & Natural Gas Annual Report": {
+            "schedule_name": "INTERMITTENT",
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Electricity:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Electricity:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "NaturalGas:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "NaturalGas:Facility"
+                }
+            ]
+        },
+        "Daytime Outdoor Temperature Min Max Bin Annual Report": {
+            "schedule_name": "INTERMITTENT",
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Minimum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HourInTenBinsMinToMax",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                }
+            ]
+        },
+        "Energy Consumption - Electricity & Natural Gas Annual Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Electricity:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Electricity:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "NaturalGas:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "NaturalGas:Facility"
+                }
+            ]
+        },
+        "Outdoor Temperature Max Min Bin Annual Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Minimum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HourInTenBinsMinToMax",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                }
+            ]
+        },
+        "Outdoor Temperature Min Zero Bin Annual Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Minimum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HourInTenBinsMinToZero",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                }
+            ]
+        },
+        "Outdoor Temperature Zero Max Bin Annual Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Minimum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HourInTenBinsZeroToMax",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                }
+            ]
+        },
+        "Peak Space Gains Annual Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone People Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Lights Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Electric Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Gas Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Hot Water Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Steam Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Other Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Infiltration Sensible Heat Gain Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Infiltration Sensible Heat Loss Energy"
+                }
+            ]
+        },
+        "Roof Annual Report": {
+            "filter": "roof",
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Surface Inside Face Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Surface Outside Face Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Surface Inside Face Convection Heat Gain Rate per Area"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Surface Outside Face Convection Heat Gain Rate per Area"
+                }
+            ]
+        },
+        "Space Gain Components at Cooling Peak Annual Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Air System Sensible Cooling Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone People Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Lights Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Electric Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Gas Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Hot Water Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Steam Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Other Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Infiltration Sensible Heat Gain Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Infiltration Sensible Heat Loss Energy"
+                }
+            ]
+        },
+        "Space Gains Annual Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone People Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Lights Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Electric Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Gas Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Hot Water Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Steam Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Other Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Infiltration Sensible Heat Gain Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Infiltration Sensible Heat Loss Energy"
+                }
+            ]
+        },
+        "Surface Annual Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Surface Inside Face Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Surface Outside Face Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Surface Inside Face Convection Heat Gain Rate per Area"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Surface Outside Face Convection Heat Gain Rate per Area"
+                }
+            ]
+        },
+        "Window Annual Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Surface Window Transmitted Solar Radiation Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Surface Window Transmitted Beam Solar Radiation Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Surface Window Transmitted Diffuse Solar Radiation Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Surface Window Heat Gain Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Surface Window Heat Loss Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Surface Window Inside Face Glazing Condensation Status"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Surface Shading Device Is On Time Fraction"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Surface Storm Window On Off Status"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Site Outdoor Air Wetbulb Temperature"
+                }
+            ]
+        },
+        "Zone Electric Annual Summary": {
+            "schedule_name": "INTERMITTENT",
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Lights Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Lights Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Electric Equipment Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_or_ems_variable_or_field_name": "Zone Electric Equipment Electricity Energy"
+                }
+            ]
+        }
+    },
+    "Output:Table:Monthly": {
+        "Average Outdoor Conditions": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Site Outdoor Air Wetbulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Site Outdoor Air Dewpoint Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Site Wind Speed"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Site Sky Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Site Diffuse Solar Radiation Rate per Area"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Site Direct Solar Radiation Rate per Area"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Raining"
+                }
+            ]
+        },
+        "Boiler Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Boiler Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Boiler NaturalGas Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Boiler Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Boiler Heating Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Boiler NaturalGas Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Boiler Inlet Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Boiler Outlet Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Boiler Mass Flow Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Boiler Ancillary Electricity Rate"
+                }
+            ]
+        },
+        "Chiller Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Chiller Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Chiller Electricity Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Chiller Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Chiller Evaporator Cooling Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Chiller Condenser Heat Transfer Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Chiller COP"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Minimum",
+                    "variable_or_meter_name": "Chiller COP"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Chiller COP"
+                }
+            ]
+        },
+        "Coil Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Heating Coil Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Heating Coil Heating Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling Coil Total Cooling Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling Coil Sensible Cooling Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cooling Coil Total Cooling Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Cooling Coil Sensible Cooling Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling Coil Wetted Area Fraction"
+                }
+            ]
+        },
+        "Comfort Report - Simple 55": {
+            "digits_after_decimal": 2,
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Zone Thermal Comfort ASHRAE 55 Simple Model Summer Clothes Not Comfortable Time"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Zone Mean Air Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Zone Thermal Comfort ASHRAE 55 Simple Model Winter Clothes Not Comfortable Time"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Zone Mean Air Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Zone Thermal Comfort ASHRAE 55 Simple Model Summer or Winter Clothes Not Comfortable Time"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Zone Mean Air Temperature"
+                }
+            ]
+        },
+        "Cond Loop Demand Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Plant Supply Side Cooling Demand Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Plant Supply Side Cooling Demand Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Plant Supply Side Inlet Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Plant Supply Side Outlet Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Plant Supply Side Heating Demand Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Plant Supply Side Heating Demand Rate"
+                }
+            ]
+        },
+        "DX Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling Coil Total Cooling Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling Coil Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Cooling Coil Total Cooling Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling Coil Sensible Cooling Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling Coil Latent Cooling Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling Coil Crankcase Heater Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cooling Coil Runtime Fraction"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Minimum",
+                    "variable_or_meter_name": "Cooling Coil Runtime Fraction"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cooling Coil Total Cooling Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cooling Coil Sensible Cooling Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cooling Coil Latent Cooling Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cooling Coil Electricity Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cooling Coil Crankcase Heater Electricity Rate"
+                }
+            ]
+        },
+        "Daylighting Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Site Exterior Beam Normal Illuminance"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Daylighting Lighting Power Multiplier"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "MinimumDuringHoursShown",
+                    "variable_or_meter_name": "Daylighting Lighting Power Multiplier"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Daylighting Reference Point 1 Illuminance"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Daylighting Reference Point 1 Glare Index"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Daylighting Reference Point 2 Illuminance"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Daylighting Reference Point 2 Glare Index"
+                }
+            ]
+        },
+        "Electric Components of Peak Demand": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Electricity:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "InteriorLights:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "InteriorEquipment:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "ExteriorLights:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "ExteriorEquipment:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Fans:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Pumps:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Heating:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Cooling:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "HeatRejection:Electricity"
+                }
+            ]
+        },
+        "End-Use Energy Consumption - Coal": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "ExteriorEquipment:Coal"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Heating:Coal"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "WaterSystems:Coal"
+                }
+            ]
+        },
+        "End-Use Energy Consumption - Diesel": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "ExteriorEquipment:Diesel"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling:Diesel"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Heating:Diesel"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "WaterSystems:Diesel"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cogeneration:Diesel"
+                }
+            ]
+        },
+        "End-Use Energy Consumption - Electricity": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "InteriorLights:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "ExteriorLights:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "InteriorEquipment:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "ExteriorEquipment:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Fans:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Pumps:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Heating:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "HeatRejection:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Humidifier:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "HeatRecovery:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "WaterSystems:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cogeneration:Electricity"
+                }
+            ]
+        },
+        "End-Use Energy Consumption - Fuel Oil": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "ExteriorEquipment:FuelOilNo1"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling:FuelOilNo1"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Heating:FuelOilNo1"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "WaterSystems:FuelOilNo1"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cogeneration:FuelOilNo1"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "ExteriorEquipment:FuelOilNo2"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling:FuelOilNo2"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Heating:FuelOilNo2"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "WaterSystems:FuelOilNo2"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cogeneration:FuelOilNo2"
+                }
+            ]
+        },
+        "End-Use Energy Consumption - Gasoline": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "ExteriorEquipment:Gasoline"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling:Gasoline"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Heating:Gasoline"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "WaterSystems:Gasoline"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cogeneration:Gasoline"
+                }
+            ]
+        },
+        "End-Use Energy Consumption - Natural Gas": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "InteriorEquipment:NaturalGas"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "ExteriorEquipment:NaturalGas"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Heating:NaturalGas"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling:NaturalGas"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "WaterSystems:NaturalGas"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cogeneration:NaturalGas"
+                }
+            ]
+        },
+        "End-Use Energy Consumption - Propane": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "ExteriorEquipment:Propane"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling:Propane"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Heating:Propane"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "WaterSystems:Propane"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cogeneration:Propane"
+                }
+            ]
+        },
+        "Energy Consumption  - Purchased Heating & Cooling": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "DistrictCooling:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "DistrictCooling:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "DistrictHeating:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "DistrictHeating:Facility"
+                }
+            ]
+        },
+        "Energy Consumption - Coal & Gasoline": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "COAL:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "COAL:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "GASOLINE:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "GASOLINE:Facility"
+                }
+            ]
+        },
+        "Energy Consumption - Diesel & Fuel Oil": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Diesel:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Diesel:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "FuelOilNo1:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "FuelOilNo1:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "FuelOilNo2:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "FuelOilNo2:Facility"
+                }
+            ]
+        },
+        "Energy Consumption - Electricity & Natural Gas": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Electricity:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Electricity:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "NaturalGas:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "NaturalGas:Facility"
+                }
+            ]
+        },
+        "Energy Consumption - Electricity Generated & Propane": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "ElectricityProduced:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "ElectricityProduced:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Propane:Facility"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Propane:Facility"
+                }
+            ]
+        },
+        "Fan Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Fan Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Fan Rise in Air Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Fan Electricity Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Fan Rise in Air Temperature"
+                }
+            ]
+        },
+        "Generator Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Generator Produced AC Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Generator Diesel Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Generator NaturalGas Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Generator Produced AC Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Generator Total Heat Recovery"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Generator Jacket Heat Recovery Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Generator Lube Heat Recovery Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Generator Exhaust Heat Recovery Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Generator Exhaust Air Temperature"
+                }
+            ]
+        },
+        "Manual Occupant Comfort Data Summary": {
+            "digits_after_decimal": 5,
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "People Occupant Count"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "People Air Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "People Air Relative Humidity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Zone Thermal Comfort Fanger Model PMV"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Zone Thermal Comfort Fanger Model PPD"
+                }
+            ]
+        },
+        "Outdoor Conditions Maximum Dew Point": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Site Outdoor Air Dewpoint Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Wetbulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Wind Speed"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Sky Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Diffuse Solar Radiation Rate per Area"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Direct Solar Radiation Rate per Area"
+                }
+            ]
+        },
+        "Outdoor Conditions Maximum Drybulb": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Wetbulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Dewpoint Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Wind Speed"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Sky Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Diffuse Solar Radiation Rate per Area"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Direct Solar Radiation Rate per Area"
+                }
+            ]
+        },
+        "Outdoor Conditions Maximum Wetbulb": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Site Outdoor Air Wetbulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Dewpoint Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Wind Speed"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Sky Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Diffuse Solar Radiation Rate per Area"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Direct Solar Radiation Rate per Area"
+                }
+            ]
+        },
+        "Outdoor Conditions Minimum Drybulb": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Minimum",
+                    "variable_or_meter_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Wetbulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Dewpoint Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Wind Speed"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Sky Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Diffuse Solar Radiation Rate per Area"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Direct Solar Radiation Rate per Area"
+                }
+            ]
+        },
+        "Outdoor Ground Conditions": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Site Ground Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Site Surface Ground Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Site Deep Ground Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Site Mains Water Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Site Ground Reflected Solar Radiation Rate per Area"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Snow On Ground"
+                }
+            ]
+        },
+        "Peak Energy End-Use - Coal": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "ExteriorEquipment:Coal"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Heating:Coal"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "WaterSystems:Coal"
+                }
+            ]
+        },
+        "Peak Energy End-Use - Diesel": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "ExteriorEquipment:Diesel"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cooling:Diesel"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Heating:Diesel"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "WaterSystems:Diesel"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cogeneration:Diesel"
+                }
+            ]
+        },
+        "Peak Energy End-Use - Electricity Part 1": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "InteriorLights:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "ExteriorLights:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "InteriorEquipment:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "ExteriorEquipment:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Fans:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Pumps:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Heating:Electricity"
+                }
+            ]
+        },
+        "Peak Energy End-Use - Electricity Part 2": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cooling:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "HeatRejection:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Humidifier:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "HeatRecovery:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "WaterSystems:Electricity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cogeneration:Electricity"
+                }
+            ]
+        },
+        "Peak Energy End-Use - Fuel Oil": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "ExteriorEquipment:FuelOilNo1"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cooling:FuelOilNo1"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Heating:FuelOilNo1"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "WaterSystems:FuelOilNo1"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cogeneration:FuelOilNo1"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "ExteriorEquipment:FuelOilNo2"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cooling:FuelOilNo2"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Heating:FuelOilNo2"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "WaterSystems:FuelOilNo2"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cogeneration:FuelOilNo2"
+                }
+            ]
+        },
+        "Peak Energy End-Use - Gasoline": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "ExteriorEquipment:Gasoline"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cooling:Gasoline"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Heating:Gasoline"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "WaterSystems:Gasoline"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cogeneration:Gasoline"
+                }
+            ]
+        },
+        "Peak Energy End-Use - Natural Gas": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "InteriorEquipment:NaturalGas"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "ExteriorEquipment:NaturalGas"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Heating:NaturalGas"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cooling:NaturalGas"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "WaterSystems:NaturalGas"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cogeneration:NaturalGas"
+                }
+            ]
+        },
+        "Peak Energy End-Use - Propane": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "ExteriorEquipment:Propane"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cooling:Propane"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Heating:Propane"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "WaterSystems:Propane"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cogeneration:Propane"
+                }
+            ]
+        },
+        "Peak Space Gains": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone People Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Lights Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Electric Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Gas Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Hot Water Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Steam Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Other Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Infiltration Sensible Heat Gain Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Infiltration Sensible Heat Loss Energy"
+                }
+            ]
+        },
+        "Plant Loop Demand Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Plant Supply Side Cooling Demand Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Plant Supply Side Cooling Demand Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Plant Supply Side Heating Demand Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Plant Supply Side Heating Demand Rate"
+                }
+            ]
+        },
+        "Pump Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Pump Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Pump Fluid Heat Gain Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Pump Electricity Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Pump Shaft Power"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Pump Fluid Heat Gain Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Pump Outlet Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Pump Mass Flow Rate"
+                }
+            ]
+        },
+        "Setpoints Not Met With Temperatures": {
+            "digits_after_decimal": 2,
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Zone Heating Setpoint Not Met Time"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Zone Mean Air Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Zone Heating Setpoint Not Met While Occupied Time"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Zone Mean Air Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Zone Cooling Setpoint Not Met Time"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Zone Mean Air Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Zone Cooling Setpoint Not Met While Occupied Time"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Zone Mean Air Temperature"
+                }
+            ]
+        },
+        "Space Gain Components at Cooling Peak": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Air System Sensible Cooling Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Zone People Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Zone Lights Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Zone Electric Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Zone Gas Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Zone Hot Water Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Zone Steam Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Zone Other Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Zone Infiltration Sensible Heat Gain Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Zone Infiltration Sensible Heat Loss Energy"
+                }
+            ]
+        },
+        "Space Gains": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone People Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Lights Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Electric Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Gas Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Hot Water Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Steam Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Other Equipment Total Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Infiltration Sensible Heat Gain Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Infiltration Sensible Heat Loss Energy"
+                }
+            ]
+        },
+        "Tower Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling Tower Fan Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Cooling Tower Fan Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cooling Tower Fan Electricity Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Cooling Tower Heat Transfer Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling Tower Inlet Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling Tower Outlet Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Cooling Tower Mass Flow Rate"
+                }
+            ]
+        },
+        "Unglazed Transpired Solar Collector Summary": {
+            "digits_after_decimal": 5,
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Solar Collector System Efficiency"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Solar Collector System Efficiency"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Solar Collector Outside Face Suction Velocity"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Solar Collector Sensible Heating Rate"
+                }
+            ]
+        },
+        "Water Heater Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Water Heater Total Demand Heat Transfer Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Water Heater Use Side Heat Transfer Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Water Heater Burner Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Water Heater NaturalGas Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Water Heater Total Demand Heat Transfer Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Water Heater Loss Demand Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Water Heater Heat Loss Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Water Heater Tank Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Water Heater Heat Recovery Supply Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Water Heater Source Side Heat Transfer Energy"
+                }
+            ]
+        },
+        "Window AC Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Window Air Conditioner Total Cooling Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Window Air Conditioner Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Zone Window Air Conditioner Total Cooling Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Window Air Conditioner Sensible Cooling Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Window Air Conditioner Latent Cooling Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Window Air Conditioner Total Cooling Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Zone Window Air Conditioner Sensible Cooling Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Zone Window Air Conditioner Latent Cooling Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Zone Window Air Conditioner Electricity Rate"
+                }
+            ]
+        },
+        "Window Energy Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Surface Window Transmitted Solar Radiation Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Surface Window Transmitted Beam Solar Radiation Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Surface Window Transmitted Diffuse Solar Radiation Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Surface Window Heat Gain Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Surface Window Heat Loss Energy"
+                }
+            ]
+        },
+        "Window Energy Zone Summary": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Windows Total Heat Gain Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Windows Total Heat Loss Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Windows Total Transmitted Solar Radiation Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Exterior Windows Total Transmitted Beam Solar Radiation Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Exterior Windows Total Transmitted Diffuse Solar Radiation Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Interior Windows Total Transmitted Diffuse Solar Radiation Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Interior Windows Total Transmitted Beam Solar Radiation Energy"
+                }
+            ]
+        },
+        "Window Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Surface Window Transmitted Solar Radiation Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Surface Window Transmitted Beam Solar Radiation Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Surface Window Transmitted Diffuse Solar Radiation Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Surface Window Heat Gain Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Surface Window Heat Loss Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Surface Window Inside Face Glazing Condensation Status"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Surface Shading Device Is On Time Fraction"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Surface Storm Window On Off Status"
+                }
+            ]
+        },
+        "Window Zone Summary": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Windows Total Heat Gain Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Windows Total Heat Loss Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Windows Total Transmitted Solar Radiation Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Exterior Windows Total Transmitted Beam Solar Radiation Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Exterior Windows Total Transmitted Diffuse Solar Radiation Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Interior Windows Total Transmitted Beam Solar Radiation Rate"
+                }
+            ]
+        },
+        "Zone Cooling Summary": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Air System Sensible Cooling Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Air System Sensible Cooling Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Wetbulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Total Internal Latent Gain Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Total Internal Latent Gain Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Wetbulb Temperature"
+                }
+            ]
+        },
+        "Zone Electric Summary": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Lights Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Lights Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Electric Equipment Electricity Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Electric Equipment Electricity Energy"
+                }
+            ]
+        },
+        "Zone Heating Summary": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Air System Sensible Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Air System Sensible Heating Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Drybulb Temperature"
+                }
+            ]
+        },
+        "Zone Temperature Oscillation Report": {
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "HoursNonZero",
+                    "variable_or_meter_name": "Zone Oscillating Temperatures Time"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverageDuringHoursShown",
+                    "variable_or_meter_name": "Zone People Occupant Count"
+                }
+            ]
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Table:TimeBins": {
+        "Output:Table:TimeBins 1": {
+            "interval_count": 10,
+            "interval_size": 500000,
+            "interval_start": 0,
+            "key_value": "*",
+            "variable_name": "Electricity:Facility"
+        },
+        "Output:Table:TimeBins 2": {
+            "interval_count": 10,
+            "interval_size": 1000000,
+            "interval_start": 15000000,
+            "key_value": "*",
+            "variable_name": "DistrictCooling:Facility"
+        },
+        "Output:Table:TimeBins 3": {
+            "interval_count": 10,
+            "interval_size": 1000000,
+            "interval_start": 15000000,
+            "key_value": "*",
+            "variable_name": "DistrictHeating:Facility"
+        },
+        "Output:Table:TimeBins 4": {
+            "interval_count": 12,
+            "interval_size": 5,
+            "interval_start": -10,
+            "key_value": "*",
+            "variable_name": "Surface Outside Face Temperature"
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Mean Air Temperature"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air System Sensible Cooling Rate"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air System Sensible Heating Rate"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air Temperature"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Ideal Loads Supply Air Sensible Cooling Rate"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Ideal Loads Supply Air Sensible Heating Rate"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Ideal Loads Supply Air Total Cooling Rate"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:ReportingTolerances": {
+        "OutputControl:ReportingTolerances 1": {
+            "tolerance_for_time_cooling_setpoint_not_met": 0.21,
+            "tolerance_for_time_heating_setpoint_not_met": 0.21
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "XMLandHTML",
+            "unit_conversion": "InchPound"
+        }
+    },
+    "People": {
+        "EAST ZONE": {
+            "activity_level_schedule_name": "Activity Sch",
+            "air_velocity_schedule_name": "Air Velo Sch",
+            "carbon_dioxide_generation_rate": 3.82e-08,
+            "clothing_insulation_calculation_method": "ClothingInsulationSchedule",
+            "clothing_insulation_schedule_name": "Clothing Sch",
+            "fraction_radiant": 0.3,
+            "mean_radiant_temperature_calculation_type": "ZoneAveraged",
+            "number_of_people": 3.0,
+            "number_of_people_calculation_method": "People",
+            "number_of_people_schedule_name": "OFFICE OCCUPANCY",
+            "work_efficiency_schedule_name": "Work Eff Sch",
+            "zone_or_zonelist_name": "EAST ZONE"
+        },
+        "NORTH ZONE": {
+            "activity_level_schedule_name": "Activity Sch",
+            "air_velocity_schedule_name": "Air Velo Sch",
+            "carbon_dioxide_generation_rate": 3.82e-08,
+            "clothing_insulation_calculation_method": "ClothingInsulationSchedule",
+            "clothing_insulation_schedule_name": "Clothing Sch",
+            "fraction_radiant": 0.3,
+            "mean_radiant_temperature_calculation_type": "ZoneAveraged",
+            "number_of_people": 4.0,
+            "number_of_people_calculation_method": "People",
+            "number_of_people_schedule_name": "OFFICE OCCUPANCY",
+            "work_efficiency_schedule_name": "Work Eff Sch",
+            "zone_or_zonelist_name": "NORTH ZONE"
+        },
+        "West Zone": {
+            "activity_level_schedule_name": "Activity Sch",
+            "air_velocity_schedule_name": "Air Velo Sch",
+            "carbon_dioxide_generation_rate": 3.82e-08,
+            "clothing_insulation_calculation_method": "ClothingInsulationSchedule",
+            "clothing_insulation_schedule_name": "Clothing Sch",
+            "fraction_radiant": 0.3,
+            "mean_radiant_temperature_calculation_type": "ZoneAveraged",
+            "number_of_people": 3.0,
+            "number_of_people_calculation_method": "People",
+            "number_of_people_schedule_name": "OFFICE OCCUPANCY",
+            "work_efficiency_schedule_name": "Work Eff Sch",
+            "zone_or_zonelist_name": "West Zone"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "end_day_of_month": 31,
+            "end_month": 12,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "Activity Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 131.8
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Air Velo Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.137
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Clothing Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Cooling Setpoints": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until:  7:00"
+                },
+                {
+                    "field": 30.0
+                },
+                {
+                    "field": "Until: 20:00"
+                },
+                {
+                    "field": 23.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 30.0
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "Heating Setpoints": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until:  7:00"
+                },
+                {
+                    "field": 15.0
+                },
+                {
+                    "field": "Until: 17:00"
+                },
+                {
+                    "field": 20.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 15.0
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "INTERMITTENT": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: WeekDays SummerDesignDay WinterDesignDay"
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "For: AllOtherDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "OFFICE LIGHTING": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: WeekDays SummerDesignDay WinterDesignDay"
+                },
+                {
+                    "field": "Until: 6:00"
+                },
+                {
+                    "field": 0.05
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 17:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.05
+                },
+                {
+                    "field": "For: AllOtherDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.05
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "OFFICE OCCUPANCY": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: WeekDays SummerDesignDay WinterDesignDay"
+                },
+                {
+                    "field": "Until: 6:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 12:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 13:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 16:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 17:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "For: AllOtherDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "Work Eff Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Zone Control Type Sched": {
+            "data": [
+                {
+                    "field": "Through: 3/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Through: 9/30"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 2
+                },
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1
+                }
+            ],
+            "schedule_type_limits_name": "Control Type"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "Control Type": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 4
+        },
+        "Fraction": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1.0
+        },
+        "Temperature": {
+            "lower_limit_value": -60,
+            "numeric_type": "Continuous",
+            "unit_type": "Temperature",
+            "upper_limit_value": 200
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "Yes",
+            "run_simulation_for_weather_file_run_periods": "Yes"
+        }
+    },
+    "Site:GroundTemperature:BuildingSurface": {
+        "Site:GroundTemperature:BuildingSurface 1": {
+            "april_ground_temperature": 20.3,
+            "august_ground_temperature": 20.77,
+            "december_ground_temperature": 20.2,
+            "february_ground_temperature": 20.03,
+            "january_ground_temperature": 20.03,
+            "july_ground_temperature": 20.62,
+            "june_ground_temperature": 20.52,
+            "march_ground_temperature": 20.13,
+            "may_ground_temperature": 20.43,
+            "november_ground_temperature": 20.44,
+            "october_ground_temperature": 20.55,
+            "september_ground_temperature": 20.78
+        }
+    },
+    "Site:Location": {
+        "CHICAGO_IL_USA TMY2-94846": {
+            "elevation": 190.0,
+            "latitude": 41.78,
+            "longitude": -87.75,
+            "time_zone": -6.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "CHICAGO_IL_USA Annual Cooling 1% Design Conditions DB/MCWB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 10.7,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 31.5,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23.0,
+            "wind_direction": 230,
+            "wind_speed": 5.3
+        },
+        "CHICAGO_IL_USA Annual Heating 99% Design Conditions DB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -17.3,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -17.3,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        }
+    },
+    "SurfaceConvectionAlgorithm:Inside": {
+        "SurfaceConvectionAlgorithm:Inside 1": {
+            "algorithm": "TARP"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Outside": {
+        "SurfaceConvectionAlgorithm:Outside 1": {
+            "algorithm": "DOE-2"
+        }
+    },
+    "ThermostatSetpoint:SingleCooling": {
+        "Cooling Setpoint with SB": {
+            "setpoint_temperature_schedule_name": "Cooling Setpoints"
+        }
+    },
+    "ThermostatSetpoint:SingleHeating": {
+        "Heating Setpoint with SB": {
+            "setpoint_temperature_schedule_name": "Heating Setpoints"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 6
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "9.4"
+        }
+    },
+    "WindowMaterial:Glazing": {
+        "SINGLEPANE": {
+            "back_side_infrared_hemispherical_emissivity": 0.84,
+            "back_side_solar_reflectance_at_normal_incidence": 0.031,
+            "back_side_visible_reflectance_at_normal_incidence": 0.05,
+            "conductivity": 0.9,
+            "front_side_infrared_hemispherical_emissivity": 0.84,
+            "front_side_solar_reflectance_at_normal_incidence": 0.031,
+            "front_side_visible_reflectance_at_normal_incidence": 0.05,
+            "infrared_transmittance_at_normal_incidence": 0.0,
+            "optical_data_type": "SpectralAverage",
+            "solar_transmittance_at_normal_incidence": 0.9,
+            "thickness": 0.003,
+            "visible_transmittance_at_normal_incidence": 0.9
+        }
+    },
+    "Zone": {
+        "EAST ZONE": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        },
+        "NORTH ZONE": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        },
+        "West Zone": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        }
+    },
+    "ZoneControl:Thermostat": {
+        "Zone 1 Thermostat": {
+            "control_1_name": "Heating Setpoint with SB",
+            "control_1_object_type": "ThermostatSetpoint:SingleHeating",
+            "control_2_name": "Cooling Setpoint with SB",
+            "control_2_object_type": "ThermostatSetpoint:SingleCooling",
+            "control_type_schedule_name": "Zone Control Type Sched",
+            "zone_or_zonelist_name": "West Zone"
+        },
+        "Zone 2 Thermostat": {
+            "control_1_name": "Heating Setpoint with SB",
+            "control_1_object_type": "ThermostatSetpoint:SingleHeating",
+            "control_2_name": "Cooling Setpoint with SB",
+            "control_2_object_type": "ThermostatSetpoint:SingleCooling",
+            "control_type_schedule_name": "Zone Control Type Sched",
+            "zone_or_zonelist_name": "EAST ZONE"
+        },
+        "Zone 3 Thermostat": {
+            "control_1_name": "Heating Setpoint with SB",
+            "control_1_object_type": "ThermostatSetpoint:SingleHeating",
+            "control_2_name": "Cooling Setpoint with SB",
+            "control_2_object_type": "ThermostatSetpoint:SingleCooling",
+            "control_type_schedule_name": "Zone Control Type Sched",
+            "zone_or_zonelist_name": "NORTH ZONE"
+        }
+    },
+    "ZoneHVAC:EquipmentConnections": {
+        "ZoneHVAC:EquipmentConnections 1": {
+            "zone_air_inlet_node_or_nodelist_name": "Zone1Inlets",
+            "zone_air_node_name": "NODE_4",
+            "zone_conditioning_equipment_list_name": "Zone1Equipment",
+            "zone_name": "West Zone",
+            "zone_return_air_node_or_nodelist_name": "NODE_5"
+        },
+        "ZoneHVAC:EquipmentConnections 2": {
+            "zone_air_inlet_node_or_nodelist_name": "Zone2Inlets",
+            "zone_air_node_name": "NODE_6",
+            "zone_conditioning_equipment_list_name": "Zone2Equipment",
+            "zone_name": "EAST ZONE",
+            "zone_return_air_node_or_nodelist_name": "NODE_7"
+        },
+        "ZoneHVAC:EquipmentConnections 3": {
+            "zone_air_inlet_node_or_nodelist_name": "Zone3Inlets",
+            "zone_air_node_name": "NODE_8",
+            "zone_conditioning_equipment_list_name": "Zone3Equipment",
+            "zone_name": "NORTH ZONE",
+            "zone_return_air_node_or_nodelist_name": "NODE_9"
+        }
+    },
+    "ZoneHVAC:EquipmentList": {
+        "Zone1Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Zone1Air",
+                    "zone_equipment_object_type": "ZoneHVAC:IdealLoadsAirSystem"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "Zone2Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Zone2Air",
+                    "zone_equipment_object_type": "ZoneHVAC:IdealLoadsAirSystem"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "Zone3Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Zone3Air",
+                    "zone_equipment_object_type": "ZoneHVAC:IdealLoadsAirSystem"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        }
+    },
+    "ZoneHVAC:IdealLoadsAirSystem": {
+        "Zone1Air": {
+            "cooling_limit": "NoLimit",
+            "dehumidification_control_type": "ConstantSensibleHeatRatio",
+            "heating_limit": "NoLimit",
+            "humidification_control_type": "None",
+            "maximum_cooling_air_flow_rate": "Autosize",
+            "maximum_heating_air_flow_rate": "Autosize",
+            "maximum_heating_supply_air_humidity_ratio": 0.015,
+            "maximum_heating_supply_air_temperature": 50,
+            "minimum_cooling_supply_air_humidity_ratio": 0.009,
+            "minimum_cooling_supply_air_temperature": 13,
+            "zone_supply_air_node_name": "NODE_1"
+        },
+        "Zone2Air": {
+            "cooling_limit": "NoLimit",
+            "dehumidification_control_type": "ConstantSensibleHeatRatio",
+            "heating_limit": "NoLimit",
+            "humidification_control_type": "None",
+            "maximum_cooling_air_flow_rate": "Autosize",
+            "maximum_heating_air_flow_rate": "Autosize",
+            "maximum_heating_supply_air_humidity_ratio": 0.015,
+            "maximum_heating_supply_air_temperature": 50,
+            "minimum_cooling_supply_air_humidity_ratio": 0.009,
+            "minimum_cooling_supply_air_temperature": 13,
+            "zone_supply_air_node_name": "NODE_2"
+        },
+        "Zone3Air": {
+            "cooling_limit": "NoLimit",
+            "dehumidification_control_type": "ConstantSensibleHeatRatio",
+            "heating_limit": "NoLimit",
+            "humidification_control_type": "None",
+            "maximum_cooling_air_flow_rate": "Autosize",
+            "maximum_heating_air_flow_rate": "Autosize",
+            "maximum_heating_supply_air_humidity_ratio": 0.015,
+            "maximum_heating_supply_air_temperature": 50,
+            "minimum_cooling_supply_air_humidity_ratio": 0.009,
+            "minimum_cooling_supply_air_temperature": 13,
+            "zone_supply_air_node_name": "NODE_3"
+        }
+    }
+}

@@ -1,0 +1,1561 @@
+{
+    "Building": {
+        "BUILDING #1": {
+            "loads_convergence_tolerance_value": 0.039999999,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.25,
+            "terrain": "Suburbs"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "Zn001:Flr001": {
+            "construction_name": "SLAB FLOOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn001:Flr001",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Roof001": {
+            "construction_name": "ROOF31",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall001": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall002": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall003": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall004": {
+            "construction_name": "ThermalChimney IN",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn002:Wall004",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE 1"
+        },
+        "Zn002:Flr001": {
+            "construction_name": "SLAB FLOOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn002:Flr001",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Roof001": {
+            "construction_name": "ROOF31",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 6.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 6.0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 6.0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 6.0
+                }
+            ],
+            "view_factor_to_ground": 0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall001": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 6.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 6.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall002": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 6.0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 6.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall003": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 6.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 6.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall004": {
+            "construction_name": "ThermalChimney OUT",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn001:Wall004",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall005": {
+            "construction_name": "ThermalChimney OUT",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 6.0
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 6.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn003:Flr001": {
+            "construction_name": "SLAB FLOOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn003:Flr001",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Roof001": {
+            "construction_name": "ROOF31",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall001": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall002": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall003": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall004": {
+            "construction_name": "ThermalChimney IN",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn004:Wall004",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE 3"
+        },
+        "Zn004:Flr001": {
+            "construction_name": "SLAB FLOOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn004:Flr001",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE 4"
+        },
+        "Zn004:Roof001": {
+            "construction_name": "ROOF31",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 6.0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 6.0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 6.0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 6.0
+                }
+            ],
+            "view_factor_to_ground": 0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 4"
+        },
+        "Zn004:Wall001": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 6.0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 6.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 4"
+        },
+        "Zn004:Wall002": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 6.0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 6.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 4"
+        },
+        "Zn004:Wall003": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 6.0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 14.7,
+                    "vertex_z_coordinate": 6.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 4"
+        },
+        "Zn004:Wall004": {
+            "construction_name": "ThermalChimney OUT",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn003:Wall004",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE 4"
+        },
+        "Zn004:Wall005": {
+            "construction_name": "ThermalChimney OUT",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 6.0
+                },
+                {
+                    "vertex_x_coordinate": 60.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 6.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 4"
+        }
+    },
+    "Construction": {
+        "DOUBLE PANE WINDOW": {
+            "layer_2": "WinAirB1 - AIRSPACE RESISTANCE",
+            "layer_3": "GLASS - CLEAR SHEET 1 / 8 IN",
+            "outside_layer": "GLASS - CLEAR SHEET 1 / 8 IN"
+        },
+        "EXTERIOR": {
+            "layer_2": "B12 - 3 IN DENSE INSULATION",
+            "layer_3": "B12 - 3 IN DENSE INSULATION",
+            "layer_4": "C7 - 8 IN LW CONCRETE BLOCK",
+            "layer_5": "E8 - 5 / 8 IN PLASTER OR GYP BOARD",
+            "outside_layer": "A1 - 1 IN STUCCO"
+        },
+        "ROOF31": {
+            "layer_2": "BLBD - SHEATHING NAIL BASE 1 / 2 IN",
+            "layer_3": "B12 - 3 IN DENSE INSULATION",
+            "layer_4": "B12 - 3 IN DENSE INSULATION",
+            "layer_5": "B3 - 2 IN INSULATION",
+            "layer_6": "B3 - 2 IN INSULATION",
+            "layer_7": "E6 - 1 / 2 IN GYP SHEATHING BOARD",
+            "outside_layer": "ROOFING - WOOD SHINGLES"
+        },
+        "SGL CLR LOW IRON 3 MM": {
+            "outside_layer": "GLASS - LOW IRON 3 MM"
+        },
+        "SLAB FLOOR": {
+            "outside_layer": "CONCRETE - SAND AND GRAVEL 4 IN"
+        },
+        "ThermalChimney IN": {
+            "layer_2": "A1 - 1 IN STUCCO",
+            "layer_3": "B12 - 3 IN DENSE INSULATION",
+            "layer_4": "B12 - 3 IN DENSE INSULATION",
+            "layer_5": "B3 - 2 IN INSULATION",
+            "layer_6": "B3 - 2 IN INSULATION",
+            "layer_7": "C7 - 8 IN LW CONCRETE BLOCK",
+            "layer_8": "E8 - 5 / 8 IN PLASTER OR GYP BOARD",
+            "outside_layer": "TABOR SOLAR ABSORBER"
+        },
+        "ThermalChimney OUT": {
+            "layer_2": "C7 - 8 IN LW CONCRETE BLOCK",
+            "layer_3": "B3 - 2 IN INSULATION",
+            "layer_4": "B3 - 2 IN INSULATION",
+            "layer_5": "B12 - 3 IN DENSE INSULATION",
+            "layer_6": "B12 - 3 IN DENSE INSULATION",
+            "layer_7": "A1 - 1 IN STUCCO",
+            "layer_8": "TABOR SOLAR ABSORBER",
+            "outside_layer": "E8 - 5 / 8 IN PLASTER OR GYP BOARD"
+        }
+    },
+    "FenestrationSurface:Detailed": {
+        "Zn001:Wall002:Win001": {
+            "building_surface_name": "Zn001:Wall002",
+            "construction_name": "DOUBLE PANE WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 24.0,
+            "vertex_1_y_coordinate": 25.0,
+            "vertex_1_z_coordinate": 2.5,
+            "vertex_2_x_coordinate": 24.0,
+            "vertex_2_y_coordinate": 25.0,
+            "vertex_2_z_coordinate": 0.5,
+            "vertex_3_x_coordinate": 16.0,
+            "vertex_3_y_coordinate": 25.0,
+            "vertex_3_z_coordinate": 0.5,
+            "vertex_4_x_coordinate": 16.0,
+            "vertex_4_y_coordinate": 25.0,
+            "vertex_4_z_coordinate": 2.5,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn002:Wall001:Win001": {
+            "building_surface_name": "Zn002:Wall001",
+            "construction_name": "SGL CLR LOW IRON 3 MM",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 10.1,
+            "vertex_1_y_coordinate": 14.7,
+            "vertex_1_z_coordinate": 5.9,
+            "vertex_2_x_coordinate": 10.1,
+            "vertex_2_y_coordinate": 14.7,
+            "vertex_2_z_coordinate": 0.1,
+            "vertex_3_x_coordinate": 29.9,
+            "vertex_3_y_coordinate": 14.7,
+            "vertex_3_z_coordinate": 0.1,
+            "vertex_4_x_coordinate": 29.9,
+            "vertex_4_y_coordinate": 14.7,
+            "vertex_4_z_coordinate": 5.9,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn003:Wall002:Win001": {
+            "building_surface_name": "Zn003:Wall002",
+            "construction_name": "DOUBLE PANE WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 54.0,
+            "vertex_1_y_coordinate": 25.0,
+            "vertex_1_z_coordinate": 2.5,
+            "vertex_2_x_coordinate": 54.0,
+            "vertex_2_y_coordinate": 25.0,
+            "vertex_2_z_coordinate": 0.5,
+            "vertex_3_x_coordinate": 46.0,
+            "vertex_3_y_coordinate": 25.0,
+            "vertex_3_z_coordinate": 0.5,
+            "vertex_4_x_coordinate": 46.0,
+            "vertex_4_y_coordinate": 25.0,
+            "vertex_4_z_coordinate": 2.5,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn004:Wall001:Win001": {
+            "building_surface_name": "Zn004:Wall001",
+            "construction_name": "SGL CLR LOW IRON 3 MM",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 40.1,
+            "vertex_1_y_coordinate": 14.7,
+            "vertex_1_z_coordinate": 5.9,
+            "vertex_2_x_coordinate": 40.1,
+            "vertex_2_y_coordinate": 14.7,
+            "vertex_2_z_coordinate": 0.1,
+            "vertex_3_x_coordinate": 59.9,
+            "vertex_3_y_coordinate": 14.7,
+            "vertex_3_z_coordinate": 0.1,
+            "vertex_4_x_coordinate": 59.9,
+            "vertex_4_y_coordinate": 14.7,
+            "vertex_4_z_coordinate": 5.9,
+            "view_factor_to_ground": 0.5
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "World",
+            "rectangular_surface_coordinate_system": "World",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "HeatBalanceAlgorithm": {
+        "HeatBalanceAlgorithm 1": {
+            "algorithm": "ConductionTransferFunction"
+        }
+    },
+    "Material": {
+        "A1 - 1 IN STUCCO": {
+            "conductivity": 0.6918309,
+            "density": 1858.142,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.025389841,
+            "visible_absorptance": 0.92
+        },
+        "B3 - 2 IN INSULATION": {
+            "conductivity": 0.04323943,
+            "density": 32.03693,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.050901599,
+            "visible_absorptance": 0.5
+        },
+        "B12 - 3 IN DENSE INSULATION": {
+            "conductivity": 0.04323943,
+            "density": 91.30524,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.076200001,
+            "visible_absorptance": 0.5
+        },
+        "BLBD - SHEATHING NAIL BASE 1 / 2 IN": {
+            "conductivity": 0.063475482,
+            "density": 400.4616,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1297.04,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.012710161,
+            "visible_absorptance": 0.7
+        },
+        "C2 - 4 IN LW CONCRETE BLOCK": {
+            "conductivity": 0.380507,
+            "density": 608.7016,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1014984,
+            "visible_absorptance": 0.65
+        },
+        "C7 - 8 IN LW CONCRETE BLOCK": {
+            "conductivity": 0.5707605,
+            "density": 608.7016,
+            "roughness": "Rough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.2033016,
+            "visible_absorptance": 0.65
+        },
+        "C10 - 8 IN HW CONCRETE": {
+            "conductivity": 1.729577,
+            "density": 2242.585,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.2033016,
+            "visible_absorptance": 0.65
+        },
+        "CONCRETE - SAND AND GRAVEL 4 IN": {
+            "conductivity": 1.729577,
+            "density": 2242.585,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.6,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1014984,
+            "visible_absorptance": 0.6
+        },
+        "E1 - 3 / 4 IN PLASTER OR GYP BOARD": {
+            "conductivity": 0.7264224,
+            "density": 1601.846,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.01905,
+            "visible_absorptance": 0.92
+        },
+        "E6 - 1 / 2 IN GYP SHEATHING BOARD": {
+            "conductivity": 0.1601589,
+            "density": 784.9047,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.012710161,
+            "visible_absorptance": 0.92
+        },
+        "E8 - 5 / 8 IN PLASTER OR GYP BOARD": {
+            "conductivity": 0.1601589,
+            "density": 784.9047,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.01588008,
+            "visible_absorptance": 0.92
+        },
+        "ROOFING - WOOD SHINGLES": {
+            "conductivity": 0.1141521,
+            "density": 720.8308,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.78,
+            "specific_heat": 1255.2,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.01905,
+            "visible_absorptance": 0.78
+        },
+        "TABOR SOLAR ABSORBER": {
+            "conductivity": 392.61,
+            "density": 8906.26,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.85,
+            "specific_heat": 370.0,
+            "thermal_absorptance": 0.05,
+            "thickness": 0.0016,
+            "visible_absorptance": 0.85
+        }
+    },
+    "Output:Meter:MeterFileOnly": {
+        "Output:Meter:MeterFileOnly 1": {
+            "key_name": "EnergyTransfer:Building",
+            "reporting_frequency": "Hourly"
+        },
+        "Output:Meter:MeterFileOnly 2": {
+            "key_name": "EnergyTransfer:Facility",
+            "reporting_frequency": "Hourly"
+        }
+    },
+    "Output:Surfaces:Drawing": {
+        "Output:Surfaces:Drawing 1": {
+            "report_type": "DXF"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air Temperature"
+        },
+        "Output:Variable 3": {
+            "key_value": "Zn002:Wall001",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Inside Face Temperature"
+        },
+        "Output:Variable 4": {
+            "key_value": "Zn002:Wall002",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Inside Face Temperature"
+        },
+        "Output:Variable 5": {
+            "key_value": "Zn002:Wall003",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Inside Face Temperature"
+        },
+        "Output:Variable 6": {
+            "key_value": "Zn002:Wall004",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Inside Face Temperature"
+        },
+        "Output:Variable 7": {
+            "key_value": "Zn002:Wall001",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Inside Face Convection Heat Transfer Coefficient"
+        },
+        "Output:Variable 8": {
+            "key_value": "Zn002:Wall004",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Inside Face Convection Heat Transfer Coefficient"
+        },
+        "Output:Variable 9": {
+            "key_value": "Zn002:Wall005",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Inside Face Temperature"
+        },
+        "Output:Variable 10": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Thermal Chimney Heat Loss Energy"
+        },
+        "Output:Variable 11": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Thermal Chimney Heat Gain Energy"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Thermal Chimney Volume"
+        },
+        "Output:Variable 13": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Thermal Chimney Mass"
+        },
+        "Output:Variable 14": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Thermal Chimney Current Density Air Volume Flow Rate"
+        },
+        "Output:Variable 15": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Thermal Chimney Mass Flow Rate"
+        },
+        "Output:Variable 16": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Thermal Chimney Outlet Temperature"
+        },
+        "Output:Variable 17": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Infiltration Current Density Volume"
+        },
+        "Output:Variable 18": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Infiltration Mass"
+        },
+        "Output:Variable 19": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Infiltration Total Heat Loss Energy"
+        },
+        "Output:Variable 20": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Infiltration Total Heat Gain Energy"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 31,
+            "end_month": 12,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "Always 1": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "OFF": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "ThermalChimneyAvail": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "Fraction": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1.0
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "Yes",
+            "run_simulation_for_weather_file_run_periods": "No"
+        }
+    },
+    "Site:GroundTemperature:BuildingSurface": {
+        "Site:GroundTemperature:BuildingSurface 1": {
+            "april_ground_temperature": 19.89,
+            "august_ground_temperature": 19.56,
+            "december_ground_temperature": 19.76,
+            "february_ground_temperature": 19.81,
+            "january_ground_temperature": 19.77,
+            "july_ground_temperature": 19.38,
+            "june_ground_temperature": 19.6,
+            "march_ground_temperature": 19.91,
+            "may_ground_temperature": 19.85,
+            "november_ground_temperature": 19.82,
+            "october_ground_temperature": 19.74,
+            "september_ground_temperature": 19.66
+        }
+    },
+    "Site:Location": {
+        "CEDAR_CITY_UT_USA_WMO_724755": {
+            "elevation": 1712.0,
+            "latitude": 37.7,
+            "longitude": -113.08,
+            "time_zone": -7.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "CEDAR_CITY Ann Clg 1% Condns DB=>MWB": {
+            "barometric_pressure": 82379.0,
+            "daily_dry_bulb_temperature_range": 16.3,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 32.9,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 14.8,
+            "wind_direction": 200,
+            "wind_speed": 5.3
+        },
+        "CEDAR_CITY Ann Htg 99% Condns DB": {
+            "barometric_pressure": 82379.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -12.8,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -12.8,
+            "wind_direction": 130,
+            "wind_speed": 1.2
+        }
+    },
+    "SurfaceConvectionAlgorithm:Inside": {
+        "SurfaceConvectionAlgorithm:Inside 1": {
+            "algorithm": "TARP"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Outside": {
+        "SurfaceConvectionAlgorithm:Outside 1": {
+            "algorithm": "DOE-2"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 4
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "9.4"
+        }
+    },
+    "WindowMaterial:Gas": {
+        "WinAirB1 - AIRSPACE RESISTANCE": {
+            "gas_type": "Air",
+            "thickness": 0.013
+        }
+    },
+    "WindowMaterial:Glazing": {
+        "GLASS - CLEAR SHEET 1 / 8 IN": {
+            "back_side_infrared_hemispherical_emissivity": 0.84,
+            "back_side_solar_reflectance_at_normal_incidence": 0.075000003,
+            "back_side_visible_reflectance_at_normal_incidence": 0.081,
+            "conductivity": 0.9,
+            "front_side_infrared_hemispherical_emissivity": 0.84,
+            "front_side_solar_reflectance_at_normal_incidence": 0.075000003,
+            "front_side_visible_reflectance_at_normal_incidence": 0.081,
+            "infrared_transmittance_at_normal_incidence": 0,
+            "optical_data_type": "SpectralAverage",
+            "solar_transmittance_at_normal_incidence": 0.837,
+            "thickness": 0.003,
+            "visible_transmittance_at_normal_incidence": 0.898
+        },
+        "GLASS - LOW IRON 3 MM": {
+            "back_side_infrared_hemispherical_emissivity": 0.84,
+            "back_side_solar_reflectance_at_normal_incidence": 0.079,
+            "back_side_visible_reflectance_at_normal_incidence": 0.082,
+            "conductivity": 0.9,
+            "front_side_infrared_hemispherical_emissivity": 0.84,
+            "front_side_solar_reflectance_at_normal_incidence": 0.079,
+            "front_side_visible_reflectance_at_normal_incidence": 0.082,
+            "infrared_transmittance_at_normal_incidence": 0,
+            "optical_data_type": "SpectralAverage",
+            "solar_transmittance_at_normal_incidence": 0.899,
+            "thickness": 0.003,
+            "visible_transmittance_at_normal_incidence": 0.913
+        }
+    },
+    "Zone": {
+        "ZONE 1": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 10.0,
+            "y_origin": 15.0,
+            "z_origin": 0
+        },
+        "ZONE 2": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0,
+            "floor_area": "Autocalculate",
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 10.0,
+            "y_origin": 14.7,
+            "z_origin": 0,
+            "zone_inside_convection_algorithm": "TARP"
+        },
+        "ZONE 3": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 40.0,
+            "y_origin": 15.0,
+            "z_origin": 0
+        },
+        "ZONE 4": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0,
+            "floor_area": "Autocalculate",
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 40,
+            "y_origin": 14.7,
+            "z_origin": 0,
+            "zone_inside_convection_algorithm": "TARP"
+        }
+    },
+    "ZoneInfiltration:DesignFlowRate": {
+        "Zone1Infiltration": {
+            "air_changes_per_hour": 0,
+            "constant_term_coefficient": 1,
+            "design_flow_rate": 0.01,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "flow_per_exterior_surface_area": 0,
+            "flow_per_zone_floor_area": 0,
+            "schedule_name": "Always 1",
+            "zone_or_zonelist_name": "ZONE 1"
+        },
+        "Zone3Infiltration": {
+            "air_changes_per_hour": 0,
+            "constant_term_coefficient": 1,
+            "design_flow_rate": 0.01,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "flow_per_exterior_surface_area": 0,
+            "flow_per_zone_floor_area": 0,
+            "schedule_name": "Always 1",
+            "zone_or_zonelist_name": "ZONE 3"
+        }
+    },
+    "ZoneThermalChimney": {
+        "ThermalChimney 1": {
+            "availability_schedule_name": "ThermalChimneyAvail",
+            "cross_sectional_area_of_air_channel_outlet": 0.08,
+            "cross_sectional_areas_of_air_channel_inlet_1": 0.035,
+            "discharge_coefficient": 0.8,
+            "distance_from_top_of_thermal_chimney_to_inlet_1": 6.0,
+            "relative_ratios_of_air_flow_rates_passing_through_zone_1": 1.0,
+            "width_of_the_absorber_wall": 10.0,
+            "zone_1_name": "ZONE 1",
+            "zone_name": "ZONE 2"
+        },
+        "ThermalChimney 2": {
+            "availability_schedule_name": "OFF",
+            "cross_sectional_area_of_air_channel_outlet": 0.08,
+            "cross_sectional_areas_of_air_channel_inlet_1": 0.035,
+            "discharge_coefficient": 0.8,
+            "distance_from_top_of_thermal_chimney_to_inlet_1": 6.0,
+            "relative_ratios_of_air_flow_rates_passing_through_zone_1": 1.0,
+            "width_of_the_absorber_wall": 10.0,
+            "zone_1_name": "ZONE 3",
+            "zone_name": "ZONE 4"
+        }
+    }
+}

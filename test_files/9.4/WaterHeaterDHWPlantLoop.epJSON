@@ -1,0 +1,850 @@
+{
+    "Branch": {
+        "Demand Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Demand Inlet Node",
+                    "component_name": "Demand Inlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Demand Pipe-DHW Node"
+                }
+            ]
+        },
+        "Demand Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Demand DHW-Pipe Node",
+                    "component_name": "Demand Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Demand Outlet Node"
+                }
+            ]
+        },
+        "Domestic Hot Water Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Domestic Hot Water Inlet Node",
+                    "component_name": "Domestic Hot Water",
+                    "component_object_type": "WaterUse:Connections",
+                    "component_outlet_node_name": "Domestic Hot Water Outlet Node"
+                }
+            ]
+        },
+        "Water Heater Use Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Water Heater Use Inlet Node",
+                    "component_name": "Water Heater",
+                    "component_object_type": "WaterHeater:Stratified",
+                    "component_outlet_node_name": "Water Heater Use Outlet Node"
+                }
+            ]
+        },
+        "Water Heater Use Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Water Heater Use Loop Inlet Node",
+                    "component_name": "DHW Pump",
+                    "component_object_type": "Pump:VariableSpeed",
+                    "component_outlet_node_name": "DHW Pump Outlet Node"
+                }
+            ]
+        },
+        "Water Heater Use Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Water Heater Use Outlet Pipe Inlet Node",
+                    "component_name": "Water Heater Use Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Water Heater Use Loop Outlet Node"
+                }
+            ]
+        }
+    },
+    "BranchList": {
+        "Demand Branches": {
+            "branches": [
+                {
+                    "branch_name": "Demand Inlet Branch"
+                },
+                {
+                    "branch_name": "Domestic Hot Water Branch"
+                },
+                {
+                    "branch_name": "Demand Outlet Branch"
+                }
+            ]
+        },
+        "Water Heater Use Branches": {
+            "branches": [
+                {
+                    "branch_name": "Water Heater Use Inlet Branch"
+                },
+                {
+                    "branch_name": "Water Heater Use Branch"
+                },
+                {
+                    "branch_name": "Water Heater Use Outlet Branch"
+                }
+            ]
+        }
+    },
+    "Building": {
+        "Water Heater DHW Plant Loop Example": {
+            "loads_convergence_tolerance_value": 0.04,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.04,
+            "terrain": "Suburbs"
+        }
+    },
+    "Connector:Mixer": {
+        "Demand Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "Domestic Hot Water Branch"
+                }
+            ],
+            "outlet_branch_name": "Demand Outlet Branch"
+        },
+        "Water Heater Use Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "Water Heater Use Branch"
+                }
+            ],
+            "outlet_branch_name": "Water Heater Use Outlet Branch"
+        }
+    },
+    "Connector:Splitter": {
+        "Demand Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "Domestic Hot Water Branch"
+                }
+            ],
+            "inlet_branch_name": "Demand Inlet Branch"
+        },
+        "Water Heater Use Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "Water Heater Use Branch"
+                }
+            ],
+            "inlet_branch_name": "Water Heater Use Inlet Branch"
+        }
+    },
+    "ConnectorList": {
+        "Demand Connectors": {
+            "connector_1_name": "Demand Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "Demand Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        },
+        "Water Heater Use Connectors": {
+            "connector_1_name": "Water Heater Use Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "Water Heater Use Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "Output:SQLite": {
+        "Output:SQLite 1": {
+            "option_type": "Simple"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Mains Water Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Use Equipment Mixed Water Temperature"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Use Connections Hot Water Volume Flow Rate"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Use Connections Total Volume Flow Rate"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Tank Temperature"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Temperature Node 1"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Temperature Node 2"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Temperature Node 3"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Temperature Node 4"
+        },
+        "Output:Variable 10": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Temperature Node 5"
+        },
+        "Output:Variable 11": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Temperature Node 6"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Use Side Heat Transfer Rate"
+        },
+        "Output:Variable 13": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Heat Loss Rate"
+        },
+        "Output:Variable 14": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Heating Rate"
+        },
+        "Output:Variable 15": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Cycle On Count"
+        },
+        "Output:Variable 16": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Heater 1 Cycle On Count"
+        },
+        "Output:Variable 17": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Heater 2 Cycle On Count"
+        },
+        "Output:Variable 18": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Runtime Fraction"
+        },
+        "Output:Variable 19": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Heater 1 Runtime Fraction"
+        },
+        "Output:Variable 20": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Heater 2 Runtime Fraction"
+        },
+        "Output:Variable 21": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Electricity Rate"
+        },
+        "Output:Variable 22": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Off Cycle Parasitic Electricity Rate"
+        },
+        "Output:Variable 23": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater On Cycle Parasitic Electricity Rate"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "Pipe:Adiabatic": {
+        "Demand Inlet Pipe": {
+            "inlet_node_name": "Demand Inlet Node",
+            "outlet_node_name": "Demand Pipe-DHW Node"
+        },
+        "Demand Outlet Pipe": {
+            "inlet_node_name": "Demand DHW-Pipe Node",
+            "outlet_node_name": "Demand Outlet Node"
+        },
+        "Water Heater Use Outlet Pipe": {
+            "inlet_node_name": "Water Heater Use Outlet Pipe Inlet Node",
+            "outlet_node_name": "Water Heater Use Loop Outlet Node"
+        }
+    },
+    "PlantEquipmentList": {
+        "DHW Plant Equipment": {
+            "equipment": [
+                {
+                    "equipment_name": "Water Heater",
+                    "equipment_object_type": "WaterHeater:Stratified"
+                }
+            ]
+        }
+    },
+    "PlantEquipmentOperation:HeatingLoad": {
+        "DHW Control Scheme": {
+            "load_range_1_lower_limit": 0,
+            "load_range_1_upper_limit": 10000000,
+            "range_1_equipment_list_name": "DHW Plant Equipment"
+        }
+    },
+    "PlantEquipmentOperationSchemes": {
+        "DHW Loop Operation": {
+            "control_scheme_1_name": "DHW Control Scheme",
+            "control_scheme_1_object_type": "PlantEquipmentOperation:HeatingLoad",
+            "control_scheme_1_schedule_name": "Always On"
+        }
+    },
+    "PlantLoop": {
+        "DHW Loop": {
+            "demand_side_branch_list_name": "Demand Branches",
+            "demand_side_connector_list_name": "Demand Connectors",
+            "demand_side_inlet_node_name": "Demand Inlet Node",
+            "demand_side_outlet_node_name": "Demand Outlet Node",
+            "fluid_type": "Water",
+            "load_distribution_scheme": "Optimal",
+            "loop_temperature_setpoint_node_name": "Water Heater Use Loop Outlet Node",
+            "maximum_loop_flow_rate": "Autosize",
+            "maximum_loop_temperature": 100,
+            "minimum_loop_flow_rate": 0,
+            "minimum_loop_temperature": 3,
+            "plant_equipment_operation_scheme_name": "DHW Loop Operation",
+            "plant_loop_volume": "Autocalculate",
+            "plant_side_branch_list_name": "Water Heater Use Branches",
+            "plant_side_connector_list_name": "Water Heater Use Connectors",
+            "plant_side_inlet_node_name": "Water Heater Use Loop Inlet Node",
+            "plant_side_outlet_node_name": "Water Heater Use Loop Outlet Node"
+        }
+    },
+    "Pump:VariableSpeed": {
+        "DHW Pump": {
+            "coefficient_1_of_the_part_load_performance_curve": 0,
+            "coefficient_2_of_the_part_load_performance_curve": 1,
+            "coefficient_3_of_the_part_load_performance_curve": 0,
+            "coefficient_4_of_the_part_load_performance_curve": 0,
+            "design_maximum_flow_rate": "Autosize",
+            "design_minimum_flow_rate": 0,
+            "design_power_consumption": "Autosize",
+            "design_pump_head": 0,
+            "fraction_of_motor_inefficiencies_to_fluid_stream": 0.0,
+            "inlet_node_name": "Water Heater Use Loop Inlet Node",
+            "motor_efficiency": 1.0,
+            "outlet_node_name": "DHW Pump Outlet Node",
+            "pump_control_type": "Intermittent"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 3,
+            "end_month": 1,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "Always On": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 1
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Ambient Temp Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 22.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Hot Water Set Point Temp Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 48.89
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Showers Flow Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 3:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "UNTIL: 5:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "UNTIL: 7:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "UNTIL: 7:10"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "UNTIL: 10:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "UNTIL: 10:30"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "UNTIL: 13:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "UNTIL: 13:10"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "UNTIL: 16:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "UNTIL: 22:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Sinks Flow Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 1:00"
+                },
+                {
+                    "field": 0.003
+                },
+                {
+                    "field": "UNTIL: 2:00"
+                },
+                {
+                    "field": 0.001
+                },
+                {
+                    "field": "UNTIL: 3:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "UNTIL: 4:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "UNTIL: 5:00"
+                },
+                {
+                    "field": 0.001
+                },
+                {
+                    "field": "UNTIL: 6:00"
+                },
+                {
+                    "field": 0.028
+                },
+                {
+                    "field": "UNTIL: 7:00"
+                },
+                {
+                    "field": 0.105
+                },
+                {
+                    "field": "UNTIL: 8:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "UNTIL: 9:00"
+                },
+                {
+                    "field": 0.081
+                },
+                {
+                    "field": "UNTIL: 10:00"
+                },
+                {
+                    "field": 0.059
+                },
+                {
+                    "field": "UNTIL: 11:00"
+                },
+                {
+                    "field": 0.051
+                },
+                {
+                    "field": "UNTIL: 12:00"
+                },
+                {
+                    "field": 0.037
+                },
+                {
+                    "field": "UNTIL: 13:00"
+                },
+                {
+                    "field": 0.031
+                },
+                {
+                    "field": "UNTIL: 14:00"
+                },
+                {
+                    "field": 0.026
+                },
+                {
+                    "field": "UNTIL: 15:00"
+                },
+                {
+                    "field": 0.023
+                },
+                {
+                    "field": "UNTIL: 16:00"
+                },
+                {
+                    "field": 0.033
+                },
+                {
+                    "field": "UNTIL: 17:00"
+                },
+                {
+                    "field": 0.041
+                },
+                {
+                    "field": "UNTIL: 18:00"
+                },
+                {
+                    "field": 0.063
+                },
+                {
+                    "field": "UNTIL: 19:00"
+                },
+                {
+                    "field": 0.075
+                },
+                {
+                    "field": "UNTIL: 20:00"
+                },
+                {
+                    "field": 0.066
+                },
+                {
+                    "field": "UNTIL: 21:00"
+                },
+                {
+                    "field": 0.059
+                },
+                {
+                    "field": "UNTIL: 22:00"
+                },
+                {
+                    "field": 0.046
+                },
+                {
+                    "field": "UNTIL: 23:00"
+                },
+                {
+                    "field": 0.046
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 0.025
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Sinks and Showers Temp Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 40.56
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {}
+    },
+    "SetpointManager:Scheduled": {
+        "DHW Loop Set Point Manager": {
+            "control_variable": "Temperature",
+            "schedule_name": "Hot Water Set Point Temp Schedule",
+            "setpoint_node_or_nodelist_name": "Water Heater Use Loop Outlet Node"
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "No",
+            "run_simulation_for_weather_file_run_periods": "Yes"
+        }
+    },
+    "Site:Location": {
+        "CHICAGO_IL_USA_WMO_725300": {
+            "elevation": 190.0,
+            "latitude": 42.0,
+            "longitude": -87.88,
+            "time_zone": -6.0
+        }
+    },
+    "Site:WaterMainsTemperature": {
+        "Site:WaterMainsTemperature 1": {
+            "annual_average_outdoor_air_temperature": 9.69,
+            "calculation_method": "Correlation",
+            "maximum_difference_in_monthly_average_outdoor_air_temperatures": 28.1
+        }
+    },
+    "Sizing:Plant": {
+        "Sizing:Plant 1": {
+            "design_loop_exit_temperature": 82.0,
+            "loop_design_temperature_difference": 11,
+            "loop_type": "Heating",
+            "plant_or_condenser_loop_name": "DHW Loop"
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "CHICAGO Ann Clg 1% Condns DB=>MWB": {
+            "barometric_pressure": 99063,
+            "daily_dry_bulb_temperature_range": 10.7,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 31.5,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23,
+            "wind_direction": 230,
+            "wind_speed": 5.3
+        },
+        "CHICAGO Ann Htg 99% Condns DB": {
+            "barometric_pressure": 99063,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -17.3,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -17.3,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 6
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "9.4"
+        }
+    },
+    "WaterHeater:Stratified": {
+        "Water Heater": {
+            "additional_destratification_conductivity": 0.1,
+            "ambient_temperature_indicator": "Schedule",
+            "ambient_temperature_schedule_name": "Ambient Temp Schedule",
+            "end_use_subcategory": "Water Heater",
+            "heater_1_capacity": 4500,
+            "heater_1_deadband_temperature_difference": 2.0,
+            "heater_1_height": 1.0,
+            "heater_1_setpoint_temperature_schedule_name": "Hot Water Set Point Temp Schedule",
+            "heater_2_capacity": 4500,
+            "heater_2_deadband_temperature_difference": 5.0,
+            "heater_2_height": 0.0,
+            "heater_2_setpoint_temperature_schedule_name": "Hot Water Set Point Temp Schedule",
+            "heater_fuel_type": "Electricity",
+            "heater_priority_control": "MasterSlave",
+            "heater_thermal_efficiency": 0.98,
+            "inlet_mode": "Fixed",
+            "maximum_temperature_limit": 82.2222,
+            "node_1_additional_loss_coefficient": 0.15,
+            "node_6_additional_loss_coefficient": 0.1,
+            "number_of_nodes": 6,
+            "off_cycle_parasitic_fuel_consumption_rate": 10,
+            "off_cycle_parasitic_fuel_type": "Electricity",
+            "off_cycle_parasitic_heat_fraction_to_tank": 0,
+            "on_cycle_parasitic_fuel_consumption_rate": 10,
+            "on_cycle_parasitic_fuel_type": "Electricity",
+            "on_cycle_parasitic_heat_fraction_to_tank": 0,
+            "tank_height": 1.4,
+            "tank_shape": "VerticalCylinder",
+            "tank_volume": 0.1893,
+            "uniform_skin_loss_coefficient_per_unit_area_to_ambient_temperature": 0.846,
+            "use_side_design_flow_rate": "Autosize",
+            "use_side_effectiveness": 1.0,
+            "use_side_inlet_node_name": "Water Heater Use Inlet Node",
+            "use_side_outlet_node_name": "Water Heater Use Outlet Node"
+        }
+    },
+    "WaterUse:Connections": {
+        "Domestic Hot Water": {
+            "connections": [
+                {
+                    "water_use_equipment_name": "Sinks"
+                },
+                {
+                    "water_use_equipment_name": "Showers"
+                }
+            ],
+            "drain_water_heat_exchanger_type": "None",
+            "inlet_node_name": "Domestic Hot Water Inlet Node",
+            "outlet_node_name": "Domestic Hot Water Outlet Node"
+        }
+    },
+    "WaterUse:Equipment": {
+        "Showers": {
+            "end_use_subcategory": "Showers",
+            "flow_rate_fraction_schedule_name": "Showers Flow Schedule",
+            "peak_flow_rate": 0.000158,
+            "target_temperature_schedule_name": "Sinks and Showers Temp Schedule"
+        },
+        "Sinks": {
+            "end_use_subcategory": "Sinks",
+            "flow_rate_fraction_schedule_name": "Sinks Flow Schedule",
+            "peak_flow_rate": 0.000158,
+            "target_temperature_schedule_name": "Sinks and Showers Temp Schedule"
+        }
+    }
+}

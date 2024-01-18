@@ -34,8 +34,6 @@ All of these objects add an optional field, no change in the epJSON
 ### Object Change: Site:GroundTemperature:Undisturbed:Xing
 Change the name of the field "Average Soil Surface Tempeature" to "Average Soil Surface Temperature".
 
-
-
 ### Object Change: DistrictHeating to DistrictHeating:Water
 Change the object name from DistrictHeating to DistrictHeating:Water.
 

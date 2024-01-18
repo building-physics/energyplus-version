@@ -9,6 +9,8 @@ class UpgradeWarning(Warning):
     pass
 
 class Change:
+    def apply_to_all(self, objects: dict) -> list: # pragma: no cover
+        raise NotImplementedError('Change object must implement the "apply_to_all" method')
     def apply(self, object_name: str, object: dict) -> list: # pragma: no cover
         raise NotImplementedError('Change object must implement the "apply" method')
     def valid(self, object) -> bool: # pragma: no cover
@@ -20,15 +22,16 @@ def do_nothing(input):
     return True
 
 class ChangeFieldName(Change):
-    def __init__(self, object: str, old_name: str, new_name: str, modify_value=None):
+    def __init__(self, object: str, old_name: str, new_name: str):
         self.object = object
         self.old_name = old_name
         self.new_name = new_name
-        self.modify_value = do_nothing
-        if modify_value is not None:
-            if not callable(modify_value):
-                raise UpgradeError('ChangeFieldName expected a callable for "modify_value", instead got "%s"' % repr(modify_value))
-            self.modify_value = modify_value
+    def apply_to_all(self, objects: dict) -> list:
+        patch = []
+        for name, object in objects.items():
+            if self.old_name in object:
+                patch.extend(self.apply(name, object))
+        return patch
     def apply(self, object_name: str, object: dict) -> list:
         object_path = '/%s/%s/' % (self.object, object_name)
         from_path = object_path + self.old_name
@@ -51,6 +54,13 @@ class RemoveField(Change):
     def apply(self, object_name: str, object: dict) -> list:
         path = '/%s/%s/%s' % (self.object, object_name, self.field)
         return [{'op': 'remove', 'path': path}]
+    def apply_to_all(self, objects: dict) -> list:
+        patch = []
+        for name, object in objects.items():
+            if self.field in object:
+                if self.check_value(object[self.field]):
+                    patch.extend(self.apply(name, object))
+        return patch
     def valid(self, object) -> bool:
         if self.field in object:
             return self.check_value(object[self.field])
@@ -63,6 +73,12 @@ class MapValues(Change):
         self.object = object
         self.field = field
         self.value_map = value_map
+    def apply_to_all(self, objects: dict) -> list:
+        patch = []
+        for name, object in objects.items():
+            if self.field in object and object[self.field] in self.value_map:
+                patch.extend(self.apply(name, object))
+        return patch
     def apply(self, object_name: str, object: dict) -> list:
         path = '/%s/%s/%s' % (self.object, object_name, self.field)
         return [{'op': 'replace', 'path': path, 'value': self.value_map[object[self.field]]}]
@@ -74,17 +90,23 @@ class MapValues(Change):
         return 'Change the values of field named "%s" as follows: %s.' % (self.field, ', '.join(['"%s" to "%s"' % (k, v) for k,v in self.value_map.items()]))
 
 class ChangeObjectName(Change):
-    def __init__(self, old_name: str, new_name: str):
-        self.old_name = old_name
+    def __init__(self, object: str, new_name: str):
+        self.object = object
         self.new_name = new_name
+    def apply_to_all(self, objects: dict) -> list:
+        if not objects:
+            return []
+        from_path = '/%s' % self.object
+        to_path = '/%s' % self.new_name
+        return [{'op': 'move', 'from': from_path, 'path': to_path}]
     def apply(self, object_name: str, object: dict) -> list:
-        from_path = '/%s/' % self.old_name
-        to_path = '/%s/' % self.new_name
+        from_path = '/%s' % self.object
+        to_path = '/%s' % self.new_name
         return [{'op': 'move', 'from': from_path, 'path': to_path}]
     def valid(self, object) -> bool:
         return True
     def describe(self) -> str:
-        return 'Change the name of the object named "%s" to "%s".' % (self.old_name, self.new_name)
+        return 'Change the name of the object named "%s" to "%s".' % (self.object, self.new_name)
 
 class SplitObject(Change):
     def __init__(self, fields_by_object: dict):
@@ -96,10 +118,12 @@ class Upgrade:
     def generate_patch(self, prev):
         patch = []
         for change in self.changes():
-            if change.object in prev:
-                for name, obj in prev[change.object].items():
-                    if change.valid(obj):
-                        patch.extend(change.apply(name, obj))
+            objects = prev.get(change.object, {})
+            patch.extend(change.apply_to_all(objects))
+            #if change.object in prev:
+            #    for name, obj in prev[change.object].items():
+            #        if change.valid(obj):
+            #            patch.extend(change.apply(name, obj))
         return patch
     def describe(self):
         change_by_object = {}

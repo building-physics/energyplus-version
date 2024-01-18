@@ -13,6 +13,7 @@ class Upgrade(ev.EnergyPlusUpgrade):
                                'average_soil_surface_tempeature',
                                'average_soil_surface_temperature'),
 
+            ev.ChangeObjectName('DistrictHeating', 'DistrictHeating:Water'),
             ev.MapValues('OtherEquipment', 'fuel_use', steam_map),
             ev.MapValues('Exterior:FuelEquipment', 'fuel_use_type', steam_map),
             ev.MapValues('ZoneHVAC:HybridUnitaryHVAC', 'first_fuel_type', steam_map),

@@ -54,22 +54,6 @@ class Upgrade(ev.EnergyPlusUpgrade):
             ev.ChangeFieldName('Construction:ComplexFenestrationState',
                                'gap_4_directional_back_absoptance_matrix_name',
                                'gap_4_directional_back_absorptance_matrix_name'),
-
-            
-            ev.ChangeFieldName('Construction:ComplexFenestrationState',
-                               'Gap X Directional Back Absoptance Matrix Name',
-                               'Gap X Directional Back Absorptance Matrix Name'),
-
-            ev.ChangeFieldName('Construction:ComplexFenestrationState',
-                               'Gap X Directional Front Absoptance Matrix Name',
-                               'Gap X Directional Front Absorptance Matrix Name'),
-
-            
-            ev.ChangeFieldName('Construction:ComplexFenestrationState',
-                               'Gap X Directional Back Absoptance Matrix Name',
-                               'Gap X Directional Back Absorptance Matrix Name'),
-
-
             ev.ChangeFieldName('Coil:Heating:Fuel',
                                'parasitic_electric_load',
                                'on_cycle_parasitic_electric_load'),

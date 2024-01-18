@@ -34,6 +34,42 @@ All of these objects add an optional field, no change in the epJSON
 ### Object Change: Site:GroundTemperature:Undisturbed:Xing
 Change the name of the field "Average Soil Surface Tempeature" to "Average Soil Surface Temperature".
 
+
+
+
+
+### Object Change: Construction:ComplexFenestrationState
+Change the name of fields:
+
+    - Fields 11, 17, 23, 29, 35 from "Outside Layer X Directional Front Absoptance Matrix Name" to "Outside Layer X Directional Front Absorptance Matrix Name"
+    - Fields 12, 18, 24, 30, 36 from "Outside Layer X Directional Back Absoptance Matrix Name" to "Outside Layer X Directional Back Absorptance Matrix Name"
+    - Fields 14, 20, 26, 32 from "Gap X Directional Front Absoptance Matrix Name" to "Gap X Directional Front Absorptance Matrix Name"
+    - Fields 15, 21, 27, 33 from "Gap X Directional Back Absoptance Matrix Name" to "Gap X Directional Back Absorptance Matrix Name".
+
+### Object Change: Coil:Heating:Fuel
+Change the name of fields from "Parasitic Electric Load {W}" to "On Cycle Parasitic Electric Load {W}" and from "Parasitic Fuel Load {W}" to "Off Cycle Parasitic Fuel Load {W}".
+
+### Object Change: Coil:Heating:Gas:MultiStage
+Change the name of fields:
+
+    - "Parasitic Gas Load {W}" to "Off Cycle Parasitic Gas Load {W}"
+    - "Stage 1 Parasitic Electric Load {W}" to "Stage 1 On Cycle Parasitic Electric Load {W}"
+    - "Stage 2 Parasitic Electric Load {W}" to "Stage 2 On Cycle Parasitic Electric Load {W}"
+    - "Stage 3 Parasitic Electric Load {W}" to "Stage 3 On Cycle Parasitic Electric Load {W}"
+    - "Stage 4 Parasitic Electric Load {W}" to "Stage 4 On Cycle Parasitic Electric Load {W}".
+
+### Object Change: Coil:Heating:Desuperheater
+Change the name of the field "Parasitic Electric Load {W}" to "On Cycle Parasitic Electric Load {W}".
+
+### Object Change: Boiler:HotWater
+Change the name of the field "Parasitic Electric Load {W}" to "On Cycle Parasitic Electric Load {W}".
+
+### Object Change: SurfaceProperty:LocalEnvironment
+Change the name of the field "External Shading Fraction Schedule Name" to "Sunlit Fraction Schedule Name".
+
+### Object Change: LoadProfile:Plant
+Adds optional fields, no change to the epJSON
+
 ### Object Change: DistrictHeating to DistrictHeating:Water
 Change the object name from DistrictHeating to DistrictHeating:Water.
 

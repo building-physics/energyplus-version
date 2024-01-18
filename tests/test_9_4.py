@@ -34,11 +34,29 @@ air_boundary_warnings = {
     }
 }
 
+air_boundary_expected = {
+    "Construction:AirBoundary": {
+        "Air Wall": {
+            "air_exchange_method": "SimpleMixing",
+            "simple_mixing_air_changes_per_hour": 0.5
+        }
+    }
+}
+
+def compare(left, right):
+    return all((left.get(k) == v for k, v in right.items()))
+
 def test_air_boundary():
     upgrade = Upgrade()
     patch = upgrade.generate_patch(air_boundary)
     assert len(patch) == 2
+    jp = jsonpatch.JsonPatch(patch)
+    new_epjson = jp.apply(air_boundary)
+    assert compare(air_boundary_expected["Construction:AirBoundary"]["Air Wall"],new_epjson["Construction:AirBoundary"]["Air Wall"])
     with pytest.warns(UpgradeWarning) as record:
         patch = upgrade.generate_patch(air_boundary_warnings)
     assert len(patch) == 2
+    jp = jsonpatch.JsonPatch(patch)
+    new_epjson = jp.apply(air_boundary)
+    assert compare(air_boundary_expected["Construction:AirBoundary"]["Air Wall"],new_epjson["Construction:AirBoundary"]["Air Wall"])
     assert len(record) == 2

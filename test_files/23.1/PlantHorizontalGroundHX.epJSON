@@ -1,0 +1,436 @@
+{
+    "Branch": {
+        "Plant Demand Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Plant Demand Inlet Node",
+                    "component_name": "Load Profile",
+                    "component_object_type": "LoadProfile:Plant",
+                    "component_outlet_node_name": "Plant Demand Outlet Node"
+                }
+            ]
+        },
+        "Plant Supply Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Plant Supply Inlet Node",
+                    "component_name": "Cond Circ Pump",
+                    "component_object_type": "Pump:VariableSpeed",
+                    "component_outlet_node_name": "Plant Supply Intermediate Node"
+                },
+                {
+                    "component_inlet_node_name": "Plant Supply Intermediate Node",
+                    "component_name": "My Pipe Circuit",
+                    "component_object_type": "GroundHeatExchanger:HorizontalTrench",
+                    "component_outlet_node_name": "Plant Supply Outlet Node"
+                }
+            ]
+        }
+    },
+    "BranchList": {
+        "Plant Demand Side Branches": {
+            "branches": [
+                {
+                    "branch_name": "Plant Demand Branch"
+                }
+            ]
+        },
+        "Plant Supply Side Branches": {
+            "branches": [
+                {
+                    "branch_name": "Plant Supply Branch"
+                }
+            ]
+        }
+    },
+    "Building": {
+        "Piping System Example": {
+            "loads_convergence_tolerance_value": 0.05,
+            "maximum_number_of_warmup_days": 35,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.05,
+            "terrain": "Suburbs"
+        }
+    },
+    "FluidProperties:GlycolConcentration": {
+        "PropyleneGlycol70Percent": {
+            "glycol_concentration": 0.7,
+            "glycol_type": "PropyleneGlycol"
+        }
+    },
+    "FluidProperties:Name": {
+        "FluidProperties:Name 1": {
+            "fluid_name": "PropyleneGlycol",
+            "fluid_type": "Glycol"
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "GroundHeatExchanger:HorizontalTrench": {
+        "My Pipe Circuit": {
+            "burial_depth": 1.25,
+            "design_flow_rate": 0.004,
+            "evapotranspiration_ground_cover_parameter": 0.408,
+            "horizontal_spacing_between_pipes": 2.0,
+            "inlet_node_name": "Plant Supply Intermediate Node",
+            "number_of_trenches": 2,
+            "outlet_node_name": "Plant Supply Outlet Node",
+            "pipe_density": 641,
+            "pipe_inner_diameter": 0.016,
+            "pipe_outer_diameter": 0.02667,
+            "pipe_specific_heat": 2405,
+            "pipe_thermal_conductivity": 0.3895,
+            "soil_density": 962,
+            "soil_moisture_content_percent": 30,
+            "soil_moisture_content_percent_at_saturation": 50,
+            "soil_specific_heat": 2576,
+            "soil_thermal_conductivity": 1.08,
+            "trench_length_in_pipe_axial_direction": 75,
+            "undisturbed_ground_temperature_model_name": "KATemps",
+            "undisturbed_ground_temperature_model_type": "Site:GroundTemperature:Undisturbed:KusudaAchenbach"
+        }
+    },
+    "LoadProfile:Plant": {
+        "Load Profile": {
+            "flow_rate_fraction_schedule_name": "FlowFracSchedule",
+            "inlet_node_name": "Plant Demand Inlet Node",
+            "load_schedule_name": "LoadSchedule",
+            "outlet_node_name": "Plant Demand Outlet Node",
+            "peak_flow_rate": 0.004
+        }
+    },
+    "NodeList": {
+        "Main Loop Setpoint Node List": {
+            "nodes": [
+                {
+                    "node_name": "Plant Supply Outlet Node"
+                }
+            ]
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Pump Mass Flow Rate"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Ground Heat Exchanger Mass Flow Rate"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Ground Heat Exchanger Inlet Temperature"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Ground Heat Exchanger Outlet Temperature"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Ground Heat Exchanger Fluid Heat Transfer Rate"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "IDF"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "PlantEquipmentList": {
+        "HX Equipment": {
+            "equipment": [
+                {
+                    "equipment_name": "My Pipe Circuit",
+                    "equipment_object_type": "GroundHeatExchanger:HorizontalTrench"
+                }
+            ]
+        }
+    },
+    "PlantEquipmentOperation:Uncontrolled": {
+        "Year Round Operation": {
+            "equipment_list_name": "HX Equipment"
+        }
+    },
+    "PlantEquipmentOperationSchemes": {
+        "Loop Operation": {
+            "control_scheme_1_name": "Year Round Operation",
+            "control_scheme_1_object_type": "PlantEquipmentOperation:Uncontrolled",
+            "control_scheme_1_schedule_name": "AlwaysOnSchedule"
+        }
+    },
+    "PlantLoop": {
+        "Plant Loop": {
+            "demand_side_branch_list_name": "Plant Demand Side Branches",
+            "demand_side_inlet_node_name": "Plant Demand Inlet Node",
+            "demand_side_outlet_node_name": "Plant Demand Outlet Node",
+            "fluid_type": "UserDefinedFluidType",
+            "load_distribution_scheme": "SequentialLoad",
+            "loop_temperature_setpoint_node_name": "Plant Supply Outlet Node",
+            "maximum_loop_flow_rate": 0.004,
+            "maximum_loop_temperature": 80,
+            "minimum_loop_flow_rate": 0,
+            "minimum_loop_temperature": -30,
+            "plant_equipment_operation_scheme_name": "Loop Operation",
+            "plant_loop_volume": "Autocalculate",
+            "plant_side_branch_list_name": "Plant Supply Side Branches",
+            "plant_side_inlet_node_name": "Plant Supply Inlet Node",
+            "plant_side_outlet_node_name": "Plant Supply Outlet Node",
+            "user_defined_fluid_type": "PropyleneGlycol70Percent"
+        }
+    },
+    "Pump:VariableSpeed": {
+        "Cond Circ Pump": {
+            "coefficient_1_of_the_part_load_performance_curve": 0,
+            "coefficient_2_of_the_part_load_performance_curve": 1,
+            "coefficient_3_of_the_part_load_performance_curve": 0,
+            "coefficient_4_of_the_part_load_performance_curve": 0,
+            "design_maximum_flow_rate": 0.004,
+            "design_minimum_flow_rate": 0,
+            "design_power_consumption": 25,
+            "design_pump_head": 5000,
+            "fraction_of_motor_inefficiencies_to_fluid_stream": 0.0,
+            "inlet_node_name": "Plant Supply Inlet Node",
+            "motor_efficiency": 0.87,
+            "outlet_node_name": "Plant Supply Intermediate Node",
+            "pump_control_type": "Intermittent"
+        }
+    },
+    "RunPeriod": {
+        "Annual Run": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 31,
+            "end_month": 12,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "AlwaysOnSchedule": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1
+                }
+            ],
+            "schedule_type_limits_name": "On/Off"
+        },
+        "FlowFracSchedule": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "LoadSchedule": {
+            "data": [
+                {
+                    "field": "Through: 04/30"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 2000
+                },
+                {
+                    "field": "Through: 09/30"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": -3000
+                },
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 2000
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Main Loop Temp Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 30.0
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "Fraction": {
+            "lower_limit_value": 0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1
+        },
+        "On/Off": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 1
+        },
+        "Temperature": {
+            "lower_limit_value": -100,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 200
+        }
+    },
+    "SetpointManager:Scheduled": {
+        "Main Loop Setpoint Manager": {
+            "control_variable": "Temperature",
+            "schedule_name": "Main Loop Temp Sch",
+            "setpoint_node_or_nodelist_name": "Main Loop Setpoint Node List"
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "Yes",
+            "run_simulation_for_weather_file_run_periods": "No"
+        }
+    },
+    "Site:GroundTemperature:Undisturbed:KusudaAchenbach": {
+        "KATemps": {
+            "average_amplitude_of_surface_temperature": 12.8,
+            "average_soil_surface_temperature": 15.5,
+            "phase_shift_of_minimum_surface_temperature": 17.3,
+            "soil_density": 962,
+            "soil_specific_heat": 2576,
+            "soil_thermal_conductivity": 1.08
+        }
+    },
+    "Site:Location": {
+        "Denver Centennial CO USA WMO=724666": {
+            "elevation": 1793.0,
+            "latitude": 39.57,
+            "longitude": -104.85,
+            "time_zone": -7.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "Denver Centennial Ann Clg 1% Condns DB=>MWB": {
+            "barometric_pressure": 81560.0,
+            "daily_dry_bulb_temperature_range": 15.2,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 32,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 15.5,
+            "wind_direction": 0,
+            "wind_speed": 4.9
+        },
+        "Denver Centennial Ann Htg 99.6% Condns DB": {
+            "barometric_pressure": 81560.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -18.8,
+            "month": 12,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -18.8,
+            "wind_direction": 340,
+            "wind_speed": 3
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 1
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "23.1"
+        }
+    }
+}

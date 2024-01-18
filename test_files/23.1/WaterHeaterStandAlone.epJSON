@@ -1,0 +1,692 @@
+{
+    "Building": {
+        "Water Heater Stand-Alone Example": {
+            "loads_convergence_tolerance_value": 0.04,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.04,
+            "terrain": "Suburbs"
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "OutdoorAir:Node": {
+        "Outdoor Electric Tank OA Node": {}
+    },
+    "Output:Meter": {
+        "Output:Meter 1": {
+            "key_name": "WaterSystems:NaturalGas",
+            "reporting_frequency": "Daily"
+        },
+        "Output:Meter 2": {
+            "key_name": "WaterSystems:Water",
+            "reporting_frequency": "Daily"
+        },
+        "Output:Meter 3": {
+            "key_name": "WaterSystems:NaturalGas",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter 4": {
+            "key_name": "WaterSystems:Water",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter 5": {
+            "key_name": "WaterSystems:NaturalGas",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter 6": {
+            "key_name": "WaterSystems:Water",
+            "reporting_frequency": "RunPeriod"
+        }
+    },
+    "Output:Meter:MeterFileOnly": {
+        "Output:Meter:MeterFileOnly 1": {
+            "key_name": "NaturalGas:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 2": {
+            "key_name": "NaturalGas:Plant",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 3": {
+            "key_name": "NaturalGas:Facility",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 4": {
+            "key_name": "NaturalGas:Plant",
+            "reporting_frequency": "RunPeriod"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Site Mains Water Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Tank Temperature"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Heat Loss Rate"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Heat Loss Energy"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Use Side Mass Flow Rate"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Use Side Inlet Temperature"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Use Side Outlet Temperature"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Use Side Heat Transfer Rate"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Use Side Heat Transfer Energy"
+        },
+        "Output:Variable 10": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Source Side Mass Flow Rate"
+        },
+        "Output:Variable 11": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Source Side Inlet Temperature"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Source Side Outlet Temperature"
+        },
+        "Output:Variable 13": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Source Side Heat Transfer Rate"
+        },
+        "Output:Variable 14": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Source Side Heat Transfer Energy"
+        },
+        "Output:Variable 15": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Off Cycle Parasitic Tank Heat Transfer Rate"
+        },
+        "Output:Variable 16": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Off Cycle Parasitic Tank Heat Transfer Energy"
+        },
+        "Output:Variable 17": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater On Cycle Parasitic Tank Heat Transfer Rate"
+        },
+        "Output:Variable 18": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater On Cycle Parasitic Tank Heat Transfer Energy"
+        },
+        "Output:Variable 19": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Total Demand Heat Transfer Rate"
+        },
+        "Output:Variable 20": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Total Demand Heat Transfer Energy"
+        },
+        "Output:Variable 21": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Heating Rate"
+        },
+        "Output:Variable 22": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Heating Energy"
+        },
+        "Output:Variable 23": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Unmet Demand Heat Transfer Rate"
+        },
+        "Output:Variable 24": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Unmet Demand Heat Transfer Energy"
+        },
+        "Output:Variable 25": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Venting Heat Transfer Rate"
+        },
+        "Output:Variable 26": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Venting Heat Transfer Energy"
+        },
+        "Output:Variable 27": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Net Heat Transfer Rate"
+        },
+        "Output:Variable 28": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Net Heat Transfer Energy"
+        },
+        "Output:Variable 29": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Cycle On Count"
+        },
+        "Output:Variable 30": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Runtime Fraction"
+        },
+        "Output:Variable 31": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Part Load Ratio"
+        },
+        "Output:Variable 32": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater NaturalGas Rate"
+        },
+        "Output:Variable 33": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater NaturalGas Energy"
+        },
+        "Output:Variable 34": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Electricity Rate"
+        },
+        "Output:Variable 35": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Electricity Energy"
+        },
+        "Output:Variable 36": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Off Cycle Parasitic NaturalGas Rate"
+        },
+        "Output:Variable 37": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Off Cycle Parasitic NaturalGas Energy"
+        },
+        "Output:Variable 38": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater On Cycle Parasitic NaturalGas Rate"
+        },
+        "Output:Variable 39": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater On Cycle Parasitic NaturalGas Energy"
+        },
+        "Output:Variable 40": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Off Cycle Parasitic Electricity Rate"
+        },
+        "Output:Variable 41": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Off Cycle Parasitic Electricity Energy"
+        },
+        "Output:Variable 42": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater On Cycle Parasitic Electricity Rate"
+        },
+        "Output:Variable 43": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater On Cycle Parasitic Electricity Energy"
+        },
+        "Output:Variable 44": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Water Volume Flow Rate"
+        },
+        "Output:Variable 45": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Water Volume"
+        },
+        "Output:Variable 46": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Temperature Node 1"
+        },
+        "Output:Variable 47": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Temperature Node 2"
+        },
+        "Output:Variable 48": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Temperature Node 3"
+        },
+        "Output:Variable 49": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Temperature Node 4"
+        },
+        "Output:Variable 50": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Temperature Node 5"
+        },
+        "Output:Variable 51": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Temperature Node 6"
+        },
+        "Output:Variable 52": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Temperature Node 7"
+        },
+        "Output:Variable 53": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Temperature Node 8"
+        },
+        "Output:Variable 54": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Temperature Node 9"
+        },
+        "Output:Variable 55": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Temperature Node 10"
+        },
+        "Output:Variable 56": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Heater 1 Runtime Fraction"
+        },
+        "Output:Variable 57": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Heater 2 Runtime Fraction"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 31,
+            "end_month": 12,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "Ambient Temp Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 22.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Constant Mains Temp Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 12.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Hot Water Demand Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 3:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "UNTIL: 5:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "UNTIL: 7:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "UNTIL: 7:10"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "UNTIL: 10:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "UNTIL: 10:30"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "UNTIL: 13:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "UNTIL: 13:10"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "UNTIL: 16:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "UNTIL: 22:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "Hot Water Setpoint Temp Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 60.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "Fraction": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1.0
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "Yes",
+            "run_simulation_for_weather_file_run_periods": "No"
+        }
+    },
+    "Site:Location": {
+        "CHICAGO_IL_USA_WMO_725300": {
+            "elevation": 190.0,
+            "latitude": 42.0,
+            "longitude": -87.88,
+            "time_zone": -6.0
+        }
+    },
+    "Site:WaterMainsTemperature": {
+        "Site:WaterMainsTemperature 1": {
+            "annual_average_outdoor_air_temperature": 9.69,
+            "calculation_method": "Correlation",
+            "maximum_difference_in_monthly_average_outdoor_air_temperatures": 28.1
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "CHICAGO Ann Clg 1% Condns DB=>MWB": {
+            "barometric_pressure": 99063,
+            "daily_dry_bulb_temperature_range": 10.7,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 31.5,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23,
+            "wind_direction": 230,
+            "wind_speed": 5.3
+        },
+        "CHICAGO Ann Htg 99% Condns DB": {
+            "barometric_pressure": 99063,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -17.3,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -17.3,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 6
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "23.1"
+        }
+    },
+    "WaterHeater:Mixed": {
+        "Mixed Gas Tank": {
+            "ambient_temperature_indicator": "Schedule",
+            "ambient_temperature_schedule_name": "Ambient Temp Schedule",
+            "cold_water_supply_temperature_schedule_name": "Constant Mains Temp Schedule",
+            "heater_control_type": "Modulate",
+            "heater_fuel_type": "NaturalGas",
+            "heater_maximum_capacity": 11712,
+            "heater_minimum_capacity": 0,
+            "heater_thermal_efficiency": 0.8,
+            "maximum_temperature_limit": 82.2222,
+            "off_cycle_loss_coefficient_to_ambient_temperature": 6.0,
+            "off_cycle_parasitic_fuel_type": "NaturalGas",
+            "off_cycle_parasitic_heat_fraction_to_tank": 0.8,
+            "on_cycle_loss_coefficient_to_ambient_temperature": 6.0,
+            "peak_use_flow_rate": 0.000379,
+            "setpoint_temperature_schedule_name": "Hot Water Setpoint Temp Schedule",
+            "tank_volume": 0.151,
+            "use_flow_rate_fraction_schedule_name": "Hot Water Demand Schedule"
+        },
+        "Outdoor Electric Tank": {
+            "ambient_temperature_indicator": "Outdoors",
+            "ambient_temperature_outdoor_air_node_name": "Outdoor Electric Tank OA Node",
+            "cold_water_supply_temperature_schedule_name": "Constant Mains Temp Schedule",
+            "deadband_temperature_difference": 2.0,
+            "heater_control_type": "Cycle",
+            "heater_fuel_type": "Electricity",
+            "heater_maximum_capacity": 11712,
+            "heater_thermal_efficiency": 0.95,
+            "maximum_temperature_limit": 82.2222,
+            "off_cycle_loss_coefficient_to_ambient_temperature": 2.36,
+            "off_cycle_parasitic_fuel_consumption_rate": 15,
+            "off_cycle_parasitic_fuel_type": "Electricity",
+            "off_cycle_parasitic_heat_fraction_to_tank": 0,
+            "on_cycle_loss_coefficient_to_ambient_temperature": 2.36,
+            "on_cycle_parasitic_fuel_consumption_rate": 15,
+            "on_cycle_parasitic_fuel_type": "Electricity",
+            "on_cycle_parasitic_heat_fraction_to_tank": 0,
+            "peak_use_flow_rate": 0.000379,
+            "setpoint_temperature_schedule_name": "Hot Water Setpoint Temp Schedule",
+            "tank_volume": 0.151,
+            "use_flow_rate_fraction_schedule_name": "Hot Water Demand Schedule"
+        },
+        "Tankless": {
+            "ambient_temperature_indicator": "Schedule",
+            "ambient_temperature_schedule_name": "Ambient Temp Schedule",
+            "heater_control_type": "Modulate",
+            "heater_fuel_type": "Electricity",
+            "heater_maximum_capacity": 11712,
+            "heater_minimum_capacity": 0,
+            "heater_thermal_efficiency": 0.95,
+            "maximum_temperature_limit": 82.2222,
+            "off_cycle_parasitic_fuel_consumption_rate": 10,
+            "off_cycle_parasitic_fuel_type": "Electricity",
+            "off_cycle_parasitic_heat_fraction_to_tank": 0,
+            "on_cycle_parasitic_fuel_consumption_rate": 30,
+            "on_cycle_parasitic_fuel_type": "Electricity",
+            "on_cycle_parasitic_heat_fraction_to_tank": 0,
+            "peak_use_flow_rate": 0.000379,
+            "setpoint_temperature_schedule_name": "Hot Water Setpoint Temp Schedule",
+            "tank_volume": 0.003785,
+            "use_flow_rate_fraction_schedule_name": "Hot Water Demand Schedule"
+        }
+    },
+    "WaterHeater:Stratified": {
+        "Stratified Tank": {
+            "additional_destratification_conductivity": 0.1,
+            "ambient_temperature_indicator": "Schedule",
+            "ambient_temperature_schedule_name": "Ambient Temp Schedule",
+            "heater_1_capacity": 4500,
+            "heater_1_deadband_temperature_difference": 2.0,
+            "heater_1_height": 1.0,
+            "heater_1_setpoint_temperature_schedule_name": "Hot Water Setpoint Temp Schedule",
+            "heater_2_capacity": 4500,
+            "heater_2_deadband_temperature_difference": 5.0,
+            "heater_2_height": 0.0,
+            "heater_2_setpoint_temperature_schedule_name": "Hot Water Setpoint Temp Schedule",
+            "heater_fuel_type": "Electricity",
+            "heater_priority_control": "MasterSlave",
+            "heater_thermal_efficiency": 0.98,
+            "inlet_mode": "Fixed",
+            "maximum_temperature_limit": 82.2222,
+            "node_1_additional_loss_coefficient": 0.15,
+            "node_10_additional_loss_coefficient": 0.1,
+            "number_of_nodes": 10,
+            "off_cycle_parasitic_fuel_type": "Electricity",
+            "on_cycle_parasitic_fuel_type": "Electricity",
+            "peak_use_flow_rate": 0.000189,
+            "tank_height": 1.4,
+            "tank_shape": "VerticalCylinder",
+            "tank_volume": 0.17,
+            "uniform_skin_loss_coefficient_per_unit_area_to_ambient_temperature": 0.846,
+            "use_flow_rate_fraction_schedule_name": "Hot Water Demand Schedule"
+        }
+    }
+}

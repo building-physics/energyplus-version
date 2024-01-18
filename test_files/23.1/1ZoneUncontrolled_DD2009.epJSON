@@ -1,0 +1,799 @@
+{
+    "Building": {
+        "Simple One Zone (no roof-no floor)": {
+            "loads_convergence_tolerance_value": 0.04,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0,
+            "solar_distribution": "MinimalShadowing",
+            "temperature_convergence_tolerance_value": 0.4,
+            "terrain": "Suburbs"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "Zn001:Ceiling": {
+            "construction_name": "R13WALL",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Floor": {
+            "construction_name": "Slab",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall001": {
+            "construction_name": "R13WALL",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall002": {
+            "construction_name": "R13WALL",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall003": {
+            "construction_name": "R13WALL",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall004": {
+            "construction_name": "R13WALL",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        }
+    },
+    "Construction": {
+        "R13WALL": {
+            "outside_layer": "R13LAYER"
+        },
+        "Slab": {
+            "outside_layer": "Heavyish"
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "World",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "HeatBalanceAlgorithm": {
+        "HeatBalanceAlgorithm 1": {
+            "algorithm": "ConductionTransferFunction"
+        }
+    },
+    "Material": {
+        "Heavyish": {
+            "conductivity": 1.4,
+            "density": 2000,
+            "roughness": "Rough",
+            "solar_absorptance": 0.8,
+            "specific_heat": 1000,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.2,
+            "visible_absorptance": 0.7
+        }
+    },
+    "Material:NoMass": {
+        "R13LAYER": {
+            "roughness": "Rough",
+            "solar_absorptance": 0.75,
+            "thermal_absorptance": 0.9,
+            "thermal_resistance": 2.290965,
+            "visible_absorptance": 0.75
+        }
+    },
+    "Output:Constructions": {
+        "Output:Constructions 1": {
+            "details_type_1": "Constructions"
+        }
+    },
+    "Output:Meter:MeterFileOnly": {
+        "Output:Meter:MeterFileOnly 1": {
+            "key_name": "EnergyTransfer:Building",
+            "reporting_frequency": "Hourly"
+        },
+        "Output:Meter:MeterFileOnly 2": {
+            "key_name": "EnergyTransfer:Facility",
+            "reporting_frequency": "Hourly"
+        }
+    },
+    "Output:Schedules": {
+        "Output:Schedules 1": {
+            "key_field": "Timestep"
+        },
+        "Output:Schedules 2": {
+            "key_field": "Hourly"
+        }
+    },
+    "Output:Surfaces:Drawing": {
+        "Output:Surfaces:Drawing 1": {
+            "report_type": "DXF"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Wetbulb Temperature"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Dewpoint Temperature"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Humidity Ratio"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Relative Humidity"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Barometric Pressure"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Total Sky Cover"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Opaque Sky Cover"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Sky Temperature"
+        },
+        "Output:Variable 10": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Diffuse Solar Radiation Rate per Area"
+        },
+        "Output:Variable 11": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Direct Solar Radiation Rate per Area"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Mean Air Temperature"
+        },
+        "Output:Variable 13": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Inside Face Convection Heat Transfer Coefficient"
+        },
+        "Output:Variable 14": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Outside Face Convection Heat Transfer Coefficient"
+        },
+        "Output:Variable 15": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Outside Face Incident Solar Radiation Rate per Area"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "RunPeriod": {
+        "TestRun": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 31,
+            "end_month": 12,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Day:Hourly": {
+        "TDefaultProfile": {
+            "hour_1": 0.88,
+            "hour_2": 0.92,
+            "hour_3": 0.95,
+            "hour_4": 0.98,
+            "hour_5": 1.0,
+            "hour_6": 0.98,
+            "hour_7": 0.91,
+            "hour_8": 0.74,
+            "hour_9": 0.55,
+            "hour_10": 0.38,
+            "hour_11": 0.23,
+            "hour_12": 0.13,
+            "hour_13": 0.05,
+            "hour_14": 0,
+            "hour_15": 0,
+            "hour_16": 0.06,
+            "hour_17": 0.14,
+            "hour_18": 0.24,
+            "hour_19": 0.39,
+            "hour_20": 0.5,
+            "hour_21": 0.59,
+            "hour_22": 0.68,
+            "hour_23": 0.75,
+            "hour_24": 0.82,
+            "schedule_type_limits_name": "Fraction"
+        },
+        "WBDifProfile": {
+            "hour_1": 0,
+            "hour_2": 1,
+            "hour_3": 2,
+            "hour_4": 3,
+            "hour_5": 4,
+            "hour_6": 5,
+            "hour_7": 6,
+            "hour_8": 7,
+            "hour_9": 8,
+            "hour_10": 9,
+            "hour_11": 10,
+            "hour_12": 11,
+            "hour_13": 12,
+            "hour_14": 11,
+            "hour_15": 10,
+            "hour_16": 9,
+            "hour_17": 8,
+            "hour_18": 7,
+            "hour_19": 6,
+            "hour_20": 5,
+            "hour_21": 4,
+            "hour_22": 3,
+            "hour_23": 2,
+            "hour_24": 1,
+            "schedule_type_limits_name": "Any Number"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "Fraction": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1.0
+        },
+        "Percent": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 100.0
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "Yes",
+            "run_simulation_for_weather_file_run_periods": "No"
+        }
+    },
+    "Site:Location": {
+        "Atlanta": {
+            "elevation": 313,
+            "latitude": 33.64,
+            "longitude": -84.43,
+            "time_zone": -5
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "Atlanta Apr 21 cooling": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.395,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 2.175,
+            "barometric_pressure": 97620,
+            "daily_dry_bulb_temperature_range": 12.8,
+            "daily_wet_bulb_temperature_range": 5.5,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulbProfileDefaultMultipliers",
+            "maximum_dry_bulb_temperature": 26.4,
+            "month": 4,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 17.1,
+            "wind_direction": 0.0,
+            "wind_speed": 0.0
+        },
+        "Atlanta Aug 21 cooling": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.593,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 1.679,
+            "barometric_pressure": 97620,
+            "daily_dry_bulb_temperature_range": 10.8,
+            "daily_wet_bulb_temperature_range": 3.4,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulbProfileDefaultMultipliers",
+            "maximum_dry_bulb_temperature": 32.4,
+            "month": 8,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23.5,
+            "wind_direction": 0.0,
+            "wind_speed": 0.0
+        },
+        "Atlanta Dec 21 cooling": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.32,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 2.514,
+            "barometric_pressure": 97620,
+            "daily_dry_bulb_temperature_range": 10.9,
+            "daily_wet_bulb_temperature_range": 7.4,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulbProfileDefaultMultipliers",
+            "maximum_dry_bulb_temperature": 17.9,
+            "month": 12,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 14.8,
+            "wind_direction": 0.0,
+            "wind_speed": 0.0
+        },
+        "Atlanta Feb 21 cooling": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.349,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 2.316,
+            "barometric_pressure": 97620,
+            "daily_dry_bulb_temperature_range": 11.8,
+            "daily_wet_bulb_temperature_range": 7.2,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulbProfileDefaultMultipliers",
+            "maximum_dry_bulb_temperature": 18.8,
+            "month": 2,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 14.0,
+            "wind_direction": 0.0,
+            "wind_speed": 0.0
+        },
+        "Atlanta Jan 21 cooling": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.325,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 2.461,
+            "barometric_pressure": 97620,
+            "daily_dry_bulb_temperature_range": 11.6,
+            "daily_wet_bulb_temperature_range": 8,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulbProfileDefaultMultipliers",
+            "maximum_dry_bulb_temperature": 16.9,
+            "month": 1,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 13.2,
+            "wind_direction": 0.0,
+            "wind_speed": 0.0
+        },
+        "Atlanta Jul 21 cooling": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.556,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 1.779,
+            "barometric_pressure": 97620,
+            "daily_dry_bulb_temperature_range": 11.5,
+            "daily_wet_bulb_temperature_range": 3.5,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulbProfileDefaultMultipliers",
+            "maximum_dry_bulb_temperature": 33.3,
+            "month": 7,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23.5,
+            "wind_direction": 0.0,
+            "wind_speed": 0.0
+        },
+        "Atlanta Jul 24 WB diff schedule": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.556,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 1.779,
+            "barometric_pressure": 97620,
+            "daily_dry_bulb_temperature_range": 11.5,
+            "daily_wet_bulb_temperature_range": 8,
+            "day_of_month": 24,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_day_schedule_name": "WBDifProfile",
+            "humidity_condition_type": "WetBulbProfileDifferenceSchedule",
+            "maximum_dry_bulb_temperature": 33.3,
+            "month": 7,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23.5,
+            "wind_direction": 0.0,
+            "wind_speed": 0.0
+        },
+        "Atlanta July 22 custom WB profile": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.556,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 1.779,
+            "barometric_pressure": 97620,
+            "daily_dry_bulb_temperature_range": 11.5,
+            "daily_wet_bulb_temperature_range": 3.5,
+            "day_of_month": 22,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_day_schedule_name": "TDefaultProfile",
+            "humidity_condition_type": "WetBulbProfileMultiplierSchedule",
+            "maximum_dry_bulb_temperature": 33.3,
+            "month": 7,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23.5,
+            "wind_direction": 0.0,
+            "wind_speed": 0.0
+        },
+        "Atlanta July 23 custom DB/WB profile": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.556,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 1.779,
+            "barometric_pressure": 97620,
+            "daily_dry_bulb_temperature_range": 11.5,
+            "daily_wet_bulb_temperature_range": 3.5,
+            "day_of_month": 23,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "dry_bulb_temperature_range_modifier_day_schedule_name": "TDefaultProfile",
+            "dry_bulb_temperature_range_modifier_type": "MultiplierSchedule",
+            "humidity_condition_day_schedule_name": "TDefaultProfile",
+            "humidity_condition_type": "WetBulbProfileMultiplierSchedule",
+            "maximum_dry_bulb_temperature": 33.3,
+            "month": 7,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23.5,
+            "wind_direction": 0.0,
+            "wind_speed": 0.0
+        },
+        "Atlanta Jun 21 cooling": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.505,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 1.892,
+            "barometric_pressure": 97620,
+            "daily_dry_bulb_temperature_range": 11.4,
+            "daily_wet_bulb_temperature_range": 3.7,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulbProfileDefaultMultipliers",
+            "maximum_dry_bulb_temperature": 31.8,
+            "month": 6,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 22.3,
+            "wind_direction": 0.0,
+            "wind_speed": 0.0
+        },
+        "Atlanta Mar 21 cooling": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.383,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 2.176,
+            "barometric_pressure": 97620,
+            "daily_dry_bulb_temperature_range": 12.9,
+            "daily_wet_bulb_temperature_range": 6.6,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulbProfileDefaultMultipliers",
+            "maximum_dry_bulb_temperature": 22.9,
+            "month": 3,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 14.9,
+            "wind_direction": 0.0,
+            "wind_speed": 0.0
+        },
+        "Atlanta May 21 cooling": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.448,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 2.028,
+            "barometric_pressure": 97620,
+            "daily_dry_bulb_temperature_range": 11.3,
+            "daily_wet_bulb_temperature_range": 4.4,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulbProfileDefaultMultipliers",
+            "maximum_dry_bulb_temperature": 29.1,
+            "month": 5,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 20.5,
+            "wind_direction": 0.0,
+            "wind_speed": 0.0
+        },
+        "Atlanta Nov 21 cooling": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.339,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 2.422,
+            "barometric_pressure": 97620,
+            "daily_dry_bulb_temperature_range": 11.2,
+            "daily_wet_bulb_temperature_range": 6.4,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulbProfileDefaultMultipliers",
+            "maximum_dry_bulb_temperature": 21.7,
+            "month": 11,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 16.6,
+            "wind_direction": 0.0,
+            "wind_speed": 0.0
+        },
+        "Atlanta Oct 21 cooling": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.373,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 2.317,
+            "barometric_pressure": 97620,
+            "daily_dry_bulb_temperature_range": 11.0,
+            "daily_wet_bulb_temperature_range": 4.9,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulbProfileDefaultMultipliers",
+            "maximum_dry_bulb_temperature": 25.7,
+            "month": 10,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 18.5,
+            "wind_direction": 0.0,
+            "wind_speed": 0.0
+        },
+        "Atlanta Sep 21 cooling": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.431,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 2.151,
+            "barometric_pressure": 97620,
+            "daily_dry_bulb_temperature_range": 10.5,
+            "daily_wet_bulb_temperature_range": 3.7,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulbProfileDefaultMultipliers",
+            "maximum_dry_bulb_temperature": 30.0,
+            "month": 9,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 21.8,
+            "wind_direction": 0.0,
+            "wind_speed": 0.0
+        }
+    },
+    "SurfaceConvectionAlgorithm:Inside": {
+        "SurfaceConvectionAlgorithm:Inside 1": {
+            "algorithm": "TARP"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Outside": {
+        "SurfaceConvectionAlgorithm:Outside 1": {
+            "algorithm": "DOE-2"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 4
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "23.1"
+        }
+    },
+    "Zone": {
+        "ZONE ONE": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0,
+            "floor_area": 232.26,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        }
+    }
+}

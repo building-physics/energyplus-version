@@ -1,6 +1,6 @@
 # Test Files for E+ Version 9.4 #
 
-The files in this directory are a subset of the EnergyPlus example files. Excluded files are those that require the use of ExpandObjects and the ParametricPreprocessor. Including those files as part of automated testing requires a bit more work (need to run the appropriate program(s) before running the version upgrades) so that is left as future work. 
+The files in this directory are a subset of the EnergyPlus example files. Excluded files are those that require the use of ExpandObjects and/or the ParametricPreprocessor. Including those files as part of automated testing requires a bit more work (need to run the appropriate program(s) before running the version upgrades) so that is left as future work. 
 
 | Example File                                         | Reason for Exclusion                   |
 | ---------------------------------------------------- | -------------------------------------- |

@@ -1,0 +1,816 @@
+{
+    "Branch": {
+        "Cooling Coil Load Loop Demand Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Cooling Coil Load Loop Demand Inlet Node",
+                    "component_name": "Cooling Coil Load Profile",
+                    "component_object_type": "LoadProfile:Plant",
+                    "component_outlet_node_name": "Cooling Coil Load Loop Demand Outlet Node"
+                }
+            ]
+        },
+        "Cooling Coil Load Loop Supply Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Cooling Coil Load Loop Supply Inlet Node",
+                    "component_name": "Cooling Coil Load Loop Pump",
+                    "component_object_type": "Pump:VariableSpeed",
+                    "component_outlet_node_name": "Cooling Coil Load Loop Intermediate Node"
+                },
+                {
+                    "component_inlet_node_name": "Cooling Coil Load Loop Intermediate Node",
+                    "component_name": "Cooling Coil",
+                    "component_object_type": "HeatPump:AirToWater:FuelFired:Cooling",
+                    "component_outlet_node_name": "Cooling Coil Load Loop Supply Outlet Node"
+                }
+            ]
+        },
+        "Heating Coil Load Loop Demand Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Heating Coil Load Loop Demand Inlet Node",
+                    "component_name": "Heating Coil Load Profile",
+                    "component_object_type": "LoadProfile:Plant",
+                    "component_outlet_node_name": "Heating Coil Load Loop Demand Outlet Node"
+                }
+            ]
+        },
+        "Heating Coil Load Loop Supply Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Heating Coil Load Loop Supply Inlet Node",
+                    "component_name": "Heating Coil Load Loop Pump",
+                    "component_object_type": "Pump:VariableSpeed",
+                    "component_outlet_node_name": "Heating Coil Load Loop Intermediate Node"
+                },
+                {
+                    "component_inlet_node_name": "Heating Coil Load Loop Intermediate Node",
+                    "component_name": "Heating Coil",
+                    "component_object_type": "HeatPump:AirToWater:FuelFired:Heating",
+                    "component_outlet_node_name": "Heating Coil Load Loop Supply Outlet Node"
+                }
+            ]
+        }
+    },
+    "BranchList": {
+        "Cooling Coil Load Loop Demand Branches": {
+            "branches": [
+                {
+                    "branch_name": "Cooling Coil Load Loop Demand Branch"
+                }
+            ]
+        },
+        "Cooling Coil Load Loop Supply Branches": {
+            "branches": [
+                {
+                    "branch_name": "Cooling Coil Load Loop Supply Branch"
+                }
+            ]
+        },
+        "Heating Coil Load Loop Demand Branches": {
+            "branches": [
+                {
+                    "branch_name": "Heating Coil Load Loop Demand Branch"
+                }
+            ]
+        },
+        "Heating Coil Load Loop Supply Branches": {
+            "branches": [
+                {
+                    "branch_name": "Heating Coil Load Loop Supply Branch"
+                }
+            ]
+        }
+    },
+    "Building": {
+        "Plant Load Profile Example": {
+            "loads_convergence_tolerance_value": 0.04,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.04,
+            "terrain": "Suburbs"
+        }
+    },
+    "Curve:Biquadratic": {
+        "CapCurveFuncTemp": {
+            "coefficient1_constant": 1.0,
+            "coefficient2_x": 0.0,
+            "coefficient3_x_2": 0.0,
+            "coefficient4_y": 0.0,
+            "coefficient5_y_2": 0.0,
+            "coefficient6_x_y": 0.0,
+            "input_unit_type_for_x": "Temperature",
+            "input_unit_type_for_y": "Temperature",
+            "maximum_value_of_x": 10.0,
+            "maximum_value_of_y": 35.0,
+            "minimum_value_of_x": 5.0,
+            "minimum_value_of_y": 24.0,
+            "output_unit_type": "Dimensionless"
+        },
+        "CapCurveFuncTemp2": {
+            "coefficient1_constant": 1.0,
+            "coefficient2_x": 0.0,
+            "coefficient3_x_2": 0.0,
+            "coefficient4_y": 0.0,
+            "coefficient5_y_2": 0.0,
+            "coefficient6_x_y": 0.0,
+            "input_unit_type_for_x": "Temperature",
+            "input_unit_type_for_y": "Temperature",
+            "maximum_value_of_x": 10.0,
+            "maximum_value_of_y": 35.0,
+            "minimum_value_of_x": 5.0,
+            "minimum_value_of_y": 24.0,
+            "output_unit_type": "Dimensionless"
+        },
+        "EIRCurveFuncTemp": {
+            "coefficient1_constant": 1.0,
+            "coefficient2_x": 0.0,
+            "coefficient3_x_2": 0.0,
+            "coefficient4_y": 0.0,
+            "coefficient5_y_2": 0.0,
+            "coefficient6_x_y": 0.0,
+            "input_unit_type_for_x": "Temperature",
+            "input_unit_type_for_y": "Temperature",
+            "maximum_value_of_x": 10.0,
+            "maximum_value_of_y": 35.0,
+            "minimum_value_of_x": 5.0,
+            "minimum_value_of_y": 24.0,
+            "output_unit_type": "Dimensionless"
+        },
+        "EIRCurveFuncTemp2": {
+            "coefficient1_constant": 1.0,
+            "coefficient2_x": 0.0,
+            "coefficient3_x_2": 0.0,
+            "coefficient4_y": 0.0,
+            "coefficient5_y_2": 0.0,
+            "coefficient6_x_y": 0.0,
+            "input_unit_type_for_x": "Temperature",
+            "input_unit_type_for_y": "Temperature",
+            "maximum_value_of_x": 10.0,
+            "maximum_value_of_y": 35.0,
+            "minimum_value_of_x": 5.0,
+            "minimum_value_of_y": 24.0,
+            "output_unit_type": "Dimensionless"
+        },
+        "auxElecEIRCurveFuncTempCurve": {
+            "coefficient1_constant": 1,
+            "coefficient2_x": 0,
+            "coefficient3_x_2": 0,
+            "coefficient4_y": 0,
+            "coefficient5_y_2": 0,
+            "coefficient6_x_y": 0,
+            "maximum_value_of_x": 100,
+            "maximum_value_of_y": 100,
+            "minimum_value_of_x": -100,
+            "minimum_value_of_y": -100
+        }
+    },
+    "Curve:Cubic": {
+        "auxElecEIRFoPLRCurve": {
+            "coefficient1_constant": 1,
+            "coefficient2_x": 0,
+            "coefficient3_x_2": 0,
+            "coefficient4_x_3": 0,
+            "maximum_value_of_x": 100,
+            "minimum_value_of_x": -100
+        }
+    },
+    "Curve:Quadratic": {
+        "CRFCurve": {
+            "coefficient1_constant": 1,
+            "coefficient2_x": 0,
+            "coefficient3_x_2": 0,
+            "maximum_curve_output": 10.0,
+            "maximum_value_of_x": 100,
+            "minimum_curve_output": 0,
+            "minimum_value_of_x": 0
+        },
+        "EIRCurveFuncPLR": {
+            "coefficient1_constant": 1.0,
+            "coefficient2_x": 0.0,
+            "coefficient3_x_2": 0.0,
+            "maximum_value_of_x": 1.0,
+            "minimum_value_of_x": 0.0
+        },
+        "EIRCurveFuncPLR2": {
+            "coefficient1_constant": 1.0,
+            "coefficient2_x": 0.0,
+            "coefficient3_x_2": 0.0,
+            "maximum_value_of_x": 1.0,
+            "minimum_value_of_x": 0.0
+        },
+        "EIRDefrostFoTCurve": {
+            "coefficient1_constant": 1.0317,
+            "coefficient2_x": -0.006,
+            "coefficient3_x_2": -0.0011,
+            "maximum_curve_output": 10.0,
+            "maximum_value_of_x": 100,
+            "minimum_curve_output": 1.0,
+            "minimum_value_of_x": -100
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "HeatPump:AirToWater:FuelFired:Cooling": {
+        "Cooling Coil": {
+            "air_source_node_name": "Outdoor Air Inlet Node",
+            "auxiliary_electric_energy_input_ratio_function_of_plr_curve_name": "auxElecEIRFoPLRCurve",
+            "auxiliary_electric_energy_input_ratio_function_of_temperature_curve_name": "auxElecEIRCurveFuncTempCurve",
+            "companion_heating_heat_pump_name": "Heating Coil",
+            "cycling_ratio_factor_curve_name": "CRFCurve",
+            "design_flow_rate": 0.005,
+            "design_supply_temperature": 7,
+            "design_temperature_lift": 11.1,
+            "end_use_subcategory": "Fuel-Fired_Heat_Pump",
+            "flow_mode": "NotModulated",
+            "fuel_energy_input_ratio_function_of_plr_curve_name": "EIRCurveFuncPLR2",
+            "fuel_energy_input_ratio_function_of_temperature_curve_name": "EIRCurveFuncTemp2",
+            "fuel_type": "NaturalGas",
+            "maximum_part_load_ratio": 1.0,
+            "minimum_part_load_ratio": 0.2,
+            "nominal_auxiliary_electric_power": 500,
+            "nominal_cooling_capacity": 400000,
+            "nominal_cop": 2.0,
+            "normalized_capacity_function_of_temperature_curve_name": "CapCurveFuncTemp2",
+            "outdoor_air_temperature_curve_input_variable": "DryBulb",
+            "sizing_factor": 1.0,
+            "standby_electric_power": 20,
+            "water_inlet_node_name": "Cooling Coil Load Loop Intermediate Node",
+            "water_outlet_node_name": "Cooling Coil Load Loop Supply Outlet Node",
+            "water_temperature_curve_input_variable": "EnteringEvaporator"
+        }
+    },
+    "HeatPump:AirToWater:FuelFired:Heating": {
+        "Heating Coil": {
+            "air_source_node_name": "Outdoor Air Inlet Node",
+            "auxiliary_electric_energy_input_ratio_function_of_plr_curve_name": "auxElecEIRFoPLRCurve",
+            "auxiliary_electric_energy_input_ratio_function_of_temperature_curve_name": "auxElecEIRCurveFuncTempCurve",
+            "companion_cooling_heat_pump_name": "Cooling Coil",
+            "cycling_ratio_factor_curve_name": "CRFCurve",
+            "defrost_control_type": "OnDemand",
+            "defrost_operation_time_fraction": 0.0,
+            "design_flow_rate": 0.005,
+            "design_supply_temperature": 60,
+            "design_temperature_lift": 13,
+            "end_use_subcategory": "Fuel-Fired_Heat_Pump",
+            "flow_mode": "NotModulated",
+            "fuel_energy_input_ratio_defrost_adjustment_curve_name": "EIRDefrostFoTCurve",
+            "fuel_energy_input_ratio_function_of_plr_curve_name": "EIRCurveFuncPLR",
+            "fuel_energy_input_ratio_function_of_temperature_curve_name": "EIRCurveFuncTemp",
+            "fuel_type": "NaturalGas",
+            "maximum_outdoor_dry_bulb_temperature_for_defrost_operation": 3.0,
+            "maximum_part_load_ratio": 1.0,
+            "minimum_part_load_ratio": 0.2,
+            "nominal_auxiliary_electric_power": 500,
+            "nominal_cop": 1.5,
+            "nominal_heating_capacity": 80000,
+            "normalized_capacity_function_of_temperature_curve_name": "CapCurveFuncTemp",
+            "outdoor_air_temperature_curve_input_variable": "DryBulb",
+            "resistive_defrost_heater_capacity": 0.0,
+            "sizing_factor": 1.0,
+            "standby_electric_power": 20,
+            "water_inlet_node_name": "Heating Coil Load Loop Intermediate Node",
+            "water_outlet_node_name": "Heating Coil Load Loop Supply Outlet Node",
+            "water_temperature_curve_input_variable": "EnteringCondenser"
+        }
+    },
+    "LoadProfile:Plant": {
+        "Cooling Coil Load Profile": {
+            "flow_rate_fraction_schedule_name": "Cooling Coil Load Profile Flow Frac Schedule",
+            "inlet_node_name": "Cooling Coil Load Loop Demand Inlet Node",
+            "load_schedule_name": "Cooling Coil Load Profile Load Schedule",
+            "outlet_node_name": "Cooling Coil Load Loop Demand Outlet Node",
+            "peak_flow_rate": 0.005
+        },
+        "Heating Coil Load Profile": {
+            "flow_rate_fraction_schedule_name": "Heating Coil Load Profile Flow Frac Schedule",
+            "inlet_node_name": "Heating Coil Load Loop Demand Inlet Node",
+            "load_schedule_name": "Heating Coil Load Profile Load Schedule",
+            "outlet_node_name": "Heating Coil Load Loop Demand Outlet Node",
+            "peak_flow_rate": 0.005
+        }
+    },
+    "OutdoorAir:Node": {
+        "Outdoor Air Inlet Node": {}
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Plant Load Profile Mass Flow Rate"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Plant Load Profile Heat Transfer Rate"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fuel-fired Absorption HeatPump Load Side Heat Transfer Rate"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fuel-fired Absorption HeatPump Load Side Heat Transfer Energy"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fuel-fired Absorption HeatPump Inlet Temperature"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fuel-fired Absorption HeatPump Outlet Temperature"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fuel-fired Absorption HeatPump Mass Flow Rate"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fuel-fired Absorption HeatPump Fuel Rate"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fuel-fired Absorption HeatPump Fuel Energy"
+        },
+        "Output:Variable 10": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fuel-fired Absorption HeatPump Electricity Rate"
+        },
+        "Output:Variable 11": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fuel-fired Absorption HeatPump Electricity Energy"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fuel-fired Absorption HeatPump Inlet Temperature"
+        },
+        "Output:Variable 13": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fuel-fired Absorption HeatPump Outlet Temperature"
+        },
+        "Output:Variable 14": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fuel-fired Absorption HeatPump Mass Flow Rate"
+        },
+        "Output:Variable 15": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fuel-fired Absorption HeatPump Volumetric Flow Rate"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "IDF"
+        }
+    },
+    "PlantEquipmentList": {
+        "Cooling Coil Load Loop Cooling Equipment": {
+            "equipment": [
+                {
+                    "equipment_name": "Cooling Coil",
+                    "equipment_object_type": "HeatPump:AirToWater:FuelFired:Cooling"
+                }
+            ]
+        },
+        "Heating Coil Load Loop Heating Equipment": {
+            "equipment": [
+                {
+                    "equipment_name": "Heating Coil",
+                    "equipment_object_type": "HeatPump:AirToWater:FuelFired:Heating"
+                }
+            ]
+        }
+    },
+    "PlantEquipmentOperation:CoolingLoad": {
+        "Cooling Coil Load Loop Cooling Operation": {
+            "load_range_1_lower_limit": 0,
+            "load_range_1_upper_limit": 10000000,
+            "range_1_equipment_list_name": "Cooling Coil Load Loop Cooling Equipment"
+        }
+    },
+    "PlantEquipmentOperation:HeatingLoad": {
+        "Heating Coil Load Loop Heating Operation": {
+            "load_range_1_lower_limit": 0,
+            "load_range_1_upper_limit": 10000000,
+            "range_1_equipment_list_name": "Heating Coil Load Loop Heating Equipment"
+        }
+    },
+    "PlantEquipmentOperationSchemes": {
+        "Cooling Coil Load Loop Operation": {
+            "control_scheme_1_name": "Cooling Coil Load Loop Cooling Operation",
+            "control_scheme_1_object_type": "PlantEquipmentOperation:CoolingLoad",
+            "control_scheme_1_schedule_name": "AlwaysOnSchedule"
+        },
+        "Heating Coil Load Loop Operation": {
+            "control_scheme_1_name": "Heating Coil Load Loop Heating Operation",
+            "control_scheme_1_object_type": "PlantEquipmentOperation:HeatingLoad",
+            "control_scheme_1_schedule_name": "AlwaysOnSchedule"
+        }
+    },
+    "PlantLoop": {
+        "Cooling Coil Load Loop": {
+            "demand_side_branch_list_name": "Cooling Coil Load Loop Demand Branches",
+            "demand_side_inlet_node_name": "Cooling Coil Load Loop Demand Inlet Node",
+            "demand_side_outlet_node_name": "Cooling Coil Load Loop Demand Outlet Node",
+            "fluid_type": "Water",
+            "load_distribution_scheme": "Optimal",
+            "loop_temperature_setpoint_node_name": "Cooling Coil Load Loop Supply Outlet Node",
+            "maximum_loop_flow_rate": 0.005,
+            "maximum_loop_temperature": 100,
+            "minimum_loop_flow_rate": 0,
+            "minimum_loop_temperature": 3,
+            "plant_equipment_operation_scheme_name": "Cooling Coil Load Loop Operation",
+            "plant_loop_volume": 1,
+            "plant_side_branch_list_name": "Cooling Coil Load Loop Supply Branches",
+            "plant_side_inlet_node_name": "Cooling Coil Load Loop Supply Inlet Node",
+            "plant_side_outlet_node_name": "Cooling Coil Load Loop Supply Outlet Node"
+        },
+        "Heating Coil Load Loop": {
+            "demand_side_branch_list_name": "Heating Coil Load Loop Demand Branches",
+            "demand_side_inlet_node_name": "Heating Coil Load Loop Demand Inlet Node",
+            "demand_side_outlet_node_name": "Heating Coil Load Loop Demand Outlet Node",
+            "fluid_type": "Water",
+            "load_distribution_scheme": "Optimal",
+            "loop_temperature_setpoint_node_name": "Heating Coil Load Loop Supply Outlet Node",
+            "maximum_loop_flow_rate": 0.005,
+            "maximum_loop_temperature": 100,
+            "minimum_loop_flow_rate": 0,
+            "minimum_loop_temperature": 3,
+            "plant_equipment_operation_scheme_name": "Heating Coil Load Loop Operation",
+            "plant_loop_volume": 1,
+            "plant_side_branch_list_name": "Heating Coil Load Loop Supply Branches",
+            "plant_side_inlet_node_name": "Heating Coil Load Loop Supply Inlet Node",
+            "plant_side_outlet_node_name": "Heating Coil Load Loop Supply Outlet Node"
+        }
+    },
+    "Pump:VariableSpeed": {
+        "Cooling Coil Load Loop Pump": {
+            "coefficient_1_of_the_part_load_performance_curve": 0,
+            "coefficient_2_of_the_part_load_performance_curve": 1,
+            "coefficient_3_of_the_part_load_performance_curve": 0,
+            "coefficient_4_of_the_part_load_performance_curve": 0,
+            "design_maximum_flow_rate": 0.005,
+            "design_minimum_flow_rate": 0,
+            "design_power_consumption": 22,
+            "design_pump_head": 3000,
+            "fraction_of_motor_inefficiencies_to_fluid_stream": 0.0,
+            "inlet_node_name": "Cooling Coil Load Loop Supply Inlet Node",
+            "motor_efficiency": 0.87,
+            "outlet_node_name": "Cooling Coil Load Loop Intermediate Node",
+            "pump_control_type": "Intermittent"
+        },
+        "Heating Coil Load Loop Pump": {
+            "coefficient_1_of_the_part_load_performance_curve": 0,
+            "coefficient_2_of_the_part_load_performance_curve": 1,
+            "coefficient_3_of_the_part_load_performance_curve": 0,
+            "coefficient_4_of_the_part_load_performance_curve": 0,
+            "design_maximum_flow_rate": 0.005,
+            "design_minimum_flow_rate": 0,
+            "design_power_consumption": 22,
+            "design_pump_head": 3000,
+            "fraction_of_motor_inefficiencies_to_fluid_stream": 0.0,
+            "inlet_node_name": "Heating Coil Load Loop Supply Inlet Node",
+            "motor_efficiency": 0.87,
+            "outlet_node_name": "Heating Coil Load Loop Intermediate Node",
+            "pump_control_type": "Intermittent"
+        }
+    },
+    "Schedule:Compact": {
+        "Cooling Coil Load Profile Flow Frac Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 03/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "THROUGH: 09/30"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Cooling Coil Load Profile Load Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 03/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "THROUGH: 09/30"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL:  9:00"
+                },
+                {
+                    "field": -200000
+                },
+                {
+                    "field": "UNTIL: 17:00"
+                },
+                {
+                    "field": -410000
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": -250000
+                },
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Heating Coil Load Profile Flow Frac Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 03/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "THROUGH: 09/30"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Heating Coil Load Profile Load Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 03/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL:  4:00"
+                },
+                {
+                    "field": 62000
+                },
+                {
+                    "field": "UNTIL:  8:00"
+                },
+                {
+                    "field": 25000
+                },
+                {
+                    "field": "UNTIL:  9:00"
+                },
+                {
+                    "field": 15000
+                },
+                {
+                    "field": "UNTIL: 17:00"
+                },
+                {
+                    "field": 9000
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 36000
+                },
+                {
+                    "field": "THROUGH: 09/30"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL:  4:00"
+                },
+                {
+                    "field": 62000
+                },
+                {
+                    "field": "UNTIL:  8:00"
+                },
+                {
+                    "field": 25000
+                },
+                {
+                    "field": "UNTIL:  9:00"
+                },
+                {
+                    "field": 15000
+                },
+                {
+                    "field": "UNTIL: 17:00"
+                },
+                {
+                    "field": 9000
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 36000
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        }
+    },
+    "Schedule:Constant": {
+        "AlwaysOnSchedule": {
+            "hourly_value": 1,
+            "schedule_type_limits_name": "On/Off"
+        },
+        "Cooling Coil Load Loop Setpoint Temperature Schedule": {
+            "hourly_value": 20,
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Heating Coil Load Loop Setpoint Temperature Schedule": {
+            "hourly_value": 65.0,
+            "schedule_type_limits_name": "Any Number"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "On/Off": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 1
+        }
+    },
+    "SetpointManager:Scheduled": {
+        "Cooling Coil Load Loop Setpoint Manager": {
+            "control_variable": "Temperature",
+            "schedule_name": "Cooling Coil Load Loop Setpoint Temperature Schedule",
+            "setpoint_node_or_nodelist_name": "Cooling Coil Load Loop Supply Outlet Node"
+        },
+        "Heating Coil Load Loop Setpoint Manager": {
+            "control_variable": "Temperature",
+            "schedule_name": "Heating Coil Load Loop Setpoint Temperature Schedule",
+            "setpoint_node_or_nodelist_name": "Heating Coil Load Loop Supply Outlet Node"
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "Yes",
+            "run_simulation_for_weather_file_run_periods": "No"
+        }
+    },
+    "Site:Location": {
+        "Chicago": {
+            "elevation": 190.0,
+            "latitude": 42.0,
+            "longitude": -87.88,
+            "time_zone": -6.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "Chicago Ohare Intl Ap Ann Htg 99.6% Condns DB": {
+            "barometric_pressure": 98934.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "dry_bulb_temperature_range_modifier_type": "DefaultMultipliers",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -20,
+            "month": 1,
+            "sky_clearness": 1.0,
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -20,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        },
+        "Chicago Summer 1%": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 10.7,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 31.5,
+            "month": 7,
+            "sky_clearness": 1.0,
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23,
+            "wind_direction": 230,
+            "wind_speed": 5.3
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 1
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "23.1"
+        }
+    }
+}

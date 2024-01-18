@@ -1,0 +1,1733 @@
+{
+    "Branch": {
+        "Condenser Demand Bypass Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Cond Demand Bypass Inlet Node",
+                    "component_name": "Condenser Demand Side Bypass",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Cond Demand Bypass Outlet Node"
+                }
+            ]
+        },
+        "Condenser Demand Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Condenser Demand Inlet Node",
+                    "component_name": "Condenser Demand Inlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Condenser Demand Entrance Pipe Outlet Node"
+                }
+            ]
+        },
+        "Condenser Demand Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Condenser Demand Exit Pipe Inlet Node",
+                    "component_name": "Condenser Demand Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Condenser Demand Outlet Node"
+                }
+            ]
+        },
+        "Condenser Supply Bypass Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Cond Supply Bypass Inlet Node",
+                    "component_name": "Condenser Supply Side Bypass",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Cond Supply Bypass Outlet Node"
+                }
+            ]
+        },
+        "Condenser Supply GHE Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Piping System Inlet Node",
+                    "component_name": "My Pipe Circuit",
+                    "component_object_type": "PipingSystem:Underground:PipeCircuit",
+                    "component_outlet_node_name": "Piping System Outlet Node"
+                }
+            ]
+        },
+        "Condenser Supply Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Condenser Supply Inlet Node",
+                    "component_name": "Cond Circ Pump",
+                    "component_object_type": "Pump:VariableSpeed",
+                    "component_outlet_node_name": "Condenser Pump Outlet Node"
+                }
+            ]
+        },
+        "Condenser Supply Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Condenser Supply Exit Pipe Inlet Node",
+                    "component_name": "Condenser Supply Outlet",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Condenser Supply Outlet Node"
+                }
+            ]
+        },
+        "Sys 1 Gshp Cooling Condenser Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Sys 1 Water to Air Heat Pump Source Side1 Inlet Node",
+                    "component_name": "Sys 1 Heat Pump Cooling Mode",
+                    "component_object_type": "Coil:Cooling:WaterToAirHeatPump:EquationFit",
+                    "component_outlet_node_name": "Sys 1 Water to Air Heat Pump Source Side1 Outlet Node"
+                }
+            ]
+        },
+        "Sys 1 Gshp Heating Condenser Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Sys 1 Water to Air Heat Pump Source Side2 Inlet Node",
+                    "component_name": "Sys 1 Heat Pump Heating Mode",
+                    "component_object_type": "Coil:Heating:WaterToAirHeatPump:EquationFit",
+                    "component_outlet_node_name": "Sys 1 Water to Air Heat Pump Source Side2 Outlet Node"
+                }
+            ]
+        },
+        "Sys 2 Gshp Cooling Condenser Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Sys 2 Water to Air Heat Pump Source Side1 Inlet Node",
+                    "component_name": "Sys 2 Heat Pump Cooling Mode",
+                    "component_object_type": "Coil:Cooling:WaterToAirHeatPump:EquationFit",
+                    "component_outlet_node_name": "Sys 2 Water to Air Heat Pump Source Side1 Outlet Node"
+                }
+            ]
+        },
+        "Sys 2 Gshp Heating Condenser Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Sys 2 Water to Air Heat Pump Source Side2 Inlet Node",
+                    "component_name": "Sys 2 Heat Pump Heating Mode",
+                    "component_object_type": "Coil:Heating:WaterToAirHeatPump:EquationFit",
+                    "component_outlet_node_name": "Sys 2 Water to Air Heat Pump Source Side2 Outlet Node"
+                }
+            ]
+        }
+    },
+    "BranchList": {
+        "Condenser Demand Side Branches": {
+            "branches": [
+                {
+                    "branch_name": "Condenser Demand Inlet Branch"
+                },
+                {
+                    "branch_name": "Sys 1 Gshp Cooling Condenser Branch"
+                },
+                {
+                    "branch_name": "Sys 1 Gshp Heating Condenser Branch"
+                },
+                {
+                    "branch_name": "Sys 2 Gshp Cooling Condenser Branch"
+                },
+                {
+                    "branch_name": "Sys 2 Gshp Heating Condenser Branch"
+                },
+                {
+                    "branch_name": "Condenser Demand Bypass Branch"
+                },
+                {
+                    "branch_name": "Condenser Demand Outlet Branch"
+                }
+            ]
+        },
+        "Condenser Supply Side Branches": {
+            "branches": [
+                {
+                    "branch_name": "Condenser Supply Inlet Branch"
+                },
+                {
+                    "branch_name": "Condenser Supply GHE Branch"
+                },
+                {
+                    "branch_name": "Condenser Supply Bypass Branch"
+                },
+                {
+                    "branch_name": "Condenser Supply Outlet Branch"
+                }
+            ]
+        }
+    },
+    "Building": {
+        "FHX House": {
+            "loads_convergence_tolerance_value": 0.05,
+            "maximum_number_of_warmup_days": 35,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.05,
+            "terrain": "Suburbs"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "Basement Ceiling": {
+            "construction_name": "Ceiling Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Zone",
+            "outside_boundary_condition_object": "Main Floor",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "NoWind",
+            "zone_name": "Basement"
+        },
+        "Basement Floor": {
+            "construction_name": "Basement Wall/Floor Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "OtherSideConditionsModel",
+            "outside_boundary_condition_object": "BasementFloorOSCM",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": -3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "NoWind",
+            "zone_name": "Basement"
+        },
+        "Basement Wall 1": {
+            "construction_name": "Basement Wall/Floor Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "OtherSideConditionsModel",
+            "outside_boundary_condition_object": "BasementWallOSCM",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "NoWind",
+            "zone_name": "Basement"
+        },
+        "Basement Wall 2": {
+            "construction_name": "Basement Wall/Floor Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "OtherSideConditionsModel",
+            "outside_boundary_condition_object": "BasementWallOSCM",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "NoWind",
+            "zone_name": "Basement"
+        },
+        "Basement Wall 3": {
+            "construction_name": "Basement Wall/Floor Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "OtherSideConditionsModel",
+            "outside_boundary_condition_object": "BasementWallOSCM",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "NoWind",
+            "zone_name": "Basement"
+        },
+        "Basement Wall 4": {
+            "construction_name": "Basement Wall/Floor Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "OtherSideConditionsModel",
+            "outside_boundary_condition_object": "BasementWallOSCM",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "NoWind",
+            "zone_name": "Basement"
+        },
+        "Main Floor Roof": {
+            "construction_name": "Roof Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": 3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "WindExposed",
+            "zone_name": "Main Floor"
+        },
+        "Main Floor Wall 1": {
+            "construction_name": "Main Floor Wall Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "WindExposed",
+            "zone_name": "Main Floor"
+        },
+        "Main Floor Wall 2": {
+            "construction_name": "Main Floor Wall Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": 3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "WindExposed",
+            "zone_name": "Main Floor"
+        },
+        "Main Floor Wall 3": {
+            "construction_name": "Main Floor Wall Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": 3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "WindExposed",
+            "zone_name": "Main Floor"
+        },
+        "Main Floor Wall 4": {
+            "construction_name": "Main Floor Wall Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 10,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "WindExposed",
+            "zone_name": "Main Floor"
+        }
+    },
+    "Coil:Cooling:WaterToAirHeatPump:EquationFit": {
+        "Sys 1 Heat Pump Cooling Mode": {
+            "air_inlet_node_name": "Sys 1 Cooling Coil Air Inlet Node",
+            "air_outlet_node_name": "Sys 1 Heating Coil Air Inlet Node",
+            "cooling_power_consumption_curve_name": "CoolPowCurve",
+            "gross_rated_cooling_cop": 5.12,
+            "gross_rated_sensible_cooling_capacity": "Autosize",
+            "gross_rated_total_cooling_capacity": "Autosize",
+            "nominal_time_for_condensate_removal_to_begin": 0,
+            "rated_air_flow_rate": "Autosize",
+            "rated_entering_air_dry_bulb_temperature": 27.0,
+            "rated_entering_air_wet_bulb_temperature": 19.0,
+            "rated_entering_water_temperature": 30.0,
+            "rated_water_flow_rate": "Autosize",
+            "ratio_of_initial_moisture_evaporation_rate_and_steady_state_latent_capacity": 0,
+            "sensible_cooling_capacity_curve_name": "CoolSensCapCurve",
+            "total_cooling_capacity_curve_name": "TotCoolCapCurve",
+            "water_inlet_node_name": "Sys 1 Water to Air Heat Pump Source Side1 Inlet Node",
+            "water_outlet_node_name": "Sys 1 Water to Air Heat Pump Source Side1 Outlet Node"
+        },
+        "Sys 2 Heat Pump Cooling Mode": {
+            "air_inlet_node_name": "Sys 2 Cooling Coil Air Inlet Node",
+            "air_outlet_node_name": "Sys 2 Heating Coil Air Inlet Node",
+            "cooling_power_consumption_curve_name": "CoolPowCurve",
+            "gross_rated_cooling_cop": 5.12,
+            "gross_rated_sensible_cooling_capacity": "Autosize",
+            "gross_rated_total_cooling_capacity": "Autosize",
+            "nominal_time_for_condensate_removal_to_begin": 0,
+            "rated_air_flow_rate": "Autosize",
+            "rated_entering_air_dry_bulb_temperature": 27.0,
+            "rated_entering_air_wet_bulb_temperature": 19.0,
+            "rated_entering_water_temperature": 30.0,
+            "rated_water_flow_rate": "Autosize",
+            "ratio_of_initial_moisture_evaporation_rate_and_steady_state_latent_capacity": 0,
+            "sensible_cooling_capacity_curve_name": "CoolSensCapCurve",
+            "total_cooling_capacity_curve_name": "TotCoolCapCurve",
+            "water_inlet_node_name": "Sys 2 Water to Air Heat Pump Source Side1 Inlet Node",
+            "water_outlet_node_name": "Sys 2 Water to Air Heat Pump Source Side1 Outlet Node"
+        }
+    },
+    "Coil:Heating:Fuel": {
+        "Heat Pump DX Supp Heating Coil 1": {
+            "air_inlet_node_name": "Sys 1 SuppHeating Coil Air Inlet Node",
+            "air_outlet_node_name": "Zone 1 Inlet Node",
+            "availability_schedule_name": "FanAndCoilAvailSched",
+            "burner_efficiency": 0.8,
+            "fuel_type": "NaturalGas",
+            "nominal_capacity": 32000
+        },
+        "Heat Pump DX Supp Heating Coil 2": {
+            "air_inlet_node_name": "Sys 2 SuppHeating Coil Air Inlet Node",
+            "air_outlet_node_name": "Zone 2 Inlet Node",
+            "availability_schedule_name": "FanAndCoilAvailSched",
+            "burner_efficiency": 0.8,
+            "fuel_type": "NaturalGas",
+            "nominal_capacity": 32000
+        }
+    },
+    "Coil:Heating:WaterToAirHeatPump:EquationFit": {
+        "Sys 1 Heat Pump Heating Mode": {
+            "air_inlet_node_name": "Sys 1 Heating Coil Air Inlet Node",
+            "air_outlet_node_name": "Sys 1 SuppHeating Coil Air Inlet Node",
+            "gross_rated_heating_capacity": "Autosize",
+            "gross_rated_heating_cop": 4.75,
+            "heating_capacity_curve_name": "HeatCapCurve",
+            "heating_power_consumption_curve_name": "HeatPowCurve",
+            "rated_air_flow_rate": "Autosize",
+            "rated_entering_air_dry_bulb_temperature": 20.0,
+            "rated_entering_water_temperature": 20.0,
+            "rated_water_flow_rate": "Autosize",
+            "ratio_of_rated_heating_capacity_to_rated_cooling_capacity": 1.0,
+            "water_inlet_node_name": "Sys 1 Water to Air Heat Pump Source Side2 Inlet Node",
+            "water_outlet_node_name": "Sys 1 Water to Air Heat Pump Source Side2 Outlet Node"
+        },
+        "Sys 2 Heat Pump Heating Mode": {
+            "air_inlet_node_name": "Sys 2 Heating Coil Air Inlet Node",
+            "air_outlet_node_name": "Sys 2 SuppHeating Coil Air Inlet Node",
+            "gross_rated_heating_capacity": "Autosize",
+            "gross_rated_heating_cop": 4.75,
+            "heating_capacity_curve_name": "HeatCapCurve",
+            "heating_power_consumption_curve_name": "HeatPowCurve",
+            "rated_air_flow_rate": "Autosize",
+            "rated_entering_air_dry_bulb_temperature": 20.0,
+            "rated_entering_water_temperature": 20.0,
+            "rated_water_flow_rate": "Autosize",
+            "ratio_of_rated_heating_capacity_to_rated_cooling_capacity": 1.0,
+            "water_inlet_node_name": "Sys 2 Water to Air Heat Pump Source Side2 Inlet Node",
+            "water_outlet_node_name": "Sys 2 Water to Air Heat Pump Source Side2 Outlet Node"
+        }
+    },
+    "CondenserEquipmentList": {
+        "HX Equipment": {
+            "equipment": [
+                {
+                    "equipment_name": "My Pipe Circuit",
+                    "equipment_object_type": "PipingSystem:Underground:PipeCircuit"
+                }
+            ]
+        }
+    },
+    "CondenserEquipmentOperationSchemes": {
+        "Loop Operation": {
+            "control_scheme_1_name": "Year Round Operation",
+            "control_scheme_1_object_type": "PlantEquipmentOperation:Uncontrolled",
+            "control_scheme_1_schedule_name": "AlwaysOnSchedule"
+        }
+    },
+    "CondenserLoop": {
+        "Condenser Loop": {
+            "condenser_demand_side_branch_list_name": "Condenser Demand Side Branches",
+            "condenser_demand_side_connector_list_name": "Condenser Demand Side Connectors",
+            "condenser_equipment_operation_scheme_name": "Loop Operation",
+            "condenser_loop_temperature_setpoint_node_name": "Condenser Supply Outlet Node",
+            "condenser_loop_volume": "Autocalculate",
+            "condenser_side_branch_list_name": "Condenser Supply Side Branches",
+            "condenser_side_connector_list_name": "Condenser Supply Side Connectors",
+            "condenser_side_inlet_node_name": "Condenser Supply Inlet Node",
+            "condenser_side_outlet_node_name": "Condenser Supply Outlet Node",
+            "demand_side_inlet_node_name": "Condenser Demand Inlet Node",
+            "demand_side_outlet_node_name": "Condenser Demand Outlet Node",
+            "fluid_type": "UserDefinedFluidType",
+            "load_distribution_scheme": "SequentialLoad",
+            "loop_circulation_time": 20,
+            "maximum_loop_flow_rate": 0.004,
+            "maximum_loop_temperature": 80,
+            "minimum_loop_flow_rate": 0,
+            "minimum_loop_temperature": -30,
+            "user_defined_fluid_type": "PropyleneGlycol70Percent"
+        }
+    },
+    "Connector:Mixer": {
+        "Condenser Demand Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "Sys 1 Gshp Cooling Condenser Branch"
+                },
+                {
+                    "inlet_branch_name": "Sys 1 Gshp Heating Condenser Branch"
+                },
+                {
+                    "inlet_branch_name": "Sys 2 Gshp Cooling Condenser Branch"
+                },
+                {
+                    "inlet_branch_name": "Sys 2 Gshp Heating Condenser Branch"
+                },
+                {
+                    "inlet_branch_name": "Condenser Demand Bypass Branch"
+                }
+            ],
+            "outlet_branch_name": "Condenser Demand Outlet Branch"
+        },
+        "Condenser Supply Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "Condenser Supply GHE Branch"
+                },
+                {
+                    "inlet_branch_name": "Condenser Supply Bypass Branch"
+                }
+            ],
+            "outlet_branch_name": "Condenser Supply Outlet Branch"
+        }
+    },
+    "Connector:Splitter": {
+        "Condenser Demand Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "Sys 1 Gshp Cooling Condenser Branch"
+                },
+                {
+                    "outlet_branch_name": "Sys 1 Gshp Heating Condenser Branch"
+                },
+                {
+                    "outlet_branch_name": "Sys 2 Gshp Cooling Condenser Branch"
+                },
+                {
+                    "outlet_branch_name": "Sys 2 Gshp Heating Condenser Branch"
+                },
+                {
+                    "outlet_branch_name": "Condenser Demand Bypass Branch"
+                }
+            ],
+            "inlet_branch_name": "Condenser Demand Inlet Branch"
+        },
+        "Condenser Supply Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "Condenser Supply GHE Branch"
+                },
+                {
+                    "outlet_branch_name": "Condenser Supply Bypass Branch"
+                }
+            ],
+            "inlet_branch_name": "Condenser Supply Inlet Branch"
+        }
+    },
+    "ConnectorList": {
+        "Condenser Demand Side Connectors": {
+            "connector_1_name": "Condenser Demand Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "Condenser Demand Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        },
+        "Condenser Supply Side Connectors": {
+            "connector_1_name": "Condenser Supply Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "Condenser Supply Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        }
+    },
+    "Construction": {
+        "Basement Wall/Floor Construction": {
+            "outside_layer": "Basement Wall/Floor Material"
+        },
+        "Ceiling Construction": {
+            "outside_layer": "Ceiling Layer 1"
+        },
+        "Main Floor Wall Construction": {
+            "layer_2": "Composite 2x6 Wood Stud R19 #2",
+            "layer_3": "Composite 2x6 Wood Stud R19 #1",
+            "outside_layer": "Composite 2x6 Wood Stud R19 #3"
+        },
+        "Roof Construction": {
+            "outside_layer": "Roof Layer 1"
+        }
+    },
+    "Curve:QuadLinear": {
+        "CoolPowCurve": {
+            "coefficient1_constant": -3.25323327026219,
+            "coefficient2_w": -0.990977022339372,
+            "coefficient3_x": 4.03828937789764,
+            "coefficient4_y": 0.952179101682919,
+            "coefficient5_z": 0.0,
+            "maximum_curve_output": 38,
+            "maximum_value_of_w": 100,
+            "maximum_value_of_x": 100,
+            "maximum_value_of_y": 100,
+            "maximum_value_of_z": 100,
+            "minimum_curve_output": 0,
+            "minimum_value_of_w": -100,
+            "minimum_value_of_x": -100,
+            "minimum_value_of_y": 0,
+            "minimum_value_of_z": 0
+        },
+        "HeatCapCurve": {
+            "coefficient1_constant": -1.30782327125798,
+            "coefficient2_w": -2.37467612404102,
+            "coefficient3_x": 4.00919247797279,
+            "coefficient4_y": 0.615580752610271,
+            "coefficient5_z": 0.0,
+            "maximum_curve_output": 38,
+            "maximum_value_of_w": 100,
+            "maximum_value_of_x": 100,
+            "maximum_value_of_y": 100,
+            "maximum_value_of_z": 100,
+            "minimum_curve_output": 0,
+            "minimum_value_of_w": -100,
+            "minimum_value_of_x": -100,
+            "minimum_value_of_y": 0,
+            "minimum_value_of_z": 0
+        },
+        "HeatPowCurve": {
+            "coefficient1_constant": -2.17352461285805,
+            "coefficient2_w": 0.830808361346509,
+            "coefficient3_x": 1.5682782658283,
+            "coefficient4_y": 0.689709515714146,
+            "coefficient5_z": 0.0,
+            "maximum_curve_output": 38,
+            "maximum_value_of_w": 100,
+            "maximum_value_of_x": 100,
+            "maximum_value_of_y": 100,
+            "maximum_value_of_z": 100,
+            "minimum_curve_output": 0,
+            "minimum_value_of_w": -100,
+            "minimum_value_of_x": -100,
+            "minimum_value_of_y": 0,
+            "minimum_value_of_z": 0
+        },
+        "TotCoolCapCurve": {
+            "coefficient1_constant": -9.32564313298629,
+            "coefficient2_w": 11.088084240584,
+            "coefficient3_x": -1.75195196204063,
+            "coefficient4_y": 0.760820340847872,
+            "coefficient5_z": 0.0,
+            "maximum_curve_output": 38,
+            "maximum_value_of_w": 100,
+            "maximum_value_of_x": 100,
+            "maximum_value_of_y": 100,
+            "maximum_value_of_z": 100,
+            "minimum_curve_output": 0,
+            "minimum_value_of_w": -100,
+            "minimum_value_of_x": -100,
+            "minimum_value_of_y": 0,
+            "minimum_value_of_z": 0
+        }
+    },
+    "Curve:Quadratic": {
+        "HPACCOOLPLFFPLR": {
+            "coefficient1_constant": 0.75,
+            "coefficient2_x": 0.25,
+            "coefficient3_x_2": 0.0,
+            "maximum_value_of_x": 1.0,
+            "minimum_value_of_x": 0.0
+        },
+        "HPACHEATPLFFPLR": {
+            "coefficient1_constant": 0.75,
+            "coefficient2_x": 0.25,
+            "coefficient3_x_2": 0.0,
+            "maximum_value_of_x": 1.0,
+            "minimum_value_of_x": 0.0
+        }
+    },
+    "Curve:QuintLinear": {
+        "CoolSensCapCurve": {
+            "coefficient1_constant": -5.26562830117273,
+            "coefficient2_v": 17.3118017582604,
+            "coefficient3_w": -11.4496890368762,
+            "coefficient4_x": -0.944804890543481,
+            "coefficient5_y": 0.739606605780884,
+            "coefficient6_z": 0.0,
+            "maximum_curve_output": 38,
+            "maximum_value_of_v": 100,
+            "maximum_value_of_w": 100,
+            "maximum_value_of_x": 100,
+            "maximum_value_of_y": 100,
+            "maximum_value_of_z": 100,
+            "minimum_curve_output": 0,
+            "minimum_value_of_v": -100,
+            "minimum_value_of_w": -100,
+            "minimum_value_of_x": -100,
+            "minimum_value_of_y": 0,
+            "minimum_value_of_z": 0
+        }
+    },
+    "DesignSpecification:OutdoorAir": {
+        "OA Sizing": {
+            "outdoor_air_flow_air_changes_per_hour": 0.0,
+            "outdoor_air_flow_per_person": 0.0125,
+            "outdoor_air_flow_per_zone": 0.0,
+            "outdoor_air_flow_per_zone_floor_area": 0.0,
+            "outdoor_air_method": "Flow/Person"
+        }
+    },
+    "Fan:OnOff": {
+        "Zone 1 Fan": {
+            "air_inlet_node_name": "Sys 1 Mixed Air Node",
+            "air_outlet_node_name": "Sys 1 Cooling Coil Air Inlet Node",
+            "availability_schedule_name": "FanAndCoilAvailSched",
+            "fan_total_efficiency": 0.7,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1.0,
+            "pressure_rise": 300.0
+        },
+        "Zone 2 Fan": {
+            "air_inlet_node_name": "Sys 2 Mixed Air Node",
+            "air_outlet_node_name": "Sys 2 Cooling Coil Air Inlet Node",
+            "availability_schedule_name": "FanAndCoilAvailSched",
+            "fan_total_efficiency": 0.7,
+            "maximum_flow_rate": "Autosize",
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1.0,
+            "pressure_rise": 300.0
+        }
+    },
+    "FluidProperties:GlycolConcentration": {
+        "PropyleneGlycol70Percent": {
+            "glycol_concentration": 0.7,
+            "glycol_type": "PropyleneGlycol"
+        }
+    },
+    "FluidProperties:Name": {
+        "FluidProperties:Name 1": {
+            "fluid_name": "PropyleneGlycol",
+            "fluid_type": "Glycol"
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "Material": {
+        "Basement Wall/Floor Material": {
+            "conductivity": 1.802,
+            "density": 2243,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 837,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1524,
+            "visible_absorptance": 0.65
+        },
+        "Ceiling Layer 1": {
+            "conductivity": 12.3,
+            "density": 800,
+            "roughness": "Rough",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1300,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1,
+            "visible_absorptance": 0.7
+        },
+        "Composite 2x6 Wood Stud R19 #1": {
+            "conductivity": 0.137,
+            "density": 640.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1006,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.019,
+            "visible_absorptance": 0.7
+        },
+        "Composite 2x6 Wood Stud R19 #2": {
+            "conductivity": 0.047,
+            "density": 93.84,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1006,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.133,
+            "visible_absorptance": 0.7
+        },
+        "Composite 2x6 Wood Stud R19 #3": {
+            "conductivity": 0.246,
+            "density": 492.67,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1006,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.025,
+            "visible_absorptance": 0.7
+        }
+    },
+    "Material:NoMass": {
+        "Roof Layer 1": {
+            "roughness": "Rough",
+            "solar_absorptance": 0.75,
+            "thermal_absorptance": 0.9,
+            "thermal_resistance": 3.344,
+            "visible_absorptance": 0.75
+        }
+    },
+    "NodeList": {
+        "Main Loop Setpoint Node List": {
+            "nodes": [
+                {
+                    "node_name": "Condenser Supply Outlet Node"
+                }
+            ]
+        },
+        "Sys 1 OutsideAirInletNodes": {
+            "nodes": [
+                {
+                    "node_name": "Sys 1 Outside Air Inlet Node"
+                },
+                {
+                    "node_name": "OUTSIDE AIR INLET NODE"
+                }
+            ]
+        },
+        "Sys 2 OutsideAirInletNodes": {
+            "nodes": [
+                {
+                    "node_name": "Sys 2 Outside Air Inlet Node"
+                },
+                {
+                    "node_name": "OUTSIDE AIR INLET NODE"
+                }
+            ]
+        },
+        "Zone1Inlets": {
+            "nodes": [
+                {
+                    "node_name": "Zone 1 Inlet Node"
+                }
+            ]
+        },
+        "Zone2Inlets": {
+            "nodes": [
+                {
+                    "node_name": "Zone 2 Inlet Node"
+                }
+            ]
+        }
+    },
+    "OutdoorAir:Mixer": {
+        "Zone 1 Mixer": {
+            "mixed_air_node_name": "Sys 1 Mixed Air Node",
+            "outdoor_air_stream_node_name": "Sys 1 Outside Air Inlet Node",
+            "relief_air_stream_node_name": "Sys 1 Relief Air Outlet Node",
+            "return_air_stream_node_name": "Zone 1 Outlet Node"
+        },
+        "Zone 2 Mixer": {
+            "mixed_air_node_name": "Sys 2 Mixed Air Node",
+            "outdoor_air_stream_node_name": "Sys 2 Outside Air Inlet Node",
+            "relief_air_stream_node_name": "Sys 2 Relief Air Outlet Node",
+            "return_air_stream_node_name": "Zone 2 Outlet Node"
+        }
+    },
+    "OutdoorAir:NodeList": {
+        "OutdoorAir:NodeList 1": {
+            "nodes": [
+                {
+                    "node_or_nodelist_name": "Sys 2 OutsideAirInletNodes"
+                }
+            ]
+        },
+        "OutdoorAir:NodeList 2": {
+            "nodes": [
+                {
+                    "node_or_nodelist_name": "Sys 1 OutsideAirInletNodes"
+                }
+            ]
+        }
+    },
+    "Output:Diagnostics": {
+        "Output:Diagnostics 1": {
+            "diagnostics": [
+                {
+                    "key": "DisplayUnusedSchedules"
+                }
+            ]
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Other Side Conditions Modeled Convection Air Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air Temperature"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Predicted Sensible Load to Setpoint Heat Transfer Rate"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Pipe Segment Inlet Temperature"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Pipe Segment Outlet Temperature"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Pipe Circuit Mass Flow Rate"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Pipe Circuit Inlet Temperature"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Pipe Circuit Outlet Temperature"
+        },
+        "Output:Variable 10": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Cooling Coil Total Cooling Rate"
+        },
+        "Output:Variable 11": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Cooling Coil Source Side Heat Transfer Rate"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Pump Mass Flow Rate"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "IDF"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "Pipe:Adiabatic": {
+        "Condenser Demand Inlet Pipe": {
+            "inlet_node_name": "Condenser Demand Inlet Node",
+            "outlet_node_name": "Condenser Demand Entrance Pipe Outlet Node"
+        },
+        "Condenser Demand Outlet Pipe": {
+            "inlet_node_name": "Condenser Demand Exit Pipe Inlet Node",
+            "outlet_node_name": "Condenser Demand Outlet Node"
+        },
+        "Condenser Demand Side Bypass": {
+            "inlet_node_name": "Cond Demand Bypass Inlet Node",
+            "outlet_node_name": "Cond Demand Bypass Outlet Node"
+        },
+        "Condenser Supply Outlet": {
+            "inlet_node_name": "Condenser Supply Exit Pipe Inlet Node",
+            "outlet_node_name": "Condenser Supply Outlet Node"
+        },
+        "Condenser Supply Side Bypass": {
+            "inlet_node_name": "Cond Supply Bypass Inlet Node",
+            "outlet_node_name": "Cond Supply Bypass Outlet Node"
+        }
+    },
+    "PipingSystem:Underground:Domain": {
+        "My Piping System": {
+            "convergence_criterion_for_the_outer_cartesian_domain_iteration_loop": 0.005,
+            "depth_of_basement_wall_in_ground_domain": 2.5,
+            "evapotranspiration_ground_cover_parameter": 0.408,
+            "maximum_iterations_in_the_outer_cartesian_domain_iteration_loop": 100,
+            "name_of_basement_floor_boundary_condition_model": "BasementFloorOSCM",
+            "name_of_basement_wall_boundary_condition_model": "BasementWallOSCM",
+            "number_of_pipe_circuits_entered_for_this_domain": 1,
+            "pipe_circuits": [
+                {
+                    "pipe_circuit": "My Pipe Circuit"
+                }
+            ],
+            "shift_pipe_x_coordinates_by_basement_width": "Yes",
+            "soil_density": 962,
+            "soil_moisture_content_volume_fraction": 30,
+            "soil_moisture_content_volume_fraction_at_saturation": 50,
+            "soil_specific_heat": 2576,
+            "soil_thermal_conductivity": 1.08,
+            "this_domain_includes_basement_surface_interaction": "Yes",
+            "undisturbed_ground_temperature_model_name": "KATemps",
+            "undisturbed_ground_temperature_model_type": "Site:GroundTemperature:Undisturbed:KusudaAchenbach",
+            "width_of_basement_floor_in_ground_domain": 6,
+            "x_direction_mesh_density_parameter": 2,
+            "x_direction_mesh_type": "Uniform",
+            "xmax": 12,
+            "y_direction_mesh_density_parameter": 2,
+            "y_direction_mesh_type": "Uniform",
+            "ymax": 4.5,
+            "z_direction_mesh_density_parameter": 6,
+            "z_direction_mesh_type": "Uniform",
+            "zmax": 36.84
+        }
+    },
+    "PipingSystem:Underground:PipeCircuit": {
+        "My Pipe Circuit": {
+            "circuit_inlet_node": "Piping System Inlet Node",
+            "circuit_outlet_node": "Piping System Outlet Node",
+            "convergence_criterion_for_the_inner_radial_iteration_loop": 0.001,
+            "design_flow_rate": 0.004,
+            "maximum_iterations_in_the_inner_radial_iteration_loop": 100,
+            "number_of_pipe_segments_entered_for_this_pipe_circuit": 6,
+            "number_of_soil_nodes_in_the_inner_radial_near_pipe_mesh_region": 2,
+            "pipe_density": 641,
+            "pipe_inner_diameter": 0.016,
+            "pipe_outer_diameter": 0.02667,
+            "pipe_segments": [
+                {
+                    "pipe_segment": "Segment 1"
+                },
+                {
+                    "pipe_segment": "Segment 2"
+                },
+                {
+                    "pipe_segment": "Segment 3"
+                },
+                {
+                    "pipe_segment": "Segment 4"
+                },
+                {
+                    "pipe_segment": "Segment 5"
+                },
+                {
+                    "pipe_segment": "Segment 6"
+                }
+            ],
+            "pipe_specific_heat": 2405,
+            "pipe_thermal_conductivity": 0.3895,
+            "radial_thickness_of_inner_radial_near_pipe_mesh_region": 0.03
+        }
+    },
+    "PipingSystem:Underground:PipeSegment": {
+        "Segment 1": {
+            "flow_direction": "IncreasingZ",
+            "x_position": 0.67,
+            "y_position": 2.2
+        },
+        "Segment 2": {
+            "flow_direction": "IncreasingZ",
+            "x_position": 0.95,
+            "y_position": 2.2
+        },
+        "Segment 3": {
+            "flow_direction": "IncreasingZ",
+            "x_position": 1.23,
+            "y_position": 2.2
+        },
+        "Segment 4": {
+            "flow_direction": "DecreasingZ",
+            "x_position": 1.4,
+            "y_position": 1.94
+        },
+        "Segment 5": {
+            "flow_direction": "DecreasingZ",
+            "x_position": 1.4,
+            "y_position": 1.66
+        },
+        "Segment 6": {
+            "flow_direction": "DecreasingZ",
+            "x_position": 1.4,
+            "y_position": 1.39
+        }
+    },
+    "PlantEquipmentOperation:Uncontrolled": {
+        "Year Round Operation": {
+            "equipment_list_name": "HX Equipment"
+        }
+    },
+    "Pump:VariableSpeed": {
+        "Cond Circ Pump": {
+            "coefficient_1_of_the_part_load_performance_curve": 0,
+            "coefficient_2_of_the_part_load_performance_curve": 1,
+            "coefficient_3_of_the_part_load_performance_curve": 0,
+            "coefficient_4_of_the_part_load_performance_curve": 0,
+            "design_maximum_flow_rate": 0.004,
+            "design_minimum_flow_rate": 0,
+            "design_power_consumption": 25,
+            "design_pump_head": 5000,
+            "fraction_of_motor_inefficiencies_to_fluid_stream": 0.0,
+            "inlet_node_name": "Condenser Supply Inlet Node",
+            "motor_efficiency": 0.87,
+            "outlet_node_name": "Condenser Pump Outlet Node",
+            "pump_control_type": "Intermittent"
+        }
+    },
+    "RunPeriod": {
+        "Annual Run": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 31,
+            "end_month": 12,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "AlwaysOnSchedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 1
+                }
+            ],
+            "schedule_type_limits_name": "On/Off"
+        },
+        "Clg-SetP-Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 25.5
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "CyclingFanSch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "FanAndCoilAvailSched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "HVACTemplate-Always 4": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 4
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Htg-SetP-Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 21.5
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "Main Loop Temp Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 30.0
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "Fraction": {
+            "lower_limit_value": 0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1
+        },
+        "On/Off": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 1
+        },
+        "Temperature": {
+            "lower_limit_value": -100,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 200
+        }
+    },
+    "SetpointManager:Scheduled": {
+        "Main Loop Setpoint Manager": {
+            "control_variable": "Temperature",
+            "schedule_name": "Main Loop Temp Sch",
+            "setpoint_node_or_nodelist_name": "Main Loop Setpoint Node List"
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "Yes",
+            "do_system_sizing_calculation": "Yes",
+            "do_zone_sizing_calculation": "Yes",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "Yes",
+            "run_simulation_for_weather_file_run_periods": "No"
+        }
+    },
+    "Site:GroundTemperature:Undisturbed:KusudaAchenbach": {
+        "KATemps": {
+            "average_amplitude_of_surface_temperature": 12.8,
+            "average_soil_surface_temperature": 15.5,
+            "phase_shift_of_minimum_surface_temperature": 17.3,
+            "soil_density": 962,
+            "soil_specific_heat": 2576,
+            "soil_thermal_conductivity": 1.08
+        }
+    },
+    "Site:Location": {
+        "Denver Centennial CO USA WMO=724666": {
+            "elevation": 1793.0,
+            "latitude": 39.57,
+            "longitude": -104.85,
+            "time_zone": -7.0
+        }
+    },
+    "Sizing:Parameters": {
+        "Sizing:Parameters 1": {
+            "cooling_sizing_factor": 1.3,
+            "heating_sizing_factor": 1.3
+        }
+    },
+    "Sizing:Plant": {
+        "Sizing:Plant 1": {
+            "design_loop_exit_temperature": 29.4,
+            "loop_design_temperature_difference": 5.6,
+            "loop_type": "Condenser",
+            "plant_or_condenser_loop_name": "Condenser Loop"
+        }
+    },
+    "Sizing:Zone": {
+        "Sizing:Zone 1": {
+            "account_for_dedicated_outdoor_air_system": "No",
+            "cooling_design_air_flow_method": "DesignDay",
+            "cooling_design_air_flow_rate": 0,
+            "dedicated_outdoor_air_high_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_low_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_system_control_strategy": "NeutralSupplyAir",
+            "design_specification_outdoor_air_object_name": "OA Sizing",
+            "heating_design_air_flow_method": "DesignDay",
+            "heating_design_air_flow_rate": 0,
+            "zone_cooling_design_supply_air_humidity_ratio": 0.0075,
+            "zone_cooling_design_supply_air_temperature": 13.0,
+            "zone_cooling_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_cooling_sizing_factor": 0.0,
+            "zone_heating_design_supply_air_humidity_ratio": 0.004,
+            "zone_heating_design_supply_air_temperature": 29.0,
+            "zone_heating_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_heating_sizing_factor": 0.0,
+            "zone_or_zonelist_name": "Basement"
+        },
+        "Sizing:Zone 2": {
+            "account_for_dedicated_outdoor_air_system": "No",
+            "cooling_design_air_flow_method": "DesignDay",
+            "cooling_design_air_flow_rate": 0,
+            "dedicated_outdoor_air_high_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_low_setpoint_temperature_for_design": "Autosize",
+            "dedicated_outdoor_air_system_control_strategy": "NeutralSupplyAir",
+            "design_specification_outdoor_air_object_name": "OA Sizing",
+            "heating_design_air_flow_method": "DesignDay",
+            "heating_design_air_flow_rate": 0,
+            "zone_cooling_design_supply_air_humidity_ratio": 0.0075,
+            "zone_cooling_design_supply_air_temperature": 13.0,
+            "zone_cooling_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_cooling_sizing_factor": 0.0,
+            "zone_heating_design_supply_air_humidity_ratio": 0.004,
+            "zone_heating_design_supply_air_temperature": 29.0,
+            "zone_heating_design_supply_air_temperature_input_method": "SupplyAirTemperature",
+            "zone_heating_sizing_factor": 0.0,
+            "zone_or_zonelist_name": "Main Floor"
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "Denver Centennial Ann Clg 1% Condns DB=>MWB": {
+            "barometric_pressure": 81560.0,
+            "daily_dry_bulb_temperature_range": 15.2,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 32,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 15.5,
+            "wind_direction": 0,
+            "wind_speed": 4.9
+        },
+        "Denver Centennial Ann Htg 99.6% Condns DB": {
+            "barometric_pressure": 81560.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -18.8,
+            "month": 12,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -18.8,
+            "wind_direction": 340,
+            "wind_speed": 3
+        }
+    },
+    "SurfaceProperty:OtherSideConditionsModel": {
+        "BasementFloorOSCM": {
+            "type_of_modeling": "UndergroundPipingSystemSurface"
+        },
+        "BasementWallOSCM": {
+            "type_of_modeling": "UndergroundPipingSystemSurface"
+        }
+    },
+    "ThermostatSetpoint:DualSetpoint": {
+        "Basement Dual SP Control": {
+            "cooling_setpoint_temperature_schedule_name": "Clg-SetP-Sch",
+            "heating_setpoint_temperature_schedule_name": "Htg-SetP-Sch"
+        },
+        "Main Floor Dual SP Control": {
+            "cooling_setpoint_temperature_schedule_name": "Clg-SetP-Sch",
+            "heating_setpoint_temperature_schedule_name": "Htg-SetP-Sch"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 4
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "23.1"
+        }
+    },
+    "Zone": {
+        "Basement": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0,
+            "floor_area": "Autocalculate",
+            "part_of_total_floor_area": "Yes",
+            "volume": "Autocalculate",
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0,
+            "zone_inside_convection_algorithm": "Simple",
+            "zone_outside_convection_algorithm": "SimpleCombined"
+        },
+        "Main Floor": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0,
+            "floor_area": "Autocalculate",
+            "part_of_total_floor_area": "Yes",
+            "volume": "Autocalculate",
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0,
+            "zone_inside_convection_algorithm": "Simple",
+            "zone_outside_convection_algorithm": "SimpleCombined"
+        }
+    },
+    "ZoneControl:Thermostat": {
+        "Basement Thermostat": {
+            "control_1_name": "Basement Dual SP Control",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "HVACTemplate-Always 4",
+            "zone_or_zonelist_name": "Basement"
+        },
+        "Main Floor Thermostat": {
+            "control_1_name": "Main Floor Dual SP Control",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "HVACTemplate-Always 4",
+            "zone_or_zonelist_name": "Main Floor"
+        }
+    },
+    "ZoneHVAC:EquipmentConnections": {
+        "ZoneHVAC:EquipmentConnections 1": {
+            "zone_air_exhaust_node_or_nodelist_name": "Zone 2 Outlet Node",
+            "zone_air_inlet_node_or_nodelist_name": "Zone2Inlets",
+            "zone_air_node_name": "Zone 2 Node",
+            "zone_conditioning_equipment_list_name": "Zone2Equipment",
+            "zone_name": "Main Floor",
+            "zone_return_air_node_or_nodelist_name": "Zone 2 Return Node"
+        },
+        "ZoneHVAC:EquipmentConnections 2": {
+            "zone_air_exhaust_node_or_nodelist_name": "Zone 1 Outlet Node",
+            "zone_air_inlet_node_or_nodelist_name": "Zone1Inlets",
+            "zone_air_node_name": "Zone 1 Node",
+            "zone_conditioning_equipment_list_name": "Zone1Equipment",
+            "zone_name": "Basement",
+            "zone_return_air_node_or_nodelist_name": "Zone 1 Return Node"
+        }
+    },
+    "ZoneHVAC:EquipmentList": {
+        "Zone1Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Zone1WTAHP",
+                    "zone_equipment_object_type": "ZoneHVAC:WaterToAirHeatPump"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "Zone2Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Zone2WTAHP",
+                    "zone_equipment_object_type": "ZoneHVAC:WaterToAirHeatPump"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        }
+    },
+    "ZoneHVAC:WaterToAirHeatPump": {
+        "Zone1WTAHP": {
+            "air_inlet_node_name": "Zone 1 Outlet Node",
+            "air_outlet_node_name": "Zone 1 Inlet Node",
+            "availability_schedule_name": "FanAndCoilAvailSched",
+            "cooling_coil_name": "Sys 1 Heat Pump Cooling Mode",
+            "cooling_coil_object_type": "Coil:Cooling:WaterToAirHeatPump:EquationFit",
+            "cooling_outdoor_air_flow_rate": 0.0,
+            "cooling_supply_air_flow_rate": "Autosize",
+            "fan_placement": "BlowThrough",
+            "fraction_of_on_cycle_power_use": 0.01,
+            "heat_pump_fan_delay_time": 60,
+            "heat_pump_time_constant": 60.0,
+            "heating_coil_name": "Sys 1 Heat Pump Heating Mode",
+            "heating_coil_object_type": "Coil:Heating:WaterToAirHeatPump:EquationFit",
+            "heating_outdoor_air_flow_rate": 0.0,
+            "heating_supply_air_flow_rate": "Autosize",
+            "maximum_cycling_rate": 2.5,
+            "maximum_outdoor_dry_bulb_temperature_for_supplemental_heater_operation": 20.0,
+            "maximum_supply_air_temperature_from_supplemental_heater": 60.0,
+            "outdoor_air_mixer_name": "Zone 1 Mixer",
+            "outdoor_air_mixer_object_type": "OutdoorAir:Mixer",
+            "outdoor_dry_bulb_temperature_sensor_node_name": "Sys 1 Outside Air Inlet Node",
+            "supplemental_heating_coil_name": "Heat Pump DX Supp Heating Coil 1",
+            "supplemental_heating_coil_object_type": "Coil:Heating:Fuel",
+            "supply_air_fan_name": "Zone 1 Fan",
+            "supply_air_fan_object_type": "Fan:OnOff",
+            "supply_air_fan_operating_mode_schedule_name": "CyclingFanSch"
+        },
+        "Zone2WTAHP": {
+            "air_inlet_node_name": "Zone 2 Outlet Node",
+            "air_outlet_node_name": "Zone 2 Inlet Node",
+            "availability_schedule_name": "FanAndCoilAvailSched",
+            "cooling_coil_name": "Sys 2 Heat Pump Cooling Mode",
+            "cooling_coil_object_type": "Coil:Cooling:WaterToAirHeatPump:EquationFit",
+            "cooling_outdoor_air_flow_rate": 0.0,
+            "cooling_supply_air_flow_rate": "Autosize",
+            "fan_placement": "BlowThrough",
+            "fraction_of_on_cycle_power_use": 0.01,
+            "heat_pump_fan_delay_time": 60,
+            "heat_pump_time_constant": 60.0,
+            "heating_coil_name": "Sys 2 Heat Pump Heating Mode",
+            "heating_coil_object_type": "Coil:Heating:WaterToAirHeatPump:EquationFit",
+            "heating_outdoor_air_flow_rate": 0.0,
+            "heating_supply_air_flow_rate": "Autosize",
+            "maximum_cycling_rate": 2.5,
+            "maximum_outdoor_dry_bulb_temperature_for_supplemental_heater_operation": 20.0,
+            "maximum_supply_air_temperature_from_supplemental_heater": 60.0,
+            "outdoor_air_mixer_name": "Zone 2 Mixer",
+            "outdoor_air_mixer_object_type": "OutdoorAir:Mixer",
+            "outdoor_dry_bulb_temperature_sensor_node_name": "Sys 2 Outside Air Inlet Node",
+            "supplemental_heating_coil_name": "Heat Pump DX Supp Heating Coil 2",
+            "supplemental_heating_coil_object_type": "Coil:Heating:Fuel",
+            "supply_air_fan_name": "Zone 2 Fan",
+            "supply_air_fan_object_type": "Fan:OnOff",
+            "supply_air_fan_operating_mode_schedule_name": "CyclingFanSch"
+        }
+    }
+}

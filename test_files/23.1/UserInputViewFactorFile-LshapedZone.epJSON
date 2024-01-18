@@ -1,0 +1,1966 @@
+{
+    "Building": {
+        "Urbana             Load Calc": {
+            "loads_convergence_tolerance_value": 0.03,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0,
+            "solar_distribution": "FullExterior",
+            "temperature_convergence_tolerance_value": 0.3,
+            "terrain": "Suburbs"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "Lshaped zone:East Wall": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "Lshaped zone:East Wall",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.19198,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.19198,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Lshaped zone"
+        },
+        "Lshaped zone:Floor-1": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "Lshaped zone:Floor-1",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 6.096034,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.19202,
+                    "vertex_y_coordinate": 3.371887e-05,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Lshaped zone"
+        },
+        "Lshaped zone:Floor-2": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "Lshaped zone:Floor-2",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 12.19202,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.19202,
+                    "vertex_y_coordinate": 6.096016,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096017,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Lshaped zone"
+        },
+        "Lshaped zone:North Wall-1": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "Lshaped zone:North Wall-1",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Lshaped zone"
+        },
+        "Lshaped zone:NorthWall-2": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "Lshaped zone:NorthWall-2",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 6.096017,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 6.096021,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096004,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Lshaped zone"
+        },
+        "Lshaped zone:Roof-1": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "Lshaped zone:Roof-1",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 3.359875e-05,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 12.19198,
+                    "vertex_y_coordinate": 6.096034,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Lshaped zone"
+        },
+        "Lshaped zone:Roof-2": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "Lshaped zone:Roof-2",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 6.096017,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 12.19198,
+                    "vertex_y_coordinate": 12.19202,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 6.095983,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Lshaped zone"
+        },
+        "Lshaped zone:South Wall": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "Lshaped zone:South Wall",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 3.359875e-05,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 3.782572e-05,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Lshaped zone"
+        },
+        "Lshaped zone:West Wall-1": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "Lshaped zone:West Wall-1",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096025,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.09603,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 6.096004,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Lshaped zone"
+        },
+        "Lshaped zone:WestWall-2": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "Lshaped zone:WestWall-2",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Lshaped zone"
+        },
+        "LshapedZoneBase:East Wall": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "LshapedZoneBase:East Wall",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.19198,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.19198,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "LshapedZoneBase"
+        },
+        "LshapedZoneBase:Floor-1": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "LshapedZoneBase:Floor-1",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 6.096034,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.19202,
+                    "vertex_y_coordinate": 3.371887e-05,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "LshapedZoneBase"
+        },
+        "LshapedZoneBase:Floor-2": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "LshapedZoneBase:Floor-2",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 12.19202,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.19202,
+                    "vertex_y_coordinate": 6.096016,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096017,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "LshapedZoneBase"
+        },
+        "LshapedZoneBase:North Wall-1": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "LshapedZoneBase:North Wall-1",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "LshapedZoneBase"
+        },
+        "LshapedZoneBase:NorthWall-2": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "LshapedZoneBase:NorthWall-2",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 6.096017,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 6.096021,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096004,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "LshapedZoneBase"
+        },
+        "LshapedZoneBase:Roof-1": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "LshapedZoneBase:Roof-1",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 3.359875e-05,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 12.19198,
+                    "vertex_y_coordinate": 6.096034,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "LshapedZoneBase"
+        },
+        "LshapedZoneBase:Roof-2": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "LshapedZoneBase:Roof-2",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 6.096017,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 12.19198,
+                    "vertex_y_coordinate": 12.19202,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 6.095983,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "LshapedZoneBase"
+        },
+        "LshapedZoneBase:South Wall": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "LshapedZoneBase:South Wall",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 3.359875e-05,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 12.192,
+                    "vertex_y_coordinate": 3.782572e-05,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "LshapedZoneBase"
+        },
+        "LshapedZoneBase:West Wall-1": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "LshapedZoneBase:West Wall-1",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096025,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.09603,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 6.096004,
+                    "vertex_y_coordinate": 12.192,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "LshapedZoneBase"
+        },
+        "LshapedZoneBase:WestWall-2": {
+            "construction_name": "SpandrelSheet",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "LshapedZoneBase:WestWall-2",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 3.048
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 3.048
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "LshapedZoneBase"
+        }
+    },
+    "Construction": {
+        "SpandrelSheet": {
+            "outside_layer": "Spandrel"
+        }
+    },
+    "ElectricEquipment": {
+        "Lshaped zoneEEquip": {
+            "design_level": 0,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0,
+            "fraction_lost": 0.0,
+            "fraction_radiant": 0.5,
+            "schedule_name": "Lshaped zone-EquipSchedule",
+            "zone_or_zonelist_or_space_or_spacelist_name": "Lshaped zone"
+        },
+        "LshapedZoneBaseEEquip": {
+            "design_level": 0,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0,
+            "fraction_lost": 0.0,
+            "fraction_radiant": 0.5,
+            "schedule_name": "LshapedZoneBase-EquipSchedule",
+            "zone_or_zonelist_or_space_or_spacelist_name": "LshapedZoneBase"
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "LowerLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "HeatBalanceAlgorithm": {
+        "HeatBalanceAlgorithm 1": {
+            "algorithm": "ConductionTransferFunction"
+        }
+    },
+    "Lights": {
+        "Lshaped zoneLights": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.4,
+            "fraction_replaceable": 0.0,
+            "fraction_visible": 0.0,
+            "lighting_level": 0,
+            "return_air_fraction": 0,
+            "schedule_name": "Lshaped zone-LightsSchedule",
+            "zone_or_zonelist_or_space_or_spacelist_name": "Lshaped zone"
+        },
+        "LshapedZoneBaseLights": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.4,
+            "fraction_replaceable": 0.0,
+            "fraction_visible": 0.0,
+            "lighting_level": 0,
+            "return_air_fraction": 0,
+            "schedule_name": "LshapedZoneBase-LightsSchedule",
+            "zone_or_zonelist_or_space_or_spacelist_name": "LshapedZoneBase"
+        }
+    },
+    "Material": {
+        "ASHRAEColumnMat": {
+            "conductivity": 1.33,
+            "density": 2002,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.6,
+            "specific_heat": 920,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.18,
+            "visible_absorptance": 0.6
+        },
+        "Spandrel": {
+            "conductivity": 0.9,
+            "density": 2600,
+            "roughness": "VerySmooth",
+            "solar_absorptance": 0.9,
+            "specific_heat": 840,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.009,
+            "visible_absorptance": 0.9
+        }
+    },
+    "NodeList": {
+        "Lshaped zone-Inlets": {
+            "nodes": [
+                {
+                    "node_name": "Lshaped zone-Inlet"
+                }
+            ]
+        },
+        "LshapedZoneBase-Inlets": {
+            "nodes": [
+                {
+                    "node_name": "LshapedZoneBase-Inlet"
+                }
+            ]
+        }
+    },
+    "Output:Diagnostics": {
+        "Output:Diagnostics 1": {
+            "diagnostics": [
+                {
+                    "key": "DisplayAdvancedReportVariables"
+                }
+            ]
+        }
+    },
+    "Output:Surfaces:Drawing": {
+        "Output:Surfaces:Drawing 1": {
+            "report_type": "DXF"
+        }
+    },
+    "Output:Surfaces:List": {
+        "Output:Surfaces:List 1": {
+            "report_type": "DetailsWithVertices"
+        },
+        "Output:Surfaces:List 2": {
+            "report_type": "ViewFactorInfo"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Ideal Loads Supply Air Total Cooling Rate"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Ideal Loads Supply Air Sensible Cooling Rate"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Mean Air Temperature"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Outside Face Temperature"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "People": {
+        "Lshaped zonePeople": {
+            "activity_level_schedule_name": "Lshaped zone-PeopleActivity",
+            "fraction_radiant": 0.6,
+            "number_of_people": 1,
+            "number_of_people_calculation_method": "People",
+            "number_of_people_schedule_name": "Lshaped zone-PeopleSchedule",
+            "zone_or_zonelist_or_space_or_spacelist_name": "Lshaped zone"
+        },
+        "LshapedZoneBasePeople": {
+            "activity_level_schedule_name": "LshapedZoneBase-PeopleActivity",
+            "fraction_radiant": 0.6,
+            "number_of_people": 1,
+            "number_of_people_calculation_method": "People",
+            "number_of_people_schedule_name": "LshapedZoneBase-PeopleSchedule",
+            "zone_or_zonelist_or_space_or_spacelist_name": "LshapedZoneBase"
+        }
+    },
+    "Schedule:Compact": {
+        "LSHAPED ZONE-CONTROL SCHED": {
+            "data": [
+                {
+                    "field": "Through: 4/30"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Through: 9/30"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 2
+                },
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1
+                }
+            ],
+            "schedule_type_limits_name": "CONTROL TYPE"
+        },
+        "LSHAPED ZONE-EQUIPSCHEDULE": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "FRACTION"
+        },
+        "LSHAPED ZONE-INFILTRATIONSCHEDULE": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "FRACTION"
+        },
+        "LSHAPED ZONE-LIGHTSSCHEDULE": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "FRACTION"
+        },
+        "LSHAPED ZONE-PEOPLEACTIVITY": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 132.0
+                }
+            ],
+            "schedule_type_limits_name": "ANY NUMBER"
+        },
+        "LSHAPED ZONE-PEOPLESCHEDULE": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "FRACTION"
+        },
+        "LSHAPED ZONE-SETPOINTS": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 23.88889
+                }
+            ],
+            "schedule_type_limits_name": "TEMPERATURE"
+        },
+        "LSHAPED ZONE-VENTILATIONSCHEDULE": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "FRACTION"
+        },
+        "LSHAPEDZONEBASE-CONTROL SCHED": {
+            "data": [
+                {
+                    "field": "Through: 4/30"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Through: 9/30"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 2
+                },
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1
+                }
+            ],
+            "schedule_type_limits_name": "CONTROL TYPE"
+        },
+        "LSHAPEDZONEBASE-EQUIPSCHEDULE": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "FRACTION"
+        },
+        "LSHAPEDZONEBASE-INFILTRATIONSCHEDULE": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "FRACTION"
+        },
+        "LSHAPEDZONEBASE-LIGHTSSCHEDULE": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "FRACTION"
+        },
+        "LSHAPEDZONEBASE-PEOPLEACTIVITY": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 132.0
+                }
+            ],
+            "schedule_type_limits_name": "ANY NUMBER"
+        },
+        "LSHAPEDZONEBASE-PEOPLESCHEDULE": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "FRACTION"
+        },
+        "LSHAPEDZONEBASE-SETPOINTS": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 23.88889
+                }
+            ],
+            "schedule_type_limits_name": "TEMPERATURE"
+        },
+        "LSHAPEDZONEBASE-VENTILATIONSCHEDULE": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "FRACTION"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "Control Type": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 4
+        },
+        "Fraction": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1.0
+        },
+        "Temperature": {
+            "lower_limit_value": -60,
+            "numeric_type": "Continuous",
+            "unit_type": "Temperature",
+            "upper_limit_value": 200
+        }
+    },
+    "Site:GroundTemperature:BuildingSurface": {
+        "Site:GroundTemperature:BuildingSurface 1": {
+            "april_ground_temperature": 20,
+            "august_ground_temperature": 20,
+            "december_ground_temperature": 20,
+            "february_ground_temperature": 20,
+            "january_ground_temperature": 20,
+            "july_ground_temperature": 20,
+            "june_ground_temperature": 20,
+            "march_ground_temperature": 20,
+            "may_ground_temperature": 20,
+            "november_ground_temperature": 20,
+            "october_ground_temperature": 20,
+            "september_ground_temperature": 20
+        }
+    },
+    "Site:Location": {
+        "Chicago IL": {
+            "elevation": 200.56,
+            "latitude": 41.78,
+            "longitude": -87.75,
+            "time_zone": -6.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "CHICAGO Ann Clg 2% Condns DB=>MWB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 10.7,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 29.9,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 22.1,
+            "wind_direction": 230,
+            "wind_speed": 5.3
+        },
+        "CHICAGO ILLINOIS SUMMER": {
+            "barometric_pressure": 99361.81,
+            "daily_dry_bulb_temperature_range": 12.77778,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 32.77778,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 22.77778,
+            "wind_direction": 215.0,
+            "wind_speed": 3.879596
+        }
+    },
+    "SurfaceConvectionAlgorithm:Inside": {
+        "SurfaceConvectionAlgorithm:Inside 1": {
+            "algorithm": "Simple"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Outside": {
+        "SurfaceConvectionAlgorithm:Outside 1": {
+            "algorithm": "DOE-2"
+        }
+    },
+    "ThermostatSetpoint:SingleCooling": {
+        "Lshaped zone-Cooling Setpoint with SB": {
+            "setpoint_temperature_schedule_name": "Lshaped zone-Setpoints"
+        },
+        "LshapedZoneBase-Cooling Setpoint with SB": {
+            "setpoint_temperature_schedule_name": "LshapedZoneBase-Setpoints"
+        }
+    },
+    "ThermostatSetpoint:SingleHeating": {
+        "Lshaped zone-Heating Setpoint with SB": {
+            "setpoint_temperature_schedule_name": "Lshaped zone-Setpoints"
+        },
+        "LshapedZoneBase-Heating Setpoint with SB": {
+            "setpoint_temperature_schedule_name": "LshapedZoneBase-Setpoints"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 2
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "23.1"
+        }
+    },
+    "Zone": {
+        "Lshaped Zone": {
+            "ceiling_height": 3.048,
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        },
+        "LshapedZoneBase": {
+            "ceiling_height": 3.048,
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 30.48,
+            "y_origin": 0,
+            "z_origin": 0
+        }
+    },
+    "ZoneControl:Thermostat": {
+        "Lshaped zone-Thermostat": {
+            "control_1_name": "Lshaped zone-Cooling Setpoint with SB",
+            "control_1_object_type": "ThermostatSetpoint:SingleCooling",
+            "control_2_name": "Lshaped zone-Heating Setpoint with SB",
+            "control_2_object_type": "ThermostatSetpoint:SingleHeating",
+            "control_type_schedule_name": "Lshaped zone-Control Sched",
+            "zone_or_zonelist_name": "Lshaped zone"
+        },
+        "LshapedZoneBase-Thermostat": {
+            "control_1_name": "LshapedZoneBase-Cooling Setpoint with SB",
+            "control_1_object_type": "ThermostatSetpoint:SingleCooling",
+            "control_2_name": "LshapedZoneBase-Heating Setpoint with SB",
+            "control_2_object_type": "ThermostatSetpoint:SingleHeating",
+            "control_type_schedule_name": "LshapedZoneBase-Control Sched",
+            "zone_or_zonelist_name": "LshapedZoneBase"
+        }
+    },
+    "ZoneHVAC:EquipmentConnections": {
+        "ZoneHVAC:EquipmentConnections 1": {
+            "zone_air_inlet_node_or_nodelist_name": "Lshaped zone-Inlets",
+            "zone_air_node_name": "Lshaped zone-ZoneAirNode",
+            "zone_conditioning_equipment_list_name": "Equipment-Lshaped zone",
+            "zone_name": "Lshaped zone",
+            "zone_return_air_node_or_nodelist_name": "Lshaped zone-ReturnAirNode"
+        },
+        "ZoneHVAC:EquipmentConnections 2": {
+            "zone_air_inlet_node_or_nodelist_name": "LshapedZoneBase-Inlets",
+            "zone_air_node_name": "LshapedZoneBase-ZoneAirNode",
+            "zone_conditioning_equipment_list_name": "Equipment-LshapedZoneBase",
+            "zone_name": "LshapedZoneBase",
+            "zone_return_air_node_or_nodelist_name": "LshapedZoneBase-ReturnAirNode"
+        }
+    },
+    "ZoneHVAC:EquipmentList": {
+        "Equipment-Lshaped zone": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Lshaped zone-Air",
+                    "zone_equipment_object_type": "ZoneHVAC:IdealLoadsAirSystem"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "Equipment-LshapedZoneBase": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "LshapedZoneBase-Air",
+                    "zone_equipment_object_type": "ZoneHVAC:IdealLoadsAirSystem"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        }
+    },
+    "ZoneHVAC:IdealLoadsAirSystem": {
+        "Lshaped zone-Air": {
+            "cooling_limit": "NoLimit",
+            "dehumidification_control_type": "ConstantSupplyHumidityRatio",
+            "heating_limit": "NoLimit",
+            "humidification_control_type": "ConstantSupplyHumidityRatio",
+            "maximum_cooling_air_flow_rate": 0,
+            "maximum_heating_air_flow_rate": 0,
+            "maximum_heating_supply_air_humidity_ratio": 0.008263639,
+            "maximum_heating_supply_air_temperature": 50,
+            "minimum_cooling_supply_air_humidity_ratio": 0.008263639,
+            "minimum_cooling_supply_air_temperature": 12.77778,
+            "zone_supply_air_node_name": "Lshaped zone-Inlet"
+        },
+        "LshapedZoneBase-Air": {
+            "cooling_limit": "NoLimit",
+            "dehumidification_control_type": "ConstantSupplyHumidityRatio",
+            "heating_limit": "NoLimit",
+            "humidification_control_type": "ConstantSupplyHumidityRatio",
+            "maximum_cooling_air_flow_rate": 0,
+            "maximum_heating_air_flow_rate": 0,
+            "maximum_heating_supply_air_humidity_ratio": 0.008263639,
+            "maximum_heating_supply_air_temperature": 50,
+            "minimum_cooling_supply_air_humidity_ratio": 0.008263639,
+            "minimum_cooling_supply_air_temperature": 12.77778,
+            "zone_supply_air_node_name": "LshapedZoneBase-Inlet"
+        }
+    },
+    "ZoneInfiltration:DesignFlowRate": {
+        "Lshaped zoneInfiltration": {
+            "constant_term_coefficient": 1.0,
+            "design_flow_rate": 0,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "schedule_name": "Lshaped zone-InfiltrationSchedule",
+            "temperature_term_coefficient": 0.0,
+            "velocity_squared_term_coefficient": 0.0,
+            "velocity_term_coefficient": 0.0,
+            "zone_or_zonelist_or_space_or_spacelist_name": "Lshaped zone"
+        },
+        "LshapedZoneBaseInfiltration": {
+            "constant_term_coefficient": 1.0,
+            "design_flow_rate": 0,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "schedule_name": "LshapedZoneBase-InfiltrationSchedule",
+            "temperature_term_coefficient": 0.0,
+            "velocity_squared_term_coefficient": 0.0,
+            "velocity_term_coefficient": 0.0,
+            "zone_or_zonelist_or_space_or_spacelist_name": "LshapedZoneBase"
+        }
+    },
+    "ZoneProperty:UserViewFactors:BySurfaceName": {
+        "ZoneProperty:UserViewFactors:BySurfaceName 1": {
+            "view_factors": [
+                {
+                    "from_surface": "Lshaped Zone:South Wall",
+                    "to_surface": "Lshaped Zone:South Wall",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:South Wall",
+                    "to_surface": "Lshaped Zone:East Wall",
+                    "view_factor": 0.10131
+                },
+                {
+                    "from_surface": "Lshaped Zone:South Wall",
+                    "to_surface": "Lshaped Zone:North Wall-1",
+                    "view_factor": 0.024387
+                },
+                {
+                    "from_surface": "Lshaped Zone:South Wall",
+                    "to_surface": "Lshaped Zone:West Wall-1",
+                    "view_factor": 0.009005
+                },
+                {
+                    "from_surface": "Lshaped Zone:South Wall",
+                    "to_surface": "Lshaped Zone:Northwall-2",
+                    "view_factor": 0.082639
+                },
+                {
+                    "from_surface": "Lshaped Zone:South Wall",
+                    "to_surface": "Lshaped Zone:Westwall-2",
+                    "view_factor": 0.083659
+                },
+                {
+                    "from_surface": "Lshaped Zone:South Wall",
+                    "to_surface": "Lshaped Zone:Roof-1",
+                    "view_factor": 0.333727
+                },
+                {
+                    "from_surface": "Lshaped Zone:South Wall",
+                    "to_surface": "Lshaped Zone:Roof-2",
+                    "view_factor": 0.015772
+                },
+                {
+                    "from_surface": "Lshaped Zone:South Wall",
+                    "to_surface": "Lshaped Zone:Floor-1",
+                    "view_factor": 0.333728
+                },
+                {
+                    "from_surface": "Lshaped Zone:South Wall",
+                    "to_surface": "Lshaped Zone:Floor-2",
+                    "view_factor": 0.015772
+                },
+                {
+                    "from_surface": "Lshaped Zone:East Wall",
+                    "to_surface": "Lshaped Zone:South Wall",
+                    "view_factor": 0.10131
+                },
+                {
+                    "from_surface": "Lshaped Zone:East Wall",
+                    "to_surface": "Lshaped Zone:East Wall",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:East Wall",
+                    "to_surface": "Lshaped Zone:North Wall-1",
+                    "view_factor": 0.08366
+                },
+                {
+                    "from_surface": "Lshaped Zone:East Wall",
+                    "to_surface": "Lshaped Zone:West Wall-1",
+                    "view_factor": 0.082633
+                },
+                {
+                    "from_surface": "Lshaped Zone:East Wall",
+                    "to_surface": "Lshaped Zone:Northwall-2",
+                    "view_factor": 0.009005
+                },
+                {
+                    "from_surface": "Lshaped Zone:East Wall",
+                    "to_surface": "Lshaped Zone:Westwall-2",
+                    "view_factor": 0.024383
+                },
+                {
+                    "from_surface": "Lshaped Zone:East Wall",
+                    "to_surface": "Lshaped Zone:Roof-1",
+                    "view_factor": 0.182649
+                },
+                {
+                    "from_surface": "Lshaped Zone:East Wall",
+                    "to_surface": "Lshaped Zone:Roof-2",
+                    "view_factor": 0.166856
+                },
+                {
+                    "from_surface": "Lshaped Zone:East Wall",
+                    "to_surface": "Lshaped Zone:Floor-1",
+                    "view_factor": 0.182648
+                },
+                {
+                    "from_surface": "Lshaped Zone:East Wall",
+                    "to_surface": "Lshaped Zone:Floor-2",
+                    "view_factor": 0.166856
+                },
+                {
+                    "from_surface": "Lshaped Zone:North Wall-1",
+                    "to_surface": "Lshaped Zone:South Wall",
+                    "view_factor": 0.048773
+                },
+                {
+                    "from_surface": "Lshaped Zone:North Wall-1",
+                    "to_surface": "Lshaped Zone:East Wall",
+                    "view_factor": 0.16732
+                },
+                {
+                    "from_surface": "Lshaped Zone:North Wall-1",
+                    "to_surface": "Lshaped Zone:North Wall-1",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:North Wall-1",
+                    "to_surface": "Lshaped Zone:West Wall-1",
+                    "view_factor": 0.149307
+                },
+                {
+                    "from_surface": "Lshaped Zone:North Wall-1",
+                    "to_surface": "Lshaped Zone:Northwall-2",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:North Wall-1",
+                    "to_surface": "Lshaped Zone:Westwall-2",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:North Wall-1",
+                    "to_surface": "Lshaped Zone:Roof-1",
+                    "view_factor": 0.024903
+                },
+                {
+                    "from_surface": "Lshaped Zone:North Wall-1",
+                    "to_surface": "Lshaped Zone:Roof-2",
+                    "view_factor": 0.292397
+                },
+                {
+                    "from_surface": "Lshaped Zone:North Wall-1",
+                    "to_surface": "Lshaped Zone:Floor-1",
+                    "view_factor": 0.024903
+                },
+                {
+                    "from_surface": "Lshaped Zone:North Wall-1",
+                    "to_surface": "Lshaped Zone:Floor-2",
+                    "view_factor": 0.292397
+                },
+                {
+                    "from_surface": "Lshaped Zone:West Wall-1",
+                    "to_surface": "Lshaped Zone:South Wall",
+                    "view_factor": 0.01801
+                },
+                {
+                    "from_surface": "Lshaped Zone:West Wall-1",
+                    "to_surface": "Lshaped Zone:East Wall",
+                    "view_factor": 0.165266
+                },
+                {
+                    "from_surface": "Lshaped Zone:West Wall-1",
+                    "to_surface": "Lshaped Zone:North Wall-1",
+                    "view_factor": 0.149307
+                },
+                {
+                    "from_surface": "Lshaped Zone:West Wall-1",
+                    "to_surface": "Lshaped Zone:West Wall-1",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:West Wall-1",
+                    "to_surface": "Lshaped Zone:Northwall-2",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:West Wall-1",
+                    "to_surface": "Lshaped Zone:Westwall-2",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:West Wall-1",
+                    "to_surface": "Lshaped Zone:Roof-1",
+                    "view_factor": 0.041338
+                },
+                {
+                    "from_surface": "Lshaped Zone:West Wall-1",
+                    "to_surface": "Lshaped Zone:Roof-2",
+                    "view_factor": 0.29237
+                },
+                {
+                    "from_surface": "Lshaped Zone:West Wall-1",
+                    "to_surface": "Lshaped Zone:Floor-1",
+                    "view_factor": 0.041338
+                },
+                {
+                    "from_surface": "Lshaped Zone:West Wall-1",
+                    "to_surface": "Lshaped Zone:Floor-2",
+                    "view_factor": 0.29237
+                },
+                {
+                    "from_surface": "Lshaped Zone:Northwall-2",
+                    "to_surface": "Lshaped Zone:South Wall",
+                    "view_factor": 0.165278
+                },
+                {
+                    "from_surface": "Lshaped Zone:Northwall-2",
+                    "to_surface": "Lshaped Zone:East Wall",
+                    "view_factor": 0.018009
+                },
+                {
+                    "from_surface": "Lshaped Zone:Northwall-2",
+                    "to_surface": "Lshaped Zone:North Wall-1",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Northwall-2",
+                    "to_surface": "Lshaped Zone:West Wall-1",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Northwall-2",
+                    "to_surface": "Lshaped Zone:Northwall-2",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Northwall-2",
+                    "to_surface": "Lshaped Zone:Westwall-2",
+                    "view_factor": 0.149298
+                },
+                {
+                    "from_surface": "Lshaped Zone:Northwall-2",
+                    "to_surface": "Lshaped Zone:Roof-1",
+                    "view_factor": 0.333708
+                },
+                {
+                    "from_surface": "Lshaped Zone:Northwall-2",
+                    "to_surface": "Lshaped Zone:Roof-2",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Northwall-2",
+                    "to_surface": "Lshaped Zone:Floor-1",
+                    "view_factor": 0.333707
+                },
+                {
+                    "from_surface": "Lshaped Zone:Northwall-2",
+                    "to_surface": "Lshaped Zone:Floor-2",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Westwall-2",
+                    "to_surface": "Lshaped Zone:South Wall",
+                    "view_factor": 0.167318
+                },
+                {
+                    "from_surface": "Lshaped Zone:Westwall-2",
+                    "to_surface": "Lshaped Zone:East Wall",
+                    "view_factor": 0.048767
+                },
+                {
+                    "from_surface": "Lshaped Zone:Westwall-2",
+                    "to_surface": "Lshaped Zone:North Wall-1",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Westwall-2",
+                    "to_surface": "Lshaped Zone:West Wall-1",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Westwall-2",
+                    "to_surface": "Lshaped Zone:Northwall-2",
+                    "view_factor": 0.149298
+                },
+                {
+                    "from_surface": "Lshaped Zone:Westwall-2",
+                    "to_surface": "Lshaped Zone:Westwall-2",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Westwall-2",
+                    "to_surface": "Lshaped Zone:Roof-1",
+                    "view_factor": 0.314598
+                },
+                {
+                    "from_surface": "Lshaped Zone:Westwall-2",
+                    "to_surface": "Lshaped Zone:Roof-2",
+                    "view_factor": 0.002711
+                },
+                {
+                    "from_surface": "Lshaped Zone:Westwall-2",
+                    "to_surface": "Lshaped Zone:Floor-1",
+                    "view_factor": 0.314598
+                },
+                {
+                    "from_surface": "Lshaped Zone:Westwall-2",
+                    "to_surface": "Lshaped Zone:Floor-2",
+                    "view_factor": 0.002711
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-1",
+                    "to_surface": "Lshaped Zone:South Wall",
+                    "view_factor": 0.166864
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-1",
+                    "to_surface": "Lshaped Zone:East Wall",
+                    "view_factor": 0.091325
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-1",
+                    "to_surface": "Lshaped Zone:North Wall-1",
+                    "view_factor": 0.006226
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-1",
+                    "to_surface": "Lshaped Zone:West Wall-1",
+                    "view_factor": 0.010335
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-1",
+                    "to_surface": "Lshaped Zone:Northwall-2",
+                    "view_factor": 0.083427
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-1",
+                    "to_surface": "Lshaped Zone:Westwall-2",
+                    "view_factor": 0.07865
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-1",
+                    "to_surface": "Lshaped Zone:Roof-1",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-1",
+                    "to_surface": "Lshaped Zone:Roof-2",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-1",
+                    "to_surface": "Lshaped Zone:Floor-1",
+                    "view_factor": 0.508989
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-1",
+                    "to_surface": "Lshaped Zone:Floor-2",
+                    "view_factor": 0.054185
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-2",
+                    "to_surface": "Lshaped Zone:South Wall",
+                    "view_factor": 0.015772
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-2",
+                    "to_surface": "Lshaped Zone:East Wall",
+                    "view_factor": 0.166856
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-2",
+                    "to_surface": "Lshaped Zone:North Wall-1",
+                    "view_factor": 0.146198
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-2",
+                    "to_surface": "Lshaped Zone:West Wall-1",
+                    "view_factor": 0.146185
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-2",
+                    "to_surface": "Lshaped Zone:Northwall-2",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-2",
+                    "to_surface": "Lshaped Zone:Westwall-2",
+                    "view_factor": 0.001355
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-2",
+                    "to_surface": "Lshaped Zone:Roof-1",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-2",
+                    "to_surface": "Lshaped Zone:Roof-2",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-2",
+                    "to_surface": "Lshaped Zone:Floor-1",
+                    "view_factor": 0.10837
+                },
+                {
+                    "from_surface": "Lshaped Zone:Roof-2",
+                    "to_surface": "Lshaped Zone:Floor-2",
+                    "view_factor": 0.415263
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-1",
+                    "to_surface": "Lshaped Zone:South Wall",
+                    "view_factor": 0.166865
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-1",
+                    "to_surface": "Lshaped Zone:East Wall",
+                    "view_factor": 0.091324
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-1",
+                    "to_surface": "Lshaped Zone:North Wall-1",
+                    "view_factor": 0.006226
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-1",
+                    "to_surface": "Lshaped Zone:West Wall-1",
+                    "view_factor": 0.010335
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-1",
+                    "to_surface": "Lshaped Zone:Northwall-2",
+                    "view_factor": 0.083427
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-1",
+                    "to_surface": "Lshaped Zone:Westwall-2",
+                    "view_factor": 0.07865
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-1",
+                    "to_surface": "Lshaped Zone:Roof-1",
+                    "view_factor": 0.508989
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-1",
+                    "to_surface": "Lshaped Zone:Roof-2",
+                    "view_factor": 0.054185
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-1",
+                    "to_surface": "Lshaped Zone:Floor-1",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-1",
+                    "to_surface": "Lshaped Zone:Floor-2",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-2",
+                    "to_surface": "Lshaped Zone:South Wall",
+                    "view_factor": 0.015772
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-2",
+                    "to_surface": "Lshaped Zone:East Wall",
+                    "view_factor": 0.166856
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-2",
+                    "to_surface": "Lshaped Zone:North Wall-1",
+                    "view_factor": 0.146198
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-2",
+                    "to_surface": "Lshaped Zone:West Wall-1",
+                    "view_factor": 0.146185
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-2",
+                    "to_surface": "Lshaped Zone:Northwall-2",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-2",
+                    "to_surface": "Lshaped Zone:Westwall-2",
+                    "view_factor": 0.001355
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-2",
+                    "to_surface": "Lshaped Zone:Roof-1",
+                    "view_factor": 0.10837
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-2",
+                    "to_surface": "Lshaped Zone:Roof-2",
+                    "view_factor": 0.415263
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-2",
+                    "to_surface": "Lshaped Zone:Floor-1",
+                    "view_factor": 0.0
+                },
+                {
+                    "from_surface": "Lshaped Zone:Floor-2",
+                    "to_surface": "Lshaped Zone:Floor-2",
+                    "view_factor": 0.0
+                }
+            ],
+            "zone_or_zonelist_or_space_or_spacelist_name": "Lshaped Zone"
+        }
+    },
+    "ZoneVentilation:DesignFlowRate": {
+        "Lshaped zoneVentilation": {
+            "constant_term_coefficient": 1.0,
+            "delta_temperature": 1.0,
+            "design_flow_rate": 0.0004716667,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "fan_pressure_rise": 10,
+            "fan_total_efficiency": 1.0,
+            "minimum_indoor_temperature": -20.0,
+            "schedule_name": "Lshaped zone-VentilationSchedule",
+            "temperature_term_coefficient": 0.0,
+            "velocity_squared_term_coefficient": 0.0,
+            "velocity_term_coefficient": 0.0,
+            "ventilation_type": "Exhaust",
+            "zone_or_zonelist_or_space_or_spacelist_name": "Lshaped zone"
+        },
+        "LshapedZoneBaseVentilation": {
+            "constant_term_coefficient": 1.0,
+            "delta_temperature": 1.0,
+            "design_flow_rate": 0.0004716667,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "fan_pressure_rise": 10,
+            "fan_total_efficiency": 1.0,
+            "minimum_indoor_temperature": -20.0,
+            "schedule_name": "LshapedZoneBase-VentilationSchedule",
+            "temperature_term_coefficient": 0.0,
+            "velocity_squared_term_coefficient": 0.0,
+            "velocity_term_coefficient": 0.0,
+            "ventilation_type": "Exhaust",
+            "zone_or_zonelist_or_space_or_spacelist_name": "LshapedZoneBase"
+        }
+    }
+}

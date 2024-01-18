@@ -4,6 +4,7 @@
 import sys
 import os
 import glob
+import shutil
 
 def usage():
     print('usage: convert.py PATH/TO/EXAMPLE/FILES PATH/TO/CONVERTER')
@@ -27,8 +28,8 @@ if not os.path.exists(convert_exe):
 
 files = glob.glob(os.path.join(filepath, '*.idf'))
 
+# Convert IDFs
 report = open('report.txt', 'w')
-
 for file in files:
     basename = os.path.basename(file)
     target = basename[:-4] + '.epJSON'
@@ -37,6 +38,13 @@ for file in files:
         continue
     os.system("%s -o . %s" %(convert_exe, file))
     report.write(basename + '\n')
-
 report.close()
+
+# Copy over epJSONs
+files = glob.glob(os.path.join(filepath, '*.epJSON'))
+for file in files:
+    basename = os.path.basename(file)
+    if not os.path.exists(basename):
+        shutil.copy(file, basename)
+    
     

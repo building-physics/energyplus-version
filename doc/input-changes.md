@@ -33,3 +33,32 @@ All of these objects add an optional field, no change in the epJSON
 
 ### Object Change: Site:GroundTemperature:Undisturbed:Xing
 Change the name of the field "Average Soil Surface Tempeature" to "Average Soil Surface Temperature".
+
+
+
+### Object Change: DistrictHeating to DistrictHeating:Water
+Change the object name from DistrictHeating to DistrictHeating:Water.
+
+### Object Change: OtherEquipment
+### Object Change: Exterior:FuelEquipment
+### Object Change: ZoneHVAC:HybridUnitaryHVAC
+### Object Change: WaterHeater:Mixed
+
+
+### Object Change: WaterHeater:Stratified
+Field 20 remains the same. - Choice key Steam has been replaced with DistrictHeatingSteam. - Choice key DistrictHeating has been replaced with DistrictHeatingWater.
+
+See PR#9260
+
+### Object Change: EnergyManagementSystem:MeteredOutputVariable
+### Object Change: Meter:Custom
+### Object Change: Meter:CustomDecrement
+### Object Change: PythonPlugin:OutputVariable
+Choice key Steam has been replaced with DistrictHeatingSteam. - Choice key DistrictHeating has been replaced with DistrictHeatingWater.
+
+### Object Change: EnvironmentalImpactFactors
+Change field from "District Heating Efficiency" to "District Heating Water Efficiency" and field from "Steam Conversion Efficiency" to "District Heating Steam Conversion Efficiency".
+
+### Object Change: LifeCycleCost:UsePriceEscalation
+### Object Change: LifeCycleCost:UseAdjustment
+Choice key Steam has been replaced with DistrictHeatingSteam for field "Resource".

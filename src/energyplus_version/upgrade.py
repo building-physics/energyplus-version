@@ -9,7 +9,7 @@ class UpgradeWarning(Warning):
     pass
 
 class Change:
-    def apply(self, object_name) -> list: # pragma: no cover
+    def apply(self, object_name: str, object: dict) -> list: # pragma: no cover
         raise NotImplementedError('Change object must implement the "apply" method')
     def valid(self, object) -> bool: # pragma: no cover
         raise NotImplementedError('Change object must implement the "apply" method') 
@@ -29,7 +29,7 @@ class ChangeFieldName(Change):
             if not callable(modify_value):
                 raise UpgradeError('ChangeFieldName expected a callable for "modify_value", instead got "%s"' % repr(modify_value))
             self.modify_value = modify_value
-    def apply(self, object_name) -> list:
+    def apply(self, object_name: str, object: dict) -> list:
         object_path = '/%s/%s/' % (self.object, object_name)
         from_path = object_path + self.old_name
         to_path = object_path + self.new_name
@@ -48,7 +48,7 @@ class RemoveField(Change):
             if not callable(check_value):
                 raise UpgradeError('RemoveField expected a callable for "check_value", instead got "%s"' % repr(check_value))
             self.check_value = check_value
-    def apply(self, object_name) -> list:
+    def apply(self, object_name: str, object: dict) -> list:
         path = '/%s/%s/%s' % (self.object, object_name, self.field)
         return [{'op': 'remove', 'path': path}]
     def valid(self, object) -> bool:
@@ -57,7 +57,35 @@ class RemoveField(Change):
         return False
     def describe(self) -> str:
         return 'Remove the field named "%s".' % self.field
-    
+
+class MapValues(Change):
+    def __init__(self, object: str, field: str, value_map: dict):
+        self.object = object
+        self.field = field
+        self.value_map = value_map
+    def apply(self, object_name: str, object: dict) -> list:
+        path = '/%s/%s/%s' % (self.object, object_name, self.field)
+        return [{'op': 'replace', 'path': path, 'value': self.value_map[object[self.field]]}]
+    def valid(self, object) -> bool:
+        if self.field in object:
+            return object[self.field] in self.value_map
+        return False
+    def describe(self) -> str:
+        return 'Change the values of field named "%s" as follows: %s.' % (self.field, ', '.join(['"%s" to "%s"' % (k, v) for k,v in self.value_map.items()]))
+
+class ChangeObjectName(Change):
+    def __init__(self, old_name: str, new_name: str):
+        self.old_name = old_name
+        self.new_name = new_name
+    def apply(self, object_name: str, object: dict) -> list:
+        from_path = '/%s/' % self.old_name
+        to_path = '/%s/' % self.new_name
+        return [{'op': 'move', 'from': from_path, 'path': to_path}]
+    def valid(self, object) -> bool:
+        return True
+    def describe(self) -> str:
+        return 'Change the name of the object named "%s" to "%s".' % (self.old_name, self.new_name)
+
 class SplitObject(Change):
     def __init__(self, fields_by_object: dict):
         self.fields_by_object = fields_by_object
@@ -71,7 +99,7 @@ class Upgrade:
             if change.object in prev:
                 for name, obj in prev[change.object].items():
                     if change.valid(obj):
-                        patch.extend(change.apply(name))
+                        patch.extend(change.apply(name, obj))
         return patch
     def describe(self):
         change_by_object = {}

@@ -6,11 +6,13 @@ import warnings
 
 def solar_and_daylighting_method_check(value):
     if value == 'InteriorWindow':
-       warnings.warn('The "Solar and Daylighting Method" type "InteriorWindow" is no longer available, "GroupedZones" will be used')
+       warnings.warn(ev.UpgradeWarning('The "Solar and Daylighting Method" type "InteriorWindow" is no longer available, "GroupedZones" will be used'))
+    return True
 
 def radiant_exchange_method_check(value):
     if value == 'IRTSurface':
-        warnings.warn('The "Radiant Exchange Method" type "IRTSurface" is no longer available, "GroupedZones" will be used')
+        warnings.warn(ev.UpgradeWarning('The "Radiant Exchange Method" type "IRTSurface" is no longer available, "GroupedZones" will be used'))
+    return True
 
 class Upgrade(ev.EnergyPlusUpgrade):
     def changes(self):

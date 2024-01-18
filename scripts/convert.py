@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2023-present Oak Ridge National Laboratory, managed by UT-Battelle
+#
+# SPDX-License-Identifier: BSD-3-Clause
 import sys
 import os
 import glob
@@ -18,7 +21,7 @@ if not os.path.exists(filepath):
     exit(1)
 
 if not os.path.exists(convert_exe):
-    print('Failed to find converter "%s"' % convert_Exe)
+    print('Failed to find converter "%s"' % convert_exe)
     usage()
     exit(1)
 

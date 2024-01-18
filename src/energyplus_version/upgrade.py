@@ -5,6 +5,9 @@
 class UpgradeError(Exception):
     pass
 
+class UpgradeWarning(Warning):
+    pass
+
 class Change:
     def apply(self, object_name) -> list: # pragma: no cover
         raise NotImplementedError('Change object must implement the "apply" method')
@@ -13,15 +16,15 @@ class Change:
     def describe(self) -> str: # pragma: no cover
         raise NotImplementedError('Change object must implement the "describe" method')
 
-def noop(input):
-    return input
+def do_nothing(input):
+    return True
 
-class ChangeFieldName:
+class ChangeFieldName(Change):
     def __init__(self, object: str, old_name: str, new_name: str, modify_value=None):
         self.object = object
         self.old_name = old_name
         self.new_name = new_name
-        self.modify_value = noop
+        self.modify_value = do_nothing
         if modify_value is not None:
             if not callable(modify_value):
                 raise UpgradeError('ChangeFieldName expected a callable for "modify_value", instead got "%s"' % repr(modify_value))
@@ -36,11 +39,11 @@ class ChangeFieldName:
     def describe(self) -> str:
         return 'Change the field named "%s" to "%s".' % (self.old_name, self.new_name)
     
-class RemoveField:
+class RemoveField(Change):
     def __init__(self, object: str, field: str, check_value=None):
         self.object = object
         self.field = field
-        self.check_value = noop
+        self.check_value = do_nothing
         if check_value is not None:
             if not callable(check_value):
                 raise UpgradeError('RemoveField expected a callable for "check_value", instead got "%s"' % repr(check_value))
@@ -49,9 +52,15 @@ class RemoveField:
         path = '/%s/%s/%s' % (self.object, object_name, self.field)
         return [{'op': 'remove', 'path': path}]
     def valid(self, object) -> bool:
-        return self.field in object
+        if self.field in object:
+            return self.check_value(object[self.field])
+        return False
     def describe(self) -> str:
         return 'Remove the field named "%s".' % self.field
+    
+class SplitObject(Change):
+    def __init__(self, fields_by_object: dict):
+        self.fields_by_object = fields_by_object
 
 class Upgrade:
     def changes(self): # pragma: no cover

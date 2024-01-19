@@ -13,8 +13,10 @@ class Change:
         raise NotImplementedError('Change object must implement the "apply_to_all" method')
     def apply(self, object_name: str, object: dict) -> list: # pragma: no cover
         raise NotImplementedError('Change object must implement the "apply" method')
+    def generate_schema_patch(self):
+        raise NotImplementedError('Change object must implement the "generate_schema_patch" method')
     def valid(self, object) -> bool: # pragma: no cover
-        raise NotImplementedError('Change object must implement the "apply" method') 
+        raise NotImplementedError('Change object must implement the "valid" method') 
     def describe(self) -> str: # pragma: no cover
         raise NotImplementedError('Change object must implement the "describe" method')
 

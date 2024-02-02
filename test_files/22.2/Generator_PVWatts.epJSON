@@ -1,0 +1,883 @@
+{
+    "Building": {
+        "PVWatts Test Case": {
+            "loads_convergence_tolerance_value": 0.04,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.4,
+            "terrain": "Suburbs"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "Zn001:Flr001": {
+            "construction_name": "FLOOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Adiabatic",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Roof001": {
+            "construction_name": "ROOF31",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall001": {
+            "construction_name": "R13WALL",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall002": {
+            "construction_name": "R13WALL",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall003": {
+            "construction_name": "R13WALL",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall004": {
+            "construction_name": "R13WALL",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        }
+    },
+    "Construction": {
+        "FLOOR": {
+            "outside_layer": "C5 - 4 IN HW CONCRETE"
+        },
+        "R13WALL": {
+            "outside_layer": "R13LAYER"
+        },
+        "ROOF31": {
+            "outside_layer": "R31LAYER"
+        }
+    },
+    "ElectricLoadCenter:Distribution": {
+        "ELC1": {
+            "electrical_buss_type": "DirectCurrentWithInverter",
+            "generator_demand_limit_scheme_purchased_electric_demand_limit": 0,
+            "generator_list_name": "PVList1",
+            "generator_operation_scheme_type": "Baseload",
+            "inverter_name": "Inverter1"
+        }
+    },
+    "ElectricLoadCenter:Generators": {
+        "PVList1": {
+            "generator_outputs": [
+                {
+                    "generator_name": "PVWatts1",
+                    "generator_object_type": "Generator:PVWatts",
+                    "generator_rated_electric_power_output": 4000
+                },
+                {
+                    "generator_name": "PVWatts2",
+                    "generator_object_type": "Generator:PVWatts",
+                    "generator_rated_electric_power_output": 3000
+                },
+                {
+                    "generator_name": "PVWatts3",
+                    "generator_object_type": "Generator:PVWatts",
+                    "generator_rated_electric_power_output": 3000
+                }
+            ]
+        }
+    },
+    "ElectricLoadCenter:Inverter:PVWatts": {
+        "Inverter1": {
+            "dc_to_ac_size_ratio": 1.1,
+            "inverter_efficiency": 0.96
+        }
+    },
+    "Generator:PVWatts": {
+        "PVWatts1": {
+            "array_geometry_type": "TiltAzimuth",
+            "array_type": "FixedOpenRack",
+            "azimuth_angle": 180,
+            "dc_system_capacity": 4000,
+            "module_type": "Standard",
+            "pvwatts_version": "5",
+            "system_losses": 0.14,
+            "tilt_angle": 20
+        },
+        "PVWatts2": {
+            "array_geometry_type": "Surface",
+            "array_type": "FixedOpenRack",
+            "dc_system_capacity": 3000,
+            "module_type": "Premium",
+            "pvwatts_version": "5",
+            "surface_name": "FlatSurface",
+            "system_losses": 0.14
+        },
+        "PVWatts3": {
+            "array_geometry_type": "Surface",
+            "array_type": "FixedOpenRack",
+            "dc_system_capacity": 3000,
+            "module_type": "Premium",
+            "pvwatts_version": "5",
+            "surface_name": "FlatSurfaceShadetoEast",
+            "system_losses": 0.14
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "Material": {
+        "C5 - 4 IN HW CONCRETE": {
+            "conductivity": 1.729577,
+            "density": 2242.585,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1014984,
+            "visible_absorptance": 0.65
+        }
+    },
+    "Material:NoMass": {
+        "R13LAYER": {
+            "roughness": "Rough",
+            "solar_absorptance": 0.75,
+            "thermal_absorptance": 0.9,
+            "thermal_resistance": 2.290965,
+            "visible_absorptance": 0.75
+        },
+        "R31LAYER": {
+            "roughness": "Rough",
+            "solar_absorptance": 0.75,
+            "thermal_absorptance": 0.9,
+            "thermal_resistance": 5.456,
+            "visible_absorptance": 0.75
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Dewpoint Temperature"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Wetbulb Temperature"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Humidity Ratio"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Relative Humidity"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Barometric Pressure"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Wind Speed"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Wind Direction"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Sky Temperature"
+        },
+        "Output:Variable 10": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Horizontal Infrared Radiation Rate per Area"
+        },
+        "Output:Variable 11": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Diffuse Solar Radiation Rate per Area"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Direct Solar Radiation Rate per Area"
+        },
+        "Output:Variable 13": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Precipitation Depth"
+        },
+        "Output:Variable 14": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Ground Reflected Solar Radiation Rate per Area"
+        },
+        "Output:Variable 15": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Ground Temperature"
+        },
+        "Output:Variable 16": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Surface Ground Temperature"
+        },
+        "Output:Variable 17": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Deep Ground Temperature"
+        },
+        "Output:Variable 18": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Simple Factor Model Ground Temperature"
+        },
+        "Output:Variable 19": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Enthalpy"
+        },
+        "Output:Variable 20": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Density"
+        },
+        "Output:Variable 21": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Solar Azimuth Angle"
+        },
+        "Output:Variable 22": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Solar Altitude Angle"
+        },
+        "Output:Variable 23": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Solar Hour Angle"
+        },
+        "Output:Variable 24": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Rain Status"
+        },
+        "Output:Variable 25": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Snow on Ground Status"
+        },
+        "Output:Variable 26": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Exterior Horizontal Sky Illuminance"
+        },
+        "Output:Variable 27": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Exterior Horizontal Beam Illuminance"
+        },
+        "Output:Variable 28": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Exterior Beam Normal Illuminance"
+        },
+        "Output:Variable 29": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Sky Diffuse Solar Radiation Luminous Efficacy"
+        },
+        "Output:Variable 30": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Beam Solar Radiation Luminous Efficacy"
+        },
+        "Output:Variable 31": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Daylighting Model Sky Clearness"
+        },
+        "Output:Variable 32": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Daylighting Model Sky Brightness"
+        },
+        "Output:Variable 33": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Daylight Saving Time Status"
+        },
+        "Output:Variable 34": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Day Type Index"
+        },
+        "Output:Variable 35": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Mains Water Temperature"
+        },
+        "Output:Variable 36": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "HVAC System Solver Iteration Count"
+        },
+        "Output:Variable 37": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Air System Solver Iteration Count"
+        },
+        "Output:Variable 38": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Air System Simulation Maximum Iteration Count"
+        },
+        "Output:Variable 39": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Air System Simulation Iteration Count"
+        },
+        "Output:Variable 40": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Air System Component Model Simulation Calls"
+        },
+        "Output:Variable 41": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Requested Electricity Rate"
+        },
+        "Output:Variable 42": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Inverter DC to AC Efficiency"
+        },
+        "Output:Variable 43": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Inverter DC Input Electricity Rate"
+        },
+        "Output:Variable 44": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Inverter DC Input Electricity Energy"
+        },
+        "Output:Variable 45": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Inverter AC Output Electricity Rate"
+        },
+        "Output:Variable 46": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Inverter AC Output Electricity Energy"
+        },
+        "Output:Variable 47": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Inverter Conversion Loss Power"
+        },
+        "Output:Variable 48": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Inverter Conversion Loss Energy"
+        },
+        "Output:Variable 49": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Inverter Conversion Loss Decrement Energy"
+        },
+        "Output:Variable 50": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Inverter Thermal Loss Rate"
+        },
+        "Output:Variable 51": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Inverter Thermal Loss Energy"
+        },
+        "Output:Variable 52": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Inverter Ancillary AC Electricity Rate"
+        },
+        "Output:Variable 53": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Inverter Ancillary AC Electricity Energy"
+        },
+        "Output:Variable 54": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Produced DC Electricity Rate"
+        },
+        "Output:Variable 55": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Produced DC Electricity Energy"
+        },
+        "Output:Variable 56": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator PV Cell Temperature"
+        },
+        "Output:Variable 57": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Plane of Array Irradiance"
+        },
+        "Output:Variable 58": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Shaded Percent"
+        },
+        "Output:Variable 59": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Electric Load Center Produced Electricity Rate"
+        },
+        "Output:Variable 60": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Electric Load Center Produced Electricity Energy"
+        },
+        "Output:Variable 61": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Electric Load Center Supplied Electricity Rate"
+        },
+        "Output:Variable 62": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Electric Load Center Drawn Electricity Rate"
+        },
+        "Output:Variable 63": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Electric Load Center Produced Thermal Rate"
+        },
+        "Output:Variable 64": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Electric Load Center Produced Thermal Energy"
+        },
+        "Output:Variable 65": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Electric Load Center Requested Electricity Rate"
+        },
+        "Output:Variable 66": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Facility Total Purchased Electricity Rate"
+        },
+        "Output:Variable 67": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Facility Total Purchased Electricity Energy"
+        },
+        "Output:Variable 68": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Facility Total Surplus Electricity Rate"
+        },
+        "Output:Variable 69": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Facility Total Surplus Electricity Energy"
+        },
+        "Output:Variable 70": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Facility Net Purchased Electricity Rate"
+        },
+        "Output:Variable 71": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Facility Net Purchased Electricity Energy"
+        },
+        "Output:Variable 72": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Facility Total Building Electricity Demand Rate"
+        },
+        "Output:Variable 73": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Facility Total HVAC Electricity Demand Rate"
+        },
+        "Output:Variable 74": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Facility Total Electricity Demand Rate"
+        },
+        "Output:Variable 75": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Facility Total Produced Electricity Rate"
+        },
+        "Output:Variable 76": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Facility Total Produced Electricity Energy"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "RunPeriod": {
+        "All Year": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "end_day_of_month": 31,
+            "end_month": 12,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "OnOff": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 1
+        }
+    },
+    "Shading:Site:Detailed": {
+        "FlatSurface": {
+            "number_of_vertices": 4,
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 2.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 45.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 45.0,
+                    "vertex_y_coordinate": 2.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ]
+        },
+        "FlatSurfaceShadetoEast": {
+            "number_of_vertices": 4,
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 12.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 20.0,
+                    "vertex_z_coordinate": 12.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 20.0,
+                    "vertex_z_coordinate": 12.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 12.0
+                }
+            ]
+        },
+        "ShadetoEast": {
+            "number_of_vertices": 4,
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 22.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 12.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 20.0,
+                    "vertex_z_coordinate": 12.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 20.0,
+                    "vertex_z_coordinate": 22.0
+                }
+            ]
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "No",
+            "run_simulation_for_weather_file_run_periods": "Yes"
+        }
+    },
+    "Site:Location": {
+        "Phoenix Sky Harbor Intl Ap_AZ_USA Design_Conditions": {
+            "elevation": 337.0,
+            "latitude": 33.45,
+            "longitude": -111.98,
+            "time_zone": -7.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "Phoenix Sky Harbor Intl Ap Ann Clg 1% Condns DB=>MWB": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.588,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 1.653,
+            "barometric_pressure": 97342.0,
+            "daily_dry_bulb_temperature_range": 12,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "dry_bulb_temperature_range_modifier_type": "DefaultMultipliers",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 42.3,
+            "month": 7,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 21,
+            "wind_direction": 260,
+            "wind_speed": 4.1
+        },
+        "Phoenix Sky Harbor Intl Ap Ann Htg 99% Condns DB": {
+            "barometric_pressure": 97342.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "dry_bulb_temperature_range_modifier_type": "DefaultMultipliers",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 5.2,
+            "month": 12,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 5.2,
+            "wind_direction": 100,
+            "wind_speed": 1.7
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 1
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "22.2"
+        }
+    },
+    "Zone": {
+        "ZONE ONE": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        }
+    }
+}

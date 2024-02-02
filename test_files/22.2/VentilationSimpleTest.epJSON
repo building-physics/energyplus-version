@@ -1,0 +1,3941 @@
+{
+    "Building": {
+        "BUILDING #1": {
+            "loads_convergence_tolerance_value": 0.039999999,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "FullExterior",
+            "temperature_convergence_tolerance_value": 0.4,
+            "terrain": "Suburbs"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "Zn001:Flr001": {
+            "construction_name": "SLAB FLOOR",
+            "number_of_vertices": "Autocalculate",
+            "outside_boundary_condition": "Ground",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 1.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 1.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 41.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 41.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 35.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 35.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 24.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 24.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 18.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 18.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 12.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 12.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 7.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 7.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Roof001": {
+            "construction_name": "ROOF31",
+            "number_of_vertices": "Autocalculate",
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 1.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 7.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 7.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 12.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 12.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 18.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 18.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 24.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 24.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 30.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 30.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 35.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 35.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 41.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 41.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 1.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall001": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 1.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 1.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 7.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 7.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall002": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 7.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 7.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 7.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 7.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall003": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 7.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 7.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 12.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 12.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall004": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 12.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 12.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 12.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 12.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall005": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 12.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 12.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 18.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 18.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall006": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 18.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 18.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 18.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 18.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall007": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 18.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 18.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 24.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 24.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall008": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 24.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 24.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 24.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 24.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall009": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 24.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 24.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall010": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 30.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 30.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall011": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 30.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 35.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 35.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall012": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 35.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 35.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 35.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 35.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall013": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 35.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 35.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 41.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 41.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall014": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 41.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 41.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 41.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 41.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall015": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 41.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 41.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 1.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 1.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn001:Wall016": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 1.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 1.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 1.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 1.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 1"
+        },
+        "Zn002:Flr001": {
+            "construction_name": "SLAB FLOOR",
+            "number_of_vertices": "Autocalculate",
+            "outside_boundary_condition": "Ground",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 101.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 101.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 141.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 141.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 135.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 135.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 130.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 130.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 124.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 124.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 118.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 118.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 112.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 112.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 107.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 107.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Roof001": {
+            "construction_name": "ROOF31",
+            "number_of_vertices": "Autocalculate",
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 101.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 107.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 107.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 112.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 112.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 118.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 118.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 124.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 124.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 130.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 130.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 135.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 135.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 141.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 141.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 101.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall001": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 101.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 101.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 107.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 107.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall002": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 107.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 107.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 107.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 107.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall003": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 107.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 107.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 112.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 112.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall004": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 112.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 112.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 112.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 112.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall005": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 112.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 112.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 118.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 118.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall006": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 118.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 118.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 118.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 118.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall007": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 118.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 118.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 124.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 124.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall008": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 124.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 124.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 124.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 124.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall009": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 124.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 124.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 130.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 130.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall010": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 130.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 130.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 130.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 130.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall011": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 130.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 130.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 135.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 135.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall012": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 135.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 135.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 135.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 135.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall013": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 135.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 135.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 141.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 141.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall014": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 141.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 141.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 141.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 141.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall015": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 141.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 141.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 101.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 101.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn002:Wall016": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 101.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 101.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 101.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 101.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 2"
+        },
+        "Zn003:Flr001": {
+            "construction_name": "SLAB FLOOR",
+            "number_of_vertices": "Autocalculate",
+            "outside_boundary_condition": "Ground",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 201.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 201.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 241.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 241.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 235.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 235.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 230.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 230.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 224.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 224.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 218.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 218.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 212.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 212.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 207.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 207.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Roof001": {
+            "construction_name": "ROOF31",
+            "number_of_vertices": "Autocalculate",
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 201.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 207.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 207.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 212.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 212.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 218.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 218.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 224.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 224.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 230.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 230.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 235.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 235.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 241.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 241.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 201.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall001": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 201.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 201.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 207.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 207.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall002": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 207.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 207.28,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 207.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 207.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall003": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 207.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 207.28,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 212.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 212.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall004": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 212.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 212.88,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 212.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 212.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall005": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 212.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 212.88,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 218.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 218.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall006": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 218.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 218.18,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 218.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 218.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall007": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 218.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 218.18,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 224.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 224.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall008": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 224.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 224.08,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 224.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 224.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall009": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 224.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 224.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 230.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 230.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall010": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 230.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 230.08,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 230.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 230.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall011": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 230.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 230.08,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 235.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 235.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall012": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 235.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 235.38,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 235.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 235.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall013": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 235.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 235.38,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 241.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 241.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall014": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 241.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 241.48,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 241.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 241.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall015": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 241.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 241.48,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 201.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 201.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        },
+        "Zn003:Wall016": {
+            "construction_name": "EXTERIOR",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 201.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 10.0
+                },
+                {
+                    "vertex_x_coordinate": 201.98,
+                    "vertex_y_coordinate": 18.38,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 201.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 201.98,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 10.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE 3"
+        }
+    },
+    "Construction": {
+        "EXTERIOR": {
+            "layer_2": "B3 - 2 IN INSULATION",
+            "layer_3": "C2 - 4 IN LW CONCRETE BLOCK",
+            "layer_4": "E1 - 3 / 4 IN PLASTER OR GYP BOARD",
+            "outside_layer": "A2 - 4 IN DENSE FACE BRICK"
+        },
+        "ROOF31": {
+            "layer_2": "E3 - 3 / 8 IN FELT AND MEMBRANE",
+            "layer_3": "B6 - 2 IN DENSE INSULATION",
+            "layer_4": "C12 - 2 IN HW CONCRETE",
+            "outside_layer": "E2 - 1 / 2 IN SLAG OR STONE"
+        },
+        "SINGLE PANE HW WINDOW": {
+            "outside_layer": "GLASS - CLEAR PLATE 1 / 4 IN"
+        },
+        "SLAB FLOOR": {
+            "layer_2": "CONCRETE - SAND AND GRAVEL 4 IN",
+            "outside_layer": "DIRT 12 IN"
+        }
+    },
+    "ElectricEquipment": {
+        "ZONE 1 ElecEq 1": {
+            "design_level": 480.0,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0.0,
+            "fraction_lost": 0.0,
+            "fraction_radiant": 0.3,
+            "schedule_name": "Residence Lighting",
+            "zone_or_zonelist_or_space_or_spacelist_name": "ZONE 1"
+        },
+        "ZONE 2 ElecEq 1": {
+            "design_level": 480.0,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0.0,
+            "fraction_lost": 0.0,
+            "fraction_radiant": 0.3,
+            "schedule_name": "Residence Lighting",
+            "zone_or_zonelist_or_space_or_spacelist_name": "ZONE 2"
+        },
+        "ZONE 3 ElecEq 1": {
+            "design_level": 480.0,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0.0,
+            "fraction_lost": 0.0,
+            "fraction_radiant": 0.3,
+            "schedule_name": "Residence Lighting",
+            "zone_or_zonelist_or_space_or_spacelist_name": "ZONE 3"
+        }
+    },
+    "FenestrationSurface:Detailed": {
+        "Zn001:Wall001:Win001": {
+            "building_surface_name": "Zn001:Wall001",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 3.08,
+            "vertex_1_y_coordinate": 5.98,
+            "vertex_1_z_coordinate": 7.6,
+            "vertex_2_x_coordinate": 3.08,
+            "vertex_2_y_coordinate": 5.98,
+            "vertex_2_z_coordinate": 2.6,
+            "vertex_3_x_coordinate": 6.08,
+            "vertex_3_y_coordinate": 5.98,
+            "vertex_3_z_coordinate": 2.6,
+            "vertex_4_x_coordinate": 6.08,
+            "vertex_4_y_coordinate": 5.98,
+            "vertex_4_z_coordinate": 7.6,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn001:Wall003:Win001": {
+            "building_surface_name": "Zn001:Wall003",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 8.58,
+            "vertex_1_y_coordinate": 8.98,
+            "vertex_1_z_coordinate": 7.5,
+            "vertex_2_x_coordinate": 8.58,
+            "vertex_2_y_coordinate": 8.98,
+            "vertex_2_z_coordinate": 2.5,
+            "vertex_3_x_coordinate": 11.58,
+            "vertex_3_y_coordinate": 8.98,
+            "vertex_3_z_coordinate": 2.5,
+            "vertex_4_x_coordinate": 11.58,
+            "vertex_4_y_coordinate": 8.98,
+            "vertex_4_z_coordinate": 7.5,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn001:Wall005:Win001": {
+            "building_surface_name": "Zn001:Wall005",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 14.08,
+            "vertex_1_y_coordinate": 4.58,
+            "vertex_1_z_coordinate": 7.1,
+            "vertex_2_x_coordinate": 14.08,
+            "vertex_2_y_coordinate": 4.58,
+            "vertex_2_z_coordinate": 2.1,
+            "vertex_3_x_coordinate": 17.08,
+            "vertex_3_y_coordinate": 4.58,
+            "vertex_3_z_coordinate": 2.1,
+            "vertex_4_x_coordinate": 17.08,
+            "vertex_4_y_coordinate": 4.58,
+            "vertex_4_z_coordinate": 7.1,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn001:Wall007:Win001": {
+            "building_surface_name": "Zn001:Wall007",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 19.58,
+            "vertex_1_y_coordinate": 8.08,
+            "vertex_1_z_coordinate": 7.2,
+            "vertex_2_x_coordinate": 19.58,
+            "vertex_2_y_coordinate": 8.08,
+            "vertex_2_z_coordinate": 2.2,
+            "vertex_3_x_coordinate": 22.58,
+            "vertex_3_y_coordinate": 8.08,
+            "vertex_3_z_coordinate": 2.2,
+            "vertex_4_x_coordinate": 22.58,
+            "vertex_4_y_coordinate": 8.08,
+            "vertex_4_z_coordinate": 7.2,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn001:Wall009:Win001": {
+            "building_surface_name": "Zn001:Wall009",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 25.58,
+            "vertex_1_y_coordinate": 5.08,
+            "vertex_1_z_coordinate": 7.2,
+            "vertex_2_x_coordinate": 25.58,
+            "vertex_2_y_coordinate": 5.08,
+            "vertex_2_z_coordinate": 2.2,
+            "vertex_3_x_coordinate": 28.58,
+            "vertex_3_y_coordinate": 5.08,
+            "vertex_3_z_coordinate": 2.2,
+            "vertex_4_x_coordinate": 28.58,
+            "vertex_4_y_coordinate": 5.08,
+            "vertex_4_z_coordinate": 7.2,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn001:Wall011:Win001": {
+            "building_surface_name": "Zn001:Wall011",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 30.98,
+            "vertex_1_y_coordinate": 10.28,
+            "vertex_1_z_coordinate": 7.2,
+            "vertex_2_x_coordinate": 30.98,
+            "vertex_2_y_coordinate": 10.28,
+            "vertex_2_z_coordinate": 2.2,
+            "vertex_3_x_coordinate": 33.98,
+            "vertex_3_y_coordinate": 10.28,
+            "vertex_3_z_coordinate": 2.2,
+            "vertex_4_x_coordinate": 33.98,
+            "vertex_4_y_coordinate": 10.28,
+            "vertex_4_z_coordinate": 7.2,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn001:Wall013:Win001": {
+            "building_surface_name": "Zn001:Wall013",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 36.88,
+            "vertex_1_y_coordinate": 7.48,
+            "vertex_1_z_coordinate": 7.2,
+            "vertex_2_x_coordinate": 36.88,
+            "vertex_2_y_coordinate": 7.48,
+            "vertex_2_z_coordinate": 2.2,
+            "vertex_3_x_coordinate": 39.88,
+            "vertex_3_y_coordinate": 7.48,
+            "vertex_3_z_coordinate": 2.2,
+            "vertex_4_x_coordinate": 39.88,
+            "vertex_4_y_coordinate": 7.48,
+            "vertex_4_z_coordinate": 7.2,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn001:Wall015:Win001": {
+            "building_surface_name": "Zn001:Wall015",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 40.88,
+            "vertex_1_y_coordinate": 18.38,
+            "vertex_1_z_coordinate": 7.5,
+            "vertex_2_x_coordinate": 40.88,
+            "vertex_2_y_coordinate": 18.38,
+            "vertex_2_z_coordinate": 4.5,
+            "vertex_3_x_coordinate": 4.88,
+            "vertex_3_y_coordinate": 18.38,
+            "vertex_3_z_coordinate": 4.5,
+            "vertex_4_x_coordinate": 4.88,
+            "vertex_4_y_coordinate": 18.38,
+            "vertex_4_z_coordinate": 7.5,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn002:Wall001:Win001": {
+            "building_surface_name": "Zn002:Wall001",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 103.08,
+            "vertex_1_y_coordinate": 5.98,
+            "vertex_1_z_coordinate": 7.6,
+            "vertex_2_x_coordinate": 103.08,
+            "vertex_2_y_coordinate": 5.98,
+            "vertex_2_z_coordinate": 2.6,
+            "vertex_3_x_coordinate": 106.08,
+            "vertex_3_y_coordinate": 5.98,
+            "vertex_3_z_coordinate": 2.6,
+            "vertex_4_x_coordinate": 106.08,
+            "vertex_4_y_coordinate": 5.98,
+            "vertex_4_z_coordinate": 7.6,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn002:Wall003:Win001": {
+            "building_surface_name": "Zn002:Wall003",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 108.58,
+            "vertex_1_y_coordinate": 8.98,
+            "vertex_1_z_coordinate": 7.5,
+            "vertex_2_x_coordinate": 108.58,
+            "vertex_2_y_coordinate": 8.98,
+            "vertex_2_z_coordinate": 2.5,
+            "vertex_3_x_coordinate": 111.58,
+            "vertex_3_y_coordinate": 8.98,
+            "vertex_3_z_coordinate": 2.5,
+            "vertex_4_x_coordinate": 111.58,
+            "vertex_4_y_coordinate": 8.98,
+            "vertex_4_z_coordinate": 7.5,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn002:Wall005:Win001": {
+            "building_surface_name": "Zn002:Wall005",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 114.08,
+            "vertex_1_y_coordinate": 4.58,
+            "vertex_1_z_coordinate": 7.1,
+            "vertex_2_x_coordinate": 114.08,
+            "vertex_2_y_coordinate": 4.58,
+            "vertex_2_z_coordinate": 2.1,
+            "vertex_3_x_coordinate": 117.08,
+            "vertex_3_y_coordinate": 4.58,
+            "vertex_3_z_coordinate": 2.1,
+            "vertex_4_x_coordinate": 117.08,
+            "vertex_4_y_coordinate": 4.58,
+            "vertex_4_z_coordinate": 7.1,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn002:Wall007:Win001": {
+            "building_surface_name": "Zn002:Wall007",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 119.58,
+            "vertex_1_y_coordinate": 8.08,
+            "vertex_1_z_coordinate": 7.2,
+            "vertex_2_x_coordinate": 119.58,
+            "vertex_2_y_coordinate": 8.08,
+            "vertex_2_z_coordinate": 2.2,
+            "vertex_3_x_coordinate": 122.58,
+            "vertex_3_y_coordinate": 8.08,
+            "vertex_3_z_coordinate": 2.2,
+            "vertex_4_x_coordinate": 122.58,
+            "vertex_4_y_coordinate": 8.08,
+            "vertex_4_z_coordinate": 7.2,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn002:Wall009:Win001": {
+            "building_surface_name": "Zn002:Wall009",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 125.58,
+            "vertex_1_y_coordinate": 5.08,
+            "vertex_1_z_coordinate": 7.2,
+            "vertex_2_x_coordinate": 125.58,
+            "vertex_2_y_coordinate": 5.08,
+            "vertex_2_z_coordinate": 2.2,
+            "vertex_3_x_coordinate": 128.58,
+            "vertex_3_y_coordinate": 5.08,
+            "vertex_3_z_coordinate": 2.2,
+            "vertex_4_x_coordinate": 128.58,
+            "vertex_4_y_coordinate": 5.08,
+            "vertex_4_z_coordinate": 7.2,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn002:Wall011:Win001": {
+            "building_surface_name": "Zn002:Wall011",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 130.98,
+            "vertex_1_y_coordinate": 10.28,
+            "vertex_1_z_coordinate": 7.2,
+            "vertex_2_x_coordinate": 130.98,
+            "vertex_2_y_coordinate": 10.28,
+            "vertex_2_z_coordinate": 2.2,
+            "vertex_3_x_coordinate": 133.98,
+            "vertex_3_y_coordinate": 10.28,
+            "vertex_3_z_coordinate": 2.2,
+            "vertex_4_x_coordinate": 133.98,
+            "vertex_4_y_coordinate": 10.28,
+            "vertex_4_z_coordinate": 7.2,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn002:Wall013:Win001": {
+            "building_surface_name": "Zn002:Wall013",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 136.88,
+            "vertex_1_y_coordinate": 7.48,
+            "vertex_1_z_coordinate": 7.2,
+            "vertex_2_x_coordinate": 136.88,
+            "vertex_2_y_coordinate": 7.48,
+            "vertex_2_z_coordinate": 2.2,
+            "vertex_3_x_coordinate": 139.88,
+            "vertex_3_y_coordinate": 7.48,
+            "vertex_3_z_coordinate": 2.2,
+            "vertex_4_x_coordinate": 139.88,
+            "vertex_4_y_coordinate": 7.48,
+            "vertex_4_z_coordinate": 7.2,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn002:Wall015:Win001": {
+            "building_surface_name": "Zn002:Wall015",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 140.88,
+            "vertex_1_y_coordinate": 18.38,
+            "vertex_1_z_coordinate": 7.5,
+            "vertex_2_x_coordinate": 140.88,
+            "vertex_2_y_coordinate": 18.38,
+            "vertex_2_z_coordinate": 4.5,
+            "vertex_3_x_coordinate": 104.88,
+            "vertex_3_y_coordinate": 18.38,
+            "vertex_3_z_coordinate": 4.5,
+            "vertex_4_x_coordinate": 104.88,
+            "vertex_4_y_coordinate": 18.38,
+            "vertex_4_z_coordinate": 7.5,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn003:Wall001:Win001": {
+            "building_surface_name": "Zn003:Wall001",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 203.08,
+            "vertex_1_y_coordinate": 5.98,
+            "vertex_1_z_coordinate": 7.6,
+            "vertex_2_x_coordinate": 203.08,
+            "vertex_2_y_coordinate": 5.98,
+            "vertex_2_z_coordinate": 2.6,
+            "vertex_3_x_coordinate": 206.08,
+            "vertex_3_y_coordinate": 5.98,
+            "vertex_3_z_coordinate": 2.6,
+            "vertex_4_x_coordinate": 206.08,
+            "vertex_4_y_coordinate": 5.98,
+            "vertex_4_z_coordinate": 7.6,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn003:Wall003:Win001": {
+            "building_surface_name": "Zn003:Wall003",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 208.58,
+            "vertex_1_y_coordinate": 8.98,
+            "vertex_1_z_coordinate": 7.5,
+            "vertex_2_x_coordinate": 208.58,
+            "vertex_2_y_coordinate": 8.98,
+            "vertex_2_z_coordinate": 2.5,
+            "vertex_3_x_coordinate": 211.58,
+            "vertex_3_y_coordinate": 8.98,
+            "vertex_3_z_coordinate": 2.5,
+            "vertex_4_x_coordinate": 211.58,
+            "vertex_4_y_coordinate": 8.98,
+            "vertex_4_z_coordinate": 7.5,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn003:Wall005:Win001": {
+            "building_surface_name": "Zn003:Wall005",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 214.08,
+            "vertex_1_y_coordinate": 4.58,
+            "vertex_1_z_coordinate": 7.1,
+            "vertex_2_x_coordinate": 214.08,
+            "vertex_2_y_coordinate": 4.58,
+            "vertex_2_z_coordinate": 2.1,
+            "vertex_3_x_coordinate": 217.08,
+            "vertex_3_y_coordinate": 4.58,
+            "vertex_3_z_coordinate": 2.1,
+            "vertex_4_x_coordinate": 217.08,
+            "vertex_4_y_coordinate": 4.58,
+            "vertex_4_z_coordinate": 7.1,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn003:Wall007:Win001": {
+            "building_surface_name": "Zn003:Wall007",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 219.58,
+            "vertex_1_y_coordinate": 8.08,
+            "vertex_1_z_coordinate": 7.2,
+            "vertex_2_x_coordinate": 219.58,
+            "vertex_2_y_coordinate": 8.08,
+            "vertex_2_z_coordinate": 2.2,
+            "vertex_3_x_coordinate": 222.58,
+            "vertex_3_y_coordinate": 8.08,
+            "vertex_3_z_coordinate": 2.2,
+            "vertex_4_x_coordinate": 222.58,
+            "vertex_4_y_coordinate": 8.08,
+            "vertex_4_z_coordinate": 7.2,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn003:Wall009:Win001": {
+            "building_surface_name": "Zn003:Wall009",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 225.58,
+            "vertex_1_y_coordinate": 5.08,
+            "vertex_1_z_coordinate": 7.2,
+            "vertex_2_x_coordinate": 225.58,
+            "vertex_2_y_coordinate": 5.08,
+            "vertex_2_z_coordinate": 2.2,
+            "vertex_3_x_coordinate": 228.58,
+            "vertex_3_y_coordinate": 5.08,
+            "vertex_3_z_coordinate": 2.2,
+            "vertex_4_x_coordinate": 228.58,
+            "vertex_4_y_coordinate": 5.08,
+            "vertex_4_z_coordinate": 7.2,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn003:Wall011:Win001": {
+            "building_surface_name": "Zn003:Wall011",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 230.98,
+            "vertex_1_y_coordinate": 10.28,
+            "vertex_1_z_coordinate": 7.2,
+            "vertex_2_x_coordinate": 230.98,
+            "vertex_2_y_coordinate": 10.28,
+            "vertex_2_z_coordinate": 2.2,
+            "vertex_3_x_coordinate": 233.98,
+            "vertex_3_y_coordinate": 10.28,
+            "vertex_3_z_coordinate": 2.2,
+            "vertex_4_x_coordinate": 233.98,
+            "vertex_4_y_coordinate": 10.28,
+            "vertex_4_z_coordinate": 7.2,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn003:Wall013:Win001": {
+            "building_surface_name": "Zn003:Wall013",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 236.88,
+            "vertex_1_y_coordinate": 7.48,
+            "vertex_1_z_coordinate": 7.2,
+            "vertex_2_x_coordinate": 236.88,
+            "vertex_2_y_coordinate": 7.48,
+            "vertex_2_z_coordinate": 2.2,
+            "vertex_3_x_coordinate": 239.88,
+            "vertex_3_y_coordinate": 7.48,
+            "vertex_3_z_coordinate": 2.2,
+            "vertex_4_x_coordinate": 239.88,
+            "vertex_4_y_coordinate": 7.48,
+            "vertex_4_z_coordinate": 7.2,
+            "view_factor_to_ground": 0.5
+        },
+        "Zn003:Wall015:Win001": {
+            "building_surface_name": "Zn003:Wall015",
+            "construction_name": "SINGLE PANE HW WINDOW",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 240.88,
+            "vertex_1_y_coordinate": 18.38,
+            "vertex_1_z_coordinate": 7.5,
+            "vertex_2_x_coordinate": 240.88,
+            "vertex_2_y_coordinate": 18.38,
+            "vertex_2_z_coordinate": 4.5,
+            "vertex_3_x_coordinate": 204.88,
+            "vertex_3_y_coordinate": 18.38,
+            "vertex_3_z_coordinate": 4.5,
+            "vertex_4_x_coordinate": 204.88,
+            "vertex_4_y_coordinate": 18.38,
+            "vertex_4_z_coordinate": 7.5,
+            "view_factor_to_ground": 0.5
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "World",
+            "rectangular_surface_coordinate_system": "World",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "Lights": {
+        "ZONE 1 Lights 1": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.4,
+            "fraction_replaceable": 0.0,
+            "fraction_visible": 0.2,
+            "lighting_level": 950.0,
+            "return_air_fraction": 0.0,
+            "schedule_name": "Residence Lighting",
+            "zone_or_zonelist_or_space_or_spacelist_name": "ZONE 1"
+        },
+        "ZONE 2 Lights 1": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.4,
+            "fraction_replaceable": 0.0,
+            "fraction_visible": 0.2,
+            "lighting_level": 950.0,
+            "return_air_fraction": 0.0,
+            "schedule_name": "Residence Lighting",
+            "zone_or_zonelist_or_space_or_spacelist_name": "ZONE 2"
+        },
+        "ZONE 3 Lights 1": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.4,
+            "fraction_replaceable": 0.0,
+            "fraction_visible": 0.2,
+            "lighting_level": 950.0,
+            "return_air_fraction": 0.0,
+            "schedule_name": "Residence Lighting",
+            "zone_or_zonelist_or_space_or_spacelist_name": "ZONE 3"
+        }
+    },
+    "Material": {
+        "A2 - 4 IN DENSE FACE BRICK": {
+            "conductivity": 1.245296,
+            "density": 2082.4,
+            "roughness": "Rough",
+            "solar_absorptance": 0.93,
+            "specific_heat": 920.48,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1014984,
+            "visible_absorptance": 0.93
+        },
+        "B3 - 2 IN INSULATION": {
+            "conductivity": 0.04323943,
+            "density": 32.03693,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.050901599,
+            "visible_absorptance": 0.5
+        },
+        "B6 - 2 IN DENSE INSULATION": {
+            "conductivity": 0.04323943,
+            "density": 91.30524,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.050901599,
+            "visible_absorptance": 0.5
+        },
+        "C2 - 4 IN LW CONCRETE BLOCK": {
+            "conductivity": 0.380507,
+            "density": 608.7016,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1014984,
+            "visible_absorptance": 0.65
+        },
+        "C12 - 2 IN HW CONCRETE": {
+            "conductivity": 1.729577,
+            "density": 2242.585,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.050901599,
+            "visible_absorptance": 0.65
+        },
+        "CONCRETE - SAND AND GRAVEL 4 IN": {
+            "conductivity": 1.729577,
+            "density": 2242.585,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.6,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1014984,
+            "visible_absorptance": 0.6
+        },
+        "DIRT 12 IN": {
+            "conductivity": 0.1729577,
+            "density": 1041.2,
+            "roughness": "Rough",
+            "solar_absorptance": 0.7,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.3048,
+            "visible_absorptance": 0.7
+        },
+        "E1 - 3 / 4 IN PLASTER OR GYP BOARD": {
+            "conductivity": 0.7264224,
+            "density": 1601.846,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.01905,
+            "visible_absorptance": 0.92
+        },
+        "E2 - 1 / 2 IN SLAG OR STONE": {
+            "conductivity": 1.435549,
+            "density": 881.0155,
+            "roughness": "Rough",
+            "solar_absorptance": 0.55,
+            "specific_heat": 1673.6,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.012710161,
+            "visible_absorptance": 0.55
+        },
+        "E3 - 3 / 8 IN FELT AND MEMBRANE": {
+            "conductivity": 0.1902535,
+            "density": 1121.292,
+            "roughness": "Rough",
+            "solar_absorptance": 0.75,
+            "specific_heat": 1673.6,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0095402403,
+            "visible_absorptance": 0.75
+        }
+    },
+    "Output:Meter": {
+        "Output:Meter 1": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "Hourly"
+        }
+    },
+    "Output:Meter:MeterFileOnly": {
+        "Output:Meter:MeterFileOnly 1": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 2": {
+            "key_name": "Electricity:Building",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 3": {
+            "key_name": "InteriorLights:Electricity",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 4": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 5": {
+            "key_name": "Electricity:Building",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 6": {
+            "key_name": "InteriorLights:Electricity",
+            "reporting_frequency": "RunPeriod"
+        }
+    },
+    "Output:SQLite": {
+        "Output:SQLite 1": {
+            "option_type": "Simple"
+        }
+    },
+    "Output:Surfaces:Drawing": {
+        "Output:Surfaces:Drawing 1": {
+            "report_specifications_1": "RegularPolyline",
+            "report_type": "DXF"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air Temperature"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air System Sensible Cooling Energy"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air System Sensible Cooling Rate"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Ventilation Sensible Heat Loss Energy"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Ventilation Current Density Volume"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Ventilation Mass"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Ventilation Fan Electricity Energy"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Ventilation Air Inlet Temperature"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "People": {
+        "ZONE 1 People 1": {
+            "activity_level_schedule_name": "Activity Lvl   1",
+            "fraction_radiant": 0.6,
+            "number_of_people": 4.0,
+            "number_of_people_calculation_method": "People",
+            "number_of_people_schedule_name": "Residence Occupancy",
+            "zone_or_zonelist_or_space_or_spacelist_name": "ZONE 1"
+        },
+        "ZONE 2 People 1": {
+            "activity_level_schedule_name": "Activity Lvl   1",
+            "fraction_radiant": 0.6,
+            "number_of_people": 4.0,
+            "number_of_people_calculation_method": "People",
+            "number_of_people_schedule_name": "Residence Occupancy",
+            "zone_or_zonelist_or_space_or_spacelist_name": "ZONE 2"
+        },
+        "ZONE 3 People 1": {
+            "activity_level_schedule_name": "Activity Lvl   1",
+            "fraction_radiant": 0.6,
+            "number_of_people": 4.0,
+            "number_of_people_calculation_method": "People",
+            "number_of_people_schedule_name": "Residence Occupancy",
+            "zone_or_zonelist_or_space_or_spacelist_name": "ZONE 3"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 31,
+            "end_month": 12,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "ACTIVITY LVL   1": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 130.0
+                }
+            ],
+            "schedule_type_limits_name": "ANY NUMBER"
+        },
+        "Constant": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "ANY NUMBER"
+        },
+        "Residence Lighting": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Weekdays SummerDesignDay WinterDesignDay"
+                },
+                {
+                    "field": "Until: 6:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 16:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until: 17:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 19:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 22:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 23:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "For: Weekends Holidays CustomDay1 CustomDay2"
+                },
+                {
+                    "field": "Until: 16:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 22:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 23:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.3
+                }
+            ],
+            "schedule_type_limits_name": "ANY NUMBER"
+        },
+        "Residence Occupancy": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Weekdays SummerDesignDay WinterDesignDay"
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 15:00"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "Until: 16:00"
+                },
+                {
+                    "field": 0.4
+                },
+                {
+                    "field": "Until: 17:00"
+                },
+                {
+                    "field": 0.7
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "For: Weekends Holidays CustomDay1 CustomDay2"
+                },
+                {
+                    "field": "Until: 9:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 16:00"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "Until: 23:00"
+                },
+                {
+                    "field": 0.7
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "ANY NUMBER"
+        },
+        "SHADINGTRANSMITTANCE:0001": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "FRACTION"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "Fraction": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1.0
+        }
+    },
+    "Shading:Zone:Detailed": {
+        "Zn001:Wall001:Shade001": {
+            "base_surface_name": "Zn001:Wall001",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 3.08,
+                    "vertex_y_coordinate": 2.98,
+                    "vertex_z_coordinate": 8.0
+                },
+                {
+                    "vertex_x_coordinate": 3.08,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 8.0
+                },
+                {
+                    "vertex_x_coordinate": 6.08,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 8.0
+                },
+                {
+                    "vertex_x_coordinate": 6.08,
+                    "vertex_y_coordinate": 2.98,
+                    "vertex_z_coordinate": 8.0
+                }
+            ]
+        },
+        "Zn001:Wall003:Shade001": {
+            "base_surface_name": "Zn001:Wall003",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 8.58,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 7.9
+                },
+                {
+                    "vertex_x_coordinate": 8.58,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 7.9
+                },
+                {
+                    "vertex_x_coordinate": 11.58,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 7.9
+                },
+                {
+                    "vertex_x_coordinate": 11.58,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 7.9
+                }
+            ]
+        },
+        "Zn001:Wall005:Shade001": {
+            "base_surface_name": "Zn001:Wall005",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 14.08,
+                    "vertex_y_coordinate": 1.58,
+                    "vertex_z_coordinate": 7.5
+                },
+                {
+                    "vertex_x_coordinate": 14.08,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 7.5
+                },
+                {
+                    "vertex_x_coordinate": 17.08,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 7.5
+                },
+                {
+                    "vertex_x_coordinate": 17.08,
+                    "vertex_y_coordinate": 1.58,
+                    "vertex_z_coordinate": 7.5
+                }
+            ]
+        },
+        "Zn001:Wall007:Shade001": {
+            "base_surface_name": "Zn001:Wall007",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 19.58,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 19.58,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 22.58,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 22.58,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 7.6
+                }
+            ]
+        },
+        "Zn001:Wall009:Shade001": {
+            "base_surface_name": "Zn001:Wall009",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 25.58,
+                    "vertex_y_coordinate": 2.08,
+                    "vertex_z_coordinate": 7.7
+                },
+                {
+                    "vertex_x_coordinate": 25.58,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 7.7
+                },
+                {
+                    "vertex_x_coordinate": 28.58,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 7.7
+                },
+                {
+                    "vertex_x_coordinate": 28.58,
+                    "vertex_y_coordinate": 2.08,
+                    "vertex_z_coordinate": 7.7
+                }
+            ]
+        },
+        "Zn001:Wall011:Shade001": {
+            "base_surface_name": "Zn001:Wall011",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.98,
+                    "vertex_y_coordinate": 7.28,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 30.98,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 33.98,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 33.98,
+                    "vertex_y_coordinate": 7.28,
+                    "vertex_z_coordinate": 7.6
+                }
+            ]
+        },
+        "Zn001:Wall013:Shade001": {
+            "base_surface_name": "Zn001:Wall013",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 36.88,
+                    "vertex_y_coordinate": 4.48,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 36.88,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 39.88,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 39.88,
+                    "vertex_y_coordinate": 4.48,
+                    "vertex_z_coordinate": 7.6
+                }
+            ]
+        },
+        "Zn002:Wall001:Shade001": {
+            "base_surface_name": "Zn002:Wall001",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 103.08,
+                    "vertex_y_coordinate": 2.98,
+                    "vertex_z_coordinate": 8.0
+                },
+                {
+                    "vertex_x_coordinate": 103.08,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 8.0
+                },
+                {
+                    "vertex_x_coordinate": 106.08,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 8.0
+                },
+                {
+                    "vertex_x_coordinate": 106.08,
+                    "vertex_y_coordinate": 2.98,
+                    "vertex_z_coordinate": 8.0
+                }
+            ]
+        },
+        "Zn002:Wall003:Shade001": {
+            "base_surface_name": "Zn002:Wall003",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 108.58,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 7.9
+                },
+                {
+                    "vertex_x_coordinate": 108.58,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 7.9
+                },
+                {
+                    "vertex_x_coordinate": 111.58,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 7.9
+                },
+                {
+                    "vertex_x_coordinate": 111.58,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 7.9
+                }
+            ]
+        },
+        "Zn002:Wall005:Shade001": {
+            "base_surface_name": "Zn002:Wall005",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 114.08,
+                    "vertex_y_coordinate": 1.58,
+                    "vertex_z_coordinate": 7.5
+                },
+                {
+                    "vertex_x_coordinate": 114.08,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 7.5
+                },
+                {
+                    "vertex_x_coordinate": 117.08,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 7.5
+                },
+                {
+                    "vertex_x_coordinate": 117.08,
+                    "vertex_y_coordinate": 1.58,
+                    "vertex_z_coordinate": 7.5
+                }
+            ]
+        },
+        "Zn002:Wall007:Shade001": {
+            "base_surface_name": "Zn002:Wall007",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 119.58,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 119.58,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 122.58,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 122.58,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 7.6
+                }
+            ]
+        },
+        "Zn002:Wall009:Shade001": {
+            "base_surface_name": "Zn002:Wall009",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 125.58,
+                    "vertex_y_coordinate": 2.08,
+                    "vertex_z_coordinate": 7.7
+                },
+                {
+                    "vertex_x_coordinate": 125.58,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 7.7
+                },
+                {
+                    "vertex_x_coordinate": 128.58,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 7.7
+                },
+                {
+                    "vertex_x_coordinate": 128.58,
+                    "vertex_y_coordinate": 2.08,
+                    "vertex_z_coordinate": 7.7
+                }
+            ]
+        },
+        "Zn002:Wall011:Shade001": {
+            "base_surface_name": "Zn002:Wall011",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 130.98,
+                    "vertex_y_coordinate": 7.28,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 130.98,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 133.98,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 133.98,
+                    "vertex_y_coordinate": 7.28,
+                    "vertex_z_coordinate": 7.6
+                }
+            ]
+        },
+        "Zn002:Wall013:Shade001": {
+            "base_surface_name": "Zn002:Wall013",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 136.88,
+                    "vertex_y_coordinate": 4.48,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 136.88,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 139.88,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 139.88,
+                    "vertex_y_coordinate": 4.48,
+                    "vertex_z_coordinate": 7.6
+                }
+            ]
+        },
+        "Zn003:Wall001:Shade001": {
+            "base_surface_name": "Zn003:Wall001",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 203.08,
+                    "vertex_y_coordinate": 2.98,
+                    "vertex_z_coordinate": 8.0
+                },
+                {
+                    "vertex_x_coordinate": 203.08,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 8.0
+                },
+                {
+                    "vertex_x_coordinate": 206.08,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 8.0
+                },
+                {
+                    "vertex_x_coordinate": 206.08,
+                    "vertex_y_coordinate": 2.98,
+                    "vertex_z_coordinate": 8.0
+                }
+            ]
+        },
+        "Zn003:Wall003:Shade001": {
+            "base_surface_name": "Zn003:Wall003",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 208.58,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 7.9
+                },
+                {
+                    "vertex_x_coordinate": 208.58,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 7.9
+                },
+                {
+                    "vertex_x_coordinate": 211.58,
+                    "vertex_y_coordinate": 8.98,
+                    "vertex_z_coordinate": 7.9
+                },
+                {
+                    "vertex_x_coordinate": 211.58,
+                    "vertex_y_coordinate": 5.98,
+                    "vertex_z_coordinate": 7.9
+                }
+            ]
+        },
+        "Zn003:Wall005:Shade001": {
+            "base_surface_name": "Zn003:Wall005",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 214.08,
+                    "vertex_y_coordinate": 1.58,
+                    "vertex_z_coordinate": 7.5
+                },
+                {
+                    "vertex_x_coordinate": 214.08,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 7.5
+                },
+                {
+                    "vertex_x_coordinate": 217.08,
+                    "vertex_y_coordinate": 4.58,
+                    "vertex_z_coordinate": 7.5
+                },
+                {
+                    "vertex_x_coordinate": 217.08,
+                    "vertex_y_coordinate": 1.58,
+                    "vertex_z_coordinate": 7.5
+                }
+            ]
+        },
+        "Zn003:Wall007:Shade001": {
+            "base_surface_name": "Zn003:Wall007",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 219.58,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 219.58,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 222.58,
+                    "vertex_y_coordinate": 8.08,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 222.58,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 7.6
+                }
+            ]
+        },
+        "Zn003:Wall009:Shade001": {
+            "base_surface_name": "Zn003:Wall009",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 225.58,
+                    "vertex_y_coordinate": 2.08,
+                    "vertex_z_coordinate": 7.7
+                },
+                {
+                    "vertex_x_coordinate": 225.58,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 7.7
+                },
+                {
+                    "vertex_x_coordinate": 228.58,
+                    "vertex_y_coordinate": 5.08,
+                    "vertex_z_coordinate": 7.7
+                },
+                {
+                    "vertex_x_coordinate": 228.58,
+                    "vertex_y_coordinate": 2.08,
+                    "vertex_z_coordinate": 7.7
+                }
+            ]
+        },
+        "Zn003:Wall011:Shade001": {
+            "base_surface_name": "Zn003:Wall011",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 230.98,
+                    "vertex_y_coordinate": 7.28,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 230.98,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 233.98,
+                    "vertex_y_coordinate": 10.28,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 233.98,
+                    "vertex_y_coordinate": 7.28,
+                    "vertex_z_coordinate": 7.6
+                }
+            ]
+        },
+        "Zn003:Wall013:Shade001": {
+            "base_surface_name": "Zn003:Wall013",
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "ShadingTransmittance:0001",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 236.88,
+                    "vertex_y_coordinate": 4.48,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 236.88,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 239.88,
+                    "vertex_y_coordinate": 7.48,
+                    "vertex_z_coordinate": 7.6
+                },
+                {
+                    "vertex_x_coordinate": 239.88,
+                    "vertex_y_coordinate": 4.48,
+                    "vertex_z_coordinate": 7.6
+                }
+            ]
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "Yes",
+            "run_simulation_for_weather_file_run_periods": "No"
+        }
+    },
+    "Site:GroundTemperature:BuildingSurface": {
+        "Site:GroundTemperature:BuildingSurface 1": {
+            "april_ground_temperature": 20.0,
+            "august_ground_temperature": 23.0,
+            "december_ground_temperature": 19.0,
+            "february_ground_temperature": 19.0,
+            "january_ground_temperature": 19.0,
+            "july_ground_temperature": 24.0,
+            "june_ground_temperature": 23.0,
+            "march_ground_temperature": 19.0,
+            "may_ground_temperature": 22.0,
+            "november_ground_temperature": 20.0,
+            "october_ground_temperature": 21.0,
+            "september_ground_temperature": 22.0
+        }
+    },
+    "Site:Location": {
+        "HILO_HI_USA TMY2-21504": {
+            "elevation": 11.0,
+            "latitude": 19.72,
+            "longitude": -155.07,
+            "time_zone": -10.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "HILO Hawaii Spring Day": {
+            "barometric_pressure": 101193.0,
+            "daily_dry_bulb_temperature_range": 3.7,
+            "day_of_month": 1,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 23.1,
+            "month": 4,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 20.1,
+            "wind_direction": 170.0,
+            "wind_speed": 4.3
+        },
+        "HILO_HI_USA Cooling 1% Conditions DB=>MWB": {
+            "barometric_pressure": 101193.0,
+            "daily_dry_bulb_temperature_range": 7.4,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 29.1,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23.1,
+            "wind_direction": 110.0,
+            "wind_speed": 5.4
+        },
+        "HILO_HI_USA Heating 99% Conditions": {
+            "barometric_pressure": 101193.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 17.1,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 17.1,
+            "wind_direction": 230.0,
+            "wind_speed": 3.2
+        }
+    },
+    "SurfaceConvectionAlgorithm:Inside": {
+        "SurfaceConvectionAlgorithm:Inside 1": {
+            "algorithm": "Simple"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Outside": {
+        "SurfaceConvectionAlgorithm:Outside 1": {
+            "algorithm": "SimpleCombined"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 4
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "22.2"
+        }
+    },
+    "WindowMaterial:Glazing": {
+        "GLASS - CLEAR PLATE 1 / 4 IN": {
+            "back_side_infrared_hemispherical_emissivity": 0.84,
+            "back_side_solar_reflectance_at_normal_incidence": 0.071000002,
+            "back_side_visible_reflectance_at_normal_incidence": 0.079999998,
+            "conductivity": 0.9,
+            "front_side_infrared_hemispherical_emissivity": 0.84,
+            "front_side_solar_reflectance_at_normal_incidence": 0.071000002,
+            "front_side_visible_reflectance_at_normal_incidence": 0.079999998,
+            "infrared_transmittance_at_normal_incidence": 0.0,
+            "optical_data_type": "SpectralAverage",
+            "solar_transmittance_at_normal_incidence": 0.775,
+            "thickness": 0.0060000001,
+            "visible_transmittance_at_normal_incidence": 0.881
+        }
+    },
+    "Zone": {
+        "ZONE 1": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 1.98,
+            "y_origin": 4.58,
+            "z_origin": 0.0
+        },
+        "ZONE 2": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 101.98,
+            "y_origin": 4.58,
+            "z_origin": 0.0
+        },
+        "ZONE 3": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 201.98,
+            "y_origin": 4.58,
+            "z_origin": 0.0
+        }
+    },
+    "ZoneVentilation:DesignFlowRate": {
+        "ZONE 1 Ventl 1": {
+            "constant_term_coefficient": 0.606,
+            "delta_temperature": 1.0,
+            "design_flow_rate": 6.131944,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "fan_pressure_rise": 0.0,
+            "fan_total_efficiency": 1.0,
+            "minimum_indoor_temperature": 18.0,
+            "schedule_name": "Constant",
+            "temperature_term_coefficient": 0.03636,
+            "velocity_squared_term_coefficient": 0,
+            "velocity_term_coefficient": 0.1177,
+            "ventilation_type": "Natural",
+            "zone_or_zonelist_or_space_or_spacelist_name": "ZONE 1"
+        },
+        "ZONE 2 Ventl 1": {
+            "constant_term_coefficient": 0,
+            "delta_temperature": 1.0,
+            "design_flow_rate": 6.131944,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "fan_pressure_rise": 400.0,
+            "fan_total_efficiency": 0.9,
+            "minimum_indoor_temperature": 18.0,
+            "schedule_name": "Constant",
+            "temperature_term_coefficient": 0,
+            "velocity_squared_term_coefficient": 0,
+            "velocity_term_coefficient": 0.224,
+            "ventilation_type": "Intake",
+            "zone_or_zonelist_or_space_or_spacelist_name": "ZONE 2"
+        },
+        "ZONE 3 Ventl 1": {
+            "constant_term_coefficient": 1,
+            "delta_temperature": 1.0,
+            "design_flow_rate": 6.131944,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "fan_pressure_rise": 400.0,
+            "fan_total_efficiency": 0.8,
+            "minimum_indoor_temperature": 18.0,
+            "schedule_name": "Constant",
+            "temperature_term_coefficient": 0,
+            "velocity_squared_term_coefficient": 0,
+            "velocity_term_coefficient": 0,
+            "ventilation_type": "Exhaust",
+            "zone_or_zonelist_or_space_or_spacelist_name": "ZONE 3"
+        }
+    },
+    "ZoneVentilation:WindandStackOpenArea": {
+        "ZONE 3 Ventl 2": {
+            "delta_temperature": 1.0,
+            "discharge_coefficient_for_opening": 0.5,
+            "effective_angle": 0.0,
+            "height_difference": 1.0,
+            "minimum_indoor_temperature": 18.0,
+            "opening_area": 0.5,
+            "opening_area_fraction_schedule_name": "Constant",
+            "opening_effectiveness": 0.2,
+            "zone_or_space_name": "ZONE 3"
+        }
+    }
+}

@@ -1,0 +1,545 @@
+{
+    "Boiler:HotWater": {
+        "Boiler Hot Water 1": {
+            "boiler_flow_mode": "ConstantFlow",
+            "boiler_water_inlet_node_name": "Boiler 1 Inlet Node",
+            "boiler_water_outlet_node_name": "Boiler 1 Outlet Node",
+            "design_water_flow_rate": 0.001,
+            "fuel_type": "NaturalGas",
+            "maximum_part_load_ratio": 1,
+            "minimum_part_load_ratio": 0,
+            "nominal_capacity": 25000,
+            "nominal_thermal_efficiency": 0.8,
+            "optimum_part_load_ratio": 1,
+            "parasitic_electric_load": 0,
+            "sizing_factor": 1,
+            "water_outlet_upper_temperature_limit": 99
+        },
+        "Boiler Hot Water 2": {
+            "boiler_flow_mode": "ConstantFlow",
+            "boiler_water_inlet_node_name": "Boiler 2 Inlet Node",
+            "boiler_water_outlet_node_name": "Boiler 2 Outlet Node",
+            "design_water_flow_rate": 0.001,
+            "fuel_type": "NaturalGas",
+            "maximum_part_load_ratio": 1,
+            "minimum_part_load_ratio": 0,
+            "nominal_capacity": 25000,
+            "nominal_thermal_efficiency": 0.8,
+            "optimum_part_load_ratio": 1,
+            "parasitic_electric_load": 0,
+            "sizing_factor": 1,
+            "water_outlet_upper_temperature_limit": 99
+        }
+    },
+    "Branch": {
+        "Plant Loop 1 Demand Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Demand Inlet Node",
+                    "component_name": "Secondary Pump 1",
+                    "component_object_type": "Pump:ConstantSpeed",
+                    "component_outlet_node_name": "Demand Intermediate Node"
+                },
+                {
+                    "component_inlet_node_name": "Demand Intermediate Node",
+                    "component_name": "Load Profile Plant 1",
+                    "component_object_type": "LoadProfile:Plant",
+                    "component_outlet_node_name": "Demand Outlet Node"
+                }
+            ]
+        },
+        "Plant Loop 1 Supply Branch 1": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Pump 1 Inlet Node",
+                    "component_name": "Primary Pump 1",
+                    "component_object_type": "Pump:ConstantSpeed",
+                    "component_outlet_node_name": "Boiler 1 Inlet Node"
+                },
+                {
+                    "component_inlet_node_name": "Boiler 1 Inlet Node",
+                    "component_name": "Boiler Hot Water 1",
+                    "component_object_type": "Boiler:HotWater",
+                    "component_outlet_node_name": "Boiler 1 Outlet Node"
+                }
+            ]
+        },
+        "Plant Loop 1 Supply Branch 2": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Pump 2 Inlet Node",
+                    "component_name": "Primary Pump 2",
+                    "component_object_type": "Pump:ConstantSpeed",
+                    "component_outlet_node_name": "Boiler 2 Inlet Node"
+                },
+                {
+                    "component_inlet_node_name": "Boiler 2 Inlet Node",
+                    "component_name": "Boiler Hot Water 2",
+                    "component_object_type": "Boiler:HotWater",
+                    "component_outlet_node_name": "Boiler 2 Outlet Node"
+                }
+            ]
+        },
+        "Plant Loop 1 Supply Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Supply Inlet Node",
+                    "component_name": "Plant Loop 1 Supply Inlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Plant Loop 1 Supply Inlet Pipe Node"
+                }
+            ]
+        },
+        "Plant Loop 1 Supply Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Plant Loop 1 Supply Outlet Pipe Node",
+                    "component_name": "Plant Loop 1 Supply Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Supply Side Outlet Node"
+                }
+            ]
+        }
+    },
+    "BranchList": {
+        "Plant Loop 1 Demand Branches": {
+            "branches": [
+                {
+                    "branch_name": "Plant Loop 1 Demand Branch"
+                }
+            ]
+        },
+        "Plant Loop 1 Supply Branches": {
+            "branches": [
+                {
+                    "branch_name": "Plant Loop 1 Supply Inlet Branch"
+                },
+                {
+                    "branch_name": "Plant Loop 1 Supply Branch 1"
+                },
+                {
+                    "branch_name": "Plant Loop 1 Supply Branch 2"
+                },
+                {
+                    "branch_name": "Plant Loop 1 Supply Outlet Branch"
+                }
+            ]
+        }
+    },
+    "Building": {
+        "Building 1": {}
+    },
+    "Connector:Mixer": {
+        "Plant Loop 1 Supply Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "Plant Loop 1 Supply Branch 1"
+                },
+                {
+                    "inlet_branch_name": "Plant Loop 1 Supply Branch 2"
+                }
+            ],
+            "outlet_branch_name": "Plant Loop 1 Supply Outlet Branch"
+        }
+    },
+    "Connector:Splitter": {
+        "Plant Loop 1 Supply Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "Plant Loop 1 Supply Branch 1"
+                },
+                {
+                    "outlet_branch_name": "Plant Loop 1 Supply Branch 2"
+                }
+            ],
+            "inlet_branch_name": "Plant Loop 1 Supply Inlet Branch"
+        }
+    },
+    "ConnectorList": {
+        "Plant Loop 1 Supply Connector List": {
+            "connector_1_name": "Plant Loop 1 Supply Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "Plant Loop 1 Supply Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "daylighting_reference_point_coordinate_system": "Relative",
+            "rectangular_surface_coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "LoadProfile:Plant": {
+        "Load Profile Plant 1": {
+            "flow_rate_fraction_schedule_name": "Load Profile 1 flow Schedule",
+            "inlet_node_name": "Demand Intermediate Node",
+            "load_schedule_name": "Load Profile 1 load Schedule",
+            "outlet_node_name": "Demand Outlet Node",
+            "peak_flow_rate": 0.002
+        }
+    },
+    "Output:SQLite": {
+        "Output:SQLite 1": {
+            "option_type": "SimpleAndTabular"
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Plant Load Profile Mass Flow Rate"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Plant Load Profile Heat Transfer Rate"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Plant Supply Side Heating Demand Rate"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Plant Supply Side Inlet Mass Flow Rate"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Plant Supply Side Inlet Temperature"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Plant Supply Side Outlet Temperature"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Pump Mass Flow Rate"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Plant Common Pipe Mass Flow Rate"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Boiler Heating Rate"
+        },
+        "Output:Variable 10": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Boiler Mass Flow Rate"
+        },
+        "Output:Variable 11": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 13": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Pump Fluid Heat Gain Rate"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "IDF",
+            "sort_option": "Unsorted"
+        }
+    },
+    "Pipe:Adiabatic": {
+        "Plant Loop 1 Supply Inlet Pipe": {
+            "inlet_node_name": "Supply Inlet Node",
+            "outlet_node_name": "Plant Loop 1 Supply Inlet Pipe Node"
+        },
+        "Plant Loop 1 Supply Outlet Pipe": {
+            "inlet_node_name": "Plant Loop 1 Supply Outlet Pipe Node",
+            "outlet_node_name": "Supply Side Outlet Node"
+        }
+    },
+    "PlantEquipmentList": {
+        "Plant Loop 1 Heating Equipment List": {
+            "equipment": [
+                {
+                    "equipment_name": "Boiler Hot Water 1",
+                    "equipment_object_type": "Boiler:HotWater"
+                },
+                {
+                    "equipment_name": "Boiler Hot Water 2",
+                    "equipment_object_type": "Boiler:HotWater"
+                }
+            ]
+        }
+    },
+    "PlantEquipmentOperation:HeatingLoad": {
+        "Plant Loop 1 Heating Operation Scheme": {
+            "load_range_1_lower_limit": 0,
+            "load_range_1_upper_limit": 1000000000,
+            "range_1_equipment_list_name": "Plant Loop 1 Heating Equipment List"
+        }
+    },
+    "PlantEquipmentOperationSchemes": {
+        "Plant Loop 1 Operation Schemes": {
+            "control_scheme_1_name": "Plant Loop 1 Heating Operation Scheme",
+            "control_scheme_1_object_type": "PlantEquipmentOperation:HeatingLoad",
+            "control_scheme_1_schedule_name": "Always On Discrete"
+        }
+    },
+    "PlantLoop": {
+        "Plant Loop 1": {
+            "common_pipe_simulation": "CommonPipe",
+            "demand_side_branch_list_name": "Plant Loop 1 Demand Branches",
+            "demand_side_inlet_node_name": "Demand Inlet Node",
+            "demand_side_outlet_node_name": "Demand Outlet Node",
+            "fluid_type": "Water",
+            "load_distribution_scheme": "SequentialLoad",
+            "loop_temperature_setpoint_node_name": "Supply Side Outlet Node",
+            "maximum_loop_flow_rate": 0.002,
+            "maximum_loop_temperature": 100,
+            "minimum_loop_flow_rate": 0,
+            "minimum_loop_temperature": 0,
+            "plant_equipment_operation_scheme_name": "Plant Loop 1 Operation Schemes",
+            "plant_loop_demand_calculation_scheme": "SingleSetpoint",
+            "plant_loop_volume": "Autocalculate",
+            "plant_side_branch_list_name": "Plant Loop 1 Supply Branches",
+            "plant_side_connector_list_name": "Plant Loop 1 Supply Connector List",
+            "plant_side_inlet_node_name": "Supply Inlet Node",
+            "plant_side_outlet_node_name": "Supply Side Outlet Node"
+        }
+    },
+    "Pump:ConstantSpeed": {
+        "Primary Pump 1": {
+            "design_flow_rate": 0.001,
+            "design_power_consumption": "Autosize",
+            "design_pump_head": 179352,
+            "fraction_of_motor_inefficiencies_to_fluid_stream": 0,
+            "inlet_node_name": "Pump 1 Inlet Node",
+            "motor_efficiency": 1.0,
+            "outlet_node_name": "Boiler 1 Inlet Node",
+            "pump_control_type": "Intermittent"
+        },
+        "Primary Pump 2": {
+            "design_flow_rate": 0.001,
+            "design_power_consumption": "Autosize",
+            "design_pump_head": 179352,
+            "fraction_of_motor_inefficiencies_to_fluid_stream": 0,
+            "inlet_node_name": "Pump 2 Inlet Node",
+            "motor_efficiency": 1.0,
+            "outlet_node_name": "Boiler 2 Inlet Node",
+            "pump_control_type": "Intermittent"
+        },
+        "Secondary Pump 1": {
+            "design_flow_rate": 0.002,
+            "design_power_consumption": "Autosize",
+            "design_pump_head": 179352,
+            "fraction_of_motor_inefficiencies_to_fluid_stream": 0,
+            "inlet_node_name": "Demand Inlet Node",
+            "motor_efficiency": 1.0,
+            "outlet_node_name": "Demand Intermediate Node",
+            "pump_control_type": "Intermittent"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Thursday",
+            "end_day_of_month": 1,
+            "end_month": 1,
+            "use_weather_file_daylight_saving_period": "No",
+            "use_weather_file_holidays_and_special_days": "No",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "Load Profile 1 flow Schedule": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "LoadProfileFlowLimits"
+        },
+        "Load Profile 1 load Schedule": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 02:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 04:00"
+                },
+                {
+                    "field": 12500
+                },
+                {
+                    "field": "Until: 06:00"
+                },
+                {
+                    "field": 25000
+                },
+                {
+                    "field": "Until: 08:00"
+                },
+                {
+                    "field": 37500
+                },
+                {
+                    "field": "Until: 10:00"
+                },
+                {
+                    "field": 50000
+                },
+                {
+                    "field": "Until: 12:00"
+                },
+                {
+                    "field": 37500
+                },
+                {
+                    "field": "Until: 14:00"
+                },
+                {
+                    "field": 25000
+                },
+                {
+                    "field": "Until: 16:00"
+                },
+                {
+                    "field": 12500
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "LoadProfileDemandLimits"
+        }
+    },
+    "Schedule:Constant": {
+        "Always On Discrete": {
+            "hourly_value": 1,
+            "schedule_type_limits_name": "OnOff"
+        },
+        "Schedule Constant 1": {
+            "hourly_value": 82,
+            "schedule_type_limits_name": "Temperature"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Dimensionless": {
+            "numeric_type": "Continuous"
+        },
+        "Fractional": {
+            "lower_limit_value": 0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1
+        },
+        "LoadProfileDemandLimits": {
+            "lower_limit_value": -1000000,
+            "numeric_type": "Continuous",
+            "unit_type": "Power",
+            "upper_limit_value": 1000000
+        },
+        "LoadProfileFlowLimits": {
+            "lower_limit_value": -1000000,
+            "numeric_type": "Continuous",
+            "unit_type": "Dimensionless",
+            "upper_limit_value": 1000000
+        },
+        "OnOff": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "unit_type": "Availability",
+            "upper_limit_value": 1
+        },
+        "Temperature": {
+            "numeric_type": "Continuous",
+            "unit_type": "Temperature"
+        }
+    },
+    "SetpointManager:Scheduled": {
+        "Setpoint Manager Scheduled 1": {
+            "control_variable": "Temperature",
+            "schedule_name": "Schedule Constant 1",
+            "setpoint_node_or_nodelist_name": "Supply Side Outlet Node"
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "No",
+            "run_simulation_for_weather_file_run_periods": "Yes"
+        }
+    },
+    "Site:Location": {
+        "USA IL-CHICAGO-OHARE": {
+            "elevation": 190,
+            "latitude": 41.77,
+            "longitude": -87.75,
+            "time_zone": -6.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "Chicago Ohare Intl Ap Ann Htg 99.6% Condns DB": {
+            "barometric_pressure": 98934,
+            "daily_dry_bulb_temperature_range": 0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "dry_bulb_temperature_range_modifier_type": "DefaultMultipliers",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -20,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -20,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "22.2"
+        }
+    }
+}

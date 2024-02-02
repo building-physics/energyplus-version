@@ -1,0 +1,1049 @@
+{
+    "Building": {
+        "anyplace Load Calc": {
+            "loads_convergence_tolerance_value": 0.03,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0,
+            "solar_distribution": "MinimalShadowing",
+            "temperature_convergence_tolerance_value": 0.3,
+            "terrain": "Suburbs"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "OSCTest:Ceiling": {
+            "construction_name": "CeilingTile",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "OSCTest:Ceiling",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 6.095983,
+                    "vertex_y_coordinate": 6.096017,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0,
+            "wind_exposure": "NoWind",
+            "zone_name": "OSCTest"
+        },
+        "OSCTest:East Wall": {
+            "construction_name": "Exterior",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "OSCTest:East Wall",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "OSCTest"
+        },
+        "OSCTest:Floor": {
+            "construction_name": "SlabFloor",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Ground",
+            "outside_boundary_condition_object": "OSCTest:Floor",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.095992,
+                    "vertex_y_coordinate": 6.096008,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": 0,
+            "wind_exposure": "NoWind",
+            "zone_name": "OSCTest"
+        },
+        "OSCTest:North Wall": {
+            "construction_name": "Exterior",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "OSCTest:North Wall",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "OSCTest"
+        },
+        "OSCTest:South Wall": {
+            "construction_name": "Exterior",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "OtherSideCoefficients",
+            "outside_boundary_condition_object": "ExampleOSC",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "OSCTest"
+        },
+        "OSCTest:West Wall": {
+            "construction_name": "Exterior",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "outside_boundary_condition_object": "OSCTest:West Wall",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.096,
+                    "vertex_y_coordinate": 6.096,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "OSCTest"
+        }
+    },
+    "Construction": {
+        "CeilingTile": {
+            "outside_layer": "E5 - ACOUSTIC TILE"
+        },
+        "Exterior": {
+            "layer_2": "B12 - 3 IN DENSE INSULATION",
+            "layer_3": "E1 - 3 / 4 IN PLASTER OR GYP BOARD",
+            "outside_layer": "C7 - 8 IN LW CONCRETE BLOCK"
+        },
+        "InteriorWall": {
+            "layer_2": "CB61 - 4 IN LW HOLLOW CBLK",
+            "layer_3": "BLBD - GYPSUM PLASTER 1 / 2 IN",
+            "outside_layer": "BLBD - GYPSUM PLASTER 1 / 2 IN"
+        },
+        "SlabFloor": {
+            "outside_layer": "CONCRETE - 60 LB / CU FT 4 IN"
+        }
+    },
+    "ElectricEquipment": {
+        "OSCTest ElecEq 1": {
+            "design_level": 800,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0,
+            "fraction_lost": 0.0,
+            "fraction_radiant": 0.5,
+            "schedule_name": "OSCTest-EquipSchedule",
+            "zone_or_zonelist_or_space_or_spacelist_name": "OSCTest"
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "HeatBalanceAlgorithm": {
+        "HeatBalanceAlgorithm 1": {
+            "algorithm": "ConductionTransferFunction"
+        }
+    },
+    "InternalMass": {
+        "OSCTest:PartitionIntMass": {
+            "construction_name": "InteriorWall",
+            "surface_area": 92.9,
+            "zone_or_zonelist_name": "OSCTest"
+        }
+    },
+    "Lights": {
+        "OSCTest Lights 1": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.4,
+            "fraction_replaceable": 0.0,
+            "fraction_visible": 0.0,
+            "lighting_level": 400,
+            "return_air_fraction": 0,
+            "schedule_name": "OSCTest-LightsSchedule",
+            "zone_or_zonelist_or_space_or_spacelist_name": "OSCTest"
+        }
+    },
+    "Material": {
+        "B7 - 1 IN WOOD": {
+            "conductivity": 0.12,
+            "density": 592.68,
+            "roughness": "MediumSmooth",
+            "solar_absorptance": 0.78,
+            "specific_heat": 2510.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.02,
+            "visible_absorptance": 0.78
+        },
+        "B12 - 3 IN DENSE INSULATION": {
+            "conductivity": 0.039999999,
+            "density": 91.3,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 830.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.07,
+            "visible_absorptance": 0.5
+        },
+        "BLBD - GYPSUM PLASTER 1 / 2 IN": {
+            "conductivity": 0.16,
+            "density": 800.92,
+            "roughness": "MediumSmooth",
+            "solar_absorptance": 0.75,
+            "specific_heat": 830.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0099999998,
+            "visible_absorptance": 0.75
+        },
+        "C7 - 8 IN LW CONCRETE BLOCK": {
+            "conductivity": 0.57,
+            "density": 608.7,
+            "roughness": "Rough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 830.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.2,
+            "visible_absorptance": 0.65
+        },
+        "CB61 - 4 IN LW HOLLOW CBLK": {
+            "conductivity": 0.38,
+            "density": 1041.2,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.2,
+            "specific_heat": 830.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1,
+            "visible_absorptance": 0.2
+        },
+        "CONCRETE - 60 LB / CU FT 4 IN": {
+            "conductivity": 0.24,
+            "density": 961.1,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 830.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1,
+            "visible_absorptance": 0.65
+        },
+        "CONCRETE - 120 LB / CU FT 4 IN": {
+            "conductivity": 0.74,
+            "density": 1922.21,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 830.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1,
+            "visible_absorptance": 0.65
+        },
+        "E1 - 3 / 4 IN PLASTER OR GYP BOARD": {
+            "conductivity": 0.72,
+            "density": 1601.84,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 830.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0099999998,
+            "visible_absorptance": 0.92
+        },
+        "E5 - ACOUSTIC TILE": {
+            "conductivity": 0.059999999,
+            "density": 480.55,
+            "roughness": "MediumSmooth",
+            "solar_absorptance": 0.32,
+            "specific_heat": 830.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0099999998,
+            "visible_absorptance": 0.32
+        },
+        "E8 - 5 / 8 IN PLASTER OR GYP BOARD": {
+            "conductivity": 0.16,
+            "density": 784.9,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 830.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0099999998,
+            "visible_absorptance": 0.92
+        },
+        "E11 - 1 / 2 IN FIBERBOARD SHEATHING": {
+            "conductivity": 0.050000001,
+            "density": 832.96,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.89,
+            "specific_heat": 920.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0099999998,
+            "visible_absorptance": 0.89
+        },
+        "INS - GLASS FIBER BONDED 3 IN": {
+            "conductivity": 0.029999999,
+            "density": 96.11,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 790.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.07,
+            "visible_absorptance": 0.5
+        }
+    },
+    "Material:AirGap": {
+        "E4 - CEILING AIRSPACE": {
+            "thermal_resistance": 0.17
+        }
+    },
+    "NodeList": {
+        "OSCTest-Inlets": {
+            "nodes": [
+                {
+                    "node_name": "OSCTest-Inlet"
+                }
+            ]
+        }
+    },
+    "Output:Meter:MeterFileOnly": {
+        "Output:Meter:MeterFileOnly 1": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 2": {
+            "key_name": "Electricity:Building",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 3": {
+            "key_name": "InteriorLights:Electricity",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 4": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 5": {
+            "key_name": "Electricity:Building",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 6": {
+            "key_name": "InteriorLights:Electricity",
+            "reporting_frequency": "RunPeriod"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Daily",
+            "variable_name": "Zone Ideal Loads Supply Air Total Cooling Rate"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Daily",
+            "variable_name": "Zone Ideal Loads Supply Air Sensible Cooling Rate"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Daily",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Daily",
+            "variable_name": "Zone Mean Air Temperature"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Daily",
+            "variable_name": "Surface Outside Face Temperature"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "People": {
+        "OSCTest People 1": {
+            "activity_level_schedule_name": "OSCTest-PeopleActivity",
+            "fraction_radiant": 0.6,
+            "number_of_people": 6,
+            "number_of_people_calculation_method": "People",
+            "number_of_people_schedule_name": "OSCTest-PeopleSchedule",
+            "zone_or_zonelist_or_space_or_spacelist_name": "OSCTest"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "end_day_of_month": 31,
+            "end_month": 12
+        }
+    },
+    "Schedule:Compact": {
+        "GroundTempCompactSched": {
+            "data": [
+                {
+                    "field": "Through: 1/31"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 16
+                },
+                {
+                    "field": "Through: 2/28"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 17
+                },
+                {
+                    "field": "Through: 3/31"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 18
+                },
+                {
+                    "field": "Through: 4/30"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 19
+                },
+                {
+                    "field": "Through: 5/31"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 20
+                },
+                {
+                    "field": "Through: 6/30"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 20
+                },
+                {
+                    "field": "Through: 7/31"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 20
+                },
+                {
+                    "field": "Through: 8/31"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 19
+                },
+                {
+                    "field": "Through: 9/30"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 18
+                },
+                {
+                    "field": "Through: 10/31"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 17
+                },
+                {
+                    "field": "Through: 11/30"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 16
+                },
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 16
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "OSCTEST-CONTROL SCHED": {
+            "data": [
+                {
+                    "field": "Through: 4/30"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Through: 9/30"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 2
+                },
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1
+                }
+            ],
+            "schedule_type_limits_name": "CONTROL TYPE"
+        },
+        "OSCTEST-EQUIPSCHEDULE": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 4:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 15:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "FRACTION"
+        },
+        "OSCTEST-INFILTRATIONSCHEDULE": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "FRACTION"
+        },
+        "OSCTEST-LIGHTSSCHEDULE": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "FRACTION"
+        },
+        "OSCTEST-PEOPLEACTIVITY": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 132.0
+                }
+            ],
+            "schedule_type_limits_name": "ANY NUMBER"
+        },
+        "OSCTEST-PEOPLESCHEDULE": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 3:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "FRACTION"
+        },
+        "OSCTEST-SETPOINTS": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 23.88889
+                }
+            ],
+            "schedule_type_limits_name": "TEMPERATURE"
+        },
+        "OSCTEST-VENTILATIONSCHEDULE": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Alldays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "FRACTION"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "Control Type": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 4
+        },
+        "Fraction": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1.0
+        },
+        "Temperature": {
+            "lower_limit_value": -60,
+            "numeric_type": "Continuous",
+            "unit_type": "Temperature",
+            "upper_limit_value": 200
+        }
+    },
+    "Site:GroundTemperature:BuildingSurface": {
+        "Site:GroundTemperature:BuildingSurface 1": {
+            "april_ground_temperature": 20,
+            "august_ground_temperature": 20,
+            "december_ground_temperature": 20,
+            "february_ground_temperature": 20,
+            "january_ground_temperature": 20,
+            "july_ground_temperature": 20,
+            "june_ground_temperature": 20,
+            "march_ground_temperature": 20,
+            "may_ground_temperature": 20,
+            "november_ground_temperature": 20,
+            "october_ground_temperature": 20,
+            "september_ground_temperature": 20
+        }
+    },
+    "Site:Location": {
+        "USA IL-CHICAGO-OHARE": {
+            "elevation": 190,
+            "latitude": 41.77,
+            "longitude": -87.75,
+            "time_zone": -6.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "CHICAGO Ann Clg .4% Condns WB=>MDB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 10.7,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 31.2,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 25.5,
+            "wind_direction": 230,
+            "wind_speed": 5.3
+        },
+        "CHICAGO Ann Htg 99.6% Condns DB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -20.6,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -20.6,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        }
+    },
+    "SurfaceConvectionAlgorithm:Inside": {
+        "SurfaceConvectionAlgorithm:Inside 1": {
+            "algorithm": "TARP"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Outside": {
+        "SurfaceConvectionAlgorithm:Outside 1": {
+            "algorithm": "DOE-2"
+        }
+    },
+    "SurfaceProperty:OtherSideCoefficients": {
+        "ExampleOSC": {
+            "combined_convective_radiative_film_coefficient": 0,
+            "constant_temperature": 1,
+            "constant_temperature_coefficient": 1,
+            "constant_temperature_schedule_name": "GroundTempCompactSched",
+            "external_dry_bulb_temperature_coefficient": 0,
+            "ground_temperature_coefficient": 0,
+            "wind_speed_coefficient": 0,
+            "zone_air_temperature_coefficient": 0
+        }
+    },
+    "ThermostatSetpoint:SingleCooling": {
+        "OSCTest-Cooling Setpoint with SB": {
+            "setpoint_temperature_schedule_name": "OSCTest-Setpoints"
+        }
+    },
+    "ThermostatSetpoint:SingleHeating": {
+        "OSCTest-Heating Setpoint with SB": {
+            "setpoint_temperature_schedule_name": "OSCTest-Setpoints"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 4
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "22.2"
+        }
+    },
+    "WindowMaterial:Glazing": {
+        "GLASS - CLEAR SHEET 1 / 8 IN": {
+            "back_side_infrared_hemispherical_emissivity": 0.84,
+            "back_side_solar_reflectance_at_normal_incidence": 0.075000003,
+            "back_side_visible_reflectance_at_normal_incidence": 0.081,
+            "conductivity": 0.9,
+            "front_side_infrared_hemispherical_emissivity": 0.84,
+            "front_side_solar_reflectance_at_normal_incidence": 0.075000003,
+            "front_side_visible_reflectance_at_normal_incidence": 0.081,
+            "infrared_transmittance_at_normal_incidence": 0,
+            "optical_data_type": "SpectralAverage",
+            "solar_transmittance_at_normal_incidence": 0.837,
+            "thickness": 0.003,
+            "visible_transmittance_at_normal_incidence": 0.898
+        }
+    },
+    "Zone": {
+        "OSCTest": {
+            "ceiling_height": 4.572,
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        }
+    },
+    "ZoneControl:Thermostat": {
+        "OSCTest-Thermostat": {
+            "control_1_name": "OSCTest-Cooling Setpoint with SB",
+            "control_1_object_type": "ThermostatSetpoint:SingleCooling",
+            "control_2_name": "OSCTest-Heating Setpoint with SB",
+            "control_2_object_type": "ThermostatSetpoint:SingleHeating",
+            "control_type_schedule_name": "OSCTest-Control Sched",
+            "zone_or_zonelist_name": "OSCTest"
+        }
+    },
+    "ZoneHVAC:EquipmentConnections": {
+        "ZoneHVAC:EquipmentConnections 1": {
+            "zone_air_inlet_node_or_nodelist_name": "OSCTest-Inlets",
+            "zone_air_node_name": "OSCTest-ZoneAirNode",
+            "zone_conditioning_equipment_list_name": "Equipment-OSCTest",
+            "zone_name": "OSCTest",
+            "zone_return_air_node_or_nodelist_name": "OSCTest-ReturnAirNode"
+        }
+    },
+    "ZoneHVAC:EquipmentList": {
+        "Equipment-OSCTest": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "OSCTest-Air",
+                    "zone_equipment_object_type": "ZoneHVAC:IdealLoadsAirSystem"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        }
+    },
+    "ZoneHVAC:IdealLoadsAirSystem": {
+        "OSCTest-Air": {
+            "dehumidification_control_type": "ConstantSupplyHumidityRatio",
+            "humidification_control_type": "ConstantSupplyHumidityRatio",
+            "maximum_heating_supply_air_humidity_ratio": 0.008263639,
+            "maximum_heating_supply_air_temperature": 50,
+            "minimum_cooling_supply_air_humidity_ratio": 0.008263639,
+            "minimum_cooling_supply_air_temperature": 12.77778,
+            "zone_supply_air_node_name": "OSCTest-Inlet"
+        }
+    },
+    "ZoneInfiltration:DesignFlowRate": {
+        "OSCTest Infil 1": {
+            "constant_term_coefficient": 1.0,
+            "design_flow_rate": 0.04716666,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "schedule_name": "OSCTest-InfiltrationSchedule",
+            "temperature_term_coefficient": 0.0,
+            "velocity_squared_term_coefficient": 0.0,
+            "velocity_term_coefficient": 0.0,
+            "zone_or_zonelist_or_space_or_spacelist_name": "OSCTest"
+        }
+    },
+    "ZoneVentilation:DesignFlowRate": {
+        "OSCTest Ventl 1": {
+            "constant_term_coefficient": 1.0,
+            "delta_temperature": 1.0,
+            "design_flow_rate": 0.0004716667,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "fan_pressure_rise": 10,
+            "fan_total_efficiency": 1.0,
+            "minimum_indoor_temperature": -20.0,
+            "schedule_name": "OSCTest-VentilationSchedule",
+            "temperature_term_coefficient": 0.0,
+            "velocity_squared_term_coefficient": 0.0,
+            "velocity_term_coefficient": 0.0,
+            "ventilation_type": "Exhaust",
+            "zone_or_zonelist_or_space_or_spacelist_name": "OSCTest"
+        }
+    }
+}

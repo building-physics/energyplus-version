@@ -1,0 +1,1716 @@
+{
+    "Building": {
+        "Tubular Daylighting Device Example": {
+            "loads_convergence_tolerance_value": 0.04,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.04,
+            "terrain": "Suburbs"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "Daylit Attic East Wall": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 5.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Daylit Attic Zone"
+        },
+        "Daylit Attic Floor": {
+            "construction_name": "CEILING IN ATTIC",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Daylit Ceiling",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Daylit Attic Zone"
+        },
+        "Daylit Attic North Wall": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 5.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Daylit Attic Zone"
+        },
+        "Daylit Attic Roof": {
+            "construction_name": "ROOF",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 5.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Daylit Attic Zone"
+        },
+        "Daylit Attic South Wall": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Daylit Attic Zone"
+        },
+        "Daylit Attic West Wall": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Daylit Attic Zone"
+        },
+        "Daylit Ceiling": {
+            "construction_name": "CEILING IN ZONE",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Daylit Attic Floor",
+            "sun_exposure": "NoSun",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Daylit Zone"
+        },
+        "Daylit East Wall": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Daylit Zone"
+        },
+        "Daylit Floor": {
+            "construction_name": "FLOOR SLAB 8 IN",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Daylit Floor",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Daylit Zone"
+        },
+        "Daylit North Wall": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Daylit Zone"
+        },
+        "Daylit South Wall": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Daylit Zone"
+        },
+        "Daylit West Wall": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Daylit Zone"
+        },
+        "Standard Attic East Wall": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 5.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Standard Attic Zone"
+        },
+        "Standard Attic Floor": {
+            "construction_name": "CEILING IN ATTIC",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Standard Ceiling",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Standard Attic Zone"
+        },
+        "Standard Attic North Wall": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 5.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Standard Attic Zone"
+        },
+        "Standard Attic Roof": {
+            "construction_name": "ROOF",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 5.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Standard Attic Zone"
+        },
+        "Standard Attic South Wall": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Standard Attic Zone"
+        },
+        "Standard Attic West Wall": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Standard Attic Zone"
+        },
+        "Standard Ceiling": {
+            "construction_name": "CEILING IN ZONE",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Standard Attic Floor",
+            "sun_exposure": "NoSun",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Standard Zone"
+        },
+        "Standard East Wall": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Standard Zone"
+        },
+        "Standard Floor": {
+            "construction_name": "FLOOR SLAB 8 IN",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Standard Floor",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "Standard Zone"
+        },
+        "Standard North Wall": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Standard Zone"
+        },
+        "Standard South Wall": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Standard Zone"
+        },
+        "Standard West Wall": {
+            "construction_name": "EXTWALL80",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 2.5
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.5
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "Standard Zone"
+        }
+    },
+    "Construction": {
+        "CEILING IN ATTIC": {
+            "layer_2": "INS - GLASS FIBER BONDED 3 IN",
+            "outside_layer": "E1 - 3 / 4 IN PLASTER OR GYP BOARD"
+        },
+        "CEILING IN ZONE": {
+            "layer_2": "E1 - 3 / 4 IN PLASTER OR GYP BOARD",
+            "outside_layer": "INS - GLASS FIBER BONDED 3 IN"
+        },
+        "EXTWALL80": {
+            "layer_2": "C4 - 4 IN COMMON BRICK",
+            "layer_3": "E1 - 3 / 4 IN PLASTER OR GYP BOARD",
+            "outside_layer": "A1 - 1 IN STUCCO"
+        },
+        "FLOOR SLAB 8 IN": {
+            "outside_layer": "C10 - 8 IN HW CONCRETE"
+        },
+        "ROOF": {
+            "layer_2": "E3 - 3 / 8 IN FELT AND MEMBRANE",
+            "layer_3": "BB46 - 5 / 8 IN PLYWOOD",
+            "outside_layer": "ROOFING - ASPHALT SHINGLES"
+        },
+        "TDD Diffuser": {
+            "outside_layer": "Diffusing Acrylic Plastic"
+        },
+        "TDD Dome": {
+            "outside_layer": "Clear Acrylic Plastic"
+        },
+        "TDD Pipe": {
+            "outside_layer": "Very High Reflectivity Surface"
+        }
+    },
+    "Daylighting:Controls": {
+        "Daylit Zone_DaylCtrl": {
+            "control_data": [
+                {
+                    "daylighting_reference_point_name": "Daylit Zone_DaylRefPt1",
+                    "fraction_of_lights_controlled_by_reference_point": 1.0,
+                    "illuminance_setpoint_at_reference_point": 550
+                },
+                {
+                    "daylighting_reference_point_name": "Daylit Zone_DaylRefPt2",
+                    "fraction_of_lights_controlled_by_reference_point": 0.0,
+                    "illuminance_setpoint_at_reference_point": 0
+                }
+            ],
+            "daylighting_method": "SplitFlux",
+            "glare_calculation_azimuth_angle_of_view_direction_clockwise_from_zone_y_axis": 0.0,
+            "glare_calculation_daylighting_reference_point_name": "Daylit Zone_DaylRefPt1",
+            "lighting_control_type": "Continuous",
+            "maximum_allowable_discomfort_glare_index": 20.0,
+            "minimum_input_power_fraction_for_continuous_or_continuousoff_dimming_control": 0.3,
+            "minimum_light_output_fraction_for_continuous_or_continuousoff_dimming_control": 0.2,
+            "probability_lighting_will_be_reset_when_needed_in_manual_stepped_control": 1.0,
+            "zone_or_space_name": "Daylit Zone"
+        }
+    },
+    "Daylighting:ReferencePoint": {
+        "Daylit Zone_DaylRefPt1": {
+            "x_coordinate_of_reference_point": 2.5,
+            "y_coordinate_of_reference_point": 5.0,
+            "z_coordinate_of_reference_point": 0.8,
+            "zone_or_space_name": "Daylit Zone"
+        },
+        "Daylit Zone_DaylRefPt2": {
+            "x_coordinate_of_reference_point": 2.5,
+            "y_coordinate_of_reference_point": 3.0,
+            "z_coordinate_of_reference_point": 0.8,
+            "zone_or_space_name": "Daylit Zone"
+        }
+    },
+    "DaylightingDevice:Tubular": {
+        "Pipe1": {
+            "construction_name": "TDD Pipe",
+            "diameter": 0.3556,
+            "diffuser_name": "Diffuser1",
+            "dome_name": "Dome1",
+            "effective_thermal_resistance": 0.28,
+            "total_length": 1.4,
+            "transition_lengths": [
+                {
+                    "transition_zone_length": 1.1,
+                    "transition_zone_name": "Daylit Attic Zone"
+                }
+            ]
+        },
+        "Pipe2": {
+            "construction_name": "TDD Pipe",
+            "diameter": 0.3556,
+            "diffuser_name": "Diffuser2",
+            "dome_name": "Dome2",
+            "effective_thermal_resistance": 0.28,
+            "total_length": 2.2,
+            "transition_lengths": [
+                {
+                    "transition_zone_length": 1.9,
+                    "transition_zone_name": "Daylit Attic Zone"
+                }
+            ]
+        }
+    },
+    "FenestrationSurface:Detailed": {
+        "Diffuser1": {
+            "building_surface_name": "Daylit Ceiling",
+            "construction_name": "TDD Diffuser",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "TubularDaylightDiffuser",
+            "vertex_1_x_coordinate": 2.3425,
+            "vertex_1_y_coordinate": 3.1575,
+            "vertex_1_z_coordinate": 2.5,
+            "vertex_2_x_coordinate": 2.3425,
+            "vertex_2_y_coordinate": 2.8425,
+            "vertex_2_z_coordinate": 2.5,
+            "vertex_3_x_coordinate": 2.6575,
+            "vertex_3_y_coordinate": 2.8425,
+            "vertex_3_z_coordinate": 2.5,
+            "vertex_4_x_coordinate": 2.6575,
+            "vertex_4_y_coordinate": 3.1575,
+            "vertex_4_z_coordinate": 2.5,
+            "view_factor_to_ground": 0.0
+        },
+        "Diffuser2": {
+            "building_surface_name": "Daylit Ceiling",
+            "construction_name": "TDD Diffuser",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "TubularDaylightDiffuser",
+            "vertex_1_x_coordinate": 2.3425,
+            "vertex_1_y_coordinate": 7.1575,
+            "vertex_1_z_coordinate": 2.5,
+            "vertex_2_x_coordinate": 2.3425,
+            "vertex_2_y_coordinate": 6.8425,
+            "vertex_2_z_coordinate": 2.5,
+            "vertex_3_x_coordinate": 2.6575,
+            "vertex_3_y_coordinate": 6.8425,
+            "vertex_3_z_coordinate": 2.5,
+            "vertex_4_x_coordinate": 2.6575,
+            "vertex_4_y_coordinate": 7.1575,
+            "vertex_4_z_coordinate": 2.5,
+            "view_factor_to_ground": 0.0
+        },
+        "Dome1": {
+            "building_surface_name": "Daylit Attic Roof",
+            "construction_name": "TDD Dome",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "TubularDaylightDome",
+            "vertex_1_x_coordinate": 2.3425,
+            "vertex_1_y_coordinate": 3.209,
+            "vertex_1_z_coordinate": 3.64,
+            "vertex_2_x_coordinate": 2.3425,
+            "vertex_2_y_coordinate": 2.906,
+            "vertex_2_z_coordinate": 3.58,
+            "vertex_3_x_coordinate": 2.6575,
+            "vertex_3_y_coordinate": 2.906,
+            "vertex_3_z_coordinate": 3.58,
+            "vertex_4_x_coordinate": 2.6575,
+            "vertex_4_y_coordinate": 3.209,
+            "vertex_4_z_coordinate": 3.64,
+            "view_factor_to_ground": 0.0
+        },
+        "Dome2": {
+            "building_surface_name": "Daylit Attic Roof",
+            "construction_name": "TDD Dome",
+            "multiplier": 1.0,
+            "number_of_vertices": 4,
+            "surface_type": "TubularDaylightDome",
+            "vertex_1_x_coordinate": 2.3425,
+            "vertex_1_y_coordinate": 7.2091346153849996,
+            "vertex_1_z_coordinate": 4.4418269230769996,
+            "vertex_2_x_coordinate": 2.3425,
+            "vertex_2_y_coordinate": 6.90625,
+            "vertex_2_z_coordinate": 4.38125,
+            "vertex_3_x_coordinate": 2.6575,
+            "vertex_3_y_coordinate": 6.90625,
+            "vertex_3_z_coordinate": 4.38125,
+            "vertex_4_x_coordinate": 2.6575,
+            "vertex_4_y_coordinate": 7.2091346153849996,
+            "vertex_4_z_coordinate": 4.4418269230769996,
+            "view_factor_to_ground": 0.0
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "HeatBalanceAlgorithm": {
+        "HeatBalanceAlgorithm 1": {
+            "algorithm": "ConductionTransferFunction"
+        }
+    },
+    "Lights": {
+        "Daylit Zone Lights 1": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.4,
+            "fraction_replaceable": 1.0,
+            "fraction_visible": 0.2,
+            "lighting_level": 800,
+            "return_air_fraction": 0,
+            "schedule_name": "AlwaysOnSchedule",
+            "zone_or_zonelist_or_space_or_spacelist_name": "Daylit Zone"
+        },
+        "Standard Zone Lights 1": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.4,
+            "fraction_replaceable": 1.0,
+            "fraction_visible": 0.2,
+            "lighting_level": 800,
+            "return_air_fraction": 0,
+            "schedule_name": "AlwaysOnSchedule",
+            "zone_or_zonelist_or_space_or_spacelist_name": "Standard Zone"
+        }
+    },
+    "Material": {
+        "A1 - 1 IN STUCCO": {
+            "conductivity": 0.6918309,
+            "density": 1858.142,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.025389841,
+            "visible_absorptance": 0.92
+        },
+        "B5 - 1 IN DENSE INSULATION": {
+            "conductivity": 0.04323943,
+            "density": 91.30524,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.025389841,
+            "visible_absorptance": 0.5
+        },
+        "BB46 - 5 / 8 IN PLYWOOD": {
+            "conductivity": 0.11,
+            "density": 544.62,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1210.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0099999998,
+            "visible_absorptance": 0.7
+        },
+        "C4 - 4 IN COMMON BRICK": {
+            "conductivity": 0.7264224,
+            "density": 1922.216,
+            "roughness": "Rough",
+            "solar_absorptance": 0.76,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1014984,
+            "visible_absorptance": 0.76
+        },
+        "C6 - 8 IN CLAY TILE": {
+            "conductivity": 0.5707605,
+            "density": 1121.292,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.82,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.2033016,
+            "visible_absorptance": 0.82
+        },
+        "C10 - 8 IN HW CONCRETE": {
+            "conductivity": 1.729577,
+            "density": 2242.585,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.2033016,
+            "visible_absorptance": 0.65
+        },
+        "C12 - 2 IN HW CONCRETE": {
+            "conductivity": 1.729577,
+            "density": 2242.585,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.050901599,
+            "visible_absorptance": 0.65
+        },
+        "E1 - 3 / 4 IN PLASTER OR GYP BOARD": {
+            "conductivity": 0.7264224,
+            "density": 1601.846,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.01905,
+            "visible_absorptance": 0.92
+        },
+        "E2 - 1 / 2 IN SLAG OR STONE": {
+            "conductivity": 1.435549,
+            "density": 881.0155,
+            "roughness": "Rough",
+            "solar_absorptance": 0.55,
+            "specific_heat": 1673.6,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.012710161,
+            "visible_absorptance": 0.55
+        },
+        "E3 - 3 / 8 IN FELT AND MEMBRANE": {
+            "conductivity": 0.1902535,
+            "density": 1121.292,
+            "roughness": "Rough",
+            "solar_absorptance": 0.75,
+            "specific_heat": 1673.6,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0095402403,
+            "visible_absorptance": 0.75
+        },
+        "INS - GLASS FIBER BONDED 3 IN": {
+            "conductivity": 0.029999999,
+            "density": 96.11,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 790.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.07,
+            "visible_absorptance": 0.5
+        },
+        "ROOFING - ASPHALT SHINGLES": {
+            "conductivity": 0.029999999,
+            "density": 1121.29,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.7,
+            "specific_heat": 830.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0031999999,
+            "visible_absorptance": 0.7
+        },
+        "Very High Reflectivity Surface": {
+            "conductivity": 237,
+            "density": 2702,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.05,
+            "specific_heat": 903,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0005,
+            "visible_absorptance": 0.05
+        }
+    },
+    "NodeList": {
+        "Daylit Zone Inlets": {
+            "nodes": [
+                {
+                    "node_name": "Daylit Zone Supply Node"
+                }
+            ]
+        },
+        "Standard Zone Inlets": {
+            "nodes": [
+                {
+                    "node_name": "Standard Zone Supply Node"
+                }
+            ]
+        }
+    },
+    "Output:Constructions": {
+        "Output:Constructions 1": {
+            "details_type_1": "Constructions"
+        }
+    },
+    "Output:IlluminanceMap": {
+        "Daylit Map": {
+            "number_of_x_grid_points": 10,
+            "number_of_y_grid_points": 10,
+            "x_maximum_coordinate": 4.9,
+            "x_minimum_coordinate": 0.1,
+            "y_maximum_coordinate": 9.9,
+            "y_minimum_coordinate": 0.1,
+            "z_height": 0.8,
+            "zone_name": "Daylit Zone"
+        }
+    },
+    "Output:Meter": {
+        "Output:Meter 1": {
+            "key_name": "Electricity:Zone:Standard Zone",
+            "reporting_frequency": "Hourly"
+        },
+        "Output:Meter 2": {
+            "key_name": "Electricity:Zone:Daylit Zone",
+            "reporting_frequency": "Hourly"
+        }
+    },
+    "Output:Meter:MeterFileOnly": {
+        "Output:Meter:MeterFileOnly 1": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 2": {
+            "key_name": "Electricity:Building",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 3": {
+            "key_name": "InteriorLights:Electricity",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 4": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 5": {
+            "key_name": "Electricity:Building",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 6": {
+            "key_name": "InteriorLights:Electricity",
+            "reporting_frequency": "RunPeriod"
+        }
+    },
+    "Output:SQLite": {
+        "Output:SQLite 1": {
+            "option_type": "SimpleAndTabular"
+        }
+    },
+    "Output:Surfaces:Drawing": {
+        "Output:Surfaces:Drawing 1": {
+            "report_type": "DXF"
+        }
+    },
+    "Output:Surfaces:List": {
+        "Output:Surfaces:List 1": {
+            "report_type": "DetailsWithVertices"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Site Solar Altitude Angle"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Site Solar Azimuth Angle"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Site Direct Solar Radiation Rate per Area"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Site Diffuse Solar Radiation Rate per Area"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Daylighting Reference Point 1 Illuminance"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Daylighting Reference Point 2 Illuminance"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Daylighting Reference Point 1 Glare Index"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Daylighting Reference Point 2 Glare Index"
+        },
+        "Output:Variable 10": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Outside Face Sunlit Area"
+        },
+        "Output:Variable 11": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Outside Face Incident Solar Radiation Rate per Area"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Outside Face Incident Beam Solar Radiation Rate per Area"
+        },
+        "Output:Variable 13": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area"
+        },
+        "Output:Variable 14": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Outside Face Incident Ground Diffuse Solar Radiation Rate per Area"
+        },
+        "Output:Variable 15": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Window Transmitted Solar Radiation Rate"
+        },
+        "Output:Variable 16": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Window Total Glazing Layers Absorbed Solar Radiation Rate"
+        },
+        "Output:Variable 17": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Tubular Daylighting Device Transmitted Solar Radiation Rate"
+        },
+        "Output:Variable 18": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Tubular Daylighting Device Pipe Absorbed Solar Radiation Rate"
+        },
+        "Output:Variable 19": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Tubular Daylighting Device Heat Gain Rate"
+        },
+        "Output:Variable 20": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Tubular Daylighting Device Heat Loss Rate"
+        },
+        "Output:Variable 21": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Tubular Daylighting Device Beam Solar Transmittance"
+        },
+        "Output:Variable 22": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Tubular Daylighting Device Beam Visible Transmittance"
+        },
+        "Output:Variable 23": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Tubular Daylighting Device Diffuse Solar Transmittance"
+        },
+        "Output:Variable 24": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Tubular Daylighting Device Diffuse Visible Transmittance"
+        },
+        "Output:Variable 25": {
+            "key_value": "Daylit Zone",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air System Sensible Cooling Rate"
+        },
+        "Output:Variable 26": {
+            "key_value": "Daylit Zone",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air System Sensible Heating Rate"
+        },
+        "Output:Variable 27": {
+            "key_value": "Standard Zone",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air System Sensible Cooling Rate"
+        },
+        "Output:Variable 28": {
+            "key_value": "Standard Zone",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air System Sensible Heating Rate"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:IlluminanceMap:Style": {
+        "OutputControl:IlluminanceMap:Style 1": {
+            "column_separator": "Comma"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 31,
+            "end_month": 12,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "AlwaysOnSchedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 1
+                }
+            ],
+            "schedule_type_limits_name": "On/Off"
+        },
+        "Zone Control Type Sch": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 3
+                }
+            ],
+            "schedule_type_limits_name": "Control Type"
+        },
+        "Zone Temp Sch": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 21
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Control Type": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 4
+        },
+        "On/Off": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 1
+        },
+        "Temperature": {
+            "lower_limit_value": -60,
+            "numeric_type": "Continuous",
+            "unit_type": "Temperature",
+            "upper_limit_value": 200
+        }
+    },
+    "ShadowCalculation": {
+        "ShadowCalculation 1": {
+            "shading_calculation_method": "PolygonClipping",
+            "shading_calculation_update_frequency": 20,
+            "shading_calculation_update_frequency_method": "Periodic"
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "Yes",
+            "run_simulation_for_weather_file_run_periods": "No"
+        }
+    },
+    "Site:Location": {
+        "CHICAGO_IL_USA_WMO_725300": {
+            "elevation": 190.0,
+            "latitude": 42.0,
+            "longitude": -87.88,
+            "time_zone": -6.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "CHICAGO Ann Clg 1% Condns DB=>MWB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 10.7,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 31.5,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23,
+            "wind_direction": 230,
+            "wind_speed": 5.3
+        },
+        "CHICAGO Ann Htg 99% Condns DB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -17.3,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -17.3,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        }
+    },
+    "SurfaceConvectionAlgorithm:Inside": {
+        "SurfaceConvectionAlgorithm:Inside 1": {
+            "algorithm": "TARP"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Outside": {
+        "SurfaceConvectionAlgorithm:Outside 1": {
+            "algorithm": "DOE-2"
+        }
+    },
+    "ThermostatSetpoint:SingleHeatingOrCooling": {
+        "Heating Cooling Setpoint": {
+            "setpoint_temperature_schedule_name": "Zone Temp Sch"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 6
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "22.2"
+        }
+    },
+    "WindowMaterial:Glazing": {
+        "Clear Acrylic Plastic": {
+            "back_side_infrared_hemispherical_emissivity": 0.9,
+            "back_side_solar_reflectance_at_normal_incidence": 0.05,
+            "back_side_visible_reflectance_at_normal_incidence": 0.05,
+            "conductivity": 0.9,
+            "front_side_infrared_hemispherical_emissivity": 0.9,
+            "front_side_solar_reflectance_at_normal_incidence": 0.05,
+            "front_side_visible_reflectance_at_normal_incidence": 0.05,
+            "infrared_transmittance_at_normal_incidence": 0.0,
+            "optical_data_type": "SpectralAverage",
+            "solar_transmittance_at_normal_incidence": 0.92,
+            "thickness": 0.003,
+            "visible_transmittance_at_normal_incidence": 0.92
+        },
+        "Diffusing Acrylic Plastic": {
+            "back_side_infrared_hemispherical_emissivity": 0.9,
+            "back_side_solar_reflectance_at_normal_incidence": 0.08,
+            "back_side_visible_reflectance_at_normal_incidence": 0.08,
+            "conductivity": 0.9,
+            "front_side_infrared_hemispherical_emissivity": 0.9,
+            "front_side_solar_reflectance_at_normal_incidence": 0.08,
+            "front_side_visible_reflectance_at_normal_incidence": 0.08,
+            "infrared_transmittance_at_normal_incidence": 0.0,
+            "optical_data_type": "SpectralAverage",
+            "solar_transmittance_at_normal_incidence": 0.9,
+            "thickness": 0.0022,
+            "visible_transmittance_at_normal_incidence": 0.9
+        }
+    },
+    "Zone": {
+        "Daylit Attic Zone": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 0.0,
+            "y_origin": 0.0,
+            "z_origin": 0.0
+        },
+        "Daylit Zone": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 0.0,
+            "y_origin": 0.0,
+            "z_origin": 0.0
+        },
+        "Standard Attic Zone": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 50.0,
+            "y_origin": 50.0,
+            "z_origin": 0.0
+        },
+        "Standard Zone": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 50.0,
+            "y_origin": 50.0,
+            "z_origin": 0.0
+        }
+    },
+    "ZoneControl:Thermostat": {
+        "Daylit Zone Thermostat": {
+            "control_1_name": "Heating Cooling Setpoint",
+            "control_1_object_type": "ThermostatSetpoint:SingleHeatingOrCooling",
+            "control_type_schedule_name": "Zone Control Type Sch",
+            "zone_or_zonelist_name": "Daylit Zone"
+        },
+        "Standard Zone Thermostat": {
+            "control_1_name": "Heating Cooling Setpoint",
+            "control_1_object_type": "ThermostatSetpoint:SingleHeatingOrCooling",
+            "control_type_schedule_name": "Zone Control Type Sch",
+            "zone_or_zonelist_name": "Standard Zone"
+        }
+    },
+    "ZoneHVAC:EquipmentConnections": {
+        "ZoneHVAC:EquipmentConnections 1": {
+            "zone_air_inlet_node_or_nodelist_name": "Daylit Zone Inlets",
+            "zone_air_node_name": "Daylit Zone Air Node",
+            "zone_conditioning_equipment_list_name": "Daylit Zone Equipment",
+            "zone_name": "Daylit Zone",
+            "zone_return_air_node_or_nodelist_name": "Daylit Zone Return Node"
+        },
+        "ZoneHVAC:EquipmentConnections 2": {
+            "zone_air_inlet_node_or_nodelist_name": "Standard Zone Inlets",
+            "zone_air_node_name": "Standard Zone Air Node",
+            "zone_conditioning_equipment_list_name": "Standard Zone Equipment",
+            "zone_name": "Standard Zone",
+            "zone_return_air_node_or_nodelist_name": "Standard Zone Return Node"
+        }
+    },
+    "ZoneHVAC:EquipmentList": {
+        "Daylit Zone Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Daylit Zone Air",
+                    "zone_equipment_object_type": "ZoneHVAC:IdealLoadsAirSystem"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "Standard Zone Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Standard Zone Air",
+                    "zone_equipment_object_type": "ZoneHVAC:IdealLoadsAirSystem"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        }
+    },
+    "ZoneHVAC:IdealLoadsAirSystem": {
+        "Daylit Zone Air": {
+            "cooling_limit": "NoLimit",
+            "dehumidification_control_type": "ConstantSupplyHumidityRatio",
+            "heating_limit": "NoLimit",
+            "humidification_control_type": "ConstantSupplyHumidityRatio",
+            "maximum_cooling_air_flow_rate": "Autosize",
+            "maximum_heating_air_flow_rate": "Autosize",
+            "maximum_heating_supply_air_humidity_ratio": 0.015,
+            "maximum_heating_supply_air_temperature": 50,
+            "minimum_cooling_supply_air_humidity_ratio": 0.009,
+            "minimum_cooling_supply_air_temperature": 13,
+            "zone_supply_air_node_name": "Daylit Zone Supply Node"
+        },
+        "Standard Zone Air": {
+            "cooling_limit": "NoLimit",
+            "dehumidification_control_type": "ConstantSupplyHumidityRatio",
+            "heating_limit": "NoLimit",
+            "humidification_control_type": "ConstantSupplyHumidityRatio",
+            "maximum_cooling_air_flow_rate": "Autosize",
+            "maximum_heating_air_flow_rate": "Autosize",
+            "maximum_heating_supply_air_humidity_ratio": 0.015,
+            "maximum_heating_supply_air_temperature": 50,
+            "minimum_cooling_supply_air_humidity_ratio": 0.009,
+            "minimum_cooling_supply_air_temperature": 13,
+            "zone_supply_air_node_name": "Standard Zone Supply Node"
+        }
+    }
+}

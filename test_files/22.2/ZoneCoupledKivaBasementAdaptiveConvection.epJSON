@@ -1,0 +1,833 @@
+{
+    "Building": {
+        "House": {
+            "loads_convergence_tolerance_value": 0.05,
+            "maximum_number_of_warmup_days": 35,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.05,
+            "terrain": "Suburbs"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "Basement Ceiling": {
+            "construction_name": "Ceiling Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Zone",
+            "outside_boundary_condition_object": "Main Floor",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "NoWind",
+            "zone_name": "Basement"
+        },
+        "Basement Floor": {
+            "construction_name": "Basement Floor Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Foundation",
+            "outside_boundary_condition_object": "Basement Foundation",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": -3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "NoWind",
+            "zone_name": "Basement"
+        },
+        "Basement Wall 1": {
+            "construction_name": "Basement Wall Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Foundation",
+            "outside_boundary_condition_object": "Basement Foundation",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "NoWind",
+            "zone_name": "Basement"
+        },
+        "Basement Wall 2": {
+            "construction_name": "Basement Wall Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Foundation",
+            "outside_boundary_condition_object": "Basement Foundation",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "NoWind",
+            "zone_name": "Basement"
+        },
+        "Basement Wall 3": {
+            "construction_name": "Basement Wall Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Foundation",
+            "outside_boundary_condition_object": "Basement Foundation",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "NoWind",
+            "zone_name": "Basement"
+        },
+        "Basement Wall 4": {
+            "construction_name": "Basement Wall Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Foundation",
+            "outside_boundary_condition_object": "Basement Foundation",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": -3.1
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "NoWind",
+            "zone_name": "Basement"
+        },
+        "Main Floor Roof": {
+            "construction_name": "Roof Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "WindExposed",
+            "zone_name": "Main Floor"
+        },
+        "Main Floor Wall 1": {
+            "construction_name": "Main Floor Wall Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "WindExposed",
+            "zone_name": "Main Floor"
+        },
+        "Main Floor Wall 2": {
+            "construction_name": "Main Floor Wall Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "WindExposed",
+            "zone_name": "Main Floor"
+        },
+        "Main Floor Wall 3": {
+            "construction_name": "Main Floor Wall Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "WindExposed",
+            "zone_name": "Main Floor"
+        },
+        "Main Floor Wall 4": {
+            "construction_name": "Main Floor Wall Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "WindExposed",
+            "zone_name": "Main Floor"
+        }
+    },
+    "Construction": {
+        "Basement Floor Construction": {
+            "outside_layer": "Basement Floor Material"
+        },
+        "Basement Wall Construction": {
+            "outside_layer": "Basement Wall Material"
+        },
+        "Ceiling Construction": {
+            "outside_layer": "Ceiling Layer 1"
+        },
+        "Main Floor Wall Construction": {
+            "layer_2": "Composite 2x6 Wood Stud R19 #2",
+            "layer_3": "Composite 2x6 Wood Stud R19 #1",
+            "outside_layer": "Composite 2x6 Wood Stud R19 #3"
+        },
+        "Roof Construction": {
+            "outside_layer": "Roof Layer 1"
+        }
+    },
+    "Foundation:Kiva": {
+        "Basement Foundation": {
+            "exterior_vertical_insulation_depth": 2.9,
+            "exterior_vertical_insulation_material_name": "Basement Insulation",
+            "interior_horizontal_insulation_material_name": "Basement Insulation",
+            "interior_horizontal_insulation_width": 1,
+            "wall_depth_below_slab": 0.3,
+            "wall_height_above_grade": 0.2
+        }
+    },
+    "Foundation:Kiva:Settings": {
+        "Foundation:Kiva:Settings 1": {
+            "deep_ground_boundary_condition": "Autoselect",
+            "far_field_width": 40,
+            "ground_solar_absorptivity": 0.9,
+            "ground_surface_roughness": 0.03,
+            "ground_thermal_absorptivity": 0.9,
+            "soil_conductivity": 1.8,
+            "soil_density": 3200,
+            "soil_specific_heat": 836
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "Material": {
+        "Basement Floor Material": {
+            "conductivity": 1.805,
+            "density": 2243,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 837,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.3,
+            "visible_absorptance": 0.65
+        },
+        "Basement Insulation": {
+            "conductivity": 0.035,
+            "density": 265,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.65,
+            "specific_heat": 1300,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0254,
+            "visible_absorptance": 0.65
+        },
+        "Basement Wall Material": {
+            "conductivity": 1.802,
+            "density": 2243,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 837,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.3,
+            "visible_absorptance": 0.65
+        },
+        "Ceiling Layer 1": {
+            "conductivity": 12.3,
+            "density": 800,
+            "roughness": "Rough",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1300,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1,
+            "visible_absorptance": 0.7
+        },
+        "Composite 2x6 Wood Stud R19 #1": {
+            "conductivity": 0.137,
+            "density": 640.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1006,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.019,
+            "visible_absorptance": 0.7
+        },
+        "Composite 2x6 Wood Stud R19 #2": {
+            "conductivity": 0.047,
+            "density": 93.84,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1006,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.133,
+            "visible_absorptance": 0.7
+        },
+        "Composite 2x6 Wood Stud R19 #3": {
+            "conductivity": 0.246,
+            "density": 492.67,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1006,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.025,
+            "visible_absorptance": 0.7
+        }
+    },
+    "Material:NoMass": {
+        "Roof Layer 1": {
+            "roughness": "Rough",
+            "solar_absorptance": 0.75,
+            "thermal_absorptance": 0.9,
+            "thermal_resistance": 3.344,
+            "visible_absorptance": 0.75
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Mean Air Temperature"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Inside Face Temperature"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Inside Face Convection Heat Transfer Coefficient"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "IDF"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "RunPeriod": {
+        "Annual Run": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 31,
+            "end_month": 12,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "HVACTemplate-Always 4": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 4
+                }
+            ],
+            "schedule_type_limits_name": "HVACTemplate Any Number"
+        },
+        "HVACTemplate-Always 21": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 21
+                }
+            ],
+            "schedule_type_limits_name": "HVACTemplate Any Number"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "HVACTemplate Any Number": {}
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "No",
+            "run_simulation_for_weather_file_run_periods": "Yes"
+        }
+    },
+    "Site:Location": {
+        "Denver Centennial  Golden   N_CO_USA Design_Conditions": {
+            "elevation": 1829.0,
+            "latitude": 39.74,
+            "longitude": -105.18,
+            "time_zone": -7.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "Denver Centennial  Golden   N Ann Clg .4% Condns DB=>MWB": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0.424,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 2.025,
+            "barometric_pressure": 81198.0,
+            "daily_dry_bulb_temperature_range": 15.2,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "dry_bulb_temperature_range_modifier_type": "DefaultMultipliers",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 33,
+            "month": 7,
+            "rain_indicator": "No",
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAETau",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 15.7,
+            "wind_direction": 0,
+            "wind_speed": 4.9
+        },
+        "Denver Centennial  Golden   N Ann Htg 99.6% Condns DB": {
+            "barometric_pressure": 81198.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "dry_bulb_temperature_range_modifier_type": "DefaultMultipliers",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -18.8,
+            "month": 12,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -18.8,
+            "wind_direction": 340,
+            "wind_speed": 3
+        }
+    },
+    "SurfaceConvectionAlgorithm:Inside": {
+        "SurfaceConvectionAlgorithm:Inside 1": {
+            "algorithm": "AdaptiveConvectionAlgorithm"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Inside:AdaptiveModelSelections": {
+        "Default Algorithm": {
+            "central_air_diffuser_ceiling_equation_source": "FisherPedersenCeilingDiffuserCeiling",
+            "central_air_diffuser_floor_equation_source": "GoldsteinNovoselacCeilingDiffuserFloor",
+            "central_air_diffuser_wall_equation_source": "GoldsteinNovoselacCeilingDiffuserWalls",
+            "central_air_diffuser_window_equation_source": "GoldsteinNovoselacCeilingDiffuserWindow",
+            "convective_zone_heater_stable_horizontal_equation_source": "AlamdariHammondStableHorizontal",
+            "convective_zone_heater_stable_tilted_equation_source": "WaltonStableHorizontalOrTilt",
+            "convective_zone_heater_unstable_horizontal_equation_source": "KhalifaEq7Ceiling",
+            "convective_zone_heater_unstable_tilted_equation_source": "WaltonUnstableHorizontalOrTilt",
+            "convective_zone_heater_vertical_wall_equation_source": "FohannoPolidoriVerticalWall",
+            "convective_zone_heater_vertical_walls_near_heater_equation_source": "KhalifaEq5WallNearHeat",
+            "convective_zone_heater_windows_equation_source": "ISO15099Windows",
+            "floor_heat_ceiling_cool_chilled_ceiling_equation_source": "KaradagChilledCeiling",
+            "floor_heat_ceiling_cool_heated_floor_equation_source": "AwbiHattonHeatedFloor",
+            "floor_heat_ceiling_cool_stable_horizontal_equation_source": "AlamdariHammondStableHorizontal",
+            "floor_heat_ceiling_cool_stable_tilted_equation_source": "WaltonStableHorizontalOrTilt",
+            "floor_heat_ceiling_cool_unstable_horizontal_equation_source": "KhalifaEq4CeilingAwayFromHeat",
+            "floor_heat_ceiling_cool_unstable_tilted_equation_source": "WaltonUnstableHorizontalOrTilt",
+            "floor_heat_ceiling_cool_vertical_wall_equation_source": "KhalifaEq3WallAwayFromHeat",
+            "floor_heat_ceiling_cool_window_equation_source": "ISO15099Windows",
+            "mechanical_zone_fan_circulation_stable_horizontal_equation_source": "AlamdariHammondStableHorizontal",
+            "mechanical_zone_fan_circulation_stable_tilted_equation_source": "WaltonStableHorizontalOrTilt",
+            "mechanical_zone_fan_circulation_unstable_horizontal_equation_source": "KhalifaEq4CeilingAwayFromHeat",
+            "mechanical_zone_fan_circulation_unstable_tilted_equation_source": "WaltonUnstableHorizontalOrTilt",
+            "mechanical_zone_fan_circulation_vertical_wall_equation_source": "KhalifaEq3WallAwayFromHeat",
+            "mechanical_zone_fan_circulation_window_equation_source": "ISO15099Windows",
+            "mixed_regime_buoyancy_assisting_flow_on_walls_equation_source": "BeausoleilMorrisonMixedAssistedWall",
+            "mixed_regime_buoyancy_opposing_flow_on_walls_equation_source": "BeausoleilMorrisonMixedOpposingWall",
+            "mixed_regime_stable_ceiling_equation_source": "BeausoleilMorrisonMixedStableCeiling",
+            "mixed_regime_stable_floor_equation_source": "BeausoleilMorrisonMixedStableFloor",
+            "mixed_regime_unstable_ceiling_equation_source": "BeausoleilMorrisonMixedUnstableCeiling",
+            "mixed_regime_unstable_floor_equation_source": "BeausoleilMorrisonMixedUnstableFloor",
+            "mixed_regime_window_equation_source": "GoldsteinNovoselacCeilingDiffuserWindow",
+            "simple_buoyancy_stable_horizontal_equation_source": "AlamdariHammondStableHorizontal",
+            "simple_buoyancy_stable_tilted_equation_source": "WaltonStableHorizontalOrTilt",
+            "simple_buoyancy_unstable_horizontal_equation_source": "AlamdariHammondUnstableHorizontal",
+            "simple_buoyancy_unstable_tilted_equation_source": "WaltonUnstableHorizontalOrTilt",
+            "simple_buoyancy_vertical_wall_equation_source": "FohannoPolidoriVerticalWall",
+            "simple_buoyancy_windows_equation_source": "ISO15099Windows",
+            "wall_panel_heating_heated_wall_equation_source": "AwbiHattonHeatedWall",
+            "wall_panel_heating_stable_horizontal_equation_source": "AlamdariHammondStableHorizontal",
+            "wall_panel_heating_stable_tilted_equation_source": "WaltonStableHorizontalOrTilt",
+            "wall_panel_heating_unstable_horizontal_equation_source": "KhalifaEq7Ceiling",
+            "wall_panel_heating_unstable_tilted_equation_source": "WaltonUnstableHorizontalOrTilt",
+            "wall_panel_heating_vertical_wall_equation_source": "KhalifaEq6NonHeatedWalls",
+            "wall_panel_heating_window_equation_source": "ISO15099Windows"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Outside": {
+        "SurfaceConvectionAlgorithm:Outside 1": {
+            "algorithm": "AdaptiveConvectionAlgorithm"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Outside:AdaptiveModelSelections": {
+        "Default algorithms": {
+            "natural_convection_stable_horizontal_equation_source": "WaltonStableHorizontalOrTilt",
+            "natural_convection_unstable_horizontal_equation_source": "WaltonUnstableHorizontalOrTilt",
+            "natural_convection_vertical_wall_equation_source": "ASHRAEVerticalWall",
+            "wind_convection_horizontal_roof_equation_source": "ClearRoof",
+            "wind_convection_leeward_vertical_wall_equation_source": "TARPLeeward",
+            "wind_convection_windward_vertical_wall_equation_source": "TARPWindward"
+        }
+    },
+    "SurfaceProperty:ExposedFoundationPerimeter": {
+        "SurfaceProperty:ExposedFoundationPerimeter 1": {
+            "exposed_perimeter_calculation_method": "BySegment",
+            "surface_name": "Basement Floor",
+            "surfaces": [
+                {
+                    "surface_segment_exposed": "Yes"
+                },
+                {
+                    "surface_segment_exposed": "Yes"
+                },
+                {
+                    "surface_segment_exposed": "Yes"
+                },
+                {
+                    "surface_segment_exposed": "Yes"
+                }
+            ]
+        }
+    },
+    "ThermostatSetpoint:DualSetpoint": {
+        "Always21 Dual SP Control": {
+            "cooling_setpoint_temperature_schedule_name": "HVACTemplate-Always 21",
+            "heating_setpoint_temperature_schedule_name": "HVACTemplate-Always 21"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 4
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "22.2"
+        }
+    },
+    "Zone": {
+        "Basement": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0,
+            "floor_area": "Autocalculate",
+            "volume": "Autocalculate",
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        },
+        "Main Floor": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0,
+            "floor_area": "Autocalculate",
+            "volume": "Autocalculate",
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        }
+    },
+    "ZoneAirHeatBalanceAlgorithm": {
+        "ZoneAirHeatBalanceAlgorithm 1": {
+            "algorithm": "AnalyticalSolution"
+        }
+    },
+    "ZoneControl:Thermostat": {
+        "Main Floor Thermostat": {
+            "control_1_name": "Always21 Dual SP Control",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "HVACTemplate-Always 4",
+            "zone_or_zonelist_name": "Main Floor"
+        }
+    },
+    "ZoneHVAC:EquipmentConnections": {
+        "ZoneHVAC:EquipmentConnections 1": {
+            "zone_air_inlet_node_or_nodelist_name": "Main Floor Ideal Loads Supply Inlet",
+            "zone_air_node_name": "Main Floor Zone Air Node",
+            "zone_conditioning_equipment_list_name": "Main Floor Equipment",
+            "zone_name": "Main Floor",
+            "zone_return_air_node_or_nodelist_name": "Main Floor Return Outlet"
+        }
+    },
+    "ZoneHVAC:EquipmentList": {
+        "Main Floor Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Main Floor Ideal Loads Air System",
+                    "zone_equipment_object_type": "ZoneHVAC:IdealLoadsAirSystem"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        }
+    },
+    "ZoneHVAC:IdealLoadsAirSystem": {
+        "Main Floor Ideal Loads Air System": {
+            "cooling_limit": "NoLimit",
+            "cooling_sensible_heat_ratio": 0.7,
+            "dehumidification_control_type": "ConstantSensibleHeatRatio",
+            "demand_controlled_ventilation_type": "None",
+            "heat_recovery_type": "None",
+            "heating_limit": "NoLimit",
+            "humidification_control_type": "None",
+            "latent_heat_recovery_effectiveness": 0.65,
+            "maximum_heating_supply_air_humidity_ratio": 0.0156,
+            "maximum_heating_supply_air_temperature": 50,
+            "minimum_cooling_supply_air_humidity_ratio": 0.0077,
+            "minimum_cooling_supply_air_temperature": 13,
+            "outdoor_air_economizer_type": "NoEconomizer",
+            "sensible_heat_recovery_effectiveness": 0.7,
+            "zone_supply_air_node_name": "Main Floor Ideal Loads Supply Inlet"
+        }
+    }
+}

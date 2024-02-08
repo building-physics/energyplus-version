@@ -1,0 +1,1532 @@
+{
+    "Building": {
+        "PVtest": {
+            "loads_convergence_tolerance_value": 0.04,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.4,
+            "terrain": "Suburbs"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "Zn001:Floor001": {
+            "construction_name": "FLOOR SLAB 8 IN",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Ground",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Roof001": {
+            "construction_name": "PVRoofPaverUnderlayment",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "OtherSideConditionsModel",
+            "outside_boundary_condition_object": "PVRoofPaverSystem1",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 5.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 5.0,
+                    "vertex_z_coordinate": 5.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Roof002": {
+            "construction_name": "PVRoofPaverUnderlayment",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "OtherSideConditionsModel",
+            "outside_boundary_condition_object": "PVRoofPaverSystem2",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 5.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 5.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 5.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Roof003": {
+            "construction_name": "PVRoofPaverUnderlayment",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "OtherSideConditionsModel",
+            "outside_boundary_condition_object": "PVRoofPaverSystem3",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 5.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall001a": {
+            "construction_name": "PVSpandrlPanel",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 7.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 7.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 5.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall001b": {
+            "construction_name": "PVSpandrlPanel",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 7.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 7.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 14.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 14.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 5.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall001c": {
+            "construction_name": "PVSpandrlPanel",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 14.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 14.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 5.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall002": {
+            "construction_name": "R13WALL",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 5.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall003": {
+            "construction_name": "R13WALL",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 5.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall004": {
+            "construction_name": "R13WALL",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 5.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 5.0
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        }
+    },
+    "Construction": {
+        "FLOOR SLAB 8 IN": {
+            "outside_layer": "C10 - 8 IN HW CONCRETE"
+        },
+        "PVRoofPaverUnderlayment": {
+            "layer_2": "ROOFING - BUILT UP ROOFING - 3 / 8 IN",
+            "layer_3": "INS-Roof-R_15",
+            "layer_4": "MAT-METAL",
+            "outside_layer": "IN35"
+        },
+        "PVSpandrlPanel": {
+            "layer_2": "PVModule(glass)",
+            "layer_3": "B4 - 3 IN INSULATION",
+            "layer_4": "E6 - 1 / 2 IN GYP SHEATHING BOARD",
+            "outside_layer": "PVModule(glass)"
+        },
+        "R13WALL": {
+            "outside_layer": "R13LAYER"
+        }
+    },
+    "ConstructionProperty:InternalHeatSource": {
+        "PanelSource": {
+            "construction_name": "PVSpandrlPanel",
+            "dimensions_for_the_ctf_calculation": 1,
+            "temperature_calculation_requested_after_layer_number": 1,
+            "thermal_source_present_after_layer_number": 1,
+            "tube_spacing": 0.1,
+            "two_dimensional_temperature_calculation_position": 0.0
+        }
+    },
+    "ElectricLoadCenter:Distribution": {
+        "Simple Electric Load Center": {
+            "electrical_buss_type": "DirectCurrentWithInverter",
+            "generator_demand_limit_scheme_purchased_electric_demand_limit": 0,
+            "generator_list_name": "PV list",
+            "generator_operation_scheme_type": "Baseload",
+            "inverter_name": "Simple Ideal Inverter"
+        }
+    },
+    "ElectricLoadCenter:Generators": {
+        "PV list": {
+            "generator_outputs": [
+                {
+                    "generator_name": "Simple PV South Vertical",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_name": "Simple PV Lat Tilt",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_name": "Simple PV Flat",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_name": "Simple PV Flat:Shaded to East",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_name": "Simple PV Flat:Shaded to West",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_availability_schedule_name": "always on",
+                    "generator_name": "TRNSYSPV South Vertical",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_availability_schedule_name": "always on",
+                    "generator_name": "TRNSYS PV Lat Tilt",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_availability_schedule_name": "always on",
+                    "generator_name": "TRNSYS PV Flat",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_availability_schedule_name": "always on",
+                    "generator_name": "TRNSYSPV Flat:Shaded to East",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_availability_schedule_name": "always on",
+                    "generator_name": "TRNSYSPV Flat:Shaded to West",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_availability_schedule_name": "always on",
+                    "generator_name": "SNL PV South Vertical",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_availability_schedule_name": "always on",
+                    "generator_name": "SNL PV Lat Tilt",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_availability_schedule_name": "always on",
+                    "generator_name": "SNL PV Flat",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_availability_schedule_name": "always on",
+                    "generator_name": "SNL PV Flat:Shaded to East",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_availability_schedule_name": "always on",
+                    "generator_name": "SNL PV Flat:Shaded to West",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_availability_schedule_name": "always on",
+                    "generator_name": "SNL INTEGRATED PV",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_name": "SIMPLE INTEGRATED PV",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_availability_schedule_name": "always on",
+                    "generator_name": "TRNSYSPV INTEGRATED PV",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_availability_schedule_name": "always on",
+                    "generator_name": "SNL Roof Paver PV",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_name": "SIMPLE Roof Paver PV",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                },
+                {
+                    "generator_name": "TRNSYSPV Roof Paver PV",
+                    "generator_object_type": "Generator:Photovoltaic",
+                    "generator_rated_electric_power_output": 20000
+                }
+            ]
+        }
+    },
+    "ElectricLoadCenter:Inverter:Simple": {
+        "Simple Ideal Inverter": {
+            "availability_schedule_name": "always On",
+            "inverter_efficiency": 1.0,
+            "radiative_fraction": 0.0
+        }
+    },
+    "Generator:Photovoltaic": {
+        "SIMPLE INTEGRATED PV": {
+            "heat_transfer_integration_mode": "IntegratedSurfaceOutsideFace",
+            "module_performance_name": "12percentEffPVhalfArea",
+            "number_of_modules_in_series": 1.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:Simple",
+            "surface_name": "Zn001:Wall001a"
+        },
+        "SIMPLE Roof Paver PV": {
+            "heat_transfer_integration_mode": "IntegratedExteriorVentedCavity",
+            "module_performance_name": "12percentEffPVhalfArea",
+            "number_of_modules_in_series": 1.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:Simple",
+            "surface_name": "Zn001:roof001"
+        },
+        "SNL INTEGRATED PV": {
+            "heat_transfer_integration_mode": "IntegratedSurfaceOutsideFace",
+            "module_performance_name": "BP Solar BP275",
+            "number_of_modules_in_series": 6.0,
+            "number_of_series_strings_in_parallel": 3.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:Sandia",
+            "surface_name": "Zn001:Wall001c"
+        },
+        "SNL PV Flat": {
+            "heat_transfer_integration_mode": "Decoupled",
+            "module_performance_name": "BP Solar BP275",
+            "number_of_modules_in_series": 2.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:Sandia",
+            "surface_name": "FlatSurface"
+        },
+        "SNL PV Flat:Shaded to East": {
+            "heat_transfer_integration_mode": "Decoupled",
+            "module_performance_name": "BP Solar BP275",
+            "number_of_modules_in_series": 2.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:Sandia",
+            "surface_name": "FlatSurfaceShadetoEast"
+        },
+        "SNL PV Flat:Shaded to West": {
+            "heat_transfer_integration_mode": "Decoupled",
+            "module_performance_name": "BP Solar BP275",
+            "number_of_modules_in_series": 2.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:Sandia",
+            "surface_name": "FlatSurfaceShadetoWest"
+        },
+        "SNL PV Lat Tilt": {
+            "heat_transfer_integration_mode": "Decoupled",
+            "module_performance_name": "BP Solar BP275",
+            "number_of_modules_in_series": 2.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:Sandia",
+            "surface_name": "LatitudeTiltSurface"
+        },
+        "SNL PV South Vertical": {
+            "heat_transfer_integration_mode": "Decoupled",
+            "module_performance_name": "BP Solar BP275",
+            "number_of_modules_in_series": 2.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:Sandia",
+            "surface_name": "SouthVerticalSurface"
+        },
+        "SNL Roof Paver PV": {
+            "heat_transfer_integration_mode": "IntegratedExteriorVentedCavity",
+            "module_performance_name": "BP Solar BP275",
+            "number_of_modules_in_series": 6.0,
+            "number_of_series_strings_in_parallel": 3.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:Sandia",
+            "surface_name": "Zn001:roof003"
+        },
+        "Simple PV Flat": {
+            "heat_transfer_integration_mode": "Decoupled",
+            "module_performance_name": "12percentEffPV0.1044Area",
+            "number_of_modules_in_series": 1.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:Simple",
+            "surface_name": "FlatSurface"
+        },
+        "Simple PV Flat:Shaded to East": {
+            "heat_transfer_integration_mode": "Decoupled",
+            "module_performance_name": "SchedEffPV0.04176Area",
+            "number_of_modules_in_series": 1.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:Simple",
+            "surface_name": "FlatSurfaceShadetoEast"
+        },
+        "Simple PV Flat:Shaded to West": {
+            "heat_transfer_integration_mode": "Decoupled",
+            "module_performance_name": "11PercentEffPV0.04176Area",
+            "number_of_modules_in_series": 1.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:Simple",
+            "surface_name": "FlatSurfaceShadetoWest"
+        },
+        "Simple PV Lat Tilt": {
+            "heat_transfer_integration_mode": "Decoupled",
+            "module_performance_name": "SchedEffPV0.1044Area",
+            "number_of_modules_in_series": 1.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:Simple",
+            "surface_name": "LatitudeTiltSurface"
+        },
+        "Simple PV South Vertical": {
+            "heat_transfer_integration_mode": "Decoupled",
+            "module_performance_name": "12percentEffPV0.1044Area",
+            "number_of_modules_in_series": 1.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:Simple",
+            "surface_name": "SouthVerticalSurface"
+        },
+        "TRNSYS PV Flat": {
+            "heat_transfer_integration_mode": "DecoupledUllebergDynamic",
+            "module_performance_name": "Example PV Model Inputs",
+            "number_of_modules_in_series": 2.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:EquivalentOne-Diode",
+            "surface_name": "FlatSurface"
+        },
+        "TRNSYS PV Lat Tilt": {
+            "heat_transfer_integration_mode": "DecoupledUllebergDynamic",
+            "module_performance_name": "Example PV Model Inputs",
+            "number_of_modules_in_series": 2.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:EquivalentOne-Diode",
+            "surface_name": "LatitudeTiltSurface"
+        },
+        "TRNSYSPV Flat:Shaded to East": {
+            "heat_transfer_integration_mode": "DecoupledUllebergDynamic",
+            "module_performance_name": "Example PV Model Inputs",
+            "number_of_modules_in_series": 2.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:EquivalentOne-Diode",
+            "surface_name": "FlatSurfaceShadetoEast"
+        },
+        "TRNSYSPV Flat:Shaded to West": {
+            "heat_transfer_integration_mode": "DecoupledUllebergDynamic",
+            "module_performance_name": "Example PV Model Inputs",
+            "number_of_modules_in_series": 2.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:EquivalentOne-Diode",
+            "surface_name": "FlatSurfaceShadetoWest"
+        },
+        "TRNSYSPV INTEGRATED PV": {
+            "heat_transfer_integration_mode": "IntegratedSurfaceOutsideFace",
+            "module_performance_name": "Example PV Model Inputs",
+            "number_of_modules_in_series": 6.0,
+            "number_of_series_strings_in_parallel": 3.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:EquivalentOne-Diode",
+            "surface_name": "Zn001:Wall001b"
+        },
+        "TRNSYSPV Roof Paver PV": {
+            "heat_transfer_integration_mode": "IntegratedExteriorVentedCavity",
+            "module_performance_name": "Example PV Model Inputs",
+            "number_of_modules_in_series": 6.0,
+            "number_of_series_strings_in_parallel": 3.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:EquivalentOne-Diode",
+            "surface_name": "Zn001:roof002"
+        },
+        "TRNSYSPV South Vertical": {
+            "heat_transfer_integration_mode": "DecoupledUllebergDynamic",
+            "module_performance_name": "Example PV Model Inputs",
+            "number_of_modules_in_series": 2.0,
+            "number_of_series_strings_in_parallel": 1.0,
+            "photovoltaic_performance_object_type": "PhotovoltaicPerformance:EquivalentOne-Diode",
+            "surface_name": "SouthVerticalSurface"
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "World",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "Material": {
+        "B4 - 3 IN INSULATION": {
+            "conductivity": 0.039999999,
+            "density": 32.03,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 830.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.07,
+            "visible_absorptance": 0.5
+        },
+        "C10 - 8 IN HW CONCRETE": {
+            "conductivity": 1.729577,
+            "density": 2242.585,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.2033016,
+            "visible_absorptance": 0.65
+        },
+        "E6 - 1 / 2 IN GYP SHEATHING BOARD": {
+            "conductivity": 0.16,
+            "density": 784.9,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 830.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0099999998,
+            "visible_absorptance": 0.92
+        },
+        "IN35": {
+            "conductivity": 0.035,
+            "density": 29.0,
+            "roughness": "Rough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 1213.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.050799999,
+            "visible_absorptance": 0.5
+        },
+        "INS-Roof-R_15": {
+            "conductivity": 0.049,
+            "density": 265,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.7,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1295,
+            "visible_absorptance": 0.7
+        },
+        "MAT-METAL": {
+            "conductivity": 45.006,
+            "density": 7680,
+            "roughness": "MediumSmooth",
+            "solar_absorptance": 0.7,
+            "specific_heat": 418.4,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.001524,
+            "visible_absorptance": 0.7
+        },
+        "PVModule(glass)": {
+            "conductivity": 0.78,
+            "density": 2700.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 840.0,
+            "thermal_absorptance": 0.84,
+            "thickness": 0.007,
+            "visible_absorptance": 0.92
+        },
+        "ROOFING - BUILT UP ROOFING - 3 / 8 IN": {
+            "conductivity": 0.16,
+            "density": 1121.29,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1460.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0094999997,
+            "visible_absorptance": 0.7
+        }
+    },
+    "Material:NoMass": {
+        "R13LAYER": {
+            "roughness": "Rough",
+            "solar_absorptance": 0.75,
+            "thermal_absorptance": 0.9,
+            "thermal_resistance": 2.290965,
+            "visible_absorptance": 0.75
+        }
+    },
+    "NodeList": {
+        "Zone1Inlets": {
+            "nodes": [
+                {
+                    "node_name": "Zone 1 inlet"
+                }
+            ]
+        }
+    },
+    "Output:Meter": {
+        "Output:Meter 1": {
+            "key_name": "Photovoltaic:ElectricityProduced",
+            "reporting_frequency": "RunPeriod"
+        }
+    },
+    "Output:Meter:MeterFileOnly": {
+        "Output:Meter:MeterFileOnly 1": {
+            "key_name": "Photovoltaic:ElectricityProduced",
+            "reporting_frequency": "Monthly"
+        }
+    },
+    "Output:Surfaces:Drawing": {
+        "Output:Surfaces:Drawing 1": {
+            "report_type": "DXF"
+        }
+    },
+    "Output:Surfaces:List": {
+        "Output:Surfaces:List 1": {
+            "report_type": "Details"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Generator Produced DC Electricity Rate"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Generator Produced DC Electricity Energy"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Inverter AC Output Electricity Energy"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Inverter AC Output Electricity Rate"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Generator PV Array Efficiency"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Generator PV Cell Temperature"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:SurfaceColorScheme": {
+        "highlight PV": {
+            "color_for_drawing_element_1": 2,
+            "drawing_element_1_type": "Photovoltaics"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "PhotovoltaicPerformance:EquivalentOne-Diode": {
+        "Example PV Model Inputs": {
+            "active_area": 0.63,
+            "cell_type": "CrystallineSilicon",
+            "module_current_at_maximum_power": 4.45,
+            "module_heat_loss_coefficient": 30.0,
+            "module_voltage_at_maximum_power": 17,
+            "nominal_operating_cell_temperature_test_ambient_temperature": 20,
+            "nominal_operating_cell_temperature_test_cell_temperature": 47,
+            "nominal_operating_cell_temperature_test_insolation": 800.0,
+            "number_of_cells_in_series": 36,
+            "open_circuit_voltage": 21.4,
+            "reference_insolation": 1000.0,
+            "reference_temperature": 25.0,
+            "semiconductor_bandgap": 1.12,
+            "short_circuit_current": 4.75,
+            "shunt_resistance": 1000000,
+            "temperature_coefficient_of_open_circuit_voltage": -0.08,
+            "temperature_coefficient_of_short_circuit_current": 0.00065,
+            "total_heat_capacity": 50000,
+            "transmittance_absorptance_product": 0.9
+        }
+    },
+    "PhotovoltaicPerformance:Sandia": {
+        "BP Solar BP275": {
+            "active_area": 0.63,
+            "current_at_maximum_power_point": 4.45,
+            "diode_factor": 1.38,
+            "number_of_cells_in_parallel": 1,
+            "number_of_cells_in_series": 36,
+            "open_circuit_voltage": 21.4,
+            "sandia_database_parameter_a": -3.56,
+            "sandia_database_parameter_a0": 0.9408,
+            "sandia_database_parameter_a1": 0.054204,
+            "sandia_database_parameter_a2": -0.011043,
+            "sandia_database_parameter_a3": -0.0008075,
+            "sandia_database_parameter_a4": -2.097e-05,
+            "sandia_database_parameter_aimp": -0.0005,
+            "sandia_database_parameter_aisc": 0.0004,
+            "sandia_database_parameter_b": -0.075,
+            "sandia_database_parameter_b0": 1,
+            "sandia_database_parameter_b1": -0.002438,
+            "sandia_database_parameter_b2": 0.0003103,
+            "sandia_database_parameter_b3": -1.246e-05,
+            "sandia_database_parameter_b4": 2.112e-07,
+            "sandia_database_parameter_b5": -1.359e-09,
+            "sandia_database_parameter_bvmp0": -0.085,
+            "sandia_database_parameter_bvoc0": -0.085,
+            "sandia_database_parameter_c0": 0.991,
+            "sandia_database_parameter_c1": 0.009,
+            "sandia_database_parameter_c2": 0.091575,
+            "sandia_database_parameter_c3": -8.79359,
+            "sandia_database_parameter_c4": 0.993,
+            "sandia_database_parameter_c5": 0.007,
+            "sandia_database_parameter_c6": 1.105,
+            "sandia_database_parameter_c7": -0.105,
+            "sandia_database_parameter_delta_tc_": 3,
+            "sandia_database_parameter_fd": 1,
+            "sandia_database_parameter_ix0": 4.7,
+            "sandia_database_parameter_ixx0": 3.22,
+            "sandia_database_parameter_mbvmp": 0,
+            "sandia_database_parameter_mbvoc": 0.0,
+            "short_circuit_current": 4.75,
+            "voltage_at_maximum_power_point": 17
+        }
+    },
+    "PhotovoltaicPerformance:Simple": {
+        "11PercentEffPV0.04176Area": {
+            "conversion_efficiency_input_mode": "Fixed",
+            "fraction_of_surface_area_with_active_solar_cells": 0.04176,
+            "value_for_cell_efficiency_if_fixed": 0.11
+        },
+        "12percentEffPV0.1044Area": {
+            "conversion_efficiency_input_mode": "Fixed",
+            "fraction_of_surface_area_with_active_solar_cells": 0.1044,
+            "value_for_cell_efficiency_if_fixed": 0.12
+        },
+        "12percentEffPVhalfArea": {
+            "conversion_efficiency_input_mode": "Fixed",
+            "fraction_of_surface_area_with_active_solar_cells": 0.5,
+            "value_for_cell_efficiency_if_fixed": 0.12
+        },
+        "SchedEffPV0.1044Area": {
+            "conversion_efficiency_input_mode": "Scheduled",
+            "efficiency_schedule_name": "PVefficiency",
+            "fraction_of_surface_area_with_active_solar_cells": 0.1044,
+            "value_for_cell_efficiency_if_fixed": 0.12
+        },
+        "SchedEffPV0.04176Area": {
+            "conversion_efficiency_input_mode": "Scheduled",
+            "efficiency_schedule_name": "PVefficiency",
+            "fraction_of_surface_area_with_active_solar_cells": 0.04176,
+            "value_for_cell_efficiency_if_fixed": 0.12
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "end_day_of_month": 7,
+            "end_month": 1,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        },
+        "Run Period 2": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 7,
+            "end_day_of_month": 7,
+            "end_month": 7,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "Cooling Setpoints": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until:  7:00"
+                },
+                {
+                    "field": 30.0
+                },
+                {
+                    "field": "Until: 20:00"
+                },
+                {
+                    "field": 23.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 30.0
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "Heating Setpoints": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until:  7:00"
+                },
+                {
+                    "field": 15.0
+                },
+                {
+                    "field": "Until: 17:00"
+                },
+                {
+                    "field": 20.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 15.0
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "PVEfficiency": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.12
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "Zone Control Type Sched": {
+            "data": [
+                {
+                    "field": "Through: 3/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Through: 9/30"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 2
+                },
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1
+                }
+            ],
+            "schedule_type_limits_name": "Control Type"
+        },
+        "always On": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Control Type": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 4
+        },
+        "Fraction": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1.0
+        },
+        "Temperature": {
+            "lower_limit_value": -60,
+            "numeric_type": "Continuous",
+            "unit_type": "Temperature",
+            "upper_limit_value": 200
+        }
+    },
+    "Shading:Site:Detailed": {
+        "FlatSurface": {
+            "number_of_vertices": 4,
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 2.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 40.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 45.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 45.0,
+                    "vertex_y_coordinate": 2.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ]
+        },
+        "FlatSurfaceShadetoEast": {
+            "number_of_vertices": 4,
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 12.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 20.0,
+                    "vertex_z_coordinate": 12.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 20.0,
+                    "vertex_z_coordinate": 12.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 12.0
+                }
+            ]
+        },
+        "FlatSurfaceShadetoWest": {
+            "number_of_vertices": 4,
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 12.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 20.0,
+                    "vertex_z_coordinate": 12.0
+                },
+                {
+                    "vertex_x_coordinate": 25.0,
+                    "vertex_y_coordinate": 20.0,
+                    "vertex_z_coordinate": 12.0
+                },
+                {
+                    "vertex_x_coordinate": 25.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 12.0
+                }
+            ]
+        },
+        "LatitudeTiltSurface": {
+            "number_of_vertices": 4,
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 1.332,
+                    "vertex_z_coordinate": 1.4914
+                },
+                {
+                    "vertex_x_coordinate": 30.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 35.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 35.0,
+                    "vertex_y_coordinate": 1.332,
+                    "vertex_z_coordinate": 1.4914
+                }
+            ]
+        },
+        "ShadetoEast": {
+            "number_of_vertices": 4,
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 22.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 12.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 20.0,
+                    "vertex_z_coordinate": 12.0
+                },
+                {
+                    "vertex_x_coordinate": 5.0,
+                    "vertex_y_coordinate": 20.0,
+                    "vertex_z_coordinate": 22.0
+                }
+            ]
+        },
+        "ShadetoWest": {
+            "number_of_vertices": 4,
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 20.0,
+                    "vertex_z_coordinate": 22.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 20.0,
+                    "vertex_z_coordinate": 12.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 12.0
+                },
+                {
+                    "vertex_x_coordinate": 20.0,
+                    "vertex_y_coordinate": 25.0,
+                    "vertex_z_coordinate": 22.0
+                }
+            ]
+        },
+        "SouthVerticalSurface": {
+            "number_of_vertices": 4,
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 50.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.0
+                },
+                {
+                    "vertex_x_coordinate": 50.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 55.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 55.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.0
+                }
+            ]
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "No",
+            "run_simulation_for_weather_file_run_periods": "Yes"
+        }
+    },
+    "Site:GroundTemperature:BuildingSurface": {
+        "Site:GroundTemperature:BuildingSurface 1": {
+            "april_ground_temperature": 20.04,
+            "august_ground_temperature": 20.24,
+            "december_ground_temperature": 20.12,
+            "february_ground_temperature": 19.94,
+            "january_ground_temperature": 19.96,
+            "july_ground_temperature": 20.21,
+            "june_ground_temperature": 20.17,
+            "march_ground_temperature": 19.99,
+            "may_ground_temperature": 20.09,
+            "november_ground_temperature": 20.17,
+            "october_ground_temperature": 20.2,
+            "september_ground_temperature": 20.23
+        }
+    },
+    "Site:Location": {
+        "CHICAGO_IL_USA TMY2-94846": {
+            "elevation": 190.0,
+            "latitude": 41.78,
+            "longitude": -87.75,
+            "time_zone": -6.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "CHICAGO_IL_USA Annual Cooling 1% Design Conditions DB/MCWB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 10.7,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 31.5,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23.0,
+            "wind_direction": 230,
+            "wind_speed": 5.3
+        },
+        "CHICAGO_IL_USA Annual Heating 99% Design Conditions DB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -17.3,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -17.3,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        }
+    },
+    "SurfaceProperty:ExteriorNaturalVentedCavity": {
+        "PVRoofPaverExtVentCav1": {
+            "area_fraction_of_openings": 0.02,
+            "boundary_conditions_model_name": "PVRoofPaverSystem1",
+            "discharge_coefficient_for_openings_with_respect_to_buoyancy_driven_flow": 0.5,
+            "effective_thickness_of_cavity_behind_exterior_baffle": 0.05,
+            "effectiveness_for_perforations_with_respect_to_wind": 0.1,
+            "height_scale_for_buoyancy_driven_ventilation": 0.05,
+            "ratio_of_actual_surface_area_to_projected_surface_area": 0.97,
+            "roughness_of_exterior_surface": "Smooth",
+            "solar_absorbtivity_of_exterior_baffle": 0.92,
+            "surface": [
+                {
+                    "surface_name": "Zn001:Roof001"
+                }
+            ],
+            "thermal_emissivity_of_exterior_baffle_material": 0.9
+        },
+        "PVRoofPaverExtVentCav2": {
+            "area_fraction_of_openings": 0.02,
+            "boundary_conditions_model_name": "PVRoofPaverSystem2",
+            "discharge_coefficient_for_openings_with_respect_to_buoyancy_driven_flow": 0.5,
+            "effective_thickness_of_cavity_behind_exterior_baffle": 0.05,
+            "effectiveness_for_perforations_with_respect_to_wind": 0.1,
+            "height_scale_for_buoyancy_driven_ventilation": 0.05,
+            "ratio_of_actual_surface_area_to_projected_surface_area": 0.97,
+            "roughness_of_exterior_surface": "Smooth",
+            "solar_absorbtivity_of_exterior_baffle": 0.92,
+            "surface": [
+                {
+                    "surface_name": "Zn001:Roof002"
+                }
+            ],
+            "thermal_emissivity_of_exterior_baffle_material": 0.9
+        },
+        "PVRoofPaverExtVentCav3": {
+            "area_fraction_of_openings": 0.02,
+            "boundary_conditions_model_name": "PVRoofPaverSystem3",
+            "discharge_coefficient_for_openings_with_respect_to_buoyancy_driven_flow": 0.5,
+            "effective_thickness_of_cavity_behind_exterior_baffle": 0.05,
+            "effectiveness_for_perforations_with_respect_to_wind": 0.1,
+            "height_scale_for_buoyancy_driven_ventilation": 0.05,
+            "ratio_of_actual_surface_area_to_projected_surface_area": 0.97,
+            "roughness_of_exterior_surface": "Smooth",
+            "solar_absorbtivity_of_exterior_baffle": 0.92,
+            "surface": [
+                {
+                    "surface_name": "Zn001:Roof003"
+                }
+            ],
+            "thermal_emissivity_of_exterior_baffle_material": 0.9
+        }
+    },
+    "SurfaceProperty:OtherSideConditionsModel": {
+        "PVRoofPaverSystem1": {
+            "type_of_modeling": "GapConvectionRadiation"
+        },
+        "PVRoofPaverSystem2": {
+            "type_of_modeling": "GapConvectionRadiation"
+        },
+        "PVRoofPaverSystem3": {
+            "type_of_modeling": "GapConvectionRadiation"
+        }
+    },
+    "ThermostatSetpoint:SingleCooling": {
+        "Cooling Setpoint with SB": {
+            "setpoint_temperature_schedule_name": "Cooling Setpoints"
+        }
+    },
+    "ThermostatSetpoint:SingleHeating": {
+        "Heating Setpoint with SB": {
+            "setpoint_temperature_schedule_name": "Heating Setpoints"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 4
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "22.2"
+        }
+    },
+    "Zone": {
+        "ZONE ONE": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        }
+    },
+    "ZoneControl:Thermostat": {
+        "Zone 1 Thermostat": {
+            "control_1_name": "Heating Setpoint with SB",
+            "control_1_object_type": "ThermostatSetpoint:SingleHeating",
+            "control_2_name": "Cooling Setpoint with SB",
+            "control_2_object_type": "ThermostatSetpoint:SingleCooling",
+            "control_type_schedule_name": "Zone Control Type Sched",
+            "zone_or_zonelist_name": "ZONE ONE"
+        }
+    },
+    "ZoneHVAC:EquipmentConnections": {
+        "ZoneHVAC:EquipmentConnections 1": {
+            "zone_air_inlet_node_or_nodelist_name": "Zone1Inlets",
+            "zone_air_node_name": "Zone 1 NODE",
+            "zone_conditioning_equipment_list_name": "Zone1Equipment",
+            "zone_name": "ZONE ONE",
+            "zone_return_air_node_or_nodelist_name": "Zone 1 Outlet"
+        }
+    },
+    "ZoneHVAC:EquipmentList": {
+        "Zone1Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Zone1Air",
+                    "zone_equipment_object_type": "ZoneHVAC:IdealLoadsAirSystem"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        }
+    },
+    "ZoneHVAC:IdealLoadsAirSystem": {
+        "Zone1Air": {
+            "cooling_limit": "NoLimit",
+            "dehumidification_control_type": "ConstantSupplyHumidityRatio",
+            "heating_limit": "NoLimit",
+            "humidification_control_type": "ConstantSupplyHumidityRatio",
+            "maximum_cooling_air_flow_rate": "Autosize",
+            "maximum_heating_air_flow_rate": "Autosize",
+            "maximum_heating_supply_air_humidity_ratio": 0.009,
+            "maximum_heating_supply_air_temperature": 50,
+            "minimum_cooling_supply_air_humidity_ratio": 0.009,
+            "minimum_cooling_supply_air_temperature": 13,
+            "zone_supply_air_node_name": "Zone 1 inlet"
+        }
+    }
+}

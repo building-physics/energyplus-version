@@ -8,9 +8,16 @@ import os
 import itertools
 import json
 import importlib
+import validate
+import sys
 
-versions = ['9.4', '23.1']
-files = {version: glob.glob(os.path.join('test_files', version, '*.epJSON')) for version in versions}
+pwd=os.getcwd()
+parent_dir=os.path.dirname(pwd)
+folder=os.path.join(parent_dir,"src")
+sys.path.append(folder)
+
+versions = ['9.4','23.1'] #
+files = {version: glob.glob(os.path.join('..\\test_files', version, '*.epJSON')) for version in versions}
 parameters = list(itertools.chain(*[[(version, file) for file in files[version]] for version in versions]))
 
 @pytest.mark.parametrize("version, filename", parameters)
@@ -25,4 +32,22 @@ def test_does_it_run(version, filename):
     patch = upgrade.generate_patch(epjson)
     jp = jsonpatch.JsonPatch(patch)
     new_epjson = jp.apply(epjson)
-    assert len(new_epjson) > 0
+   
+    schema="..//schema//"+version_string+"//Energy+.schema.epJSON"
+    assert validate.validate_json(epjson,schema)
+    
+    
+    #assert len(new_epjson) > 0
+    new_version=upgrade.to_version()
+    new_schema="..//schema//"+new_version+"//Energy+.schema.epJSON"
+    assert validate.validate_json(new_epjson,new_schema)
+    
+for element in parameters:
+    test_does_it_run(element[0],element[1])
+
+
+
+    
+
+
+

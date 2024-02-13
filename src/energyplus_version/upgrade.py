@@ -10,8 +10,8 @@ class UpgradeWarning(Warning):
     pass
 
 class Change:
-    def apply_to_all(self, objects: dict) -> list: # pragma: no cover
-        raise NotImplementedError('Change object must implement the "apply_to_all" method')
+    def generate_patch(self, objects: dict) -> list: # pragma: no cover
+        raise NotImplementedError('Change object must implement the "generate_patch" method')
     def apply(self, object_name: str, object: dict) -> list: # pragma: no cover
         raise NotImplementedError('Change object must implement the "apply" method')
     def generate_schema_patch(self):
@@ -32,7 +32,7 @@ class ChangeFieldName(Change):
         self.object = object
         self.old_name = old_name
         self.new_name = new_name
-    def apply_to_all(self, objects: dict) -> list:
+    def generate_patch(self, objects: dict) -> list:
         patch = []
         for name, object in objects.items():
             if self.old_name in object:
@@ -81,7 +81,7 @@ class RemoveField(Change):
     def apply(self, object_name: str, object: dict) -> list:
         path = '/%s/%s/%s' % (self.object, object_name, self.field)
         return [{'op': 'remove', 'path': path}]
-    def apply_to_all(self, objects: dict) -> list:
+    def generate_patch(self, objects: dict) -> list:
         patch = []
         for name, object in objects.items():
             if self.field in object:
@@ -100,7 +100,7 @@ class MapValues(Change):
         self.object = object
         self.field = field
         self.value_map = value_map
-    def apply_to_all(self, objects: dict) -> list:
+    def generate_patch(self, objects: dict) -> list:
         patch = []
         for name, object in objects.items():
             if self.field in object and object[self.field] in self.value_map:
@@ -120,7 +120,7 @@ class ChangeObjectName(Change):
     def __init__(self, object: str, new_name: str):
         self.object = object
         self.new_name = new_name
-    def apply_to_all(self, objects: dict) -> list:
+    def generate_patch(self, objects: dict) -> list:
         if not objects:
             return []
         from_path = '/%s' % self.object
@@ -146,7 +146,7 @@ class Upgrade:
         patch = []
         for change in self.changes():
             objects = prev.get(change.object, {})
-            patch.extend(change.apply_to_all(objects))
+            patch.extend(change.generate_patch(objects))
             #if change.object in prev:
             #    for name, obj in prev[change.object].items():
             #        if change.valid(obj):

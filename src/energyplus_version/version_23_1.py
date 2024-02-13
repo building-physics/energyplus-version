@@ -107,7 +107,12 @@ class Upgrade(ev.EnergyPlusUpgrade):
                                'steam_conversion_efficiency',
                                'district_heating_steam_conversion_efficiency'),
             ev.MapValues('LifeCycleCost:UsePriceEscalation', 'resource', {'Steam': 'DistrictHeatingSteam'}),
-            ev.MapValues('LifeCycleCost:UseAdjustment', 'resource', {'Steam': 'DistrictHeatingSteam'})
+            ev.MapValues('LifeCycleCost:UseAdjustment', 'resource', {'Steam': 'DistrictHeatingSteam'}),
+            ev.RemoveField('HVACTemplate:Zone:WaterToAirHeatPump','fraction_of_on_cycle_power_use')
+            # Split AirLoopHVAC:UnitarySystem
+            # Split AirLoopHVAC:UnitaryHeatPump:WaterToAir
+            # Split ZoneHVAC:WaterToAirHeatPump
+
         ]
 
     def from_version(self):

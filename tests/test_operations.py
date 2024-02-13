@@ -7,8 +7,8 @@ import jsonpatch
 def test_change_field_name():
     obj = {'Test': {'test_one': {'field_one': 1.0, 'field_two': 2.0}}}
     change = energyplus_version.ChangeFieldName('Test', 'field_one', 'field_uno')
-    assert change.valid(obj['Test']['test_one'])
-    patch = change.apply('test_one', obj['Test']['test_one'])
+    assert change.valid(obj)
+    patch = change.generate_patch(obj)
     assert len(patch) == 1
     expected = {'op': 'move', 'from': '/Test/test_one/field_one', 'path': '/Test/test_one/field_uno'}
     assert all((patch[0].get(k) == v for k, v in expected.items()))
@@ -21,8 +21,8 @@ def test_change_field_name():
 def test_change_field_name_all():
     obj = {'Test': {'test_one': {'field_one': 1.0, 'field_two': 2.0}}}
     change = energyplus_version.ChangeFieldName('Test', 'field_one', 'field_uno')
-    assert change.valid(obj['Test']['test_one'])
-    patch = change.generate_patch(obj['Test'])
+    assert change.valid(obj)
+    patch = change.generate_patch(obj)
     assert len(patch) == 1
     expected = {'op': 'move', 'from': '/Test/test_one/field_one', 'path': '/Test/test_one/field_uno'}
     assert all((patch[0].get(k) == v for k, v in expected.items()))
@@ -35,8 +35,8 @@ def test_change_field_name_all():
 def test_remove_field():
     obj = {'Test': {'test_one': {'field_one': 1.0, 'field_two': 2.0}}}
     change = energyplus_version.RemoveField('Test', 'field_two')
-    assert change.valid(obj['Test']['test_one'])
-    patch = change.apply('test_one', obj['Test']['test_one'])
+    assert change.valid(obj)
+    patch = change.generate_patch(obj)
     assert len(patch) == 1
     expected = {'op': 'remove', 'path': '/Test/test_one/field_two'}
     assert all((patch[0].get(k) == v for k, v in expected.items()))
@@ -49,8 +49,8 @@ def test_remove_field():
 def test_remove_field_all():
     obj = {'Test': {'test_one': {'field_one': 1.0, 'field_two': 2.0}}}
     change = energyplus_version.RemoveField('Test', 'field_two')
-    assert change.valid(obj['Test']['test_one'])
-    patch = change.generate_patch(obj['Test'])
+    assert change.valid(obj)
+    patch = change.generate_patch(obj)
     assert len(patch) == 1
     expected = {'op': 'remove', 'path': '/Test/test_one/field_two'}
     assert all((patch[0].get(k) == v for k, v in expected.items()))
@@ -77,8 +77,8 @@ def test_map_field_value():
 def test_map_field_value():
     obj = {'Test': {'test_one': {'field_one': 'A', 'field_two': 'B'}}}
     change = energyplus_version.MapValues('Test', 'field_one', {'A': 'Z', 'B': 'Y'})
-    assert change.valid(obj['Test']['test_one'])
-    patch = change.apply('test_one', obj['Test']['test_one'])
+    assert change.valid(obj)
+    patch = change.generate_patch(obj)
     assert len(patch) == 1
     expected = {'op': 'replace', 'path': '/Test/test_one/field_one', 'value': 'Z'}
     assert all((patch[0].get(k) == v for k, v in expected.items()))
@@ -91,7 +91,7 @@ def test_map_field_value():
 def test_change_object_name():
     obj = {'Test': {'test_one': {'field_one': 'A', 'field_two': 'B'}}}
     change = energyplus_version.ChangeObjectName('Test', 'NotATest')
-    patch = change.generate_patch(obj['Test'])
+    patch = change.generate_patch(obj)
     assert len(patch) == 1
     expected = {'op': 'move', 'from': '/Test', 'path': '/NotATest'}
     assert all((patch[0].get(k) == v for k, v in expected.items()))

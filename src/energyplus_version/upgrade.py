@@ -46,7 +46,7 @@ class ChangeFieldName(Change):
         return 'Change the field named "%s" to "%s".' % (self.old_name, self.new_name)
 
 class NewComputedField(Change):
-    def __init__(self, object: str, name: str, compute: Callable[[dict, dict], str|None]=do_not_add):
+    def __init__(self, object: str, name: str, compute: Callable[[dict, dict], int|float|str|None]=do_not_add):
         self.object = object
         self.name = name
         self.compute = compute

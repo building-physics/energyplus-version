@@ -100,3 +100,22 @@ def test_change_object_name():
     expected = {'NotATest': {'test_one': {'field_one': 'A', 'field_two': 'B'}}}
     assert all((new_obj['NotATest']['test_one'].get(k) == v for k, v in expected['NotATest']['test_one'].items()))
     assert change.describe() == 'Change the name of the object named "Test" to "NotATest".'
+
+def double_the_new_field(object, objects):
+    if 'field_one' in object:
+        return str(object['field_one'])
+    return None
+
+def test_new_double_field():
+    objs = {'Test': {'test_one': {'field_one': 1.0, 'field_two': 2.0},
+                     'test_two': {'field_two': 2.0}}}
+    change = energyplus_version.ChangeFieldName('Test', 'field_one', 'field_uno')
+    patch = change.apply_to_all(objs['Test'])
+    assert len(patch) == 1
+    #expected = {'op': 'move', 'from': '/Test/test_one/field_one', 'path': '/Test/test_one/field_uno'}
+    #assert all((patch[0].get(k) == v for k, v in expected.items()))
+    #jp =jsonpatch.JsonPatch(patch)
+    #new_obj = jp.apply(obj)
+    #expected = {'Test': {'test_one': {'field_uno': 1.0, 'field_two': 2.0}}}
+    #assert all((new_obj['Test']['test_one'].get(k) == v for k, v in expected['Test']['test_one'].items()))
+    #assert change.describe() == 'Change the field named "field_one" to "field_uno".'

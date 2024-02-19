@@ -7,8 +7,8 @@ import glob
 import os
 import itertools
 import json
+import jsonschema
 import importlib
-import validate
 import sys
 
 pwd=os.getcwd()
@@ -19,6 +19,22 @@ sys.path.append(folder)
 versions = ['9.4','23.1'] #
 files = {version: glob.glob(os.path.join('..\\test_files', version, '*.epJSON')) for version in versions}
 parameters = list(itertools.chain(*[[(version, file) for file in files[version]] for version in versions]))
+
+
+
+def validate_json(json_data, schema_filepath):
+    
+    with open(schema_filepath) as schema_file:
+        schema_data=json.load(schema_file) 
+    try:
+        jsonschema.validate(instance=json_data, schema=schema_data)
+        #print("JSON is valid against the schema.")
+        return True
+    except:
+        #print("JSON is not valid against the schema:")
+        return False
+
+
 
 @pytest.mark.parametrize("version, filename", parameters)
 def test_does_it_run(version, filename):
@@ -34,16 +50,18 @@ def test_does_it_run(version, filename):
     new_epjson = jp.apply(epjson)
    
     schema="..//schema//"+version_string+"//Energy+.schema.epJSON"
-    assert validate.validate_json(epjson,schema)
+    assert validate_json(epjson,schema)
     
     
     #assert len(new_epjson) > 0
     new_version=upgrade.to_version()
     new_schema="..//schema//"+new_version+"//Energy+.schema.epJSON"
-    assert validate.validate_json(new_epjson,new_schema)
-    
-for element in parameters:
-    test_does_it_run(element[0],element[1])
+    assert validate_json(new_epjson,new_schema)
+
+
+if __name__ == "__main__":    
+    for element in parameters:
+        test_does_it_run(element[0],element[1])
 
 
 

@@ -72,7 +72,16 @@ def downgrade(epjson, output, to=None):
                 json.dump(new_epjson, fp, indent=4)
                 fp.close()
 
-@click.group(context_settings={'help_option_names': ['-h', '--help']}, invoke_without_command=True)
+@click.command()
+@click.argument('version') #, help='version to describe')
+#@click.option('-o', '--output', show_default=True, default='downgrade.epJSON', help='File name to write.')
+#@click.option('-t', '--to', help='Version to downgrade to, defaults to one version back.')
+def describe(version):
+    # Need to do a proper lookup and do a plugin thing here
+    upgrade = Upgrade()
+    print(upgrade.describe())
+
+@click.group(context_settings={'help_option_names': ['-h', '--help']}, invoke_without_command=False)
 @click.version_option(version=__version__, prog_name='energyplus_version')
 @click.pass_context
 def energyplus_version(ctx: click.Context):
@@ -80,3 +89,4 @@ def energyplus_version(ctx: click.Context):
 
 energyplus_version.add_command(upgrade)
 energyplus_version.add_command(downgrade)
+energyplus_version.add_command(describe)

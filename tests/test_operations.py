@@ -4,6 +4,10 @@
 import energyplus_version
 import jsonpatch
 
+def diff_as_string(left, right):
+    diffpatch = jsonpatch.JsonPatch.from_diff(left, right)
+    return diffpatch.to_string()
+
 def test_change_field_name():
     obj = {'Test': {'test_one': {'field_one': 1.0, 'field_two': 2.0}}}
     change = energyplus_version.ChangeFieldName('Test', 'field_one', 'field_uno')
@@ -103,19 +107,20 @@ def test_change_object_name():
 
 def double_the_new_field(object, objects):
     if 'field_one' in object:
-        return str(object['field_one'])
+        return str(2*object['field_one'])
     return None
 
 def test_new_double_field():
     objs = {'Test': {'test_one': {'field_one': 1.0, 'field_two': 2.0},
                      'test_two': {'field_two': 2.0}}}
-    change = energyplus_version.ChangeFieldName('Test', 'field_one', 'field_uno')
-    patch = change.apply_to_all(objs['Test'])
+    change = energyplus_version.NewComputedField('Test', 'field_three', compute=double_the_new_field)
+    patch = change.generate_patch(objs)
     assert len(patch) == 1
-    #expected = {'op': 'move', 'from': '/Test/test_one/field_one', 'path': '/Test/test_one/field_uno'}
-    #assert all((patch[0].get(k) == v for k, v in expected.items()))
-    #jp =jsonpatch.JsonPatch(patch)
-    #new_obj = jp.apply(obj)
-    #expected = {'Test': {'test_one': {'field_uno': 1.0, 'field_two': 2.0}}}
-    #assert all((new_obj['Test']['test_one'].get(k) == v for k, v in expected['Test']['test_one'].items()))
-    #assert change.describe() == 'Change the field named "field_one" to "field_uno".'
+    expected = {'op': 'add', 'path': '/Test/test_one/field_three', 'value': '2.0'}
+    assert diff_as_string(patch, expected)
+    jp =jsonpatch.JsonPatch(patch)
+    new_objs = jp.apply(objs)
+    expected = {'Test': {'test_one': {'field_one': 1.0, 'field_two': 2.0, 'field_three': 2.0},
+                         'test_two': {'field_two': 2.0}}}
+    assert diff_as_string(new_objs, expected)
+    assert change.describe() == 'Add the field named "field_three" with a computed value.'

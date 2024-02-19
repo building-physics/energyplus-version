@@ -50,10 +50,10 @@ class NewComputedField(Change):
         self.object = object
         self.name = name
         self.compute = compute
-    def apply_to_all(self, objects: dict) -> list:
+    def generate_patch(self, objects: dict) -> list:
         patch = []
-        if self.objects in objects:
-            for name, object in objects.items():
+        if self.object in objects:
+            for name, object in objects[self.object].items():
                 value = self.compute(object, objects)
                 if value is not None:
                     patch.extend(self._apply(name, value))
@@ -64,7 +64,7 @@ class NewComputedField(Change):
     def valid(self, object) -> bool:
         return self.old_name in object
     def describe(self) -> str:
-        return 'Add the field named "%s" to "%s".' % (self.name, self.object)
+        return 'Add the field named "%s" with a computed value.' % self.name
     
 class RemoveField(Change):
     def __init__(self, object: str, field: str, check_value=None):

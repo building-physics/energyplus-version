@@ -11,6 +11,7 @@ license = "BSD-3-Clause"
 keywords = []
 authors = [
   { name = "Jason W. DeGraw", email = "jason.degraw@gmail.com" },
+  { name = "Niraj Kunwar" }
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -25,7 +26,8 @@ classifiers = [
 ]
 dependencies = [
   "click",
-  "jsonpatch"
+  "jsonpatch",
+  "jsonschema"
 ]
 dynamic = ["version"]
 

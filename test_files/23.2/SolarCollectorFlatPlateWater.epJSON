@@ -1,0 +1,1661 @@
+{
+    "AvailabilityManager:DifferentialThermostat": {
+        "Differential Thermostat Availability Manager": {
+            "cold_node_name": "Storage Tank Source Outlet Node",
+            "hot_node_name": "Collector 1 Outlet Node",
+            "temperature_difference_off_limit": 2.0,
+            "temperature_difference_on_limit": 10.0
+        }
+    },
+    "AvailabilityManager:HighTemperatureTurnOff": {
+        "High Temperature Turn Off Availability Manager": {
+            "sensor_node_name": "Storage Tank Use Outlet Node",
+            "temperature": 60.0
+        }
+    },
+    "AvailabilityManager:LowTemperatureTurnOn": {
+        "Low Temperature Turn On Availability Manager": {
+            "sensor_node_name": "Collector 1 Outlet Node",
+            "temperature": 0.0
+        }
+    },
+    "AvailabilityManagerAssignmentList": {
+        "Collector Loop Availability Manager List": {
+            "managers": [
+                {
+                    "availability_manager_name": "High Temperature Turn Off Availability Manager",
+                    "availability_manager_object_type": "AvailabilityManager:HighTemperatureTurnOff"
+                },
+                {
+                    "availability_manager_name": "Low Temperature Turn On Availability Manager",
+                    "availability_manager_object_type": "AvailabilityManager:LowTemperatureTurnOn"
+                },
+                {
+                    "availability_manager_name": "Differential Thermostat Availability Manager",
+                    "availability_manager_object_type": "AvailabilityManager:DifferentialThermostat"
+                }
+            ]
+        }
+    },
+    "Branch": {
+        "Collector 1 Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Collector 1 Inlet Node",
+                    "component_name": "Collector 1",
+                    "component_object_type": "SolarCollector:FlatPlate:Water",
+                    "component_outlet_node_name": "Collector 1 Outlet Node"
+                }
+            ]
+        },
+        "Collector 2 Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Collector 2 Inlet Node",
+                    "component_name": "Collector 2",
+                    "component_object_type": "SolarCollector:FlatPlate:Water",
+                    "component_outlet_node_name": "Collector 2 Outlet Node"
+                }
+            ]
+        },
+        "Collector 3 Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Collector 3 Inlet Node",
+                    "component_name": "Collector 3",
+                    "component_object_type": "SolarCollector:FlatPlate:Water",
+                    "component_outlet_node_name": "Collector 3 Outlet Node"
+                }
+            ]
+        },
+        "Collector 4 Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Collector 4 Inlet Node",
+                    "component_name": "Collector 4",
+                    "component_object_type": "SolarCollector:FlatPlate:Water",
+                    "component_outlet_node_name": "Collector 4 Outlet Node"
+                }
+            ]
+        },
+        "Collector 5 Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Collector 5 Inlet Node",
+                    "component_name": "Collector 5",
+                    "component_object_type": "SolarCollector:FlatPlate:Water",
+                    "component_outlet_node_name": "Collector 5 Outlet Node"
+                }
+            ]
+        },
+        "Collector 6 Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Collector 6 Inlet Node",
+                    "component_name": "Collector 6",
+                    "component_object_type": "SolarCollector:FlatPlate:Water",
+                    "component_outlet_node_name": "Collector 6 Outlet Node"
+                }
+            ]
+        },
+        "Collector Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Collector Loop Inlet Node",
+                    "component_name": "Collector Inlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Collector Pipe-Collector Node"
+                }
+            ]
+        },
+        "Collector Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Collector Collector-Pipe Node",
+                    "component_name": "Collector Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Collector Loop Outlet Node"
+                }
+            ]
+        },
+        "Demand Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Demand Inlet Node",
+                    "component_name": "Demand Inlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Demand Pipe-DHW Node"
+                }
+            ]
+        },
+        "Demand Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Demand DHW-Pipe Node",
+                    "component_name": "Demand Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Demand Outlet Node"
+                }
+            ]
+        },
+        "Domestic Hot Water Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Domestic Hot Water Inlet Node",
+                    "component_name": "Domestic Hot Water",
+                    "component_object_type": "WaterUse:Connections",
+                    "component_outlet_node_name": "Domestic Hot Water Outlet Node"
+                }
+            ]
+        },
+        "Storage Tank Source Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Storage Tank Source Inlet Node",
+                    "component_name": "Storage Tank",
+                    "component_object_type": "WaterHeater:Mixed",
+                    "component_outlet_node_name": "Storage Tank Source Outlet Node"
+                }
+            ]
+        },
+        "Storage Tank Source Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Storage Tank Source Loop Inlet Node",
+                    "component_name": "Collector Loop Pump",
+                    "component_object_type": "Pump:VariableSpeed",
+                    "component_outlet_node_name": "Storage Tank Source Pump-Water Heater Node"
+                }
+            ]
+        },
+        "Storage Tank Source Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Storage Tank Source Water Heater-Pipe Node",
+                    "component_name": "Storage Tank Source Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Storage Tank Source Loop Outlet Node"
+                }
+            ]
+        },
+        "Storage Tank Tempering Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "DHW Anti-Scald Inlet Node",
+                    "component_name": "DHW Anti-Scald Diverter",
+                    "component_object_type": "TemperingValve",
+                    "component_outlet_node_name": "DHW Anti-Scald Outlet Node"
+                }
+            ]
+        },
+        "Storage Tank Use Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Storage Tank Use Inlet Node",
+                    "component_name": "Storage Tank",
+                    "component_object_type": "WaterHeater:Mixed",
+                    "component_outlet_node_name": "Storage Tank Use Outlet Node"
+                }
+            ]
+        },
+        "Storage Tank Use Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Storage Tank Use Loop Inlet Node",
+                    "component_name": "DHW Loop Pump",
+                    "component_object_type": "Pump:VariableSpeed",
+                    "component_outlet_node_name": "DHW Use Side Pump Outlet"
+                }
+            ]
+        },
+        "Storage Tank Use Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Instantaneous Water Heater Inlet Node",
+                    "component_name": "Instantaneous Water Heater",
+                    "component_object_type": "WaterHeater:Mixed",
+                    "component_outlet_node_name": "Instantaneous Water Heater Outlet Node"
+                }
+            ]
+        }
+    },
+    "BranchList": {
+        "Collector Branches": {
+            "branches": [
+                {
+                    "branch_name": "Collector Inlet Branch"
+                },
+                {
+                    "branch_name": "Collector 1 Branch"
+                },
+                {
+                    "branch_name": "Collector 2 Branch"
+                },
+                {
+                    "branch_name": "Collector 3 Branch"
+                },
+                {
+                    "branch_name": "Collector 4 Branch"
+                },
+                {
+                    "branch_name": "Collector 5 Branch"
+                },
+                {
+                    "branch_name": "Collector 6 Branch"
+                },
+                {
+                    "branch_name": "Collector Outlet Branch"
+                }
+            ]
+        },
+        "Demand Branches": {
+            "branches": [
+                {
+                    "branch_name": "Demand Inlet Branch"
+                },
+                {
+                    "branch_name": "Domestic Hot Water Branch"
+                },
+                {
+                    "branch_name": "Demand Outlet Branch"
+                }
+            ]
+        },
+        "Storage Tank Source Branches": {
+            "branches": [
+                {
+                    "branch_name": "Storage Tank Source Inlet Branch"
+                },
+                {
+                    "branch_name": "Storage Tank Source Branch"
+                },
+                {
+                    "branch_name": "Storage Tank Source Outlet Branch"
+                }
+            ]
+        },
+        "Storage Tank Use Branches": {
+            "branches": [
+                {
+                    "branch_name": "Storage Tank Use Inlet Branch"
+                },
+                {
+                    "branch_name": "Storage Tank Use Branch"
+                },
+                {
+                    "branch_name": "Storage Tank Tempering Branch"
+                },
+                {
+                    "branch_name": "Storage Tank Use Outlet Branch"
+                }
+            ]
+        }
+    },
+    "Building": {
+        "Solar Collector Flat Plate Water Example": {
+            "loads_convergence_tolerance_value": 0.04,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.04,
+            "terrain": "Suburbs"
+        }
+    },
+    "Connector:Mixer": {
+        "Collector Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "Collector 1 Branch"
+                },
+                {
+                    "inlet_branch_name": "Collector 2 Branch"
+                },
+                {
+                    "inlet_branch_name": "Collector 3 Branch"
+                },
+                {
+                    "inlet_branch_name": "Collector 4 Branch"
+                },
+                {
+                    "inlet_branch_name": "Collector 5 Branch"
+                },
+                {
+                    "inlet_branch_name": "Collector 6 Branch"
+                }
+            ],
+            "outlet_branch_name": "Collector Outlet Branch"
+        },
+        "Demand Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "Domestic Hot Water Branch"
+                }
+            ],
+            "outlet_branch_name": "Demand Outlet Branch"
+        },
+        "Storage Tank Source Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "Storage Tank Source Branch"
+                }
+            ],
+            "outlet_branch_name": "Storage Tank Source Outlet Branch"
+        },
+        "Storage Tank Use Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "Storage Tank Use Branch"
+                },
+                {
+                    "inlet_branch_name": "Storage Tank Tempering Branch"
+                }
+            ],
+            "outlet_branch_name": "Storage Tank Use Outlet Branch"
+        }
+    },
+    "Connector:Splitter": {
+        "Collector Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "Collector 1 Branch"
+                },
+                {
+                    "outlet_branch_name": "Collector 2 Branch"
+                },
+                {
+                    "outlet_branch_name": "Collector 3 Branch"
+                },
+                {
+                    "outlet_branch_name": "Collector 4 Branch"
+                },
+                {
+                    "outlet_branch_name": "Collector 5 Branch"
+                },
+                {
+                    "outlet_branch_name": "Collector 6 Branch"
+                }
+            ],
+            "inlet_branch_name": "Collector Inlet Branch"
+        },
+        "Demand Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "Domestic Hot Water Branch"
+                }
+            ],
+            "inlet_branch_name": "Demand Inlet Branch"
+        },
+        "Storage Tank Source Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "Storage Tank Source Branch"
+                }
+            ],
+            "inlet_branch_name": "Storage Tank Source Inlet Branch"
+        },
+        "Storage Tank Use Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "Storage Tank Use Branch"
+                },
+                {
+                    "outlet_branch_name": "Storage Tank Tempering Branch"
+                }
+            ],
+            "inlet_branch_name": "Storage Tank Use Inlet Branch"
+        }
+    },
+    "ConnectorList": {
+        "Collector Connectors": {
+            "connector_1_name": "Collector Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "Collector Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        },
+        "Demand Connectors": {
+            "connector_1_name": "Demand Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "Demand Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        },
+        "Storage Tank Source Connectors": {
+            "connector_1_name": "Storage Tank Source Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "Storage Tank Source Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        },
+        "Storage Tank Use Connectors": {
+            "connector_1_name": "Storage Tank Use Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "Storage Tank Use Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        }
+    },
+    "ConvergenceLimits": {
+        "ConvergenceLimits 1": {
+            "maximum_hvac_iterations": 20,
+            "maximum_plant_iterations": 10,
+            "minimum_plant_iterations": 4,
+            "minimum_system_timestep": 1
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "NodeList": {
+        "Collector Loop Setpoint Node List": {
+            "nodes": [
+                {
+                    "node_name": "Storage Tank Source Loop Outlet Node"
+                }
+            ]
+        },
+        "DHW Loop Setpoint Node List": {
+            "nodes": [
+                {
+                    "node_name": "Instantaneous Water Heater Outlet Node"
+                },
+                {
+                    "node_name": "Instantaneous Water Heater Inlet Node"
+                }
+            ]
+        }
+    },
+    "Output:Meter": {
+        "Output:Meter 1": {
+            "key_name": "WaterSystems:Electricity",
+            "reporting_frequency": "Detailed"
+        },
+        "Output:Meter 2": {
+            "key_name": "WaterSystems:Water",
+            "reporting_frequency": "Detailed"
+        }
+    },
+    "Output:Surfaces:Drawing": {
+        "Output:Surfaces:Drawing 1": {
+            "report_type": "DXF"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Plant Supply Side Inlet Mass Flow Rate"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Plant Supply Side Inlet Temperature"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Plant Supply Side Outlet Temperature"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Pump Mass Flow Rate"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "System Node Mass Flow Rate"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Tank Temperature"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Heat Loss Rate"
+        },
+        "Output:Variable 10": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Heat Loss Energy"
+        },
+        "Output:Variable 11": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Use Side Mass Flow Rate"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Use Side Inlet Temperature"
+        },
+        "Output:Variable 13": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Use Side Outlet Temperature"
+        },
+        "Output:Variable 14": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Use Side Heat Transfer Rate"
+        },
+        "Output:Variable 15": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Use Side Heat Transfer Energy"
+        },
+        "Output:Variable 16": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Source Side Mass Flow Rate"
+        },
+        "Output:Variable 17": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Source Side Inlet Temperature"
+        },
+        "Output:Variable 18": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Source Side Outlet Temperature"
+        },
+        "Output:Variable 19": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Source Side Heat Transfer Rate"
+        },
+        "Output:Variable 20": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Source Side Heat Transfer Energy"
+        },
+        "Output:Variable 21": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Total Demand Heat Transfer Rate"
+        },
+        "Output:Variable 22": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Total Demand Heat Transfer Energy"
+        },
+        "Output:Variable 23": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Heating Rate"
+        },
+        "Output:Variable 24": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Heating Energy"
+        },
+        "Output:Variable 25": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Unmet Demand Heat Transfer Rate"
+        },
+        "Output:Variable 26": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Unmet Demand Heat Transfer Energy"
+        },
+        "Output:Variable 27": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Venting Heat Transfer Rate"
+        },
+        "Output:Variable 28": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Venting Heat Transfer Energy"
+        },
+        "Output:Variable 29": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Net Heat Transfer Rate"
+        },
+        "Output:Variable 30": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Net Heat Transfer Energy"
+        },
+        "Output:Variable 31": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Cycle On Count"
+        },
+        "Output:Variable 32": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Runtime Fraction"
+        },
+        "Output:Variable 33": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Part Load Ratio"
+        },
+        "Output:Variable 34": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Electricity Rate"
+        },
+        "Output:Variable 35": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Electricity Energy"
+        },
+        "Output:Variable 36": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Water Volume Flow Rate"
+        },
+        "Output:Variable 37": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Heater Water Volume"
+        },
+        "Output:Variable 38": {
+            "key_value": "Instantaneous Water Heater Outlet Node",
+            "reporting_frequency": "Detailed",
+            "variable_name": "System Node Setpoint Temperature"
+        },
+        "Output:Variable 39": {
+            "key_value": "Instantaneous Water Heater Outlet Node",
+            "reporting_frequency": "Detailed",
+            "variable_name": "System Node Setpoint High Temperature"
+        },
+        "Output:Variable 40": {
+            "key_value": "Instantaneous Water Heater Outlet Node",
+            "reporting_frequency": "Detailed",
+            "variable_name": "System Node Setpoint Low Temperature"
+        },
+        "Output:Variable 41": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Tempering Valve Flow Fraction"
+        },
+        "Output:Variable 42": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Use Equipment Hot Water Mass Flow Rate"
+        },
+        "Output:Variable 43": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Use Equipment Cold Water Mass Flow Rate"
+        },
+        "Output:Variable 44": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Use Equipment Total Mass Flow Rate"
+        },
+        "Output:Variable 45": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Use Connections Hot Water Mass Flow Rate"
+        },
+        "Output:Variable 46": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Use Connections Cold Water Mass Flow Rate"
+        },
+        "Output:Variable 47": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Water Use Connections Total Mass Flow Rate"
+        },
+        "Output:Variable 48": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Surface Outside Face Incident Solar Radiation Rate per Area"
+        },
+        "Output:Variable 49": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Solar Collector Incident Angle Modifier"
+        },
+        "Output:Variable 50": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Solar Collector Efficiency"
+        },
+        "Output:Variable 51": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Solar Collector Heat Transfer Rate"
+        },
+        "Output:Variable 52": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Solar Collector Heat Gain Rate"
+        },
+        "Output:Variable 53": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Solar Collector Heat Loss Rate"
+        },
+        "Output:Variable 54": {
+            "key_value": "*",
+            "reporting_frequency": "Detailed",
+            "variable_name": "Solar Collector Heat Transfer Energy"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "Pipe:Adiabatic": {
+        "Collector Inlet Pipe": {
+            "inlet_node_name": "Collector Loop Inlet Node",
+            "outlet_node_name": "Collector Pipe-Collector Node"
+        },
+        "Collector Outlet Pipe": {
+            "inlet_node_name": "Collector Collector-Pipe Node",
+            "outlet_node_name": "Collector Loop Outlet Node"
+        },
+        "Demand Inlet Pipe": {
+            "inlet_node_name": "Demand Inlet Node",
+            "outlet_node_name": "Demand Pipe-DHW Node"
+        },
+        "Demand Outlet Pipe": {
+            "inlet_node_name": "Demand DHW-Pipe Node",
+            "outlet_node_name": "Demand Outlet Node"
+        },
+        "Storage Tank Source Outlet Pipe": {
+            "inlet_node_name": "Storage Tank Source Water Heater-Pipe Node",
+            "outlet_node_name": "Storage Tank Source Loop Outlet Node"
+        }
+    },
+    "PlantEquipmentList": {
+        "Collector Plant Equipment": {
+            "equipment": [
+                {
+                    "equipment_name": "Storage Tank",
+                    "equipment_object_type": "WaterHeater:Mixed"
+                }
+            ]
+        },
+        "DHW Plant Equipment": {
+            "equipment": [
+                {
+                    "equipment_name": "DHW Anti-Scald Diverter",
+                    "equipment_object_type": "TemperingValve"
+                },
+                {
+                    "equipment_name": "Storage Tank",
+                    "equipment_object_type": "WaterHeater:Mixed"
+                },
+                {
+                    "equipment_name": "Instantaneous Water Heater",
+                    "equipment_object_type": "WaterHeater:Mixed"
+                }
+            ]
+        }
+    },
+    "PlantEquipmentOperation:HeatingLoad": {
+        "Collector Control Scheme": {
+            "load_range_1_lower_limit": 0,
+            "load_range_1_upper_limit": 10000000,
+            "range_1_equipment_list_name": "Collector Plant Equipment"
+        },
+        "DHW Control Scheme": {
+            "load_range_1_lower_limit": 0,
+            "load_range_1_upper_limit": 10000000,
+            "range_1_equipment_list_name": "DHW Plant Equipment"
+        }
+    },
+    "PlantEquipmentOperationSchemes": {
+        "Collector Loop Operation": {
+            "control_scheme_1_name": "Collector Control Scheme",
+            "control_scheme_1_object_type": "PlantEquipmentOperation:HeatingLoad",
+            "control_scheme_1_schedule_name": "AlwaysOnSchedule"
+        },
+        "DHW Loop Operation": {
+            "control_scheme_1_name": "DHW Control Scheme",
+            "control_scheme_1_object_type": "PlantEquipmentOperation:HeatingLoad",
+            "control_scheme_1_schedule_name": "AlwaysOnSchedule"
+        }
+    },
+    "PlantLoop": {
+        "Collector Loop": {
+            "availability_manager_list_name": "Collector Loop Availability Manager List",
+            "demand_side_branch_list_name": "Collector Branches",
+            "demand_side_connector_list_name": "Collector Connectors",
+            "demand_side_inlet_node_name": "Collector Loop Inlet Node",
+            "demand_side_outlet_node_name": "Collector Loop Outlet Node",
+            "fluid_type": "Water",
+            "load_distribution_scheme": "Optimal",
+            "loop_temperature_setpoint_node_name": "Storage Tank Source Loop Outlet Node",
+            "maximum_loop_flow_rate": "Autosize",
+            "maximum_loop_temperature": 100,
+            "minimum_loop_flow_rate": 0.0,
+            "minimum_loop_temperature": 3,
+            "plant_equipment_operation_scheme_name": "Collector Loop Operation",
+            "plant_loop_volume": "Autocalculate",
+            "plant_side_branch_list_name": "Storage Tank Source Branches",
+            "plant_side_connector_list_name": "Storage Tank Source Connectors",
+            "plant_side_inlet_node_name": "Storage Tank Source Loop Inlet Node",
+            "plant_side_outlet_node_name": "Storage Tank Source Loop Outlet Node"
+        },
+        "DHW Loop": {
+            "demand_side_branch_list_name": "Demand Branches",
+            "demand_side_connector_list_name": "Demand Connectors",
+            "demand_side_inlet_node_name": "Demand Inlet Node",
+            "demand_side_outlet_node_name": "Demand Outlet Node",
+            "fluid_type": "Water",
+            "load_distribution_scheme": "Optimal",
+            "loop_temperature_setpoint_node_name": "Instantaneous Water Heater Outlet Node",
+            "maximum_loop_flow_rate": "Autosize",
+            "maximum_loop_temperature": 100,
+            "minimum_loop_flow_rate": 0,
+            "minimum_loop_temperature": 3,
+            "plant_equipment_operation_scheme_name": "DHW Loop Operation",
+            "plant_loop_volume": "Autocalculate",
+            "plant_side_branch_list_name": "Storage Tank Use Branches",
+            "plant_side_connector_list_name": "Storage Tank Use Connectors",
+            "plant_side_inlet_node_name": "Storage Tank Use Loop Inlet Node",
+            "plant_side_outlet_node_name": "Instantaneous Water Heater Outlet Node"
+        }
+    },
+    "Pump:VariableSpeed": {
+        "Collector Loop Pump": {
+            "coefficient_1_of_the_part_load_performance_curve": 0,
+            "coefficient_2_of_the_part_load_performance_curve": 1,
+            "coefficient_3_of_the_part_load_performance_curve": 0,
+            "coefficient_4_of_the_part_load_performance_curve": 0,
+            "design_maximum_flow_rate": "Autosize",
+            "design_minimum_flow_rate": 0.0,
+            "design_power_consumption": "Autosize",
+            "design_pump_head": 300000,
+            "fraction_of_motor_inefficiencies_to_fluid_stream": 0.0,
+            "inlet_node_name": "Storage Tank Source Loop Inlet Node",
+            "motor_efficiency": 0.87,
+            "outlet_node_name": "Storage Tank Source Pump-Water Heater Node",
+            "pump_control_type": "Intermittent"
+        },
+        "DHW Loop Pump": {
+            "coefficient_1_of_the_part_load_performance_curve": 0,
+            "coefficient_2_of_the_part_load_performance_curve": 1,
+            "coefficient_3_of_the_part_load_performance_curve": 0,
+            "coefficient_4_of_the_part_load_performance_curve": 0,
+            "design_maximum_flow_rate": "Autosize",
+            "design_minimum_flow_rate": 0,
+            "design_power_consumption": "Autosize",
+            "design_pump_head": 300000,
+            "fraction_of_motor_inefficiencies_to_fluid_stream": 0.0,
+            "inlet_node_name": "Storage Tank Use Loop Inlet Node",
+            "motor_efficiency": 0.87,
+            "outlet_node_name": "DHW Use Side Pump Outlet",
+            "pump_control_type": "Intermittent"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 7,
+            "end_month": 1,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        },
+        "Run Period 2": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 7,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 7,
+            "end_month": 7,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "AlwaysOnSchedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "Ambient Temp Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 22.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Clotheswasher": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Weekends SummerDesignDay WinterDesignDay"
+                },
+                {
+                    "field": "Until: 10:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 11:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "For: AllOtherDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "Dishwasher": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 20:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 20:30"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "Hot Water Setpoint Temp Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 50.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Loop Temperature Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 60.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Showers": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 7:30"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.8
+                },
+                {
+                    "field": "Until: 8:30"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until: 19:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 19:30"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "Sinks": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "Until: 9:00"
+                },
+                {
+                    "field": 0.7
+                },
+                {
+                    "field": "Until: 11:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 12:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "Until: 13:00"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "Until: 17:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 19:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 20:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "Sinks and Showers Temp Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 43.3
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Washers Temp Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 50.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "Fraction": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1.0
+        }
+    },
+    "SetpointManager:Scheduled": {
+        "Collector Loop Setpoint Manager": {
+            "control_variable": "Temperature",
+            "schedule_name": "Loop Temperature Schedule",
+            "setpoint_node_or_nodelist_name": "Collector Loop Setpoint Node List"
+        },
+        "DHW Loop Setpoint Manager": {
+            "control_variable": "Temperature",
+            "schedule_name": "Hot Water Setpoint Temp Schedule",
+            "setpoint_node_or_nodelist_name": "DHW Loop Setpoint Node List"
+        }
+    },
+    "Shading:Site:Detailed": {
+        "Collector Surface 1": {
+            "number_of_vertices": 4,
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 1.718,
+                    "vertex_z_coordinate": 1.718
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 1.22,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 1.22,
+                    "vertex_y_coordinate": 1.718,
+                    "vertex_z_coordinate": 1.718
+                }
+            ]
+        },
+        "Collector Surface 2": {
+            "number_of_vertices": 4,
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 1.3,
+                    "vertex_y_coordinate": 1.718,
+                    "vertex_z_coordinate": 1.718
+                },
+                {
+                    "vertex_x_coordinate": 1.3,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 2.52,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 2.52,
+                    "vertex_y_coordinate": 1.718,
+                    "vertex_z_coordinate": 1.718
+                }
+            ]
+        },
+        "Collector Surface 3": {
+            "number_of_vertices": 4,
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 2.6,
+                    "vertex_y_coordinate": 1.718,
+                    "vertex_z_coordinate": 1.718
+                },
+                {
+                    "vertex_x_coordinate": 2.6,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 3.82,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 3.82,
+                    "vertex_y_coordinate": 1.718,
+                    "vertex_z_coordinate": 1.718
+                }
+            ]
+        },
+        "Collector Surface 4": {
+            "number_of_vertices": 4,
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 3.9,
+                    "vertex_y_coordinate": 1.718,
+                    "vertex_z_coordinate": 1.718
+                },
+                {
+                    "vertex_x_coordinate": 3.9,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 5.12,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 5.12,
+                    "vertex_y_coordinate": 1.718,
+                    "vertex_z_coordinate": 1.718
+                }
+            ]
+        },
+        "Collector Surface 5": {
+            "number_of_vertices": 4,
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 5.2,
+                    "vertex_y_coordinate": 1.718,
+                    "vertex_z_coordinate": 1.718
+                },
+                {
+                    "vertex_x_coordinate": 5.2,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.42,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 6.42,
+                    "vertex_y_coordinate": 1.718,
+                    "vertex_z_coordinate": 1.718
+                }
+            ]
+        },
+        "Collector Surface 6": {
+            "number_of_vertices": 4,
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 6.5,
+                    "vertex_y_coordinate": 1.718,
+                    "vertex_z_coordinate": 1.718
+                },
+                {
+                    "vertex_x_coordinate": 6.5,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 7.72,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 7.72,
+                    "vertex_y_coordinate": 1.718,
+                    "vertex_z_coordinate": 1.718
+                }
+            ]
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "Yes",
+            "run_simulation_for_weather_file_run_periods": "No"
+        }
+    },
+    "Site:Location": {
+        "CHICAGO_IL_USA_WMO_725300": {
+            "elevation": 190.0,
+            "latitude": 42.0,
+            "longitude": -87.88,
+            "time_zone": -6.0
+        }
+    },
+    "Site:WaterMainsTemperature": {
+        "Site:WaterMainsTemperature 1": {
+            "annual_average_outdoor_air_temperature": 9.69,
+            "calculation_method": "Correlation",
+            "maximum_difference_in_monthly_average_outdoor_air_temperatures": 28.1
+        }
+    },
+    "Sizing:Plant": {
+        "Sizing:Plant 1": {
+            "design_loop_exit_temperature": 82.0,
+            "loop_design_temperature_difference": 11,
+            "loop_type": "Heating",
+            "plant_or_condenser_loop_name": "DHW Loop"
+        },
+        "Sizing:Plant 2": {
+            "design_loop_exit_temperature": 82.0,
+            "loop_design_temperature_difference": 11,
+            "loop_type": "Heating",
+            "plant_or_condenser_loop_name": "Collector Loop"
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "CHICAGO Ann Clg 1% Condns DB=>MWB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 10.7,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 31.5,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23,
+            "wind_direction": 230,
+            "wind_speed": 5.3
+        },
+        "CHICAGO Ann Htg 99% Condns DB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -17.3,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -17.3,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        }
+    },
+    "SolarCollector:FlatPlate:Water": {
+        "Collector 1": {
+            "inlet_node_name": "Collector 1 Inlet Node",
+            "maximum_flow_rate": 1e-05,
+            "outlet_node_name": "Collector 1 Outlet Node",
+            "solarcollectorperformance_name": "Alternate Energy Technologies AE-32",
+            "surface_name": "Collector Surface 1"
+        },
+        "Collector 2": {
+            "inlet_node_name": "Collector 2 Inlet Node",
+            "maximum_flow_rate": 1e-05,
+            "outlet_node_name": "Collector 2 Outlet Node",
+            "solarcollectorperformance_name": "Alternate Energy Technologies AE-32",
+            "surface_name": "Collector Surface 2"
+        },
+        "Collector 3": {
+            "inlet_node_name": "Collector 3 Inlet Node",
+            "maximum_flow_rate": 1e-05,
+            "outlet_node_name": "Collector 3 Outlet Node",
+            "solarcollectorperformance_name": "Alternate Energy Technologies AE-32",
+            "surface_name": "Collector Surface 3"
+        },
+        "Collector 4": {
+            "inlet_node_name": "Collector 4 Inlet Node",
+            "maximum_flow_rate": 1e-05,
+            "outlet_node_name": "Collector 4 Outlet Node",
+            "solarcollectorperformance_name": "Alternate Energy Technologies AE-32",
+            "surface_name": "Collector Surface 4"
+        },
+        "Collector 5": {
+            "inlet_node_name": "Collector 5 Inlet Node",
+            "maximum_flow_rate": 1e-05,
+            "outlet_node_name": "Collector 5 Outlet Node",
+            "solarcollectorperformance_name": "Alternate Energy Technologies AE-32",
+            "surface_name": "Collector Surface 5"
+        },
+        "Collector 6": {
+            "inlet_node_name": "Collector 6 Inlet Node",
+            "maximum_flow_rate": 1e-05,
+            "outlet_node_name": "Collector 6 Outlet Node",
+            "solarcollectorperformance_name": "Alternate Energy Technologies AE-32",
+            "surface_name": "Collector Surface 6"
+        }
+    },
+    "SolarCollectorPerformance:FlatPlate": {
+        "Alternate Energy Technologies AE-32": {
+            "coefficient_1_of_efficiency_equation": 0.691,
+            "coefficient_2_of_efficiency_equation": -3.396,
+            "coefficient_2_of_incident_angle_modifier": -0.1939,
+            "coefficient_3_of_efficiency_equation": -0.00193,
+            "coefficient_3_of_incident_angle_modifier": -0.0055,
+            "gross_area": 2.9646,
+            "test_correlation_type": "Inlet",
+            "test_flow_rate": 3.88e-05,
+            "test_fluid": "Water"
+        }
+    },
+    "TemperingValve": {
+        "DHW Anti-Scald Diverter": {
+            "inlet_node_name": "DHW Anti-Scald Inlet Node",
+            "outlet_node_name": "DHW Anti-Scald Outlet Node",
+            "pump_outlet_node_name": "DHW Use Side Pump Outlet",
+            "stream_2_source_node_name": "Storage Tank Use Outlet Node",
+            "temperature_setpoint_node_name": "Instantaneous Water Heater Outlet Node"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 4
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "23.2"
+        }
+    },
+    "WaterHeater:Mixed": {
+        "Instantaneous Water Heater": {
+            "ambient_temperature_indicator": "Schedule",
+            "ambient_temperature_schedule_name": "Ambient Temp Schedule",
+            "heater_control_type": "Modulate",
+            "heater_fuel_type": "Electricity",
+            "heater_maximum_capacity": 80000,
+            "heater_thermal_efficiency": 0.9,
+            "maximum_temperature_limit": 82.2222,
+            "off_cycle_loss_coefficient_to_ambient_temperature": 1.0,
+            "off_cycle_loss_fraction_to_zone": 1,
+            "on_cycle_loss_coefficient_to_ambient_temperature": 1.0,
+            "on_cycle_loss_fraction_to_zone": 1,
+            "setpoint_temperature_schedule_name": "Hot Water Setpoint Temp Schedule",
+            "tank_volume": 0.00568,
+            "use_side_design_flow_rate": "Autosize",
+            "use_side_effectiveness": 1.0,
+            "use_side_inlet_node_name": "Instantaneous Water Heater Inlet Node",
+            "use_side_outlet_node_name": "Instantaneous Water Heater Outlet Node"
+        },
+        "Storage Tank": {
+            "ambient_temperature_indicator": "Schedule",
+            "ambient_temperature_schedule_name": "Ambient Temp Schedule",
+            "deadband_temperature_difference": 5.0,
+            "heater_control_type": "Cycle",
+            "heater_fuel_type": "Electricity",
+            "heater_maximum_capacity": 0.0,
+            "heater_thermal_efficiency": 0.9,
+            "maximum_temperature_limit": 82.2222,
+            "off_cycle_loss_coefficient_to_ambient_temperature": 5.0,
+            "on_cycle_loss_coefficient_to_ambient_temperature": 5.0,
+            "setpoint_temperature_schedule_name": "Hot Water Setpoint Temp Schedule",
+            "source_side_design_flow_rate": "Autosize",
+            "source_side_effectiveness": 1.0,
+            "source_side_inlet_node_name": "Storage Tank Source Inlet Node",
+            "source_side_outlet_node_name": "Storage Tank Source Outlet Node",
+            "tank_volume": 1.5,
+            "use_side_design_flow_rate": "Autosize",
+            "use_side_effectiveness": 1.0,
+            "use_side_inlet_node_name": "Storage Tank Use Inlet Node",
+            "use_side_outlet_node_name": "Storage Tank Use Outlet Node"
+        }
+    },
+    "WaterUse:Connections": {
+        "Domestic Hot Water": {
+            "connections": [
+                {
+                    "water_use_equipment_name": "Sinks"
+                },
+                {
+                    "water_use_equipment_name": "Showers"
+                },
+                {
+                    "water_use_equipment_name": "Clotheswasher"
+                },
+                {
+                    "water_use_equipment_name": "Dishwasher"
+                }
+            ],
+            "drain_water_heat_exchanger_type": "None",
+            "inlet_node_name": "Domestic Hot Water Inlet Node",
+            "outlet_node_name": "Domestic Hot Water Outlet Node"
+        }
+    },
+    "WaterUse:Equipment": {
+        "Clotheswasher": {
+            "end_use_subcategory": "Clotheswasher",
+            "flow_rate_fraction_schedule_name": "Clotheswasher",
+            "peak_flow_rate": 6.3e-05,
+            "target_temperature_schedule_name": "Washers Temp Schedule"
+        },
+        "Dishwasher": {
+            "end_use_subcategory": "Dishwasher",
+            "flow_rate_fraction_schedule_name": "Dishwasher",
+            "peak_flow_rate": 0.000126,
+            "target_temperature_schedule_name": "Washers Temp Schedule"
+        },
+        "Showers": {
+            "end_use_subcategory": "Showers",
+            "flow_rate_fraction_schedule_name": "Showers",
+            "peak_flow_rate": 0.000189,
+            "target_temperature_schedule_name": "Sinks and Showers Temp Schedule"
+        },
+        "Sinks": {
+            "end_use_subcategory": "Sinks",
+            "flow_rate_fraction_schedule_name": "Sinks",
+            "peak_flow_rate": 0.000189,
+            "target_temperature_schedule_name": "Sinks and Showers Temp Schedule"
+        }
+    }
+}

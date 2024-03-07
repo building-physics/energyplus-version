@@ -1,0 +1,1752 @@
+{
+    "Building": {
+        "HAMT test 1": {
+            "loads_convergence_tolerance_value": 0.04,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0,
+            "solar_distribution": "MinimalShadowing",
+            "temperature_convergence_tolerance_value": 0.4
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "East wall": {
+            "construction_name": "Exterior wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 8,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 2.7
+                },
+                {
+                    "vertex_x_coordinate": 8,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 8,
+                    "vertex_y_coordinate": 6,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 8,
+                    "vertex_y_coordinate": 6,
+                    "vertex_z_coordinate": 2.7
+                }
+            ],
+            "wind_exposure": "WindExposed",
+            "zone_name": "Test room"
+        },
+        "Floor": {
+            "construction_name": "Floor",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Ground",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 8,
+                    "vertex_y_coordinate": 6,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 8,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "wind_exposure": "NoWind",
+            "zone_name": "Test room"
+        },
+        "North wall": {
+            "construction_name": "Exterior wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 8,
+                    "vertex_y_coordinate": 6,
+                    "vertex_z_coordinate": 2.7
+                },
+                {
+                    "vertex_x_coordinate": 8,
+                    "vertex_y_coordinate": 6,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6,
+                    "vertex_z_coordinate": 2.7
+                }
+            ],
+            "wind_exposure": "WindExposed",
+            "zone_name": "Test room"
+        },
+        "Roof": {
+            "construction_name": "Roof",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 2.7
+                },
+                {
+                    "vertex_x_coordinate": 8,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 2.7
+                },
+                {
+                    "vertex_x_coordinate": 8,
+                    "vertex_y_coordinate": 6,
+                    "vertex_z_coordinate": 2.7
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6,
+                    "vertex_z_coordinate": 2.7
+                }
+            ],
+            "wind_exposure": "WindExposed",
+            "zone_name": "Test room"
+        },
+        "South wall": {
+            "construction_name": "Exterior wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 2.7
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 8,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 8,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 2.7
+                }
+            ],
+            "wind_exposure": "WindExposed",
+            "zone_name": "Test room"
+        },
+        "West wall": {
+            "construction_name": "Exterior wall",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6,
+                    "vertex_z_coordinate": 2.7
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 6,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 2.7
+                }
+            ],
+            "wind_exposure": "WindExposed",
+            "zone_name": "Test room"
+        }
+    },
+    "Construction": {
+        "Exterior wall": {
+            "layer_2": "Concrete",
+            "layer_3": "Cellulose ins",
+            "layer_4": "Spruce",
+            "outside_layer": "Spruce"
+        },
+        "Floor": {
+            "layer_2": "Spruce",
+            "outside_layer": "Glass Fibre ins"
+        },
+        "Roof": {
+            "layer_2": "Cellulose ins",
+            "layer_3": "Spruce",
+            "outside_layer": "Plywood"
+        },
+        "Window": {
+            "layer_2": "Air",
+            "layer_3": "Glass",
+            "outside_layer": "Glass"
+        }
+    },
+    "FenestrationSurface:Detailed": {
+        "South window_east": {
+            "building_surface_name": "South wall",
+            "construction_name": "Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 4.5,
+            "vertex_1_y_coordinate": 0,
+            "vertex_1_z_coordinate": 2.2,
+            "vertex_2_x_coordinate": 4.5,
+            "vertex_2_y_coordinate": 0,
+            "vertex_2_z_coordinate": 0.2,
+            "vertex_3_x_coordinate": 7.5,
+            "vertex_3_y_coordinate": 0,
+            "vertex_3_z_coordinate": 0.2,
+            "vertex_4_x_coordinate": 7.5,
+            "vertex_4_y_coordinate": 0,
+            "vertex_4_z_coordinate": 2.2
+        },
+        "South window_west": {
+            "building_surface_name": "South wall",
+            "construction_name": "Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 0.5,
+            "vertex_1_y_coordinate": 0,
+            "vertex_1_z_coordinate": 2.2,
+            "vertex_2_x_coordinate": 0.5,
+            "vertex_2_y_coordinate": 0,
+            "vertex_2_z_coordinate": 0.2,
+            "vertex_3_x_coordinate": 3.5,
+            "vertex_3_y_coordinate": 0,
+            "vertex_3_z_coordinate": 0.2,
+            "vertex_4_x_coordinate": 3.5,
+            "vertex_4_y_coordinate": 0,
+            "vertex_4_z_coordinate": 2.2
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "World",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "HVACTemplate:Plant:Boiler": {
+        "Main Boiler": {
+            "boiler_type": "HotWaterBoiler",
+            "capacity": "Autosize",
+            "efficiency": 0.8,
+            "fuel_type": "NaturalGas",
+            "priority": "1"
+        }
+    },
+    "HVACTemplate:Plant:ChilledWaterLoop": {
+        "Chilled Water Loop": {
+            "chilled_water_design_setpoint": 7.22,
+            "chilled_water_pump_configuration": "ConstantPrimaryNoSecondary",
+            "chilled_water_reset_outdoor_dry_bulb_high": 26.7,
+            "chilled_water_reset_outdoor_dry_bulb_low": 15.6,
+            "chilled_water_setpoint_at_outdoor_dry_bulb_high": 6.7,
+            "chilled_water_setpoint_at_outdoor_dry_bulb_low": 12.2,
+            "chilled_water_setpoint_reset_type": "OutdoorAirTemperatureReset",
+            "chiller_plant_operation_scheme_type": "Default",
+            "condenser_plant_operation_scheme_type": "Default",
+            "condenser_water_design_setpoint": 29.4,
+            "condenser_water_pump_rated_head": 179352,
+            "primary_chilled_water_pump_rated_head": 179352,
+            "pump_control_type": "Intermittent",
+            "secondary_chilled_water_pump_rated_head": 179352
+        }
+    },
+    "HVACTemplate:Plant:Chiller": {
+        "Main Chiller": {
+            "capacity": "Autosize",
+            "chiller_type": "ElectricReciprocatingChiller",
+            "condenser_type": "WaterCooled",
+            "nominal_cop": 3.2,
+            "priority": "1"
+        }
+    },
+    "HVACTemplate:Plant:HotWaterLoop": {
+        "Hot Water Loop": {
+            "hot_water_design_setpoint": 82,
+            "hot_water_plant_operation_scheme_type": "Default",
+            "hot_water_pump_configuration": "ConstantFlow",
+            "hot_water_pump_rated_head": 179352,
+            "hot_water_reset_outdoor_dry_bulb_high": 10,
+            "hot_water_reset_outdoor_dry_bulb_low": -6.7,
+            "hot_water_setpoint_at_outdoor_dry_bulb_high": 65.6,
+            "hot_water_setpoint_at_outdoor_dry_bulb_low": 82.2,
+            "hot_water_setpoint_reset_type": "OutdoorAirTemperatureReset",
+            "pump_control_type": "Intermittent"
+        }
+    },
+    "HVACTemplate:Plant:Tower": {
+        "Main Tower": {
+            "free_convection_capacity": "Autosize",
+            "high_speed_fan_power": "Autosize",
+            "high_speed_nominal_capacity": "Autosize",
+            "low_speed_fan_power": "Autosize",
+            "low_speed_nominal_capacity": "Autosize",
+            "priority": "1",
+            "tower_type": "SingleSpeed"
+        }
+    },
+    "HVACTemplate:Thermostat": {
+        "All Zones": {
+            "cooling_setpoint_schedule_name": "Clg-SetP-Sch",
+            "heating_setpoint_schedule_name": "Htg-SetP-Sch"
+        }
+    },
+    "HVACTemplate:Zone:FanCoil": {
+        "HVACTemplate:Zone:FanCoil 1": {
+            "cooling_coil_design_setpoint": 14,
+            "cooling_coil_type": "ChilledWater",
+            "heating_coil_design_setpoint": 50,
+            "heating_coil_type": "HotWater",
+            "outdoor_air_flow_rate_per_person": 0,
+            "outdoor_air_flow_rate_per_zone": 0,
+            "outdoor_air_flow_rate_per_zone_floor_area": 0.00944,
+            "outdoor_air_method": "Flow/Zone",
+            "supply_air_maximum_flow_rate": "Autosize",
+            "supply_fan_delta_pressure": 75,
+            "supply_fan_motor_efficiency": 0.9,
+            "supply_fan_motor_in_air_stream_fraction": 1,
+            "supply_fan_total_efficiency": 0.7,
+            "system_availability_schedule_name": "FanAvailSched",
+            "template_thermostat_name": "All Zones",
+            "zone_name": "Test room"
+        }
+    },
+    "HeatBalanceAlgorithm": {
+        "HeatBalanceAlgorithm 1": {
+            "algorithm": "CombinedHeatAndMoistureFiniteElement",
+            "surface_temperature_upper_limit": 200
+        }
+    },
+    "Material": {
+        "Cellulose ins": {
+            "conductivity": 0.04,
+            "density": 55,
+            "roughness": "Rough",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1880,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.066,
+            "visible_absorptance": 0.7
+        },
+        "Concrete": {
+            "conductivity": 1.6,
+            "density": 2300,
+            "roughness": "Rough",
+            "solar_absorptance": 0.7,
+            "specific_heat": 850,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1,
+            "visible_absorptance": 0.7
+        },
+        "Glass Fibre ins": {
+            "conductivity": 0.04,
+            "density": 80,
+            "roughness": "Rough",
+            "solar_absorptance": 0.7,
+            "specific_heat": 840,
+            "thermal_absorptance": 0.9,
+            "thickness": 1.003,
+            "visible_absorptance": 0.7
+        },
+        "Plywood": {
+            "conductivity": 0.14,
+            "density": 530,
+            "roughness": "Rough",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1880,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.025,
+            "visible_absorptance": 0.7
+        },
+        "Spruce": {
+            "conductivity": 0.09,
+            "density": 455,
+            "roughness": "Rough",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1500,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.012,
+            "visible_absorptance": 0.7
+        }
+    },
+    "MaterialProperty:HeatAndMoistureTransfer:Diffusion": {
+        "MaterialProperty:HeatAndMoistureTransfer:Diffusion 1": {
+            "material_name": "Concrete",
+            "number_of_data_pairs": 1,
+            "relative_humidity_fraction_1": 0,
+            "water_vapor_diffusion_resistance_factor_1": 180
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:Diffusion 2": {
+            "material_name": "Spruce",
+            "number_of_data_pairs": 1,
+            "relative_humidity_fraction_1": 0,
+            "water_vapor_diffusion_resistance_factor_1": 130
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:Diffusion 3": {
+            "material_name": "Plywood",
+            "number_of_data_pairs": 3,
+            "relative_humidity_fraction_1": 0,
+            "relative_humidity_fraction_2": 0.5,
+            "relative_humidity_fraction_3": 1,
+            "water_vapor_diffusion_resistance_factor_1": 700,
+            "water_vapor_diffusion_resistance_factor_2": 200,
+            "water_vapor_diffusion_resistance_factor_3": 20
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:Diffusion 4": {
+            "material_name": "Cellulose ins",
+            "number_of_data_pairs": 1,
+            "relative_humidity_fraction_1": 0,
+            "water_vapor_diffusion_resistance_factor_1": 1.5
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:Diffusion 5": {
+            "material_name": "Glass Fibre ins",
+            "number_of_data_pairs": 1,
+            "relative_humidity_fraction_1": 0,
+            "water_vapor_diffusion_resistance_factor_1": 1.2543
+        }
+    },
+    "MaterialProperty:HeatAndMoistureTransfer:Redistribution": {
+        "MaterialProperty:HeatAndMoistureTransfer:Redistribution 1": {
+            "liquid_transport_coefficient_1": 0,
+            "liquid_transport_coefficient_2": 7.41e-12,
+            "liquid_transport_coefficient_3": 2.53e-11,
+            "liquid_transport_coefficient_4": 1.01e-10,
+            "liquid_transport_coefficient_5": 1.28e-10,
+            "material_name": "Concrete",
+            "moisture_content_1": 0,
+            "moisture_content_2": 72,
+            "moisture_content_3": 85,
+            "moisture_content_4": 100,
+            "moisture_content_5": 118,
+            "number_of_redistribution_points": 5
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:Redistribution 2": {
+            "liquid_transport_coefficient_1": 0,
+            "liquid_transport_coefficient_2": 3.2e-13,
+            "liquid_transport_coefficient_3": 9.2e-12,
+            "material_name": "Spruce",
+            "moisture_content_1": 0,
+            "moisture_content_2": 20,
+            "moisture_content_3": 600,
+            "number_of_redistribution_points": 3
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:Redistribution 3": {
+            "liquid_transport_coefficient_1": 0,
+            "material_name": "Plywood",
+            "moisture_content_1": 0,
+            "number_of_redistribution_points": 1
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:Redistribution 4": {
+            "liquid_transport_coefficient_1": 0,
+            "material_name": "Cellulose ins",
+            "moisture_content_1": 0,
+            "number_of_redistribution_points": 1
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:Redistribution 5": {
+            "liquid_transport_coefficient_1": 0,
+            "material_name": "Glass Fibre ins",
+            "moisture_content_1": 0,
+            "number_of_redistribution_points": 1
+        }
+    },
+    "MaterialProperty:HeatAndMoistureTransfer:Settings": {
+        "MaterialProperty:HeatAndMoistureTransfer:Settings 1": {
+            "initial_water_content_ratio": 0.01,
+            "material_name": "Concrete",
+            "porosity": 0.76
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:Settings 2": {
+            "initial_water_content_ratio": 0.05,
+            "material_name": "Spruce",
+            "porosity": 0.73
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:Settings 3": {
+            "initial_water_content_ratio": 0.05,
+            "material_name": "Plywood",
+            "porosity": 0.5
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:Settings 4": {
+            "initial_water_content_ratio": 0.001,
+            "material_name": "Cellulose ins",
+            "porosity": 0.95
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:Settings 5": {
+            "initial_water_content_ratio": 0.1,
+            "material_name": "Glass Fibre ins",
+            "porosity": 0.95
+        }
+    },
+    "MaterialProperty:HeatAndMoistureTransfer:SorptionIsotherm": {
+        "MaterialProperty:HeatAndMoistureTransfer:SorptionIsotherm 1": {
+            "material_name": "Cellulose ins",
+            "moisture_content_1": 2.365,
+            "moisture_content_2": 4.62,
+            "moisture_content_3": 6.655,
+            "moisture_content_4": 11.4125,
+            "moisture_content_5": 13,
+            "number_of_isotherm_coordinates": 5,
+            "relative_humidity_fraction_1": 0.25,
+            "relative_humidity_fraction_2": 0.44,
+            "relative_humidity_fraction_3": 0.66,
+            "relative_humidity_fraction_4": 0.86,
+            "relative_humidity_fraction_5": 1
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:SorptionIsotherm 2": {
+            "material_name": "Glass Fibre ins",
+            "moisture_content_1": 0.748,
+            "moisture_content_2": 1.04,
+            "moisture_content_3": 1.24,
+            "moisture_content_4": 1.56,
+            "moisture_content_5": 1.92,
+            "moisture_content_6": 2.72,
+            "number_of_isotherm_coordinates": 6,
+            "relative_humidity_fraction_1": 0.202,
+            "relative_humidity_fraction_2": 0.4325,
+            "relative_humidity_fraction_3": 0.6465,
+            "relative_humidity_fraction_4": 0.8465,
+            "relative_humidity_fraction_5": 0.948,
+            "relative_humidity_fraction_6": 0.978
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:SorptionIsotherm 3": {
+            "material_name": "Spruce",
+            "moisture_content_1": 25.935,
+            "moisture_content_2": 44.3625,
+            "moisture_content_3": 61.99375,
+            "moisture_content_4": 61.99375,
+            "moisture_content_5": 87.1325,
+            "moisture_content_6": 119.665,
+            "moisture_content_7": 120.12,
+            "number_of_isotherm_coordinates": 7,
+            "relative_humidity_fraction_1": 0.205,
+            "relative_humidity_fraction_2": 0.4465,
+            "relative_humidity_fraction_3": 0.6515,
+            "relative_humidity_fraction_4": 0.6545,
+            "relative_humidity_fraction_5": 0.83,
+            "relative_humidity_fraction_6": 0.9525,
+            "relative_humidity_fraction_7": 0.956
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:SorptionIsotherm 4": {
+            "material_name": "Plywood",
+            "moisture_content_1": 3.7125,
+            "moisture_content_2": 3.74,
+            "moisture_content_3": 5.8025,
+            "moisture_content_4": 5.83,
+            "moisture_content_5": 7.7825,
+            "moisture_content_6": 7.81,
+            "moisture_content_7": 10.3675,
+            "moisture_content_8": 10.3675,
+            "moisture_content_9": 13.1175,
+            "moisture_content_10": 13.1175,
+            "moisture_content_11": 14.7125,
+            "moisture_content_12": 15.345,
+            "number_of_isotherm_coordinates": 12,
+            "relative_humidity_fraction_1": 0.2015,
+            "relative_humidity_fraction_2": 0.203,
+            "relative_humidity_fraction_3": 0.435,
+            "relative_humidity_fraction_4": 0.439,
+            "relative_humidity_fraction_5": 0.6495,
+            "relative_humidity_fraction_6": 0.6515,
+            "relative_humidity_fraction_7": 0.8215,
+            "relative_humidity_fraction_8": 0.825,
+            "relative_humidity_fraction_9": 0.9215,
+            "relative_humidity_fraction_10": 0.925,
+            "relative_humidity_fraction_11": 0.9575,
+            "relative_humidity_fraction_12": 0.9605
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:SorptionIsotherm 5": {
+            "material_name": "Concrete",
+            "moisture_content_1": 19.665,
+            "moisture_content_2": 22.31,
+            "moisture_content_3": 38.4675,
+            "moisture_content_4": 38.4675,
+            "moisture_content_5": 54.165,
+            "moisture_content_6": 54.165,
+            "moisture_content_7": 72.565,
+            "moisture_content_8": 85.1,
+            "moisture_content_9": 91.08,
+            "moisture_content_10": 100.28,
+            "number_of_isotherm_coordinates": 10,
+            "relative_humidity_fraction_1": 0.202,
+            "relative_humidity_fraction_2": 0.2205,
+            "relative_humidity_fraction_3": 0.449,
+            "relative_humidity_fraction_4": 0.454,
+            "relative_humidity_fraction_5": 0.6506,
+            "relative_humidity_fraction_6": 0.655,
+            "relative_humidity_fraction_7": 0.824,
+            "relative_humidity_fraction_8": 0.8725,
+            "relative_humidity_fraction_9": 0.924,
+            "relative_humidity_fraction_10": 0.964
+        }
+    },
+    "MaterialProperty:HeatAndMoistureTransfer:Suction": {
+        "MaterialProperty:HeatAndMoistureTransfer:Suction 1": {
+            "liquid_transport_coefficient_1": 0,
+            "liquid_transport_coefficient_2": 7.41e-11,
+            "liquid_transport_coefficient_3": 2.53e-10,
+            "liquid_transport_coefficient_4": 1.01e-09,
+            "liquid_transport_coefficient_5": 1.28e-09,
+            "material_name": "Concrete",
+            "moisture_content_1": 0,
+            "moisture_content_2": 72,
+            "moisture_content_3": 85,
+            "moisture_content_4": 100,
+            "moisture_content_5": 118,
+            "number_of_suction_points": 5
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:Suction 2": {
+            "liquid_transport_coefficient_1": 0,
+            "liquid_transport_coefficient_2": 3.2e-13,
+            "liquid_transport_coefficient_3": 9.2e-12,
+            "material_name": "Spruce",
+            "moisture_content_1": 0,
+            "moisture_content_2": 20,
+            "moisture_content_3": 600,
+            "number_of_suction_points": 3
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:Suction 3": {
+            "liquid_transport_coefficient_1": 0,
+            "material_name": "Plywood",
+            "moisture_content_1": 0,
+            "number_of_suction_points": 1
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:Suction 4": {
+            "liquid_transport_coefficient_1": 0,
+            "material_name": "Cellulose ins",
+            "moisture_content_1": 0,
+            "number_of_suction_points": 1
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:Suction 5": {
+            "liquid_transport_coefficient_1": 0,
+            "material_name": "Glass Fibre ins",
+            "moisture_content_1": 0,
+            "number_of_suction_points": 1
+        }
+    },
+    "MaterialProperty:HeatAndMoistureTransfer:ThermalConductivity": {
+        "MaterialProperty:HeatAndMoistureTransfer:ThermalConductivity 1": {
+            "material_name": "Concrete",
+            "moisture_content_1": 0,
+            "moisture_content_2": 180,
+            "number_of_thermal_coordinates": 2,
+            "thermal_conductivity_1": 1.6,
+            "thermal_conductivity_2": 2.602
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:ThermalConductivity 2": {
+            "material_name": "Spruce",
+            "moisture_content_1": 0,
+            "moisture_content_2": 730,
+            "number_of_thermal_coordinates": 2,
+            "thermal_conductivity_1": 0.09,
+            "thermal_conductivity_2": 0.278
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:ThermalConductivity 3": {
+            "material_name": "Plywood",
+            "moisture_content_1": 0,
+            "moisture_content_2": 500,
+            "number_of_thermal_coordinates": 2,
+            "thermal_conductivity_1": 0.1,
+            "thermal_conductivity_2": 0.25
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:ThermalConductivity 4": {
+            "material_name": "Cellulose ins",
+            "moisture_content_1": 0,
+            "moisture_content_2": 950,
+            "number_of_thermal_coordinates": 2,
+            "thermal_conductivity_1": 0.04,
+            "thermal_conductivity_2": 0.583
+        },
+        "MaterialProperty:HeatAndMoistureTransfer:ThermalConductivity 5": {
+            "material_name": "Glass Fibre ins",
+            "moisture_content_1": 0,
+            "number_of_thermal_coordinates": 1,
+            "thermal_conductivity_1": 0.04
+        }
+    },
+    "OtherEquipment": {
+        "Other": {
+            "design_level": 800,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0,
+            "fraction_lost": 0,
+            "fraction_radiant": 0,
+            "fuel_type": "None",
+            "schedule_name": "On",
+            "zone_or_zonelist_or_space_or_spacelist_name": "Test room"
+        },
+        "latent": {
+            "design_level": 352.6,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 1,
+            "fraction_lost": 0,
+            "fraction_radiant": 0,
+            "fuel_type": "None",
+            "schedule_name": "Moisture on",
+            "zone_or_zonelist_or_space_or_spacelist_name": "Test room"
+        }
+    },
+    "Output:Meter:MeterFileOnly": {
+        "Output:Meter:MeterFileOnly 1": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 2": {
+            "key_name": "Electricity:HVAC",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 3": {
+            "key_name": "Electricity:Plant",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 4": {
+            "key_name": "NaturalGas:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 5": {
+            "key_name": "NaturalGas:Plant",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 6": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 7": {
+            "key_name": "Electricity:HVAC",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 8": {
+            "key_name": "Electricity:Plant",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 9": {
+            "key_name": "NaturalGas:Facility",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 10": {
+            "key_name": "NaturalGas:Plant",
+            "reporting_frequency": "RunPeriod"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Site Outdoor Air Relative Humidity"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Mean Air Temperature"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air System Sensible Heating Rate"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air System Sensible Cooling Rate"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Average Water Content Ratio"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Air Relative Humidity"
+        },
+        "Output:Variable 8": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 1"
+        },
+        "Output:Variable 9": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 2"
+        },
+        "Output:Variable 10": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 3"
+        },
+        "Output:Variable 11": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 4"
+        },
+        "Output:Variable 12": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 5"
+        },
+        "Output:Variable 13": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 6"
+        },
+        "Output:Variable 14": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 7"
+        },
+        "Output:Variable 15": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 8"
+        },
+        "Output:Variable 16": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 9"
+        },
+        "Output:Variable 17": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 10"
+        },
+        "Output:Variable 18": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 11"
+        },
+        "Output:Variable 19": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 12"
+        },
+        "Output:Variable 20": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 13"
+        },
+        "Output:Variable 21": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 14"
+        },
+        "Output:Variable 22": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 15"
+        },
+        "Output:Variable 23": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 16"
+        },
+        "Output:Variable 24": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 17"
+        },
+        "Output:Variable 25": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 18"
+        },
+        "Output:Variable 26": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 19"
+        },
+        "Output:Variable 27": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 20"
+        },
+        "Output:Variable 28": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 21"
+        },
+        "Output:Variable 29": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 22"
+        },
+        "Output:Variable 30": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 23"
+        },
+        "Output:Variable 31": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 24"
+        },
+        "Output:Variable 32": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 25"
+        },
+        "Output:Variable 33": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 26"
+        },
+        "Output:Variable 34": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 27"
+        },
+        "Output:Variable 35": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 28"
+        },
+        "Output:Variable 36": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 29"
+        },
+        "Output:Variable 37": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 30"
+        },
+        "Output:Variable 38": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 31"
+        },
+        "Output:Variable 39": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Water Content Cell 32"
+        },
+        "Output:Variable 40": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 1"
+        },
+        "Output:Variable 41": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 2"
+        },
+        "Output:Variable 42": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 3"
+        },
+        "Output:Variable 43": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 4"
+        },
+        "Output:Variable 44": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 5"
+        },
+        "Output:Variable 45": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 6"
+        },
+        "Output:Variable 46": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 7"
+        },
+        "Output:Variable 47": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 8"
+        },
+        "Output:Variable 48": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 9"
+        },
+        "Output:Variable 49": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 10"
+        },
+        "Output:Variable 50": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 11"
+        },
+        "Output:Variable 51": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 12"
+        },
+        "Output:Variable 52": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 13"
+        },
+        "Output:Variable 53": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 14"
+        },
+        "Output:Variable 54": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 15"
+        },
+        "Output:Variable 55": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 16"
+        },
+        "Output:Variable 56": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 17"
+        },
+        "Output:Variable 57": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 18"
+        },
+        "Output:Variable 58": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 19"
+        },
+        "Output:Variable 59": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 20"
+        },
+        "Output:Variable 60": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 21"
+        },
+        "Output:Variable 61": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 22"
+        },
+        "Output:Variable 62": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 23"
+        },
+        "Output:Variable 63": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 24"
+        },
+        "Output:Variable 64": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 25"
+        },
+        "Output:Variable 65": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 26"
+        },
+        "Output:Variable 66": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 27"
+        },
+        "Output:Variable 67": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 28"
+        },
+        "Output:Variable 68": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 29"
+        },
+        "Output:Variable 69": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 30"
+        },
+        "Output:Variable 70": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 31"
+        },
+        "Output:Variable 71": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Temperature Cell 32"
+        },
+        "Output:Variable 72": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 1"
+        },
+        "Output:Variable 73": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 2"
+        },
+        "Output:Variable 74": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 3"
+        },
+        "Output:Variable 75": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 4"
+        },
+        "Output:Variable 76": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 5"
+        },
+        "Output:Variable 77": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 6"
+        },
+        "Output:Variable 78": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 7"
+        },
+        "Output:Variable 79": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 8"
+        },
+        "Output:Variable 80": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 9"
+        },
+        "Output:Variable 81": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 10"
+        },
+        "Output:Variable 82": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 11"
+        },
+        "Output:Variable 83": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 12"
+        },
+        "Output:Variable 84": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 13"
+        },
+        "Output:Variable 85": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 14"
+        },
+        "Output:Variable 86": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 15"
+        },
+        "Output:Variable 87": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 16"
+        },
+        "Output:Variable 88": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 17"
+        },
+        "Output:Variable 89": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 18"
+        },
+        "Output:Variable 90": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 19"
+        },
+        "Output:Variable 91": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 20"
+        },
+        "Output:Variable 92": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 21"
+        },
+        "Output:Variable 93": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 22"
+        },
+        "Output:Variable 94": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 23"
+        },
+        "Output:Variable 95": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 24"
+        },
+        "Output:Variable 96": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 25"
+        },
+        "Output:Variable 97": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 26"
+        },
+        "Output:Variable 98": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 27"
+        },
+        "Output:Variable 99": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 28"
+        },
+        "Output:Variable 100": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 29"
+        },
+        "Output:Variable 101": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 30"
+        },
+        "Output:Variable 102": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 31"
+        },
+        "Output:Variable 103": {
+            "key_value": "east wall",
+            "reporting_frequency": "Hourly",
+            "variable_name": "HAMT Surface Relative Humidity Cell 32"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "Yes",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "end_day_of_month": 31,
+            "end_month": 1,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "No",
+            "use_weather_file_snow_indicators": "No"
+        }
+    },
+    "Schedule:Compact": {
+        "Clg-SetP-Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: WeekDays CustomDay1 CustomDay2 Sunday Saturday Holiday SummerDesignDay WinterDesignDay\""
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 20
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "FanAvailSched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: WeekDays CustomDay1 CustomDay2 Sunday Saturday Holiday SummerDesignDay WinterDesignDay\""
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "Htg-SetP-Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: WeekDays CustomDay1 CustomDay2 Sunday Saturday Holiday SummerDesignDay WinterDesignDay\""
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 20
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        }
+    },
+    "Schedule:Day:Hourly": {
+        "Moisture annex 41": {
+            "hour_1": 0,
+            "hour_2": 0,
+            "hour_3": 0,
+            "hour_4": 0,
+            "hour_5": 0,
+            "hour_6": 0,
+            "hour_7": 0,
+            "hour_8": 0,
+            "hour_9": 0,
+            "hour_10": 1,
+            "hour_11": 1,
+            "hour_12": 1,
+            "hour_13": 1,
+            "hour_14": 1,
+            "hour_15": 1,
+            "hour_16": 1,
+            "hour_17": 1,
+            "hour_18": 0,
+            "hour_19": 0,
+            "hour_20": 0,
+            "hour_21": 0,
+            "hour_22": 0,
+            "hour_23": 0,
+            "hour_24": 0,
+            "schedule_type_limits_name": "Fraction"
+        },
+        "On": {
+            "hour_1": 1,
+            "hour_2": 1,
+            "hour_3": 1,
+            "hour_4": 1,
+            "hour_5": 1,
+            "hour_6": 1,
+            "hour_7": 1,
+            "hour_8": 1,
+            "hour_9": 1,
+            "hour_10": 1,
+            "hour_11": 1,
+            "hour_12": 1,
+            "hour_13": 1,
+            "hour_14": 1,
+            "hour_15": 1,
+            "hour_16": 1,
+            "hour_17": 1,
+            "hour_18": 1,
+            "hour_19": 1,
+            "hour_20": 1,
+            "hour_21": 1,
+            "hour_22": 1,
+            "hour_23": 1,
+            "hour_24": 1,
+            "schedule_type_limits_name": "Fraction"
+        }
+    },
+    "Schedule:Week:Daily": {
+        "WeekOn": {
+            "customday1_schedule_day_name": "On",
+            "customday2_schedule_day_name": "On",
+            "friday_schedule_day_name": "On",
+            "holiday_schedule_day_name": "On",
+            "monday_schedule_day_name": "On",
+            "saturday_schedule_day_name": "On",
+            "summerdesignday_schedule_day_name": "On",
+            "sunday_schedule_day_name": "On",
+            "thursday_schedule_day_name": "On",
+            "tuesday_schedule_day_name": "On",
+            "wednesday_schedule_day_name": "On",
+            "winterdesignday_schedule_day_name": "On"
+        },
+        "Weekon moisture": {
+            "customday1_schedule_day_name": "Moisture annex 41",
+            "customday2_schedule_day_name": "Moisture annex 41",
+            "friday_schedule_day_name": "Moisture annex 41",
+            "holiday_schedule_day_name": "Moisture annex 41",
+            "monday_schedule_day_name": "Moisture annex 41",
+            "saturday_schedule_day_name": "Moisture annex 41",
+            "summerdesignday_schedule_day_name": "Moisture annex 41",
+            "sunday_schedule_day_name": "Moisture annex 41",
+            "thursday_schedule_day_name": "Moisture annex 41",
+            "tuesday_schedule_day_name": "Moisture annex 41",
+            "wednesday_schedule_day_name": "Moisture annex 41",
+            "winterdesignday_schedule_day_name": "Moisture annex 41"
+        }
+    },
+    "Schedule:Year": {
+        "Moisture on": {
+            "schedule_type_limits_name": "Fraction",
+            "schedule_weeks": [
+                {
+                    "end_day": 31,
+                    "end_month": 12,
+                    "schedule_week_name": "Weekon moisture",
+                    "start_day": 1,
+                    "start_month": 1
+                }
+            ]
+        },
+        "On": {
+            "schedule_type_limits_name": "Fraction",
+            "schedule_weeks": [
+                {
+                    "end_day": 31,
+                    "end_month": 12,
+                    "schedule_week_name": "WeekOn",
+                    "start_day": 1,
+                    "start_month": 1
+                }
+            ]
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "Control Type": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 4
+        },
+        "FlowRate": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 10
+        },
+        "Fraction": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1.0
+        },
+        "On/Off": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 1
+        },
+        "Temperature": {
+            "lower_limit_value": -60,
+            "numeric_type": "Continuous",
+            "unit_type": "Temperature",
+            "upper_limit_value": 200
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "Yes",
+            "do_zone_sizing_calculation": "Yes",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "Yes",
+            "run_simulation_for_weather_file_run_periods": "Yes"
+        }
+    },
+    "Site:GroundTemperature:BuildingSurface": {
+        "Site:GroundTemperature:BuildingSurface 1": {
+            "april_ground_temperature": 18,
+            "august_ground_temperature": 18,
+            "december_ground_temperature": 18,
+            "february_ground_temperature": 18,
+            "january_ground_temperature": 18,
+            "july_ground_temperature": 18,
+            "june_ground_temperature": 18,
+            "march_ground_temperature": 18,
+            "may_ground_temperature": 18,
+            "november_ground_temperature": 18,
+            "october_ground_temperature": 18,
+            "september_ground_temperature": 18
+        }
+    },
+    "Sizing:Parameters": {
+        "Sizing:Parameters 1": {
+            "cooling_sizing_factor": 1,
+            "heating_sizing_factor": 1
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "CHICAGO_IL_USA Annual Cooling 1% Design Conditions DB/MCWB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 10.7,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 31.5,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23.0,
+            "wind_direction": 230,
+            "wind_speed": 5.3
+        },
+        "CHICAGO_IL_USA Annual Heating 99% Design Conditions DB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -17.3,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -17.3,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        }
+    },
+    "SurfaceConvectionAlgorithm:Inside": {
+        "SurfaceConvectionAlgorithm:Inside 1": {
+            "algorithm": "TARP"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Outside": {
+        "SurfaceConvectionAlgorithm:Outside 1": {
+            "algorithm": "DOE-2"
+        }
+    },
+    "SurfaceProperties:VaporCoefficients": {
+        "SurfaceProperties:VaporCoefficients 1": {
+            "constant_external_vapor_transfer_coefficient": "Yes",
+            "constant_internal_vapor_transfer_coefficient": "Yes",
+            "external_vapor_coefficient_value": 6.25e-08,
+            "internal_vapor_coefficient_value": 2e-08,
+            "surface_name": "South wall"
+        },
+        "SurfaceProperties:VaporCoefficients 2": {
+            "constant_external_vapor_transfer_coefficient": "Yes",
+            "constant_internal_vapor_transfer_coefficient": "Yes",
+            "external_vapor_coefficient_value": 6.25e-08,
+            "internal_vapor_coefficient_value": 2e-08,
+            "surface_name": "East wall"
+        },
+        "SurfaceProperties:VaporCoefficients 3": {
+            "constant_external_vapor_transfer_coefficient": "Yes",
+            "constant_internal_vapor_transfer_coefficient": "Yes",
+            "external_vapor_coefficient_value": 6.25e-08,
+            "internal_vapor_coefficient_value": 2e-08,
+            "surface_name": "North wall"
+        },
+        "SurfaceProperties:VaporCoefficients 4": {
+            "constant_external_vapor_transfer_coefficient": "Yes",
+            "constant_internal_vapor_transfer_coefficient": "Yes",
+            "external_vapor_coefficient_value": 6.25e-08,
+            "internal_vapor_coefficient_value": 2e-08,
+            "surface_name": "West wall"
+        },
+        "SurfaceProperties:VaporCoefficients 5": {
+            "constant_external_vapor_transfer_coefficient": "Yes",
+            "constant_internal_vapor_transfer_coefficient": "Yes",
+            "external_vapor_coefficient_value": 6.25e-08,
+            "internal_vapor_coefficient_value": 2e-08,
+            "surface_name": "Floor"
+        },
+        "SurfaceProperties:VaporCoefficients 6": {
+            "constant_external_vapor_transfer_coefficient": "Yes",
+            "constant_internal_vapor_transfer_coefficient": "Yes",
+            "external_vapor_coefficient_value": 6.25e-08,
+            "internal_vapor_coefficient_value": 2e-08,
+            "surface_name": "Roof"
+        }
+    },
+    "SurfaceProperty:ConvectionCoefficients": {
+        "SurfaceProperty:ConvectionCoefficients 1": {
+            "convection_coefficient_1": 29.3,
+            "convection_coefficient_1_location": "Outside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 8.29,
+            "convection_coefficient_2_location": "Inside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "South wall"
+        },
+        "SurfaceProperty:ConvectionCoefficients 2": {
+            "convection_coefficient_1": 29.3,
+            "convection_coefficient_1_location": "Outside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 8.29,
+            "convection_coefficient_2_location": "Inside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "East wall"
+        },
+        "SurfaceProperty:ConvectionCoefficients 3": {
+            "convection_coefficient_1": 29.3,
+            "convection_coefficient_1_location": "Outside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 8.29,
+            "convection_coefficient_2_location": "Inside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "North wall"
+        },
+        "SurfaceProperty:ConvectionCoefficients 4": {
+            "convection_coefficient_1": 29.3,
+            "convection_coefficient_1_location": "Outside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 8.29,
+            "convection_coefficient_2_location": "Inside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "West wall"
+        },
+        "SurfaceProperty:ConvectionCoefficients 5": {
+            "convection_coefficient_1": 29.3,
+            "convection_coefficient_1_location": "Outside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 8.29,
+            "convection_coefficient_2_location": "Inside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "Roof"
+        },
+        "SurfaceProperty:ConvectionCoefficients 6": {
+            "convection_coefficient_1": 29.3,
+            "convection_coefficient_1_location": "Outside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 8.29,
+            "convection_coefficient_2_location": "Inside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "Floor"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 20
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "23.2"
+        }
+    },
+    "WindowMaterial:Gas": {
+        "Air": {
+            "gas_type": "Air",
+            "thickness": 0.013
+        }
+    },
+    "WindowMaterial:Glazing": {
+        "Glass": {
+            "back_side_infrared_hemispherical_emissivity": 0.84,
+            "back_side_solar_reflectance_at_normal_incidence": 0.07846,
+            "back_side_visible_reflectance_at_normal_incidence": 0.082,
+            "conductivity": 1.06,
+            "front_side_infrared_hemispherical_emissivity": 0.84,
+            "front_side_solar_reflectance_at_normal_incidence": 0.07846,
+            "front_side_visible_reflectance_at_normal_incidence": 0.082,
+            "infrared_transmittance_at_normal_incidence": 0,
+            "optical_data_type": "SpectralAverage",
+            "solar_transmittance_at_normal_incidence": 0.86156,
+            "thickness": 0.003175,
+            "visible_transmittance_at_normal_incidence": 0.91325
+        }
+    },
+    "Zone": {
+        "Test room": {
+            "ceiling_height": 2.7,
+            "direction_of_relative_north": 0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": 129.6,
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        }
+    },
+    "ZoneInfiltration:DesignFlowRate": {
+        "Infiltrate": {
+            "air_changes_per_hour": 0.5,
+            "constant_term_coefficient": 1,
+            "design_flow_rate": 0,
+            "design_flow_rate_calculation_method": "AirChanges/Hour",
+            "flow_rate_per_exterior_surface_area": 0,
+            "flow_rate_per_floor_area": 0,
+            "schedule_name": "On",
+            "temperature_term_coefficient": 0,
+            "velocity_squared_term_coefficient": 0,
+            "velocity_term_coefficient": 0,
+            "zone_or_zonelist_or_space_or_spacelist_name": "Test room"
+        }
+    }
+}

@@ -1,0 +1,486 @@
+{
+    "Building": {
+        "None": {
+            "loads_convergence_tolerance_value": 0.04,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "MinimalShadowing",
+            "temperature_convergence_tolerance_value": 0.4,
+            "terrain": "Suburbs"
+        }
+    },
+    "Exterior:FuelEquipment": {
+        "OutsideCoalEq": {
+            "design_level": 1000,
+            "fuel_use_type": "Coal",
+            "schedule_name": "ON"
+        },
+        "OutsideDieselEq": {
+            "design_level": 1000,
+            "fuel_use_type": "Diesel",
+            "schedule_name": "ON"
+        },
+        "OutsideDistrictCoolingEq": {
+            "design_level": 1000,
+            "fuel_use_type": "DistrictCooling",
+            "schedule_name": "ON"
+        },
+        "OutsideDistrictHeatingEq": {
+            "design_level": 1000,
+            "fuel_use_type": "DistrictHeatingWater",
+            "schedule_name": "ON"
+        },
+        "OutsideElecEq": {
+            "design_level": 1000,
+            "fuel_use_type": "Electricity",
+            "schedule_name": "ON"
+        },
+        "OutsideFuelOil1Eq": {
+            "design_level": 1000,
+            "fuel_use_type": "FuelOilNo1",
+            "schedule_name": "ON"
+        },
+        "OutsideFuelOil2Eq": {
+            "design_level": 1000,
+            "fuel_use_type": "FuelOilNo2",
+            "schedule_name": "ON"
+        },
+        "OutsideGasEq": {
+            "design_level": 1000,
+            "fuel_use_type": "NaturalGas",
+            "schedule_name": "ON"
+        },
+        "OutsideGasolineEq": {
+            "design_level": 1000,
+            "fuel_use_type": "Gasoline",
+            "schedule_name": "ON"
+        },
+        "OutsideLPGEq": {
+            "design_level": 1000,
+            "fuel_use_type": "Propane",
+            "schedule_name": "ON"
+        },
+        "OutsideOtherFuel1Eq": {
+            "design_level": 1000,
+            "fuel_use_type": "OtherFuel1",
+            "schedule_name": "ON"
+        },
+        "OutsideOtherFuel2Eq": {
+            "design_level": 1000,
+            "fuel_use_type": "OtherFuel2",
+            "schedule_name": "ON"
+        },
+        "OutsideSteamEq": {
+            "design_level": 1000,
+            "fuel_use_type": "DistrictHeatingSteam",
+            "schedule_name": "ON"
+        },
+        "OutsideWater1Eq": {
+            "design_level": 1000,
+            "fuel_use_type": "Water",
+            "schedule_name": "ON"
+        }
+    },
+    "Exterior:Lights": {
+        "OutsideLightsDuskToDawn": {
+            "control_option": "AstronomicalClock",
+            "design_level": 1000,
+            "schedule_name": "ON"
+        },
+        "OutsideLightsSchedule": {
+            "control_option": "ScheduleNameOnly",
+            "design_level": 1000,
+            "schedule_name": "ON"
+        }
+    },
+    "Exterior:WaterEquipment": {
+        "OutsideWaterEq": {
+            "design_level": 10000,
+            "fuel_use_type": "Water",
+            "schedule_name": "ON"
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "World",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "Meter:Custom": {
+        "MyExteriorCoal": {
+            "resource_type": "Coal",
+            "variable_details": [
+                {
+                    "output_variable_or_meter_name": "ExteriorEquipment:Coal"
+                }
+            ]
+        },
+        "MyExteriorDiesel": {
+            "resource_type": "Diesel",
+            "variable_details": [
+                {
+                    "output_variable_or_meter_name": "ExteriorEquipment:Diesel"
+                }
+            ]
+        },
+        "MyExteriorDistrictCooling": {
+            "resource_type": "DistrictCooling",
+            "variable_details": [
+                {
+                    "output_variable_or_meter_name": "ExteriorEquipment:DistrictCooling"
+                }
+            ]
+        },
+        "MyExteriorDistrictHeatingWater": {
+            "resource_type": "DistrictHeatingWater",
+            "variable_details": [
+                {
+                    "output_variable_or_meter_name": "ExteriorEquipment:DistrictHeatingWater"
+                }
+            ]
+        },
+        "MyExteriorElectric": {
+            "resource_type": "Electricity",
+            "variable_details": [
+                {
+                    "output_variable_or_meter_name": "ExteriorLights:Electricity"
+                },
+                {
+                    "output_variable_or_meter_name": "ExteriorEquipment:Electricity"
+                }
+            ]
+        },
+        "MyExteriorFuelOilNo1": {
+            "resource_type": "FuelOilNo1",
+            "variable_details": [
+                {
+                    "output_variable_or_meter_name": "ExteriorEquipment:FuelOilNo1"
+                }
+            ]
+        },
+        "MyExteriorFuelOilNo2": {
+            "resource_type": "FuelOilNo2",
+            "variable_details": [
+                {
+                    "output_variable_or_meter_name": "ExteriorEquipment:FuelOilNo2"
+                }
+            ]
+        },
+        "MyExteriorGasoline": {
+            "resource_type": "Gasoline",
+            "variable_details": [
+                {
+                    "output_variable_or_meter_name": "ExteriorEquipment:Gasoline"
+                }
+            ]
+        },
+        "MyExteriorNaturalGas": {
+            "resource_type": "NaturalGas",
+            "variable_details": [
+                {
+                    "output_variable_or_meter_name": "ExteriorEquipment:NaturalGas"
+                }
+            ]
+        },
+        "MyExteriorOtherFuel1": {
+            "resource_type": "OtherFuel1",
+            "variable_details": [
+                {
+                    "output_variable_or_meter_name": "ExteriorEquipment:OtherFuel1"
+                }
+            ]
+        },
+        "MyExteriorOtherFuel2": {
+            "resource_type": "OtherFuel2",
+            "variable_details": [
+                {
+                    "output_variable_or_meter_name": "ExteriorEquipment:OtherFuel2"
+                }
+            ]
+        },
+        "MyExteriorPropane": {
+            "resource_type": "Propane",
+            "variable_details": [
+                {
+                    "output_variable_or_meter_name": "ExteriorEquipment:Propane"
+                }
+            ]
+        },
+        "MyExteriorSteam": {
+            "resource_type": "DistrictHeatingSteam",
+            "variable_details": [
+                {
+                    "output_variable_or_meter_name": "ExteriorEquipment:Steam"
+                }
+            ]
+        },
+        "MyExteriorWater": {
+            "resource_type": "Water",
+            "variable_details": [
+                {
+                    "output_variable_or_meter_name": "ExteriorEquipment:Water"
+                }
+            ]
+        }
+    },
+    "Output:Meter": {
+        "Output:Meter 1": {
+            "key_name": "Electricity:*",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter 2": {
+            "key_name": "Electricity:*",
+            "reporting_frequency": "Environment"
+        },
+        "Output:Meter 3": {
+            "key_name": "ExteriorEquipment*",
+            "reporting_frequency": "Environment"
+        }
+    },
+    "Output:Meter:Cumulative": {
+        "Output:Meter:Cumulative 1": {
+            "key_name": "Electricity:*",
+            "reporting_frequency": "Monthly"
+        }
+    },
+    "Output:Meter:MeterFileOnly": {
+        "Output:Meter:MeterFileOnly 1": {
+            "key_name": "MyExteriorElectric",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 2": {
+            "key_name": "MyExteriorNaturalGas",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 3": {
+            "key_name": "MyExteriorCoal",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 4": {
+            "key_name": "MyExteriorFuelOilNo1",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 5": {
+            "key_name": "MyExteriorFuelOilNo2",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 6": {
+            "key_name": "MyExteriorPropane",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 7": {
+            "key_name": "MyExteriorGasoline",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 8": {
+            "key_name": "MyExteriorDiesel",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 9": {
+            "key_name": "MyExteriorOtherFuel1",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 10": {
+            "key_name": "MyExteriorOtherFuel2",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 11": {
+            "key_name": "MyExteriorSteam",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 12": {
+            "key_name": "MyExteriorDistrictHeatingWater",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 13": {
+            "key_name": "MyExteriorDistrictCooling",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 14": {
+            "key_name": "MyExteriorWater",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 15": {
+            "key_name": "NaturalGas:Facility",
+            "reporting_frequency": "RunPeriod"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Exterior Lights Electricity Energy"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Exterior Equipment NaturalGas Energy"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Exterior Equipment Coal Energy"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Exterior Equipment FuelOilNo1 Energy"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Exterior Equipment FuelOilNo2 Energy"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Exterior Equipment Propane Energy"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Exterior Equipment Water Volume"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Solar Altitude Angle"
+        },
+        "Output:Variable 10": {
+            "key_value": "ON",
+            "reporting_frequency": "Daily",
+            "variable_name": "Schedule Value"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 31,
+            "end_month": 12,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "ON": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "On/Off"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "On/Off": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 1
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "Yes",
+            "run_simulation_for_weather_file_run_periods": "Yes"
+        }
+    },
+    "Site:Location": {
+        "Denver Stapleton Intl Arpt CO USA WMO=724690": {
+            "elevation": 1611.0,
+            "latitude": 39.77,
+            "longitude": -104.87,
+            "time_zone": -7.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "Denver Stapleton Intl Arpt Ann Clg 1% Condns DB=>MWB": {
+            "barometric_pressure": 83411.0,
+            "daily_dry_bulb_temperature_range": 15.2,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 32.6,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 15.6,
+            "wind_direction": 120,
+            "wind_speed": 4
+        },
+        "Denver Stapleton Intl Arpt Ann Htg 99% Condns DB": {
+            "barometric_pressure": 83411.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -16,
+            "month": 12,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -16,
+            "wind_direction": 180,
+            "wind_speed": 2.3
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 2
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "23.2"
+        }
+    }
+}

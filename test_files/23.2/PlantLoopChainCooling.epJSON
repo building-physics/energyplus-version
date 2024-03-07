@@ -1,0 +1,1080 @@
+{
+    "Branch": {
+        "SOURCE Cooling Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "SOURCE Supply Cooling Inlet Node",
+                    "component_name": "SOURCE Purchased Cooling",
+                    "component_object_type": "DistrictCooling",
+                    "component_outlet_node_name": "SOURCE Supply Cooling Outlet Node"
+                }
+            ]
+        },
+        "SOURCE Demand HX Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "SOURCE Demand HX Inlet Node",
+                    "component_name": "SOURCE to TRANSFER HX",
+                    "component_object_type": "HeatExchanger:FluidToFluid",
+                    "component_outlet_node_name": "SOURCE Demand HX Outlet Node"
+                }
+            ]
+        },
+        "SOURCE Demand Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "SOURCE Demand Inlet Node",
+                    "component_name": "SOURCE Demand Inlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "SOURCE Demand Pipe-Load Profile Node"
+                }
+            ]
+        },
+        "SOURCE Demand Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "SOURCE Demand HX-Pipe Node",
+                    "component_name": "SOURCE Demand Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "SOURCE Demand Outlet Node"
+                }
+            ]
+        },
+        "SOURCE Supply Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "SOURCE Supply Inlet Node",
+                    "component_name": "SOURCE Pump",
+                    "component_object_type": "Pump:VariableSpeed",
+                    "component_outlet_node_name": "SOURCE Supply Pump-Cooling Node"
+                }
+            ]
+        },
+        "SOURCE Supply Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "SOURCE Supply Cooling-Pipe Node",
+                    "component_name": "SOURCE Supply Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "SOURCE Supply Outlet Node"
+                }
+            ]
+        },
+        "TRANSFER Cooling Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "TRANSFER Supply Cooling Inlet Node",
+                    "component_name": "SOURCE to TRANSFER HX",
+                    "component_object_type": "HeatExchanger:FluidToFluid",
+                    "component_outlet_node_name": "TRANSFER Supply Cooling Outlet Node"
+                }
+            ]
+        },
+        "TRANSFER Demand HX Branch 1": {
+            "components": [
+                {
+                    "component_inlet_node_name": "TRANSFER Demand HX Inlet Node",
+                    "component_name": "TRANSFER to USE HX",
+                    "component_object_type": "HeatExchanger:FluidToFluid",
+                    "component_outlet_node_name": "TRANSFER Demand HX Outlet Node"
+                }
+            ]
+        },
+        "TRANSFER Demand Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "TRANSFER Demand Inlet Node",
+                    "component_name": "TRANSFER Demand Inlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "TRANSFER Demand Pipe-Load Profile Node"
+                }
+            ]
+        },
+        "TRANSFER Demand Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "TRANSFER Demand HX-Pipe Node",
+                    "component_name": "TRANSFER Demand Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "TRANSFER Demand Outlet Node"
+                }
+            ]
+        },
+        "TRANSFER Supply Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "TRANSFER Supply Inlet Node",
+                    "component_name": "TRANSFER Pump",
+                    "component_object_type": "Pump:VariableSpeed",
+                    "component_outlet_node_name": "TRANSFER Supply Pump-Heating Node"
+                }
+            ]
+        },
+        "TRANSFER Supply Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "TRANSFER Supply Cooling-Pipe Node",
+                    "component_name": "TRANSFER Supply Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "TRANSFER Supply Outlet Node"
+                }
+            ]
+        },
+        "USE Cooling Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "USE Supply Cooling Inlet Node",
+                    "component_name": "TRANSFER to USE HX",
+                    "component_object_type": "HeatExchanger:FluidToFluid",
+                    "component_outlet_node_name": "USE Supply Cooling Outlet Node"
+                }
+            ]
+        },
+        "USE Demand Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "USE Demand Inlet Node",
+                    "component_name": "USE Demand Inlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "USE Demand Pipe-Load Profile Node"
+                }
+            ]
+        },
+        "USE Demand Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "USE Demand Load Profile-Pipe Node",
+                    "component_name": "USE Demand Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "USE Demand Outlet Node"
+                }
+            ]
+        },
+        "USE Load Profile Branch 1": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Demand Load Profile 1 Inlet Node",
+                    "component_name": "Load Profile 1",
+                    "component_object_type": "LoadProfile:Plant",
+                    "component_outlet_node_name": "Demand Load Profile 1 Outlet Node"
+                }
+            ]
+        },
+        "USE Supply Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "USE Supply Inlet Node",
+                    "component_name": "USE Pump",
+                    "component_object_type": "Pump:VariableSpeed",
+                    "component_outlet_node_name": "USE Supply Pump-Heating Node"
+                }
+            ]
+        },
+        "USE Supply Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "USE Supply Heating-Pipe Node",
+                    "component_name": "USE Supply Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "USE Supply Outlet Node"
+                }
+            ]
+        }
+    },
+    "BranchList": {
+        "SOURCE Demand Branches": {
+            "branches": [
+                {
+                    "branch_name": "SOURCE Demand Inlet Branch"
+                },
+                {
+                    "branch_name": "SOURCE Demand HX Branch"
+                },
+                {
+                    "branch_name": "SOURCE Demand Outlet Branch"
+                }
+            ]
+        },
+        "SOURCE Supply Branches": {
+            "branches": [
+                {
+                    "branch_name": "SOURCE Supply Inlet Branch"
+                },
+                {
+                    "branch_name": "SOURCE Cooling Branch"
+                },
+                {
+                    "branch_name": "SOURCE Supply Outlet Branch"
+                }
+            ]
+        },
+        "TRANSFER Demand Branches": {
+            "branches": [
+                {
+                    "branch_name": "TRANSFER Demand Inlet Branch"
+                },
+                {
+                    "branch_name": "TRANSFER Demand HX Branch 1"
+                },
+                {
+                    "branch_name": "TRANSFER Demand Outlet Branch"
+                }
+            ]
+        },
+        "TRANSFER Supply Branches": {
+            "branches": [
+                {
+                    "branch_name": "TRANSFER Supply Inlet Branch"
+                },
+                {
+                    "branch_name": "TRANSFER Cooling Branch"
+                },
+                {
+                    "branch_name": "TRANSFER Supply Outlet Branch"
+                }
+            ]
+        },
+        "USE Demand Branches": {
+            "branches": [
+                {
+                    "branch_name": "USE Demand Inlet Branch"
+                },
+                {
+                    "branch_name": "USE Load Profile Branch 1"
+                },
+                {
+                    "branch_name": "USE Demand Outlet Branch"
+                }
+            ]
+        },
+        "USE Supply Branches": {
+            "branches": [
+                {
+                    "branch_name": "USE Supply Inlet Branch"
+                },
+                {
+                    "branch_name": "USE Cooling Branch"
+                },
+                {
+                    "branch_name": "USE Supply Outlet Branch"
+                }
+            ]
+        }
+    },
+    "Building": {
+        "Plant Load Profile Example": {
+            "loads_convergence_tolerance_value": 0.04,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.04,
+            "terrain": "Suburbs"
+        }
+    },
+    "Connector:Mixer": {
+        "SOURCE Demand Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "SOURCE Demand HX Branch"
+                }
+            ],
+            "outlet_branch_name": "SOURCE Demand Outlet Branch"
+        },
+        "SOURCE Supply Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "SOURCE Cooling Branch"
+                }
+            ],
+            "outlet_branch_name": "SOURCE Supply Outlet Branch"
+        },
+        "TRANSFER Demand Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "TRANSFER Demand HX Branch 1"
+                }
+            ],
+            "outlet_branch_name": "TRANSFER Demand Outlet Branch"
+        },
+        "TRANSFER Supply Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "TRANSFER Cooling Branch"
+                }
+            ],
+            "outlet_branch_name": "TRANSFER Supply Outlet Branch"
+        },
+        "USE Demand Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "USE Load Profile Branch 1"
+                }
+            ],
+            "outlet_branch_name": "USE Demand Outlet Branch"
+        },
+        "USE Supply Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "USE Cooling Branch"
+                }
+            ],
+            "outlet_branch_name": "USE Supply Outlet Branch"
+        }
+    },
+    "Connector:Splitter": {
+        "SOURCE Demand Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "SOURCE Demand HX Branch"
+                }
+            ],
+            "inlet_branch_name": "SOURCE Demand Inlet Branch"
+        },
+        "SOURCE Supply Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "SOURCE Cooling Branch"
+                }
+            ],
+            "inlet_branch_name": "SOURCE Supply Inlet Branch"
+        },
+        "TRANSFER Demand Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "TRANSFER Demand HX Branch 1"
+                }
+            ],
+            "inlet_branch_name": "TRANSFER Demand Inlet Branch"
+        },
+        "TRANSFER Supply Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "TRANSFER Cooling Branch"
+                }
+            ],
+            "inlet_branch_name": "TRANSFER Supply Inlet Branch"
+        },
+        "USE Demand Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "USE Load Profile Branch 1"
+                }
+            ],
+            "inlet_branch_name": "USE Demand Inlet Branch"
+        },
+        "USE Supply Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "USE Cooling Branch"
+                }
+            ],
+            "inlet_branch_name": "USE Supply Inlet Branch"
+        }
+    },
+    "ConnectorList": {
+        "SOURCE Demand Connectors": {
+            "connector_1_name": "SOURCE Demand Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "SOURCE Demand Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        },
+        "SOURCE Supply Connectors": {
+            "connector_1_name": "SOURCE Supply Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "SOURCE Supply Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        },
+        "TRANSFER Demand Connectors": {
+            "connector_1_name": "TRANSFER Demand Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "TRANSFER Demand Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        },
+        "TRANSFER Supply Connectors": {
+            "connector_1_name": "TRANSFER Supply Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "TRANSFER Supply Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        },
+        "USE Demand Connectors": {
+            "connector_1_name": "USE Demand Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "USE Demand Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        },
+        "USE Supply Connectors": {
+            "connector_1_name": "USE Supply Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "USE Supply Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        }
+    },
+    "DistrictCooling": {
+        "SOURCE Purchased Cooling": {
+            "chilled_water_inlet_node_name": "SOURCE Supply Cooling Inlet Node",
+            "chilled_water_outlet_node_name": "SOURCE Supply Cooling Outlet Node",
+            "nominal_capacity": 1000000
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "HeatExchanger:FluidToFluid": {
+        "SOURCE to TRANSFER HX": {
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "control_type": "OperationSchemeModulated",
+            "heat_exchange_model_type": "CrossFlowBothMixed",
+            "heat_exchanger_setpoint_node_name": "TRANSFER Supply Outlet Node",
+            "heat_exchanger_u_factor_times_area_value": 10000,
+            "heat_transfer_metering_end_use_type": "LoopToLoop",
+            "loop_demand_side_design_flow_rate": 0.003,
+            "loop_demand_side_inlet_node_name": "SOURCE Demand HX Inlet Node",
+            "loop_demand_side_outlet_node_name": "SOURCE Demand HX Outlet Node",
+            "loop_supply_side_design_flow_rate": 0.003,
+            "loop_supply_side_inlet_node_name": "TRANSFER Supply Cooling Inlet Node",
+            "loop_supply_side_outlet_node_name": "TRANSFER Supply Cooling Outlet Node",
+            "minimum_temperature_difference_to_activate_heat_exchanger": 0.2
+        },
+        "TRANSFER to USE HX": {
+            "availability_schedule_name": "AlwaysOnSchedule",
+            "control_type": "CoolingSetpointModulated",
+            "heat_exchange_model_type": "CounterFlow",
+            "heat_exchanger_setpoint_node_name": "Use Supply Outlet Node",
+            "heat_exchanger_u_factor_times_area_value": 10000,
+            "heat_transfer_metering_end_use_type": "LoopToLoop",
+            "loop_demand_side_design_flow_rate": 0.003,
+            "loop_demand_side_inlet_node_name": "TRANSFER Demand HX Inlet Node",
+            "loop_demand_side_outlet_node_name": "TRANSFER Demand HX Outlet Node",
+            "loop_supply_side_design_flow_rate": 0.003,
+            "loop_supply_side_inlet_node_name": "USE Supply Cooling Inlet Node",
+            "loop_supply_side_outlet_node_name": "USE Supply Cooling Outlet Node",
+            "minimum_temperature_difference_to_activate_heat_exchanger": 0.2
+        }
+    },
+    "LoadProfile:Plant": {
+        "Load Profile 1": {
+            "flow_rate_fraction_schedule_name": "Load Profile 1 Flow Frac Schedule",
+            "inlet_node_name": "Demand Load Profile 1 Inlet Node",
+            "load_schedule_name": "Load Profile 1 Load Schedule",
+            "outlet_node_name": "Demand Load Profile 1 Outlet Node",
+            "peak_flow_rate": 0.002,
+            "plant_loop_fluid_type": "Water"
+        }
+    },
+    "NodeList": {
+        "SOURCE Loop Setpoint Node List": {
+            "nodes": [
+                {
+                    "node_name": "SOURCE Supply Outlet Node"
+                }
+            ]
+        },
+        "TRANSFER Loop Setpoint Node List": {
+            "nodes": [
+                {
+                    "node_name": "TRANSFER Supply Outlet Node"
+                }
+            ]
+        },
+        "Use Loop Setpoint Node List": {
+            "nodes": [
+                {
+                    "node_name": "Use Supply Outlet Node"
+                }
+            ]
+        }
+    },
+    "Output:Meter:MeterFileOnly": {
+        "Output:Meter:MeterFileOnly 1": {
+            "key_name": "Cooling:DistrictCooling",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 2": {
+            "key_name": "Cooling:DistrictCooling",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 3": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 4": {
+            "key_name": "Electricity:Plant",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 5": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 6": {
+            "key_name": "Electricity:Plant",
+            "reporting_frequency": "RunPeriod"
+        }
+    },
+    "Output:SQLite": {
+        "Output:SQLite 1": {
+            "option_type": "Simple"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Plant Load Profile Mass Flow Rate"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Plant Load Profile Heat Transfer Rate"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Plant Load Profile Heat Transfer Energy"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "District Cooling Water Rate"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "District Cooling Water Energy"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fluid Heat Exchanger Heat Transfer Rate"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fluid Heat Exchanger Heat Transfer Energy"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fluid Heat Exchanger Loop Supply Side Mass Flow Rate"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fluid Heat Exchanger Loop Supply Side Inlet Temperature"
+        },
+        "Output:Variable 10": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fluid Heat Exchanger Loop Supply Side Outlet Temperature"
+        },
+        "Output:Variable 11": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fluid Heat Exchanger Loop Demand Side Mass Flow Rate"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fluid Heat Exchanger Loop Demand Side Inlet Temperature"
+        },
+        "Output:Variable 13": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fluid Heat Exchanger Loop Demand Side Outlet Temperature"
+        },
+        "Output:Variable 14": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fluid Heat Exchanger Operation Status"
+        },
+        "Output:Variable 15": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Fluid Heat Exchanger Effectiveness"
+        },
+        "Output:Variable 16": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Plant Supply Side Cooling Demand Rate"
+        },
+        "Output:Variable 17": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Plant Supply Side Heating Demand Rate"
+        },
+        "Output:Variable 18": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Plant Supply Side Inlet Mass Flow Rate"
+        },
+        "Output:Variable 19": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Plant Supply Side Inlet Temperature"
+        },
+        "Output:Variable 20": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Plant Supply Side Outlet Temperature"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "IDF"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "Pipe:Adiabatic": {
+        "SOURCE Demand Inlet Pipe": {
+            "inlet_node_name": "SOURCE Demand Inlet Node",
+            "outlet_node_name": "SOURCE Demand Pipe-Load Profile Node"
+        },
+        "SOURCE Demand Outlet Pipe": {
+            "inlet_node_name": "SOURCE Demand HX-Pipe Node",
+            "outlet_node_name": "SOURCE Demand Outlet Node"
+        },
+        "SOURCE Supply Outlet Pipe": {
+            "inlet_node_name": "SOURCE Supply Cooling-Pipe Node",
+            "outlet_node_name": "SOURCE Supply Outlet Node"
+        },
+        "TRANSFER Demand Inlet Pipe": {
+            "inlet_node_name": "TRANSFER Demand Inlet Node",
+            "outlet_node_name": "TRANSFER Demand Pipe-Load Profile Node"
+        },
+        "TRANSFER Demand Outlet Pipe": {
+            "inlet_node_name": "TRANSFER Demand HX-Pipe Node",
+            "outlet_node_name": "TRANSFER Demand Outlet Node"
+        },
+        "TRANSFER Supply Outlet Pipe": {
+            "inlet_node_name": "TRANSFER Supply Cooling-Pipe Node",
+            "outlet_node_name": "TRANSFER Supply Outlet Node"
+        },
+        "USE Demand Inlet Pipe": {
+            "inlet_node_name": "USE Demand Inlet Node",
+            "outlet_node_name": "USE Demand Pipe-Load Profile Node"
+        },
+        "USE Demand Outlet Pipe": {
+            "inlet_node_name": "USE Demand Load Profile-Pipe Node",
+            "outlet_node_name": "USE Demand Outlet Node"
+        },
+        "USE Supply Outlet Pipe": {
+            "inlet_node_name": "USE Supply Heating-Pipe Node",
+            "outlet_node_name": "USE Supply Outlet Node"
+        }
+    },
+    "PlantEquipmentList": {
+        "SOURCE Cooling Plant": {
+            "equipment": [
+                {
+                    "equipment_name": "SOURCE Purchased Cooling",
+                    "equipment_object_type": "DistrictCooling"
+                }
+            ]
+        },
+        "TRANSFER Cooling Plant": {
+            "equipment": [
+                {
+                    "equipment_name": "SOURCE to TRANSFER HX",
+                    "equipment_object_type": "HeatExchanger:FluidToFluid"
+                }
+            ]
+        },
+        "TRANSFER to USE HX equip": {
+            "equipment": [
+                {
+                    "equipment_name": "TRANSFER to USE HX",
+                    "equipment_object_type": "HeatExchanger:FluidToFluid"
+                }
+            ]
+        }
+    },
+    "PlantEquipmentOperation:CoolingLoad": {
+        "SOURCE Purchased Only": {
+            "load_range_1_lower_limit": 0,
+            "load_range_1_upper_limit": 10000000,
+            "range_1_equipment_list_name": "SOURCE Cooling Plant"
+        },
+        "TRANSFER HX": {
+            "load_range_1_lower_limit": 0,
+            "load_range_1_upper_limit": 10000000,
+            "range_1_equipment_list_name": "TRANSFER Cooling Plant"
+        }
+    },
+    "PlantEquipmentOperation:Uncontrolled": {
+        "USE operation": {
+            "equipment_list_name": "TRANSFER to USE HX equip"
+        }
+    },
+    "PlantEquipmentOperationSchemes": {
+        "SOURCE Loop Operation": {
+            "control_scheme_1_name": "SOURCE Purchased Only",
+            "control_scheme_1_object_type": "PlantEquipmentOperation:CoolingLoad",
+            "control_scheme_1_schedule_name": "AlwaysOnSchedule"
+        },
+        "TRANSFER Loop Operation": {
+            "control_scheme_1_name": "TRANSFER HX",
+            "control_scheme_1_object_type": "PlantEquipmentOperation:CoolingLoad",
+            "control_scheme_1_schedule_name": "AlwaysOnSchedule"
+        },
+        "Use Loop Operation": {
+            "control_scheme_1_name": "USE operation",
+            "control_scheme_1_object_type": "PlantEquipmentOperation:Uncontrolled",
+            "control_scheme_1_schedule_name": "AlwaysOnSchedule"
+        }
+    },
+    "PlantLoop": {
+        "SOURCE Loop": {
+            "demand_side_branch_list_name": "SOURCE Demand Branches",
+            "demand_side_connector_list_name": "SOURCE Demand Connectors",
+            "demand_side_inlet_node_name": "SOURCE Demand Inlet Node",
+            "demand_side_outlet_node_name": "SOURCE Demand Outlet Node",
+            "fluid_type": "Water",
+            "load_distribution_scheme": "Optimal",
+            "loop_temperature_setpoint_node_name": "SOURCE Supply Outlet Node",
+            "maximum_loop_flow_rate": 0.003,
+            "maximum_loop_temperature": 100,
+            "minimum_loop_flow_rate": 0,
+            "minimum_loop_temperature": 3,
+            "plant_equipment_operation_scheme_name": "SOURCE Loop Operation",
+            "plant_loop_volume": "Autocalculate",
+            "plant_side_branch_list_name": "SOURCE Supply Branches",
+            "plant_side_connector_list_name": "SOURCE Supply Connectors",
+            "plant_side_inlet_node_name": "SOURCE Supply Inlet Node",
+            "plant_side_outlet_node_name": "SOURCE Supply Outlet Node"
+        },
+        "TRANSFER Loop": {
+            "demand_side_branch_list_name": "TRANSFER Demand Branches",
+            "demand_side_connector_list_name": "TRANSFER Demand Connectors",
+            "demand_side_inlet_node_name": "TRANSFER Demand Inlet Node",
+            "demand_side_outlet_node_name": "TRANSFER Demand Outlet Node",
+            "fluid_type": "Water",
+            "load_distribution_scheme": "Optimal",
+            "loop_temperature_setpoint_node_name": "TRANSFER Supply Outlet Node",
+            "maximum_loop_flow_rate": 0.003,
+            "maximum_loop_temperature": 100,
+            "minimum_loop_flow_rate": 0,
+            "minimum_loop_temperature": 3,
+            "plant_equipment_operation_scheme_name": "TRANSFER Loop Operation",
+            "plant_loop_volume": "Autocalculate",
+            "plant_side_branch_list_name": "TRANSFER Supply Branches",
+            "plant_side_connector_list_name": "TRANSFER Supply Connectors",
+            "plant_side_inlet_node_name": "TRANSFER Supply Inlet Node",
+            "plant_side_outlet_node_name": "TRANSFER Supply Outlet Node"
+        },
+        "Use Loop": {
+            "demand_side_branch_list_name": "Use Demand Branches",
+            "demand_side_connector_list_name": "Use Demand Connectors",
+            "demand_side_inlet_node_name": "Use Demand Inlet Node",
+            "demand_side_outlet_node_name": "Use Demand Outlet Node",
+            "fluid_type": "Water",
+            "load_distribution_scheme": "Optimal",
+            "loop_temperature_setpoint_node_name": "Use Supply Outlet Node",
+            "maximum_loop_flow_rate": 0.003,
+            "maximum_loop_temperature": 100,
+            "minimum_loop_flow_rate": 0,
+            "minimum_loop_temperature": 3,
+            "plant_equipment_operation_scheme_name": "Use Loop Operation",
+            "plant_loop_volume": "Autocalculate",
+            "plant_side_branch_list_name": "Use Supply Branches",
+            "plant_side_connector_list_name": "Use Supply Connectors",
+            "plant_side_inlet_node_name": "Use Supply Inlet Node",
+            "plant_side_outlet_node_name": "Use Supply Outlet Node"
+        }
+    },
+    "Pump:VariableSpeed": {
+        "SOURCE Pump": {
+            "coefficient_1_of_the_part_load_performance_curve": 0,
+            "coefficient_2_of_the_part_load_performance_curve": 1,
+            "coefficient_3_of_the_part_load_performance_curve": 0,
+            "coefficient_4_of_the_part_load_performance_curve": 0,
+            "design_maximum_flow_rate": 0.005,
+            "design_minimum_flow_rate": 0,
+            "design_power_consumption": 2250,
+            "design_pump_head": 300000,
+            "fraction_of_motor_inefficiencies_to_fluid_stream": 0.0,
+            "inlet_node_name": "SOURCE Supply Inlet Node",
+            "motor_efficiency": 0.87,
+            "outlet_node_name": "SOURCE Supply Pump-Cooling Node",
+            "pump_control_type": "Intermittent"
+        },
+        "TRANSFER Pump": {
+            "coefficient_1_of_the_part_load_performance_curve": 0,
+            "coefficient_2_of_the_part_load_performance_curve": 1,
+            "coefficient_3_of_the_part_load_performance_curve": 0,
+            "coefficient_4_of_the_part_load_performance_curve": 0,
+            "design_maximum_flow_rate": 0.005,
+            "design_minimum_flow_rate": 0,
+            "design_power_consumption": 2250,
+            "design_pump_head": 300000,
+            "fraction_of_motor_inefficiencies_to_fluid_stream": 0.0,
+            "inlet_node_name": "TRANSFER Supply Inlet Node",
+            "motor_efficiency": 0.87,
+            "outlet_node_name": "TRANSFER Supply Pump-Heating Node",
+            "pump_control_type": "Intermittent"
+        },
+        "USE Pump": {
+            "coefficient_1_of_the_part_load_performance_curve": 0,
+            "coefficient_2_of_the_part_load_performance_curve": 1,
+            "coefficient_3_of_the_part_load_performance_curve": 0,
+            "coefficient_4_of_the_part_load_performance_curve": 0,
+            "design_maximum_flow_rate": 0.005,
+            "design_minimum_flow_rate": 0,
+            "design_power_consumption": 2250,
+            "design_pump_head": 300000,
+            "fraction_of_motor_inefficiencies_to_fluid_stream": 0.0,
+            "inlet_node_name": "USE Supply Inlet Node",
+            "motor_efficiency": 0.87,
+            "outlet_node_name": "USE Supply Pump-Heating Node",
+            "pump_control_type": "Intermittent"
+        }
+    },
+    "RunPeriod": {
+        "Annual": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 31,
+            "end_month": 12,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "AlwaysOnSchedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 1
+                }
+            ],
+            "schedule_type_limits_name": "On/Off"
+        },
+        "Load Profile 1 Flow Frac Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Load Profile 1 Load Schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 4:00"
+                },
+                {
+                    "field": -8000
+                },
+                {
+                    "field": "UNTIL: 8:00"
+                },
+                {
+                    "field": -6000
+                },
+                {
+                    "field": "UNTIL: 9:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "UNTIL: 12:00"
+                },
+                {
+                    "field": -6000
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": -10000
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "SOURCE Loop Temp Sch": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 5.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "TRANSFER Loop Temp Sch": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 7.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "USE Loop Temp Sch": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 10.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "On/Off": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 1
+        }
+    },
+    "SetpointManager:Scheduled": {
+        "SOURCE Loop Setpoint Manager": {
+            "control_variable": "Temperature",
+            "schedule_name": "SOURCE Loop Temp Sch",
+            "setpoint_node_or_nodelist_name": "SOURCE Loop Setpoint Node List"
+        },
+        "TRANSFER Loop Setpoint Manager": {
+            "control_variable": "Temperature",
+            "schedule_name": "TRANSFER Loop Temp Sch",
+            "setpoint_node_or_nodelist_name": "TRANSFER Loop Setpoint Node List"
+        },
+        "Use Loop Setpoint Manager": {
+            "control_variable": "Temperature",
+            "schedule_name": "Use Loop Temp Sch",
+            "setpoint_node_or_nodelist_name": "Use Loop Setpoint Node List"
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "Yes",
+            "run_simulation_for_weather_file_run_periods": "No"
+        }
+    },
+    "Site:Location": {
+        "CHICAGO_IL_USA_WMO_725300": {
+            "elevation": 190.0,
+            "latitude": 42.0,
+            "longitude": -87.88,
+            "time_zone": -6.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "CHICAGO Ann Clg 1% Condns DB=>MWB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 10.7,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 31.5,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23,
+            "wind_direction": 230,
+            "wind_speed": 5.3
+        },
+        "CHICAGO Ann Htg 99% Condns DB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -17.3,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -17.3,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 6
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "23.2"
+        }
+    }
+}

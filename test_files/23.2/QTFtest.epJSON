@@ -1,0 +1,560 @@
+{
+    "Building": {
+        "NONE": {
+            "loads_convergence_tolerance_value": 0.039999999,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "MinimalShadowing",
+            "temperature_convergence_tolerance_value": 0.0040000002,
+            "terrain": "Suburbs"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "Zn001:Flr001": {
+            "construction_name": "FLOOR SLAB 8 IN",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Zn001:Flr001",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": 1.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall001": {
+            "construction_name": "R13WALL",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall002": {
+            "construction_name": "R13WALL",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall003": {
+            "construction_name": "R13WALL",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn001:Wall004": {
+            "construction_name": "R13WALL",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        },
+        "Zn002:Roof001": {
+            "construction_name": "ROOF34",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 15.24,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 15.24,
+                    "vertex_z_coordinate": 4.572
+                }
+            ],
+            "view_factor_to_ground": 0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        }
+    },
+    "Construction": {
+        "FLOOR SLAB 8 IN": {
+            "outside_layer": "C10 - 8 IN HW CONCRETE"
+        },
+        "R13WALL": {
+            "outside_layer": "R13LAYER"
+        },
+        "ROOF34": {
+            "layer_2": "E3 - 3 / 8 IN FELT AND MEMBRANE",
+            "layer_3": "B5 - 1 IN DENSE INSULATION",
+            "layer_4": "C12 - 2 IN HW CONCRETE",
+            "outside_layer": "E2 - 1 / 2 IN SLAG OR STONE"
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "World",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "HeatBalanceAlgorithm": {
+        "HeatBalanceAlgorithm 1": {
+            "algorithm": "ConductionTransferFunction"
+        }
+    },
+    "Material": {
+        "B5 - 1 IN DENSE INSULATION": {
+            "conductivity": 0.04,
+            "density": 91.30524,
+            "roughness": "VeryRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.025,
+            "visible_absorptance": 0.5
+        },
+        "C10 - 8 IN HW CONCRETE": {
+            "conductivity": 1.729577,
+            "density": 2242.585,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.2033016,
+            "visible_absorptance": 0.65
+        },
+        "C12 - 2 IN HW CONCRETE": {
+            "conductivity": 1.729577,
+            "density": 2242.585,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.050901599,
+            "visible_absorptance": 0.65
+        },
+        "CONCRETE - DRIED SAND AND GRAVEL 4 IN": {
+            "conductivity": 1.29,
+            "density": 2242.58,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.6,
+            "specific_heat": 830.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1,
+            "visible_absorptance": 0.6
+        },
+        "E2 - 1 / 2 IN SLAG OR STONE": {
+            "conductivity": 1.435549,
+            "density": 881.0155,
+            "roughness": "Rough",
+            "solar_absorptance": 0.55,
+            "specific_heat": 1673.6,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.012710161,
+            "visible_absorptance": 0.55
+        },
+        "E3 - 3 / 8 IN FELT AND MEMBRANE": {
+            "conductivity": 0.1902535,
+            "density": 1121.292,
+            "roughness": "Rough",
+            "solar_absorptance": 0.75,
+            "specific_heat": 1673.6,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0095402403,
+            "visible_absorptance": 0.75
+        },
+        "FINISH FLOORING - TILE 1 / 16 IN": {
+            "conductivity": 0.17,
+            "density": 1922.21,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.5,
+            "specific_heat": 1250.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0016,
+            "visible_absorptance": 0.5
+        },
+        "GYP1": {
+            "conductivity": 0.7845,
+            "density": 1842.1221,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 988.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0127,
+            "visible_absorptance": 0.5
+        },
+        "GYP2": {
+            "conductivity": 0.7845,
+            "density": 1842.1221,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 988.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.01905,
+            "visible_absorptance": 0.5
+        },
+        "INS - EXPANDED EXT POLYSTYRENE R12 2 IN": {
+            "conductivity": 0.02,
+            "density": 56.06,
+            "roughness": "Rough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 1210.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.050000001,
+            "visible_absorptance": 0.5
+        }
+    },
+    "Material:NoMass": {
+        "R13LAYER": {
+            "roughness": "Rough",
+            "solar_absorptance": 0.75,
+            "thermal_absorptance": 0.9,
+            "thermal_resistance": 2.290965,
+            "visible_absorptance": 0.75
+        }
+    },
+    "Output:Constructions": {
+        "Output:Constructions 1": {
+            "details_type_1": "Constructions"
+        }
+    },
+    "Output:Meter:MeterFileOnly": {
+        "Output:Meter:MeterFileOnly 1": {
+            "key_name": "Carbon Equivalent:Facility",
+            "reporting_frequency": "Hourly"
+        },
+        "Output:Meter:MeterFileOnly 2": {
+            "key_name": "EnergyTransfer:Building",
+            "reporting_frequency": "Hourly"
+        },
+        "Output:Meter:MeterFileOnly 3": {
+            "key_name": "EnergyTransfer:Facility",
+            "reporting_frequency": "Hourly"
+        }
+    },
+    "Output:Surfaces:Drawing": {
+        "Output:Surfaces:Drawing 1": {
+            "report_type": "DXF"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Mean Air Temperature"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Total Internal Latent Gain Energy"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Mean Radiant Temperature"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Zone Mean Radiant Temperature"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Daily",
+            "variable_name": "Surface Inside Face Temperature"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Daily",
+            "variable_name": "Surface Outside Face Temperature"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Daily",
+            "variable_name": "Surface Inside Face Convection Heat Transfer Coefficient"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Daily",
+            "variable_name": "Surface Outside Face Convection Heat Transfer Coefficient"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 31,
+            "end_month": 12,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Fraction": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1.0
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "Yes",
+            "run_simulation_for_weather_file_run_periods": "No"
+        }
+    },
+    "Site:GroundTemperature:BuildingSurface": {
+        "Site:GroundTemperature:BuildingSurface 1": {
+            "april_ground_temperature": 19.12,
+            "august_ground_temperature": 19.32,
+            "december_ground_temperature": 18.96,
+            "february_ground_temperature": 18.92,
+            "january_ground_temperature": 18.89,
+            "july_ground_temperature": 19.07,
+            "june_ground_temperature": 19.23,
+            "march_ground_temperature": 19.02,
+            "may_ground_temperature": 19.21,
+            "november_ground_temperature": 19.13,
+            "october_ground_temperature": 19.21,
+            "september_ground_temperature": 19.09
+        }
+    },
+    "Site:Location": {
+        "DENVER_STAPLETON_CO_USA_WMO_724690": {
+            "elevation": 1611.0,
+            "latitude": 39.77,
+            "longitude": -104.87,
+            "time_zone": -7.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "DENVER_STAPLETON Ann Clg .4% Condns DB=>MWB": {
+            "barometric_pressure": 83411.0,
+            "daily_dry_bulb_temperature_range": 15.2,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 34.1,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 15.8,
+            "wind_direction": 120,
+            "wind_speed": 4
+        },
+        "DENVER_STAPLETON Ann Htg 99.6% Condns DB": {
+            "barometric_pressure": 83411.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -20,
+            "month": 12,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -20,
+            "wind_direction": 180,
+            "wind_speed": 2.3
+        }
+    },
+    "SurfaceConvectionAlgorithm:Inside": {
+        "SurfaceConvectionAlgorithm:Inside 1": {
+            "algorithm": "TARP"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Outside": {
+        "SurfaceConvectionAlgorithm:Outside 1": {
+            "algorithm": "DOE-2"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 1
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "23.2"
+        }
+    },
+    "Zone": {
+        "ZONE ONE": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0.0,
+            "floor_area": 232.26,
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 0.0,
+            "y_origin": 0.0,
+            "z_origin": 0.0
+        }
+    }
+}

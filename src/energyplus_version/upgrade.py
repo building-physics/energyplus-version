@@ -25,6 +25,8 @@ def do_nothing(input):
 def do_not_add(object: dict, all_the_objects: dict)->None:
     return None
 
+
+
 class ChangeFieldName(Change):
     def __init__(self, object: str, old_name: str, new_name: str):
         self.object = object
@@ -45,26 +47,26 @@ class ChangeFieldName(Change):
     def describe(self) -> str:
         return 'Change the field named "%s" to "%s".' % (self.old_name, self.new_name)
 
-class NewComputedField(Change):
-    def __init__(self, object: str, name: str, compute: Callable[[dict, dict], int|float|str|None]=do_not_add):
+class AddComputedField(Change):
+    def __init__(self, object: str, field: str, compute: Callable[[dict, dict], int|float|str|None]=do_not_add):
         self.object = object
-        self.name = name
+        self.field = field
         self.compute = compute
-    def generate_patch(self, objects: dict) -> list:
+    def generate_patch(self, model: dict) -> list:
         patch = []
-        if self.object in objects:
-            for name, object in objects[self.object].items():
-                value = self.compute(object, objects)
+        if self.object in model:
+            for name, object in model[self.object].items():
+                value = self.compute(self.object, model,name) 
                 if value is not None:
                     patch.extend(self._apply(name, value))
         return patch
     def _apply(self, object_name:str, value:str) -> list:
-        path = '/%s/%s/%s' % (self.object, object_name, self.name)
+        path = '/%s/%s/%s' % (self.object, object_name, self.field)
         return [{'op': 'add', 'path': path, 'value': value}]
     def valid(self, object) -> bool:
         return self.old_name in object
     def describe(self) -> str:
-        return 'Add the field named "%s" with a computed value.' % self.name
+        return 'Add the field named "%s" with a computed value.' % self.field
     
 class RemoveField(Change):
     def __init__(self, object: str, field: str, check_value=None):
@@ -89,6 +91,8 @@ class RemoveField(Change):
     def describe(self) -> str:
         return 'Remove the field named "%s".' % self.field
 
+
+            
 class MapValues(Change):
     def __init__(self, object: str, field: str, value_map: dict):
         self.object = object

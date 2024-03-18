@@ -113,7 +113,7 @@ def double_the_new_field(object, objects):
 def test_new_double_field():
     objs = {'Test': {'test_one': {'field_one': 1.0, 'field_two': 2.0},
                      'test_two': {'field_two': 2.0}}}
-    change = energyplus_version.NewComputedField('Test', 'field_three', compute=double_the_new_field)
+    change = energyplus_version.AddComputedField('Test', 'field_three', compute=double_the_new_field)
     patch = change.generate_patch(objs)
     assert len(patch) == 1
     expected = [{'op': 'add', 'path': '/Test/test_one/field_three', 'value': 2.0}]

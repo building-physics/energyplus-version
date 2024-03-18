@@ -25,8 +25,6 @@ def do_nothing(input):
 def do_not_add(object: dict, all_the_objects: dict)->None:
     return None
 
-
-
 class ChangeFieldName(Change):
     def __init__(self, object: str, old_name: str, new_name: str):
         self.object = object
@@ -56,7 +54,7 @@ class AddComputedField(Change):
         patch = []
         if self.object in model:
             for name, object in model[self.object].items():
-                value = self.compute(self.object, model,name) 
+                value = self.compute(object, model) 
                 if value is not None:
                     patch.extend(self._apply(name, value))
         return patch
@@ -90,9 +88,7 @@ class RemoveField(Change):
         return patch
     def describe(self) -> str:
         return 'Remove the field named "%s".' % self.field
-
-
-            
+   
 class MapValues(Change):
     def __init__(self, object: str, field: str, value_map: dict):
         self.object = object

@@ -3,24 +3,19 @@
 # SPDX-License-Identifier: BSD-3-Clause
 import energyplus_version as ev
 
-def compute_no_load_supply_air_flow_rate_control_set_to_low_speed(objects,model,name):
-     
-    selected_obj= model[objects][name]
-    if objects == "ZoneHVAC:PackagedTerminalAirConditioner":
-        if selected_obj["cooling_coil_object_type"]=="Coil:Cooling:DX:VariableSpeed":
-            return "Yes"
-        else:
-            return "No"
-        
-    elif objects in ["AirloopHVAC:UnitarySystem","ZoneHVAC:PackagedTerminalHeatPump"]:
-        if selected_obj["cooling_coil_object_type"]=="Coil:Cooling:DX:VariableSpeed":
-            return "Yes"
-        elif selected_obj["heating_coil_object_type"]=="Coil:Heating:DX:VariableSpeed":
-            return "Yes"
-        else:
-            return "No"
-    elif objects == "ZoneHVAC:WaterToAirHeatPump":
-        return "No"
+def compute_field_PTAC(object, model):
+    if object["cooling_coil_object_type"] == "Coil:Cooling:DX:VariableSpeed":
+        return "Yes"
+    return "No"
+
+def compute_field_PTHP(object, model):
+    if object["cooling_coil_object_type"]=="Coil:Cooling:DX:VariableSpeed":
+        return "Yes"
+    return "No"
+    
+def compute_field_WAHP(object, model):
+    return "No"
+
     
 HXA2ASL_fields = {"sensible_effectiveness_at_75_heating_air_flow": "sensible_effectiveness_at_100_heating_air_flow",
                   "latent_effectiveness_at_75_heating_air_flow": "latent_effectiveness_at_100_heating_air_flow",
@@ -48,18 +43,25 @@ class ChangeHXA2ASL(ev.Change):
                                 table_added = True
                                 curve_name = '%s_%d' % (name, self.curve_id),
                                 curve_dict = self.curve_object(object[field_100_name], object[field_75_name])
-                                # Maybe need to add the object type here
-                                path = '/Table:Lookup/%s' % curve_name
+                                # Add at one level higher if there are not Table:Lookup objects
+                                if 'Table:Lookup' not in model:
+                                    curve_dict = {curve_name: curve_dict}
+                                    path = '/Table:Lookup'
+                                else:
+                                    path = '/Table:Lookup/%s' % curve_name
                                 patch.append({'op': 'add', 'path': path, 'value': curve_dict})
         if table_added:
-            # Maybe need to add the object type here
-            path = '/Table:IndependentVariableList/effectiveness_IndependentVariableList'
-            patch.append({'op': 'add', 'path': path, 'value': {
+            value = {
                 'independent_variable_1_name': 'airFlowRatio' # This is probably wrong, hopefully
-            }})
-            # Maybe need to add the object type here
-            path = '/Table:IndependentVariable/airflowRatio'
-            patch.append({'op': 'add', 'path': path, 'value': {
+            }
+            path = '/Table:IndependentVariableList/effectiveness_IndependentVariableList'
+            # Add at one level higher if there are no previous objects
+            if 'Table:IndependentVariableList' not in model:
+                value = {'effectiveness_IndependentVariableList': value}
+                path = '/Table:IndependentVariableList'
+            patch.append({'op': 'add', 'path': path, 'value': value})
+
+            value = {
                 'interpolation_method': 'Linear',
                 'extrapolation_method': 'Linear',
                 'minimum_value': 0.0,
@@ -67,7 +69,12 @@ class ChangeHXA2ASL(ev.Change):
                 'unit_type': 'Dimensionless',
                 'value_1': 0.75,
                 'value_2': 1.0
-            }})
+            }
+            path = '/Table:IndependentVariable/airflowRatio'
+            if 'Table:IndependentVariable' not in model:
+                value = {'airflowRatio': value}
+                path = '/Table:IndependentVariable'
+            patch.append({'op': 'add', 'path': path, 'value': value})
         return patch
     def curve_object(self, e100_i:float, e75_i:float)->dict:
         return {
@@ -112,12 +119,12 @@ class Upgrade(ev.EnergyPlusUpgrade):
             
             ev.AddComputedField("ZoneHVAC:PackagedTerminalAirConditioner",
                                 "no_load_supply_air_flow_rate_control_set_to_low_speed",
-                                compute_no_load_supply_air_flow_rate_control_set_to_low_speed),
+                                compute_field_PTAC),
             ev.AddComputedField("ZoneHVAC:PackagedTerminalHeatPump",
                                 "no_load_supply_air_flow_rate_control_set_to_low_speed",
-                                compute_no_load_supply_air_flow_rate_control_set_to_low_speed),
+                                compute_field_PTHP),
             ev.AddComputedField("ZoneHVAC:WaterToAirHeatPump", "no_load_supply_air_flow_rate_control_set_to_low_speed",
-                                compute_no_load_supply_air_flow_rate_control_set_to_low_speed),
+                                compute_field_WAHP),
             ChangeHXA2ASL()
         ]
 

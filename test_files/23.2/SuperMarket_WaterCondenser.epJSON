@@ -1,0 +1,3943 @@
+{
+    "AirLoopHVAC": {
+        "Supermarket HVAC System": {
+            "availability_manager_list_name": "DXSystem 1 Avail List",
+            "branch_list_name": "Air Loop Branches",
+            "controller_list_name": "Air Loop Controllers",
+            "demand_side_inlet_node_names": "Zone Equipment Inlet Node",
+            "demand_side_outlet_node_name": "Return Air Mixer Outlet",
+            "design_supply_air_flow_rate": 5.5,
+            "supply_side_inlet_node_name": "Outdoor Air Mixer Inlet Node",
+            "supply_side_outlet_node_names": "Air Loop Outlet Node"
+        }
+    },
+    "AirLoopHVAC:ControllerList": {
+        "Air Loop Controllers": {
+            "controller_1_name": "Air Loop Controller",
+            "controller_1_object_type": "Controller:WaterCoil"
+        },
+        "OA Sys 1 Controllers": {
+            "controller_1_name": "OA Controller 1",
+            "controller_1_object_type": "Controller:OutdoorAir"
+        }
+    },
+    "AirLoopHVAC:OutdoorAirSystem": {
+        "OA Sys 1": {
+            "controller_list_name": "OA Sys 1 Controllers",
+            "outdoor_air_equipment_list_name": "OA Sys 1 Equipment"
+        }
+    },
+    "AirLoopHVAC:OutdoorAirSystem:EquipmentList": {
+        "OA Sys 1 Equipment": {
+            "component_1_name": "OA Mixing Box 1",
+            "component_1_object_type": "OutdoorAir:Mixer"
+        }
+    },
+    "AirLoopHVAC:ReturnPath": {
+        "FurnaceReturnPath": {
+            "components": [
+                {
+                    "component_name": "Zone Return Air Mixer",
+                    "component_object_type": "AirLoopHVAC:ZoneMixer"
+                }
+            ],
+            "return_air_path_outlet_node_name": "Return Air Mixer Outlet"
+        }
+    },
+    "AirLoopHVAC:SupplyPath": {
+        "FurnaceSupplyPath": {
+            "components": [
+                {
+                    "component_name": "Zone Supply Air Splitter",
+                    "component_object_type": "AirLoopHVAC:ZoneSplitter"
+                }
+            ],
+            "supply_air_path_inlet_node_name": "Zone Equipment Inlet Node"
+        }
+    },
+    "AirLoopHVAC:ZoneMixer": {
+        "Zone Return Air Mixer": {
+            "nodes": [
+                {
+                    "inlet_node_name": "SalesFloor Outlet Node"
+                },
+                {
+                    "inlet_node_name": "BackRoom Outlet Node"
+                }
+            ],
+            "outlet_node_name": "Return Air Mixer Outlet"
+        }
+    },
+    "AirLoopHVAC:ZoneSplitter": {
+        "Zone Supply Air Splitter": {
+            "inlet_node_name": "Zone Equipment Inlet Node",
+            "nodes": [
+                {
+                    "outlet_node_name": "SalesFloor Inlet Node ATInlet"
+                },
+                {
+                    "outlet_node_name": "BackRoom Inlet Node ATInlet"
+                }
+            ]
+        }
+    },
+    "AirTerminal:SingleDuct:ConstantVolume:NoReheat": {
+        "Zone1DirectAir": {
+            "air_inlet_node_name": "SalesFloor Inlet Node ATInlet",
+            "air_outlet_node_name": "SalesFloor Inlet Node",
+            "availability_schedule_name": "FanAndCoilAvailSched",
+            "maximum_air_flow_rate": 5.225
+        },
+        "Zone2DirectAir": {
+            "air_inlet_node_name": "BackRoom Inlet Node ATInlet",
+            "air_outlet_node_name": "BackRoom Inlet Node",
+            "availability_schedule_name": "FanAndCoilAvailSched",
+            "maximum_air_flow_rate": 0.275
+        }
+    },
+    "AvailabilityManager:Scheduled": {
+        "DXSystem 1 Avail": {
+            "schedule_name": "FanAndCoilAvailSched"
+        },
+        "Outdoor Air 1 Avail": {
+            "schedule_name": "OutdoorAirAvailSched"
+        }
+    },
+    "AvailabilityManagerAssignmentList": {
+        "DXSystem 1 Avail List": {
+            "managers": [
+                {
+                    "availability_manager_name": "DXSystem 1 Avail",
+                    "availability_manager_object_type": "AvailabilityManager:Scheduled"
+                }
+            ]
+        },
+        "Outdoor Air 1 Avail List": {
+            "managers": [
+                {
+                    "availability_manager_name": "Outdoor Air 1 Avail",
+                    "availability_manager_object_type": "AvailabilityManager:Scheduled"
+                }
+            ]
+        }
+    },
+    "Branch": {
+        "Air Loop Main Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Outdoor Air Mixer Inlet Node",
+                    "component_name": "OA Sys 1",
+                    "component_object_type": "AirLoopHVAC:OutdoorAirSystem",
+                    "component_outlet_node_name": "Mixed Air Node"
+                },
+                {
+                    "component_inlet_node_name": "Mixed Air Node",
+                    "component_name": "Supply Fan 1",
+                    "component_object_type": "Fan:ConstantVolume",
+                    "component_outlet_node_name": "DX Coil Air Inlet Node"
+                },
+                {
+                    "component_inlet_node_name": "DX Coil Air Inlet Node",
+                    "component_name": "Supermarket Rooftop DX",
+                    "component_object_type": "CoilSystem:Cooling:DX",
+                    "component_outlet_node_name": "DX Coil Air Outlet Node"
+                },
+                {
+                    "component_inlet_node_name": "DX Coil Air Outlet Node",
+                    "component_name": "Air Loop Heating Coil",
+                    "component_object_type": "Coil:Heating:Water",
+                    "component_outlet_node_name": "Air Loop Outlet Node"
+                }
+            ]
+        },
+        "Condenser Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Condenser Inlet Node",
+                    "component_name": "MediumTempRack",
+                    "component_object_type": "Refrigeration:CompressorRack",
+                    "component_outlet_node_name": "Condenser Outlet Node"
+                }
+            ]
+        },
+        "Cooling Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Water Heater Source Inlet Node",
+                    "component_name": "Water Heater 1",
+                    "component_object_type": "WaterHeater:Mixed",
+                    "component_outlet_node_name": "Supply Cooling Inlet Node"
+                },
+                {
+                    "component_inlet_node_name": "Supply Cooling Inlet Node",
+                    "component_name": "Cooling Tower 1",
+                    "component_object_type": "CoolingTower:SingleSpeed",
+                    "component_outlet_node_name": "Supply Cooling Outlet Node"
+                }
+            ]
+        },
+        "Demand Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Demand Inlet Node",
+                    "component_name": "Demand Inlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Demand Pipe-Cond Node"
+                }
+            ]
+        },
+        "Demand Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Demand Cond-Pipe Node",
+                    "component_name": "Demand Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Demand Outlet Node"
+                }
+            ]
+        },
+        "HW Coil Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Heating Coil Water Inlet Node",
+                    "component_name": "Air Loop Heating Coil",
+                    "component_object_type": "Coil:Heating:Water",
+                    "component_outlet_node_name": "Heating Coil Water Outlet Node"
+                }
+            ]
+        },
+        "HW Demand Bypass": {
+            "components": [
+                {
+                    "component_inlet_node_name": "HW Demand Bypass Inlet Node",
+                    "component_name": "HW Demand Bypass Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "HW Demand Bypass Outlet Node"
+                }
+            ]
+        },
+        "HW Demand Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "HW Demand Inlet Node",
+                    "component_name": "HW Demand Inlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "HW Demand Pipe-Coil Node"
+                }
+            ]
+        },
+        "HW Demand Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "HW Demand Coil-Pipe Node",
+                    "component_name": "HW Demand Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "HW Demand Outlet Node"
+                }
+            ]
+        },
+        "HW Supply Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "HW Supply Inlet Node",
+                    "component_name": "Pump 2",
+                    "component_object_type": "Pump:VariableSpeed",
+                    "component_outlet_node_name": "HW Supply Pump-Heating Node"
+                }
+            ]
+        },
+        "HW Supply Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "HW Supply Heating-Pipe Node",
+                    "component_name": "HW Supply Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "HW Supply Outlet Node"
+                }
+            ]
+        },
+        "Supply Inlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Supply Inlet Node",
+                    "component_name": "Pump 1",
+                    "component_object_type": "Pump:VariableSpeed",
+                    "component_outlet_node_name": "Supply Pump-Cooling Node"
+                }
+            ]
+        },
+        "Supply Outlet Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Supply Cooling-Pipe Node",
+                    "component_name": "Supply Outlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Supply Outlet Node"
+                }
+            ]
+        },
+        "Water Heater Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "HW Supply Heating Inlet Node",
+                    "component_name": "Water Heater 1",
+                    "component_object_type": "WaterHeater:Mixed",
+                    "component_outlet_node_name": "HW Supply Heating Outlet Node"
+                }
+            ]
+        }
+    },
+    "BranchList": {
+        "Air Loop Branches": {
+            "branches": [
+                {
+                    "branch_name": "Air Loop Main Branch"
+                }
+            ]
+        },
+        "Demand Branches": {
+            "branches": [
+                {
+                    "branch_name": "Demand Inlet Branch"
+                },
+                {
+                    "branch_name": "Condenser Branch"
+                },
+                {
+                    "branch_name": "Demand Outlet Branch"
+                }
+            ]
+        },
+        "HW Demand Branches": {
+            "branches": [
+                {
+                    "branch_name": "HW Demand Inlet Branch"
+                },
+                {
+                    "branch_name": "HW Coil Branch"
+                },
+                {
+                    "branch_name": "HW Demand Bypass"
+                },
+                {
+                    "branch_name": "HW Demand Outlet Branch"
+                }
+            ]
+        },
+        "HW Supply Branches": {
+            "branches": [
+                {
+                    "branch_name": "HW Supply Inlet Branch"
+                },
+                {
+                    "branch_name": "Water Heater Branch"
+                },
+                {
+                    "branch_name": "HW Supply Outlet Branch"
+                }
+            ]
+        },
+        "Supply Branches": {
+            "branches": [
+                {
+                    "branch_name": "Supply Inlet Branch"
+                },
+                {
+                    "branch_name": "Cooling Branch"
+                },
+                {
+                    "branch_name": "Supply Outlet Branch"
+                }
+            ]
+        }
+    },
+    "Building": {
+        "None": {
+            "loads_convergence_tolerance_value": 0.04,
+            "maximum_number_of_warmup_days": 50,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0,
+            "solar_distribution": "MinimalShadowing",
+            "temperature_convergence_tolerance_value": 0.4,
+            "terrain": "Suburbs"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "Foundation_BackRoom": {
+            "construction_name": "BotFloorConstruction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Ground",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": 0,
+            "wind_exposure": "NoWind",
+            "zone_name": "BackRoom"
+        },
+        "Foundation_SalesFloor": {
+            "construction_name": "BotFloorConstruction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Ground",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 45.71777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 45.71777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "view_factor_to_ground": 0,
+            "wind_exposure": "NoWind",
+            "zone_name": "SalesFloor"
+        },
+        "Main_ExtWall_a_b": {
+            "construction_name": "FaceBrkIns4LWConcBlkGyp_R-11",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 4.266992
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.266992
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "BackRoom"
+        },
+        "Main_ExtWall_b_c": {
+            "construction_name": "FaceBrkIns4LWConcBlkGyp_R-11",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 4.266992
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 4.266992
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "BackRoom"
+        },
+        "Main_ExtWall_c_d": {
+            "construction_name": "FaceBrkIns4LWConcBlkGyp_R-11",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 45.71777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 4.266992
+                },
+                {
+                    "vertex_x_coordinate": 45.71777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 4.266992
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "SalesFloor"
+        },
+        "Main_ExtWall_d_e": {
+            "construction_name": "FaceBrkIns4LWConcBlkGyp_R-11",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 45.71777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.266992
+                },
+                {
+                    "vertex_x_coordinate": 45.71777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 45.71777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 45.71777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 4.266992
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "SalesFloor"
+        },
+        "Main_ExtWall_e_f": {
+            "construction_name": "FaceBrkIns4LWConcBlkGyp_R-11",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.266992
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 45.71777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 45.71777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.266992
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "SalesFloor"
+        },
+        "Main_ExtWall_f_a": {
+            "construction_name": "FaceBrkIns4LWConcBlkGyp_R-11",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.266992
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.266992
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "BackRoom"
+        },
+        "Main_IntWall": {
+            "construction_name": "IntWallConstruction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Main_IntWall_mirror",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.266992
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 4.266992
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "BackRoom"
+        },
+        "Main_IntWall_mirror": {
+            "construction_name": "IntWallConstruction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "Main_IntWall",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 4.266992
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.266992
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "NoWind",
+            "zone_name": "SalesFloor"
+        },
+        "RoofAbove_BackRoom": {
+            "construction_name": "SlagFeltIns6LWConcGapAcoTile_R-11",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.266992
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 4.266992
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 4.266992
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.266992
+                }
+            ],
+            "view_factor_to_ground": 0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "BackRoom"
+        },
+        "RoofAbove_SalesFloor": {
+            "construction_name": "SlagFeltIns6LWConcGapAcoTile_R-11",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 45.71777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.266992
+                },
+                {
+                    "vertex_x_coordinate": 45.71777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 4.266992
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 45.71777,
+                    "vertex_z_coordinate": 4.266992
+                },
+                {
+                    "vertex_x_coordinate": 4.571777,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 4.266992
+                }
+            ],
+            "view_factor_to_ground": 0,
+            "wind_exposure": "WindExposed",
+            "zone_name": "SalesFloor"
+        }
+    },
+    "Coil:Cooling:DX:SingleSpeed": {
+        "ACDXCoil 1": {
+            "2023_rated_evaporator_fan_power_per_volume_flow_rate": 934.4,
+            "air_inlet_node_name": "DX Coil Air Inlet Node",
+            "air_outlet_node_name": "DX Coil Air Outlet Node",
+            "availability_schedule_name": "FanAndCoilAvailSched",
+            "energy_input_ratio_function_of_flow_fraction_curve_name": "WindACEIRFFF",
+            "energy_input_ratio_function_of_temperature_curve_name": "WindACEIRFT",
+            "gross_rated_cooling_cop": 3.0,
+            "gross_rated_sensible_heat_ratio": 0.8,
+            "gross_rated_total_cooling_capacity": 100000,
+            "latent_capacity_time_constant": 45.0,
+            "maximum_cycling_rate": 3.0,
+            "nominal_time_for_condensate_removal_to_begin": 1000,
+            "part_load_fraction_correlation_curve_name": "WindACPLFFPLR",
+            "rated_air_flow_rate": 5.5,
+            "ratio_of_initial_moisture_evaporation_rate_and_steady_state_latent_capacity": 1.5,
+            "total_cooling_capacity_function_of_flow_fraction_curve_name": "WindACCoolCapFFF",
+            "total_cooling_capacity_function_of_temperature_curve_name": "WindACCoolCapFT"
+        }
+    },
+    "Coil:Heating:Water": {
+        "Air Loop Heating Coil": {
+            "air_inlet_node_name": "DX Coil Air Outlet Node",
+            "air_outlet_node_name": "Air Loop Outlet Node",
+            "availability_schedule_name": "FanAndCoilAvailSched",
+            "maximum_water_flow_rate": 0.0008,
+            "performance_input_method": "UFactorTimesAreaAndDesignWaterFlowRate",
+            "rated_inlet_air_temperature": 16.6,
+            "rated_inlet_water_temperature": 82.2,
+            "rated_outlet_air_temperature": 32.2,
+            "rated_outlet_water_temperature": 71.1,
+            "u_factor_times_area_value": 500,
+            "water_inlet_node_name": "Heating Coil Water Inlet Node",
+            "water_outlet_node_name": "Heating Coil Water Outlet Node"
+        }
+    },
+    "CoilSystem:Cooling:DX": {
+        "Supermarket Rooftop DX": {
+            "availability_schedule_name": "FanAndCoilAvailSched",
+            "cooling_coil_name": "ACDXCoil 1",
+            "cooling_coil_object_type": "Coil:Cooling:DX:SingleSpeed",
+            "dehumidification_control_type": "CoolReheat",
+            "dx_cooling_coil_system_inlet_node_name": "DX Coil Air Inlet Node",
+            "dx_cooling_coil_system_outlet_node_name": "DX Coil Air Outlet Node",
+            "dx_cooling_coil_system_sensor_node_name": "DX Coil Air Outlet Node",
+            "run_on_latent_load": "No",
+            "run_on_sensible_load": "Yes"
+        }
+    },
+    "Connector:Mixer": {
+        "Demand Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "Condenser Branch"
+                }
+            ],
+            "outlet_branch_name": "Demand Outlet Branch"
+        },
+        "HW Demand Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "HW Coil Branch"
+                },
+                {
+                    "inlet_branch_name": "HW Demand Bypass"
+                }
+            ],
+            "outlet_branch_name": "HW Demand Outlet Branch"
+        },
+        "HW Supply Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "Water Heater Branch"
+                }
+            ],
+            "outlet_branch_name": "HW Supply Outlet Branch"
+        },
+        "Supply Mixer": {
+            "branches": [
+                {
+                    "inlet_branch_name": "Cooling Branch"
+                }
+            ],
+            "outlet_branch_name": "Supply Outlet Branch"
+        }
+    },
+    "Connector:Splitter": {
+        "Demand Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "Condenser Branch"
+                }
+            ],
+            "inlet_branch_name": "Demand Inlet Branch"
+        },
+        "HW Demand Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "HW Coil Branch"
+                },
+                {
+                    "outlet_branch_name": "HW Demand Bypass"
+                }
+            ],
+            "inlet_branch_name": "HW Demand Inlet Branch"
+        },
+        "HW Supply Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "Water Heater Branch"
+                }
+            ],
+            "inlet_branch_name": "HW Supply Inlet Branch"
+        },
+        "Supply Splitter": {
+            "branches": [
+                {
+                    "outlet_branch_name": "Cooling Branch"
+                }
+            ],
+            "inlet_branch_name": "Supply Inlet Branch"
+        }
+    },
+    "ConnectorList": {
+        "Demand Connectors": {
+            "connector_1_name": "Demand Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "Demand Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        },
+        "HW Demand Connectors": {
+            "connector_1_name": "HW Demand Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "HW Demand Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        },
+        "HW Supply Connectors": {
+            "connector_1_name": "HW Supply Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "HW Supply Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        },
+        "Supply Connectors": {
+            "connector_1_name": "Supply Splitter",
+            "connector_1_object_type": "Connector:Splitter",
+            "connector_2_name": "Supply Mixer",
+            "connector_2_object_type": "Connector:Mixer"
+        }
+    },
+    "Construction": {
+        "BotFloorConstruction": {
+            "outside_layer": "StoreSlab"
+        },
+        "DoorConstruction": {
+            "outside_layer": "WoodForDoor"
+        },
+        "FaceBrkIns4LWConcBlkGyp_R-11": {
+            "layer_2": "R-11",
+            "layer_3": "HF-C2",
+            "layer_4": "HF-E1",
+            "outside_layer": "HF-A2"
+        },
+        "FurnitureConstruction": {
+            "outside_layer": "FurnitureMaterial"
+        },
+        "IntWallConstruction": {
+            "layer_2": "AirGap",
+            "layer_3": "ConcForInterior",
+            "layer_4": "AirGap",
+            "layer_5": "GypForInterior",
+            "outside_layer": "GypForInterior"
+        },
+        "SlagFeltIns6LWConcGapAcoTile_R-11": {
+            "layer_2": "HF-E3",
+            "layer_3": "R-11",
+            "layer_4": "HF-C15",
+            "layer_5": "AirGap",
+            "layer_6": "HF-E5",
+            "outside_layer": "HF-E2"
+        },
+        "WinLib_1001": {
+            "outside_layer": "CLEAR 6MM"
+        },
+        "WinLib_2003": {
+            "layer_2": "AIR 6MM",
+            "layer_3": "CLEAR 6MM",
+            "outside_layer": "CLEAR 6MM"
+        }
+    },
+    "Controller:OutdoorAir": {
+        "OA Controller 1": {
+            "actuator_node_name": "Outside Air Inlet Node",
+            "economizer_control_action_type": "ModulateFlow",
+            "economizer_control_type": "NoEconomizer",
+            "lockout_type": "NoLockout",
+            "maximum_outdoor_air_flow_rate": 1.4,
+            "minimum_limit_type": "FixedMinimum",
+            "minimum_outdoor_air_flow_rate": 0.25,
+            "minimum_outdoor_air_schedule_name": "OAFractionSched",
+            "mixed_air_node_name": "Mixed Air Node",
+            "relief_air_outlet_node_name": "Relief Air Outlet Node",
+            "return_air_node_name": "Outdoor Air Mixer Inlet Node"
+        }
+    },
+    "Controller:WaterCoil": {
+        "Air Loop Controller": {
+            "action": "Normal",
+            "actuator_node_name": "Heating Coil Water Inlet Node",
+            "actuator_variable": "Flow",
+            "control_variable": "Temperature",
+            "controller_convergence_tolerance": 0.1,
+            "maximum_actuated_flow": 0.0008,
+            "minimum_actuated_flow": 1e-07,
+            "sensor_node_name": "Air Loop Outlet Node"
+        }
+    },
+    "ConvergenceLimits": {
+        "ConvergenceLimits 1": {
+            "maximum_hvac_iterations": 20,
+            "maximum_plant_iterations": 8,
+            "minimum_plant_iterations": 4,
+            "minimum_system_timestep": 1
+        }
+    },
+    "CoolingTower:SingleSpeed": {
+        "Cooling Tower 1": {
+            "blowdown_concentration_ratio": 3,
+            "design_air_flow_rate": "Autosize",
+            "design_fan_power": 1000,
+            "drift_loss_percent": 0.008,
+            "nominal_capacity": 100000,
+            "performance_input_method": "NominalCapacity",
+            "water_inlet_node_name": "Supply Cooling Inlet Node",
+            "water_outlet_node_name": "Supply Cooling Outlet Node"
+        }
+    },
+    "Curve:Biquadratic": {
+        "WindACCoolCapFT": {
+            "coefficient1_constant": 0.942587793,
+            "coefficient2_x": 0.009543347,
+            "coefficient3_x_2": 0.00068377,
+            "coefficient4_y": -0.011042676,
+            "coefficient5_y_2": 5.249e-06,
+            "coefficient6_x_y": -9.72e-06,
+            "input_unit_type_for_x": "Temperature",
+            "input_unit_type_for_y": "Temperature",
+            "maximum_value_of_x": 23.88889,
+            "maximum_value_of_y": 46.11111,
+            "minimum_value_of_x": 12.77778,
+            "minimum_value_of_y": 18.0,
+            "output_unit_type": "Dimensionless"
+        },
+        "WindACEIRFT": {
+            "coefficient1_constant": 0.342414409,
+            "coefficient2_x": 0.034885008,
+            "coefficient3_x_2": -0.0006237,
+            "coefficient4_y": 0.004977216,
+            "coefficient5_y_2": 0.000437951,
+            "coefficient6_x_y": -0.000728028,
+            "input_unit_type_for_x": "Temperature",
+            "input_unit_type_for_y": "Temperature",
+            "maximum_value_of_x": 23.88889,
+            "maximum_value_of_y": 46.11111,
+            "minimum_value_of_x": 12.77778,
+            "minimum_value_of_y": 18.0,
+            "output_unit_type": "Dimensionless"
+        }
+    },
+    "Curve:Cubic": {
+        "ConstantMult": {
+            "coefficient1_constant": 0.0,
+            "coefficient2_x": 0.0,
+            "coefficient3_x_2": 0.0,
+            "coefficient4_x_3": 0.0,
+            "maximum_value_of_x": 20.0,
+            "minimum_value_of_x": -35.0
+        },
+        "MultiShelfVertical_DefrostEnergyMult": {
+            "coefficient1_constant": 0.024597538,
+            "coefficient2_x": 0.000764389,
+            "coefficient3_x_2": -3.86374e-05,
+            "coefficient4_x_3": 7.4568e-07,
+            "maximum_value_of_x": 20.0,
+            "minimum_value_of_x": -35.0
+        },
+        "MultiShelfVertical_LatentEnergyMult": {
+            "coefficient1_constant": 0.026526281,
+            "coefficient2_x": 0.001078032,
+            "coefficient3_x_2": -6.02558e-05,
+            "coefficient4_x_3": 1.23732e-06,
+            "maximum_value_of_x": 20.0,
+            "minimum_value_of_x": -35.0
+        },
+        "RHCubic_DefrostEnergyMult": {
+            "coefficient1_constant": -0.5796,
+            "coefficient2_x": 0.0288,
+            "coefficient3_x_2": 0.0,
+            "coefficient4_x_3": 0.0,
+            "maximum_value_of_x": 80.0,
+            "minimum_value_of_x": 20.13
+        },
+        "RHCubic_LatentEnergyMult": {
+            "coefficient1_constant": -0.4641,
+            "coefficient2_x": 0.0268,
+            "coefficient3_x_2": 0.0,
+            "coefficient4_x_3": 0.0,
+            "maximum_value_of_x": 80.0,
+            "minimum_value_of_x": 17.32
+        },
+        "SingleShelfHorizontal_DefrostEnergyMult": {
+            "coefficient1_constant": 0.023632177,
+            "coefficient2_x": 0.0006232,
+            "coefficient3_x_2": 2.83282e-05,
+            "coefficient4_x_3": 4.40351e-07,
+            "maximum_value_of_x": 20.0,
+            "minimum_value_of_x": -35.0
+        },
+        "SingleShelfHorizontal_LatentEnergyMult": {
+            "coefficient1_constant": 0.020375634,
+            "coefficient2_x": 0.000243779,
+            "coefficient3_x_2": 1.14001e-05,
+            "coefficient4_x_3": 1.81142e-07,
+            "maximum_value_of_x": 20.0,
+            "minimum_value_of_x": -35.0
+        }
+    },
+    "Curve:Quadratic": {
+        "RackCOPfTCurve": {
+            "coefficient1_constant": 1.7603,
+            "coefficient2_x": -0.0377,
+            "coefficient3_x_2": 0.0004,
+            "input_unit_type_for_x": "Temperature",
+            "maximum_value_of_x": 35.0,
+            "minimum_value_of_x": 10.0,
+            "output_unit_type": "Dimensionless"
+        },
+        "RackCOPfTCurve2": {
+            "coefficient1_constant": 1.0,
+            "coefficient2_x": 0.0,
+            "coefficient3_x_2": 0.0,
+            "input_unit_type_for_x": "Temperature",
+            "maximum_value_of_x": 50.0,
+            "minimum_value_of_x": 0.0,
+            "output_unit_type": "Dimensionless"
+        },
+        "RackCondFanCurve": {
+            "coefficient1_constant": 0.3,
+            "coefficient2_x": 0.02,
+            "coefficient3_x_2": 0.0,
+            "maximum_value_of_x": 35.0,
+            "minimum_value_of_x": 10.0
+        },
+        "RackCondFanCurve2": {
+            "coefficient1_constant": 0.0,
+            "coefficient2_x": 0.02857,
+            "coefficient3_x_2": 0.0,
+            "maximum_value_of_x": 35.0,
+            "minimum_value_of_x": 0.0
+        },
+        "WindACCoolCapFFF": {
+            "coefficient1_constant": 0.8,
+            "coefficient2_x": 0.2,
+            "coefficient3_x_2": 0.0,
+            "maximum_value_of_x": 1.5,
+            "minimum_value_of_x": 0.5
+        },
+        "WindACEIRFFF": {
+            "coefficient1_constant": 1.1552,
+            "coefficient2_x": -0.1808,
+            "coefficient3_x_2": 0.0256,
+            "maximum_value_of_x": 1.5,
+            "minimum_value_of_x": 0.5
+        },
+        "WindACPLFFPLR": {
+            "coefficient1_constant": 0.85,
+            "coefficient2_x": 0.15,
+            "coefficient3_x_2": 0.0,
+            "maximum_value_of_x": 1.0,
+            "minimum_value_of_x": 0.0
+        }
+    },
+    "ElectricEquipment": {
+        "BackRoom ElecEq 1": {
+            "design_level": 150.0,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0,
+            "fraction_lost": 0,
+            "fraction_radiant": 0.25,
+            "schedule_name": "Elec_Equip_Sch",
+            "zone_or_zonelist_or_space_or_spacelist_name": "BackRoom"
+        },
+        "SalesFloor ElecEq 1": {
+            "design_level": 1500.0,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0.0,
+            "fraction_lost": 0,
+            "fraction_radiant": 0.1,
+            "schedule_name": "Register_Equip_Sch",
+            "zone_or_zonelist_or_space_or_spacelist_name": "SalesFloor"
+        },
+        "SalesFloor ElecEq 2": {
+            "design_level": 15000.0,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0.05,
+            "fraction_lost": 0,
+            "fraction_radiant": 0.4,
+            "schedule_name": "Bakery_Equip_Sch",
+            "zone_or_zonelist_or_space_or_spacelist_name": "SalesFloor"
+        },
+        "SalesFloor ElecEq 3": {
+            "design_level": 600.0,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0,
+            "fraction_lost": 0,
+            "fraction_radiant": 0.25,
+            "schedule_name": "Elec_Equip_Sch",
+            "zone_or_zonelist_or_space_or_spacelist_name": "SalesFloor"
+        }
+    },
+    "Fan:ConstantVolume": {
+        "Supply Fan 1": {
+            "air_inlet_node_name": "Mixed Air Node",
+            "air_outlet_node_name": "DX Coil Air Inlet Node",
+            "availability_schedule_name": "FanAndCoilAvailSched",
+            "end_use_subcategory": "General",
+            "fan_total_efficiency": 0.7,
+            "maximum_flow_rate": 5.5,
+            "motor_efficiency": 0.9,
+            "motor_in_airstream_fraction": 1,
+            "pressure_rise": 600
+        }
+    },
+    "FenestrationSurface:Detailed": {
+        "Main_Door_d_e_1_1": {
+            "building_surface_name": "Main_ExtWall_d_e",
+            "construction_name": "DoorConstruction",
+            "number_of_vertices": 4,
+            "surface_type": "Door",
+            "vertex_1_x_coordinate": 45.71777,
+            "vertex_1_y_coordinate": 10.2103,
+            "vertex_1_z_coordinate": 2.133496,
+            "vertex_2_x_coordinate": 45.71777,
+            "vertex_2_y_coordinate": 10.2103,
+            "vertex_2_z_coordinate": 0,
+            "vertex_3_x_coordinate": 45.71777,
+            "vertex_3_y_coordinate": 11.12466,
+            "vertex_3_z_coordinate": 0,
+            "vertex_4_x_coordinate": 45.71777,
+            "vertex_4_y_coordinate": 11.12466,
+            "vertex_4_z_coordinate": 2.133496,
+            "view_factor_to_ground": 0.5
+        },
+        "Main_Window_d_e_1": {
+            "building_surface_name": "Main_ExtWall_d_e",
+            "construction_name": "WinLib_1001",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 45.71777,
+            "vertex_1_y_coordinate": 31.85005,
+            "vertex_1_z_coordinate": 2.285888,
+            "vertex_2_x_coordinate": 45.71777,
+            "vertex_2_y_coordinate": 31.85005,
+            "vertex_2_z_coordinate": 1.981103,
+            "vertex_3_x_coordinate": 45.71777,
+            "vertex_3_y_coordinate": 35.50747,
+            "vertex_3_z_coordinate": 1.981103,
+            "vertex_4_x_coordinate": 45.71777,
+            "vertex_4_y_coordinate": 35.50747,
+            "vertex_4_z_coordinate": 2.285888,
+            "view_factor_to_ground": 0.5
+        },
+        "Main_Window_d_e_2": {
+            "building_surface_name": "Main_ExtWall_d_e",
+            "construction_name": "WinLib_2003",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 45.71777,
+            "vertex_1_y_coordinate": 21.33496,
+            "vertex_1_z_coordinate": 2.285888,
+            "vertex_2_x_coordinate": 45.71777,
+            "vertex_2_y_coordinate": 21.33496,
+            "vertex_2_z_coordinate": 1.981103,
+            "vertex_3_x_coordinate": 45.71777,
+            "vertex_3_y_coordinate": 21.63974,
+            "vertex_3_z_coordinate": 1.981103,
+            "vertex_4_x_coordinate": 45.71777,
+            "vertex_4_y_coordinate": 21.63974,
+            "vertex_4_z_coordinate": 2.285888,
+            "view_factor_to_ground": 0.5
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "World",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "HeatBalanceAlgorithm": {
+        "HeatBalanceAlgorithm 1": {
+            "algorithm": "ConductionTransferFunction"
+        }
+    },
+    "InternalMass": {
+        "BackRoom_Furniture1": {
+            "construction_name": "FurnitureConstruction",
+            "surface_area": 95.0,
+            "zone_or_zonelist_name": "BackRoom"
+        },
+        "BackRoom_Furniture2": {
+            "construction_name": "FurnitureConstruction",
+            "surface_area": 95.0,
+            "zone_or_zonelist_name": "BackRoom"
+        },
+        "SalesFloor_Furniture1": {
+            "construction_name": "FurnitureConstruction",
+            "surface_area": 845.0,
+            "zone_or_zonelist_name": "SalesFloor"
+        },
+        "SalesFloor_Furniture2": {
+            "construction_name": "FurnitureConstruction",
+            "surface_area": 845.0,
+            "zone_or_zonelist_name": "SalesFloor"
+        }
+    },
+    "Lights": {
+        "BackRoom Lights 1": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.37,
+            "fraction_replaceable": 0,
+            "fraction_visible": 0.18,
+            "lighting_level": 1500.0,
+            "return_air_fraction": 0,
+            "schedule_name": "Lighting_Sch",
+            "zone_or_zonelist_or_space_or_spacelist_name": "BackRoom"
+        },
+        "SalesFloor Lights 1": {
+            "design_level_calculation_method": "LightingLevel",
+            "end_use_subcategory": "GeneralLights",
+            "fraction_radiant": 0.37,
+            "fraction_replaceable": 0,
+            "fraction_visible": 0.18,
+            "lighting_level": 30000,
+            "return_air_fraction": 0,
+            "schedule_name": "Lighting_Sch",
+            "zone_or_zonelist_or_space_or_spacelist_name": "SalesFloor"
+        }
+    },
+    "Material": {
+        "ConcForIntFloor": {
+            "conductivity": 1.73,
+            "density": 2243,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.65,
+            "specific_heat": 837,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1524,
+            "visible_absorptance": 0.65
+        },
+        "ConcForInterior": {
+            "conductivity": 0.5708,
+            "density": 609,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.65,
+            "specific_heat": 837,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.2033,
+            "visible_absorptance": 0.65
+        },
+        "FurnitureMaterial": {
+            "conductivity": 11,
+            "density": 544.62,
+            "roughness": "MediumSmooth",
+            "solar_absorptance": 0.78,
+            "specific_heat": 1210,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1,
+            "visible_absorptance": 0.78
+        },
+        "GypForInterior": {
+            "conductivity": 0.7264,
+            "density": 1602,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 837,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0191,
+            "visible_absorptance": 0.92
+        },
+        "HF-A2": {
+            "conductivity": 1.332,
+            "density": 2082,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.93,
+            "specific_heat": 920,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1016,
+            "visible_absorptance": 0.93
+        },
+        "HF-C2": {
+            "conductivity": 0.3805,
+            "density": 609,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.65,
+            "specific_heat": 837,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1015,
+            "visible_absorptance": 0.65
+        },
+        "HF-C15": {
+            "conductivity": 0.173,
+            "density": 641,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.65,
+            "specific_heat": 837,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1524,
+            "visible_absorptance": 0.65
+        },
+        "HF-E1": {
+            "conductivity": 0.7264,
+            "density": 1602,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 837,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0191,
+            "visible_absorptance": 0.92
+        },
+        "HF-E2": {
+            "conductivity": 1.436,
+            "density": 881,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.55,
+            "specific_heat": 1674,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0127,
+            "visible_absorptance": 0.55
+        },
+        "HF-E3": {
+            "conductivity": 0.1903,
+            "density": 1121,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.75,
+            "specific_heat": 1674,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0095,
+            "visible_absorptance": 0.75
+        },
+        "HF-E5": {
+            "conductivity": 0.0605,
+            "density": 481,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.32,
+            "specific_heat": 837,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0191,
+            "visible_absorptance": 0.32
+        },
+        "StoreSlab": {
+            "conductivity": 1.73,
+            "density": 2243,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.65,
+            "specific_heat": 837,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1524,
+            "visible_absorptance": 0.65
+        },
+        "WoodForDoor": {
+            "conductivity": 0.1211,
+            "density": 593,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.78,
+            "specific_heat": 2510,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0635,
+            "visible_absorptance": 0.78
+        }
+    },
+    "Material:AirGap": {
+        "AirGap": {
+            "thermal_resistance": 0.1762
+        }
+    },
+    "Material:NoMass": {
+        "R-11": {
+            "roughness": "Rough",
+            "solar_absorptance": 0.75,
+            "thermal_absorptance": 0.9,
+            "thermal_resistance": 1.935938,
+            "visible_absorptance": 0.75
+        }
+    },
+    "NodeList": {
+        "Cond Loop Setpoint Node List": {
+            "nodes": [
+                {
+                    "node_name": "Supply Outlet Node"
+                }
+            ]
+        },
+        "HW Loop Setpoint Node List": {
+            "nodes": [
+                {
+                    "node_name": "HW Supply Outlet Node"
+                }
+            ]
+        },
+        "OutsideAirInletNodes": {
+            "nodes": [
+                {
+                    "node_name": "Outside Air Inlet Node"
+                }
+            ]
+        },
+        "Zone1Inlets": {
+            "nodes": [
+                {
+                    "node_name": "SalesFloor Inlet Node"
+                }
+            ]
+        },
+        "Zone2Inlets": {
+            "nodes": [
+                {
+                    "node_name": "BackRoom Inlet Node"
+                }
+            ]
+        }
+    },
+    "OutdoorAir:Mixer": {
+        "OA Mixing Box 1": {
+            "mixed_air_node_name": "Mixed Air Node",
+            "outdoor_air_stream_node_name": "Outside Air Inlet Node",
+            "relief_air_stream_node_name": "Relief Air Outlet Node",
+            "return_air_stream_node_name": "Outdoor Air Mixer Inlet Node"
+        }
+    },
+    "OutdoorAir:Node": {
+        "COMPRESSOR RACK:REFRIGERATED CASE LowTempRack CondenserNode": {},
+        "COMPRESSOR RACK:REFRIGERATED CASE MediumTempRack CondenserNode": {}
+    },
+    "OutdoorAir:NodeList": {
+        "OutdoorAir:NodeList 1": {
+            "nodes": [
+                {
+                    "node_or_nodelist_name": "OutsideAirInletNodes"
+                }
+            ]
+        }
+    },
+    "Output:Constructions": {
+        "Output:Constructions 1": {
+            "details_type_1": "Constructions"
+        }
+    },
+    "Output:Diagnostics": {
+        "Output:Diagnostics 1": {
+            "diagnostics": [
+                {
+                    "key": "DisplayAllWarnings"
+                }
+            ]
+        }
+    },
+    "Output:Meter:MeterFileOnly": {
+        "Output:Meter:MeterFileOnly 1": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 2": {
+            "key_name": "Electricity:Building",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 3": {
+            "key_name": "InteriorLights:Electricity",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 4": {
+            "key_name": "Electricity:HVAC",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 5": {
+            "key_name": "Electricity:Plant",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 6": {
+            "key_name": "Refrigeration:Electricity",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 7": {
+            "key_name": "Cooling:Electricity",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 8": {
+            "key_name": "WaterSystems:Electricity",
+            "reporting_frequency": "Monthly"
+        }
+    },
+    "Output:Schedules": {
+        "Output:Schedules 1": {
+            "key_field": "Timestep"
+        }
+    },
+    "Output:Surfaces:Drawing": {
+        "Output:Surfaces:Drawing 1": {
+            "report_type": "DXF"
+        }
+    },
+    "Output:Surfaces:List": {
+        "Output:Surfaces:List 1": {
+            "report_type": "DetailsWithVertices"
+        }
+    },
+    "Output:Table:Monthly": {
+        "Building Loads - Cooling": {
+            "digits_after_decimal": 2,
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Air System Sensible Cooling Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Air System Sensible Cooling Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Wetbulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Total Internal Latent Gain Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Total Internal Latent Gain Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Drybulb Temperature"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Wetbulb Temperature"
+                }
+            ]
+        },
+        "Building Loads - Heating": {
+            "digits_after_decimal": 2,
+            "variable_details": [
+                {
+                    "aggregation_type_for_variable_or_meter": "SumOrAverage",
+                    "variable_or_meter_name": "Zone Air System Sensible Heating Energy"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "Maximum",
+                    "variable_or_meter_name": "Zone Air System Sensible Heating Rate"
+                },
+                {
+                    "aggregation_type_for_variable_or_meter": "ValueWhenMaximumOrMinimum",
+                    "variable_or_meter_name": "Site Outdoor Air Drybulb Temperature"
+                }
+            ]
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Zone Air System Sensible Heating Energy"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Zone Air System Sensible Cooling Energy"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Zone Air Temperature"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Zone Air Relative Humidity"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Cooling Coil Electricity Energy"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Tank Temperature"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Use Side Heat Transfer Rate"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Relative Humidity"
+        },
+        "Output:Variable 10": {
+            "key_value": "SALESFLOOR OUTLET NODE",
+            "reporting_frequency": "Timestep",
+            "variable_name": "System Node Relative Humidity"
+        },
+        "Output:Variable 11": {
+            "key_value": "BackRoom OUTLET NODE",
+            "reporting_frequency": "Timestep",
+            "variable_name": "System Node Relative Humidity"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Use Side Mass Flow Rate"
+        },
+        "Output:Variable 13": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Use Side Inlet Temperature"
+        },
+        "Output:Variable 14": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Use Side Outlet Temperature"
+        },
+        "Output:Variable 15": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Cooling Coil Total Cooling Rate"
+        },
+        "Output:Variable 16": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Air System Cooling Coil Total Cooling Energy"
+        },
+        "Output:Variable 17": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Air System Heating Coil Total Heating Energy"
+        },
+        "Output:Variable 18": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Refrigeration Compressor Rack Total Heat Transfer Rate"
+        },
+        "Output:Variable 19": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Source Side Mass Flow Rate"
+        },
+        "Output:Variable 20": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Source Side Inlet Temperature"
+        },
+        "Output:Variable 21": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Source Side Outlet Temperature"
+        },
+        "Output:Variable 22": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Source Side Heat Transfer Rate"
+        },
+        "Output:Variable 23": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Cooling Tower Inlet Temperature"
+        },
+        "Output:Variable 24": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Cooling Tower Outlet Temperature"
+        },
+        "Output:Variable 25": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Cooling Tower Mass Flow Rate"
+        },
+        "Output:Variable 26": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Water Heater Electricity Rate"
+        },
+        "Output:Variable 27": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Refrigeration Compressor Rack Condenser Mass Flow Rate"
+        },
+        "Output:Variable 28": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Refrigeration Compressor Rack Condenser Heat Transfer Rate"
+        },
+        "Output:Variable 29": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Refrigeration Compressor Rack Condenser Heat Transfer Energy"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "People": {
+        "BackRoom People 1": {
+            "activity_level_schedule_name": "Activity_Shopping_Sch",
+            "fraction_radiant": 0.2,
+            "number_of_people": 10,
+            "number_of_people_calculation_method": "People",
+            "number_of_people_schedule_name": "People_Shopping_Sch",
+            "zone_or_zonelist_or_space_or_spacelist_name": "BackRoom"
+        },
+        "SalesFloor People 1": {
+            "activity_level_schedule_name": "Activity_Shopping_Sch",
+            "fraction_radiant": 0.2,
+            "number_of_people": 150,
+            "number_of_people_calculation_method": "People",
+            "number_of_people_schedule_name": "People_Shopping_Sch",
+            "zone_or_zonelist_or_space_or_spacelist_name": "SalesFloor"
+        }
+    },
+    "Pipe:Adiabatic": {
+        "Demand Inlet Pipe": {
+            "inlet_node_name": "Demand Inlet Node",
+            "outlet_node_name": "Demand Pipe-Cond Node"
+        },
+        "Demand Outlet Pipe": {
+            "inlet_node_name": "Demand Cond-Pipe Node",
+            "outlet_node_name": "Demand Outlet Node"
+        },
+        "HW Demand Bypass Pipe": {
+            "inlet_node_name": "HW Demand Bypass Inlet Node",
+            "outlet_node_name": "HW Demand Bypass Outlet Node"
+        },
+        "HW Demand Inlet Pipe": {
+            "inlet_node_name": "HW Demand Inlet Node",
+            "outlet_node_name": "HW Demand Pipe-Coil Node"
+        },
+        "HW Demand Outlet Pipe": {
+            "inlet_node_name": "HW Demand Coil-Pipe Node",
+            "outlet_node_name": "HW Demand Outlet Node"
+        },
+        "HW Supply Outlet Pipe": {
+            "inlet_node_name": "HW Supply Heating-Pipe Node",
+            "outlet_node_name": "HW Supply Outlet Node"
+        },
+        "Supply Outlet Pipe": {
+            "inlet_node_name": "Supply Cooling-Pipe Node",
+            "outlet_node_name": "Supply Outlet Node"
+        }
+    },
+    "PlantEquipmentList": {
+        "Cooling Plant": {
+            "equipment": [
+                {
+                    "equipment_name": "Cooling Tower 1",
+                    "equipment_object_type": "CoolingTower:SingleSpeed"
+                }
+            ]
+        },
+        "Heating Plant": {
+            "equipment": [
+                {
+                    "equipment_name": "Water Heater 1",
+                    "equipment_object_type": "WaterHeater:Mixed"
+                }
+            ]
+        }
+    },
+    "PlantEquipmentOperation:CoolingLoad": {
+        "Cond Loop Control": {
+            "load_range_1_lower_limit": 0,
+            "load_range_1_upper_limit": 10000000,
+            "range_1_equipment_list_name": "Cooling Plant"
+        }
+    },
+    "PlantEquipmentOperation:HeatingLoad": {
+        "HW Loop Control": {
+            "load_range_1_lower_limit": 0,
+            "load_range_1_upper_limit": 1000000,
+            "range_1_equipment_list_name": "Heating Plant"
+        }
+    },
+    "PlantEquipmentOperationSchemes": {
+        "Cond Loop Operation": {
+            "control_scheme_1_name": "Cond Loop Control",
+            "control_scheme_1_object_type": "PlantEquipmentOperation:CoolingLoad",
+            "control_scheme_1_schedule_name": "AlwaysOnSchedule"
+        },
+        "HW Loop Operation": {
+            "control_scheme_1_name": "HW Loop Control",
+            "control_scheme_1_object_type": "PlantEquipmentOperation:HeatingLoad",
+            "control_scheme_1_schedule_name": "AlwaysOnSchedule"
+        }
+    },
+    "PlantLoop": {
+        "Cond Loop": {
+            "demand_side_branch_list_name": "Demand Branches",
+            "demand_side_connector_list_name": "Demand Connectors",
+            "demand_side_inlet_node_name": "Demand Inlet Node",
+            "demand_side_outlet_node_name": "Demand Outlet Node",
+            "fluid_type": "Water",
+            "load_distribution_scheme": "Optimal",
+            "loop_temperature_setpoint_node_name": "Supply Outlet Node",
+            "maximum_loop_flow_rate": 0.02,
+            "maximum_loop_temperature": 50,
+            "minimum_loop_flow_rate": 0,
+            "minimum_loop_temperature": 3,
+            "plant_equipment_operation_scheme_name": "Cond Loop Operation",
+            "plant_loop_volume": "Autocalculate",
+            "plant_side_branch_list_name": "Supply Branches",
+            "plant_side_connector_list_name": "Supply Connectors",
+            "plant_side_inlet_node_name": "Supply Inlet Node",
+            "plant_side_outlet_node_name": "Supply Outlet Node"
+        },
+        "HW Loop": {
+            "demand_side_branch_list_name": "HW Demand Branches",
+            "demand_side_connector_list_name": "HW Demand Connectors",
+            "demand_side_inlet_node_name": "HW Demand Inlet Node",
+            "demand_side_outlet_node_name": "HW Demand Outlet Node",
+            "fluid_type": "Water",
+            "load_distribution_scheme": "Optimal",
+            "loop_temperature_setpoint_node_name": "HW Supply Outlet Node",
+            "maximum_loop_flow_rate": 0.0008,
+            "maximum_loop_temperature": 80,
+            "minimum_loop_flow_rate": 0,
+            "minimum_loop_temperature": 3,
+            "plant_equipment_operation_scheme_name": "HW Loop Operation",
+            "plant_loop_volume": "Autocalculate",
+            "plant_side_branch_list_name": "HW Supply Branches",
+            "plant_side_connector_list_name": "HW Supply Connectors",
+            "plant_side_inlet_node_name": "HW Supply Inlet Node",
+            "plant_side_outlet_node_name": "HW Supply Outlet Node"
+        }
+    },
+    "Pump:VariableSpeed": {
+        "Pump 1": {
+            "coefficient_2_of_the_part_load_performance_curve": 1,
+            "design_maximum_flow_rate": 0.003,
+            "design_power_consumption": 750,
+            "design_pump_head": 179352,
+            "inlet_node_name": "Supply Inlet Node",
+            "motor_efficiency": 0.87,
+            "outlet_node_name": "Supply Pump-Cooling Node",
+            "pump_control_type": "Intermittent"
+        },
+        "Pump 2": {
+            "coefficient_2_of_the_part_load_performance_curve": 1,
+            "design_maximum_flow_rate": 0.0008,
+            "design_power_consumption": 170,
+            "design_pump_head": 179352,
+            "inlet_node_name": "HW Supply Inlet Node",
+            "motor_efficiency": 0.9,
+            "outlet_node_name": "HW Supply Pump-Heating Node",
+            "pump_control_type": "Intermittent"
+        }
+    },
+    "Refrigeration:Case": {
+        "FishDisplayCase": {
+            "anti_sweat_heater_control_type": "None",
+            "availability_schedule_name": "CaseCleanedOnMonday",
+            "case_anti_sweat_heater_power_per_unit_length": 0.0,
+            "case_defrost_drip_down_schedule_name": "CaseDripDownSched",
+            "case_defrost_power_per_unit_length": 0.0,
+            "case_defrost_schedule_name": "CaseDefrostSched",
+            "case_defrost_type": "OffCycle",
+            "case_height": 0.0,
+            "case_length": 15.0,
+            "case_lighting_schedule_name": "CaseLightingSched",
+            "case_operating_temperature": 1.1,
+            "fraction_of_anti_sweat_heater_energy_to_case": 0.2,
+            "fraction_of_lighting_energy_to_case": 0.9,
+            "humidity_at_zero_anti_sweat_heater_energy": 0.0,
+            "latent_case_credit_curve_name": "RHCubic_LatentEnergyMult",
+            "latent_case_credit_curve_type": "RelativeHumidityMethod",
+            "operating_case_fan_power_per_unit_length": 0.0,
+            "rated_ambient_relative_humidity": 55.0,
+            "rated_ambient_temperature": 23.88,
+            "rated_latent_heat_ratio": 0.1,
+            "rated_runtime_fraction": 0.85,
+            "rated_total_cooling_capacity_per_unit_length": 288.4,
+            "refrigerated_case_restocking_schedule_name": "CaseStockingSched",
+            "standard_case_fan_power_per_unit_length": 0.0,
+            "standard_case_lighting_power_per_unit_length": 41.56,
+            "under_case_hvac_return_air_fraction": 0.05,
+            "zone_name": "SalesFloor"
+        },
+        "GlassDoorFrozenFood": {
+            "anti_sweat_heater_control_type": "HeatBalanceMethod",
+            "availability_schedule_name": "CaseOperatingSched",
+            "case_anti_sweat_heater_power_per_unit_length": 218.7,
+            "case_credit_fraction_schedule_name": "CaseCreditReductionSched",
+            "case_defrost_drip_down_schedule_name": "CaseDripDownSched2",
+            "case_defrost_power_per_unit_length": 1106.5,
+            "case_defrost_schedule_name": "CaseDefrostSched2",
+            "case_defrost_type": "HotGasWithTemperatureTermination",
+            "case_height": 1.5,
+            "case_length": 11.7,
+            "case_lighting_schedule_name": "CaseLightingSched",
+            "case_operating_temperature": -23.3,
+            "defrost_energy_correction_curve_name": "SingleShelfHorizontal_DefrostEnergyMult",
+            "defrost_energy_correction_curve_type": "CaseTemperatureMethod",
+            "fraction_of_anti_sweat_heater_energy_to_case": 0.2,
+            "fraction_of_lighting_energy_to_case": 1.0,
+            "humidity_at_zero_anti_sweat_heater_energy": 1.5,
+            "latent_case_credit_curve_name": "SingleShelfHorizontal_LatentEnergyMult",
+            "latent_case_credit_curve_type": "CaseTemperatureMethod",
+            "minimum_anti_sweat_heater_power_per_unit_length": 0.0,
+            "operating_case_fan_power_per_unit_length": 57.9,
+            "rated_ambient_relative_humidity": 55.0,
+            "rated_ambient_temperature": 23.88,
+            "rated_latent_heat_ratio": 0.13,
+            "rated_runtime_fraction": 0.85,
+            "rated_total_cooling_capacity_per_unit_length": 615.8,
+            "refrigerated_case_restocking_schedule_name": "CaseStockingSched",
+            "standard_case_fan_power_per_unit_length": 57.9,
+            "standard_case_lighting_power_per_unit_length": 99.8,
+            "under_case_hvac_return_air_fraction": 0.1,
+            "zone_name": "SalesFloor"
+        },
+        "MeatDisplayCase": {
+            "anti_sweat_heater_control_type": "Linear",
+            "availability_schedule_name": "CaseCleanedOnTuesday",
+            "case_anti_sweat_heater_power_per_unit_length": 13.2,
+            "case_defrost_drip_down_schedule_name": "CaseDripDownSched2",
+            "case_defrost_power_per_unit_length": 585.8,
+            "case_defrost_schedule_name": "CaseDefrostSched2",
+            "case_defrost_type": "ElectricWithTemperatureTermination",
+            "case_height": 1.5,
+            "case_length": 26.0,
+            "case_lighting_schedule_name": "CaseLightingSched",
+            "case_operating_temperature": -4.4,
+            "defrost_energy_correction_curve_name": "SingleShelfHorizontal_DefrostEnergyMult",
+            "defrost_energy_correction_curve_type": "CaseTemperatureMethod",
+            "fraction_of_anti_sweat_heater_energy_to_case": 0.2,
+            "fraction_of_lighting_energy_to_case": 0.9,
+            "humidity_at_zero_anti_sweat_heater_energy": 35.0,
+            "latent_case_credit_curve_name": "SingleShelfHorizontal_LatentEnergyMult",
+            "latent_case_credit_curve_type": "CaseTemperatureMethod",
+            "minimum_anti_sweat_heater_power_per_unit_length": 0.0,
+            "operating_case_fan_power_per_unit_length": 47.2,
+            "rated_ambient_relative_humidity": 55.0,
+            "rated_ambient_temperature": 23.88,
+            "rated_latent_heat_ratio": 0.1,
+            "rated_runtime_fraction": 0.85,
+            "rated_total_cooling_capacity_per_unit_length": 456.6,
+            "refrigerated_case_restocking_schedule_name": "CaseStockingSched",
+            "standard_case_fan_power_per_unit_length": 47.2,
+            "standard_case_lighting_power_per_unit_length": 86.8,
+            "under_case_hvac_return_air_fraction": 0.05,
+            "zone_name": "SalesFloor"
+        },
+        "MultiDeckDairyAndDeliCase": {
+            "anti_sweat_heater_control_type": "None",
+            "availability_schedule_name": "CaseOperatingSched",
+            "case_anti_sweat_heater_power_per_unit_length": 0.0,
+            "case_credit_fraction_schedule_name": "DairyCaseCreditReductionSched",
+            "case_defrost_drip_down_schedule_name": "CaseDripDownSched3",
+            "case_defrost_power_per_unit_length": 0.0,
+            "case_defrost_schedule_name": "CaseDefrostSched3",
+            "case_defrost_type": "OffCycle",
+            "case_height": 0.0,
+            "case_length": 12.0,
+            "case_lighting_schedule_name": "CaseLightingSched",
+            "case_operating_temperature": -1.1,
+            "fraction_of_anti_sweat_heater_energy_to_case": 0.2,
+            "fraction_of_lighting_energy_to_case": 0.77,
+            "humidity_at_zero_anti_sweat_heater_energy": 0.0,
+            "latent_case_credit_curve_name": "MultiShelfVertical_LatentEnergyMult",
+            "latent_case_credit_curve_type": "CaseTemperatureMethod",
+            "minimum_anti_sweat_heater_power_per_unit_length": 0.0,
+            "operating_case_fan_power_per_unit_length": 78.7,
+            "rated_ambient_relative_humidity": 55.0,
+            "rated_ambient_temperature": 23.88,
+            "rated_latent_heat_ratio": 0.3,
+            "rated_runtime_fraction": 0.85,
+            "rated_total_cooling_capacity_per_unit_length": 1890.0,
+            "refrigerated_case_restocking_schedule_name": "CaseStockingSched",
+            "standard_case_fan_power_per_unit_length": 78.7,
+            "standard_case_lighting_power_per_unit_length": 307.3,
+            "under_case_hvac_return_air_fraction": 0.05,
+            "zone_name": "SalesFloor"
+        },
+        "OpenWellIceCreamDisplayCase": {
+            "anti_sweat_heater_control_type": "Linear",
+            "availability_schedule_name": "CaseCleanedOnMonday",
+            "case_anti_sweat_heater_power_per_unit_length": 70.0,
+            "case_credit_fraction_schedule_name": "CaseCreditReductionSched",
+            "case_defrost_drip_down_schedule_name": "CaseDripDownSched",
+            "case_defrost_power_per_unit_length": 76.5,
+            "case_defrost_schedule_name": "CaseDefrostSched",
+            "case_defrost_type": "HotGas",
+            "case_height": 1.5,
+            "case_length": 14.6,
+            "case_lighting_schedule_name": "CaseLightingSched",
+            "case_operating_temperature": -34.4,
+            "fraction_of_anti_sweat_heater_energy_to_case": 0.2,
+            "fraction_of_lighting_energy_to_case": 0.9,
+            "humidity_at_zero_anti_sweat_heater_energy": 35.0,
+            "latent_case_credit_curve_name": "SingleShelfHorizontal_LatentEnergyMult",
+            "latent_case_credit_curve_type": "CaseTemperatureMethod",
+            "minimum_anti_sweat_heater_power_per_unit_length": 0.0,
+            "operating_case_fan_power_per_unit_length": 28.7,
+            "rated_ambient_relative_humidity": 55.0,
+            "rated_ambient_temperature": 23.88,
+            "rated_latent_heat_ratio": 0.08,
+            "rated_runtime_fraction": 0.85,
+            "rated_total_cooling_capacity_per_unit_length": 441.6,
+            "refrigerated_case_restocking_schedule_name": "CaseStockingSched",
+            "standard_case_fan_power_per_unit_length": 28.7,
+            "standard_case_lighting_power_per_unit_length": 42.7,
+            "under_case_hvac_return_air_fraction": 0.05,
+            "zone_name": "SalesFloor"
+        },
+        "SelfContainedDisplayCase": {
+            "anti_sweat_heater_control_type": "None",
+            "availability_schedule_name": "CaseOperatingSched",
+            "case_anti_sweat_heater_power_per_unit_length": 0.0,
+            "case_defrost_power_per_unit_length": 0.0,
+            "case_defrost_type": "None",
+            "case_height": 0.0,
+            "case_length": 10.0,
+            "case_lighting_schedule_name": "LightingOnSched",
+            "case_operating_temperature": 13.0,
+            "fraction_of_anti_sweat_heater_energy_to_case": 0.0,
+            "fraction_of_lighting_energy_to_case": 0.9,
+            "humidity_at_zero_anti_sweat_heater_energy": 0.0,
+            "latent_case_credit_curve_name": "MultiShelfVertical_LatentEnergyMult",
+            "latent_case_credit_curve_type": "CaseTemperatureMethod",
+            "operating_case_fan_power_per_unit_length": 40.0,
+            "rated_ambient_relative_humidity": 55.0,
+            "rated_ambient_temperature": 23.88,
+            "rated_latent_heat_ratio": 0.08,
+            "rated_runtime_fraction": 0.85,
+            "rated_total_cooling_capacity_per_unit_length": 1000.0,
+            "refrigerated_case_restocking_schedule_name": "SelfContainedCaseStockingSched",
+            "standard_case_fan_power_per_unit_length": 40.0,
+            "standard_case_lighting_power_per_unit_length": 75.0,
+            "under_case_hvac_return_air_fraction": 0.0,
+            "zone_name": "SalesFloor"
+        },
+        "WalkInFreezer": {
+            "anti_sweat_heater_control_type": "None",
+            "availability_schedule_name": "CaseOperatingSched",
+            "case_anti_sweat_heater_power_per_unit_length": 0.0,
+            "case_credit_fraction_schedule_name": "CaseCreditReductionSched2",
+            "case_defrost_drip_down_schedule_name": "CaseDripDownSched3",
+            "case_defrost_power_per_unit_length": 1291.7,
+            "case_defrost_schedule_name": "CaseDefrostSched3",
+            "case_defrost_type": "Electric",
+            "case_height": 0.0,
+            "case_length": 4.27,
+            "case_lighting_schedule_name": "CaseLightingSched2",
+            "case_operating_temperature": -2.22,
+            "fraction_of_anti_sweat_heater_energy_to_case": 0.0,
+            "fraction_of_lighting_energy_to_case": 1.0,
+            "humidity_at_zero_anti_sweat_heater_energy": 0.0,
+            "latent_case_credit_curve_name": "SingleShelfHorizontal_LatentEnergyMult",
+            "latent_case_credit_curve_type": "CaseTemperatureMethod",
+            "minimum_anti_sweat_heater_power_per_unit_length": 0.0,
+            "operating_case_fan_power_per_unit_length": 172.2,
+            "rated_ambient_relative_humidity": 55.0,
+            "rated_ambient_temperature": 23.88,
+            "rated_latent_heat_ratio": 0.1,
+            "rated_runtime_fraction": 0.75,
+            "rated_total_cooling_capacity_per_unit_length": 1098.0,
+            "refrigerated_case_restocking_schedule_name": "WalkInStockingSched",
+            "standard_case_fan_power_per_unit_length": 172.2,
+            "standard_case_lighting_power_per_unit_length": 28.1,
+            "under_case_hvac_return_air_fraction": 0.0,
+            "zone_name": "BackRoom"
+        }
+    },
+    "Refrigeration:CaseAndWalkInList": {
+        "LowTempCaseList": {
+            "cases_and_walkins": [
+                {
+                    "case_or_walkin_name": "OpenWellIceCreamDisplayCase"
+                },
+                {
+                    "case_or_walkin_name": "GlassDoorFrozenFood"
+                },
+                {
+                    "case_or_walkin_name": "WalkInFreezer"
+                }
+            ]
+        },
+        "MedTempCaseList": {
+            "cases_and_walkins": [
+                {
+                    "case_or_walkin_name": "FishDisplayCase"
+                },
+                {
+                    "case_or_walkin_name": "MeatDisplayCase"
+                },
+                {
+                    "case_or_walkin_name": "MultiDeckDairyAndDeliCase"
+                }
+            ]
+        }
+    },
+    "Refrigeration:CompressorRack": {
+        "LowTempRack": {
+            "compressor_rack_cop_function_of_temperature_curve_name": "RackCOPfTCurve",
+            "condenser_air_inlet_node_name": "COMPRESSOR RACK:REFRIGERATED CASE LowTempRack CondenserNode",
+            "condenser_fan_power_function_of_temperature_curve_name": "RackCondFanCurve2",
+            "condenser_type": "AirCooled",
+            "design_compressor_rack_cop": 1.5,
+            "design_condenser_fan_power": 1025.0,
+            "heat_rejection_location": "Outdoors",
+            "refrigeration_case_name_or_walkin_name_or_caseandwalkinlist_name": "LowTempCaseList"
+        },
+        "MediumTempRack": {
+            "compressor_rack_cop_function_of_temperature_curve_name": "RackCOPfTCurve",
+            "condenser_fan_power_function_of_temperature_curve_name": "RackCondFanCurve",
+            "condenser_type": "WaterCooled",
+            "design_compressor_rack_cop": 1.7,
+            "design_condenser_fan_power": 1025.0,
+            "heat_rejection_location": "Outdoors",
+            "refrigeration_case_name_or_walkin_name_or_caseandwalkinlist_name": "MedTempCaseList",
+            "water_cooled_condenser_inlet_node_name": "Condenser Inlet Node",
+            "water_cooled_condenser_maximum_flow_rate": 0.003,
+            "water_cooled_condenser_maximum_water_outlet_temperature": 55,
+            "water_cooled_condenser_outlet_node_name": "Condenser Outlet Node",
+            "water_cooled_condenser_outlet_temperature_schedule_name": "Cond Outlet Temp Sch",
+            "water_cooled_loop_flow_type": "VariableFlow"
+        },
+        "SelfContainedDisplay": {
+            "compressor_rack_cop_function_of_temperature_curve_name": "RackCOPfTCurve2",
+            "condenser_type": "AirCooled",
+            "design_compressor_rack_cop": 4.0,
+            "design_condenser_fan_power": 175.0,
+            "heat_rejection_location": "Zone",
+            "refrigeration_case_name_or_walkin_name_or_caseandwalkinlist_name": "SelfContainedDisplayCase"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "end_day_of_month": 31,
+            "end_month": 1,
+            "use_weather_file_daylight_saving_period": "No",
+            "use_weather_file_holidays_and_special_days": "No",
+            "use_weather_file_rain_indicators": "No",
+            "use_weather_file_snow_indicators": "No"
+        },
+        "Run Period 2": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 7,
+            "end_day_of_month": 31,
+            "end_month": 7,
+            "use_weather_file_daylight_saving_period": "No",
+            "use_weather_file_holidays_and_special_days": "No",
+            "use_weather_file_rain_indicators": "No",
+            "use_weather_file_snow_indicators": "No"
+        }
+    },
+    "RunPeriodControl:DaylightSavingTime": {
+        "RunPeriodControl:DaylightSavingTime 1": {
+            "end_date": "Last Sunday in October",
+            "start_date": "1st Sunday in April"
+        }
+    },
+    "Schedule:Compact": {
+        "Activity_Shopping_Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 105
+                }
+            ],
+            "schedule_type_limits_name": "AnyNumber"
+        },
+        "AlwaysOnSchedule": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "ON/OFF"
+        },
+        "Ambient Temp Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 21.0
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "Bakery_Equip_Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Weekdays SummerDesignDay WinterDesignDay"
+                },
+                {
+                    "field": "Until: 6:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "For: Saturday"
+                },
+                {
+                    "field": "Until: 6:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "For: AllOtherDays"
+                },
+                {
+                    "field": "Until: 6:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "CaseCleanedOnMonday": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Monday"
+                },
+                {
+                    "field": "Until: 5:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "For: AllOtherDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "AnyNumber"
+        },
+        "CaseCleanedOnTuesday": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Tuesday"
+                },
+                {
+                    "field": "Until: 5:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "For: AllOtherDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "AnyNumber"
+        },
+        "CaseCreditReductionSched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Interpolate:No"
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 21:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.2
+                }
+            ],
+            "schedule_type_limits_name": "fraction"
+        },
+        "CaseCreditReductionSched2": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Interpolate:No"
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 21:00"
+                },
+                {
+                    "field": 0.4
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.2
+                }
+            ],
+            "schedule_type_limits_name": "fraction"
+        },
+        "CaseDefrostSched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Interpolate:Average"
+                },
+                {
+                    "field": "Until: 4:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "Until: 4:17"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 14:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "Until: 14:17"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0
+                }
+            ],
+            "schedule_type_limits_name": "ON/OFF"
+        },
+        "CaseDefrostSched2": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Interpolate:Average"
+                },
+                {
+                    "field": "Until: 08:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "Until: 08:17"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "Until: 18:17"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0
+                }
+            ],
+            "schedule_type_limits_name": "ON/OFF"
+        },
+        "CaseDefrostSched3": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Interpolate:Average"
+                },
+                {
+                    "field": "Until: 11:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "Until: 11:20"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 23:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "Until: 23:20"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0
+                }
+            ],
+            "schedule_type_limits_name": "ON/OFF"
+        },
+        "CaseDripDownSched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Interpolate:Average"
+                },
+                {
+                    "field": "Until: 4:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "Until: 4:22"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 14:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "Until: 14:22"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0
+                }
+            ],
+            "schedule_type_limits_name": "ON/OFF"
+        },
+        "CaseDripDownSched2": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Interpolate:Average"
+                },
+                {
+                    "field": "Until: 08:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "Until: 08:22"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "Until: 18:22"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0
+                }
+            ],
+            "schedule_type_limits_name": "ON/OFF"
+        },
+        "CaseDripDownSched3": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Interpolate:Average"
+                },
+                {
+                    "field": "Until: 11:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "Until: 11:30"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 23:00"
+                },
+                {
+                    "field": 0
+                },
+                {
+                    "field": "Until: 23:30"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0
+                }
+            ],
+            "schedule_type_limits_name": "ON/OFF"
+        },
+        "CaseLightingSched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 6:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 21:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "ON/OFF"
+        },
+        "CaseLightingSched2": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 6:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 11:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 13:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 19:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 20:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "AnyNumber"
+        },
+        "CaseOperatingSched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "ON/OFF"
+        },
+        "CaseStockingSched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 13:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 14:00"
+                },
+                {
+                    "field": 50.0
+                },
+                {
+                    "field": "Until: 15:00"
+                },
+                {
+                    "field": 35.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "AnyNumber"
+        },
+        "Cond Outlet Temp Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 45.0
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "Cond Return Temp": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 20.0
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "Cooling Coil Setpoint": {
+            "data": [
+                {
+                    "field": "Through: 5/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 21.0
+                },
+                {
+                    "field": "Through: 9/30"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 15.0
+                },
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 21.0
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "DairyCaseCreditReductionSched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For:AllDays"
+                },
+                {
+                    "field": "Interpolate:No"
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 21:00"
+                },
+                {
+                    "field": 0.6
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.2
+                }
+            ],
+            "schedule_type_limits_name": "fraction"
+        },
+        "Elec_Equip_Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Weekdays SummerDesignDay WinterDesignDay"
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "For: Saturday"
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "For: AllOtherDays"
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.5
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.5
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "FanAndCoilAvailSched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "ON/OFF"
+        },
+        "HW Loop Temp Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 40.0
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "Heating Setpoints": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 21.0
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "LightingOnSched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "ON/OFF"
+        },
+        "Lighting_Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Weekdays SummerDesignDay WinterDesignDay"
+                },
+                {
+                    "field": "Until: 4:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "Until: 21:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 22:00"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "For: Saturday"
+                },
+                {
+                    "field": "Until: 4:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "Until: 21:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 22:00"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "For: AllOtherDays"
+                },
+                {
+                    "field": "Until: 4:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "Until: 21:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 22:00"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.2
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "OAFractionSched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 6:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 20:00"
+                },
+                {
+                    "field": 1.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "OutdoorAirAvailSched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "ON/OFF"
+        },
+        "People_Shopping_Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Weekdays SummerDesignDay WinterDesignDay"
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.02
+                },
+                {
+                    "field": "Until: 20:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.04
+                },
+                {
+                    "field": "For: Saturday"
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.01
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.05
+                },
+                {
+                    "field": "For: AllOtherDays"
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.01
+                },
+                {
+                    "field": "Until: 18:00"
+                },
+                {
+                    "field": 0.75
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.01
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "Register_Equip_Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Weekdays SummerDesignDay WinterDesignDay"
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 19:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "For: Saturday"
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 19:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "For: AllOtherDays"
+                },
+                {
+                    "field": "Until: 8:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 19:00"
+                },
+                {
+                    "field": 1
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "Relative Humidity Sch": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 55.0
+                }
+            ],
+            "schedule_type_limits_name": "AnyNumber"
+        },
+        "SelfContainedCaseStockingSched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 6:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 50.0
+                },
+                {
+                    "field": "Until: 9:00"
+                },
+                {
+                    "field": 70.0
+                },
+                {
+                    "field": "Until: 10:00"
+                },
+                {
+                    "field": 80.0
+                },
+                {
+                    "field": "Until: 11:00"
+                },
+                {
+                    "field": 70.0
+                },
+                {
+                    "field": "Until: 13:00"
+                },
+                {
+                    "field": 50.0
+                },
+                {
+                    "field": "Until: 14:00"
+                },
+                {
+                    "field": 80.0
+                },
+                {
+                    "field": "Until: 15:00"
+                },
+                {
+                    "field": 90.0
+                },
+                {
+                    "field": "Until: 16:00"
+                },
+                {
+                    "field": 80.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "AnyNumber"
+        },
+        "WalkInStockingSched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: Tuesday Friday"
+                },
+                {
+                    "field": "Until: 4:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 5:00"
+                },
+                {
+                    "field": 725.0
+                },
+                {
+                    "field": "Until: 6:00"
+                },
+                {
+                    "field": 417.0
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 290.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "For: AllOtherDays"
+                },
+                {
+                    "field": "Until: 4:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 5:00"
+                },
+                {
+                    "field": 125.0
+                },
+                {
+                    "field": "Until: 6:00"
+                },
+                {
+                    "field": 117.0
+                },
+                {
+                    "field": "Until: 7:00"
+                },
+                {
+                    "field": 90.0
+                },
+                {
+                    "field": "Until: 19:00"
+                },
+                {
+                    "field": 0.0
+                },
+                {
+                    "field": "Until: 20:00"
+                },
+                {
+                    "field": 125.0
+                },
+                {
+                    "field": "Until: 21:00"
+                },
+                {
+                    "field": 117.0
+                },
+                {
+                    "field": "Until: 22:00"
+                },
+                {
+                    "field": 90.0
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 0.0
+                }
+            ],
+            "schedule_type_limits_name": "AnyNumber"
+        },
+        "Water Heater Setpoint": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 40.0
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "AnyNumber": {},
+        "Control Type": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 4
+        },
+        "Fraction": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1.0
+        },
+        "Humidity": {
+            "lower_limit_value": 0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 100
+        },
+        "On/Off": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 1
+        },
+        "Temperature": {
+            "lower_limit_value": -60,
+            "numeric_type": "Continuous",
+            "unit_type": "Temperature",
+            "upper_limit_value": 200
+        }
+    },
+    "SetpointManager:Scheduled": {
+        "Air Loop Setpoint Manager": {
+            "control_variable": "Temperature",
+            "schedule_name": "Heating Setpoints",
+            "setpoint_node_or_nodelist_name": "Air Loop Outlet Node"
+        },
+        "Cond Loop Setpoint Manager": {
+            "control_variable": "Temperature",
+            "schedule_name": "Cond Return Temp",
+            "setpoint_node_or_nodelist_name": "Cond Loop Setpoint Node List"
+        },
+        "DX Coil Mgr": {
+            "control_variable": "Temperature",
+            "schedule_name": "Cooling Coil Setpoint",
+            "setpoint_node_or_nodelist_name": "DX Coil Air Outlet Node"
+        },
+        "HW Loop Setpoint Manager": {
+            "control_variable": "Temperature",
+            "schedule_name": "HW Loop Temp Sch",
+            "setpoint_node_or_nodelist_name": "HW Loop Setpoint Node List"
+        }
+    },
+    "SetpointManager:SingleZone:Humidity:Maximum": {
+        "Rooftop DX Humidity Set Point Manager": {
+            "control_zone_air_node_name": "SalesFloor Node",
+            "setpoint_node_or_nodelist_name": "DX Coil Air Outlet Node"
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "No",
+            "run_simulation_for_weather_file_run_periods": "Yes"
+        }
+    },
+    "Site:GroundTemperature:BuildingSurface": {
+        "Site:GroundTemperature:BuildingSurface 1": {
+            "april_ground_temperature": 20.3,
+            "august_ground_temperature": 20.77,
+            "december_ground_temperature": 20.2,
+            "february_ground_temperature": 20.03,
+            "january_ground_temperature": 20.03,
+            "july_ground_temperature": 20.62,
+            "june_ground_temperature": 20.52,
+            "march_ground_temperature": 20.13,
+            "may_ground_temperature": 20.43,
+            "november_ground_temperature": 20.44,
+            "october_ground_temperature": 20.55,
+            "september_ground_temperature": 20.78
+        }
+    },
+    "Site:Location": {
+        "Chicago Ohare Intl Ap IL USA WMO=725300": {
+            "elevation": 205.0,
+            "latitude": 41.99,
+            "longitude": -87.91,
+            "time_zone": -6.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "Chicago Ohare Intl Ap Ann Clg 1% Condns DB=>MWB": {
+            "barometric_pressure": 98934.0,
+            "daily_dry_bulb_temperature_range": 10.5,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 31.6,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23,
+            "wind_direction": 230,
+            "wind_speed": 5.2
+        },
+        "Chicago Ohare Intl Ap Ann Htg 99% Condns DB": {
+            "barometric_pressure": 98934.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -16.6,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -16.6,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        }
+    },
+    "SurfaceConvectionAlgorithm:Inside": {
+        "SurfaceConvectionAlgorithm:Inside 1": {
+            "algorithm": "TARP"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Outside": {
+        "SurfaceConvectionAlgorithm:Outside 1": {
+            "algorithm": "DOE-2"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 6
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "23.2"
+        }
+    },
+    "WaterHeater:Mixed": {
+        "Water Heater 1": {
+            "ambient_temperature_indicator": "Schedule",
+            "ambient_temperature_schedule_name": "Ambient Temp Sch",
+            "deadband_temperature_difference": 2,
+            "heater_control_type": "Cycle",
+            "heater_fuel_type": "Electricity",
+            "heater_maximum_capacity": 15000,
+            "heater_minimum_capacity": 0,
+            "heater_thermal_efficiency": 0.98,
+            "maximum_temperature_limit": 80,
+            "off_cycle_loss_fraction_to_zone": 1,
+            "on_cycle_loss_fraction_to_zone": 1,
+            "setpoint_temperature_schedule_name": "Water Heater Setpoint",
+            "source_side_design_flow_rate": 0.02,
+            "source_side_effectiveness": 1,
+            "source_side_inlet_node_name": "Water Heater Source Inlet Node",
+            "source_side_outlet_node_name": "Supply Cooling Inlet Node",
+            "tank_volume": 0.5,
+            "use_side_design_flow_rate": 0.0008,
+            "use_side_effectiveness": 1,
+            "use_side_inlet_node_name": "HW Supply Heating Inlet Node",
+            "use_side_outlet_node_name": "HW Supply Heating Outlet Node"
+        }
+    },
+    "WindowMaterial:Gas": {
+        "AIR 6MM": {
+            "gas_type": "Air",
+            "thickness": 0.0063
+        }
+    },
+    "WindowMaterial:Glazing": {
+        "CLEAR 6MM": {
+            "back_side_infrared_hemispherical_emissivity": 0.84,
+            "back_side_solar_reflectance_at_normal_incidence": 0.071,
+            "back_side_visible_reflectance_at_normal_incidence": 0.08,
+            "conductivity": 0.9,
+            "front_side_infrared_hemispherical_emissivity": 0.84,
+            "front_side_solar_reflectance_at_normal_incidence": 0.071,
+            "front_side_visible_reflectance_at_normal_incidence": 0.08,
+            "infrared_transmittance_at_normal_incidence": 0.0,
+            "optical_data_type": "SpectralAverage",
+            "solar_transmittance_at_normal_incidence": 0.775,
+            "thickness": 0.006,
+            "visible_transmittance_at_normal_incidence": 0.881
+        }
+    },
+    "Zone": {
+        "BackRoom": {
+            "ceiling_height": 4.266992,
+            "direction_of_relative_north": 0,
+            "floor_area": "Autocalculate",
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0,
+            "zone_inside_convection_algorithm": "TARP"
+        },
+        "SalesFloor": {
+            "ceiling_height": 4.266992,
+            "direction_of_relative_north": 0,
+            "floor_area": "Autocalculate",
+            "multiplier": 1,
+            "type": 1,
+            "volume": "Autocalculate",
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0,
+            "zone_inside_convection_algorithm": "TARP"
+        }
+    },
+    "ZoneControl:Humidistat": {
+        "SalesFloor Humidistat": {
+            "humidifying_relative_humidity_setpoint_schedule_name": "Relative Humidity Sch",
+            "zone_name": "SalesFloor"
+        }
+    },
+    "ZoneHVAC:AirDistributionUnit": {
+        "Zone1DirectAir ADU": {
+            "air_distribution_unit_outlet_node_name": "SalesFloor Inlet Node",
+            "air_terminal_name": "Zone1DirectAir",
+            "air_terminal_object_type": "AirTerminal:SingleDuct:ConstantVolume:NoReheat"
+        },
+        "Zone2DirectAir ADU": {
+            "air_distribution_unit_outlet_node_name": "BackRoom Inlet Node",
+            "air_terminal_name": "Zone2DirectAir",
+            "air_terminal_object_type": "AirTerminal:SingleDuct:ConstantVolume:NoReheat"
+        }
+    },
+    "ZoneHVAC:EquipmentConnections": {
+        "ZoneHVAC:EquipmentConnections 1": {
+            "zone_air_inlet_node_or_nodelist_name": "Zone1Inlets",
+            "zone_air_node_name": "SalesFloor Node",
+            "zone_conditioning_equipment_list_name": "Zone1Equipment",
+            "zone_name": "SalesFloor",
+            "zone_return_air_node_or_nodelist_name": "SalesFloor Outlet Node"
+        },
+        "ZoneHVAC:EquipmentConnections 2": {
+            "zone_air_inlet_node_or_nodelist_name": "Zone2Inlets",
+            "zone_air_node_name": "BackRoom Node",
+            "zone_conditioning_equipment_list_name": "Zone2Equipment",
+            "zone_name": "BackRoom",
+            "zone_return_air_node_or_nodelist_name": "BackRoom Outlet Node"
+        }
+    },
+    "ZoneHVAC:EquipmentList": {
+        "Zone1Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Zone1DirectAir ADU",
+                    "zone_equipment_object_type": "ZoneHVAC:AirDistributionUnit"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        },
+        "Zone2Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Zone2DirectAir ADU",
+                    "zone_equipment_object_type": "ZoneHVAC:AirDistributionUnit"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        }
+    }
+}

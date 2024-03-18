@@ -1,0 +1,569 @@
+{
+    "Building": {
+        "House": {
+            "loads_convergence_tolerance_value": 0.05,
+            "maximum_number_of_warmup_days": 35,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.05,
+            "terrain": "Suburbs"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "Main Floor Roof": {
+            "construction_name": "Roof Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "WindExposed",
+            "zone_name": "Main Floor"
+        },
+        "Main Floor Wall 1": {
+            "construction_name": "Main Floor Wall Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "WindExposed",
+            "zone_name": "Main Floor"
+        },
+        "Main Floor Wall 2": {
+            "construction_name": "Main Floor Wall Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "WindExposed",
+            "zone_name": "Main Floor"
+        },
+        "Main Floor Wall 3": {
+            "construction_name": "Main Floor Wall Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "WindExposed",
+            "zone_name": "Main Floor"
+        },
+        "Main Floor Wall 4": {
+            "construction_name": "Main Floor Wall Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 3.1
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.1
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "WindExposed",
+            "zone_name": "Main Floor"
+        },
+        "Zone Floor": {
+            "construction_name": "Floor Construction",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "OtherSideConditionsModel",
+            "outside_boundary_condition_object": "GroundCoupledOSCM",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 10.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 10.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": "Autocalculate",
+            "wind_exposure": "NoWind",
+            "zone_name": "Main Floor"
+        }
+    },
+    "Construction": {
+        "Floor Construction": {
+            "outside_layer": "Slab Material-Top Layer"
+        },
+        "Main Floor Wall Construction": {
+            "layer_2": "Composite 2x6 Wood Stud R19 #2",
+            "layer_3": "Composite 2x6 Wood Stud R19 #1",
+            "outside_layer": "Composite 2x6 Wood Stud R19 #3"
+        },
+        "Roof Construction": {
+            "outside_layer": "Roof Layer 1"
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "Material": {
+        "Composite 2x6 Wood Stud R19 #1": {
+            "conductivity": 0.137,
+            "density": 640.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1006,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.019,
+            "visible_absorptance": 0.7
+        },
+        "Composite 2x6 Wood Stud R19 #2": {
+            "conductivity": 0.047,
+            "density": 93.84,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1006,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.133,
+            "visible_absorptance": 0.7
+        },
+        "Composite 2x6 Wood Stud R19 #3": {
+            "conductivity": 0.246,
+            "density": 492.67,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.7,
+            "specific_heat": 1006,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.025,
+            "visible_absorptance": 0.7
+        },
+        "Insulation": {
+            "conductivity": 0.035,
+            "density": 265,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.65,
+            "specific_heat": 1300,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0254,
+            "visible_absorptance": 0.65
+        },
+        "Slab Material-On-grade": {
+            "conductivity": 1.8,
+            "density": 2400,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 750,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1397,
+            "visible_absorptance": 0.65
+        },
+        "Slab Material-Top Layer": {
+            "conductivity": 1.8,
+            "density": 2400,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.65,
+            "specific_heat": 750,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0127,
+            "visible_absorptance": 0.65
+        }
+    },
+    "Material:NoMass": {
+        "Roof Layer 1": {
+            "roughness": "Rough",
+            "solar_absorptance": 0.75,
+            "thermal_absorptance": 0.9,
+            "thermal_resistance": 3.344,
+            "visible_absorptance": 0.75
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Other Side Conditions Modeled Convection Air Temperature"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "Surface Average Face Conduction Heat Transfer Rate per Area"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "GroundDomain Slab Zone Coupled Surface Heat Flux"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Hourly",
+            "variable_name": "GroundDomain Slab Zone Coupled Surface Temperature"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "IDF"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "RunPeriod": {
+        "Annual Run": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Tuesday",
+            "end_day_of_month": 31,
+            "end_month": 12,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "Schedule:Compact": {
+        "HVACTemplate-Always 4": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 4
+                }
+            ],
+            "schedule_type_limits_name": "HVACTemplate Any Number"
+        },
+        "HVACTemplate-Always 20": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 20
+                }
+            ],
+            "schedule_type_limits_name": "HVACTemplate Any Number"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "HVACTemplate Any Number": {}
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "No",
+            "run_simulation_for_weather_file_run_periods": "Yes"
+        }
+    },
+    "Site:GroundDomain:Slab": {
+        "CoupledSlab": {
+            "aspect_ratio": 1,
+            "evapotranspiration_ground_cover_parameter": 1,
+            "ground_domain_depth": 5,
+            "perimeter_offset": 5,
+            "simulation_timestep": "Hourly",
+            "slab_boundary_condition_model_name": "GroundCoupledOSCM",
+            "slab_location": "OnGrade",
+            "slab_material_name": "Slab Material-On-grade",
+            "soil_density": 3200,
+            "soil_moisture_content_volume_fraction": 30,
+            "soil_moisture_content_volume_fraction_at_saturation": 50,
+            "soil_specific_heat": 836,
+            "soil_thermal_conductivity": 1.8,
+            "undisturbed_ground_temperature_model_name": "KATemps",
+            "undisturbed_ground_temperature_model_type": "Site:GroundTemperature:Undisturbed:KusudaAchenbach",
+            "vertical_insulation": "Yes",
+            "vertical_insulation_depth": 1.5,
+            "vertical_insulation_material_name": "Insulation"
+        }
+    },
+    "Site:GroundTemperature:Undisturbed:KusudaAchenbach": {
+        "KATemps": {
+            "average_amplitude_of_surface_temperature": 12.8,
+            "average_soil_surface_temperature": 15.5,
+            "phase_shift_of_minimum_surface_temperature": 17.3,
+            "soil_density": 3200,
+            "soil_specific_heat": 836,
+            "soil_thermal_conductivity": 1.8
+        }
+    },
+    "Site:Location": {
+        "Ohare Intl Ap IL USA TMY3 WMO#=725300": {
+            "elevation": 201.0,
+            "latitude": 41.98,
+            "longitude": -87.92,
+            "time_zone": -6
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "Chicago Ohare Intl Ap Ann Clg 1% Condns DB=>MWB": {
+            "barometric_pressure": 98886.0,
+            "daily_dry_bulb_temperature_range": 10.5,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 31.6,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23,
+            "wind_direction": 230,
+            "wind_speed": 5.2
+        },
+        "Chicago Ohare Intl Ap Ann Htg 99% Condns DB": {
+            "barometric_pressure": 98886.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -16.6,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -16.6,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        }
+    },
+    "SurfaceProperty:OtherSideConditionsModel": {
+        "GroundCoupledOSCM": {
+            "type_of_modeling": "GroundCoupledSurface"
+        }
+    },
+    "ThermostatSetpoint:DualSetpoint": {
+        "Always21 Dual SP Control": {
+            "cooling_setpoint_temperature_schedule_name": "HVACTemplate-Always 20",
+            "heating_setpoint_temperature_schedule_name": "HVACTemplate-Always 20"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 4
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "23.2"
+        }
+    },
+    "Zone": {
+        "Main Floor": {
+            "ceiling_height": "Autocalculate",
+            "direction_of_relative_north": 0,
+            "floor_area": "Autocalculate",
+            "part_of_total_floor_area": "Yes",
+            "volume": "Autocalculate",
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0,
+            "zone_inside_convection_algorithm": "Simple",
+            "zone_outside_convection_algorithm": "SimpleCombined"
+        }
+    },
+    "ZoneControl:Thermostat": {
+        "Main Floor Thermostat": {
+            "control_1_name": "Always21 Dual SP Control",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "HVACTemplate-Always 4",
+            "zone_or_zonelist_name": "Main Floor"
+        }
+    },
+    "ZoneHVAC:EquipmentConnections": {
+        "ZoneHVAC:EquipmentConnections 1": {
+            "zone_air_inlet_node_or_nodelist_name": "Main Floor Ideal Loads Supply Inlet",
+            "zone_air_node_name": "Main Floor Zone Air Node",
+            "zone_conditioning_equipment_list_name": "Main Floor Equipment",
+            "zone_name": "Main Floor",
+            "zone_return_air_node_or_nodelist_name": "Main Floor Return Outlet"
+        }
+    },
+    "ZoneHVAC:EquipmentList": {
+        "Main Floor Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Main Floor Ideal Loads Air System",
+                    "zone_equipment_object_type": "ZoneHVAC:IdealLoadsAirSystem"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        }
+    },
+    "ZoneHVAC:IdealLoadsAirSystem": {
+        "Main Floor Ideal Loads Air System": {
+            "cooling_limit": "NoLimit",
+            "cooling_sensible_heat_ratio": 0.7,
+            "dehumidification_control_type": "ConstantSensibleHeatRatio",
+            "demand_controlled_ventilation_type": "None",
+            "heat_recovery_type": "None",
+            "heating_limit": "NoLimit",
+            "humidification_control_type": "None",
+            "latent_heat_recovery_effectiveness": 0.65,
+            "maximum_heating_supply_air_humidity_ratio": 0.0156,
+            "maximum_heating_supply_air_temperature": 50,
+            "minimum_cooling_supply_air_humidity_ratio": 0.0077,
+            "minimum_cooling_supply_air_temperature": 13,
+            "outdoor_air_economizer_type": "NoEconomizer",
+            "sensible_heat_recovery_effectiveness": 0.7,
+            "zone_supply_air_node_name": "Main Floor Ideal Loads Supply Inlet"
+        }
+    }
+}

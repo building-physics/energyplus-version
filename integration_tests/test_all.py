@@ -9,7 +9,7 @@ import itertools
 import json
 import importlib
 
-versions = ['9.4', '23.1']
+versions = ['9.4', '23.1', '23.2']
 files = {version: glob.glob(os.path.join('test_files', version, '*.epJSON')) for version in versions}
 parameters = list(itertools.chain(*[[(version, file) for file in files[version]] for version in versions]))
 

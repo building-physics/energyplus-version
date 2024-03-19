@@ -46,6 +46,6 @@ hx = {
 def test_hx():
     upgrade = Upgrade()
     patch = upgrade.generate_patch(hx)
-    assert len(patch) == 8
+    assert len(patch) == 10
     jp = jsonpatch.JsonPatch(patch)
     new_epjson = jp.apply(hx)

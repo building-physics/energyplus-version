@@ -21,7 +21,12 @@ HXA2ASL_fields = {"sensible_effectiveness_at_75_heating_air_flow": "sensible_eff
                   "latent_effectiveness_at_75_heating_air_flow": "latent_effectiveness_at_100_heating_air_flow",
                   "sensible_effectiveness_at_75_cooling_air_flow": "sensible_effectiveness_at_100_cooling_air_flow",
                   "latent_effectiveness_at_75_cooling_air_flow": "latent_effectiveness_at_100_cooling_air_flow"}
-    
+
+HXA2SL_curves = {'sensible_effectiveness_at_75_heating_air_flow': 'sensible_effectiveness_of_heating_air_flow_curve_name',
+                 'latent_effectiveness_at_75_heating_air_flow': 'latent_effectiveness_of_heating_air_flow_curve_name',
+                 'sensible_effectiveness_at_75_cooling_air_flow': 'sensible_effectiveness_of_cooling_air_flow_curve_name',
+                 'latent_effectiveness_at_75_cooling_air_flow': 'latent_effectiveness_of_cooling_air_flow_curve_name'}
+
 class ChangeHXA2ASL(ev.Change):
     def __init__(self):
         self.object = "HeatExchanger:AirToAir:SensibleAndLatent"
@@ -41,7 +46,7 @@ class ChangeHXA2ASL(ev.Change):
                             if object[field_75_name] != object[field_100_name]:
                                 self.curve_id += 1
                                 table_added = True
-                                curve_name = '%s_%d' % (name, self.curve_id),
+                                curve_name = '%s_%d' % (name, self.curve_id)
                                 curve_dict = self.curve_object(object[field_100_name], object[field_75_name])
                                 # Add at one level higher if there are not Table:Lookup objects
                                 if 'Table:Lookup' not in model:
@@ -50,9 +55,14 @@ class ChangeHXA2ASL(ev.Change):
                                 else:
                                     path = '/Table:Lookup/%s' % curve_name
                                 patch.append({'op': 'add', 'path': path, 'value': curve_dict})
+                                # Connect the curve
+                                curve_field_name = HXA2SL_curves[field_75_name]
+                                path = '/%s/%s/%s' % (self.object, name, curve_field_name)
+                                patch.append({'op': 'add', 'path': path, 'value': curve_name})
+
         if table_added:
             value = {
-                'independent_variables': ['airFlowRatio'] # This is probably wrong, hopefully
+                'independent_variables': [{'independent_variable_name':'airFlowRatio'}] # This is probably wrong, hopefully
             }
             path = '/Table:IndependentVariableList/effectiveness_IndependentVariableList'
             # Add at one level higher if there are no previous objects
@@ -67,7 +77,7 @@ class ChangeHXA2ASL(ev.Change):
                 'minimum_value': 0.0,
                 'maximum_value': 10.0,
                 'unit_type': 'Dimensionless',
-                'values': [0.75, 1.0]
+                'values': [{'value':0.75}, {'value':1.0}]
             }
             path = '/Table:IndependentVariable/airflowRatio'
             if 'Table:IndependentVariable' not in model:
@@ -83,7 +93,7 @@ class ChangeHXA2ASL(ev.Change):
             'minimum_output': 0.0,
             'maximum_output': 10.0,
             'output_unit_type': 'Dimensionless',
-            'values': [e75_i, e100_i]
+            'values': [{'output_value':e75_i}, {'output_value':e100_i}]
         } 
     def describe(self) -> str:
         return 'Modify the "HeatExchanger:AirToAir:SensibleAndLatent" object to add curves.'

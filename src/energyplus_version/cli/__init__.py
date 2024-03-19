@@ -4,8 +4,10 @@
 import click
 import json
 import jsonpatch
+import importlib
 import energyplus_version as ev
-from ..version_22_1 import Upgrade
+#from ..version_23_2 import Upgrade
+#from ..version_22_1 import Upgrade
 #from version_22_1 import Upgrade
 
 from ..__about__ import __version__
@@ -14,9 +16,9 @@ from ..__about__ import __version__
 @click.command()
 @click.argument('epjson', type=click.Path(exists=True)) #, help='epJSON file to upgrade')
 @click.option('-d', '--downgradable', is_flag=True, show_default=True, default=False, help='Make the file downgradable.')
+@click.option('-v', '--verbose', is_flag=True, show_default=True, default=False, help='Operate verbosely and write out progress information.')
 @click.option('-o', '--output', show_default=True, default='upgrade.epJSON', help='File name to write.')
-def upgrade(epjson, downgradable, output):
-    click.echo('Upgrade!')
+def upgrade(epjson, downgradable, verbose, output):
     fp = open(epjson, 'r')
     # Need to catch any issues with reading the json
     epjson = json.load(fp)
@@ -25,24 +27,32 @@ def upgrade(epjson, downgradable, output):
         version_string = list(epjson['Version'].values())[0]['version_identifier']
     except:
         click.echo('Failed to find version string, cannot proceed', err=True)
-    print(version_string)
+    if verbose:
+        click.echo('Attempting to upgrade from version %s.' % version_string)
     old_downgrade = epjson.pop('energyplus_version_downgrade', {})
     # Need to do a proper lookup and do a plugin thing here
-    upgrade = Upgrade()
-    print(upgrade.describe())
+    mod = importlib.import_module('energyplus_version.version_%s' % version_string.replace('.', '_'))
+    upgrade = mod.Upgrade()
+    if verbose:
+        click.echo(upgrade.describe())
     patch = upgrade.generate_patch(epjson)
-    print(str(patch))
+    if verbose:
+        click.echo('Patch contains %d itactions' % len(patch))
     jp = jsonpatch.JsonPatch(patch)
     new_epjson= jp.apply(epjson)
+    if verbose:
+        click.echo('Patch succeessfully applied.')
     # Add in downgrade information if requested
     if downgradable:
         downpatch = jsonpatch.JsonPatch.from_diff(new_epjson, epjson)
         new_epjson['energyplus_version_downgrade'] = old_downgrade
         new_epjson['energyplus_version_downgrade'][version_string] = json.loads(downpatch.to_string())
+        if verbose:
+            click.echo('Downgrade information generated.')
     # Need to set up the naming to mimic the current setup, just forge ahead for now
-    fp = open(output, 'w')
-    json.dump(new_epjson, fp, indent=4)
-    fp.close()
+    with open(output, 'w') as fp:
+        # Need better checking for legal JSON here
+        json.dump(new_epjson, fp, indent=4)
 
 @click.command()
 @click.argument('epjson', type=click.Path(exists=True)) #, help='epJSON file to downgrade')
@@ -78,7 +88,8 @@ def downgrade(epjson, output, to=None):
 #@click.option('-t', '--to', help='Version to downgrade to, defaults to one version back.')
 def describe(version):
     # Need to do a proper lookup and do a plugin thing here
-    upgrade = Upgrade()
+    mod = importlib.import_module('energyplus_version.version_%s' % version.replace('.', '_'))
+    upgrade = mod.Upgrade()
     print(upgrade.describe())
 
 @click.group(context_settings={'help_option_names': ['-h', '--help']}, invoke_without_command=False)

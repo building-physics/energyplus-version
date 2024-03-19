@@ -62,7 +62,7 @@ class ChangeHXA2ASL(ev.Change):
 
         if table_added:
             value = {
-                'independent_variables': [{'independent_variable_name':'airFlowRatio'}] # This is probably wrong, hopefully
+                'independent_variables': [{'independent_variable_name':'airFlowRatio'}]
             }
             path = '/Table:IndependentVariableList/effectiveness_IndependentVariableList'
             # Add at one level higher if there are no previous objects

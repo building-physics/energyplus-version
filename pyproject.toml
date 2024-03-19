@@ -37,7 +37,7 @@ Issues = "https://github.com/unknown/energyplus_version/issues"
 Source = "https://github.com/unknown/energyplus_version"
 
 [project.scripts]
-energyplus_version = "energyplus_version.cli:energyplus_version"
+energyplus-version = "energyplus_version.cli:energyplus_version"
 
 [tool.hatch.version]
 path = "src/energyplus_version/__about__.py"

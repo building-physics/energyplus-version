@@ -31,6 +31,7 @@ class ChangeHXA2ASL(ev.Change):
     def __init__(self):
         self.object = "HeatExchanger:AirToAir:SensibleAndLatent"
         self.curve_id = 0
+
     def generate_patch(self, model: dict) -> list:
         patch = []
         table_added = False
@@ -59,7 +60,6 @@ class ChangeHXA2ASL(ev.Change):
                                 curve_field_name = HXA2SL_curves[field_75_name]
                                 path = '/%s/%s/%s' % (self.object, name, curve_field_name)
                                 patch.append({'op': 'add', 'path': path, 'value': curve_name})
-
         if table_added:
             value = {
                 'independent_variables': [{'independent_variable_name':'airFlowRatio'}]
@@ -85,6 +85,7 @@ class ChangeHXA2ASL(ev.Change):
                 path = '/Table:IndependentVariable'
             patch.append({'op': 'add', 'path': path, 'value': value})
         return patch
+
     def curve_object(self, e100_i:float, e75_i:float)->dict:
         return {
             'independent_variable_list_name': 'effectiveness_IndependentVariableList',
@@ -94,7 +95,8 @@ class ChangeHXA2ASL(ev.Change):
             'maximum_output': 10.0,
             'output_unit_type': 'Dimensionless',
             'values': [{'output_value':e75_i}, {'output_value':e100_i}]
-        } 
+        }
+
     def describe(self) -> str:
         return 'Modify the "HeatExchanger:AirToAir:SensibleAndLatent" object to add curves.'
 

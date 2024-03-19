@@ -6,12 +6,8 @@ import json
 import jsonpatch
 import importlib
 import energyplus_version as ev
-#from ..version_23_2 import Upgrade
-#from ..version_22_1 import Upgrade
-#from version_22_1 import Upgrade
 
 from ..__about__ import __version__
-#from __about__ import __version__
 
 @click.command()
 @click.argument('epjson', type=click.Path(exists=True)) #, help='epJSON file to upgrade')
@@ -63,7 +59,6 @@ def downgrade(epjson, output, to=None):
     # Need to catch any issues with reading the json
     epjson = json.load(fp)
     fp.close()
-    click.echo('Downgrade')
     if 'energyplus_version_downgrade' in epjson:
         try:
             version_string = list(epjson['Version'].values())[0]['version_identifier']
@@ -84,13 +79,11 @@ def downgrade(epjson, output, to=None):
 
 @click.command()
 @click.argument('version') #, help='version to describe')
-#@click.option('-o', '--output', show_default=True, default='downgrade.epJSON', help='File name to write.')
-#@click.option('-t', '--to', help='Version to downgrade to, defaults to one version back.')
 def describe(version):
     # Need to do a proper lookup and do a plugin thing here
     mod = importlib.import_module('energyplus_version.version_%s' % version.replace('.', '_'))
     upgrade = mod.Upgrade()
-    print(upgrade.describe())
+    click.echo(upgrade.describe())
 
 @click.group(context_settings={'help_option_names': ['-h', '--help']}, invoke_without_command=False)
 @click.version_option(version=__version__, prog_name='energyplus_version')

@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "energyplus-version"
 description = 'Change the version of an EnergyPlus epJSON file'
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 license = "BSD-3-Clause"
 keywords = []
 authors = [
@@ -16,11 +16,11 @@ authors = [
 classifiers = [
   "Development Status :: 4 - Beta",
   "Programming Language :: Python",
-  "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
@@ -32,9 +32,9 @@ dependencies = [
 dynamic = ["version"]
 
 [project.urls]
-Documentation = "https://github.com/unknown/energyplus_version#readme"
-Issues = "https://github.com/unknown/energyplus_version/issues"
-Source = "https://github.com/unknown/energyplus_version"
+Documentation = "https://github.com/building-physics/energyplus_version#readme"
+Issues = "https://github.com/building-physics/energyplus_version/issues"
+Source = "https://github.com/building-physics/energyplus_version"
 
 [project.scripts]
 energyplus-version = "energyplus_version.cli:energyplus_version"
@@ -52,7 +52,7 @@ cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=src/en
 no-cov = "cov --no-cov {args}"
 
 [[tool.hatch.envs.test.matrix]]
-python = ["37", "38", "39", "310", "311"]
+python = ["38", "39", "310", "311", "312"]
 
 [tool.coverage.run]
 branch = true

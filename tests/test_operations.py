@@ -78,20 +78,6 @@ def test_map_field_value():
     assert all((new_obj['Test']['test_one'].get(k) == v for k, v in expected['Test']['test_one'].items()))
     assert change.describe() == 'Change the values of field named "field_one" as follows: "A" to "Z", "B" to "Y".'
 
-def test_map_field_value():
-    obj = {'Test': {'test_one': {'field_one': 'A', 'field_two': 'B'}}}
-    change = energyplus_version.MapValues('Test', 'field_one', {'A': 'Z', 'B': 'Y'})
-    assert change.valid(obj)
-    patch = change.generate_patch(obj)
-    assert len(patch) == 1
-    expected = {'op': 'replace', 'path': '/Test/test_one/field_one', 'value': 'Z'}
-    assert all((patch[0].get(k) == v for k, v in expected.items()))
-    jp =jsonpatch.JsonPatch(patch)
-    new_obj = jp.apply(obj)
-    expected = {'Test': {'test_one': {'field_one': 'Z', 'field_two': 'B'}}}
-    assert all((new_obj['Test']['test_one'].get(k) == v for k, v in expected['Test']['test_one'].items()))
-    assert change.describe() == 'Change the values of field named "field_one" as follows: "A" to "Z", "B" to "Y".'
-
 def test_change_object_name():
     obj = {'Test': {'test_one': {'field_one': 'A', 'field_two': 'B'}}}
     change = energyplus_version.ChangeObjectName('Test', 'NotATest')

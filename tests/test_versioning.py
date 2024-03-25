@@ -2,7 +2,6 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 import energyplus_version
-import jsonpatch
 
 def test_version():
     version = energyplus_version.EnergyPlusVersion(22, 2)

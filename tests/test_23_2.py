@@ -49,3 +49,4 @@ def test_hx():
     assert len(patch) == 10
     jp = jsonpatch.JsonPatch(patch)
     new_epjson = jp.apply(hx)
+    assert new_epjson

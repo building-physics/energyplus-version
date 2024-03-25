@@ -67,8 +67,8 @@ def test_remove_field_all():
 def test_map_field_value():
     obj = {'Test': {'test_one': {'field_one': 'A', 'field_two': 'B'}}}
     change = energyplus_version.MapValues('Test', 'field_one', {'A': 'Z', 'B': 'Y'})
-    assert change.valid(obj['Test']['test_one'])
-    patch = change.apply('test_one', obj['Test']['test_one'])
+    assert change.valid(obj)
+    patch = change.generate_patch(obj)
     assert len(patch) == 1
     expected = {'op': 'replace', 'path': '/Test/test_one/field_one', 'value': 'Z'}
     assert all((patch[0].get(k) == v for k, v in expected.items()))

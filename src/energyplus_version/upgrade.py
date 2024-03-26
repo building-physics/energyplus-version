@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2023-present Oak Ridge National Laboratory, managed by UT-Battelle
 #
 # SPDX-License-Identifier: BSD-3-Clause
-from typing import Callable
+#from typing import Callable
 
 class UpgradeError(Exception):
     pass
@@ -46,7 +46,7 @@ class ChangeFieldName(Change):
         return 'Change the field named "%s" to "%s".' % (self.old_name, self.new_name)
 
 class AddComputedField(Change):
-    def __init__(self, object: str, field: str, compute: Callable[[dict, dict], int|float|str|None]=do_not_add):
+    def __init__(self, object: str, field: str, compute): #: Callable[[dict, dict], int|float|str|None]=do_not_add):
         self.object = object
         self.field = field
         self.compute = compute
@@ -62,7 +62,7 @@ class AddComputedField(Change):
         path = '/%s/%s/%s' % (self.object, object_name, self.field)
         return [{'op': 'add', 'path': path, 'value': value}]
     def valid(self, object) -> bool:
-        return self.old_name in object
+        return self.field in object
     def describe(self) -> str:
         return 'Add the field named "%s" with a computed value.' % self.field
     

@@ -21,8 +21,8 @@ def upgrade(epjson, downgradable, verbose, output):
     fp.close()
     try:
         version_string = list(epjson['Version'].values())[0]['version_identifier']
-    except:
-        click.echo('Failed to find version string, cannot proceed', err=True)
+    except Exception as exc:
+        click.echo('Failed to find version string (%s), cannot proceed' % str(exc), err=True)
     if verbose:
         click.echo('Attempting to upgrade from version %s.' % version_string)
     old_downgrade = epjson.pop('energyplus_version_downgrade', {})
@@ -62,8 +62,8 @@ def downgrade(epjson, output, to=None):
     if 'energyplus_version_downgrade' in epjson:
         try:
             version_string = list(epjson['Version'].values())[0]['version_identifier']
-        except:
-            click.echo('Failed to find version string, cannot proceed', err=True)
+        except Exception as exc:
+            click.echo('Failed to find version string (%s), cannot proceed' % str(exc), err=True)
         version = ev.EnergyPlusVersion.from_string(version_string)
         if version is None:
             click.echo('Failed to process version string "%s", cannot proceed' % version_string, err=True)

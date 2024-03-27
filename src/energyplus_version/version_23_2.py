@@ -139,7 +139,7 @@ class Upgrade(ev.EnergyPlusUpgrade):
         ]
 
     def from_version(self):
-        return '23.2'
+        return '23.2.0'
     
     def to_version(self):
-        return '24.1'
+        return '24.1.0'

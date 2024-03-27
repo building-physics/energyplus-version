@@ -5,7 +5,6 @@ import click
 import json
 import jsonpatch
 import importlib
-import energyplus_version as ev
 
 from ..__about__ import __version__
 
@@ -31,7 +30,15 @@ def upgrade(epjson, verbose, output, write_patch, dry_run):
     if verbose:
         click.echo('Attempting to upgrade from version %s.' % version_string)
     # Need to do a proper lookup and do a plugin thing here
-    mod = importlib.import_module('energyplus_version.version_%s' % version_string.replace('.', '_'))
+    try:
+        mod = importlib.import_module('energyplus_version.version_%s' % version_string.replace('.', '_'))
+    except ModuleNotFoundError:
+        # Try with patch 0
+        try:
+            mod = importlib.import_module('energyplus_version.version_%s_0' % version_string.replace('.', '_'))
+        except ModuleNotFoundError:
+            click.echo('Failed to find version "%s", cannot proceed.' % version_string, err=True)
+            exit(1)
     upgrade = mod.Upgrade()
     if verbose:
         click.echo(upgrade.describe())
@@ -64,8 +71,12 @@ def describe(version):
     try:
         mod = importlib.import_module('energyplus_version.version_%s' % version.replace('.', '_'))
     except ModuleNotFoundError:
-        click.echo('Failed to find version "%s", cannot proceed.' % version, err=True)
-        exit(1)
+        # Try with patch 0
+        try:
+            mod = importlib.import_module('energyplus_version.version_%s_0' % version.replace('.', '_'))
+        except ModuleNotFoundError:
+            click.echo('Failed to find version "%s", cannot proceed.' % version, err=True)
+            exit(1)
     upgrade = mod.Upgrade()
     click.echo(upgrade.describe())
 

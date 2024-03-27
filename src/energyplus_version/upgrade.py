@@ -158,4 +158,9 @@ class EnergyPlusUpgrade(Upgrade):
         except KeyError:
             pass
         return patch
+    def describe(self):
+        header = 'Input Changes Version %s to %s' % (self.to_version(), self.from_version())
+        string = header + '\n' + ('=' * len(header)) + '\n\n'
+        string += super().describe()
+        return string
         

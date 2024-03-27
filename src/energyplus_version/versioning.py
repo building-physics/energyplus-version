@@ -22,7 +22,7 @@ class EnergyPlusVersion:
             release = 2
         return EnergyPlusVersion(year, release)
     def __str__(self):
-        return '%d.%d' % (self.year, self.release)
+        return '%d.%d.%d' % (self.year, self.release, self.patch)
     @classmethod
     def from_string(cls, string):
         try:

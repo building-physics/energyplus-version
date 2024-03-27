@@ -4,7 +4,7 @@
 import jsonpatch
 
 #from energyplus_version import UpgradeWarning
-from energyplus_version.version_23_2 import Upgrade
+from energyplus_version.version_23_2_0 import Upgrade
 
 def diff_as_string(left, right):
     diffpatch = jsonpatch.JsonPatch.from_diff(left, right)
@@ -12,8 +12,8 @@ def diff_as_string(left, right):
 
 def test_versions():
     upgrade = Upgrade()
-    assert upgrade.from_version() == '23.2'
-    assert upgrade.to_version() == '24.1'
+    assert upgrade.from_version() == '23.2.0'
+    assert upgrade.to_version() == '24.1.0'
 
 hx = {
     "HeatExchanger:AirToAir:SensibleAndLatent": {

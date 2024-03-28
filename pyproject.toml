@@ -10,7 +10,7 @@ requires-python = ">=3.8"
 license = "BSD-3-Clause"
 keywords = []
 authors = [
-  { name = "Jason W. DeGraw", email = "jason.degraw@gmail.com" },
+  { name = "Jason W. DeGraw" },
   { name = "Niraj Kunwar" }
 ]
 maintainers = [

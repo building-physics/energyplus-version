@@ -13,6 +13,9 @@ authors = [
   { name = "Jason W. DeGraw", email = "jason.degraw@gmail.com" },
   { name = "Niraj Kunwar" }
 ]
+maintainers = [
+  { name = "Jason W. DeGraw", email = "jason.degraw@gmail.com" }
+]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Programming Language :: Python",

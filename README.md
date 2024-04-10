@@ -50,7 +50,7 @@ hatch shell
 to enter the environment that was created, and then execute
 
 ```console
-energyplus_version --help
+energyplus-version --help
 ```
 
 You should see the help output from the tool. Typing `exit` will exit the shell. 

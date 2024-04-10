@@ -35,9 +35,9 @@ dependencies = [
 dynamic = ["version"]
 
 [project.urls]
-Documentation = "https://github.com/building-physics/energyplus_version#readme"
-Issues = "https://github.com/building-physics/energyplus_version/issues"
-Source = "https://github.com/building-physics/energyplus_version"
+Documentation = "https://github.com/building-physics/energyplus-version#readme"
+Issues = "https://github.com/building-physics/energyplus-version/issues"
+Source = "https://github.com/building-physics/energyplus-version"
 
 [project.scripts]
 energyplus-version = "energyplus_version.cli:energyplus_version"

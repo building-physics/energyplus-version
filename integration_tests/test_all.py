@@ -7,8 +7,8 @@ import glob
 import os
 import itertools
 import json
-import jsonschema
 import importlib
+import jsonschema_rs
 
 from energyplus_version import EnergyPlusVersion
 
@@ -34,15 +34,14 @@ def load_schema(version):
     return schema_data
 
 
-schemas = {version: load_schema(version) for version in ['23.2.0', '24.1.0']}
+validators = {
+    version: jsonschema_rs.Draft7Validator(load_schema(version))
+    for version in ['23.2.0', '24.1.0']
+}
 
 
 def validate_json(json_data, version):
-    try:
-        jsonschema.validate(instance=json_data, schema=schemas[version])
-        return True
-    except jsonschema.exceptions.ValidationError:
-        return False
+    return validators[version].is_valid(json_data)
 
 
 @pytest.mark.parametrize("version, filename", parameters)

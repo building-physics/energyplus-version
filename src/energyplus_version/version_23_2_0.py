@@ -15,7 +15,8 @@ def compute_field_PTAC(object, model):
     return "No"
 
 def compute_field_PTHP(object, model):
-    if object["cooling_coil_object_type"]=="Coil:Cooling:DX:VariableSpeed":
+    if (object.get("heating_coil_object_type") == "Coil:Heating:DX:VariableSpeed"
+            or object.get("cooling_coil_object_type") == "Coil:Cooling:DX:VariableSpeed"):
         return "Yes"
     return "No"
     

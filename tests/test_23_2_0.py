@@ -1,10 +1,24 @@
 # SPDX-FileCopyrightText: 2023-present Oak Ridge National Laboratory, managed by UT-Battelle
 #
 # SPDX-License-Identifier: BSD-3-Clause
+import json
+from copy import deepcopy
+from pathlib import Path
+
 import jsonpatch
+import jsonschema
 
 #from energyplus_version import UpgradeWarning
 from energyplus_version.version_23_2_0 import Upgrade
+
+
+PROJECT_ROOT = Path(__file__).parents[1]
+FIXTURE_DIRECTORY = PROJECT_ROOT / "tests" / "fixtures" / "23_2_0_to_24_1_0"
+
+
+def load_json(path):
+    with path.open(encoding="utf-8") as json_file:
+        return json.load(json_file)
 
 def diff_as_string(left, right):
     diffpatch = jsonpatch.JsonPatch.from_diff(left, right)
@@ -14,6 +28,25 @@ def test_versions():
     upgrade = Upgrade()
     assert upgrade.from_version() == '23.2.0'
     assert upgrade.to_version() == '24.1.0'
+
+
+def test_upgrade_23_2_0_to_24_1_0_end_to_end():
+    input_path = FIXTURE_DIRECTORY / "input.epJSON"
+    expected_path = FIXTURE_DIRECTORY / "expected.epJSON"
+    source = load_json(input_path)
+    original = deepcopy(source)
+    expected = load_json(expected_path)
+
+    source_schema = load_json(PROJECT_ROOT / "schema" / "23.2" / "Energy+.schema.epJSON")
+    destination_schema = load_json(PROJECT_ROOT / "schema" / "24.1" / "Energy+.schema.epJSON")
+    jsonschema.Draft7Validator(source_schema).validate(source)
+
+    patch = Upgrade().generate_patch(source)
+    upgraded = jsonpatch.JsonPatch(patch).apply(source)
+
+    assert source == original
+    assert upgraded == expected
+    jsonschema.Draft7Validator(destination_schema).validate(upgraded)
 
 hx = {
     "HeatExchanger:AirToAir:SensibleAndLatent": {

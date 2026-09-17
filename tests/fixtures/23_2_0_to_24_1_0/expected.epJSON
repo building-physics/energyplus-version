@@ -1,0 +1,272 @@
+{
+  "Building": {
+    "Fixture Building": {}
+  },
+  "GlobalGeometryRules": {
+    "Fixture Geometry Rules": {
+      "starting_vertex_position": "UpperLeftCorner",
+      "vertex_entry_direction": "Counterclockwise",
+      "coordinate_system": "Relative"
+    }
+  },
+  "Version": {
+    "Version 1": {
+      "version_identifier": "24.1.0"
+    }
+  },
+  "AirLoopHVAC:UnitarySystem": {
+    "Fixture Unitary System": {
+      "air_inlet_node_name": "Unitary Inlet",
+      "air_outlet_node_name": "Unitary Outlet",
+      "heating_coil_object_type": "Coil:Heating:DX:VariableSpeed",
+      "cooling_coil_object_type": "Coil:Cooling:DX:SingleSpeed",
+      "no_load_supply_air_flow_rate_control_set_to_low_speed": "Yes"
+    }
+  },
+  "ElectricEquipment": {
+    "Fixture Electric Equipment": {
+      "zone_or_zonelist_or_space_or_spacelist_name": "Fixture Zone",
+      "schedule_name": "Fixture Schedule",
+      "design_level_calculation_method": "Watts/Area",
+      "watts_per_floor_area": 10
+    }
+  },
+  "Lights": {
+    "Fixture Lights": {
+      "zone_or_zonelist_or_space_or_spacelist_name": "Fixture Zone",
+      "schedule_name": "Fixture Schedule",
+      "design_level_calculation_method": "Watts/Area",
+      "watts_per_floor_area": 8
+    }
+  },
+  "ElectricEquipment:ITE:AirCooled": {
+    "Fixture ITE": {
+      "zone_or_space_name": "Fixture Zone",
+      "design_power_input_calculation_method": "Watts/Area",
+      "cpu_power_input_function_of_loading_and_air_temperature_curve_name": "CPU Curve",
+      "design_fan_air_flow_rate_per_power_input": 0.0001,
+      "air_flow_function_of_loading_and_air_temperature_curve_name": "Air Flow Curve",
+      "fan_power_input_function_of_flow_curve_name": "Fan Power Curve",
+      "watts_per_floor_area": 100
+    }
+  },
+  "GasEquipment": {
+    "Fixture Gas Equipment": {
+      "zone_or_zonelist_or_space_or_spacelist_name": "Fixture Zone",
+      "schedule_name": "Fixture Schedule",
+      "design_level_calculation_method": "Power/Area",
+      "power_per_floor_area": 6
+    }
+  },
+  "HotWaterEquipment": {
+    "Fixture Hot Water Equipment": {
+      "zone_or_zonelist_or_space_or_spacelist_name": "Fixture Zone",
+      "schedule_name": "Fixture Schedule",
+      "design_level_calculation_method": "Power/Area",
+      "power_per_floor_area": 5
+    }
+  },
+  "SteamEquipment": {
+    "Fixture Steam Equipment": {
+      "zone_or_zonelist_or_space_or_spacelist_name": "Fixture Zone",
+      "schedule_name": "Fixture Schedule",
+      "design_level_calculation_method": "Power/Area",
+      "power_per_floor_area": 4
+    }
+  },
+  "OtherEquipment": {
+    "Fixture Other Equipment": {
+      "zone_or_zonelist_or_space_or_spacelist_name": "Fixture Zone",
+      "schedule_name": "Fixture Schedule",
+      "design_level_calculation_method": "Power/Area",
+      "power_per_floor_area": 3
+    }
+  },
+  "People": {
+    "Fixture People": {
+      "zone_or_zonelist_or_space_or_spacelist_name": "Fixture Zone",
+      "number_of_people_schedule_name": "Fixture Schedule",
+      "activity_level_schedule_name": "Fixture Activity Schedule",
+      "mean_radiant_temperature_calculation_type": "EnclosureAveraged"
+    }
+  },
+  "ComfortViewFactorAngles": {
+    "Fixture View Factors": {
+      "surface_1_name": "Fixture Surface",
+      "angle_factor_1": 1
+    }
+  },
+  "ZoneHVAC:PackagedTerminalAirConditioner": {
+    "Fixture PTAC": {
+      "air_inlet_node_name": "PTAC Inlet",
+      "air_outlet_node_name": "PTAC Outlet",
+      "cooling_supply_air_flow_rate": 1,
+      "heating_supply_air_flow_rate": 1,
+      "cooling_outdoor_air_flow_rate": 0,
+      "heating_outdoor_air_flow_rate": 0,
+      "supply_air_fan_object_type": "Fan:OnOff",
+      "supply_air_fan_name": "PTAC Fan",
+      "heating_coil_object_type": "Coil:Heating:Electric",
+      "heating_coil_name": "PTAC Heating Coil",
+      "cooling_coil_object_type": "Coil:Cooling:DX:VariableSpeed",
+      "cooling_coil_name": "PTAC Cooling Coil",
+      "no_load_supply_air_flow_rate_control_set_to_low_speed": "Yes"
+    }
+  },
+  "ZoneHVAC:PackagedTerminalHeatPump": {
+    "Fixture PTHP": {
+      "air_inlet_node_name": "PTHP Inlet",
+      "air_outlet_node_name": "PTHP Outlet",
+      "cooling_supply_air_flow_rate": 1,
+      "heating_supply_air_flow_rate": 1,
+      "cooling_outdoor_air_flow_rate": 0,
+      "heating_outdoor_air_flow_rate": 0,
+      "supply_air_fan_object_type": "Fan:OnOff",
+      "supply_air_fan_name": "PTHP Fan",
+      "heating_coil_object_type": "Coil:Heating:DX:VariableSpeed",
+      "heating_coil_name": "PTHP Heating Coil",
+      "cooling_coil_object_type": "Coil:Cooling:DX:SingleSpeed",
+      "cooling_coil_name": "PTHP Cooling Coil",
+      "supplemental_heating_coil_object_type": "Coil:Heating:Electric",
+      "supplemental_heating_coil_name": "PTHP Supplemental Coil",
+      "maximum_supply_air_temperature_from_supplemental_heater": 50,
+      "no_load_supply_air_flow_rate_control_set_to_low_speed": "Yes"
+    }
+  },
+  "ZoneHVAC:WaterToAirHeatPump": {
+    "Fixture Water to Air Heat Pump": {
+      "air_inlet_node_name": "WAHP Inlet",
+      "air_outlet_node_name": "WAHP Outlet",
+      "cooling_supply_air_flow_rate": 1,
+      "heating_supply_air_flow_rate": 1,
+      "cooling_outdoor_air_flow_rate": 0,
+      "heating_outdoor_air_flow_rate": 0,
+      "supply_air_fan_object_type": "Fan:OnOff",
+      "supply_air_fan_name": "WAHP Fan",
+      "heating_coil_object_type": "Coil:Heating:WaterToAirHeatPump:EquationFit",
+      "heating_coil_name": "WAHP Heating Coil",
+      "cooling_coil_object_type": "Coil:Cooling:WaterToAirHeatPump:EquationFit",
+      "cooling_coil_name": "WAHP Cooling Coil",
+      "supplemental_heating_coil_object_type": "Coil:Heating:Electric",
+      "supplemental_heating_coil_name": "WAHP Supplemental Coil",
+      "no_load_supply_air_flow_rate_control_set_to_low_speed": "No"
+    }
+  },
+  "HeatExchanger:AirToAir:SensibleAndLatent": {
+    "Fixture Heat Exchanger": {
+      "nominal_supply_air_flow_rate": 1,
+      "supply_air_inlet_node_name": "HX Supply Inlet",
+      "supply_air_outlet_node_name": "HX Supply Outlet",
+      "exhaust_air_inlet_node_name": "HX Exhaust Inlet",
+      "exhaust_air_outlet_node_name": "HX Exhaust Outlet",
+      "sensible_effectiveness_at_100_heating_air_flow": 0.7,
+      "latent_effectiveness_at_100_heating_air_flow": 0.65,
+      "sensible_effectiveness_at_100_cooling_air_flow": 0.68,
+      "latent_effectiveness_at_100_cooling_air_flow": 0.63,
+      "sensible_effectiveness_of_heating_air_flow_curve_name": "Fixture Heat Exchanger_1",
+      "latent_effectiveness_of_heating_air_flow_curve_name": "Fixture Heat Exchanger_2",
+      "sensible_effectiveness_of_cooling_air_flow_curve_name": "Fixture Heat Exchanger_3",
+      "latent_effectiveness_of_cooling_air_flow_curve_name": "Fixture Heat Exchanger_4"
+    }
+  },
+  "Table:Lookup": {
+    "Existing Lookup Table": {
+      "independent_variable_list_name": "Existing Independent Variable List",
+      "values": [
+        {
+          "output_value": 1
+        }
+      ]
+    },
+    "Fixture Heat Exchanger_1": {
+      "independent_variable_list_name": "effectiveness_IndependentVariableList",
+      "normalization_method": "DivisorOnly",
+      "normalization_divisor": 0.7,
+      "minimum_output": 0,
+      "maximum_output": 10,
+      "output_unit_type": "Dimensionless",
+      "values": [
+        {
+          "output_value": 0.75
+        },
+        {
+          "output_value": 0.7
+        }
+      ]
+    },
+    "Fixture Heat Exchanger_2": {
+      "independent_variable_list_name": "effectiveness_IndependentVariableList",
+      "normalization_method": "DivisorOnly",
+      "normalization_divisor": 0.65,
+      "minimum_output": 0,
+      "maximum_output": 10,
+      "output_unit_type": "Dimensionless",
+      "values": [
+        {
+          "output_value": 0.7
+        },
+        {
+          "output_value": 0.65
+        }
+      ]
+    },
+    "Fixture Heat Exchanger_3": {
+      "independent_variable_list_name": "effectiveness_IndependentVariableList",
+      "normalization_method": "DivisorOnly",
+      "normalization_divisor": 0.68,
+      "minimum_output": 0,
+      "maximum_output": 10,
+      "output_unit_type": "Dimensionless",
+      "values": [
+        {
+          "output_value": 0.73
+        },
+        {
+          "output_value": 0.68
+        }
+      ]
+    },
+    "Fixture Heat Exchanger_4": {
+      "independent_variable_list_name": "effectiveness_IndependentVariableList",
+      "normalization_method": "DivisorOnly",
+      "normalization_divisor": 0.63,
+      "minimum_output": 0,
+      "maximum_output": 10,
+      "output_unit_type": "Dimensionless",
+      "values": [
+        {
+          "output_value": 0.68
+        },
+        {
+          "output_value": 0.63
+        }
+      ]
+    }
+  },
+  "Table:IndependentVariableList": {
+    "effectiveness_IndependentVariableList": {
+      "independent_variables": [
+        {
+          "independent_variable_name": "HxAirFlowRatio"
+        }
+      ]
+    }
+  },
+  "Table:IndependentVariable": {
+    "HxAirFlowRatio": {
+      "interpolation_method": "Linear",
+      "extrapolation_method": "Linear",
+      "minimum_value": 0,
+      "maximum_value": 10,
+      "unit_type": "Dimensionless",
+      "values": [
+        {
+          "value": 0.75
+        },
+        {
+          "value": 1
+        }
+      ]
+    }
+  }
+}

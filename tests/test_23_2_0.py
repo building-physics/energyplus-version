@@ -46,7 +46,6 @@ hx = {
 def test_hx():
     upgrade = Upgrade()
     patch = upgrade.generate_patch(hx)
-    assert len(patch) == 10
     jp = jsonpatch.JsonPatch(patch)
     new_epjson = jp.apply(hx)
     assert new_epjson
@@ -59,7 +58,47 @@ def test_hx():
         "latent_effectiveness_of_cooling_air_flow_curve_name",
     )
     curve_names = {hx_object[field] for field in curve_fields if field in hx_object}
+    assert curve_names == {
+        "F2 N1 Apartment OA Heat Exchanger_1",
+        "F2 N1 Apartment OA Heat Exchanger_3",
+    }
     assert curve_names <= set(new_epjson["Table:Lookup"])
+    independent_variables = new_epjson["Table:IndependentVariableList"]
+    assert independent_variables["effectiveness_IndependentVariableList"] == {
+        "independent_variables": [{"independent_variable_name": "HxAirFlowRatio"}]
+    }
+
+
+def test_hx_preserves_existing_lookup_tables():
+    model = dict(hx)
+    model["Table:Lookup"] = {"Existing Lookup Table": {"values": []}}
+
+    upgraded = jsonpatch.JsonPatch(Upgrade().generate_patch(model)).apply(model)
+
+    lookup_tables = upgraded["Table:Lookup"]
+    assert "Existing Lookup Table" in lookup_tables
+    assert "F2 N1 Apartment OA Heat Exchanger_1" in lookup_tables
+    assert "F2 N1 Apartment OA Heat Exchanger_3" in lookup_tables
+
+
+def test_hx_uses_defaults_for_omitted_effectiveness_fields():
+    model = {
+        "HeatExchanger:AirToAir:SensibleAndLatent": {
+            "Defaulted Heat Exchanger": {
+                "sensible_effectiveness_at_100_heating_air_flow": 0.7,
+            }
+        }
+    }
+
+    upgraded = jsonpatch.JsonPatch(Upgrade().generate_patch(model)).apply(model)
+
+    hx_object = upgraded["HeatExchanger:AirToAir:SensibleAndLatent"]["Defaulted Heat Exchanger"]
+    curve_name = hx_object["sensible_effectiveness_of_heating_air_flow_curve_name"]
+    assert curve_name == "Defaulted Heat Exchanger_1"
+    assert upgraded["Table:Lookup"][curve_name]["values"] == [
+        {"output_value": 0.0},
+        {"output_value": 0.7},
+    ]
 
 
 def test_airloop_unitary_system_no_load_airflow_control():

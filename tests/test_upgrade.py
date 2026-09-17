@@ -75,6 +75,7 @@ def test_fake_upgrade():
         }
     }
     upgrade = LocalEpUpgrade()
+    assert upgrade.describe().startswith('Input Changes Version 22.1 to 22.2\n')
     patch = upgrade.generate_patch(epjson)
     assert len(patch) == 1
 

@@ -3,6 +3,12 @@
 # SPDX-License-Identifier: BSD-3-Clause
 import energyplus_version as ev
 
+def compute_field_unitary_system(object, model):
+    if (object.get("heating_coil_object_type") == "Coil:Heating:DX:VariableSpeed"
+            or object.get("cooling_coil_object_type") == "Coil:Cooling:DX:VariableSpeed"):
+        return "Yes"
+    return "No"
+
 def compute_field_PTAC(object, model):
     if object["cooling_coil_object_type"] == "Coil:Cooling:DX:VariableSpeed":
         return "Yes"
@@ -103,6 +109,9 @@ class ChangeHXA2ASL(ev.Change):
 class Upgrade(ev.EnergyPlusUpgrade):
     def changes(self):
         return [
+            ev.AddComputedField("AirLoopHVAC:UnitarySystem",
+                                "no_load_supply_air_flow_rate_control_set_to_low_speed",
+                                compute_field_unitary_system),
             ev.ChangeFieldName("ElectricEquipment",
                                "watts_per_zone_floor_area", 
                                "watts_per_floor_area"),

@@ -1,0 +1,64 @@
+{
+  "Version": {
+    "Version 1": {
+      "version_identifier": "25.2"
+    }
+  },
+  "Building": {
+    "Fixture Building": {
+      "loads_convergence_tolerance_value": 0.04,
+      "maximum_number_of_warmup_days": 25,
+      "minimum_number_of_warmup_days": 6,
+      "north_axis": 0,
+      "solar_distribution": "FullInteriorAndExterior",
+      "temperature_convergence_tolerance_value": 0.4,
+      "terrain": "Suburbs"
+    }
+  },
+  "GlobalGeometryRules": {
+    "Fixture Geometry Rules": {
+      "coordinate_system": "World",
+      "starting_vertex_position": "UpperLeftCorner",
+      "vertex_entry_direction": "Counterclockwise"
+    }
+  },
+  "AirTerminal:SingleDuct:ParallelPIU:Reheat": {
+    "Fixture Parallel PIU": {
+      "availability_schedule_name": "Always On",
+      "convergence_tolerance": 0.0001,
+      "fan_name": "Parallel PIU Fan",
+      "fan_on_flow_fraction": "Autosize",
+      "maximum_hot_water_or_steam_flow_rate": "Autosize",
+      "maximum_primary_air_flow_rate": "Autosize",
+      "maximum_secondary_air_flow_rate": "Autosize",
+      "minimum_hot_water_or_steam_flow_rate": 0,
+      "minimum_primary_air_flow_fraction": "Autosize",
+      "outlet_node_name": "Parallel PIU Outlet",
+      "reheat_coil_air_inlet_node_name": "Parallel PIU Reheat Inlet",
+      "reheat_coil_name": "Parallel PIU Reheat Coil",
+      "reheat_coil_object_type": "Coil:Heating:Water",
+      "secondary_air_inlet_node_name": "Parallel PIU Secondary Inlet",
+      "supply_air_inlet_node_name": "Parallel PIU Primary Inlet",
+      "zone_mixer_name": "Parallel PIU Mixer"
+    }
+  },
+  "AirTerminal:SingleDuct:SeriesPIU:Reheat": {
+    "Fixture Series PIU": {
+      "availability_schedule_name": "Always On",
+      "convergence_tolerance": 0.0001,
+      "fan_name": "Series PIU Fan",
+      "maximum_air_flow_rate": "Autosize",
+      "maximum_hot_water_or_steam_flow_rate": "Autosize",
+      "maximum_primary_air_flow_rate": "Autosize",
+      "minimum_hot_water_or_steam_flow_rate": 0,
+      "minimum_primary_air_flow_fraction": "Autosize",
+      "outlet_node_name": "Series PIU Outlet",
+      "reheat_coil_air_inlet_node_name": "Series PIU Reheat Inlet",
+      "reheat_coil_name": "Series PIU Reheat Coil",
+      "reheat_coil_object_type": "Coil:Heating:Water",
+      "secondary_air_inlet_node_name": "Series PIU Secondary Inlet",
+      "supply_air_inlet_node_name": "Series PIU Primary Inlet",
+      "zone_mixer_name": "Series PIU Mixer"
+    }
+  }
+}

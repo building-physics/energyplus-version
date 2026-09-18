@@ -3,13 +3,20 @@
 # SPDX-License-Identifier: BSD-3-Clause
 import energyplus_version as ev
 
+def compute_field_unitary_system(object, model):
+    if (object.get("heating_coil_object_type") == "Coil:Heating:DX:VariableSpeed"
+            or object.get("cooling_coil_object_type") == "Coil:Cooling:DX:VariableSpeed"):
+        return "Yes"
+    return "No"
+
 def compute_field_PTAC(object, model):
     if object["cooling_coil_object_type"] == "Coil:Cooling:DX:VariableSpeed":
         return "Yes"
     return "No"
 
 def compute_field_PTHP(object, model):
-    if object["cooling_coil_object_type"]=="Coil:Cooling:DX:VariableSpeed":
+    if (object.get("heating_coil_object_type") == "Coil:Heating:DX:VariableSpeed"
+            or object.get("cooling_coil_object_type") == "Coil:Cooling:DX:VariableSpeed"):
         return "Yes"
     return "No"
     
@@ -30,39 +37,36 @@ HXA2SL_curves = {'sensible_effectiveness_at_75_heating_air_flow': 'sensible_effe
 class ChangeHXA2ASL(ev.Change):
     def __init__(self):
         self.object = "HeatExchanger:AirToAir:SensibleAndLatent"
-        self.curve_id = 0
 
     def generate_patch(self, model: dict) -> list:
         patch = []
-        table_added = False
+        generated_curves = {}
         if self.object in model:
             for name, object in model[self.object].items():
-                for field_75_name, field_100_name in HXA2ASL_fields.items():
+                for curve_id, (field_75_name, field_100_name) in enumerate(HXA2ASL_fields.items(), start=1):
+                    effect_75 = object.get(field_75_name, 0.0)
+                    effect_100 = object.get(field_100_name, 0.0)
                     if field_75_name in object:
-                        # Remove fields
-                        path = '/%s/%s/%s' % (self.object, name, field_75_name)
+                        path = '/%s/%s/%s' % (self.object, self._pointer_token(name), field_75_name)
                         patch.append({'op': 'remove', 'path': path})
-                        # Generate curves
-                        if field_100_name in object:
-                            if object[field_75_name] != object[field_100_name]:
-                                self.curve_id += 1
-                                table_added = True
-                                curve_name = '%s_%d' % (name, self.curve_id)
-                                curve_dict = self.curve_object(object[field_100_name], object[field_75_name])
-                                # Add at one level higher if there are not Table:Lookup objects
-                                if 'Table:Lookup' not in model:
-                                    curve_dict = {curve_name: curve_dict}
-                                    path = '/Table:Lookup'
-                                else:
-                                    path = '/Table:Lookup/%s' % curve_name
-                                patch.append({'op': 'add', 'path': path, 'value': curve_dict})
-                                # Connect the curve
-                                curve_field_name = HXA2SL_curves[field_75_name]
-                                path = '/%s/%s/%s' % (self.object, name, curve_field_name)
-                                patch.append({'op': 'add', 'path': path, 'value': curve_name})
-        if table_added:
+
+                    if effect_75 != effect_100:
+                        curve_name = '%s_%d' % (name, curve_id)
+                        generated_curves[curve_name] = self.curve_object(effect_100, effect_75)
+                        curve_field_name = HXA2SL_curves[field_75_name]
+                        path = '/%s/%s/%s' % (self.object, self._pointer_token(name), curve_field_name)
+                        patch.append({'op': 'add', 'path': path, 'value': curve_name})
+
+        if generated_curves:
+            if 'Table:Lookup' in model:
+                for curve_name, curve in generated_curves.items():
+                    path = '/Table:Lookup/%s' % self._pointer_token(curve_name)
+                    patch.append({'op': 'add', 'path': path, 'value': curve})
+            else:
+                patch.append({'op': 'add', 'path': '/Table:Lookup', 'value': generated_curves})
+
             value = {
-                'independent_variables': [{'independent_variable_name':'airFlowRatio'}]
+                'independent_variables': [{'independent_variable_name':'HxAirFlowRatio'}]
             }
             path = '/Table:IndependentVariableList/effectiveness_IndependentVariableList'
             # Add at one level higher if there are no previous objects
@@ -79,12 +83,16 @@ class ChangeHXA2ASL(ev.Change):
                 'unit_type': 'Dimensionless',
                 'values': [{'value':0.75}, {'value':1.0}]
             }
-            path = '/Table:IndependentVariable/airflowRatio'
+            path = '/Table:IndependentVariable/HxAirFlowRatio'
             if 'Table:IndependentVariable' not in model:
-                value = {'airflowRatio': value}
+                value = {'HxAirFlowRatio': value}
                 path = '/Table:IndependentVariable'
             patch.append({'op': 'add', 'path': path, 'value': value})
         return patch
+
+    @staticmethod
+    def _pointer_token(value: str) -> str:
+        return value.replace('~', '~0').replace('/', '~1')
 
     def curve_object(self, e100_i:float, e75_i:float)->dict:
         return {
@@ -103,6 +111,9 @@ class ChangeHXA2ASL(ev.Change):
 class Upgrade(ev.EnergyPlusUpgrade):
     def changes(self):
         return [
+            ev.AddComputedField("AirLoopHVAC:UnitarySystem",
+                                "no_load_supply_air_flow_rate_control_set_to_low_speed",
+                                compute_field_unitary_system),
             ev.ChangeFieldName("ElectricEquipment",
                                "watts_per_zone_floor_area", 
                                "watts_per_floor_area"),

@@ -88,6 +88,22 @@ publishing any collected files:
 hatch run python scripts/collect_transition_data.py <required options> --dry-run
 ```
 
+Use `--verbose` to print details for every failed file. The output includes the
+source filename, expected output filename, `EPMacro` or `ConvertInputFormat`
+exit code, captured tool diagnostics, and complete schema-validation error:
+
+```powershell
+hatch run python scripts/collect_transition_data.py <required options> --dry-run --verbose
+```
+
+Verbose diagnostics are written to standard error so they can be captured
+separately when desired:
+
+```powershell
+hatch run python scripts/collect_transition_data.py <required options> --dry-run --verbose `
+  2> collection-failures.log
+```
+
 ## Output layout
 
 The default output root is the repository root:
@@ -125,6 +141,18 @@ The normal behavior is conservative:
 - Conversion or validation failures prevent the corpus from being published.
 - A failure manifest is written under `manifests` for diagnosis.
 
+Without `--verbose`, the console reports only failure counts and the failure
+manifest location. With `--verbose`, the same file-level details recorded in
+the manifest are also printed immediately.
+
+`ConvertInputFormat` processes files in a batch, may interleave output when
+built with OpenMP, and can return process exit code zero even when an individual
+file fails. When a batch does not produce an expected epJSON file, the collector
+therefore retries that source file by itself. A successful retry is retained as
+the collected output. If the retry also fails, boilerplate status lines and
+temporary absolute paths are removed from its diagnostic before the concise
+per-file error is placed in the manifest or printed by `--verbose`.
+
 `--replace` is appropriate when deliberately refreshing previously collected
 data from verified release artifacts. It can replace only the version-specific
 targets selected by the command.
@@ -156,4 +184,3 @@ The collected corpus provides broad regression coverage; it does not prove
 that every transition rule is exercised. Each implemented transition still
 needs focused unit tests and an end-to-end fixture containing every documented
 change and important edge case.
-

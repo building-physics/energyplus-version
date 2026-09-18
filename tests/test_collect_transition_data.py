@@ -2,10 +2,19 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 import argparse
+import io
+from contextlib import redirect_stderr
+from pathlib import Path
 
 import pytest
 
-from scripts.collect_transition_data import Version, schema_declared_version, transition_source_paths
+from scripts.collect_transition_data import (
+    Version,
+    clean_converter_diagnostic,
+    print_failure_details,
+    schema_declared_version,
+    transition_source_paths,
+)
 
 
 def test_version_requires_and_preserves_patch_component():
@@ -41,3 +50,39 @@ def test_schema_declared_version():
     }
 
     assert schema_declared_version(schema) == "23.2"
+
+
+def test_verbose_failure_details():
+    output = io.StringIO()
+    conversion_failures = [
+        {
+            "source": "Example.idf",
+            "expected_output": "Example.epJSON",
+            "converter_exit_code": 1,
+            "converter_message": "Unsupported object",
+        }
+    ]
+    validation_failures = [{"file": "Invalid.epJSON", "error": "Required property is missing"}]
+
+    with redirect_stderr(output):
+        print_failure_details(conversion_failures, validation_failures)
+
+    details = output.getvalue()
+    assert "Example.idf" in details
+    assert "ConvertInputFormat exit code: 1" in details
+    assert "Unsupported object" in details
+    assert "Invalid.epJSON" in details
+    assert "Required property is missing" in details
+
+
+def test_clean_converter_diagnostic():
+    source = __file__
+    diagnostic = clean_converter_diagnostic(
+        "Missing required property 'Building'\n"
+        "Errors occurred when validating input file. Preceding condition(s) cause termination.\n"
+        f"Input file conversion failed: | 1/1 | {source}\n",
+        "",
+        Path(source),
+    )
+
+    assert diagnostic == "Missing required property 'Building'"

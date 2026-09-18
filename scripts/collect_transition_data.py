@@ -309,6 +309,44 @@ def extract_examples(repo: Path, revision: str, staging_root: Path) -> list[str]
     return sorted(selected)
 
 
+def clean_converter_diagnostic(stdout: str, stderr: str, source: Path) -> str:
+    noise = (
+        "Input file converted to ",
+        "Input file conversion failed:",
+        "Errors occurred when validating input file. Preceding condition(s) cause termination.",
+        "Errors occurred when processing input file. Preceding condition(s) cause termination.",
+    )
+    source_strings = {str(source), source.as_posix(), str(source.resolve()), source.resolve().as_posix()}
+    cleaned = []
+    for line in (stderr + "\n" + stdout).splitlines():
+        line = line.strip()
+        if not line or line.startswith(noise):
+            continue
+        for source_string in sorted(source_strings, key=len, reverse=True):
+            line = line.replace(source_string, source.name)
+        if not cleaned or cleaned[-1] != line:
+            cleaned.append(line)
+    return "\n".join(cleaned) or "ConvertInputFormat did not create the expected output or report a specific error."
+
+
+def retry_conversion_for_diagnostics(converter: Path, source: Path, destination: Path) -> tuple[int, str, bool]:
+    with tempfile.TemporaryDirectory(prefix="energyplus-version-convert-diagnostic-") as temporary_directory:
+        diagnostic_output = Path(temporary_directory)
+        result = run(
+            [converter, "--output", diagnostic_output, "--format", "epJSON", source],
+            check=False,
+        )
+        generated = diagnostic_output / f"{source.stem}.epJSON"
+        if generated.is_file():
+            copy_file(generated, destination)
+            return result.returncode, "Per-file retry created the expected output.", True
+        return (
+            result.returncode,
+            clean_converter_diagnostic(result.stdout, result.stderr, source),
+            False,
+        )
+
+
 def convert_idfs(converter: Path, source_root: Path, output_root: Path) -> tuple[list[dict], list[dict]]:
     converted: list[dict] = []
     failures: list[dict] = []
@@ -327,13 +365,19 @@ def convert_idfs(converter: Path, source_root: Path, output_root: Path) -> tuple
             check=False,
         )
         list_file.unlink()
-        converter_message = (result.stderr or result.stdout).strip()
-        converter_message = converter_message.replace(str(source_root), "<source-staging>")[-2000:]
 
         for source in sources:
             destination = destination_directory / f"{source.stem}.epJSON"
             source_name = source.relative_to(source_root).as_posix()
             output_name = destination.relative_to(output_root).as_posix()
+            diagnostic_exit_code = result.returncode
+            diagnostic_message = ""
+            if not destination.is_file():
+                diagnostic_exit_code, diagnostic_message, recovered = retry_conversion_for_diagnostics(
+                    converter, source, destination
+                )
+                if recovered:
+                    diagnostic_message = ""
             if destination.is_file():
                 converted.append(
                     {
@@ -348,8 +392,9 @@ def convert_idfs(converter: Path, source_root: Path, output_root: Path) -> tuple
                     {
                         "source": source_name,
                         "expected_output": output_name,
-                        "converter_exit_code": result.returncode,
-                        "converter_message": converter_message,
+                        "reason": "ConvertInputFormat did not create the expected output.",
+                        "converter_exit_code": diagnostic_exit_code,
+                        "converter_message": diagnostic_message,
                     }
                 )
     return converted, failures
@@ -442,6 +487,33 @@ def artifact_metadata(path: Path, reported_version: str | None = None) -> dict:
     if reported_version is not None:
         metadata["reported_version"] = reported_version
     return metadata
+
+
+def print_failure_details(conversion_failures: list[dict], validation_failures: list[dict]) -> None:
+    if conversion_failures:
+        print("\nConversion and preprocessing failures:", file=sys.stderr)
+        for failure in conversion_failures:
+            print(f"  {failure['source']}", file=sys.stderr)
+            if "expected_output" in failure:
+                print(f"    expected output: {failure['expected_output']}", file=sys.stderr)
+            if "reason" in failure:
+                print(f"    reason: {failure['reason']}", file=sys.stderr)
+            if "epmacro_exit_code" in failure:
+                print(f"    EPMacro exit code: {failure['epmacro_exit_code']}", file=sys.stderr)
+            if "converter_exit_code" in failure:
+                print(f"    ConvertInputFormat exit code: {failure['converter_exit_code']}", file=sys.stderr)
+            message = failure.get("epmacro_message") or failure.get("converter_message")
+            if message:
+                print("    diagnostic:", file=sys.stderr)
+                for line in message.splitlines():
+                    print(f"      {line}", file=sys.stderr)
+
+    if validation_failures:
+        print("\nSchema-validation failures:", file=sys.stderr)
+        for failure in validation_failures:
+            print(f"  {failure['file']}", file=sys.stderr)
+            for line in failure["error"].splitlines():
+                print(f"    {line}", file=sys.stderr)
 
 
 def collect(args: argparse.Namespace) -> int:
@@ -610,6 +682,8 @@ def collect(args: argparse.Namespace) -> int:
         print(f"  Included IMF support fragments: {len(macro_support_files)}")
         print(f"  Conversion failures: {len(conversion_failures)}")
         print(f"  Validation failures: {len(validation_failures)}")
+        if args.verbose:
+            print_failure_details(conversion_failures, validation_failures)
 
         if args.dry_run:
             print("Dry run: no collected data was published.")
@@ -666,6 +740,11 @@ def build_parser() -> argparse.ArgumentParser:
         help="Publish a partial corpus despite conversion or schema-validation failures.",
     )
     parser.add_argument("--dry-run", action="store_true", help="Run collection and validation without publishing files.")
+    parser.add_argument(
+        "--verbose",
+        action="store_true",
+        help="Print file-level conversion, preprocessing, and schema-validation failure details.",
+    )
     return parser
 
 

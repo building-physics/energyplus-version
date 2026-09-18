@@ -1,0 +1,486 @@
+{
+    "AirTerminal:SingleDuct:UserDefined": {
+        "AirMixer": {
+            "number_of_plant_loop_connections": 0,
+            "overall_model_simulation_program_calling_manager_name": "AirMixingEMS",
+            "plant_connection_1_inlet_node_name": "AMXRPlantInletNode",
+            "plant_connection_1_outlet_node_name": "AMXRPlantOutletNode",
+            "primary_air_inlet_node_name": "DSAHOutletNode",
+            "primary_air_outlet_node_name": "TunnelInlet",
+            "secondary_air_inlet_node_name": "ISAHOutletNode"
+        }
+    },
+    "Building": {
+        "ThermosolarFacility": {}
+    },
+    "BuildingSurface:Detailed": {
+        "space_floor": {
+            "construction_name": "Interior Floor",
+            "outside_boundary_condition": "Adiabatic",
+            "space_name": "space",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 1,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 1,
+                    "vertex_y_coordinate": 1,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 1,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "wind_exposure": "NoWind",
+            "zone_name": "ThermalZone"
+        },
+        "space_roofceiling": {
+            "construction_name": "Interior Ceiling",
+            "outside_boundary_condition": "Adiabatic",
+            "space_name": "space",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 1,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 1
+                },
+                {
+                    "vertex_x_coordinate": 1,
+                    "vertex_y_coordinate": 1,
+                    "vertex_z_coordinate": 1
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 1,
+                    "vertex_z_coordinate": 1
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 1
+                }
+            ],
+            "wind_exposure": "NoWind",
+            "zone_name": "ThermalZone"
+        },
+        "space_wall0": {
+            "construction_name": "Interior Wall",
+            "outside_boundary_condition": "Adiabatic",
+            "space_name": "space",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 1
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 1,
+                    "vertex_z_coordinate": 1
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 1,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "wind_exposure": "NoWind",
+            "zone_name": "ThermalZone"
+        },
+        "space_wall1": {
+            "construction_name": "Interior Wall",
+            "outside_boundary_condition": "Adiabatic",
+            "space_name": "space",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 1,
+                    "vertex_z_coordinate": 1
+                },
+                {
+                    "vertex_x_coordinate": 1,
+                    "vertex_y_coordinate": 1,
+                    "vertex_z_coordinate": 1
+                },
+                {
+                    "vertex_x_coordinate": 1,
+                    "vertex_y_coordinate": 1,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 1,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "wind_exposure": "NoWind",
+            "zone_name": "ThermalZone"
+        },
+        "space_wall2": {
+            "construction_name": "Interior Wall",
+            "outside_boundary_condition": "Adiabatic",
+            "space_name": "space",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 1,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 1
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 1
+                },
+                {
+                    "vertex_x_coordinate": 0,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 1,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "wind_exposure": "NoWind",
+            "zone_name": "ThermalZone"
+        },
+        "space_wall3": {
+            "construction_name": "Interior Wall",
+            "outside_boundary_condition": "Adiabatic",
+            "space_name": "space",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 1,
+                    "vertex_y_coordinate": 1,
+                    "vertex_z_coordinate": 1
+                },
+                {
+                    "vertex_x_coordinate": 1,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 1
+                },
+                {
+                    "vertex_x_coordinate": 1,
+                    "vertex_y_coordinate": 0,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 1,
+                    "vertex_y_coordinate": 1,
+                    "vertex_z_coordinate": 0
+                }
+            ],
+            "wind_exposure": "NoWind",
+            "zone_name": "ThermalZone"
+        }
+    },
+    "Construction": {
+        "Interior Ceiling": {
+            "layer_2": "F05 Ceiling air space resistance",
+            "layer_3": "F16 Acoustic tile",
+            "outside_layer": "M11 100mm lightweight concrete"
+        },
+        "Interior Floor": {
+            "layer_2": "F05 Ceiling air space resistance",
+            "layer_3": "M11 100mm lightweight concrete",
+            "outside_layer": "F16 Acoustic tile"
+        },
+        "Interior Wall": {
+            "layer_2": "F04 Wall air space resistance",
+            "layer_3": "G01a 19mm gypsum board",
+            "outside_layer": "G01a 19mm gypsum board"
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "daylighting_reference_point_coordinate_system": "Relative",
+            "rectangular_surface_coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "HeatBalanceAlgorithm": {
+        "HeatBalanceAlgorithm 1": {
+            "algorithm": "ConductionTransferFunction",
+            "surface_temperature_upper_limit": 200
+        }
+    },
+    "Material": {
+        "F16 Acoustic tile": {
+            "conductivity": 0.06,
+            "density": 368,
+            "roughness": "MediumSmooth",
+            "solar_absorptance": 0.3,
+            "specific_heat": 590.000000000002,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.0191,
+            "visible_absorptance": 0.3
+        },
+        "G01a 19mm gypsum board": {
+            "conductivity": 0.16,
+            "density": 800,
+            "roughness": "MediumSmooth",
+            "solar_absorptance": 0.4,
+            "specific_heat": 1090,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.019,
+            "visible_absorptance": 0.4
+        },
+        "M11 100mm lightweight concrete": {
+            "conductivity": 0.53,
+            "density": 1280,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.5,
+            "specific_heat": 840.000000000002,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.1016,
+            "visible_absorptance": 0.5
+        }
+    },
+    "Material:AirGap": {
+        "F04 Wall air space resistance": {
+            "thermal_resistance": 0.15
+        },
+        "F05 Ceiling air space resistance": {
+            "thermal_resistance": 0.18
+        }
+    },
+    "OutdoorAir:Node": {
+        "OA_DSAH_Node": {},
+        "OA_ISAH_Node": {}
+    },
+    "Output:SQLite": {
+        "Output:SQLite 1": {
+            "option_type": "SimpleAndTabular"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Humidity Ratio"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "System Node Temperature"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "System Node Humidity Ratio"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "System Node Mass Flow Rate"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "IDF",
+            "sort_option": "Unsorted"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "PythonPlugin:Instance": {
+        "AirMixingEMS": {
+            "plugin_class_name": "AirMixing",
+            "python_module_name": "SolarHeatingPythonPlugin",
+            "run_during_warmup_days": "No"
+        },
+        "DirectSolarHeatingEMS": {
+            "plugin_class_name": "DirectSolarHeating",
+            "python_module_name": "SolarHeatingPythonPlugin",
+            "run_during_warmup_days": "No"
+        },
+        "IndirectSolarHeatingEMS": {
+            "plugin_class_name": "IndirectSolarHeating",
+            "python_module_name": "SolarHeatingPythonPlugin",
+            "run_during_warmup_days": "No"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 1,
+            "begin_month": 1,
+            "begin_year": 2024,
+            "day_of_week_for_start_day": "Monday",
+            "end_day_of_month": 31,
+            "end_month": 12,
+            "end_year": 2024,
+            "use_weather_file_daylight_saving_period": "No",
+            "use_weather_file_holidays_and_special_days": "No",
+            "use_weather_file_rain_indicators": "Yes",
+            "use_weather_file_snow_indicators": "Yes"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "ActivityLevel": {
+            "lower_limit_value": 0,
+            "numeric_type": "Continuous",
+            "unit_type": "ActivityLevel"
+        },
+        "Fraction": {
+            "lower_limit_value": 0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1
+        }
+    },
+    "ShadowCalculation": {
+        "ShadowCalculation 1": {
+            "disable_self_shading_from_shading_zone_groups_to_other_zones": "No",
+            "disable_self_shading_within_shading_zone_groups": "No",
+            "maximum_figures_in_shadow_overlap_calculations": 15000,
+            "output_external_shading_calculation_results": "No",
+            "pixel_counting_resolution": 512,
+            "polygon_clipping_algorithm": "SutherlandHodgman",
+            "shading_calculation_method": "PolygonClipping",
+            "shading_calculation_update_frequency": 20,
+            "shading_calculation_update_frequency_method": "Periodic",
+            "sky_diffuse_modeling_algorithm": "SimpleSkyDiffuseModeling"
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "run_simulation_for_sizing_periods": "No",
+            "run_simulation_for_weather_file_run_periods": "Yes"
+        }
+    },
+    "Site:Location": {
+        "Zacatecas": {
+            "elevation": 2440,
+            "latitude": 22.75,
+            "longitude": -102.5,
+            "time_zone": -6
+        }
+    },
+    "Space": {
+        "space": {
+            "zone_name": "ThermalZone"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 6
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "25.1"
+        }
+    },
+    "Zone": {
+        "ThermalZone": {
+            "multiplier": 1,
+            "part_of_total_floor_area": "Yes",
+            "x_origin": 0,
+            "y_origin": 0,
+            "z_origin": 0
+        }
+    },
+    "ZoneHVAC:AirDistributionUnit": {
+        "TunnelTerminal": {
+            "air_distribution_unit_outlet_node_name": "TunnelInlet",
+            "air_terminal_name": "AirMixer",
+            "air_terminal_object_type": "AirTerminal:SingleDuct:UserDefined"
+        }
+    },
+    "ZoneHVAC:EquipmentConnections": {
+        "ZoneHVAC:EquipmentConnections 1": {
+            "zone_air_inlet_node_or_nodelist_name": "TunnelInlet",
+            "zone_air_node_name": "TunnelZoneNode",
+            "zone_conditioning_equipment_list_name": "SolarHeatingSystem",
+            "zone_name": "ThermalZone"
+        }
+    },
+    "ZoneHVAC:EquipmentList": {
+        "SolarHeatingSystem": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 3,
+                    "zone_equipment_heating_or_no_load_sequence": 3,
+                    "zone_equipment_name": "TunnelTerminal",
+                    "zone_equipment_object_type": "ZoneHVAC:AirDistributionUnit"
+                },
+                {
+                    "zone_equipment_cooling_sequence": 2,
+                    "zone_equipment_heating_or_no_load_sequence": 2,
+                    "zone_equipment_name": "IndirectSolarAirHeater",
+                    "zone_equipment_object_type": "ZoneHVAC:ForcedAir:UserDefined"
+                },
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "DirectSolarAirHeater",
+                    "zone_equipment_object_type": "ZoneHVAC:ForcedAir:UserDefined"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        }
+    },
+    "ZoneHVAC:ForcedAir:UserDefined": {
+        "DirectSolarAirHeater": {
+            "number_of_plant_loop_connections": 0,
+            "overall_model_simulation_program_calling_manager_name": "DirectSolarHeatingEMS",
+            "primary_air_inlet_node_name": "OA_DSAH_Node",
+            "primary_air_outlet_node_name": "DSAHOutletNode"
+        },
+        "IndirectSolarAirHeater": {
+            "number_of_plant_loop_connections": 0,
+            "overall_model_simulation_program_calling_manager_name": "IndirectSolarHeatingEMS",
+            "primary_air_inlet_node_name": "OA_ISAH_Node",
+            "primary_air_outlet_node_name": "ISAHOutletNode"
+        }
+    }
+}

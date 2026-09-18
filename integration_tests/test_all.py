@@ -102,6 +102,7 @@ def test_does_it_run(source_version, destination_version, filename):
     with filename.open(encoding="utf-8") as epjson_file:
         epjson = json.load(epjson_file)
 
+    validator(source_version).validate(epjson)
     version_string = next(iter(epjson["Version"].values()))["version_identifier"]
     normalized_version = str(EnergyPlusVersion.from_string(version_string))
     assert normalized_version == source_version
@@ -115,4 +116,4 @@ def test_does_it_run(source_version, destination_version, filename):
 
     assert upgraded_epjson
     json.dumps(upgraded_epjson)
-    assert validator(destination_version).is_valid(upgraded_epjson)
+    validator(destination_version).validate(upgraded_epjson)

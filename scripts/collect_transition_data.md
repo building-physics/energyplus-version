@@ -23,6 +23,14 @@ IMF files included by another IMF are recorded as support fragments instead of
 being treated as independent examples. Existing epJSON examples are copied
 without re-encoding. Directory structure below `testfiles` is preserved.
 
+Some test files in an EnergyPlus release tag retain an older `Version` object
+even though their contents belong to the tagged release. The collector changes
+only that version value in its temporary extracted copy before conversion. It
+does not modify the EnergyPlus checkout or run older transition rules over the
+file. Every affected filename, original version, normalized version, and the
+before/after hashes are recorded in the manifest. The filenames are also
+printed in the normal summary so the stale metadata can be reported upstream.
+
 The official Fortran transition implementation is **not copied**. The script
 checks that the target EnergyPlus tag contains it and records its repository
 path and SHA-256 hash. It also fingerprints the installed official transition
@@ -130,8 +138,11 @@ Three-component directory names keep patch releases distinct.
 ## Validation and failure behavior
 
 Every collected epJSON file is validated against the source schema with one
-reused Rust-backed Draft 7 validator. Missing converter outputs, invalid JSON,
-and schema failures are all written to the manifest.
+reused Rust-backed Draft 7 validator. Its `Version` object is checked
+separately and must identify the source version. This extra check is necessary
+because the schema's version `default` is an annotation, not a constraint.
+Missing converter outputs, invalid JSON, version mismatches, and schema
+failures are all written to the manifest.
 
 The normal behavior is conservative:
 
@@ -141,8 +152,9 @@ The normal behavior is conservative:
 - Conversion or validation failures prevent the corpus from being published.
 - A failure manifest is written under `manifests` for diagnosis.
 
-Without `--verbose`, the console reports only failure counts and the failure
-manifest location. With `--verbose`, the same file-level details recorded in
+Normalized stale-version filenames are always printed. Without `--verbose`,
+the console otherwise reports only failure counts and the failure manifest
+location. With `--verbose`, the same file-level failure details recorded in
 the manifest are also printed immediately.
 
 `ConvertInputFormat` processes files in a batch, may interleave output when
@@ -172,6 +184,7 @@ The manifest records:
 - the path and hash of the Fortran reference implementation, marked as not
   copied;
 - source/output hashes for each converted or copied example;
+- stale Version-object filenames, original and normalized versions, and hashes;
 - preprocessing, conversion, and schema-validation failures.
 
 Absolute installation and checkout paths are not stored in the manifest.

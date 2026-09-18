@@ -11,9 +11,11 @@ import pytest
 from scripts.collect_transition_data import (
     Version,
     clean_converter_diagnostic,
+    normalize_version_objects,
     print_failure_details,
     schema_declared_version,
     transition_source_paths,
+    validate_example_versions,
 )
 
 
@@ -86,3 +88,32 @@ def test_clean_converter_diagnostic():
     )
 
     assert diagnostic == "Missing required property 'Building'"
+
+
+def test_normalizes_only_the_idf_version_object(tmp_path):
+    source = tmp_path / "Stale.idf"
+    source.write_bytes(b"Version,24.2;\r\nBuilding,Example;\r\n")
+
+    normalizations = normalize_version_objects(tmp_path, Version.parse("25.2.0"))
+
+    assert source.read_bytes() == b"Version,25.2;\r\nBuilding,Example;\r\n"
+    assert normalizations[0]["source"] == "Stale.idf"
+    assert normalizations[0]["declared_version"] == "24.2.0"
+    assert normalizations[0]["normalized_version"] == "25.2.0"
+
+
+def test_example_version_validation_is_stricter_than_schema_default(tmp_path):
+    example = tmp_path / "Stale.epJSON"
+    example.write_text(
+        '{"Version": {"Version 1": {"version_identifier": "25.1"}}}',
+        encoding="utf-8",
+    )
+
+    failures = validate_example_versions(tmp_path, Version.parse("25.2.0"))
+
+    assert failures == [
+        {
+            "file": "Stale.epJSON",
+            "error": "Version check failed: Declares EnergyPlus 25.1.0, expected 25.2.0.",
+        }
+    ]

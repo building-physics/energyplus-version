@@ -5686,7 +5686,7 @@
     },
     "Version": {
         "Version 1": {
-            "version_identifier": "25.1"
+            "version_identifier": "25.2"
         }
     },
     "WaterHeater:Stratified": {

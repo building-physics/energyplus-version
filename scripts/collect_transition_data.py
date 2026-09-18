@@ -29,6 +29,14 @@ import jsonschema_rs
 
 
 VERSION_PATTERN = re.compile(r"^(\d+)\.(\d+)\.(\d+)$")
+DECLARED_VERSION_PATTERN = re.compile(r"^(\d+)\.(\d+)(?:\.(\d+))?$")
+IDF_VERSION_PATTERN = re.compile(
+    rb"(^\s*Version\s*,\s*)([^,;!\s]+)(\s*;)",
+    re.IGNORECASE | re.MULTILINE,
+)
+EPJSON_VERSION_PATTERN = re.compile(
+    rb'("version_identifier"\s*:\s*")([^"]+)(")',
+)
 
 
 class CollectionError(RuntimeError):
@@ -61,6 +69,17 @@ class Version:
 
     def tag(self) -> str:
         return f"v{self.dotted()}"
+
+    def identifier(self) -> str:
+        return self.short() if self.patch == 0 else self.dotted()
+
+    @classmethod
+    def from_declared(cls, value: str) -> "Version":
+        match = DECLARED_VERSION_PATTERN.fullmatch(value.strip())
+        if match is None:
+            raise CollectionError(f'Invalid declared EnergyPlus version: "{value}".')
+        major, minor, patch = match.groups()
+        return cls(int(major), int(minor), int(patch or 0))
 
 
 def run(
@@ -309,6 +328,41 @@ def extract_examples(repo: Path, revision: str, staging_root: Path) -> list[str]
     return sorted(selected)
 
 
+def normalize_version_objects(source_root: Path, expected: Version) -> list[dict]:
+    normalized = []
+    patterns = {
+        ".idf": IDF_VERSION_PATTERN,
+        ".epjson": EPJSON_VERSION_PATTERN,
+    }
+    replacement = expected.identifier().encode("ascii")
+
+    for source in sorted(path for path in source_root.rglob("*") if path.is_file()):
+        pattern = patterns.get(source.suffix.lower())
+        if pattern is None:
+            continue
+        contents = source.read_bytes()
+        match = pattern.search(contents)
+        if match is None:
+            continue
+        declared_text = match.group(2).decode("ascii", errors="replace")
+        declared = Version.from_declared(declared_text)
+        if declared == expected:
+            continue
+
+        updated = contents[: match.start(2)] + replacement + contents[match.end(2) :]
+        source.write_bytes(updated)
+        normalized.append(
+            {
+                "source": source.relative_to(source_root).as_posix(),
+                "declared_version": declared.dotted(),
+                "normalized_version": expected.dotted(),
+                "original_sha256": sha256_bytes(contents),
+                "normalized_sha256": sha256_bytes(updated),
+            }
+        )
+    return normalized
+
+
 def clean_converter_diagnostic(stdout: str, stderr: str, source: Path) -> str:
     noise = (
         "Input file converted to ",
@@ -482,6 +536,28 @@ def validate_examples(output_root: Path, schema: object) -> list[dict]:
     return failures
 
 
+def validate_example_versions(output_root: Path, expected: Version) -> list[dict]:
+    failures = []
+    for path in sorted(output_root.rglob("*.epJSON")):
+        try:
+            instance = load_json(path)
+            version_objects = instance["Version"]
+            version_object = next(iter(version_objects.values()))
+            declared = Version.from_declared(str(version_object["version_identifier"]))
+            if declared != expected:
+                raise CollectionError(
+                    f"Declares EnergyPlus {declared.dotted()}, expected {expected.dotted()}."
+                )
+        except (CollectionError, KeyError, StopIteration, TypeError, OSError, json.JSONDecodeError) as exc:
+            failures.append(
+                {
+                    "file": path.relative_to(output_root).as_posix(),
+                    "error": f"Version check failed: {exc}",
+                }
+            )
+    return failures
+
+
 def artifact_metadata(path: Path, reported_version: str | None = None) -> dict:
     metadata = {"name": path.name, "sha256": sha256_file(path)}
     if reported_version is not None:
@@ -568,11 +644,15 @@ def collect(args: argparse.Namespace) -> int:
         staged_examples = staging / "test_files" / source_version.dotted()
         staged_examples.mkdir(parents=True)
         source_example_paths = extract_examples(repo, source_revision, extracted_examples)
+        version_normalizations = normalize_version_objects(extracted_examples, source_version)
         converted, conversion_failures = convert_idfs(
             converter, extracted_examples, staged_examples
         )
         expanded_imfs, epmacro_failures, macro_support_files = expand_imfs(
             epmacro, extracted_examples, expanded_examples
+        )
+        version_normalizations.extend(
+            normalize_version_objects(expanded_examples, source_version)
         )
         converted_imfs, converted_imf_failures = convert_idfs(
             converter, expanded_examples, staged_examples
@@ -591,6 +671,7 @@ def collect(args: argparse.Namespace) -> int:
         conversion_failures.extend(converted_imf_failures)
         native = copy_native_epjson(extracted_examples, staged_examples)
         validation_failures = validate_examples(staged_examples, source_schema)
+        validation_failures.extend(validate_example_versions(staged_examples, source_version))
 
         if (conversion_failures or validation_failures) and not args.allow_failures:
             summary = (
@@ -664,6 +745,7 @@ def collect(args: argparse.Namespace) -> int:
                 "native_epjson": native,
                 "expanded_imfs": expanded_imfs,
                 "macro_support_files": macro_support_files,
+                "version_normalizations": version_normalizations,
                 "conversion_failures": conversion_failures,
                 "validation_failures": validation_failures,
             },
@@ -680,6 +762,13 @@ def collect(args: argparse.Namespace) -> int:
         print(f"  Native epJSON files copied: {len(native)}")
         print(f"  Root IMF examples expanded: {len(expanded_imfs)}")
         print(f"  Included IMF support fragments: {len(macro_support_files)}")
+        print(f"  Stale Version objects normalized: {len(version_normalizations)}")
+        for normalization in version_normalizations:
+            print(
+                f"    {normalization['source']}: "
+                f"{normalization['declared_version']} -> "
+                f"{normalization['normalized_version']}"
+            )
         print(f"  Conversion failures: {len(conversion_failures)}")
         print(f"  Validation failures: {len(validation_failures)}")
         if args.verbose:

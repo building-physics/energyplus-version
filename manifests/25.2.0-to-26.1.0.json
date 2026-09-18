@@ -3103,9 +3103,9 @@
       },
       {
         "output": "PCMThermalStorage.epJSON",
-        "output_sha256": "ef9f2ce0abf7fc70d07a266cc3a1335afbcaa9c311f25f892eaa1240a828322f",
+        "output_sha256": "23d222f6f7825e8ad0c0edff0a3b16e4d75d7458eae49ccf454b5aac8f884f6b",
         "source": "PCMThermalStorage.idf",
-        "source_sha256": "b35455c83c3d5f90ad2f3ad3f3d16eff7aa224537adb6782e16c7ab78952d604"
+        "source_sha256": "3e4e28f6e033ada5011e499e74e5a463a431b5d2ef1828618770622d5a7f38f7"
       },
       {
         "output": "PerformancePrecision_ASHRAE9012016_SchoolSecondary_Denver.epJSON",
@@ -4003,9 +4003,9 @@
       },
       {
         "output": "SolarHeatingPythonPlugin.epJSON",
-        "output_sha256": "f029c271bbbcbe2cc708c9819661de53659fbc8c8ec984ebd169b3406a6f55fb",
+        "output_sha256": "b217e00c20a092f40c45c114e4b149bc6c217a41320b02998be3db5779737572",
         "source": "SolarHeatingPythonPlugin.idf",
-        "source_sha256": "4c5b7e68e70e7e645c550d4a7d460e304970ee57680dda459d0e087c626dd631"
+        "source_sha256": "dc9ec1ea38e32d5d71a8b4d1baaa7a90c8136d4e4a1488c57ca52e73922d56ef"
       },
       {
         "output": "SolarShadingTest.epJSON",
@@ -4453,15 +4453,15 @@
       },
       {
         "output": "UnitarySystem_VSCoolingCoil_2.epJSON",
-        "output_sha256": "d520db783998780bb2b8cff8c4c39e7b1b2e960f2405417b6cafbbf12ffb097c",
+        "output_sha256": "4a71efff774ef462d30afbea3fa4f1f7b37242eedd86865eb56f8bcc4efbda1e",
         "source": "UnitarySystem_VSCoolingCoil_2.idf",
-        "source_sha256": "0d8c6b86b172b46a557a039896415a430b72c658d4671e697285d605829b3587"
+        "source_sha256": "4687c1e07ea1a0635e518007f6cd02490bb4182aa3ce99cabfc2fd7de2d2c6e9"
       },
       {
         "output": "UnitarySystem_VSCoolingCoil_ASHRAE205.epJSON",
-        "output_sha256": "0ba2c9ddcc7651033a2f76a351887df594810cb98d626fe27f3a32e5c2f865c8",
+        "output_sha256": "0d878555969dec886e247550ff3858d97652d4faa384cf4d07e981fdc4e18326",
         "source": "UnitarySystem_VSCoolingCoil_ASHRAE205.idf",
-        "source_sha256": "553fc36c81decac1a7c64bd1fb510f434eb5a6845588977a6fc3aebad69383eb"
+        "source_sha256": "00677b38666c3494d059ffea97e423ccc5ee5ffaa9c269e03fe71fde5524e255"
       },
       {
         "output": "UnitarySystem_VSHeatPumpWaterToAirEquationFit.epJSON",
@@ -4972,7 +4972,37 @@
     ],
     "source_files_selected": 826,
     "source_path": "testfiles",
-    "validation_failures": []
+    "validation_failures": [],
+    "version_normalizations": [
+      {
+        "declared_version": "25.1.0",
+        "normalized_sha256": "3e4e28f6e033ada5011e499e74e5a463a431b5d2ef1828618770622d5a7f38f7",
+        "normalized_version": "25.2.0",
+        "original_sha256": "b35455c83c3d5f90ad2f3ad3f3d16eff7aa224537adb6782e16c7ab78952d604",
+        "source": "PCMThermalStorage.idf"
+      },
+      {
+        "declared_version": "25.1.0",
+        "normalized_sha256": "dc9ec1ea38e32d5d71a8b4d1baaa7a90c8136d4e4a1488c57ca52e73922d56ef",
+        "normalized_version": "25.2.0",
+        "original_sha256": "4c5b7e68e70e7e645c550d4a7d460e304970ee57680dda459d0e087c626dd631",
+        "source": "SolarHeatingPythonPlugin.idf"
+      },
+      {
+        "declared_version": "24.2.0",
+        "normalized_sha256": "4687c1e07ea1a0635e518007f6cd02490bb4182aa3ce99cabfc2fd7de2d2c6e9",
+        "normalized_version": "25.2.0",
+        "original_sha256": "0d8c6b86b172b46a557a039896415a430b72c658d4671e697285d605829b3587",
+        "source": "UnitarySystem_VSCoolingCoil_2.idf"
+      },
+      {
+        "declared_version": "24.2.0",
+        "normalized_sha256": "00677b38666c3494d059ffea97e423ccc5ee5ffaa9c269e03fe71fde5524e255",
+        "normalized_version": "25.2.0",
+        "original_sha256": "553fc36c81decac1a7c64bd1fb510f434eb5a6845588977a6fc3aebad69383eb",
+        "source": "UnitarySystem_VSCoolingCoil_ASHRAE205.idf"
+      }
+    ]
   },
   "format_version": 1,
   "idds": {

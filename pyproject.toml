@@ -48,14 +48,22 @@ dependencies = [
   "pytest",
   "pytest-cov",
   "jsonschema-rs",
+  "ruff>=0.16,<0.17",
 ]
 [tool.hatch.envs.default.scripts]
 cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=src/energyplus_version --cov=tests {args}"
 no-cov = "cov --no-cov {args}"
 integration = "pytest integration_tests {args}"
+lint = "ruff check --output-format=github {args:.}"
 
 [[tool.hatch.envs.test.matrix]]
 python = ["310", "311", "312"]
+
+[tool.ruff]
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
 
 [tool.coverage.run]
 branch = true

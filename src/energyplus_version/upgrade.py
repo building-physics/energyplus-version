@@ -125,12 +125,74 @@ class SplitObject(Change):
         self.fields_by_object = fields_by_object
 
 class Upgrade:
+    def variable_renames(self):
+        return {}
     def changes(self): # pragma: no cover
         raise NotImplementedError('Upgrade object must implement the "changes" method')
+    @staticmethod
+    def _pointer_token(value):
+        return str(value).replace('~', '~0').replace('/', '~1')
+    @staticmethod
+    def _variable_replacement(value, renames):
+        if not isinstance(value, str):
+            return None
+        # The Fortran transition ignores legacy unit suffixes while matching
+        # report-variable names and writes the official new name.
+        name_without_units = value.split('[', 1)[0].rstrip()
+        return renames.get(name_without_units.casefold())
+    def _variable_rename_patch(self, model):
+        renames = {
+            old_name.casefold(): new_name
+            for old_name, new_name in self.variable_renames().items()
+        }
+        if not renames:
+            return []
+
+        direct_fields = {
+            'Output:Variable': 'variable_name',
+            'Output:Table:TimeBins': 'variable_name',
+            'ExternalInterface:FunctionalMockupUnitImport:From:Variable': 'output_variable_name',
+            'ExternalInterface:FunctionalMockupUnitExport:From:Variable': 'output_variable_name',
+            'EnergyManagementSystem:Sensor': 'output_variable_or_output_meter_name',
+        }
+        extensible_fields = {
+            'Output:Table:Monthly': ('variable_details', 'variable_or_meter_name'),
+            'Meter:Custom': ('variable_details', 'output_variable_or_meter_name'),
+            'Meter:CustomDecrement': ('variable_details', 'output_variable_or_meter_name'),
+        }
+        patch = []
+
+        for object_type, field in direct_fields.items():
+            for object_name, fields in model.get(object_type, {}).items():
+                replacement = self._variable_replacement(fields.get(field), renames)
+                if replacement is not None:
+                    path = '/{}/{}/{}'.format(
+                        self._pointer_token(object_type),
+                        self._pointer_token(object_name),
+                        self._pointer_token(field),
+                    )
+                    patch.append({'op': 'replace', 'path': path, 'value': replacement})
+
+        for object_type, (array_field, value_field) in extensible_fields.items():
+            for object_name, fields in model.get(object_type, {}).items():
+                for index, item in enumerate(fields.get(array_field, [])):
+                    replacement = self._variable_replacement(item.get(value_field), renames)
+                    if replacement is not None:
+                        path = '/{}/{}/{}/{}/{}'.format(
+                            self._pointer_token(object_type),
+                            self._pointer_token(object_name),
+                            self._pointer_token(array_field),
+                            index,
+                            self._pointer_token(value_field),
+                        )
+                        patch.append({'op': 'replace', 'path': path, 'value': replacement})
+
+        return patch
     def generate_patch(self, prev):
         patch = []
         for change in self.changes():
             patch.extend(change.generate_patch(prev))
+        patch.extend(self._variable_rename_patch(prev))
         return patch
     def describe(self):
         change_by_object = {}

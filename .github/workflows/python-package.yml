@@ -29,3 +29,6 @@ jobs:
       - name: Test with pytest
         run: |
           hatch run pytest tests
+      - name: Test collected EnergyPlus examples
+        if: matrix.python-version == '3.12'
+        run: hatch run integration

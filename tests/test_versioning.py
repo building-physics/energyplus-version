@@ -22,4 +22,8 @@ def test_version_string():
     assert str(version.next()) == '23.1.0'
     assert str(version.next().next()) == '23.2.0'
     assert str(version.next().previous()) == '22.2.0'
-    
+
+
+def test_patch_version_string():
+    version = energyplus_version.EnergyPlusVersion.from_string('23.2.1')
+    assert str(version) == '23.2.1'

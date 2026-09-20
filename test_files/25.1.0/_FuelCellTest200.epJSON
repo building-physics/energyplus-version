@@ -1,0 +1,1300 @@
+{
+    "Branch": {
+        "Heat Recovery Demand Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Heat Recovery Demand Inlet Node",
+                    "component_name": "Heat Recovery Inlet Pipe",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Heat Recovery Demand Drain Node"
+                },
+                {
+                    "component_inlet_node_name": "Heat Recovery Demand Drain Node",
+                    "component_name": "Heat Recovery Drain",
+                    "component_object_type": "WaterUse:Connections",
+                    "component_outlet_node_name": "Heat Recovery Demand Outlet Node"
+                }
+            ]
+        },
+        "Heat Recovery Supply Branch": {
+            "components": [
+                {
+                    "component_inlet_node_name": "Heat Recovery Supply Inlet Node",
+                    "component_name": "Heat Recovery Circ Pump",
+                    "component_object_type": "Pump:ConstantSpeed",
+                    "component_outlet_node_name": "Small SOFC Heat Rec Inlet Node"
+                },
+                {
+                    "component_inlet_node_name": "Small SOFC Heat Rec Inlet Node",
+                    "component_name": "Fictitious SOFC Exhaust HX",
+                    "component_object_type": "Generator:FuelCell:ExhaustGasToWaterHeatExchanger",
+                    "component_outlet_node_name": "Small SOFC Heat Rec Outlet Node"
+                },
+                {
+                    "component_inlet_node_name": "Small SOFC Heat Rec Outlet Node",
+                    "component_name": "Heat Recovery Supply Outlet",
+                    "component_object_type": "Pipe:Adiabatic",
+                    "component_outlet_node_name": "Heat Recovery Supply Outlet Node"
+                }
+            ]
+        }
+    },
+    "BranchList": {
+        "Heat Recovery Demand Side Branches": {
+            "branches": [
+                {
+                    "branch_name": "Heat Recovery Demand Branch"
+                }
+            ]
+        },
+        "Heat Recovery Supply Side Branches": {
+            "branches": [
+                {
+                    "branch_name": "Heat Recovery Supply Branch"
+                }
+            ]
+        }
+    },
+    "Building": {
+        "Test Harness for MicroCogen": {
+            "loads_convergence_tolerance_value": 0.001,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.005,
+            "terrain": "Suburbs"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "Garage:EastWall": {
+            "construction_name": "EXTWALL:GARAGE",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 17.242,
+                    "vertex_y_coordinate": 10.778,
+                    "vertex_z_coordinate": 2.4384
+                },
+                {
+                    "vertex_x_coordinate": 17.242,
+                    "vertex_y_coordinate": 10.778,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 17.242,
+                    "vertex_y_coordinate": 16.876,
+                    "vertex_z_coordinate": 0
+                },
+                {
+                    "vertex_x_coordinate": 17.242,
+                    "vertex_y_coordinate": 16.876,
+                    "vertex_z_coordinate": 2.4384
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "GARAGE ZONE"
+        }
+    },
+    "Construction": {
+        "EXTWALL:GARAGE": {
+            "layer_2": "CB11",
+            "outside_layer": "A1 - 1 IN STUCCO"
+        }
+    },
+    "Curve:Cubic": {
+        "Fictitious Blower Power Curve": {
+            "coefficient1_constant": 50.0,
+            "coefficient2_x": 400000.0,
+            "coefficient3_x_2": 0.0,
+            "coefficient4_x_3": 0.0,
+            "maximum_value_of_x": 10000,
+            "minimum_value_of_x": 0.0
+        },
+        "Fictitious Fuel Compressor Power Curve": {
+            "coefficient1_constant": 10.0,
+            "coefficient2_x": 1000000.0,
+            "coefficient3_x_2": 0.0,
+            "coefficient4_x_3": 0.0,
+            "maximum_value_of_x": 500,
+            "minimum_value_of_x": 0.0
+        },
+        "Null Cubic": {
+            "coefficient1_constant": 0.0,
+            "coefficient2_x": 0.0,
+            "coefficient3_x_2": 0.0,
+            "coefficient4_x_3": 0.0,
+            "maximum_value_of_x": 10000000000.0,
+            "minimum_value_of_x": -10000000000.0
+        }
+    },
+    "Curve:Quadratic": {
+        "Fictitious Excess Air Ratio Curve": {
+            "coefficient1_constant": 5e-05,
+            "coefficient2_x": 1.5e-07,
+            "coefficient3_x_2": 1.1e-12,
+            "maximum_value_of_x": 10000.0,
+            "minimum_value_of_x": 0.0
+        },
+        "Fictitious Power Curve": {
+            "coefficient1_constant": 0.3,
+            "coefficient2_x": 0.00011,
+            "coefficient3_x_2": -2e-08,
+            "maximum_value_of_x": 10000,
+            "minimum_value_of_x": 0.0
+        },
+        "Null Quadratic": {
+            "coefficient1_constant": 0.0,
+            "coefficient2_x": 0.0,
+            "coefficient3_x_2": 0.0,
+            "maximum_value_of_x": 10000000000.0,
+            "minimum_value_of_x": -10000000000.0
+        }
+    },
+    "ElectricLoadCenter:Distribution": {
+        "Electric Load Center": {
+            "electrical_buss_type": "AlternatingCurrent",
+            "generator_demand_limit_scheme_purchased_electric_demand_limit": 0.0,
+            "generator_list_name": "Micro-Generators",
+            "generator_operation_scheme_type": "TrackElectrical"
+        }
+    },
+    "ElectricLoadCenter:Generators": {
+        "Micro-Generators": {
+            "generator_outputs": [
+                {
+                    "generator_availability_schedule_name": "Always_ON",
+                    "generator_name": "Fictitious SOFC",
+                    "generator_object_type": "Generator:FuelCell",
+                    "generator_rated_electric_power_output": 3400
+                }
+            ]
+        }
+    },
+    "Exterior:FuelEquipment": {
+        "Test Electric Load": {
+            "design_level": 10000,
+            "fuel_use_type": "Electricity",
+            "schedule_name": "Electric Load Profile Sched"
+        }
+    },
+    "Generator:FuelCell": {
+        "Fictitious SOFC": {
+            "air_supply_name": "Fictitious SOFC Air Supply",
+            "auxiliary_heater_name": "Fictitious SOFC Auxiliary Heater",
+            "electrical_storage_name": "Fictitious SOFC Battery",
+            "fuel_supply_name": "Fictitious SOFC Fuel Supply",
+            "heat_exchanger_name": "Fictitious SOFC Exhaust HX",
+            "inverter_name": "Fictitious SOFC Inverter",
+            "power_module_name": "Fictitious SOFC Power Module",
+            "water_supply_name": "Fictitious SOFC Water Supply"
+        }
+    },
+    "Generator:FuelCell:AirSupply": {
+        "Fictitious SOFC Air Supply": {
+            "air_inlet_node_name": "SOFC Air Inlet Node",
+            "air_intake_heat_recovery_mode": "RecoverInverterandStorage",
+            "air_rate_air_temperature_coefficient": 0.0,
+            "air_rate_function_of_electric_power_curve_name": "Fictitious Excess Air Ratio Curve",
+            "air_supply_constituent_mode": "UserDefinedConstituents",
+            "air_supply_rate_calculation_mode": "QuadraticFunctionofElectricPower",
+            "blower_heat_loss_factor": 1.0,
+            "blower_power_curve_name": "Fictitious Blower Power Curve",
+            "constituent_fractions": [
+                {
+                    "constituent_name": "Nitrogen",
+                    "molar_fraction": 0.7728
+                },
+                {
+                    "constituent_name": "Oxygen",
+                    "molar_fraction": 0.2073
+                },
+                {
+                    "constituent_name": "Water",
+                    "molar_fraction": 0.0104
+                },
+                {
+                    "constituent_name": "Argon",
+                    "molar_fraction": 0.0092
+                },
+                {
+                    "constituent_name": "CarbonDioxide",
+                    "molar_fraction": 0.0003
+                }
+            ],
+            "number_of_userdefined_constituents": 5
+        }
+    },
+    "Generator:FuelCell:AuxiliaryHeater": {
+        "Fictitious SOFC Auxiliary Heater": {
+            "ancillary_power_constant_term": 10.0,
+            "ancillary_power_linear_term": 10000000.0,
+            "excess_air_ratio": 0.3,
+            "heating_capacity_units": "Watts",
+            "maximum_heating_capacity_in_watts": 20000,
+            "minimum_heating_capacity_in_watts": 0.0,
+            "skin_loss_destination": "SurroundingZone",
+            "skin_loss_u_factor_times_area_value": 0.5,
+            "zone_name_to_receive_skin_losses": "GARAGE ZONE"
+        }
+    },
+    "Generator:FuelCell:ElectricalStorage": {
+        "Fictitious SOFC Battery": {
+            "choice_of_model": "SimpleEfficiencyWithConstraints",
+            "initial_charge_state": 0,
+            "nominal_charging_energetic_efficiency": 1.0,
+            "nominal_discharging_energetic_efficiency": 1.0,
+            "simple_maximum_capacity": 0,
+            "simple_maximum_power_draw": 0,
+            "simple_maximum_power_store": 0
+        }
+    },
+    "Generator:FuelCell:ExhaustGasToWaterHeatExchanger": {
+        "Fictitious SOFC Exhaust HX": {
+            "exhaust_outlet_air_node_name": "SOFC Air Outlet Node",
+            "heat_exchanger_calculation_method": "FixedEffectiveness",
+            "heat_recovery_water_inlet_node_name": "Small SOFC Heat Rec Inlet Node",
+            "heat_recovery_water_maximum_flow_rate": 0.004,
+            "heat_recovery_water_outlet_node_name": "Small SOFC Heat Rec Outlet Node",
+            "method_1_heat_exchanger_effectiveness": 0.8,
+            "method_2_parameter_hxs0": 20.0,
+            "method_2_parameter_hxs1": 1470.0,
+            "method_2_parameter_hxs2": 21000.0,
+            "method_2_parameter_hxs3": 19608.0,
+            "method_2_parameter_hxs4": 4000000.0,
+            "method_4_condensation_threshold": 90.0,
+            "method_4_hxl1_coefficient": 1e-05,
+            "method_4_hxl2_coefficient": 0.0
+        }
+    },
+    "Generator:FuelCell:Inverter": {
+        "Fictitious SOFC Inverter": {
+            "efficiency_function_of_dc_power_curve_name": "Null Quadratic",
+            "inverter_efficiency": 1.0,
+            "inverter_efficiency_calculation_mode": "Constant"
+        }
+    },
+    "Generator:FuelCell:PowerModule": {
+        "Fictitious SOFC Power Module": {
+            "accumulated_run_time_degradation_coefficient": 0.0,
+            "ancillary_electricity_constant_term": 0.0,
+            "ancillary_electricity_linear_term": 0.0,
+            "constant_skin_loss_rate": 0.0,
+            "cycling_performance_degradation_coefficient": 0.0,
+            "dilution_air_flow_rate": 0.0,
+            "dilution_inlet_air_node_name": "SOFC Air HR Inlet",
+            "dilution_outlet_air_node_name": "SOFC Air HR Outlet",
+            "efficiency_curve_mode": "Annex42",
+            "efficiency_curve_name": "Fictitious Power Curve",
+            "maximum_operating_point": 3400.0,
+            "minimum_operating_point": 900.0,
+            "number_of_run_hours_at_beginning_of_simulation": 1000,
+            "number_of_stops_at_start_of_simulation": 0,
+            "power_down_transient_limit": 10.0,
+            "power_up_transient_limit": 10.0,
+            "run_time_degradation_initiation_time_threshold": 3000,
+            "shut_down_electricity_consumption": 6000000.0,
+            "shut_down_fuel": 0.2,
+            "shut_down_time": 0.0,
+            "skin_loss_calculation_mode": "ConstantRate",
+            "skin_loss_radiative_fraction": 0.2,
+            "skin_loss_u_factor_times_area_term": 0.0,
+            "stack_heat_loss_to_dilution_air": 0.0,
+            "start_up_electricity_consumption": 6000000.0,
+            "start_up_electricity_produced": 0.0,
+            "start_up_fuel": 0.2,
+            "start_up_time": 0.0,
+            "zone_name": "GARAGE ZONE"
+        }
+    },
+    "Generator:FuelCell:WaterSupply": {
+        "Fictitious SOFC Water Supply": {
+            "pump_heat_loss_factor": 0.05,
+            "reformer_water_flow_rate_function_of_fuel_rate_curve_name": "Null Quadratic",
+            "reformer_water_pump_power_function_of_fuel_rate_curve_name": "Null Cubic",
+            "water_temperature_modeling_mode": "TemperatureFromAirNode",
+            "water_temperature_reference_node_name": "SOFC Air Inlet Node"
+        }
+    },
+    "Generator:FuelSupply": {
+        "Fictitious SOFC Fuel Supply": {
+            "compressor_heat_loss_factor": 1.0,
+            "compressor_power_multiplier_function_of_fuel_rate_curve_name": "Fictitious Fuel Compressor Power Curve",
+            "constituent_1_molar_fraction": 1.0,
+            "constituent_1_name": "Methane",
+            "fuel_temperature_modeling_mode": "TemperatureFromAirNode",
+            "fuel_temperature_reference_node_name": "SOFC Air Inlet Node",
+            "fuel_type": "GaseousConstituents",
+            "number_of_constituents_in_gaseous_constituent_fuel_supply": 1
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "World",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "Material": {
+        "A1 - 1 IN STUCCO": {
+            "conductivity": 0.6918309,
+            "density": 1858.142,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.92,
+            "specific_heat": 836.8,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.025389841,
+            "visible_absorptance": 0.92
+        },
+        "CB11": {
+            "conductivity": 1.048,
+            "density": 1105.0,
+            "roughness": "MediumRough",
+            "solar_absorptance": 0.2,
+            "specific_heat": 837.0,
+            "thermal_absorptance": 0.9,
+            "thickness": 0.2032,
+            "visible_absorptance": 0.2
+        }
+    },
+    "Meter:Custom": {
+        "Building Infiltration Heat Gain": {
+            "resource_type": "Generic",
+            "variable_details": [
+                {
+                    "key_name": "*",
+                    "output_variable_or_meter_name": "Zone Infiltration Total Heat Gain Energy"
+                }
+            ]
+        },
+        "Building Infiltration Heat Loss": {
+            "resource_type": "Generic",
+            "variable_details": [
+                {
+                    "key_name": "*",
+                    "output_variable_or_meter_name": "Zone Infiltration Total Heat Loss Energy"
+                }
+            ]
+        }
+    },
+    "NodeList": {
+        "Heat Recovery Water Loop Setpoint Node List": {
+            "nodes": [
+                {
+                    "node_name": "Heat Recovery Supply Outlet Node"
+                }
+            ]
+        },
+        "SOFC device air intakes": {
+            "nodes": [
+                {
+                    "node_name": "SOFC Air Inlet Node"
+                },
+                {
+                    "node_name": "SOFC Air HR Inlet"
+                }
+            ]
+        }
+    },
+    "Output:Diagnostics": {
+        "Output:Diagnostics 1": {
+            "diagnostics": [
+                {
+                    "key": "DisplayAdvancedReportVariables"
+                }
+            ]
+        }
+    },
+    "Output:Meter:MeterFileOnly": {
+        "Output:Meter:MeterFileOnly 1": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 2": {
+            "key_name": "Electricity:Plant",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 3": {
+            "key_name": "NaturalGas:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 4": {
+            "key_name": "NaturalGas:Plant",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 5": {
+            "key_name": "Building Infiltration Heat Loss",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 6": {
+            "key_name": "Building Infiltration Heat Gain",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 7": {
+            "key_name": "Electricity:Facility",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 8": {
+            "key_name": "Electricity:Plant",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 9": {
+            "key_name": "NaturalGas:Facility",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 10": {
+            "key_name": "NaturalGas:Plant",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 11": {
+            "key_name": "Building Infiltration Heat Loss",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 12": {
+            "key_name": "Building Infiltration Heat Gain",
+            "reporting_frequency": "RunPeriod"
+        }
+    },
+    "Output:Surfaces:Drawing": {
+        "Output:Surfaces:Drawing 1": {
+            "report_type": "DXF"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Zone Air Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Produced AC Electricity Rate"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Produced AC Electricity Energy"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Facility Total Electricity Demand Rate"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Electric Storage Charge State"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator DC Storage Charging Power"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator DC Storage Discharging Power"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator DC Storage Charging Energy"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator DC Storage Discharging Energy"
+        },
+        "Output:Variable 10": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Air Inlet Temperature"
+        },
+        "Output:Variable 11": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Power Module Entering Air Temperature"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Air Molar Flow Rate"
+        },
+        "Output:Variable 13": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Power Module Entering Air Enthalpy"
+        },
+        "Output:Variable 14": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Blower Electricity Rate"
+        },
+        "Output:Variable 15": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Blower Electricity Energy"
+        },
+        "Output:Variable 16": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Blower Skin Heat Loss Rate"
+        },
+        "Output:Variable 17": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Fuel Inlet Temperature"
+        },
+        "Output:Variable 18": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Power Module Entering Fuel Temperature"
+        },
+        "Output:Variable 19": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Fuel Molar Flow Rate"
+        },
+        "Output:Variable 20": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Power Module Entering Fuel Enthalpy"
+        },
+        "Output:Variable 21": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Fuel Compressor Electricity Rate"
+        },
+        "Output:Variable 22": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Fuel Compressor Electricity Energy"
+        },
+        "Output:Variable 23": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Fuel Compressor Skin Heat Loss Rate"
+        },
+        "Output:Variable 24": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Fuel Reformer Water Inlet Temperature"
+        },
+        "Output:Variable 25": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Power Module Entering Reforming Water Temperature"
+        },
+        "Output:Variable 26": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Fuel Reformer Water Molar Flow Rate"
+        },
+        "Output:Variable 27": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Product Gas Temperature"
+        },
+        "Output:Variable 28": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Product Gas Enthalpy"
+        },
+        "Output:Variable 29": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Product Gas Molar Flow Rate"
+        },
+        "Output:Variable 30": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Fuel Cell Model Iteration Count"
+        },
+        "Output:Variable 31": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Root Solver Iteration Count"
+        },
+        "Output:Variable 32": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "HVAC System Solver Iteration Count"
+        },
+        "Output:Variable 33": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Inverter Loss Power"
+        },
+        "Output:Variable 34": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Produced DC Electricity Rate"
+        },
+        "Output:Variable 35": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator DC Power Efficiency"
+        },
+        "Output:Variable 36": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Ancillary AC Electricity Rate"
+        },
+        "Output:Variable 37": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Zone Sensible Heat Transfer Rate"
+        },
+        "Output:Variable 38": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Zone Sensible Heat Transfer Energy"
+        },
+        "Output:Variable 39": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Zone Convection Heat Transfer Rate"
+        },
+        "Output:Variable 40": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Zone Radiation Heat Transfer Rate"
+        },
+        "Output:Variable 41": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Facility Total Purchased Electricity Rate"
+        },
+        "Output:Variable 42": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Facility Total Purchased Electricity Energy"
+        },
+        "Output:Variable 43": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Facility Total Produced Electricity Rate"
+        },
+        "Output:Variable 44": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Mains Water Temperature"
+        },
+        "Output:Variable 45": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Pump Electricity Rate"
+        },
+        "Output:Variable 46": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Product Gas Ar Molar Flow Rate"
+        },
+        "Output:Variable 47": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Product Gas CO2 Molar Flow Rate"
+        },
+        "Output:Variable 48": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Product Gas H2O Vapor Molar Flow Rate"
+        },
+        "Output:Variable 49": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Product Gas N2 Molar Flow Rate"
+        },
+        "Output:Variable 50": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Generator Product Gas O2 Molar Flow Rate"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "Pipe:Adiabatic": {
+        "Heat Recovery Inlet Pipe": {
+            "inlet_node_name": "Heat Recovery Demand Inlet Node",
+            "outlet_node_name": "Heat Recovery Demand Drain Node"
+        },
+        "Heat Recovery Supply Outlet": {
+            "inlet_node_name": "Small SOFC Heat Rec Outlet Node",
+            "outlet_node_name": "Heat Recovery Supply Outlet Node"
+        }
+    },
+    "PlantEquipmentList": {
+        "CHP plant": {
+            "equipment": [
+                {
+                    "equipment_name": "Fictitious SOFC Exhaust HX",
+                    "equipment_object_type": "Generator:FuelCell:ExhaustGasToWaterHeatExchanger"
+                }
+            ]
+        }
+    },
+    "PlantEquipmentOperation:Uncontrolled": {
+        "CHP test": {
+            "equipment_list_name": "CHP plant"
+        }
+    },
+    "PlantEquipmentOperationSchemes": {
+        "Recovery Loop Operation": {
+            "control_scheme_1_name": "CHP test",
+            "control_scheme_1_object_type": "PlantEquipmentOperation:Uncontrolled",
+            "control_scheme_1_schedule_name": "Always_ON"
+        }
+    },
+    "PlantLoop": {
+        "Heat Recovery Water Loop": {
+            "availability_manager_list_name": "Always_ON",
+            "demand_side_branch_list_name": "Heat Recovery Demand Side Branches",
+            "demand_side_inlet_node_name": "Heat Recovery Demand Inlet Node",
+            "demand_side_outlet_node_name": "Heat Recovery Demand Outlet Node",
+            "fluid_type": "Water",
+            "load_distribution_scheme": "Optimal",
+            "loop_temperature_setpoint_node_name": "Heat Recovery Supply Outlet Node",
+            "maximum_loop_flow_rate": 0.00015,
+            "maximum_loop_temperature": 98,
+            "minimum_loop_flow_rate": 0.0,
+            "minimum_loop_temperature": 10,
+            "plant_equipment_operation_scheme_name": "Recovery Loop Operation",
+            "plant_loop_volume": "Autocalculate",
+            "plant_side_branch_list_name": "Heat Recovery Supply Side Branches",
+            "plant_side_inlet_node_name": "Heat Recovery Supply Inlet Node",
+            "plant_side_outlet_node_name": "Heat Recovery Supply Outlet Node"
+        }
+    },
+    "Pump:ConstantSpeed": {
+        "Heat Recovery Circ Pump": {
+            "design_flow_rate": 0.00015,
+            "design_power_consumption": 0.0,
+            "design_pump_head": 50000,
+            "fraction_of_motor_inefficiencies_to_fluid_stream": 0.0,
+            "inlet_node_name": "Heat Recovery Supply Inlet Node",
+            "motor_efficiency": 0.87,
+            "outlet_node_name": "Small SOFC Heat Rec Inlet Node",
+            "pump_control_type": "Continuous",
+            "pump_flow_rate_schedule_name": "Annex 42 ICE_SE test 400 flow schedule"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "apply_weekend_holiday_rule": "No",
+            "begin_day_of_month": 9,
+            "begin_month": 1,
+            "day_of_week_for_start_day": "Sunday",
+            "end_day_of_month": 9,
+            "end_month": 1,
+            "use_weather_file_daylight_saving_period": "No",
+            "use_weather_file_holidays_and_special_days": "No",
+            "use_weather_file_rain_indicators": "No",
+            "use_weather_file_snow_indicators": "No"
+        }
+    },
+    "Schedule:Compact": {
+        "Always_ON": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Annex 42 FC test flow schedule": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "Dual setpointUpper": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 20.01
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "Dual setpointlower": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 19.99
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "Electric Load Profile Sched": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL:  1:00"
+                },
+                {
+                    "field": 0.1
+                },
+                {
+                    "field": "UNTIL:  2:00"
+                },
+                {
+                    "field": 0.11
+                },
+                {
+                    "field": "UNTIL:  3:00"
+                },
+                {
+                    "field": 0.12
+                },
+                {
+                    "field": "UNTIL:  4:00"
+                },
+                {
+                    "field": 0.13
+                },
+                {
+                    "field": "UNTIL:  5:00"
+                },
+                {
+                    "field": 0.14
+                },
+                {
+                    "field": "UNTIL:  6:00"
+                },
+                {
+                    "field": 0.15
+                },
+                {
+                    "field": "UNTIL:  7:00"
+                },
+                {
+                    "field": 0.16
+                },
+                {
+                    "field": "UNTIL:  8:00"
+                },
+                {
+                    "field": 0.17
+                },
+                {
+                    "field": "UNTIL:  9:00"
+                },
+                {
+                    "field": 0.18
+                },
+                {
+                    "field": "UNTIL: 10:00"
+                },
+                {
+                    "field": 0.19
+                },
+                {
+                    "field": "UNTIL: 11:00"
+                },
+                {
+                    "field": 0.2
+                },
+                {
+                    "field": "UNTIL: 12:00"
+                },
+                {
+                    "field": 0.21
+                },
+                {
+                    "field": "UNTIL: 13:00"
+                },
+                {
+                    "field": 0.22
+                },
+                {
+                    "field": "UNTIL: 14:00"
+                },
+                {
+                    "field": 0.23
+                },
+                {
+                    "field": "UNTIL: 15:00"
+                },
+                {
+                    "field": 0.24
+                },
+                {
+                    "field": "UNTIL: 16:00"
+                },
+                {
+                    "field": 0.25
+                },
+                {
+                    "field": "UNTIL: 17:00"
+                },
+                {
+                    "field": 0.26
+                },
+                {
+                    "field": "UNTIL: 18:00"
+                },
+                {
+                    "field": 0.27
+                },
+                {
+                    "field": "UNTIL: 19:00"
+                },
+                {
+                    "field": 0.28
+                },
+                {
+                    "field": "UNTIL: 20:00"
+                },
+                {
+                    "field": 0.29
+                },
+                {
+                    "field": "UNTIL: 21:00"
+                },
+                {
+                    "field": 0.3
+                },
+                {
+                    "field": "UNTIL: 22:00"
+                },
+                {
+                    "field": 0.31
+                },
+                {
+                    "field": "UNTIL: 23:00"
+                },
+                {
+                    "field": 0.32
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 0.33
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "HOT WATER SETPOINTs Annex42 FC test": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 25.0
+                }
+            ],
+            "schedule_type_limits_name": "Temperature"
+        },
+        "INF-SCHED": {
+            "data": [
+                {
+                    "field": "THROUGH: 12/31"
+                },
+                {
+                    "field": "FOR: AllDays"
+                },
+                {
+                    "field": "UNTIL: 24:00"
+                },
+                {
+                    "field": 1.0
+                }
+            ],
+            "schedule_type_limits_name": "Fraction"
+        },
+        "Zone Control Type Sched": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 4
+                }
+            ],
+            "schedule_type_limits_name": "Control Type"
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {},
+        "Control Type": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 4
+        },
+        "Fraction": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1.0
+        },
+        "On/Off": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 1
+        },
+        "Temperature": {
+            "lower_limit_value": -60,
+            "numeric_type": "Continuous",
+            "unit_type": "Temperature",
+            "upper_limit_value": 200
+        }
+    },
+    "SetpointManager:Scheduled": {
+        "Heat Recovery Water Loop Setpoint Manager": {
+            "control_variable": "Temperature",
+            "schedule_name": "HOT WATER SETPOINTs Annex42 FC test",
+            "setpoint_node_or_nodelist_name": "Heat Recovery Water Loop Setpoint Node List"
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "No",
+            "run_simulation_for_weather_file_run_periods": "Yes"
+        }
+    },
+    "Site:Location": {
+        "CHICAGO_OHARE_INTL_IL_USA Design_Conditions": {
+            "elevation": 201.0,
+            "latitude": 41.98,
+            "longitude": -87.9,
+            "time_zone": -6.0
+        }
+    },
+    "Site:WaterMainsTemperature": {
+        "Site:WaterMainsTemperature 1": {
+            "annual_average_outdoor_air_temperature": 9.69,
+            "calculation_method": "Schedule",
+            "maximum_difference_in_monthly_average_outdoor_air_temperatures": 28.1,
+            "temperature_schedule_name": "HOT WATER SETPOINTs Annex42 FC test"
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "CHICAGO_IL_USA Annual Cooling 1% Design Conditions DB/MCWB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 10.7,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 31.5,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 23.0,
+            "wind_direction": 230,
+            "wind_speed": 5.3
+        },
+        "CHICAGO_IL_USA Annual Heating 99% Design Conditions DB": {
+            "barometric_pressure": 99063.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -17.3,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -17.3,
+            "wind_direction": 270,
+            "wind_speed": 4.9
+        }
+    },
+    "SurfaceConvectionAlgorithm:Inside": {
+        "SurfaceConvectionAlgorithm:Inside 1": {
+            "algorithm": "TARP"
+        }
+    },
+    "SurfaceConvectionAlgorithm:Outside": {
+        "SurfaceConvectionAlgorithm:Outside 1": {
+            "algorithm": "DOE-2"
+        }
+    },
+    "ThermostatSetpoint:DualSetpoint": {
+        "Tight setpoint": {
+            "cooling_setpoint_temperature_schedule_name": "Dual setpointUpper",
+            "heating_setpoint_temperature_schedule_name": "Dual setpointlower"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 12
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "25.1"
+        }
+    },
+    "WaterUse:Connections": {
+        "Heat Recovery Drain": {
+            "connections": [
+                {
+                    "water_use_equipment_name": "Heat Recovery Drain"
+                }
+            ],
+            "inlet_node_name": "Heat Recovery Demand Drain Node",
+            "outlet_node_name": "Heat Recovery Demand Outlet Node"
+        }
+    },
+    "WaterUse:Equipment": {
+        "Heat Recovery Drain": {
+            "flow_rate_fraction_schedule_name": "Annex 42 FC test flow schedule",
+            "peak_flow_rate": 0.00015
+        }
+    },
+    "Zone": {
+        "GARAGE ZONE": {
+            "ceiling_height": 4.0,
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": 50.0,
+            "x_origin": 0.0,
+            "y_origin": 0.0,
+            "z_origin": 0.0
+        }
+    },
+    "ZoneControl:Thermostat": {
+        "Garage Zone Thermostat": {
+            "control_1_name": "Tight setpoint",
+            "control_1_object_type": "ThermostatSetpoint:DualSetpoint",
+            "control_type_schedule_name": "Zone Control Type Sched",
+            "zone_or_zonelist_name": "GARAGE ZONE"
+        }
+    },
+    "ZoneHVAC:EquipmentConnections": {
+        "ZoneHVAC:EquipmentConnections 1": {
+            "zone_air_exhaust_node_or_nodelist_name": "SOFC device air intakes",
+            "zone_air_inlet_node_or_nodelist_name": "Garage inlet",
+            "zone_air_node_name": "Garage Air Node",
+            "zone_conditioning_equipment_list_name": "Zone1Equipment",
+            "zone_name": "GARAGE ZONE",
+            "zone_return_air_node_or_nodelist_name": "Garage return"
+        }
+    },
+    "ZoneHVAC:EquipmentList": {
+        "Zone1Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Zone1Air",
+                    "zone_equipment_object_type": "ZoneHVAC:IdealLoadsAirSystem"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        }
+    },
+    "ZoneHVAC:IdealLoadsAirSystem": {
+        "Zone1Air": {
+            "cooling_limit": "NoLimit",
+            "dehumidification_control_type": "ConstantSupplyHumidityRatio",
+            "heating_limit": "NoLimit",
+            "humidification_control_type": "ConstantSupplyHumidityRatio",
+            "maximum_cooling_air_flow_rate": 10.0,
+            "maximum_heating_air_flow_rate": 10.0,
+            "maximum_heating_supply_air_humidity_ratio": 0.009,
+            "maximum_heating_supply_air_temperature": 50,
+            "minimum_cooling_supply_air_humidity_ratio": 0.009,
+            "minimum_cooling_supply_air_temperature": 13,
+            "zone_supply_air_node_name": "Garage inlet"
+        }
+    },
+    "ZoneInfiltration:DesignFlowRate": {
+        "GARAGE ZONE": {
+            "constant_term_coefficient": 1,
+            "design_flow_rate": 0.3,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "schedule_name": "INF-SCHED",
+            "temperature_term_coefficient": 0,
+            "velocity_squared_term_coefficient": 0,
+            "velocity_term_coefficient": 0,
+            "zone_or_zonelist_or_space_or_spacelist_name": "GARAGE ZONE"
+        }
+    }
+}

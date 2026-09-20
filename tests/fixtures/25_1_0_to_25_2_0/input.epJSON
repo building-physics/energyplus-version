@@ -1,0 +1,52 @@
+{
+  "Version": {
+    "Version 1": {
+      "version_identifier": "25.1"
+    }
+  },
+  "Building": {
+    "Fixture Building": {
+      "loads_convergence_tolerance_value": 0.04,
+      "maximum_number_of_warmup_days": 25,
+      "minimum_number_of_warmup_days": 6,
+      "north_axis": 0,
+      "solar_distribution": "FullInteriorAndExterior",
+      "temperature_convergence_tolerance_value": 0.4,
+      "terrain": "Suburbs"
+    }
+  },
+  "GlobalGeometryRules": {
+    "Fixture Geometry Rules": {
+      "coordinate_system": "World",
+      "starting_vertex_position": "UpperLeftCorner",
+      "vertex_entry_direction": "Counterclockwise"
+    }
+  },
+  "AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed": {
+    "Fixture Heat Pump": {
+      "air_inlet_node_name": "Heat Pump Inlet",
+      "air_outlet_node_name": "Heat Pump Outlet",
+      "controlling_zone_or_thermostat_location": "Fixture Zone",
+      "supply_air_fan_object_type": "Fan:OnOff",
+      "supply_air_fan_name": "Fixture Fan",
+      "supply_air_fan_placement": "BlowThrough",
+      "heating_coil_object_type": "Coil:Heating:DX:MultiSpeed",
+      "heating_coil_name": "Fixture Heating Coil",
+      "minimum_outdoor_dry_bulb_temperature_for_compressor_operation": -8.0,
+      "cooling_coil_object_type": "Coil:Cooling:DX:MultiSpeed",
+      "cooling_coil_name": "Fixture Cooling Coil",
+      "number_of_speeds_for_heating": 1,
+      "number_of_speeds_for_cooling": 2,
+      "heating_speed_1_supply_air_flow_rate": 0.5,
+      "cooling_speed_1_supply_air_flow_rate": 0.6,
+      "cooling_speed_2_supply_air_flow_rate": 0.8
+    }
+  },
+  "Output:Variable": {
+    "Fixture Output Request": {
+      "key_value": "*",
+      "variable_name": "Chilled Water Thermal Storage Final Tank Temperature",
+      "reporting_frequency": "Hourly"
+    }
+  }
+}

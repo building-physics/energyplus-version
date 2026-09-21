@@ -1,0 +1,40 @@
+{
+  "Version": {
+    "Version 1": {
+      "version_identifier": "25.1.0"
+    }
+  },
+  "Building": {
+    "Fixture Building": {
+      "terrain": "Suburbs"
+    }
+  },
+  "GlobalGeometryRules": {
+    "Fixture Geometry Rules": {
+      "coordinate_system": "World",
+      "starting_vertex_position": "UpperLeftCorner",
+      "vertex_entry_direction": "Counterclockwise"
+    }
+  },
+  "ZoneInfiltration:DesignFlowRate": {
+    "Fixture Infiltration": {
+      "zone_or_zonelist_or_space_or_spacelist_name": "Fixture Zone",
+      "design_flow_rate_calculation_method": "AirChanges/Hour",
+      "air_changes_per_hour": 0.5
+    }
+  },
+  "ZoneVentilation:DesignFlowRate": {
+    "Fixture Ventilation": {
+      "zone_or_zonelist_or_space_or_spacelist_name": "Fixture Zone",
+      "design_flow_rate_calculation_method": "Flow/Zone",
+      "design_flow_rate": 0.1
+    }
+  },
+  "Output:Variable": {
+    "Fixture Output Request": {
+      "key_value": "*",
+      "variable_name": "Zone Ventilation Current Density Air Change Rate",
+      "reporting_frequency": "Hourly"
+    }
+  }
+}

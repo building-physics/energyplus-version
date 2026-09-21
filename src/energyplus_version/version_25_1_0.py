@@ -48,6 +48,55 @@ class Upgrade(ev.EnergyPlusUpgrade):
                 "AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed",
                 "minimum_outdoor_dry_bulb_temperature_for_compressor_operation",
             ),
+            ev.ChangeFieldName(
+                "Coil:Heating:WaterToAirHeatPump:VariableSpeedEquationFit",
+                "speed_1_reference_unit_rated_air_flow",
+                "speed_1_reference_unit_rated_air_flow_rate",
+            ),
+            *(
+                ev.ChangeFieldName(
+                    "Coil:Cooling:DX:VariableSpeed",
+                    old_field,
+                    f"speed_{speed}_reference_unit_rated_condenser_air_flow_rate",
+                )
+                for speed, old_field in (
+                    (6, "speed_6_reference_unit_condenser_air_flow_rate"),
+                    (7, "speed_7_reference_unit_condenser_flow_rate"),
+                    (8, "speed_8_reference_unit_condenser_air_flow_rate"),
+                    (9, "speed_9_reference_unit_condenser_air_flow_rate"),
+                    (10, "speed_10_reference_unit_condenser_air_flow_rate"),
+                )
+            ),
+            *(
+                ev.ChangeFieldName(
+                    "Coil:Heating:DX:VariableSpeed",
+                    f"speed_{speed}_heating_capacity_function_of_air_flow_fraction_curve_name",
+                    f"speed_{speed}_total_heating_capacity_function_of_air_flow_fraction_curve_name",
+                )
+                for speed in range(4, 11)
+            ),
+            *(
+                ev.ChangeFieldName(
+                    "Coil:WaterHeating:AirToWaterHeatPump:VariableSpeed",
+                    old_field,
+                    new_field,
+                )
+                for speed in range(1, 11)
+                for old_field, new_field in (
+                    (
+                        f"rated_sensible_heat_ratio_at_speed_{speed}",
+                        f"speed_{speed}_rated_sensible_heat_ratio",
+                    ),
+                    (
+                        f"rated_water_heating_capacity_at_speed_{speed}",
+                        f"speed_{speed}_rated_water_heating_capacity",
+                    ),
+                    (
+                        f"rated_water_heating_cop_at_speed_{speed}",
+                        f"speed_{speed}_rated_water_heating_cop",
+                    ),
+                )
+            ),
         ]
 
     def from_version(self):

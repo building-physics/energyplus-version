@@ -10,6 +10,10 @@ class LocalUpgrade(energyplus_version.Upgrade):
     def changes(self):
         return self.change_list
 
+class LocalVariableRenameUpgrade(LocalUpgrade):
+    def variable_renames(self):
+        return {'Old Report Variable': 'New Report Variable'}
+
 def test_generic_upgrades():
     obj = {'Test': {'test_one': {'field_one': 1.0, 'field_two': 2.0}}}
     # Single change
@@ -40,6 +44,57 @@ def test_generic_upgrades():
     nope = {'Nope': {'test_one': {'field_one': 1.0, 'field_two': 2.0}}}
     patch = upgrade.generate_patch(nope)
     assert patch == []
+
+def test_variable_renames_are_applied_to_direct_and_extensible_references():
+    model = {
+        'Output:Variable': {
+            'Direct/Reference': {
+                'variable_name': 'old report variable [W]',
+            },
+        },
+        'EnergyManagementSystem:Sensor': {
+            'Sensor': {
+                'output_variable_or_output_meter_name': 'Old Report Variable',
+            },
+        },
+        'Output:Table:Monthly': {
+            'Monthly Table': {
+                'variable_details': [
+                    {
+                        'variable_or_meter_name': 'OLD REPORT VARIABLE',
+                        'aggregation_type_for_variable_or_meter': 'Maximum',
+                    },
+                ],
+            },
+        },
+        'Meter:Custom': {
+            'Custom Meter': {
+                'variable_details': [
+                    {
+                        'key_name': '*',
+                        'output_variable_or_meter_name': 'Old Report Variable',
+                    },
+                ],
+            },
+        },
+    }
+
+    patch = LocalVariableRenameUpgrade([]).generate_patch(model)
+    upgraded = jsonpatch.JsonPatch(patch).apply(model)
+
+    assert upgraded['Output:Variable']['Direct/Reference']['variable_name'] == 'New Report Variable'
+    assert (
+        upgraded['EnergyManagementSystem:Sensor']['Sensor']['output_variable_or_output_meter_name']
+        == 'New Report Variable'
+    )
+    assert (
+        upgraded['Output:Table:Monthly']['Monthly Table']['variable_details'][0]['variable_or_meter_name']
+        == 'New Report Variable'
+    )
+    assert (
+        upgraded['Meter:Custom']['Custom Meter']['variable_details'][0]['output_variable_or_meter_name']
+        == 'New Report Variable'
+    )
 
 class LocalEpUpgrade(energyplus_version.EnergyPlusUpgrade):
     def changes(self):

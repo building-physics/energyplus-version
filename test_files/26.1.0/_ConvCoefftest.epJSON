@@ -1,0 +1,765 @@
+{
+    "Building": {
+        "ExtSolRad": {
+            "loads_convergence_tolerance_value": 0.039999999,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.0040000002,
+            "terrain": "Country"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "ZONE SURFACE CEILING": {
+            "construction_name": "TESTSURFACE",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "ZONE SURFACE CEILING",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 3.0,
+                    "vertex_z_coordinate": 3.001
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.001
+                },
+                {
+                    "vertex_x_coordinate": 3.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.001
+                },
+                {
+                    "vertex_x_coordinate": 3.0,
+                    "vertex_y_coordinate": 3.0,
+                    "vertex_z_coordinate": 3.001
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE ONE"
+        },
+        "ZONE SURFACE EAST": {
+            "construction_name": "TESTSURFACE",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "ZONE SURFACE EAST",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 3.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 3.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.0,
+                    "vertex_y_coordinate": 3.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.0,
+                    "vertex_y_coordinate": 3.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE ONE"
+        },
+        "ZONE SURFACE FLOOR": {
+            "construction_name": "TESTSURFACE",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "ZONE SURFACE FLOOR",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 3.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.0,
+                    "vertex_y_coordinate": 3.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE ONE"
+        },
+        "ZONE SURFACE NORTH": {
+            "construction_name": "TESTSURFACE",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "ZONE SURFACE NORTH",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 3.0,
+                    "vertex_y_coordinate": 3.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 3.0,
+                    "vertex_y_coordinate": 3.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 3.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 3.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE ONE"
+        },
+        "ZONE SURFACE SOUTH": {
+            "construction_name": "TESTSURFACE",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 3.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE ONE"
+        },
+        "ZONE SURFACE WEST": {
+            "construction_name": "TESTSURFACE",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "ZONE SURFACE WEST",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 3.0,
+                    "vertex_z_coordinate": 3.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 3.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 3.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE ONE"
+        }
+    },
+    "Construction": {
+        "TESTSURFACE": {
+            "layer_2": "LAYER 2",
+            "layer_3": "LAYER 3",
+            "outside_layer": "LAYER 1"
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "Material": {
+        "LAYER 1": {
+            "conductivity": 1.15,
+            "density": 1.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.4,
+            "specific_heat": 100,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.1,
+            "visible_absorptance": 1e-06
+        },
+        "LAYER 2": {
+            "conductivity": 1.05,
+            "density": 1.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 1e-06,
+            "specific_heat": 100,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.1,
+            "visible_absorptance": 1e-06
+        },
+        "LAYER 3": {
+            "conductivity": 1.15,
+            "density": 1.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 1e-06,
+            "specific_heat": 100,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.1,
+            "visible_absorptance": 1e-06
+        }
+    },
+    "NodeList": {
+        "Zone1Inlets": {
+            "nodes": [
+                {
+                    "node_name": "NODE_1"
+                }
+            ]
+        }
+    },
+    "Output:Constructions": {
+        "Output:Constructions 1": {
+            "details_type_1": "Constructions"
+        }
+    },
+    "Output:Meter:MeterFileOnly": {
+        "Output:Meter:MeterFileOnly 1": {
+            "key_name": "DistrictHeatingWater:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 2": {
+            "key_name": "DistrictCooling:Facility",
+            "reporting_frequency": "Monthly"
+        },
+        "Output:Meter:MeterFileOnly 3": {
+            "key_name": "DistrictHeatingWater:Facility",
+            "reporting_frequency": "RunPeriod"
+        },
+        "Output:Meter:MeterFileOnly 4": {
+            "key_name": "DistrictCooling:Facility",
+            "reporting_frequency": "RunPeriod"
+        }
+    },
+    "Output:Surfaces:Drawing": {
+        "Output:Surfaces:Drawing 1": {
+            "report_type": "DXF"
+        }
+    },
+    "Output:Surfaces:List": {
+        "Output:Surfaces:List 1": {
+            "report_type": "Details"
+        }
+    },
+    "Output:Table:SummaryReports": {
+        "Output:Table:SummaryReports 1": {
+            "reports": [
+                {
+                    "report_name": "AllSummary"
+                }
+            ]
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Zone Mean Air Temperature"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Diffuse Solar Radiation Rate per Area"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Direct Solar Radiation Rate per Area"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Ground Reflected Solar Radiation Rate per Area"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Inside Face Temperature"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Outside Face Temperature"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Inside Face Convection Heat Transfer Coefficient"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Outside Face Convection Heat Transfer Coefficient"
+        },
+        "Output:Variable 10": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Outside Face Incident Solar Radiation Rate per Area"
+        },
+        "Output:Variable 11": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Zone Air System Sensible Heating Energy"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Zone Air System Sensible Cooling Energy"
+        },
+        "Output:Variable 13": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Enclosure Windows Total Transmitted Solar Radiation Rate"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "OutputControl:Table:Style": {
+        "OutputControl:Table:Style 1": {
+            "column_separator": "HTML"
+        }
+    },
+    "RunPeriod": {
+        "Run Period 1": {
+            "begin_day_of_month": 21,
+            "begin_month": 8,
+            "end_day_of_month": 21,
+            "end_month": 8,
+            "use_weather_file_daylight_saving_period": "Yes",
+            "use_weather_file_holidays_and_special_days": "Yes"
+        }
+    },
+    "RunPeriodControl:DaylightSavingTime": {
+        "RunPeriodControl:DaylightSavingTime 1": {
+            "end_date": "10/28",
+            "start_date": "04/01"
+        }
+    },
+    "Schedule:Compact": {
+        "Sched-3.076": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 3.076
+                }
+            ],
+            "schedule_type_limits_name": "AnyNumber"
+        },
+        "Sched-10.22": {
+            "data": [
+                {
+                    "field": "Through: 12/31"
+                },
+                {
+                    "field": "For: AllDays"
+                },
+                {
+                    "field": "Until: 24:00"
+                },
+                {
+                    "field": 10.22
+                }
+            ],
+            "schedule_type_limits_name": "AnyNumber"
+        }
+    },
+    "Schedule:Day:Hourly": {
+        "Control Type All Days-HeatCool": {
+            "hour_1": 3,
+            "hour_2": 3,
+            "hour_3": 3,
+            "hour_4": 3,
+            "hour_5": 3,
+            "hour_6": 3,
+            "hour_7": 3,
+            "hour_8": 3,
+            "hour_9": 3,
+            "hour_10": 3,
+            "hour_11": 3,
+            "hour_12": 3,
+            "hour_13": 3,
+            "hour_14": 3,
+            "hour_15": 3,
+            "hour_16": 3,
+            "hour_17": 3,
+            "hour_18": 3,
+            "hour_19": 3,
+            "hour_20": 3,
+            "hour_21": 3,
+            "hour_22": 3,
+            "hour_23": 3,
+            "hour_24": 3,
+            "schedule_type_limits_name": "Control Type"
+        },
+        "Zone HeatCool Setpoint All Days": {
+            "hour_1": 20.0,
+            "hour_2": 20.0,
+            "hour_3": 20.0,
+            "hour_4": 20.0,
+            "hour_5": 20.0,
+            "hour_6": 20.0,
+            "hour_7": 20.0,
+            "hour_8": 20.0,
+            "hour_9": 20.0,
+            "hour_10": 20.0,
+            "hour_11": 20.0,
+            "hour_12": 20.0,
+            "hour_13": 20.0,
+            "hour_14": 20.0,
+            "hour_15": 20.0,
+            "hour_16": 20.0,
+            "hour_17": 20.0,
+            "hour_18": 20.0,
+            "hour_19": 20.0,
+            "hour_20": 20.0,
+            "hour_21": 20.0,
+            "hour_22": 20.0,
+            "hour_23": 20.0,
+            "hour_24": 20.0,
+            "schedule_type_limits_name": "Temperature"
+        }
+    },
+    "Schedule:Week:Daily": {
+        "Control Type All Weeks-HeatCool": {
+            "customday1_schedule_day_name": "Control Type All Days-HeatCool",
+            "customday2_schedule_day_name": "Control Type All Days-HeatCool",
+            "friday_schedule_day_name": "Control Type All Days-HeatCool",
+            "holiday_schedule_day_name": "Control Type All Days-HeatCool",
+            "monday_schedule_day_name": "Control Type All Days-HeatCool",
+            "saturday_schedule_day_name": "Control Type All Days-HeatCool",
+            "summerdesignday_schedule_day_name": "Control Type All Days-HeatCool",
+            "sunday_schedule_day_name": "Control Type All Days-HeatCool",
+            "thursday_schedule_day_name": "Control Type All Days-HeatCool",
+            "tuesday_schedule_day_name": "Control Type All Days-HeatCool",
+            "wednesday_schedule_day_name": "Control Type All Days-HeatCool",
+            "winterdesignday_schedule_day_name": "Control Type All Days-HeatCool"
+        },
+        "Zone HeatCool Setpoint All Weeks": {
+            "customday1_schedule_day_name": "Zone HeatCool Setpoint All Days",
+            "customday2_schedule_day_name": "Zone HeatCool Setpoint All Days",
+            "friday_schedule_day_name": "Zone HeatCool Setpoint All Days",
+            "holiday_schedule_day_name": "Zone HeatCool Setpoint All Days",
+            "monday_schedule_day_name": "Zone HeatCool Setpoint All Days",
+            "saturday_schedule_day_name": "Zone HeatCool Setpoint All Days",
+            "summerdesignday_schedule_day_name": "Zone HeatCool Setpoint All Days",
+            "sunday_schedule_day_name": "Zone HeatCool Setpoint All Days",
+            "thursday_schedule_day_name": "Zone HeatCool Setpoint All Days",
+            "tuesday_schedule_day_name": "Zone HeatCool Setpoint All Days",
+            "wednesday_schedule_day_name": "Zone HeatCool Setpoint All Days",
+            "winterdesignday_schedule_day_name": "Zone HeatCool Setpoint All Days"
+        }
+    },
+    "Schedule:Year": {
+        "HeatCool Setpoints": {
+            "schedule_type_limits_name": "Temperature",
+            "schedule_weeks": [
+                {
+                    "end_day": 31,
+                    "end_month": 12,
+                    "schedule_week_name": "Zone HeatCool Setpoint All Weeks",
+                    "start_day": 1,
+                    "start_month": 1
+                }
+            ]
+        },
+        "Zone Control Type Sched": {
+            "schedule_type_limits_name": "Control Type",
+            "schedule_weeks": [
+                {
+                    "end_day": 31,
+                    "end_month": 12,
+                    "schedule_week_name": "Control Type All Weeks-HeatCool",
+                    "start_day": 1,
+                    "start_month": 1
+                }
+            ]
+        }
+    },
+    "ScheduleTypeLimits": {
+        "AnyNumber": {},
+        "Control Type": {
+            "lower_limit_value": 0,
+            "numeric_type": "Discrete",
+            "upper_limit_value": 4
+        },
+        "Temperature": {
+            "lower_limit_value": -60,
+            "numeric_type": "Continuous",
+            "unit_type": "Temperature",
+            "upper_limit_value": 200
+        }
+    },
+    "ShadowCalculation": {
+        "ShadowCalculation 1": {
+            "shading_calculation_method": "PolygonClipping",
+            "shading_calculation_update_frequency": 1,
+            "shading_calculation_update_frequency_method": "Periodic"
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "No",
+            "run_simulation_for_weather_file_run_periods": "Yes"
+        }
+    },
+    "Site:GroundReflectance": {
+        "Site:GroundReflectance 1": {
+            "april_ground_reflectance": 0,
+            "august_ground_reflectance": 0,
+            "december_ground_reflectance": 0,
+            "february_ground_reflectance": 0,
+            "january_ground_reflectance": 0,
+            "july_ground_reflectance": 0,
+            "june_ground_reflectance": 0,
+            "march_ground_reflectance": 0,
+            "may_ground_reflectance": 0,
+            "november_ground_reflectance": 0,
+            "october_ground_reflectance": 0,
+            "september_ground_reflectance": 0
+        }
+    },
+    "Site:Location": {
+        "ATLANTA": {
+            "elevation": 315.0,
+            "latitude": 33.65,
+            "longitude": -84.42,
+            "time_zone": -5.0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "TAMPA Ann Clg 1% Condns DB=>MWB": {
+            "barometric_pressure": 101289.0,
+            "daily_dry_bulb_temperature_range": 8.1,
+            "day_of_month": 21,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 33,
+            "month": 7,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 25.3,
+            "wind_direction": 270,
+            "wind_speed": 4
+        },
+        "TAMPA Ann Htg 99% Condns DB": {
+            "barometric_pressure": 101289.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 4.8,
+            "month": 1,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 4.8,
+            "wind_direction": 10,
+            "wind_speed": 3.1
+        }
+    },
+    "SurfaceProperty:ConvectionCoefficients": {
+        "SurfaceProperty:ConvectionCoefficients 1": {
+            "convection_coefficient_1": 3.076,
+            "convection_coefficient_1_location": "Inside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 10.22,
+            "convection_coefficient_2_location": "Outside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "ZONE SURFACE SOUTH"
+        },
+        "SurfaceProperty:ConvectionCoefficients 2": {
+            "convection_coefficient_1": 3.076,
+            "convection_coefficient_1_location": "Inside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 10.22,
+            "convection_coefficient_2_location": "Outside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "ZONE SURFACE NORTH"
+        },
+        "SurfaceProperty:ConvectionCoefficients 3": {
+            "convection_coefficient_1": 3.076,
+            "convection_coefficient_1_location": "Inside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 10.22,
+            "convection_coefficient_2_location": "Outside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "ZONE SURFACE EAST"
+        },
+        "SurfaceProperty:ConvectionCoefficients 4": {
+            "convection_coefficient_1_location": "Inside",
+            "convection_coefficient_1_schedule_name": "Sched-3.076",
+            "convection_coefficient_1_type": "Schedule",
+            "convection_coefficient_2_location": "Outside",
+            "convection_coefficient_2_schedule_name": "Sched-10.22",
+            "convection_coefficient_2_type": "Schedule",
+            "surface_name": "ZONE SURFACE WEST"
+        },
+        "SurfaceProperty:ConvectionCoefficients 5": {
+            "convection_coefficient_1_location": "Outside",
+            "convection_coefficient_1_schedule_name": "Sched-10.22",
+            "convection_coefficient_1_type": "Schedule",
+            "convection_coefficient_2_location": "Inside",
+            "convection_coefficient_2_schedule_name": "Sched-3.076",
+            "convection_coefficient_2_type": "Schedule",
+            "surface_name": "ZONE SURFACE FLOOR"
+        },
+        "SurfaceProperty:ConvectionCoefficients 6": {
+            "convection_coefficient_1": 3.076,
+            "convection_coefficient_1_location": "Inside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 10.22,
+            "convection_coefficient_2_location": "Outside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "ZONE SURFACE CEILING"
+        }
+    },
+    "ThermostatSetpoint:SingleHeatingOrCooling": {
+        "HeatCool Setpoints Set 1": {
+            "setpoint_temperature_schedule_name": "HeatCool Setpoints"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 6
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "26.1"
+        }
+    },
+    "Zone": {
+        "ZONE ONE": {
+            "ceiling_height": 3.0,
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": 27.0,
+            "x_origin": 0.0,
+            "y_origin": 0.0,
+            "z_origin": 0.0
+        }
+    },
+    "ZoneControl:Thermostat": {
+        "Zone 1 Thermostat": {
+            "control_1_name": "HeatCool Setpoints Set 1",
+            "control_1_object_type": "ThermostatSetpoint:SingleHeatingOrCooling",
+            "control_type_schedule_name": "Zone Control Type Sched",
+            "zone_or_zonelist_name": "ZONE ONE"
+        }
+    },
+    "ZoneHVAC:EquipmentConnections": {
+        "ZoneHVAC:EquipmentConnections 1": {
+            "zone_air_inlet_node_or_nodelist_name": "Zone1Inlets",
+            "zone_air_node_name": "NODE_2",
+            "zone_conditioning_equipment_list_name": "Zone1Equipment",
+            "zone_name": "ZONE ONE",
+            "zone_return_air_node_or_nodelist_name": "NODE_3"
+        }
+    },
+    "ZoneHVAC:EquipmentList": {
+        "Zone1Equipment": {
+            "equipment": [
+                {
+                    "zone_equipment_cooling_sequence": 1,
+                    "zone_equipment_heating_or_no_load_sequence": 1,
+                    "zone_equipment_name": "Zone1Air",
+                    "zone_equipment_object_type": "ZoneHVAC:IdealLoadsAirSystem"
+                }
+            ],
+            "load_distribution_scheme": "SequentialLoad"
+        }
+    },
+    "ZoneHVAC:IdealLoadsAirSystem": {
+        "Zone1Air": {
+            "dehumidification_control_type": "ConstantSupplyHumidityRatio",
+            "humidification_control_type": "ConstantSupplyHumidityRatio",
+            "maximum_heating_supply_air_humidity_ratio": 0.015,
+            "maximum_heating_supply_air_temperature": 50,
+            "minimum_cooling_supply_air_humidity_ratio": 0.009,
+            "minimum_cooling_supply_air_temperature": 13,
+            "zone_supply_air_node_name": "NODE_1"
+        }
+    }
+}

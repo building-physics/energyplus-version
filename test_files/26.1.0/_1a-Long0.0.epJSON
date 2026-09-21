@@ -1,0 +1,2048 @@
+{
+    "Building": {
+        "Test A-1a": {
+            "loads_convergence_tolerance_value": 0.04,
+            "maximum_number_of_warmup_days": 25,
+            "minimum_number_of_warmup_days": 6,
+            "north_axis": 0.0,
+            "solar_distribution": "FullInteriorAndExterior",
+            "temperature_convergence_tolerance_value": 0.4,
+            "terrain": "Country"
+        }
+    },
+    "BuildingSurface:Detailed": {
+        "ZONE SURFACE CEILING": {
+            "construction_name": "CONST 4-Ceiling",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "ZONE SURFACE CEILING",
+            "sun_exposure": "NoSun",
+            "surface_type": "Ceiling",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 3.6,
+                    "vertex_z_coordinate": 2.8
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.8
+                },
+                {
+                    "vertex_x_coordinate": 5.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.8
+                },
+                {
+                    "vertex_x_coordinate": 5.5,
+                    "vertex_y_coordinate": 3.6,
+                    "vertex_z_coordinate": 2.8
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE ONE"
+        },
+        "ZONE SURFACE EAST": {
+            "construction_name": "CONST 2",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "ZONE SURFACE EAST",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 5.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.8
+                },
+                {
+                    "vertex_x_coordinate": 5.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.5,
+                    "vertex_y_coordinate": 3.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.5,
+                    "vertex_y_coordinate": 3.6,
+                    "vertex_z_coordinate": 2.8
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE ONE"
+        },
+        "ZONE SURFACE FLOOR": {
+            "construction_name": "CONST 4-Floor",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "ZONE SURFACE FLOOR",
+            "sun_exposure": "NoSun",
+            "surface_type": "Floor",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 3.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.5,
+                    "vertex_y_coordinate": 3.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE ONE"
+        },
+        "ZONE SURFACE NORTH": {
+            "construction_name": "CONST 2",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "ZONE SURFACE NORTH",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 5.5,
+                    "vertex_y_coordinate": 3.6,
+                    "vertex_z_coordinate": 2.8
+                },
+                {
+                    "vertex_x_coordinate": 5.5,
+                    "vertex_y_coordinate": 3.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 3.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 3.6,
+                    "vertex_z_coordinate": 2.8
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE ONE"
+        },
+        "ZONE SURFACE ROOF": {
+            "construction_name": "CONST 4-Ceiling",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Roof",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 23.6,
+                    "vertex_z_coordinate": 2.8
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 20.0,
+                    "vertex_z_coordinate": 2.8
+                },
+                {
+                    "vertex_x_coordinate": 5.5,
+                    "vertex_y_coordinate": 20.0,
+                    "vertex_z_coordinate": 2.8
+                },
+                {
+                    "vertex_x_coordinate": 5.5,
+                    "vertex_y_coordinate": 23.6,
+                    "vertex_z_coordinate": 2.8
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE TWO"
+        },
+        "ZONE SURFACE SOUTH": {
+            "construction_name": "CONST 2",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Surface",
+            "outside_boundary_condition_object": "ZONE SURFACE SOUTH",
+            "sun_exposure": "NoSun",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.8
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 5.5,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.8
+                }
+            ],
+            "view_factor_to_ground": 0.0,
+            "wind_exposure": "NoWind",
+            "zone_name": "ZONE ONE"
+        },
+        "ZONE SURFACE WEST": {
+            "construction_name": "CONST 1",
+            "number_of_vertices": 4,
+            "outside_boundary_condition": "Outdoors",
+            "sun_exposure": "SunExposed",
+            "surface_type": "Wall",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 3.6,
+                    "vertex_z_coordinate": 2.8
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 3.6,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 0.0
+                },
+                {
+                    "vertex_x_coordinate": 0.0,
+                    "vertex_y_coordinate": 0.0,
+                    "vertex_z_coordinate": 2.8
+                }
+            ],
+            "view_factor_to_ground": 0.5,
+            "wind_exposure": "WindExposed",
+            "zone_name": "ZONE ONE"
+        }
+    },
+    "Construction": {
+        "CONST 1": {
+            "layer_2": "Type 1-InsulatingLayer",
+            "layer_3": "Type 1-Masonry",
+            "layer_4": "Type 1-InternalPlaster",
+            "outside_layer": "Type 1-OuterLayer"
+        },
+        "CONST 2": {
+            "layer_2": "Type 2-InsulatingLayer",
+            "layer_3": "Type 2-GypsumPlaster",
+            "outside_layer": "Type 2-GypsumPlaster"
+        },
+        "CONST 4-Ceiling": {
+            "layer_2": "Type 4-CementFloor",
+            "layer_3": "Type 4-InsulatingLayer",
+            "layer_4": "Type 4-Concrete",
+            "layer_5": "Type 4-InsulatingLayer2",
+            "layer_6": "Type 4-AcousticBoard-Interior",
+            "outside_layer": "Type 4-PlasticCovering-Exterior"
+        },
+        "CONST 4-Floor": {
+            "layer_2": "Type 4-InsulatingLayer2",
+            "layer_3": "Type 4-Concrete",
+            "layer_4": "Type 4-InsulatingLayer",
+            "layer_5": "Type 4-CementFloor",
+            "layer_6": "Type 4-PlasticCovering-Interior",
+            "outside_layer": "Type 4-AcousticBoard-Exterior"
+        },
+        "Single Pane Window": {
+            "outside_layer": "Glass Type 1"
+        }
+    },
+    "FenestrationSurface:Detailed": {
+        "ZONE SUBSURFACE 1 WEST WINDOW": {
+            "building_surface_name": "ZONE SURFACE WEST",
+            "construction_name": "Single Pane Window",
+            "multiplier": 1,
+            "number_of_vertices": 4,
+            "surface_type": "Window",
+            "vertex_1_x_coordinate": 0.0,
+            "vertex_1_y_coordinate": 2.8,
+            "vertex_1_z_coordinate": 2.275,
+            "vertex_2_x_coordinate": 0.0,
+            "vertex_2_y_coordinate": 2.8,
+            "vertex_2_z_coordinate": 0.525,
+            "vertex_3_x_coordinate": 0.0,
+            "vertex_3_y_coordinate": 0.8,
+            "vertex_3_z_coordinate": 0.525,
+            "vertex_4_x_coordinate": 0.0,
+            "vertex_4_y_coordinate": 0.8,
+            "vertex_4_z_coordinate": 2.275,
+            "view_factor_to_ground": 0.5
+        }
+    },
+    "GlobalGeometryRules": {
+        "GlobalGeometryRules 1": {
+            "coordinate_system": "Relative",
+            "starting_vertex_position": "UpperLeftCorner",
+            "vertex_entry_direction": "Counterclockwise"
+        }
+    },
+    "Material": {
+        "Type 1-InsulatingLayer": {
+            "conductivity": 0.04,
+            "density": 30.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.6,
+            "specific_heat": 850.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.06,
+            "visible_absorptance": 1e-06
+        },
+        "Type 1-InternalPlaster": {
+            "conductivity": 0.7,
+            "density": 1400.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 1.0,
+            "specific_heat": 850.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.015,
+            "visible_absorptance": 1e-06
+        },
+        "Type 1-Masonry": {
+            "conductivity": 0.79,
+            "density": 1600.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.6,
+            "specific_heat": 850.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.175,
+            "visible_absorptance": 1e-06
+        },
+        "Type 1-OuterLayer": {
+            "conductivity": 0.99,
+            "density": 1800.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.6,
+            "specific_heat": 850.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.115,
+            "visible_absorptance": 1e-06
+        },
+        "Type 2-GypsumPlaster": {
+            "conductivity": 0.21,
+            "density": 900.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 1.0,
+            "specific_heat": 850.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.012,
+            "visible_absorptance": 1e-06
+        },
+        "Type 2-InsulatingLayer": {
+            "conductivity": 0.04,
+            "density": 30.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.6,
+            "specific_heat": 850.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.1,
+            "visible_absorptance": 1e-06
+        },
+        "Type 3-CementFloor": {
+            "conductivity": 1.4,
+            "density": 2000.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.6,
+            "specific_heat": 850.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.06,
+            "visible_absorptance": 1e-06
+        },
+        "Type 3-Concrete-Exterior": {
+            "conductivity": 2.1,
+            "density": 2400.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.6,
+            "specific_heat": 850.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.18,
+            "visible_absorptance": 1e-06
+        },
+        "Type 3-Concrete-Interior": {
+            "conductivity": 2.1,
+            "density": 2400.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 1.0,
+            "specific_heat": 850.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.18,
+            "visible_absorptance": 1e-06
+        },
+        "Type 3-InsulatingLayer": {
+            "conductivity": 0.04,
+            "density": 50.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.6,
+            "specific_heat": 850.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.04,
+            "visible_absorptance": 1e-06
+        },
+        "Type 3-PlasticCovering-Exterior": {
+            "conductivity": 0.23,
+            "density": 1500.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.6,
+            "specific_heat": 1500.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.004,
+            "visible_absorptance": 1e-06
+        },
+        "Type 3-PlasticCovering-Interior": {
+            "conductivity": 0.23,
+            "density": 1500.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 1.0,
+            "specific_heat": 1500.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.004,
+            "visible_absorptance": 1e-06
+        },
+        "Type 4-AcousticBoard-Exterior": {
+            "conductivity": 0.06,
+            "density": 400.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.6,
+            "specific_heat": 840.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.02,
+            "visible_absorptance": 1e-06
+        },
+        "Type 4-AcousticBoard-Interior": {
+            "conductivity": 0.06,
+            "density": 400.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 1.0,
+            "specific_heat": 840.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.02,
+            "visible_absorptance": 1e-06
+        },
+        "Type 4-CementFloor": {
+            "conductivity": 1.4,
+            "density": 2000.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.6,
+            "specific_heat": 850.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.06,
+            "visible_absorptance": 1e-06
+        },
+        "Type 4-Concrete": {
+            "conductivity": 2.1,
+            "density": 2400.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.6,
+            "specific_heat": 850.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.18,
+            "visible_absorptance": 1e-06
+        },
+        "Type 4-InsulatingLayer": {
+            "conductivity": 0.04,
+            "density": 50.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.6,
+            "specific_heat": 850.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.04,
+            "visible_absorptance": 1e-06
+        },
+        "Type 4-InsulatingLayer2": {
+            "conductivity": 0.04,
+            "density": 50.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.6,
+            "specific_heat": 850.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.1,
+            "visible_absorptance": 1e-06
+        },
+        "Type 4-PlasticCovering-Exterior": {
+            "conductivity": 0.23,
+            "density": 1500.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.6,
+            "specific_heat": 1500.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.004,
+            "visible_absorptance": 1e-06
+        },
+        "Type 4-PlasticCovering-Interior": {
+            "conductivity": 0.23,
+            "density": 1500.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 1.0,
+            "specific_heat": 1500.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.004,
+            "visible_absorptance": 1e-06
+        },
+        "Type 5-Concrete": {
+            "conductivity": 2.1,
+            "density": 2400.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 1.0,
+            "specific_heat": 850.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.2,
+            "visible_absorptance": 1e-06
+        },
+        "Type 5-ExternalLayer": {
+            "conductivity": 0.23,
+            "density": 1500.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.9,
+            "specific_heat": 1300.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.004,
+            "visible_absorptance": 1e-06
+        },
+        "Type 5-InsulatingLayer": {
+            "conductivity": 0.04,
+            "density": 50.0,
+            "roughness": "Smooth",
+            "solar_absorptance": 0.6,
+            "specific_heat": 850.0,
+            "thermal_absorptance": 1e-06,
+            "thickness": 0.08,
+            "visible_absorptance": 1e-06
+        }
+    },
+    "Material:AirGap": {
+        "Air Space Resistance 1": {
+            "thermal_resistance": 0.08
+        }
+    },
+    "OtherEquipment": {
+        "ZONE ONE OthEq 1": {
+            "design_level": 297.0,
+            "design_level_calculation_method": "EquipmentLevel",
+            "fraction_latent": 0.0,
+            "fraction_lost": 0.0,
+            "fraction_radiant": 0.5,
+            "fuel_type": "None",
+            "schedule_name": "Sch 1",
+            "zone_or_zonelist_or_space_or_spacelist_name": "ZONE ONE"
+        }
+    },
+    "Output:Constructions": {
+        "Output:Constructions 1": {
+            "details_type_1": "Constructions"
+        }
+    },
+    "Output:Surfaces:Drawing": {
+        "Output:Surfaces:Drawing 1": {
+            "report_type": "DXF"
+        }
+    },
+    "Output:Surfaces:List": {
+        "Output:Surfaces:List 1": {
+            "report_type": "Details"
+        }
+    },
+    "Output:Variable": {
+        "Output:Variable 1": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Outdoor Air Drybulb Temperature"
+        },
+        "Output:Variable 2": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Wind Speed"
+        },
+        "Output:Variable 3": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Zone Mean Air Temperature"
+        },
+        "Output:Variable 4": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Zone Mean Radiant Temperature"
+        },
+        "Output:Variable 5": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Zone Operative Temperature"
+        },
+        "Output:Variable 6": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Diffuse Solar Radiation Rate per Area"
+        },
+        "Output:Variable 7": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Direct Solar Radiation Rate per Area"
+        },
+        "Output:Variable 8": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Ground Reflected Solar Radiation Rate per Area"
+        },
+        "Output:Variable 9": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Inside Face Temperature"
+        },
+        "Output:Variable 10": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Outside Face Temperature"
+        },
+        "Output:Variable 11": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Inside Face Convection Heat Transfer Coefficient"
+        },
+        "Output:Variable 12": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Outside Face Convection Heat Transfer Coefficient"
+        },
+        "Output:Variable 13": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Zone Air System Sensible Heating Energy"
+        },
+        "Output:Variable 14": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Zone Air System Sensible Cooling Energy"
+        },
+        "Output:Variable 15": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Outside Face Sunlit Area"
+        },
+        "Output:Variable 16": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Outside Face Sunlit Fraction"
+        },
+        "Output:Variable 17": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Solar Azimuth Angle"
+        },
+        "Output:Variable 18": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Site Solar Altitude Angle"
+        },
+        "Output:Variable 19": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Other Equipment Radiant Heating Energy"
+        },
+        "Output:Variable 20": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Other Equipment Convective Heating Energy"
+        },
+        "Output:Variable 21": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Zone Infiltration Current Density Air Change Rate"
+        },
+        "Output:Variable 22": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Outside Face Incident Solar Radiation Rate per Area"
+        },
+        "Output:Variable 23": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Outside Face Incident Beam Solar Radiation Rate per Area"
+        },
+        "Output:Variable 24": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area"
+        },
+        "Output:Variable 25": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Outside Face Incident Sky Diffuse Ground Reflected Solar Radiation Rate per Area"
+        },
+        "Output:Variable 26": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Shading Device Is On Time Fraction"
+        },
+        "Output:Variable 27": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Enclosure Exterior Windows Total Transmitted Beam Solar Radiation Rate"
+        },
+        "Output:Variable 28": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Window Heat Gain Rate"
+        },
+        "Output:Variable 29": {
+            "key_value": "*",
+            "reporting_frequency": "Timestep",
+            "variable_name": "Surface Window Heat Loss Rate"
+        }
+    },
+    "Output:VariableDictionary": {
+        "Output:VariableDictionary 1": {
+            "key_field": "regular"
+        }
+    },
+    "Schedule:Day:Hourly": {
+        "Day Sch 1": {
+            "hour_1": 0,
+            "hour_2": 0,
+            "hour_3": 0,
+            "hour_4": 0,
+            "hour_5": 0,
+            "hour_6": 0,
+            "hour_7": 0,
+            "hour_8": 0.0666667,
+            "hour_9": 0.0666667,
+            "hour_10": 0.0666667,
+            "hour_11": 0.0666667,
+            "hour_12": 0.666667,
+            "hour_13": 0.666667,
+            "hour_14": 0.666667,
+            "hour_15": 0.666667,
+            "hour_16": 0.0666667,
+            "hour_17": 0.0666667,
+            "hour_18": 0.0666667,
+            "hour_19": 1.0,
+            "hour_20": 1.0,
+            "hour_21": 1.0,
+            "hour_22": 1.0,
+            "hour_23": 0.666667,
+            "hour_24": 0,
+            "schedule_type_limits_name": "Fraction"
+        },
+        "Day Sch 2": {
+            "hour_1": 1.0,
+            "hour_2": 1.0,
+            "hour_3": 1.0,
+            "hour_4": 1.0,
+            "hour_5": 1.0,
+            "hour_6": 1.0,
+            "hour_7": 1.0,
+            "hour_8": 1.0,
+            "hour_9": 1.0,
+            "hour_10": 1.0,
+            "hour_11": 1.0,
+            "hour_12": 1.0,
+            "hour_13": 1.0,
+            "hour_14": 1.0,
+            "hour_15": 1.0,
+            "hour_16": 1.0,
+            "hour_17": 1.0,
+            "hour_18": 1.0,
+            "hour_19": 1.0,
+            "hour_20": 1.0,
+            "hour_21": 1.0,
+            "hour_22": 1.0,
+            "hour_23": 1.0,
+            "hour_24": 1.0,
+            "schedule_type_limits_name": "Fraction"
+        },
+        "Day Sch Shade": {
+            "hour_1": 0.2,
+            "hour_2": 0.2,
+            "hour_3": 0.2,
+            "hour_4": 0.2,
+            "hour_5": 0.2,
+            "hour_6": 0.2,
+            "hour_7": 0.2,
+            "hour_8": 0.2,
+            "hour_9": 0.2,
+            "hour_10": 0.2,
+            "hour_11": 0.2,
+            "hour_12": 0.2,
+            "hour_13": 0.2,
+            "hour_14": 0.2,
+            "hour_15": 0.2,
+            "hour_16": 0.2,
+            "hour_17": 0.2,
+            "hour_18": 0.2,
+            "hour_19": 0.2,
+            "hour_20": 0.2,
+            "hour_21": 0.2,
+            "hour_22": 0.2,
+            "hour_23": 0.2,
+            "hour_24": 0.2,
+            "schedule_type_limits_name": "Fraction"
+        }
+    },
+    "Schedule:Day:List": {
+        "Diffuse Data": {
+            "extensions": [
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0.75
+                },
+                {
+                    "value": 1.5
+                },
+                {
+                    "value": 2.25
+                },
+                {
+                    "value": 3.0
+                },
+                {
+                    "value": 17.75
+                },
+                {
+                    "value": 32.5
+                },
+                {
+                    "value": 47.25
+                },
+                {
+                    "value": 62.0
+                },
+                {
+                    "value": 69.25
+                },
+                {
+                    "value": 76.5
+                },
+                {
+                    "value": 83.75
+                },
+                {
+                    "value": 91.0
+                },
+                {
+                    "value": 94.5
+                },
+                {
+                    "value": 98.0
+                },
+                {
+                    "value": 101.5
+                },
+                {
+                    "value": 105.0
+                },
+                {
+                    "value": 106.75
+                },
+                {
+                    "value": 108.5
+                },
+                {
+                    "value": 110.25
+                },
+                {
+                    "value": 112.0
+                },
+                {
+                    "value": 113.25
+                },
+                {
+                    "value": 114.5
+                },
+                {
+                    "value": 115.75
+                },
+                {
+                    "value": 117.0
+                },
+                {
+                    "value": 117.5
+                },
+                {
+                    "value": 118.0
+                },
+                {
+                    "value": 118.5
+                },
+                {
+                    "value": 119.0
+                },
+                {
+                    "value": 119.25
+                },
+                {
+                    "value": 119.5
+                },
+                {
+                    "value": 119.75
+                },
+                {
+                    "value": 120.0
+                },
+                {
+                    "value": 119.75
+                },
+                {
+                    "value": 119.5
+                },
+                {
+                    "value": 119.25
+                },
+                {
+                    "value": 119.0
+                },
+                {
+                    "value": 118.5
+                },
+                {
+                    "value": 118.0
+                },
+                {
+                    "value": 117.5
+                },
+                {
+                    "value": 117.0
+                },
+                {
+                    "value": 115.75
+                },
+                {
+                    "value": 114.5
+                },
+                {
+                    "value": 113.25
+                },
+                {
+                    "value": 112.0
+                },
+                {
+                    "value": 110.25
+                },
+                {
+                    "value": 108.5
+                },
+                {
+                    "value": 106.75
+                },
+                {
+                    "value": 105.0
+                },
+                {
+                    "value": 101.5
+                },
+                {
+                    "value": 98.0
+                },
+                {
+                    "value": 94.5
+                },
+                {
+                    "value": 91.0
+                },
+                {
+                    "value": 83.75
+                },
+                {
+                    "value": 76.5
+                },
+                {
+                    "value": 69.25
+                },
+                {
+                    "value": 62.0
+                },
+                {
+                    "value": 47.25
+                },
+                {
+                    "value": 32.5
+                },
+                {
+                    "value": 17.75
+                },
+                {
+                    "value": 3.0
+                },
+                {
+                    "value": 2.25
+                },
+                {
+                    "value": 1.5
+                },
+                {
+                    "value": 0.75
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                }
+            ],
+            "interpolate_to_timestep": "No",
+            "minutes_per_item": 15,
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Outdoor Temp Deltas": {
+            "extensions": [
+                {
+                    "value": 9.95
+                },
+                {
+                    "value": 10.1
+                },
+                {
+                    "value": 10.25
+                },
+                {
+                    "value": 10.4
+                },
+                {
+                    "value": 10.55
+                },
+                {
+                    "value": 10.7
+                },
+                {
+                    "value": 10.85
+                },
+                {
+                    "value": 11.0
+                },
+                {
+                    "value": 11.125
+                },
+                {
+                    "value": 11.25
+                },
+                {
+                    "value": 11.375
+                },
+                {
+                    "value": 11.5
+                },
+                {
+                    "value": 11.6
+                },
+                {
+                    "value": 11.7
+                },
+                {
+                    "value": 11.8
+                },
+                {
+                    "value": 11.9
+                },
+                {
+                    "value": 11.925
+                },
+                {
+                    "value": 11.95
+                },
+                {
+                    "value": 11.975
+                },
+                {
+                    "value": 12.0
+                },
+                {
+                    "value": 11.95
+                },
+                {
+                    "value": 11.9
+                },
+                {
+                    "value": 11.85
+                },
+                {
+                    "value": 11.8
+                },
+                {
+                    "value": 11.65
+                },
+                {
+                    "value": 11.5
+                },
+                {
+                    "value": 11.35
+                },
+                {
+                    "value": 11.2
+                },
+                {
+                    "value": 10.925
+                },
+                {
+                    "value": 10.65
+                },
+                {
+                    "value": 10.375
+                },
+                {
+                    "value": 10.1
+                },
+                {
+                    "value": 9.625
+                },
+                {
+                    "value": 9.15
+                },
+                {
+                    "value": 8.675
+                },
+                {
+                    "value": 8.2
+                },
+                {
+                    "value": 7.825
+                },
+                {
+                    "value": 7.45
+                },
+                {
+                    "value": 7.075
+                },
+                {
+                    "value": 6.7
+                },
+                {
+                    "value": 6.2
+                },
+                {
+                    "value": 5.7
+                },
+                {
+                    "value": 5.2
+                },
+                {
+                    "value": 4.7
+                },
+                {
+                    "value": 4.225
+                },
+                {
+                    "value": 3.75
+                },
+                {
+                    "value": 3.275
+                },
+                {
+                    "value": 2.8
+                },
+                {
+                    "value": 2.425
+                },
+                {
+                    "value": 2.05
+                },
+                {
+                    "value": 1.675
+                },
+                {
+                    "value": 1.3
+                },
+                {
+                    "value": 1.075
+                },
+                {
+                    "value": 0.85
+                },
+                {
+                    "value": 0.625
+                },
+                {
+                    "value": 0.4
+                },
+                {
+                    "value": 0.3
+                },
+                {
+                    "value": 0.2
+                },
+                {
+                    "value": 0.1
+                },
+                {
+                    "value": 0.0
+                },
+                {
+                    "value": 0.1
+                },
+                {
+                    "value": 0.2
+                },
+                {
+                    "value": 0.3
+                },
+                {
+                    "value": 0.4
+                },
+                {
+                    "value": 0.6
+                },
+                {
+                    "value": 0.8
+                },
+                {
+                    "value": 1.0
+                },
+                {
+                    "value": 1.2
+                },
+                {
+                    "value": 1.525
+                },
+                {
+                    "value": 1.85
+                },
+                {
+                    "value": 2.175
+                },
+                {
+                    "value": 2.5
+                },
+                {
+                    "value": 2.9
+                },
+                {
+                    "value": 3.3
+                },
+                {
+                    "value": 3.7
+                },
+                {
+                    "value": 4.1
+                },
+                {
+                    "value": 4.475
+                },
+                {
+                    "value": 4.85
+                },
+                {
+                    "value": 5.225
+                },
+                {
+                    "value": 5.6
+                },
+                {
+                    "value": 5.95
+                },
+                {
+                    "value": 6.3
+                },
+                {
+                    "value": 6.65
+                },
+                {
+                    "value": 7.0
+                },
+                {
+                    "value": 7.3
+                },
+                {
+                    "value": 7.6
+                },
+                {
+                    "value": 7.9
+                },
+                {
+                    "value": 8.2
+                },
+                {
+                    "value": 8.425
+                },
+                {
+                    "value": 8.65
+                },
+                {
+                    "value": 8.875
+                },
+                {
+                    "value": 9.1
+                },
+                {
+                    "value": 9.275
+                },
+                {
+                    "value": 9.45
+                },
+                {
+                    "value": 9.625
+                },
+                {
+                    "value": 9.8
+                }
+            ],
+            "interpolate_to_timestep": "No",
+            "minutes_per_item": 15,
+            "schedule_type_limits_name": "Any Number"
+        },
+        "Solar Data": {
+            "extensions": [
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 3.481
+                },
+                {
+                    "value": 6.962
+                },
+                {
+                    "value": 10.442
+                },
+                {
+                    "value": 13.923
+                },
+                {
+                    "value": 114.799
+                },
+                {
+                    "value": 215.675
+                },
+                {
+                    "value": 316.551
+                },
+                {
+                    "value": 417.427
+                },
+                {
+                    "value": 472.452
+                },
+                {
+                    "value": 527.476
+                },
+                {
+                    "value": 582.501
+                },
+                {
+                    "value": 637.526
+                },
+                {
+                    "value": 664.679
+                },
+                {
+                    "value": 691.833
+                },
+                {
+                    "value": 718.987
+                },
+                {
+                    "value": 746.14
+                },
+                {
+                    "value": 761.191
+                },
+                {
+                    "value": 776.242
+                },
+                {
+                    "value": 791.293
+                },
+                {
+                    "value": 806.344
+                },
+                {
+                    "value": 814.685
+                },
+                {
+                    "value": 823.026
+                },
+                {
+                    "value": 831.367
+                },
+                {
+                    "value": 839.708
+                },
+                {
+                    "value": 844.244
+                },
+                {
+                    "value": 848.78
+                },
+                {
+                    "value": 853.316
+                },
+                {
+                    "value": 857.852
+                },
+                {
+                    "value": 859.261
+                },
+                {
+                    "value": 860.671
+                },
+                {
+                    "value": 862.08
+                },
+                {
+                    "value": 863.489
+                },
+                {
+                    "value": 862.062
+                },
+                {
+                    "value": 860.634
+                },
+                {
+                    "value": 859.207
+                },
+                {
+                    "value": 857.78
+                },
+                {
+                    "value": 853.225
+                },
+                {
+                    "value": 848.671
+                },
+                {
+                    "value": 844.116
+                },
+                {
+                    "value": 839.561
+                },
+                {
+                    "value": 831.199
+                },
+                {
+                    "value": 822.838
+                },
+                {
+                    "value": 814.476
+                },
+                {
+                    "value": 806.115
+                },
+                {
+                    "value": 791.04
+                },
+                {
+                    "value": 775.966
+                },
+                {
+                    "value": 760.892
+                },
+                {
+                    "value": 745.817
+                },
+                {
+                    "value": 718.637
+                },
+                {
+                    "value": 691.458
+                },
+                {
+                    "value": 664.278
+                },
+                {
+                    "value": 637.098
+                },
+                {
+                    "value": 582.056
+                },
+                {
+                    "value": 527.014
+                },
+                {
+                    "value": 471.972
+                },
+                {
+                    "value": 416.93
+                },
+                {
+                    "value": 316.164
+                },
+                {
+                    "value": 215.398
+                },
+                {
+                    "value": 114.632
+                },
+                {
+                    "value": 13.867
+                },
+                {
+                    "value": 10.4
+                },
+                {
+                    "value": 6.933
+                },
+                {
+                    "value": 3.467
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                },
+                {
+                    "value": 0
+                }
+            ],
+            "interpolate_to_timestep": "No",
+            "minutes_per_item": 15,
+            "schedule_type_limits_name": "Any Number"
+        }
+    },
+    "Schedule:Week:Daily": {
+        "Week Sch 1": {
+            "customday1_schedule_day_name": "Day Sch 1",
+            "customday2_schedule_day_name": "Day Sch 1",
+            "friday_schedule_day_name": "Day Sch 1",
+            "holiday_schedule_day_name": "Day Sch 1",
+            "monday_schedule_day_name": "Day Sch 1",
+            "saturday_schedule_day_name": "Day Sch 1",
+            "summerdesignday_schedule_day_name": "Day Sch 1",
+            "sunday_schedule_day_name": "Day Sch 1",
+            "thursday_schedule_day_name": "Day Sch 1",
+            "tuesday_schedule_day_name": "Day Sch 1",
+            "wednesday_schedule_day_name": "Day Sch 1",
+            "winterdesignday_schedule_day_name": "Day Sch 1"
+        },
+        "Week Sch 2": {
+            "customday1_schedule_day_name": "Day Sch 2",
+            "customday2_schedule_day_name": "Day Sch 2",
+            "friday_schedule_day_name": "Day Sch 2",
+            "holiday_schedule_day_name": "Day Sch 2",
+            "monday_schedule_day_name": "Day Sch 2",
+            "saturday_schedule_day_name": "Day Sch 2",
+            "summerdesignday_schedule_day_name": "Day Sch 2",
+            "sunday_schedule_day_name": "Day Sch 2",
+            "thursday_schedule_day_name": "Day Sch 2",
+            "tuesday_schedule_day_name": "Day Sch 2",
+            "wednesday_schedule_day_name": "Day Sch 2",
+            "winterdesignday_schedule_day_name": "Day Sch 2"
+        },
+        "Week Sch Shade": {
+            "customday1_schedule_day_name": "Day Sch Shade",
+            "customday2_schedule_day_name": "Day Sch Shade",
+            "friday_schedule_day_name": "Day Sch Shade",
+            "holiday_schedule_day_name": "Day Sch Shade",
+            "monday_schedule_day_name": "Day Sch Shade",
+            "saturday_schedule_day_name": "Day Sch Shade",
+            "summerdesignday_schedule_day_name": "Day Sch Shade",
+            "sunday_schedule_day_name": "Day Sch Shade",
+            "thursday_schedule_day_name": "Day Sch Shade",
+            "tuesday_schedule_day_name": "Day Sch Shade",
+            "wednesday_schedule_day_name": "Day Sch Shade",
+            "winterdesignday_schedule_day_name": "Day Sch Shade"
+        }
+    },
+    "Schedule:Year": {
+        "Sch 1": {
+            "schedule_type_limits_name": "Fraction",
+            "schedule_weeks": [
+                {
+                    "end_day": 31,
+                    "end_month": 12,
+                    "schedule_week_name": "Week Sch 1",
+                    "start_day": 1,
+                    "start_month": 1
+                }
+            ]
+        },
+        "Sch 2": {
+            "schedule_type_limits_name": "Fraction",
+            "schedule_weeks": [
+                {
+                    "end_day": 31,
+                    "end_month": 12,
+                    "schedule_week_name": "Week Sch 2",
+                    "start_day": 1,
+                    "start_month": 1
+                }
+            ]
+        },
+        "Window Shade Transmittance": {
+            "schedule_type_limits_name": "Fraction",
+            "schedule_weeks": [
+                {
+                    "end_day": 31,
+                    "end_month": 12,
+                    "schedule_week_name": "Week Sch Shade",
+                    "start_day": 1,
+                    "start_month": 1
+                }
+            ]
+        }
+    },
+    "ScheduleTypeLimits": {
+        "Any Number": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1000.0
+        },
+        "Fraction": {
+            "lower_limit_value": 0.0,
+            "numeric_type": "Continuous",
+            "upper_limit_value": 1.0
+        }
+    },
+    "Shading:Building:Detailed": {
+        "WEST WINDOW SHADE": {
+            "number_of_vertices": 4,
+            "transmittance_schedule_name": "Window Shade Transmittance",
+            "vertices": [
+                {
+                    "vertex_x_coordinate": -0.02,
+                    "vertex_y_coordinate": 2.8,
+                    "vertex_z_coordinate": 2.275
+                },
+                {
+                    "vertex_x_coordinate": -0.02,
+                    "vertex_y_coordinate": 2.8,
+                    "vertex_z_coordinate": 0.525
+                },
+                {
+                    "vertex_x_coordinate": -0.02,
+                    "vertex_y_coordinate": 0.8,
+                    "vertex_z_coordinate": 0.525
+                },
+                {
+                    "vertex_x_coordinate": -0.02,
+                    "vertex_y_coordinate": 0.8,
+                    "vertex_z_coordinate": 2.275
+                }
+            ]
+        }
+    },
+    "ShadowCalculation": {
+        "ShadowCalculation 1": {
+            "shading_calculation_method": "PolygonClipping",
+            "shading_calculation_update_frequency": 1,
+            "shading_calculation_update_frequency_method": "Periodic"
+        }
+    },
+    "SimulationControl": {
+        "SimulationControl 1": {
+            "do_hvac_sizing_simulation_for_sizing_periods": "No",
+            "do_plant_sizing_calculation": "No",
+            "do_system_sizing_calculation": "No",
+            "do_zone_sizing_calculation": "No",
+            "maximum_number_of_hvac_sizing_simulation_passes": 1,
+            "run_simulation_for_sizing_periods": "Yes",
+            "run_simulation_for_weather_file_run_periods": "No"
+        }
+    },
+    "Site:GroundReflectance": {
+        "Site:GroundReflectance 1": {
+            "april_ground_reflectance": 0.2,
+            "august_ground_reflectance": 0.2,
+            "december_ground_reflectance": 0.2,
+            "february_ground_reflectance": 0.2,
+            "january_ground_reflectance": 0.2,
+            "july_ground_reflectance": 0.2,
+            "june_ground_reflectance": 0.2,
+            "march_ground_reflectance": 0.2,
+            "may_ground_reflectance": 0.2,
+            "november_ground_reflectance": 0.2,
+            "october_ground_reflectance": 0.2,
+            "september_ground_reflectance": 0.2
+        }
+    },
+    "Site:GroundTemperature:BuildingSurface": {
+        "Site:GroundTemperature:BuildingSurface 1": {
+            "april_ground_temperature": 28.0,
+            "august_ground_temperature": 28.0,
+            "december_ground_temperature": 28.0,
+            "february_ground_temperature": 28.0,
+            "january_ground_temperature": 28.0,
+            "july_ground_temperature": 28.0,
+            "june_ground_temperature": 28.0,
+            "march_ground_temperature": 28.0,
+            "may_ground_temperature": 28.0,
+            "november_ground_temperature": 28.0,
+            "october_ground_temperature": 28.0,
+            "september_ground_temperature": 28.0
+        }
+    },
+    "Site:HeightVariation": {
+        "Site:HeightVariation 1": {
+            "air_temperature_gradient_coefficient": 0.0,
+            "wind_speed_profile_boundary_layer_thickness": 370,
+            "wind_speed_profile_exponent": 0.0
+        }
+    },
+    "Site:Location": {
+        "UNKNOWN": {
+            "elevation": 0,
+            "latitude": 40.0,
+            "longitude": 0.0,
+            "time_zone": 0
+        }
+    },
+    "SizingPeriod:DesignDay": {
+        "LONDON/GATWICK Ann Htg 99.6% Condns DB": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 0,
+            "barometric_pressure": 100582.0,
+            "daily_dry_bulb_temperature_range": 0.0,
+            "day_of_month": 21,
+            "day_type": "WinterDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "dry_bulb_temperature_range_modifier_type": "DefaultMultipliers",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": -4.6,
+            "month": 2,
+            "rain_indicator": "No",
+            "sky_clearness": 0.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "ASHRAEClearSky",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": -4.6,
+            "wind_direction": 80,
+            "wind_speed": 1.5
+        },
+        "LONDON/GATWICK Modified Ann Clg .4% Condns DB=>MWB": {
+            "ashrae_clear_sky_optical_depth_for_beam_irradiance_taub_": 0,
+            "ashrae_clear_sky_optical_depth_for_diffuse_irradiance_taud_": 0,
+            "barometric_pressure": 100582.0,
+            "beam_solar_day_schedule_name": "Solar Data",
+            "daily_dry_bulb_temperature_range": 12.0,
+            "day_of_month": 15,
+            "day_type": "SummerDesignDay",
+            "daylight_saving_time_indicator": "No",
+            "diffuse_solar_day_schedule_name": "Diffuse Data",
+            "dry_bulb_temperature_range_modifier_day_schedule_name": "Outdoor Temp Deltas",
+            "dry_bulb_temperature_range_modifier_type": "DifferenceSchedule",
+            "humidity_condition_type": "WetBulb",
+            "maximum_dry_bulb_temperature": 34,
+            "month": 6,
+            "rain_indicator": "No",
+            "sky_clearness": 1.0,
+            "snow_indicator": "No",
+            "solar_model_indicator": "Schedule",
+            "wetbulb_or_dewpoint_at_maximum_dry_bulb": 18.6,
+            "wind_direction": 0,
+            "wind_speed": 1.0
+        }
+    },
+    "SurfaceProperty:ConvectionCoefficients": {
+        "SurfaceProperty:ConvectionCoefficients 1": {
+            "convection_coefficient_1": 8.0,
+            "convection_coefficient_1_location": "Inside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 6.5,
+            "convection_coefficient_2_location": "Outside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "ZONE SUBSURFACE 1 WEST WINDOW"
+        },
+        "SurfaceProperty:ConvectionCoefficients 2": {
+            "convection_coefficient_1": 2.5,
+            "convection_coefficient_1_location": "Inside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 2.5,
+            "convection_coefficient_2_location": "Outside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "ZONE SURFACE NORTH"
+        },
+        "SurfaceProperty:ConvectionCoefficients 3": {
+            "convection_coefficient_1": 2.5,
+            "convection_coefficient_1_location": "Inside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 2.5,
+            "convection_coefficient_2_location": "Outside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "ZONE SURFACE SOUTH"
+        },
+        "SurfaceProperty:ConvectionCoefficients 4": {
+            "convection_coefficient_1": 2.5,
+            "convection_coefficient_1_location": "Inside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 2.5,
+            "convection_coefficient_2_location": "Outside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "ZONE SURFACE EAST"
+        },
+        "SurfaceProperty:ConvectionCoefficients 5": {
+            "convection_coefficient_1": 2.5,
+            "convection_coefficient_1_location": "Inside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 13.5,
+            "convection_coefficient_2_location": "Outside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "ZONE SURFACE WEST"
+        },
+        "SurfaceProperty:ConvectionCoefficients 6": {
+            "convection_coefficient_1": 0.7,
+            "convection_coefficient_1_location": "Inside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 0.7,
+            "convection_coefficient_2_location": "Outside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "ZONE SURFACE FLOOR"
+        },
+        "SurfaceProperty:ConvectionCoefficients 7": {
+            "convection_coefficient_1": 5.0,
+            "convection_coefficient_1_location": "Inside",
+            "convection_coefficient_1_type": "Value",
+            "convection_coefficient_2": 5.0,
+            "convection_coefficient_2_location": "Outside",
+            "convection_coefficient_2_type": "Value",
+            "surface_name": "ZONE SURFACE CEILING"
+        }
+    },
+    "Timestep": {
+        "Timestep 1": {
+            "number_of_timesteps_per_hour": 60
+        }
+    },
+    "Version": {
+        "Version 1": {
+            "version_identifier": "26.1"
+        }
+    },
+    "WindowMaterial:Glazing": {
+        "Glass Type 1": {
+            "back_side_infrared_hemispherical_emissivity": 1e-06,
+            "back_side_solar_reflectance_at_normal_incidence": 0.08,
+            "back_side_visible_reflectance_at_normal_incidence": 0.08,
+            "conductivity": 100.0,
+            "front_side_infrared_hemispherical_emissivity": 1e-06,
+            "front_side_solar_reflectance_at_normal_incidence": 0.08,
+            "front_side_visible_reflectance_at_normal_incidence": 0.08,
+            "infrared_transmittance_at_normal_incidence": 0.0,
+            "optical_data_type": "SpectralAverage",
+            "solar_transmittance_at_normal_incidence": 0.84,
+            "thickness": 0.003175,
+            "visible_transmittance_at_normal_incidence": 0.84
+        }
+    },
+    "Zone": {
+        "ZONE ONE": {
+            "ceiling_height": 2.8,
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": 55.44,
+            "x_origin": 0.0,
+            "y_origin": 0.0,
+            "z_origin": 0.0
+        },
+        "ZONE TWO": {
+            "ceiling_height": 2.8,
+            "direction_of_relative_north": 0.0,
+            "multiplier": 1,
+            "type": 1,
+            "volume": 55.44,
+            "x_origin": 0.0,
+            "y_origin": 0.0,
+            "z_origin": 0.0
+        }
+    },
+    "ZoneInfiltration:DesignFlowRate": {
+        "ZONE ONE Infil 1": {
+            "constant_term_coefficient": 1.0,
+            "design_flow_rate": 0.0154,
+            "design_flow_rate_calculation_method": "Flow/Zone",
+            "schedule_name": "Sch 2",
+            "temperature_term_coefficient": 0.0,
+            "velocity_squared_term_coefficient": 0.0,
+            "velocity_term_coefficient": 0.0,
+            "zone_or_zonelist_or_space_or_spacelist_name": "ZONE ONE"
+        }
+    }
+}

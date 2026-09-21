@@ -1,0 +1,174 @@
+{
+  "Version": {
+    "Version 1": {
+      "version_identifier": "26.2.0"
+    }
+  },
+  "Building": {
+    "Fixture Building": {
+      "loads_convergence_tolerance_value": 0.04,
+      "maximum_number_of_warmup_days": 25,
+      "minimum_number_of_warmup_days": 6,
+      "north_axis": 0,
+      "solar_distribution": "FullInteriorAndExterior",
+      "temperature_convergence_tolerance_value": 0.4,
+      "terrain": "Suburbs"
+    }
+  },
+  "GlobalGeometryRules": {
+    "Fixture Geometry Rules": {
+      "coordinate_system": "World",
+      "starting_vertex_position": "UpperLeftCorner",
+      "vertex_entry_direction": "Counterclockwise"
+    }
+  },
+  "CentralHeatPumpSystem": {
+    "Fixture Heat Pump System": {
+      "cooling_loop_inlet_node_name": "Cooling Loop Inlet",
+      "cooling_loop_outlet_node_name": "Cooling Loop Outlet",
+      "source_loop_inlet_node_name": "Source Loop Inlet",
+      "source_loop_outlet_node_name": "Source Loop Outlet",
+      "heating_loop_inlet_node_name": "Heating Loop Inlet",
+      "heating_loop_outlet_node_name": "Heating Loop Outlet",
+      "chiller_heater_modules_performance_component_object_type_1": "ChillerHeaterPerformance:Electric:EIR",
+      "chiller_heater_modules_performance_component_name_1": "Fixture Chiller Heater Performance",
+      "chiller_heater_modules_control_schedule_name_1": "Always On"
+    }
+  },
+  "ChillerHeaterPerformance:Electric:EIR": {
+    "Fixture Chiller Heater Performance": {
+      "reference_cooling_mode_evaporator_capacity": 10000.0,
+      "reference_cooling_mode_cop": 5.5,
+      "cooling_mode_cooling_capacity_function_of_temperature_curve_name": "Cooling Capacity Curve",
+      "cooling_mode_electric_input_to_cooling_output_ratio_function_of_temperature_curve_name": "Cooling EIR Temperature Curve",
+      "cooling_mode_electric_input_to_cooling_output_ratio_function_of_part_load_ratio_curve_name": "Cooling EIR PLR Curve",
+      "heating_mode_cooling_capacity_function_of_temperature_curve_name": "Heating Capacity Curve",
+      "heating_mode_electric_input_to_cooling_output_ratio_function_of_temperature_curve_name": "Heating EIR Temperature Curve",
+      "heating_mode_electric_input_to_cooling_output_ratio_function_of_part_load_ratio_curve_name": "Heating EIR PLR Curve"
+    }
+  },
+  "ZoneControl:Humidistat": {
+    "Fixture Humidistat": {
+      "zone_name": "Fixture Zone",
+      "humidifying_setpoint_schedule_name": "Humidifying Schedule",
+      "dehumidifying_setpoint_schedule_name": "Dehumidifying Schedule"
+    }
+  },
+  "Output:Variable": {
+    "Sensible Heat Ratio Request": {
+      "key_value": "*",
+      "variable_name": "Refrigeration Zone Air Chiller Coil Sensible Heat Ratio",
+      "reporting_frequency": "Hourly"
+    }
+  },
+  "Output:Table:TimeBins": {
+    "Frost Accumulation Time Bins": {
+      "key_value": "*",
+      "variable_name": "Refrigeration Zone Air Chiller Coil Frost Accumulation Mass",
+      "interval_start": 0.0,
+      "interval_size": 1.0,
+      "interval_count": 10
+    }
+  },
+  "ExternalInterface:FunctionalMockupUnitImport:From:Variable": {
+    "Imported Defrost Rate": {
+      "output_variable_index_key_name": "*",
+      "output_variable_name": "Refrigeration Zone Air Chiller Coil Defrost Electricity Rate",
+      "fmu_file_name": "fixture.fmu",
+      "fmu_instance_name": "Fixture FMU",
+      "fmu_variable_name": "defrost_rate"
+    }
+  },
+  "ExternalInterface:FunctionalMockupUnitExport:From:Variable": {
+    "Exported Defrost Energy": {
+      "output_variable_index_key_name": "*",
+      "output_variable_name": "Refrigeration Zone Air Chiller Coil Defrost Electricity Energy",
+      "fmu_variable_name": "defrost_energy"
+    }
+  },
+  "EnergyManagementSystem:Sensor": {
+    "Fixture Sensor": {
+      "output_variable_or_output_meter_index_key_name": "*",
+      "output_variable_or_output_meter_name": "Refrigeration Zone Air Chiller Coil Sensible Heat Ratio"
+    }
+  },
+  "Output:Table:Monthly": {
+    "Fixture Monthly Report": {
+      "digits_after_decimal": 2,
+      "variable_details": [
+        {
+          "variable_or_meter_name": "Refrigeration Zone Air Chiller Coil Frost Accumulation Mass",
+          "aggregation_type_for_variable_or_meter": "Maximum"
+        }
+      ]
+    }
+  },
+  "Meter:Custom": {
+    "Fixture Custom Meter": {
+      "resource_type": "Electricity",
+      "variable_details": [
+        {
+          "key_name": "*",
+          "output_variable_or_meter_name": "Refrigeration Zone Air Chiller Coil Defrost Electricity Rate"
+        }
+      ]
+    }
+  },
+  "Meter:CustomDecrement": {
+    "Fixture Custom Decrement Meter": {
+      "resource_type": "Electricity",
+      "source_meter_name": "Electricity:Facility",
+      "variable_details": [
+        {
+          "key_name": "*",
+          "output_variable_or_meter_name": "Refrigeration Zone Air Chiller Coil Defrost Electricity Energy"
+        }
+      ]
+    }
+  },
+  "Coil:Cooling:DX:CurveFit:OperatingMode": {
+    "Fixture Operating Mode": {
+      "speed_1_name": "Fixture Speed"
+    }
+  },
+  "Material": {
+    "Fixture Material": {
+      "roughness": "MediumRough",
+      "thickness": 0.1,
+      "conductivity": 0.5,
+      "density": 800.0,
+      "specific_heat": 900.0
+    }
+  },
+  "Material:NoMass": {
+    "Fixture No Mass Material": {
+      "roughness": "MediumRough",
+      "thermal_resistance": 0.5
+    }
+  },
+  "MaterialProperty:VariableAbsorptance": {
+    "Fixture Variable Absorptance": {
+      "reference_material_name": "Fixture Material"
+    }
+  },
+  "Space": {
+    "Fixture Space": {
+      "zone_name": "Fixture Zone",
+      "tags": [
+        {
+          "tag": "Fixture tag"
+        }
+      ]
+    }
+  },
+  "ZoneBaseboard:OutdoorTemperatureControlled": {
+    "Fixture Baseboard": {
+      "zone_or_zonelist_or_space_or_spacelist_name": "Fixture Zone",
+      "schedule_name": "Always On",
+      "capacity_at_low_temperature": 1000.0,
+      "low_temperature": -10.0,
+      "capacity_at_high_temperature": 0.0,
+      "high_temperature": 20.0
+    }
+  }
+}

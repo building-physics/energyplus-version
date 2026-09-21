@@ -1,0 +1,166 @@
+{
+  "Version": {
+    "Version 1": {
+      "version_identifier": "24.2.0"
+    }
+  },
+  "Building": {
+    "Fixture Building": {
+      "terrain": "Suburbs"
+    }
+  },
+  "GlobalGeometryRules": {
+    "Fixture Geometry Rules": {
+      "coordinate_system": "World",
+      "starting_vertex_position": "UpperLeftCorner",
+      "vertex_entry_direction": "Counterclockwise"
+    }
+  },
+  "OutputControl:Files": {
+    "Output Files": {
+      "output_space_sizing": "No",
+      "output_zone_sizing": "No",
+      "output_system_sizing": "Yes"
+    }
+  },
+  "Output:IlluminanceMap": {
+    "Fixture Map": {
+      "zone_or_space_name": "Fixture Zone"
+    }
+  },
+  "ZoneCoolTower:Shower": {
+    "Fixture Cool Tower": {
+      "zone_or_space_name": "Fixture Zone",
+      "pump_flow_rate_schedule_name": "Always On",
+      "maximum_water_flow_rate": 0.01,
+      "effective_tower_height": 5.0,
+      "airflow_outlet_area": 1.0,
+      "maximum_air_flow_rate": 2.0,
+      "minimum_indoor_temperature": 18.0,
+      "rated_power_consumption": 100.0
+    }
+  },
+  "ZoneRefrigerationDoorMixing": {
+    "Fixture Door": {
+      "zone_or_space_name_1": "Fixture Zone 1",
+      "zone_or_space_name_2": "Fixture Zone 2",
+      "schedule_name": "Always On"
+    }
+  },
+  "ZoneThermalChimney": {
+    "Fixture Chimney": {
+      "zone_name": "Chimney Zone",
+      "width_of_the_absorber_wall": 2.0,
+      "cross_sectional_area_of_air_channel_outlet": 1.0,
+      "zone_or_space_name_1": "Fixture Zone",
+      "distance_from_top_of_thermal_chimney_to_inlet_1": 2.5,
+      "relative_ratios_of_air_flow_rates_passing_through_inlet_1": 1.0,
+      "cross_sectional_areas_of_air_channel_inlet_1": 0.5,
+      "zone_or_space_name_2": "Fixture Zone 2",
+      "distance_from_top_of_thermal_chimney_to_inlet_2": 1.5,
+      "relative_ratios_of_air_flow_rates_passing_through_inlet_2": 0.5,
+      "cross_sectional_areas_of_air_channel_inlet_2": 0.25
+    }
+  },
+  "IndoorLivingWall": {
+    "Fixture Living Wall": {
+      "surface_name": "Fixture Surface",
+      "schedule_name": "Always On",
+      "led_intensity_schedule_name": "Lighting Schedule",
+      "led_nominal_intensity": 32.5
+    }
+  },
+  "MaterialProperty:PhaseChange": {
+    "Fixture PCM": {
+      "temperature_coefficient_for_thermal_conductivity": 0.1,
+      "values": [
+        {
+          "temperature": -20.0,
+          "enthalpy": 0.1
+        },
+        {
+          "temperature": 22.0,
+          "enthalpy": 18260.0
+        },
+        {
+          "temperature": 22.1,
+          "enthalpy": 32000.0
+        },
+        {
+          "temperature": 60.0,
+          "enthalpy": 71000.0
+        }
+      ]
+    }
+  },
+  "MaterialProperty:VariableThermalConductivity": {
+    "Fixture Variable Conductivity": {
+      "values": [
+        {
+          "temperature": -40.0,
+          "thermal_conductivity": 1.7
+        },
+        {
+          "temperature": 24.0,
+          "thermal_conductivity": 1.7
+        },
+        {
+          "temperature": 25.0,
+          "thermal_conductivity": 2.2
+        },
+        {
+          "temperature": 100.0,
+          "thermal_conductivity": 2.2
+        }
+      ]
+    }
+  },
+  "ZoneHVAC:TerminalUnit:VariableRefrigerantFlow": {
+    "Fixture VRF Terminal": {
+      "terminal_unit_air_inlet_node_name": "Terminal Inlet",
+      "terminal_unit_air_outlet_node_name": "Terminal Outlet",
+      "supply_air_fan_object_type": "Fan:SystemModel",
+      "supply_air_fan_object_name": "Fixture VRF Fan"
+    }
+  },
+  "Fan:SystemModel": {
+    "Fixture VRF Fan": {
+      "availability_schedule_name": "Always On",
+      "air_inlet_node_name": "Fan Inlet",
+      "air_outlet_node_name": "Fan Outlet",
+      "design_maximum_air_flow_rate": 1.25,
+      "speed_control_method": "Continuous",
+      "electric_power_minimum_flow_rate_fraction": 0.2,
+      "design_pressure_rise": 500.0,
+      "motor_efficiency": 0.9,
+      "motor_in_air_stream_fraction": 1.0,
+      "design_electric_power_consumption": "Autosize",
+      "design_power_sizing_method": "TotalEfficiencyAndPressure",
+      "fan_total_efficiency": 0.7,
+      "electric_power_function_of_flow_fraction_curve_name": "Fixture VRF Fan_curve",
+      "end_use_subcategory": "VRF Fans"
+    }
+  },
+  "Curve:Quartic": {
+    "Fixture VRF Fan_curve": {
+      "coefficient1_constant": 0.001,
+      "coefficient2_x": 0.01,
+      "coefficient3_x_2": 0.1,
+      "coefficient4_x_3": 0.2,
+      "coefficient5_x_4": 0.689,
+      "minimum_value_of_x": 0.0,
+      "maximum_value_of_x": 1.0,
+      "minimum_curve_output": 0.0,
+      "maximum_curve_output": 5.0,
+      "input_unit_type_for_x": "Dimensionless",
+      "output_unit_type": "Dimensionless"
+    }
+  },
+  "Output:Variable": {
+    "Fixture Output Request": {
+      "key_value": "*",
+      "variable_name": "Enclosure Windows Total Transmitted Solar Radiation Rate",
+      "reporting_frequency": "Hourly"
+    }
+  }
+}

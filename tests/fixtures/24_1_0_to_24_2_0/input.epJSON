@@ -1,0 +1,132 @@
+{
+  "Version": {
+    "Version 1": {
+      "version_identifier": "24.1"
+    }
+  },
+  "Building": {
+    "Fixture Building": {
+      "terrain": "Suburbs"
+    }
+  },
+  "GlobalGeometryRules": {
+    "Fixture Geometry Rules": {
+      "coordinate_system": "World",
+      "starting_vertex_position": "UpperLeftCorner",
+      "vertex_entry_direction": "Counterclockwise"
+    }
+  },
+  "OutputControl:Files": {
+    "Output Files": {
+      "output_zone_sizing": "No",
+      "output_system_sizing": "Yes"
+    }
+  },
+  "Output:IlluminanceMap": {
+    "Fixture Map": {
+      "zone_name": "Fixture Zone"
+    }
+  },
+  "ZoneCoolTower:Shower": {
+    "Fixture Cool Tower": {
+      "zone_name": "Fixture Zone",
+      "pump_flow_rate_schedule_name": "Always On",
+      "maximum_water_flow_rate": 0.01,
+      "effective_tower_height": 5.0,
+      "airflow_outlet_area": 1.0,
+      "maximum_air_flow_rate": 2.0,
+      "minimum_indoor_temperature": 18.0,
+      "rated_power_consumption": 100.0
+    }
+  },
+  "ZoneRefrigerationDoorMixing": {
+    "Fixture Door": {
+      "zone_1_name": "Fixture Zone 1",
+      "zone_2_name": "Fixture Zone 2",
+      "schedule_name": "Always On"
+    }
+  },
+  "ZoneThermalChimney": {
+    "Fixture Chimney": {
+      "zone_name": "Chimney Zone",
+      "width_of_the_absorber_wall": 2.0,
+      "cross_sectional_area_of_air_channel_outlet": 1.0,
+      "zone_1_name": "Fixture Zone",
+      "distance_from_top_of_thermal_chimney_to_inlet_1": 2.5,
+      "relative_ratios_of_air_flow_rates_passing_through_zone_1": 1.0,
+      "cross_sectional_areas_of_air_channel_inlet_1": 0.5,
+      "zone_2_name": "Fixture Zone 2",
+      "distance_from_top_of_thermal_chimney_to_inlet_2": 1.5,
+      "relative_ratios_of_air_flow_rates_passing_through_zone_2": 0.5,
+      "cross_sectional_areas_of_air_channel_inlet_2": 0.25
+    }
+  },
+  "IndoorLivingWall": {
+    "Fixture Living Wall": {
+      "surface_name": "Fixture Surface",
+      "schedule_name": "Always On",
+      "led_intensity_schedule_name_": "Lighting Schedule",
+      "led_nominal_intensity_": 32.5
+    }
+  },
+  "MaterialProperty:PhaseChange": {
+    "Fixture PCM": {
+      "temperature_coefficient_for_thermal_conductivity": 0.1,
+      "temperature_1": -20.0,
+      "enthalpy_1": 0.1,
+      "temperature_2": 22.0,
+      "enthalpy_2": 18260.0,
+      "temperature_3": 22.1,
+      "enthalpy_3": 32000.0,
+      "temperature_4": 60.0,
+      "enthalpy_4": 71000.0
+    }
+  },
+  "MaterialProperty:VariableThermalConductivity": {
+    "Fixture Variable Conductivity": {
+      "temperature_1": -40.0,
+      "thermal_conductivity_1": 1.7,
+      "temperature_2": 24.0,
+      "thermal_conductivity_2": 1.7,
+      "temperature_3": 25.0,
+      "thermal_conductivity_3": 2.2,
+      "temperature_4": 100.0,
+      "thermal_conductivity_4": 2.2
+    }
+  },
+  "ZoneHVAC:TerminalUnit:VariableRefrigerantFlow": {
+    "Fixture VRF Terminal": {
+      "terminal_unit_air_inlet_node_name": "Terminal Inlet",
+      "terminal_unit_air_outlet_node_name": "Terminal Outlet",
+      "supply_air_fan_object_type": "Fan:VariableVolume",
+      "supply_air_fan_object_name": "Fixture VRF Fan"
+    }
+  },
+  "Fan:VariableVolume": {
+    "Fixture VRF Fan": {
+      "availability_schedule_name": "Always On",
+      "fan_total_efficiency": 0.7,
+      "pressure_rise": 500.0,
+      "maximum_flow_rate": 1.25,
+      "fan_power_minimum_flow_rate_input_method": "FixedFlowRate",
+      "fan_power_minimum_air_flow_rate": 0.25,
+      "motor_efficiency": 0.9,
+      "motor_in_airstream_fraction": 1.0,
+      "fan_power_coefficient_1": 0.001,
+      "fan_power_coefficient_2": 0.01,
+      "fan_power_coefficient_3": 0.1,
+      "fan_power_coefficient_4": 0.2,
+      "fan_power_coefficient_5": 0.689,
+      "air_inlet_node_name": "Fan Inlet",
+      "air_outlet_node_name": "Fan Outlet",
+      "end_use_subcategory": "VRF Fans"
+    }
+  },
+  "Output:Variable": {
+    "Fixture Output Request": {
+      "key_value": "*",
+      "variable_name": "Zone Windows Total Transmitted Solar Radiation Rate",
+      "reporting_frequency": "Hourly"
+    }
+  }
+}

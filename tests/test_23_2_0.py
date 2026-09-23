@@ -37,8 +37,8 @@ def test_upgrade_23_2_0_to_24_1_0_end_to_end():
     original = deepcopy(source)
     expected = load_json(expected_path)
 
-    source_schema = load_json(PROJECT_ROOT / "schema" / "23.2" / "Energy+.schema.epJSON")
-    destination_schema = load_json(PROJECT_ROOT / "schema" / "24.1" / "Energy+.schema.epJSON")
+    source_schema = load_json(PROJECT_ROOT / "schema" / "23.2.0" / "Energy+.schema.epJSON")
+    destination_schema = load_json(PROJECT_ROOT / "schema" / "24.1.0" / "Energy+.schema.epJSON")
     jsonschema.Draft7Validator(source_schema).validate(source)
 
     patch = Upgrade().generate_patch(source)

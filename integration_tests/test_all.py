@@ -22,18 +22,10 @@ VERSION_MODULE_PATTERN = re.compile(r"version_(\d+)_(\d+)_(\d+)$")
 
 
 def version_directory(root, version):
-    exact_directory = root / version
-    if exact_directory.is_dir():
-        return exact_directory
-
-    # Older collected data used major.minor directory names. Keep that layout
-    # compatible without changing the canonical three-component version used
-    # for module dispatch.
-    legacy_directory = root / ".".join(version.split(".")[:2])
-    if legacy_directory.is_dir():
-        return legacy_directory
-
-    raise FileNotFoundError(f'No data directory found for EnergyPlus {version} under "{root}".')
+    directory = root / version
+    if not directory.is_dir():
+        raise FileNotFoundError(f'No data directory found for EnergyPlus {version} under "{root}".')
+    return directory
 
 
 def discover_upgrades():

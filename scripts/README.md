@@ -27,12 +27,14 @@ usage, output layout, overwrite behavior, and manifest details.
 
 ## find_object.py
 
-Looks for a given object in the `test_files` directory in the repo.
+Looks for a given object in the `test_files` directory in the repo. Specify the
+repository version with three components, for example `23.2.0`.
 
 ## validate_examples.py
 
-Validates all of the files in a specified subdirectory of `test_files`.
+Validates all of the files in a specified subdirectory of `test_files`. The
+version argument must have three components.
 
 ## validate_file.py
 
-Validates a specific file.
+Validates a specific file. The version argument must have three components.

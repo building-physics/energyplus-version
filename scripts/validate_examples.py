@@ -7,6 +7,8 @@ import glob
 import json
 import jsonschema
 
+from energyplus_version import EnergyPlusVersion
+
 def usage():
     print('usage: validate_examples.py VERSION')
 
@@ -15,6 +17,10 @@ if len(sys.argv) != 2:
     exit(1)
 
 version = sys.argv[1]
+if EnergyPlusVersion.from_string(version) is None:
+    print('Invalid version "%s"; use a three-component version such as 23.2.0.' % version)
+    usage()
+    exit(1)
 
 script_directory = os.path.dirname(os.path.abspath(sys.argv[0]))
 

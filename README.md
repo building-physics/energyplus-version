@@ -8,6 +8,7 @@
 **Table of Contents**
 
 - [Installation](#installation)
+- [Version conventions](#version-conventions)
 - [License](#license)
 - [Setting up a Visual Studio Code Development Environment](#setting-up-a-visual-studio-code-development-environment)
 
@@ -16,6 +17,20 @@
 ```console
 pip install energyplus-version
 ```
+
+## Version conventions
+
+Package-owned version values and names always use all three components, such
+as `23.2.0`. This includes command-line version arguments, upgrade module
+names, collected-data directories, manifests, and transition metadata.
+
+EnergyPlus input files remain an explicit exception. The `Version` object in
+an IDF or epJSON file uses the EnergyPlus `major.minor` identifier, such as
+`23.2`. The package converts that identifier to a three-component internal
+version before selecting an upgrade, and writes `major.minor` back to upgraded
+input files. Consequently, `energyplus-version describe` requires a version
+such as `23.2.0`, while `energyplus-version upgrade` reads the two-component
+identifier from the input file.
 
 ## License
 

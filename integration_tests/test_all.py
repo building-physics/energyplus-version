@@ -96,7 +96,9 @@ def test_does_it_run(source_version, destination_version, filename):
 
     validator(source_version).validate(epjson)
     version_string = next(iter(epjson["Version"].values()))["version_identifier"]
-    normalized_version = str(EnergyPlusVersion.from_energyplus_identifier(version_string))
+    parsed_version = EnergyPlusVersion.from_energyplus_identifier(version_string)
+    assert version_string == parsed_version.energyplus_identifier()
+    normalized_version = str(parsed_version)
     assert normalized_version == source_version
 
     module_name = f"energyplus_version.version_{source_version.replace('.', '_')}"

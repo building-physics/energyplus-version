@@ -34,7 +34,7 @@ class EnergyPlusVersion:
     def from_string(cls, string):
         try:
             split = [int(el) for el in string.split('.')]
-        except ValueError:
+        except (AttributeError, ValueError):
             return None
         if len(split) == 3:
             return cls(split[0], split[1], patch=split[2])
@@ -44,7 +44,7 @@ class EnergyPlusVersion:
     def from_energyplus_identifier(cls, string):
         try:
             split = [int(el) for el in string.split('.')]
-        except ValueError:
+        except (AttributeError, ValueError):
             return None
         if len(split) == 2:
             return cls(split[0], split[1], patch=0)

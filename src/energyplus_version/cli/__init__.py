@@ -1,12 +1,34 @@
 # SPDX-FileCopyrightText: 2023-present Oak Ridge National Laboratory, managed by UT-Battelle
 #
 # SPDX-License-Identifier: BSD-3-Clause
-import click
-import json
-import jsonpatch
 import importlib
+import json
+
+import click
+import jsonpatch
 
 from ..__about__ import __version__
+from ..versioning import EnergyPlusVersion
+
+
+def load_upgrade(version):
+    module_name = 'energyplus_version.version_%s' % str(version).replace('.', '_')
+    try:
+        module = importlib.import_module(module_name)
+    except ModuleNotFoundError as exc:
+        if exc.name != module_name:
+            raise
+        raise click.ClickException(
+            'Failed to find an upgrade for version "%s".' % version
+        ) from exc
+
+    upgrade = module.Upgrade()
+    if upgrade.from_version() != str(version):
+        raise click.ClickException(
+            'Upgrade module "%s" declares source version "%s".'
+            % (module_name, upgrade.from_version())
+        )
+    return upgrade
 
 @click.command()
 @click.argument('epjson', type=click.Path(exists=True)) #, help='epJSON file to upgrade')
@@ -18,28 +40,23 @@ def upgrade(epjson, verbose, output, write_patch, dry_run):
     '''
     Uprade an epJSON file.
     '''
-    fp = open(epjson, 'r')
-    # Need to catch any issues with reading the json
-    epjson = json.load(fp)
-    fp.close()
+    with open(epjson, 'r') as fp:
+        epjson = json.load(fp)
     try:
         version_string = list(epjson['Version'].values())[0]['version_identifier']
-    except Exception as exc:
-        click.echo('Failed to find version string (%s), cannot proceed.' % str(exc), err=True)
-        exit(1)
+    except (IndexError, KeyError, TypeError) as exc:
+        raise click.ClickException(
+            'Failed to find the EnergyPlus version identifier (%s).' % str(exc)
+        ) from exc
+
+    version = EnergyPlusVersion.from_energyplus_identifier(version_string)
+    if version is None:
+        raise click.ClickException(
+            'Invalid EnergyPlus version identifier "%s".' % version_string
+        )
     if verbose:
-        click.echo('Attempting to upgrade from version %s.' % version_string)
-    # Need to do a proper lookup and do a plugin thing here
-    try:
-        mod = importlib.import_module('energyplus_version.version_%s' % version_string.replace('.', '_'))
-    except ModuleNotFoundError:
-        # Try with patch 0
-        try:
-            mod = importlib.import_module('energyplus_version.version_%s_0' % version_string.replace('.', '_'))
-        except ModuleNotFoundError:
-            click.echo('Failed to find version "%s", cannot proceed.' % version_string, err=True)
-            exit(1)
-    upgrade = mod.Upgrade()
+        click.echo('Attempting to upgrade from version %s.' % version)
+    upgrade = load_upgrade(version)
     if verbose:
         click.echo(upgrade.describe())
     patch = upgrade.generate_patch(epjson)
@@ -67,17 +84,12 @@ def describe(version):
     '''
     Describe the changes associated with a particular version.
     '''
-    # Need to do a proper lookup and do a plugin thing here
-    try:
-        mod = importlib.import_module('energyplus_version.version_%s' % version.replace('.', '_'))
-    except ModuleNotFoundError:
-        # Try with patch 0
-        try:
-            mod = importlib.import_module('energyplus_version.version_%s_0' % version.replace('.', '_'))
-        except ModuleNotFoundError:
-            click.echo('Failed to find version "%s", cannot proceed.' % version, err=True)
-            exit(1)
-    upgrade = mod.Upgrade()
+    parsed_version = EnergyPlusVersion.from_string(version)
+    if parsed_version is None:
+        raise click.ClickException(
+            'Invalid version "%s"; use a three-component version such as 23.2.0.' % version
+        )
+    upgrade = load_upgrade(parsed_version)
     click.echo(upgrade.describe())
 
 @click.group(context_settings={'help_option_names': ['-h', '--help']}, invoke_without_command=False)

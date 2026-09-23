@@ -8,7 +8,10 @@
 **Table of Contents**
 
 - [Installation](#installation)
+- [Usage](#usage)
+- [Supported transitions](#supported-transitions)
 - [Version conventions](#version-conventions)
+- [Validation and reference data](#validation-and-reference-data)
 - [License](#license)
 - [Setting up a Visual Studio Code Development Environment](#setting-up-a-visual-studio-code-development-environment)
 
@@ -17,6 +20,40 @@
 ```console
 pip install energyplus-version
 ```
+
+## Usage
+
+Inspect the changes implemented for a source version with its complete version
+number:
+
+```console
+energyplus-version describe 23.2.0
+```
+
+Upgrade one epJSON file by one EnergyPlus release:
+
+```console
+energyplus-version upgrade input.epJSON --output upgraded.epJSON
+```
+
+The command determines the source release from the input file's `Version`
+object. It applies one transition per invocation and does not currently accept
+a final destination version. To cross multiple releases, use the output of one
+invocation as the input to the next and validate each intermediate result with
+the corresponding EnergyPlus release.
+
+## Supported transitions
+
+The implemented transitions form a continuous path:
+
+| Source | Destination |
+| --- | --- |
+| 23.2.0 | 24.1.0 |
+| 24.1.0 | 24.2.0 |
+| 24.2.0 | 25.1.0 |
+| 25.1.0 | 25.2.0 |
+| 25.2.0 | 26.1.0 |
+| 26.1.0 | 26.2.0 |
 
 ## Version conventions
 
@@ -31,6 +68,23 @@ version before selecting an upgrade, and writes `major.minor` back to upgraded
 input files. Consequently, `energyplus-version describe` requires a version
 such as `23.2.0`, while `energyplus-version upgrade` reads the two-component
 identifier from the input file.
+
+## Validation and reference data
+
+The command-line upgrade currently transforms epJSON but does not validate the
+source or result against an EnergyPlus schema. The integration suite performs
+both checks for 4,741 collected EnergyPlus examples across the supported
+transitions. Schema validity confirms structural compatibility, but it does
+not by itself prove exact behavioral equivalence with the official EnergyPlus
+Fortran transition program.
+
+The `schema`, `idd`, `rules`, `manifests`, and `test_files` directories contain
+the collected reference material. New transition data is produced by the
+repeatable collection workflow documented in
+[`scripts/collect_transition_data.md`](scripts/collect_transition_data.md).
+The manifests record provenance and any example files that could not be
+converted. The official Fortran source remains in the EnergyPlus repository
+and is consulted as the behavioral reference rather than copied here.
 
 ## License
 

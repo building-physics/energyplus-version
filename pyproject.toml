@@ -43,6 +43,17 @@ energyplus-version = "energyplus_version.cli:energyplus_version"
 [tool.hatch.version]
 path = "src/energyplus_version/__about__.py"
 
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/idd",
+  "/integration_tests",
+  "/manifests",
+  "/rules",
+  "/schema",
+  "/test_files",
+  "/tests",
+]
+
 [tool.hatch.envs.default]
 dependencies = [
   "pytest",

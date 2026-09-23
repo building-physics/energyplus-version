@@ -26,6 +26,7 @@ def test_version_requires_and_preserves_patch_component():
     assert version.dashed() == "23-2-1"
     assert version.short() == "23.2"
     assert version.tag() == "v23.2.1"
+    assert version.identifier() == "23.2"
 
     with pytest.raises(argparse.ArgumentTypeError):
         Version.parse("23.2")

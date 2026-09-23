@@ -102,9 +102,9 @@ class LocalEpUpgrade(energyplus_version.EnergyPlusUpgrade):
             energyplus_version.ChangeFieldName('RunPeriod', 'treat_weather_as_actual', 'leap_year_pedantry')
         ]
     def from_version(self):
-        return '22.1'
+        return '22.1.0'
     def to_version(self):
-        return '22.2'
+        return '22.2.0'
 
 def test_fake_upgrade():
     epjson = {
@@ -130,9 +130,11 @@ def test_fake_upgrade():
         }
     }
     upgrade = LocalEpUpgrade()
-    assert upgrade.describe().startswith('Input Changes Version 22.1 to 22.2\n')
+    assert upgrade.describe().startswith('Input Changes Version 22.1.0 to 22.2.0\n')
     patch = upgrade.generate_patch(epjson)
     assert len(patch) == 1
+    upgraded = jsonpatch.JsonPatch(patch).apply(epjson)
+    assert upgraded['Version']['Pointless Name']['version_identifier'] == '22.2'
 
     epjson['RunPeriod']['Run Period 2']['treat_weather_as_actual'] = True
     patch = upgrade.generate_patch(epjson)

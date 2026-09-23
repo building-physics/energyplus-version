@@ -3,6 +3,8 @@
 # SPDX-License-Identifier: BSD-3-Clause
 #from typing import Callable
 
+from .versioning import EnergyPlusVersion
+
 class UpgradeError(Exception):
     pass
 
@@ -216,7 +218,8 @@ class EnergyPlusUpgrade(Upgrade):
         patch = super().generate_patch(prev)
         try:
             path = '/Version/%s/version_identifier' % list(prev['Version'].keys())[0]
-            patch.append({'op': 'replace', 'path': path, 'value': self.to_version()})
+            to_version = EnergyPlusVersion.from_string(self.to_version())
+            patch.append({'op': 'replace', 'path': path, 'value': to_version.energyplus_identifier()})
         except KeyError:
             pass
         return patch

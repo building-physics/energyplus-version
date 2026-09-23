@@ -71,7 +71,7 @@ class Version:
         return f"v{self.dotted()}"
 
     def identifier(self) -> str:
-        return self.short() if self.patch == 0 else self.dotted()
+        return self.short()
 
     @classmethod
     def from_declared(cls, value: str) -> "Version":
